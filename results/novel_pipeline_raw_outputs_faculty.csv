@@ -1,0 +1,1287 @@
+query_id,config,query,reference_answer,retrieved_context,generated_answer,route,fusion,lambda,abstained,raw_abstain,sufficient_context_override,graph_augmented,exact_match_any,question_match_any,translated_query,retrieval_s,rerank_s,generation_s,total_s,timestamp,query_confidence,query_top1_score
+FAC-R001,adaptive_novel,What room is Yasmin Nadia's office in?,Yasmin Nadia's office is in room 4L89.,"Initial: YND
+Name: Yasmin Nadia
+Designation: Lecturer
+Status: Full Time
+Room: 4L89
+Email: yasmin.nadia@bracu.ac.bd
+
+Question: Where is the DCO's office?
+Answer: DCO's office are always connected with the department. So, go to your department and find your DCO.
+
+Question: What is the function of the Proctor's Office?
+Answer: The Proctor's Office oversees academic integrity and student conduct during examinations.
+
+Question: How to book a room for seminar?
+Answer: Visit: Room Booking Form. You must discuss the seminar with the Office of Co-Curricular Activities (OCA) and obtain permission. Once approved, complete the form, have it signed by your advisor, and submit it to OCA. Processing takes approximately three days.
+
+Question: Curious about something: how to book a room for seminar?
+Answer: Visit: Room Booking Form. You must discuss the seminar with the Office of Co-Curricular Activities (OCA) and obtain permission. Once approved, complete the form, have it signed by your advisor, and submit it to OCA. Processing takes approximately three days.",Yasmin Nadia's office is located in Room 4L89.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0949,0.0000,4.4056,4.5010,2026-07-28T09:49:03.414154+00:00,99.9943,100.0150
+FAC-R002,adaptive_novel,What room is Dr. Badhan Das's office in?,Dr. Badhan Das's office is in room 4G19.,"Initial: NBD
+Name: Dr. Badhan Das
+Designation: Assistant Professor
+Status: Full Time
+Room: 4G19
+Email: badhan.das@bracu.ac.bd
+
+Initial: NBD
+Name: Dr. Badhan Das
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 3:30 PM - CSE437-10 10A-05C
+
+Initial: NBD
+Name: Dr. Badhan Das
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - Consultation by Appointment; 3:30 PM - CSE437-10 10A-05C
+
+Initial: NBD
+Name: Dr. Badhan Das
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE331-01 09G-31T,CSE331-02 09G-31T,CSE331-03 09G-31T; 2:00 PM - Consultation by Appointment
+
+Initial: NBD
+Name: Dr. Badhan Das
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE331-01 09G-31T,CSE331-02 09G-31T,CSE331-03 09G-31T; 2:00 PM - Consultation by Appointment",Dr. Badhan Das's office is located in room 4G19.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0197,0.0000,4.5863,4.6061,2026-07-28T09:49:08.021145+00:00,100.0002,100.0150
+FAC-R003,adaptive_novel,What room is Fardin Zaman's office in?,Fardin Zaman's office is in room 4F.,"Initial: FDZ
+Name: Fardin Zaman
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.fardin.zaman@bracu.ac.bd
+
+Initial: FDZ
+Name: Fardin Zaman
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-22A (LAB) FDZ,SMDS FT10-03L; 9:30 AM - CSE260-22A (LAB) FDZ,SMDS FT10-03L
+
+Initial: FDZ
+Name: Fardin Zaman
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-03A (LAB) FDZ,NRT FT10-03L; 9:30 AM - CSE260-03A (LAB) FDZ,NRT FT10-03L
+
+Initial: CTFZ
+Name: Tasfia Zaman
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.tasfia.zaman@bracu.ac.bd
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Designation: Lecturer
+Status: Full Time
+Room: 4N155
+Email: fardin.zubair@bracu.ac.bd",Fardin Zaman's room is 4F.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0188,0.0000,3.9816,4.0004,2026-07-28T09:49:12.022224+00:00,100.0002,100.0150
+FAC-R004,adaptive_novel,What room is Sowmitra Das's office in?,Sowmitra Das's office is in room 4N142.,"Initial: SDAS
+Name: Sowmitra Das
+Designation: Senior Lecturer
+Status: Full Time
+Room: 4N142
+Email: sowmitra.das@bracu.ac.bd
+
+Course: CSE490C
+First Theory Coordinator: SDAS
+Theory Coordinator Email: sowmitra.das@bracu.ac.bd
+
+Initial: PDS
+Name: Mr. Purbayan Das
+Designation: Lecturer
+Status: Full Time
+Room: 4N140
+Email: purbayan.das@bracu.ac.bd
+
+Initial: RDS
+Name: Rantu Das
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.rantu.das@bracu.ac.bd
+
+Initial: SMDS
+Name: Soumitra Das
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.soumitra.das@bracu.ac.bd",Sowmitra Das's office is located in room 4N142.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0183,0.0000,4.4851,4.5034,2026-07-28T09:49:16.526540+00:00,100.0002,100.0150
+FAC-R005,adaptive_novel,What room is Rantu Das's office in?,Rantu Das's office is in room 4F.,"Initial: RDS
+Name: Rantu Das
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.rantu.das@bracu.ac.bd
+
+Initial: RDS
+Name: Rantu Das
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - CSE420-25 09A-01C; 3:30 PM - Consultation by Appointment; 5:00 PM - Consultation by Appointment
+
+Initial: PDS
+Name: Mr. Purbayan Das
+Designation: Lecturer
+Status: Full Time
+Room: 4N140
+Email: purbayan.das@bracu.ac.bd
+
+Initial: SDAS
+Name: Sowmitra Das
+Designation: Senior Lecturer
+Status: Full Time
+Room: 4N142
+Email: sowmitra.das@bracu.ac.bd
+
+Initial: SMDS
+Name: Soumitra Das
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.soumitra.das@bracu.ac.bd",Rantu Das's office is located in Room 4F.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0168,0.0000,4.1671,4.1840,2026-07-28T09:49:20.710984+00:00,100.0002,100.0150
+FAC-R006,adaptive_novel,What room is Mr. Arif Shakil's office in?,Mr. Arif Shakil's office is in room 4G03.,"Initial: ARF
+Name: Mr. Arif Shakil
+Designation: Senior Lecturer
+Status: Full Time
+Room: 4G03
+Email: arif.shakil@bracu.ac.bd
+
+Initial: ARF
+Name: Mr. Arif Shakil
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE421-01 10A-04C; 2:00 PM - CSE421-02 10A-04C
+
+Initial: ARF
+Name: Mr. Arif Shakil
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE421-01 10A-04C; 2:00 PM - CSE421-02 10A-04C
+
+Initial: MAHS
+Name: Md Arif Hasan
+Designation: Lecturer
+Status: Full Time
+Room: 4P176
+Email: arif.hasan@bracu.ac.bd
+
+Initial: MAHS
+Name: Md Arif Hasan
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE423-19 09A-03C; 11:00 AM - CSE471-07 09A-03C; 12:30 PM - Consultation; 2:00 PM - Consultation",Mr. Arif Shakil's office is located in room 4G03.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0178,0.0000,4.6398,4.6576,2026-07-28T09:49:25.369001+00:00,100.0002,100.0150
+FAC-R007,adaptive_novel,What room is MD MIZANUR RAHMAN MUSTAKIM's office in?,MD MIZANUR RAHMAN MUSTAKIM's office is in room 4P171.,"Initial: NMMR
+Name: MD MIZANUR RAHMAN MUSTAKIM
+Designation: Lecturer
+Status: Full Time
+Room: 4P171
+Email: mizanur.mustakim@bracu.ac.bd
+
+Initial: NMMR
+Name: MD MIZANUR RAHMAN MUSTAKIM
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE423-22 09H-34C; 9:30 AM - Consultation; 11:00 AM - Consultation
+
+Initial: NMMR
+Name: MD MIZANUR RAHMAN MUSTAKIM
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - Thesis (UG); 11:00 AM - CSE321-03 (LAB) CTFZ,NMMR 10G-32L; 12:30 PM - CSE321-03 (LAB) CTFZ,NMMR 10G-32L; 2:00 PM - Consultation
+
+Initial: NMMR
+Name: MD MIZANUR RAHMAN MUSTAKIM
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE423-22 09H-34C; 9:30 AM - Consultation; 11:00 AM - CSE221-13 (LAB) NARC,NMMR 09B-10L; 12:30 PM - CSE221-13 (LAB) NARC,NMMR 09B-10L; 2:00 PM - CSE221-17 (LAB) FBAW,NMMR 09B-10L; 3:30 PM - CSE221-17 (LAB) FBAW,NMMR 09B-10L
+
+Initial: NMMR
+Name: MD MIZANUR RAHMAN MUSTAKIM
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-02 (LAB) NARC,NMMR 09E-22L; 9:30 AM - CSE221-02 (LAB) NARC,NMMR 09E-22L; 11:00 AM - CSE221-04 (LAB) FGZ,NMMR 09B-11L; 12:30 PM - CSE221-04 (LAB) FGZ,NMMR 09B-11L; 2:00 PM - CSE221-01 (LAB) NMMR,ASRF 09B-11L; 3:30 PM - CSE221-01 (LAB) NMMR,ASRF 09B-11L",MD MIZANUR RAHMAN MUSTAKIM's office is located in room 4P171.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0197,0.0000,5.8283,5.8481,2026-07-28T09:49:31.217747+00:00,100.0002,100.0150
+FAC-R008,adaptive_novel,What room is A B M Muntasir Rahman's office in?,A B M Muntasir Rahman's office is in room 4L95.,"Initial: MUNR
+Name: A B M Muntasir Rahman
+Designation: Lecturer
+Status: Full Time
+Room: 4L95
+Email: abm.muntasir@bracu.ac.bd
+
+Initial: MUNR
+Name: A B M Muntasir Rahman
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-07 09A-02C; 9:30 AM - Consultation by Appointment
+
+Initial: MUNR
+Name: A B M Muntasir Rahman
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-07 09A-02C; 9:30 AM - Consultation by Appointment
+
+Initial: MUNR
+Name: A B M Muntasir Rahman
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE428-01 09A-02C; 9:30 AM - CSE428-02 09A-02C
+
+Initial: MUNR
+Name: A B M Muntasir Rahman
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE428-01 09A-02C; 9:30 AM - CSE428-02 09A-02C",The room where A B M Muntasir Rahman has his office is 4L95.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0193,0.0000,4.8436,4.8630,2026-07-28T09:49:36.081614+00:00,100.0002,100.0150
+FAC-R009,adaptive_novel,What room is Sahib Kowsar's office in?,Sahib Kowsar's office is in room 4L91.,"Initial: SHBK
+Name: Sahib Kowsar
+Designation: Lecturer
+Status: Full Time
+Room: 4L91
+Email: sahib.kowsar@bracu.ac.bd
+
+Question: Where is the DCO's office?
+Answer: DCO's office are always connected with the department. So, go to your department and find your DCO.
+
+Question: What is the function of the Proctor's Office?
+Answer: The Proctor's Office oversees academic integrity and student conduct during examinations.
+
+Question: How to book a room for seminar?
+Answer: Visit: Room Booking Form. You must discuss the seminar with the Office of Co-Curricular Activities (OCA) and obtain permission. Once approved, complete the form, have it signed by your advisor, and submit it to OCA. Processing takes approximately three days.
+
+Question: Curious about something: how to book a room for seminar?
+Answer: Visit: Room Booking Form. You must discuss the seminar with the Office of Co-Curricular Activities (OCA) and obtain permission. Once approved, complete the form, have it signed by your advisor, and submit it to OCA. Processing takes approximately three days.",Sahib Kowsar's office is located in Room 4L91.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0157,0.0000,4.5062,4.5223,2026-07-28T09:49:40.604626+00:00,99.9934,100.0150
+FAC-R010,adaptive_novel,What room is Fatiha Ishrar Chowdhury's office in?,Fatiha Ishrar Chowdhury's office is in room 4K81.,"Initial: FIC
+Name: Fatiha Ishrar Chowdhury
+Designation: Lecturer
+Status: Full Time
+Room: 4K81
+Email: fatiha.ishrar@bracu.ac.bd
+
+Initial: FIC
+Name: Fatiha Ishrar Chowdhury
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE260-09A 09C-13C,CSE260-09B 09C-13C; 12:30 PM - CSE260-10A 09C-13C,CSE260-10B 09C-13C; 2:00 PM - Consultation
+
+Initial: FIC
+Name: Fatiha Ishrar Chowdhury
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE230-08 09D-18C; 2:00 PM - CSE260-21A (LAB) FIC,MZW FT10-03L; 3:30 PM - CSE260-21A (LAB) FIC,MZW FT10-03L
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Initial: FIC
+Name: Fatiha Ishrar Chowdhury
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-13A (LAB) MDF,FIC FT10-03L; 9:30 AM - CSE260-13A (LAB) MDF,FIC FT10-03L; 11:00 AM - CSE260-09A 09C-13C,CSE260-09B 09C-13C; 12:30 PM - CSE260-10A 09C-13C,CSE260-10B 09C-13C; 2:00 PM - CSE260-11B (LAB) FIC,AHA FT10-04L; 3:30 PM - CSE260-11B (LAB) FIC,AHA FT10-04L",Fatiha Ishrar Chowdhury's office is located in room 4K81.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0198,0.0000,5.1019,5.1218,2026-07-28T09:49:45.726846+00:00,100.0002,100.0150
+FAC-R011,adaptive_novel,What room is Aabrar Islam's office in?,Aabrar Islam's office is in room 4F.,"Initial: CABS
+Name: Aabrar Islam
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.aabrar.islam@bracu.ac.bd
+
+Initial: CABS
+Name: Aabrar Islam
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - CSE260-19B (LAB) CMHQ,CABS FT10-04L; 3:30 PM - CSE260-19B (LAB) CMHQ,CABS FT10-04L
+
+Initial: CABS
+Name: Aabrar Islam
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE111-04 (LAB) AVB,CABS 09B-11L; 9:30 AM - CSE111-04 (LAB) AVB,CABS 09B-11L; 6:00 PM - MSc Class
+
+Initial: NLAM
+Name: Namirul Islam
+Designation: Lecturer
+Status: Full Time
+Room: 4N163
+Email: namirul.islam@bracu.ac.bd
+
+Initial: SZZ
+Name: Sazzadul Islam
+Designation: Lecturer
+Status: Full Time
+Room: 4N165
+Email: sazzadul.islam@bracu.ac.bd",Aabrar Islam's room is 4F.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0189,0.0000,3.9297,3.9486,2026-07-28T09:49:49.676456+00:00,100.0002,100.0150
+FAC-R012,adaptive_novel,What room is Mir Hamidul Hussain's office in?,Mir Hamidul Hussain's office is in room 4N167.,"Initial: HMH
+Name: Mir Hamidul Hussain
+Designation: Lecturer
+Status: Full Time
+Room: 4N167
+Email: hamidul.hussain@bracu.ac.bd
+
+Question: Where is the DCO's office?
+Answer: DCO's office are always connected with the department. So, go to your department and find your DCO.
+
+Question: How to book a room for seminar?
+Answer: Visit: Room Booking Form. You must discuss the seminar with the Office of Co-Curricular Activities (OCA) and obtain permission. Once approved, complete the form, have it signed by your advisor, and submit it to OCA. Processing takes approximately three days.
+
+Question: What is the function of the Proctor's Office?
+Answer: The Proctor's Office oversees academic integrity and student conduct during examinations.
+
+Question: Curious about something: how to book a room for seminar?
+Answer: Visit: Room Booking Form. You must discuss the seminar with the Office of Co-Curricular Activities (OCA) and obtain permission. Once approved, complete the form, have it signed by your advisor, and submit it to OCA. Processing takes approximately three days.",Mir Hamidul Hussain's office is located in Room 4N167.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0176,0.0000,4.4115,4.4296,2026-07-28T09:49:54.106099+00:00,99.9934,100.0150
+FAC-R013,adaptive_novel,What room is Sadif Ahmed's office in?,Sadif Ahmed's office is in room 4P197.,"Initial: SADA
+Name: Sadif Ahmed
+Designation: Lecturer
+Status: Full Time
+Room: 4P197
+Email: sadif.ahmed@bracu.ac.bd
+
+Initial: SADA
+Name: Sadif Ahmed
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE470-11 09B-12C; 9:30 AM - CSE470-12 09B-12C
+
+Initial: SADA
+Name: Sadif Ahmed
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE340-20 10B-16C; 9:30 AM - CSE340-19 10B-16C
+
+Initial: SADA
+Name: Sadif Ahmed
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE470-11 09B-12C; 9:30 AM - CSE470-12 09B-12C; 11:00 AM - CSE471-01 (LAB) SADA,WHMJ 09F-25L; 12:30 PM - CSE471-01 (LAB) SADA,WHMJ 09F-25L
+
+Initial: SADA
+Name: Sadif Ahmed
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE340-20 10B-16C; 9:30 AM - CSE340-19 10B-16C; 11:00 AM - CSE471-03 (LAB) SADA,WHMJ 09F-25L; 12:30 PM - CSE471-03 (LAB) SADA,WHMJ 09F-25L",Sadif Ahmed's office is located in room 4P197.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0144,0.0000,4.2905,4.3049,2026-07-28T09:49:58.411947+00:00,100.0002,100.0150
+FAC-R014,adaptive_novel,What room is Md. Akhtaruzaman Adnan's office in?,Md. Akhtaruzaman Adnan's office is in room 4G16.,"Initial: AKTD
+Name: Md. Akhtaruzaman Adnan
+Designation: Senior Lecturer
+Status: Full Time
+Room: 4G16
+Email: akhtaruzzaman.adnan@bracu.ac.bd
+
+Initial: AKTD
+Name: Md. Akhtaruzaman Adnan
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE320-04 10B-16C
+
+Initial: AKTD
+Name: Md. Akhtaruzaman Adnan
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 3:30 PM - CSE421-09 09C-16T,CSE421-10 09C-16T,CSE421-11 09C-16T
+
+Initial: AKTD
+Name: Md. Akhtaruzaman Adnan
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE320-04 10B-16C; 2:00 PM - CSE421-19 (LAB) AKTD,CQAE 09F-24L,CSE421-20 (LAB) AKTD,CQAE 09F-24L; 3:30 PM - CSE421-19 (LAB) AKTD,CQAE 09F-24L,CSE421-20 (LAB) AKTD,CQAE 09F-24L
+
+Initial: AKTD
+Name: Md. Akhtaruzaman Adnan
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE421-07 (LAB) ANWE,AKTD 12D-26L,CSE421-08 (LAB) ANWE,AKTD 12D-26L; 12:30 PM - CSE421-07 (LAB) ANWE,AKTD 12D-26L,CSE421-08 (LAB) ANWE,AKTD 12D-26L; 3:30 PM - CSE421-09 09C-16T,CSE421-10 09C-16T,CSE421-11 09C-16T",Md. Akhtaruzaman Adnan's office is located in room 4G16.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0186,0.0000,4.8241,4.8427,2026-07-28T09:50:03.254937+00:00,100.0002,100.0150
+FAC-R015,adaptive_novel,What room is Md. Rasel Mia's office in?,Md. Rasel Mia's office is in room 4N149.,"Initial: RAS
+Name: Md. Rasel Mia
+Designation: Lecturer
+Status: Full Time
+Room: 4N149
+Email: rasel.mia@bracu.ac.bd
+
+Initial: MSMA
+Name: Mr. Md. Shamim Mia
+Designation: Lecturer
+Status: Full Time
+Room: 4M110
+Email: shamim.mia@bracu.ac.bd
+
+Initial: RAS
+Name: Md. Rasel Mia
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE460-05 09A-07C; 11:00 AM - CSE350-09B (LAB) ZBH,RAS FT10-02L; 12:30 PM - CSE350-09B (LAB) ZBH,RAS FT10-02L
+
+Initial: RAS
+Name: Md. Rasel Mia
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE460-05 09A-07C; 11:00 AM - CSE460-09 (LAB) ARPD,RAS 09E-21L; 12:30 PM - CSE460-09 (LAB) ARPD,RAS 09E-21L
+
+Initial: RAS
+Name: Md. Rasel Mia
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE251-08A (LAB) ZBH,RAS 12B-20L; 9:30 AM - CSE251-08A (LAB) ZBH,RAS 12B-20L; 2:00 PM - CSE460-02 (LAB) RAS,ZBH 10E-27L; 3:30 PM - CSE460-02 (LAB) RAS,ZBH 10E-27L",Md. Rasel Mia's room is 4N149.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0155,0.0000,4.2542,4.2698,2026-07-28T09:50:07.525383+00:00,100.0002,100.0150
+FAC-R016,adaptive_novel,What room is Mr. Md. Abdur Rahman's office in?,Mr. Md. Abdur Rahman's office is in room 4F.,"Initial: ADR
+Name: Mr. Md. Abdur Rahman
+Designation: C. Senior Lecturer
+Status: Contractual
+Room: 4F
+Email: abdur.rahman@bracu.ac.bd
+
+Course: CSE310
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd
+
+Course: CSE391
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd
+
+Course: CSE489
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd
+
+Initial: ADR
+Name: Mr. Md. Abdur Rahman
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE391-01 FT11-04L; 12:30 PM - CSE391-01 FT11-04L; 2:00 PM - CSE489-01 (LAB) CPTH,ADR FT11-04L; 3:30 PM - CSE489-01 (LAB) CPTH,ADR FT11-04L",Mr. Md. Abdur Rahman's office is located in Room 4F.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0160,0.0000,4.4806,4.4966,2026-07-28T09:50:12.022693+00:00,100.0002,100.0150
+FAC-R017,adaptive_novel,What room is Mr. Md. Fakhruddin Gazzali's office in?,Mr. Md. Fakhruddin Gazzali's office is in room 4M103.,"Initial: FGZ
+Name: Mr. Md. Fakhruddin Gazzali
+Designation: Lecturer
+Status: Full Time
+Room: 4M103
+Email: fakhruddin.gazzali@bracu.ac.bd
+
+Initial: FGZ
+Name: Mr. Md. Fakhruddin Gazzali
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE320-08 09A-01C; 9:30 AM - CSE320-09 09A-01C; 11:00 AM - Consultation by Appointment
+
+Initial: FGZ
+Name: Mr. Md. Fakhruddin Gazzali
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE320-08 09A-01C; 9:30 AM - CSE320-09 09A-01C; 11:00 AM - Consultation by Appointment; 12:30 PM - Consultation by Appointment
+
+Initial: FGZ
+Name: Mr. Md. Fakhruddin Gazzali
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-05 09A-01C; 9:30 AM - CSE221-06 09A-01C; 11:00 AM - CSE221-04 (LAB) FGZ,NMMR 09B-11L; 12:30 PM - CSE221-04 (LAB) FGZ,NMMR 09B-11L
+
+Initial: FGZ
+Name: Mr. Md. Fakhruddin Gazzali
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-05 09A-01C; 9:30 AM - CSE221-06 09A-01C; 11:00 AM - CSE111-10 (LAB) FGZ,AVB 09B-09L; 12:30 PM - CSE111-10 (LAB) FGZ,AVB 09B-09L",Mr. Md. Fakhruddin Gazzali's office is located in Room 4M103.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0199,0.0000,5.2397,5.2596,2026-07-28T09:50:17.283102+00:00,100.0002,100.0150
+FAC-R018,adaptive_novel,What room is Mr. Md. Abu Ibrahim's office in?,Mr. Md. Abu Ibrahim's office is in room 4J59.,"Initial: AIB
+Name: Mr. Md. Abu Ibrahim
+Designation: Lecturer
+Status: Full Time
+Room: 4J59
+Email: abu.ibrahim@bracu.ac.bd
+
+Initial: AIB
+Name: Mr. Md. Abu Ibrahim
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE220-10 10A-05C; 9:30 AM - CSE111-09 10A-05C
+
+Initial: AIB
+Name: Mr. Md. Abu Ibrahim
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE220-08 10C-21C; 9:30 AM - CSE220-09 10C-21C
+
+Initial: AIB
+Name: Mr. Md. Abu Ibrahim
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE220-10 10A-05C; 9:30 AM - CSE111-09 10A-05C
+
+Course: CSE220
+First Theory Coordinator: AIB
+Theory Coordinator Email: abu.ibrahim@bracu.ac.bd
+First Lab Coordinator: AIB
+Second Lab Coordinator: KKS
+Lab Coordinator Email: abu.ibrahim@bracu.ac.bd,md.khaliduzzaman@bracu.ac.bd",Mr. Md. Abu Ibrahim's office is located in room 4J59.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0189,0.0000,4.4748,4.4938,2026-07-28T09:50:21.777238+00:00,100.0002,100.0150
+FAC-R019,adaptive_novel,What room is Kh.Fardin Zubair Nafis's office in?,Kh.Fardin Zubair Nafis's office is in room 4N155.,"Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Designation: Lecturer
+Status: Full Time
+Room: 4N155
+Email: fardin.zubair@bracu.ac.bd
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE370-15 (LAB) FZN,NZU 12F-31L; 12:30 PM - CSE370-15 (LAB) FZN,NZU 12F-31L; 2:00 PM - Research
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 9:30 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE110-19 (LAB) PRC,FZN 12F-30L; 3:30 PM - CSE110-19 (LAB) PRC,FZN 12F-30L
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE370-10 (LAB) FZN,MAU 12F-30L; 9:30 AM - CSE370-10 (LAB) FZN,MAU 12F-30L; 11:00 AM - CSE370-07 (LAB) ATY,FZN 12F-31L; 12:30 PM - CSE370-07 (LAB) ATY,FZN 12F-31L; 2:00 PM - Consultation by Appointment; 3:30 PM - Consultation by Appointment
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-04 (LAB) FZN,SLAR 09B-08L; 9:30 AM - CSE110-04 (LAB) FZN,SLAR 09B-08L; 11:00 AM - CSE110-10 (LAB) SLAR,FZN 09F-27L; 12:30 PM - CSE110-10 (LAB) SLAR,FZN 09F-27L; 2:00 PM - CSE110-06 (LAB) FZN,WLV 09B-08L; 3:30 PM - CSE110-06 (LAB) FZN,WLV 09B-08L",Kh.Fardin Zubair Nafis's office is located in room 4N155.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0158,0.0000,5.2784,5.2942,2026-07-28T09:50:27.072068+00:00,100.0002,100.0150
+FAC-R020,adaptive_novel,What room is Md Shamsur Shafi Nur E Aziz's office in?,Md Shamsur Shafi Nur E Aziz's office is in room 4F.,"Initial: CSSN
+Name: Md Shamsur Shafi Nur E Aziz
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.shamsur.aziz@bracu.ac.bd
+
+Initial: NUR
+Name: Nur Mohammad Shaon
+Designation: Lecturer
+Status: Full Time
+Room: 4N170
+Email: nur.shaon@bracu.ac.bd
+
+Initial: CSSN
+Name: Md Shamsur Shafi Nur E Aziz
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 3:30 PM - CSE421-20 09D-17C
+
+Initial: CSSN
+Name: Md Shamsur Shafi Nur E Aziz
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 3:30 PM - CSE421-20 09D-17C
+
+Initial: CSSN
+Name: Md Shamsur Shafi Nur E Aziz
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE421-10 (LAB) RKBR,CSSN 12D-26L,CSE421-11 (LAB) RKBR,CSSN 12D-26L; 9:30 AM - CSE421-10 (LAB) RKBR,CSSN 12D-26L,CSE421-11 (LAB) RKBR,CSSN 12D-26L; 11:00 AM - CSE221-10 07D-19C",Md Shamsur Shafi Nur E Aziz's room is 4F.,entity_heavy,rrf,0.9,False,True,True,False,True,False,,0.0197,0.0000,4.4995,4.5193,2026-07-28T09:50:31.592184+00:00,0.0000,0.0150
+FAC-R021,adaptive_novel,What room is Sheikh Araf Noshin's office in?,Sheikh Araf Noshin's office is in room 4N144.,"Initial: HFN
+Name: Sheikh Araf Noshin
+Designation: Lecturer
+Status: Full Time
+Room: 4N144
+Email: araf.noshin@bracu.ac.bd
+
+Initial: HFN
+Name: Sheikh Araf Noshin
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-17 09D-17C; 9:30 AM - Consultation; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - Consultation; 3:30 PM - Consultation
+
+Initial: HFN
+Name: Sheikh Araf Noshin
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE427-09 (LAB) ITTSC,HFN 09F-24L; 12:30 PM - CSE427-09 (LAB) ITTSC,HFN 09F-24L; 2:00 PM - CSE220-18 09B-12C; 3:30 PM - CSE370-13 09B-12C
+
+Initial: HFN
+Name: Sheikh Araf Noshin
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-17 09D-17C; 9:30 AM - Consultation; 11:00 AM - CSE427-08 (LAB) NLH,HFN 09F-24L; 12:30 PM - CSE427-08 (LAB) NLH,HFN 09F-24L; 2:00 PM - Thesis; 3:30 PM - Thesis; 5:00 PM - Thesis
+
+Initial: HFN
+Name: Sheikh Araf Noshin
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-14 (LAB) HFN,MZW 09F-24L; 9:30 AM - CSE221-14 (LAB) HFN,MZW 09F-24L; 11:00 AM - CSE221-18 (LAB) HFN,ARD 09E-21L; 12:30 PM - CSE221-18 (LAB) HFN,ARD 09E-21L; 2:00 PM - CSE220-18 09B-12C; 3:30 PM - CSE370-13 09B-12C",Sheikh Araf Noshin's room is 4N144.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0173,0.0000,4.8892,4.9065,2026-07-28T09:50:36.499527+00:00,100.0002,100.0150
+FAC-R022,adaptive_novel,What room is Ashraful Islam Shanto Sikder's office in?,Ashraful Islam Shanto Sikder's office is in room 4P173.,"Initial: ASRF
+Name: Ashraful Islam Shanto Sikder
+Designation: Lecturer
+Status: Full Time
+Room: 4P173
+Email: ashraful.islam@bracu.ac.bd
+
+Initial: ASRF
+Name: Ashraful Islam Shanto Sikder
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE423-20 09B-12C; 9:30 AM - CSE423-21 09B-12C
+
+Initial: ASRF
+Name: Ashraful Islam Shanto Sikder
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-16 (LAB) ASRF,ARD 09E-21L; 9:30 AM - CSE221-16 (LAB) ASRF,ARD 09E-21L; 2:00 PM - CSE221-01 (LAB) NMMR,ASRF 09B-11L; 3:30 PM - CSE221-01 (LAB) NMMR,ASRF 09B-11L
+
+Initial: ASRF
+Name: Ashraful Islam Shanto Sikder
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE422-08 (LAB) ASRF,ITTSC 09B-11L; 9:30 AM - CSE422-08 (LAB) ASRF,ITTSC 09B-11L; 2:00 PM - CSE422-11 (LAB) RSS,ASRF 09B-11L; 3:30 PM - CSE422-11 (LAB) RSS,ASRF 09B-11L
+
+Initial: ASRF
+Name: Ashraful Islam Shanto Sikder
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE423-20 09B-12C; 9:30 AM - CSE423-21 09B-12C; 11:00 AM - CSE221-06 (LAB) FBAW,ASRF 09B-08L; 12:30 PM - CSE221-06 (LAB) FBAW,ASRF 09B-08L; 2:00 PM - CSE221-07 (LAB) TAP,ASRF 09B-08L; 3:30 PM - CSE221-07 (LAB) TAP,ASRF 09B-08L",Ashraful Islam Shanto Sikder's office is located in room 4P173.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0191,0.0000,5.1749,5.1940,2026-07-28T09:50:41.693990+00:00,100.0002,100.0150
+FAC-R023,adaptive_novel,What room is Namira Mustafiz Pranty's office in?,Namira Mustafiz Pranty's office is in room 4F.,"Initial: NMP
+Name: Namira Mustafiz Pranty
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.namira.pranty@bracu.ac.bd
+
+Question: Where is the DCO's office?
+Answer: DCO's office are always connected with the department. So, go to your department and find your DCO.
+
+Question: Where can I find the DCO's office?
+Answer: DCO's office are always connected with the department. So, go to your department and find your DCO.
+
+Question: How to book a room for seminar?
+Answer: Visit: Room Booking Form. You must discuss the seminar with the Office of Co-Curricular Activities (OCA) and obtain permission. Once approved, complete the form, have it signed by your advisor, and submit it to OCA. Processing takes approximately three days.
+
+Question: What is the function of the Proctor's Office?
+Answer: The Proctor's Office oversees academic integrity and student conduct during examinations.",Namira Mustafiz Pranty's office is located in Room 4F.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0177,0.0000,4.4455,4.4635,2026-07-28T09:50:46.158161+00:00,99.9918,100.0150
+FAC-R024,adaptive_novel,What room is Tarvir Anjum Aditto's office in?,Tarvir Anjum Aditto's office is in room 4N159.,"Initial: TAV
+Name: Tarvir Anjum Aditto
+Designation: Lecturer
+Status: Full Time
+Room: 4N159
+Email: tarvir.anjum@bracu.ac.bd
+
+Initial: TAV
+Name: Tarvir Anjum Aditto
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - Thesis (UG); 2:00 PM - CSE251-01B (LAB) TAV,PDS 12B-20L; 3:30 PM - CSE251-01B (LAB) TAV,PDS 12B-20L
+
+Initial: TAV
+Name: Tarvir Anjum Aditto
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - Consultation; 2:00 PM - CSE490D-01 07F-22C; 3:30 PM - CSE250-10A 10A-04C,CSE250-10B 10A-04C; 5:00 PM - Consultation
+
+Course: CSE490D
+First Theory Coordinator: TAV
+Theory Coordinator Email: tarvir.anjum@bracu.ac.bd
+
+Initial: TAV
+Name: Tarvir Anjum Aditto
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE428-01 (LAB) AVB,TAV 12F-30L; 12:30 PM - CSE428-01 (LAB) AVB,TAV 12F-30L; 2:00 PM - CSE490D-01 07F-22C; 3:30 PM - CSE250-10A 10A-04C,CSE250-10B 10A-04C; 5:00 PM - Consultation",Tarvir Anjum Aditto's office is located in room 4N159.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0186,0.0000,4.5912,4.6098,2026-07-28T09:50:50.768612+00:00,100.0002,100.0150
+FAC-R025,adaptive_novel,What room is Mr. Md Sabbir Hossain's office in?,Mr. Md Sabbir Hossain's office is in room 4J54.,"Initial: SBHN
+Name: Mr. Md Sabbir Hossain
+Designation: Lecturer
+Status: Full Time
+Room: 4J54
+Email: sabbir.hossain@bracu.ac.bd
+
+Initial: SBHN
+Name: Mr. Md Sabbir Hossain
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - CSE103-01 (LAB) SLAR,SBHN 11B-20L; 3:30 PM - CSE103-01 (LAB) SLAR,SBHN 11B-20L
+
+Initial: SBHN
+Name: Mr. Md Sabbir Hossain
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE110-04 10B-16C; 12:30 PM - Consultation; 2:00 PM - Consultation; 3:30 PM - CSE424-02 09A-05C
+
+Initial: SBHN
+Name: Mr. Md Sabbir Hossain
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE110-04 10B-16C; 12:30 PM - Consultation; 2:00 PM - Consultation; 3:30 PM - CSE424-02 09A-05C
+
+Initial: SBB
+Name: Md. Sabbir Ahmed
+Designation: Senior Lecturer
+Status: Full Time
+Room: 4M107
+Email: sabbir.ahmed@bracu.ac.bd",Mr. Md Sabbir Hossain's room is 4J54.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0213,0.0000,4.4429,4.4642,2026-07-28T09:50:55.233072+00:00,100.0002,100.0150
+FAC-R026,adaptive_novel,What room is Hamim Ibne Nasim's office in?,Hamim Ibne Nasim's office is in room 4P177.,"Initial: NHBN
+Name: Hamim Ibne Nasim
+Designation: Lecturer
+Status: Full Time
+Room: 4P177
+Email: hamim.nasim@bracu.ac.bd
+
+Question: How to book a room for seminar?
+Answer: Visit: Room Booking Form. You must discuss the seminar with the Office of Co-Curricular Activities (OCA) and obtain permission. Once approved, complete the form, have it signed by your advisor, and submit it to OCA. Processing takes approximately three days.
+
+Initial: NHBN
+Name: Hamim Ibne Nasim
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE220-14 09H-33C; 9:30 AM - CSE341-07 09H-33C; 11:00 AM - Consultation; 12:30 PM - Consultation
+
+Initial: NHBN
+Name: Hamim Ibne Nasim
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - Consultation; 11:00 AM - CSE341-09 (LAB) RAHA,NHBN 12F-30L; 12:30 PM - CSE341-09 (LAB) RAHA,NHBN 12F-30L; 2:00 PM - Thesis (UG)
+
+Initial: NHBN
+Name: Hamim Ibne Nasim
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE220-14 09H-33C; 9:30 AM - CSE341-07 09H-33C; 11:00 AM - CSE341-01 (LAB) NHBN,RAHA 09F-27L; 12:30 PM - CSE341-01 (LAB) NHBN,RAHA 09F-27L; 2:00 PM - Thesis (UG)",Hamim Ibne Nasim's office is located in Room 4P177.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0179,0.0000,4.6096,4.6277,2026-07-28T09:50:59.861760+00:00,99.9958,100.0150
+FAC-R027,adaptive_novel,What room is Waleed Bin Habib Khan's office in?,Waleed Bin Habib Khan's office is in room 4F.,"Initial: WBH
+Name: Waleed Bin Habib Khan
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.waleed.bin@bracu.ac.bd
+
+Initial: WBH
+Name: Waleed Bin Habib Khan
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - CSE421-01 (LAB) CQAE,WBH 12D-26L,CSE421-02 (LAB) CQAE,WBH 12D-26L; 3:30 PM - CSE421-01 (LAB) CQAE,WBH 12D-26L,CSE421-02 (LAB) CQAE,WBH 12D-26L
+
+Initial: WBH
+Name: Waleed Bin Habib Khan
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE221-14 07D-19C; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE421-04 (LAB) CSSN,WBH 12D-26L,CSE421-05 (LAB) CSSN,WBH 12D-26L; 3:30 PM - CSE421-04 (LAB) CSSN,WBH 12D-26L,CSE421-05 (LAB) CSSN,WBH 12D-26L
+
+Initial: WBH
+Name: Waleed Bin Habib Khan
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE221-14 07D-19C; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE421-14 (LAB) RDS,WBH 12D-26L,CSE421-16 (LAB) RDS,WBH 12D-26L; 3:30 PM - CSE421-14 (LAB) RDS,WBH 12D-26L,CSE421-16 (LAB) RDS,WBH 12D-26L
+
+Initial: WBH
+Name: Waleed Bin Habib Khan
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-17A (LAB) AAF,WBH FT11-01L; 9:30 AM - CSE260-17A (LAB) AAF,WBH FT11-01L; 11:00 AM - CSE421-27 (LAB) ANWE,WBH 10E-27L,CSE421-28 (LAB) ANWE,WBH 10E-27L; 12:30 PM - CSE421-27 (LAB) ANWE,WBH 10E-27L,CSE421-28 (LAB) ANWE,WBH 10E-27L",Waleed Bin Habib Khan's office is located in Room 4F.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0171,0.0000,5.0751,5.0922,2026-07-28T09:51:04.954705+00:00,100.0002,100.0150
+FAC-R028,adaptive_novel,What room is Ms. Tasnim Ferdous's office in?,Ms. Tasnim Ferdous's office is in room 4K73.,"Initial: TNMF
+Name: Ms. Tasnim Ferdous
+Designation: Senior Lecturer
+Status: Full Time
+Room: 4K73
+Email: tasnim.ferdous@bracu.ac.bd
+
+Initial: TNMF
+Name: Ms. Tasnim Ferdous
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE340-05 09C-16T,CSE340-06 09C-16T,CSE340-07 09C-16T
+
+Initial: TNMF
+Name: Ms. Tasnim Ferdous
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE340-05 09C-16T,CSE340-06 09C-16T,CSE340-07 09C-16T
+
+Initial: TAP
+Name: Ms. Tasnim Ahsan Prome
+Designation: Lecturer
+Status: Full Time
+Room: 4K83
+Email: tasnim.ahsan@bracu.ac.bd
+
+Initial: SDF
+Name: Dr. Md Sadek Ferdous
+Designation: Professor
+Status: Full Time
+Room: 4G10
+Email: sadek.ferdous@bracu.ac.bd",Ms. Tasnim Ferdous's office is located in room 4K73.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0193,0.0000,4.5139,4.5333,2026-07-28T09:51:09.488129+00:00,100.0002,100.0150
+FAC-R029,adaptive_novel,What room is Abu Obaida Hasme's office in?,Abu Obaida Hasme's office is in room 4F.,"Initial: AOHE
+Name: Abu Obaida Hasme
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.abu.hasme@bracu.ac.bd
+
+Initial: AOHE
+Name: Abu Obaida Hasme
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 6:00 PM - MSc Class
+
+Initial: AOHE
+Name: Abu Obaida Hasme
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE110-17 09A-04C; 2:00 PM - Consultation; 3:30 PM - CSE110-18 09A-05C
+
+Initial: AOHE
+Name: Abu Obaida Hasme
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE110-17 09A-04C; 3:30 PM - CSE110-18 09A-05C; 6:00 PM - MSc Class
+
+Initial: AOHE
+Name: Abu Obaida Hasme
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE110-05 (LAB) CAKM,AOHE 09B-08L; 12:30 PM - CSE110-05 (LAB) CAKM,AOHE 09B-08L; 2:00 PM - Consultation",Abu Obaida Hasme's office is located in Room 4F.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0161,0.0000,4.3845,4.4006,2026-07-28T09:51:13.889411+00:00,100.0002,100.0150
+FAC-R030,adaptive_novel,What room is Md Nafiz Ishtiaque Mahee's office in?,Md Nafiz Ishtiaque Mahee's office is in room 4F.,"Initial: NQM
+Name: Md Nafiz Ishtiaque Mahee
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.nafiz.ishtiaque@bracu.ac.bd
+
+Initial: NQM
+Name: Md Nafiz Ishtiaque Mahee
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE101-07 (LAB) NQM,SLAR 12F-31L; 9:30 AM - CSE101-07 (LAB) NQM,SLAR 12F-31L
+
+Initial: NQM
+Name: Md Nafiz Ishtiaque Mahee
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-05B (LAB) PBK,NQM FT10-04L; 9:30 AM - CSE260-05B (LAB) PBK,NQM FT10-04L
+
+Initial: NQM
+Name: Md Nafiz Ishtiaque Mahee
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-15A (LAB) MDF,NQM FT10-03L; 9:30 AM - CSE260-15A (LAB) MDF,NQM FT10-03L; 11:00 AM - CSE260-18A (LAB) MDF,NQM FT10-03L; 12:30 PM - CSE260-18A (LAB) MDF,NQM FT10-03L
+
+Initial: NQM
+Name: Md Nafiz Ishtiaque Mahee
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-07 (LAB) AAF,NQM 09B-09L; 9:30 AM - CSE110-07 (LAB) AAF,NQM 09B-09L; 11:00 AM - CSE110-17 (LAB) WLV,NQM 10E-27L; 12:30 PM - CSE110-17 (LAB) WLV,NQM 10E-27L",Md Nafiz Ishtiaque Mahee's office is located in Room 4F.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0198,0.0000,5.2301,5.2499,2026-07-28T09:51:19.140307+00:00,100.0002,100.0150
+FAC-D001,adaptive_novel,What is Ruhan Habib's schedule on Sunday?,"On Sunday, Ruhan Habib is scheduled: 8:00 AM - CSE321-17 (LAB) CSHR,NRHB 12D-26L; 9:30 AM - CSE321-17 (LAB) CSHR,NRHB 12D-26L.","Initial: NRHB
+Name: Ruhan Habib
+Designation: Lecturer
+Status: Full Time
+Room: 4P191
+Email: ruhan.habib@bracu.ac.bd
+
+Question: Can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Hi, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Random question, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Can someone help — can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm",I do not have enough information to answer the question.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0172,0.0000,4.0606,4.0781,2026-07-28T09:51:23.218931+00:00,99.9917,100.0150
+FAC-D002,adaptive_novel,What is Farden Ehsan Khan's schedule on Wednesday?,"On Wednesday, Farden Ehsan Khan is scheduled: 9:30 AM - CSE370-08 09D-17C; 11:00 AM - CSE111-05 (LAB) AFA,FEK 09B-10L; 12:30 PM - CSE111-05 (LAB) AFA,FEK 09B-10L; 2:00 PM - CSE370-06 08H-22C.","Initial: FEK
+Name: Farden Ehsan Khan
+Designation: Lecturer
+Status: Full Time
+Room: 4M117
+Email: farden.khan@bracu.ac.bd
+
+Initial: FEK
+Name: Farden Ehsan Khan
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE370-08 09D-17C; 11:00 AM - CSE111-05 (LAB) AFA,FEK 09B-10L; 12:30 PM - CSE111-05 (LAB) AFA,FEK 09B-10L; 2:00 PM - CSE370-06 08H-22C
+
+Initial: FEK
+Name: Farden Ehsan Khan
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE370-08 09D-17C; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE370-06 08H-22C
+
+Initial: FEK
+Name: Farden Ehsan Khan
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - Consultation By Appointment; 11:00 AM - CSE370-07 07D-20C; 12:30 PM - Consultation; 2:00 PM - CSE370-05 09A-05C
+
+Initial: FEK
+Name: Farden Ehsan Khan
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - Consultation By Appointment; 11:00 AM - CSE370-07 07D-20C; 12:30 PM - Consultation; 2:00 PM - CSE370-05 09A-05C","Farden Ehsan Khan's schedule on Wednesday includes classes and labs from 9:30 AM to 12:30 PM, specifically CSE370-08 09D-17C, CSE111-05 (LAB) AFA,FEK 09B-10L, and then another lab session of CSE111-05 (LAB) AFA,FEK 09B-10L from 11:00 AM to 12:30 PM.",entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0163,0.0000,13.4494,13.4657,2026-07-28T09:51:36.685401+00:00,99.9986,100.0150
+FAC-D003,adaptive_novel,What is Mirza Azwad Wakil's schedule on Wednesday?,"On Wednesday, Mirza Azwad Wakil is scheduled: 8:00 AM - Consultation by Appointment; 9:30 AM - CSE470-01 07F-22C; 11:00 AM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 12:30 PM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 2:00 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L; 3:30 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L.","Initial: MAZW
+Name: Mirza Azwad Wakil
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.azwad.wakil@bracu.ac.bd
+
+Initial: MAZW
+Name: Mirza Azwad Wakil
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE470-03 07D-19C
+
+Initial: MAZW
+Name: Mirza Azwad Wakil
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - Consultation by Appointment; 9:30 AM - CSE470-01 07F-22C
+
+Initial: MAZW
+Name: Mirza Azwad Wakil
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - Consultation by Appointment; 9:30 AM - CSE470-01 07F-22C; 11:00 AM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 12:30 PM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 2:00 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L; 3:30 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L
+
+Initial: MAZW
+Name: Mirza Azwad Wakil
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE470-03 07D-19C; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L; 3:30 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L","Mirza Azwad Wakil's schedule on Wednesday includes a consultation by appointment from 8:00 AM, CSE470-01 from 9:30 AM, a lab for CSE260-04B from 11:00 AM to 12:30 PM, another lab for CSE260-04B from 12:30 PM, a lab for CSE260-12A from 2:00 PM, and finally another lab for CSE260-12A from 3:30 PM.",entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0204,0.0000,14.3745,14.3950,2026-07-28T09:51:51.081180+00:00,99.9986,100.0150
+FAC-D004,adaptive_novel,What is Zayed Humayun's schedule on Saturday?,"On Saturday, Zayed Humayun is scheduled: 8:00 AM - CSE321-10 (LAB) ZYH,NMP 10G-32L; 9:30 AM - CSE321-10 (LAB) ZYH,NMP 10G-32L; 11:00 AM - CSE331-07 09A-05C; 12:30 PM - CSE331-08 09A-05C.","Initial: ZYH
+Name: Zayed Humayun
+Designation: Lecturer
+Status: Full Time
+Room: 4N156
+Email: zayed.humayun@bracu.ac.bd
+
+Question: Can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Hi, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Random question, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Can someone help — can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm",I do not have enough information to answer the question.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0179,0.0000,3.9628,3.9812,2026-07-28T09:51:55.063248+00:00,99.9925,100.0150
+FAC-D005,adaptive_novel,What is Mr. Mohammad Badrul Hossain's schedule on Tuesday?,"On Tuesday, Mr. Mohammad Badrul Hossain is scheduled: 11:00 AM - CSE321-04 09A-06C; 12:30 PM - Consultation.","Initial: BDH
+Name: Mr. Mohammad Badrul Hossain
+Designation: Lecturer
+Status: Full Time
+Room: 4J67
+Email: badrul.hossain@bracu.ac.bd
+
+Initial: BDH
+Name: Mr. Mohammad Badrul Hossain
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE321-04 09A-06C; 12:30 PM - Consultation
+
+Initial: BDH
+Name: Mr. Mohammad Badrul Hossain
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE446-01 07D-20C; 12:30 PM - Consultation
+
+Initial: BDH
+Name: Mr. Mohammad Badrul Hossain
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - Research; 12:30 PM - Research; 2:00 PM - Research; 3:30 PM - Research
+
+Initial: BDH
+Name: Mr. Mohammad Badrul Hossain
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE321-04 09A-06C; 12:30 PM - Consultation; 2:00 PM - CSE321-13 (LAB) BDH,ASMN 09F-24L; 3:30 PM - CSE321-13 (LAB) BDH,ASMN 09F-24L","Mr. Mohammad Badrul Hossain's schedule on Tuesday includes a class from 11:00 AM to 12:30 PM for CSE321-04, and a consultation from 12:30 PM onwards.",entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0173,0.0000,7.2777,7.2950,2026-07-28T09:52:02.358755+00:00,99.9986,100.0150
+FAC-D006,adaptive_novel,What is Md.Waseq Alauddin Alvi's schedule on Wednesday?,"On Wednesday, Md.Waseq Alauddin Alvi is scheduled: 8:00 AM - CSE110-15 09A-04C; 9:30 AM - CSE110-10 10B-13C; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE111-02 (LAB) WLV,CAKM 12D-27L; 3:30 PM - CSE111-02 (LAB) WLV,CAKM 12D-27L.","Initial: WLV
+Name: Md.Waseq Alauddin Alvi
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.waseq.alvi@bracu.ac.bd
+
+Initial: WLV
+Name: Md.Waseq Alauddin Alvi
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE110-17 (LAB) WLV,NQM 10E-27L; 12:30 PM - CSE110-17 (LAB) WLV,NQM 10E-27L; 2:00 PM - CSE110-06 (LAB) FZN,WLV 09B-08L; 3:30 PM - CSE110-06 (LAB) FZN,WLV 09B-08L
+
+Initial: WLV
+Name: Md.Waseq Alauddin Alvi
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - MSc Class
+
+Initial: WLV
+Name: Md.Waseq Alauddin Alvi
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-15 09A-04C; 9:30 AM - CSE110-10 10B-13C; 11:00 AM - Consultation; 6:00 PM - MSc Class
+
+Initial: WLV
+Name: Md.Waseq Alauddin Alvi
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-15 09A-04C; 9:30 AM - CSE110-10 10B-13C; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE111-02 (LAB) WLV,CAKM 12D-27L; 3:30 PM - CSE111-02 (LAB) WLV,CAKM 12D-27L","Md. Waseq Alauddin Alvi's schedule on Wednesday includes the following commitments: 8:00 AM - CSE110-15 09A-04C, 9:30 AM - CSE110-10 10B-13C, 11:00 AM - Consultation, 12:30 PM - Consultation, and 2:00 PM - CSE111-02 (LAB) WLV,CAKM 12D-27L; 3:30 PM - CSE111-02 (LAB) WLV,CAKM 12D-27L.",entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0163,0.0000,16.8868,16.9031,2026-07-28T09:52:19.262446+00:00,99.9994,100.0150
+FAC-D007,adaptive_novel,What is Tanhiat Fatema Afnan's schedule on Thursday?,"On Thursday, Tanhiat Fatema Afnan is scheduled: 8:00 AM - CSE321-16 07F-22C; 9:30 AM - CSE321-17 07F-22C; 11:00 AM - Consultation.","Initial: TNF
+Name: Tanhiat Fatema Afnan
+Designation: Lecturer
+Status: Full Time
+Room: 4K75
+Email: tanhiat.fatema@bracu.ac.bd
+
+Question: Can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Hi, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Can someone help — can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Random question, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm",I do not have enough information to answer the question.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0180,0.0000,3.9788,3.9974,2026-07-28T09:52:23.260209+00:00,99.9919,100.0150
+FAC-D008,adaptive_novel,What is Sajid Imam Mahir's schedule on Thursday?,"On Thursday, Sajid Imam Mahir is scheduled: 8:00 AM - CSE260-01A (LAB) PBK,SJM FT10-03L; 9:30 AM - CSE260-01A (LAB) PBK,SJM FT10-03L; 11:00 AM - Consultation.","Initial: SJM
+Name: Sajid Imam Mahir
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.sajid.mahir@bracu.ac.bd
+
+Question: Can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Hi, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Random question, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Can someone help — can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm",I do not have enough information to answer the question.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0161,0.0000,3.9100,3.9265,2026-07-28T09:52:27.187727+00:00,99.9931,100.0150
+FAC-D009,adaptive_novel,What is Maharin Mosfakin's schedule on Tuesday?,"On Tuesday, Maharin Mosfakin is scheduled: 11:00 AM - Consultation; 12:30 PM - CSE341-06 10B-15C; 2:00 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L; 3:30 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L; 5:00 PM - Consultation with Appointment.","Initial: MHSK
+Name: Maharin Mosfakin
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.maharin.mosfakin@bracu.ac.bd
+
+Question: What is the effective date of the current transport schedule?
+Answer: The current schedule has been effective since May 28, 2024.
+
+Question: Can I find the transport schedule online?
+Answer: Yes, the schedule is available on the official BRAC University website.
+
+Question (Banglish): Ekhonkar transport schedule er effective date ta kobe?
+Answer (English): The current schedule has been effective since May 28, 2024.
+
+Question (Banglish): Transport schedule ami ki online e pabo?
+Answer (English): Yes, the schedule is available on the official BRAC University website.",I do not have enough information to answer that question.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0139,0.0000,3.8284,3.8427,2026-07-28T09:52:31.030996+00:00,99.9923,100.0150
+FAC-D010,adaptive_novel,What is Mr. Dibyo Fabian Dofadar's schedule on Sunday?,"On Sunday, Mr. Dibyo Fabian Dofadar is scheduled: 11:00 AM - Consultation by Appointment; 12:30 PM - Consultation; 2:00 PM - CSE427-01 (LAB) DFD,ADU 09F-27L; 3:30 PM - CSE427-01 (LAB) DFD,ADU 09F-27L.","Initial: DFD
+Name: Mr. Dibyo Fabian Dofadar
+Designation: Lecturer
+Status: Full Time
+Room: 4M106
+Email: fabian.dofadar@bracu.ac.bd
+
+Question: Can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Hi, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Initial: DFD
+Name: Mr. Dibyo Fabian Dofadar
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - Consultation by Appointment; 12:30 PM - Consultation; 2:00 PM - CSE427-01 (LAB) DFD,ADU 09F-27L; 3:30 PM - CSE427-01 (LAB) DFD,ADU 09F-27L
+
+Initial: DFD
+Name: Mr. Dibyo Fabian Dofadar
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - Consultation; 12:30 PM - CSE427-01 CSE427-02 CSE427-03 CSE427-04 09C-16T; 2:00 PM - Consultation; 3:30 PM - Consultation by Appointment","Mr. Dibyo Fabian Dofadar's schedule on Sunday includes a consultation from 11:00 AM to 12:30 PM, another consultation from 12:30 PM, and two lab sessions for CSE427-01 from 2:00 PM to 3:30 PM.",entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0161,0.0000,8.9787,8.9951,2026-07-28T09:52:40.026750+00:00,99.9930,100.0150
+FAC-D011,adaptive_novel,What is Ms. Narzu Tarannum's schedule on Wednesday?,"On Wednesday, Ms. Narzu Tarannum is scheduled: 11:00 AM - CSE321-02 10B-17C; 12:30 PM - CSE321-03 10B-17C.","Initial: NTR
+Name: Ms. Narzu Tarannum
+Designation: Lecturer
+Status: Full Time
+Room: 4G21
+Email: narzu.tarannum@bracu.ac.bd
+
+Question: What is the effective date of the current transport schedule?
+Answer: The current schedule has been effective since May 28, 2024.
+
+Question: Can I find the transport schedule online?
+Answer: Yes, the schedule is available on the official BRAC University website.
+
+Initial: NTR
+Name: Ms. Narzu Tarannum
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE321-02 10B-17C; 12:30 PM - CSE321-03 10B-17C
+
+Initial: NTR
+Name: Ms. Narzu Tarannum
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE321-02 10B-17C; 12:30 PM - CSE321-03 10B-17C",Ms. Narzu Tarannum has scheduled commitments on Wednesday at 11:00 AM for CSE321-02 in room 10B and at 12:30 PM for CSE321-03 in room 17C.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0173,0.0000,7.7838,7.8013,2026-07-28T09:52:47.828692+00:00,99.9932,100.0150
+FAC-D012,adaptive_novel,What is Md Shamsur Shafi Nur E Aziz's schedule on Saturday?,"On Saturday, Md Shamsur Shafi Nur E Aziz is scheduled: 3:30 PM - CSE421-20 09D-17C.","Question (Banglish): Transport schedule ami ki online e pabo?
+Answer (English): Yes, the schedule is available on the official BRAC University website.
+
+Initial: CSSN
+Name: Md Shamsur Shafi Nur E Aziz
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE421-10 (LAB) RKBR,CSSN 12D-26L,CSE421-11 (LAB) RKBR,CSSN 12D-26L; 9:30 AM - CSE421-10 (LAB) RKBR,CSSN 12D-26L,CSE421-11 (LAB) RKBR,CSSN 12D-26L; 11:00 AM - CSE221-10 07D-19C
+
+Initial: CSSN
+Name: Md Shamsur Shafi Nur E Aziz
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.shamsur.aziz@bracu.ac.bd
+
+Initial: NUR
+Name: Nur Mohammad Shaon
+Designation: Lecturer
+Status: Full Time
+Room: 4N170
+Email: nur.shaon@bracu.ac.bd
+
+Initial: CSSN
+Name: Md Shamsur Shafi Nur E Aziz
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 3:30 PM - CSE421-20 09D-17C","Md Shamsur Shafi Nur E Aziz's schedule on Saturday includes a commitment from 3:30 PM to 5:00 PM for CSE421-20, section 09D-17C.",entity_heavy,rrf,0.9,False,True,True,False,True,False,,0.0203,0.0000,7.3150,7.3355,2026-07-28T09:52:55.165021+00:00,0.0055,0.0212
+FAC-D013,adaptive_novel,What is Mr. Md. Saiful Bari Siddiqui's schedule on Tuesday?,"On Tuesday, Mr. Md. Saiful Bari Siddiqui is scheduled: 11:00 AM - CSE251-09A (LAB) SDQ,ZAZ FT10-01L; 2:00 PM - CSE428-03 (LAB) SDQ,TAV 09B-10L.","Initial: SDQ
+Name: Mr. Md. Saiful Bari Siddiqui
+Designation: Senior Lecturer
+Status: Full Time
+Room: 4N152
+Email: saiful.bari@bracu.ac.bd
+
+Initial: SDQ
+Name: Mr. Md. Saiful Bari Siddiqui
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE251-09A (LAB) SDQ,ZAZ FT10-01L; 2:00 PM - CSE428-03 (LAB) SDQ,TAV 09B-10L
+
+Initial: SDQ
+Name: Mr. Md. Saiful Bari Siddiqui
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE251-05B (LAB) SDQ,NFS 12B-20L; 2:00 PM - Consultation; 3:30 PM - CSE428-03 08H-22C
+
+Initial: SDQ
+Name: Mr. Md. Saiful Bari Siddiqui
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE250-04A (LAB) SDQ,FFR 12B-20L; 2:00 PM - Consultation by Appointment; 3:30 PM - CSE428-03 08H-22C
+
+Initial: SDQ
+Name: Mr. Md. Saiful Bari Siddiqui
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE251-06B (LAB) SDQ,HMH 12B-20L; 2:00 PM - CSE250-07B (LAB) SDQ,HMH 12B-20L; 5:00 PM - Consultation",Mr. Md. Saiful Bari Siddiqui's schedule on Tuesday includes a lab for CSE251-09A from 11:00 AM to 1:00 PM and a lab for CSE428-03 from 2:00 PM to 4:00 PM.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0171,0.0000,8.7495,8.7666,2026-07-28T09:53:03.932300+00:00,100.0002,100.0150
+FAC-D014,adaptive_novel,What is Pratick Roy Chowdhuruy's schedule on Saturday?,"On Saturday, Pratick Roy Chowdhuruy is scheduled: 11:00 AM - CSE461-07 (LAB) PRC,MHSK 12B-18L; 12:30 PM - CSE461-07 (LAB) PRC,MHSK 12B-18L; 2:00 PM - CSE260-19A (LAB) MAO,PRC FT10-03L; 3:30 PM - CSE260-19A (LAB) MAO,PRC FT10-03L.","Initial: PRC
+Name: Pratick Roy Chowdhuruy
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.pratick.roy@bracu.ac.bd
+
+Question: Can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Question: Hi, can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Initial: PRC
+Name: Pratick Roy Chowdhuruy
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE461-07 (LAB) PRC,MHSK 12B-18L; 12:30 PM - CSE461-07 (LAB) PRC,MHSK 12B-18L; 2:00 PM - CSE260-19A (LAB) MAO,PRC FT10-03L; 3:30 PM - CSE260-19A (LAB) MAO,PRC FT10-03L
+
+Initial: PRC
+Name: Pratick Roy Chowdhuruy
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE461-05 (LAB) SMYA,PRC 12B-18L; 9:30 AM - CSE461-05 (LAB) SMYA,PRC 12B-18L; 11:00 AM - CSE461-06 (LAB) PRC,CPTH 12B-18L; 12:30 PM - CSE461-06 (LAB) PRC,CPTH 12B-18L","Pratick Roy Chowdhuruy has the following scheduled commitments on Saturday: 11:00 AM - CSE461-07 (LAB) PRC,MHSK 12B-18L; 12:30 PM - CSE461-07 (LAB) PRC,MHSK 12B-18L.",entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0164,0.0000,9.7272,9.7439,2026-07-28T09:53:13.677124+00:00,99.9923,100.0150
+FAC-D015,adaptive_novel,What is Fatiha Ishrar Chowdhury's schedule on Monday?,"On Monday, Fatiha Ishrar Chowdhury is scheduled: 8:00 AM - CSE260-13A (LAB) MDF,FIC FT10-03L; 9:30 AM - CSE260-13A (LAB) MDF,FIC FT10-03L; 11:00 AM - CSE260-09A 09C-13C,CSE260-09B 09C-13C; 12:30 PM - CSE260-10A 09C-13C,CSE260-10B 09C-13C; 2:00 PM - CSE260-11B (LAB) FIC,AHA FT10-04L; 3:30 PM - CSE260-11B (LAB) FIC,AHA FT10-04L.","Initial: FIC
+Name: Fatiha Ishrar Chowdhury
+Designation: Lecturer
+Status: Full Time
+Room: 4K81
+Email: fatiha.ishrar@bracu.ac.bd
+
+Initial: FIC
+Name: Fatiha Ishrar Chowdhury
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE260-09A 09C-13C,CSE260-09B 09C-13C; 12:30 PM - CSE260-10A 09C-13C,CSE260-10B 09C-13C; 2:00 PM - Consultation
+
+Initial: FIC
+Name: Fatiha Ishrar Chowdhury
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE230-08 09D-18C; 2:00 PM - CSE260-21A (LAB) FIC,MZW FT10-03L; 3:30 PM - CSE260-21A (LAB) FIC,MZW FT10-03L
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Initial: FIC
+Name: Fatiha Ishrar Chowdhury
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-13A (LAB) MDF,FIC FT10-03L; 9:30 AM - CSE260-13A (LAB) MDF,FIC FT10-03L; 11:00 AM - CSE260-09A 09C-13C,CSE260-09B 09C-13C; 12:30 PM - CSE260-10A 09C-13C,CSE260-10B 09C-13C; 2:00 PM - CSE260-11B (LAB) FIC,AHA FT10-04L; 3:30 PM - CSE260-11B (LAB) FIC,AHA FT10-04L","Fatiha Ishrar Chowdhury's schedule on Monday includes classes and labs from 8:00 AM to 3:30 PM, specifically CSE260-13A (LAB) from 8:00 AM to 9:30 AM, CSE260-09A and CSE260-09B from 11:00 AM to 12:30 PM, CSE260-10A and CSE260-10B from 12:30 PM to 2:00 PM, and CSE260-11B (LAB) from 2:00 PM to 3:30 PM.",entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0152,0.0000,17.5713,17.5865,2026-07-28T09:53:31.263698+00:00,100.0002,100.0150
+FAC-D016,adaptive_novel,What is Kh.Fardin Zubair Nafis's schedule on Tuesday?,"On Tuesday, Kh.Fardin Zubair Nafis is scheduled: 11:00 AM - CSE370-15 (LAB) FZN,NZU 12F-31L; 12:30 PM - CSE370-15 (LAB) FZN,NZU 12F-31L; 2:00 PM - Research.","Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Designation: Lecturer
+Status: Full Time
+Room: 4N155
+Email: fardin.zubair@bracu.ac.bd
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE370-15 (LAB) FZN,NZU 12F-31L; 12:30 PM - CSE370-15 (LAB) FZN,NZU 12F-31L; 2:00 PM - Research
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 9:30 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE110-19 (LAB) PRC,FZN 12F-30L; 3:30 PM - CSE110-19 (LAB) PRC,FZN 12F-30L
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE370-10 (LAB) FZN,MAU 12F-30L; 9:30 AM - CSE370-10 (LAB) FZN,MAU 12F-30L; 11:00 AM - CSE370-07 (LAB) ATY,FZN 12F-31L; 12:30 PM - CSE370-07 (LAB) ATY,FZN 12F-31L; 2:00 PM - Consultation by Appointment; 3:30 PM - Consultation by Appointment
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-04 (LAB) FZN,SLAR 09B-08L; 9:30 AM - CSE110-04 (LAB) FZN,SLAR 09B-08L; 11:00 AM - CSE110-10 (LAB) SLAR,FZN 09F-27L; 12:30 PM - CSE110-10 (LAB) SLAR,FZN 09F-27L; 2:00 PM - CSE110-06 (LAB) FZN,WLV 09B-08L; 3:30 PM - CSE110-06 (LAB) FZN,WLV 09B-08L",Kh.Fardin Zubair Nafis's schedule on Tuesday includes teaching two lab sessions of CSE370-15 from 11:00 AM to 12:30 PM and then conducting research from 2:00 PM.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0197,0.0000,8.2904,8.3102,2026-07-28T09:53:39.574637+00:00,100.0002,100.0150
+FAC-D017,adaptive_novel,What is Sadiul Arefin Rafi's schedule on Monday?,"On Monday, Sadiul Arefin Rafi is scheduled: 11:00 AM - CSE424-01 (LAB) SLAR,LBBH 12D-26L,CSE424-02 (LAB) SLAR,LBBH 12D-26L; 12:30 PM - CSE424-01 (LAB) SLAR,LBBH 12D-26L,CSE424-02 (LAB) SLAR,LBBH 12D-26L; 3:30 PM - Consultation by Appointment.","Initial: SLAR
+Name: Sadiul Arefin Rafi
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.sadiul.rafi@bracu.ac.bd
+
+Question: Can I find the transport schedule online?
+Answer: Yes, the schedule is available on the official BRAC University website.
+
+Question: What is the effective date of the current transport schedule?
+Answer: The current schedule has been effective since May 28, 2024.
+
+Question: Who should Architecture students contact for their class schedule, since it isn't published with other departments?
+Answer: Architecture students are specifically advised to contact their own department directly for class schedule information rather than relying on the general semester class-schedule notice used by other departments.
+
+Initial: SLAR
+Name: Sadiul Arefin Rafi
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-04 (LAB) FZN,SLAR 09B-08L; 9:30 AM - CSE110-04 (LAB) FZN,SLAR 09B-08L; 11:00 AM - CSE110-10 (LAB) SLAR,FZN 09F-27L; 12:30 PM - CSE110-10 (LAB) SLAR,FZN 09F-27L",I do not have enough information to answer the question.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0167,0.0000,4.0165,4.0336,2026-07-28T09:53:43.608858+00:00,99.9936,100.0150
+FAC-D018,adaptive_novel,What is Akib Anjum's schedule on Tuesday?,"On Tuesday, Akib Anjum is scheduled: 11:00 AM - Consultation; 12:30 PM - CSE251-04A 07H-27C,CSE251-04B 07H-27C; 2:00 PM - Consultation by Appointment; 3:30 PM - CSE460-07 09A-07C; 5:00 PM - Consultation.","Initial: AKJ
+Name: Akib Anjum
+Designation: Lecturer
+Status: Full Time
+Room: 4N161
+Email: anjum.akib@bracu.ac.bd
+
+Question: Can I find the transport schedule online?
+Answer: Yes, the schedule is available on the official BRAC University website.
+
+Initial: AKJ
+Name: Akib Anjum
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - Consultation; 12:30 PM - CSE251-04A 07H-27C,CSE251-04B 07H-27C; 2:00 PM - Consultation by Appointment; 3:30 PM - CSE460-07 09A-07C; 5:00 PM - Consultation
+
+Initial: AKJ
+Name: Akib Anjum
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - Consultation; 12:30 PM - CSE251-04A 07H-27C,CSE251-04B 07H-27C; 2:00 PM - Consultation by Appointment; 3:30 PM - CSE460-07 09A-07C; 5:00 PM - Consultation
+
+Initial: AKJ
+Name: Akib Anjum
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 12:30 PM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 2:00 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L; 3:30 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L; 5:00 PM - Consultation","Akib Anjum's schedule on Tuesday includes a consultation from 11:00 AM, CSE251-04A and CSE251-04B classes from 12:30 PM, a consultation by appointment from 2:00 PM, CSE460-07 class from 3:30 PM, and another consultation at 5:00 PM.",entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0148,0.0000,10.6591,10.6741,2026-07-28T09:53:54.283607+00:00,99.9940,100.0150
+FAC-D019,adaptive_novel,What is Dr. Swakkhar Shatabda's schedule on Thursday?,"On Thursday, Dr. Swakkhar Shatabda is scheduled: 8:00 AM - Research; 9:30 AM - Research; 11:00 AM - Research; 12:30 PM - Research; 2:00 PM - Research; 3:30 PM - Research.","Initial: SWK
+Name: Dr. Swakkhar Shatabda
+Designation: Professor
+Status: Full Time
+Room: 4G28
+Email: swakkhar.shatabda@bracu.ac.bd
+
+Question: Can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Initial: SWK
+Name: Dr. Swakkhar Shatabda
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - Research; 9:30 AM - Research; 11:00 AM - Research; 12:30 PM - Research; 2:00 PM - Research; 3:30 PM - Research
+
+Initial: SWK
+Name: Dr. Swakkhar Shatabda
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - Research; 9:30 AM - Research; 11:00 AM - Research; 12:30 PM - Thesis; 2:00 PM - Thesis; 3:30 PM - Consultation
+
+Initial: SWK
+Name: Dr. Swakkhar Shatabda
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE443-01 10A-05C; 9:30 AM - Consultation; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - Thesis; 3:30 PM - Thesis",Dr. Swakkhar Shatabda's scheduled commitments on Thursday are Research from 8:00 AM to 12:30 PM and then again from 2:00 PM to 3:30 PM.,entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0187,0.0000,7.1908,7.2097,2026-07-28T09:54:01.493851+00:00,99.9921,100.0150
+FAC-D020,adaptive_novel,What is Mohammad Naveed Hossain's schedule on Saturday?,"On Saturday, Mohammad Naveed Hossain is scheduled: 8:00 AM - CSE110-14 07H-26C; 9:30 AM - CSE423-17 07H-26C; 11:00 AM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 12:30 PM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 2:00 PM - Consultation.","Initial: MVH
+Name: Mohammad Naveed Hossain
+Designation: Lecturer
+Status: Full Time
+Room: 4M113
+Email: mohammad.naveed@bracu.ac.bd
+
+Question: Can you tell me the library time schedule?
+Answer: Sunday - Thursday : 9:00 am - 10:00 pm 
+Friday : 2:30 pm - 9:00 pm 
+Saturday : 1:00 pm - 9:00 pm
+
+Initial: MVH
+Name: Mohammad Naveed Hossain
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 9:30 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE110-13 (LAB) MVH,AAF 09B-08L; 3:30 PM - CSE110-13 (LAB) MVH,AAF 09B-08L
+
+Initial: BDH
+Name: Mr. Mohammad Badrul Hossain
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE446-01 07D-20C; 12:30 PM - Consultation
+
+Initial: MVH
+Name: Mohammad Naveed Hossain
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-14 07H-26C; 9:30 AM - CSE423-17 07H-26C; 11:00 AM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 12:30 PM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 2:00 PM - Consultation","Mohammad Naveed Hossain's schedule on Saturday includes the following commitments: 
+8:00 AM - CSE110-14 07H-26C; 
+9:30 AM - CSE423-17 07H-26C; 
+11:00 AM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 
+12:30 PM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 
+2:00 PM - Consultation.",entity_heavy,rrf,0.9,False,False,False,False,True,False,,0.0188,0.0000,20.1872,20.2063,2026-07-28T09:54:21.701361+00:00,99.9938,100.0150

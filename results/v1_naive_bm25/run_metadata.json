@@ -1,0 +1,26 @@
+{
+  "model": "llama3.1:8b",
+  "n_queries": 200,
+  "n_configs": 4,
+  "n_rows_written": 800,
+  "configs": [
+    {
+      "name": "full_hybrid",
+      "lambda": 0.5
+    },
+    {
+      "name": "bm25_only",
+      "lambda": 1.0
+    },
+    {
+      "name": "vector_only",
+      "lambda": 0.0
+    },
+    {
+      "name": "no_retrieval",
+      "lambda": null
+    }
+  ],
+  "start_time_utc": "2026-07-24T06:48:45.336034+00:00",
+  "end_time_utc": "2026-07-24T07:33:54.134714+00:00"
+}

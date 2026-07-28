@@ -1,0 +1,15 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+models/
+chroma_db/
+*.zip
+.claude/
+.hf_cache/
+.nltk_data/
+.pip_cache/
+.mplconfig/
+.mpl_cache/
+.tmp/
+.torch_home/

@@ -1,0 +1,208 @@
+"""
+Thin client for local Ollama generation (http://localhost:11434), replacing
+the paper's Groq/LLaMA-3.3-70B path with a locally-hosted Llama-3.1-8B to
+avoid Groq's rate limits (see plan discussion / methodology-text correction
+still pending in paper.tex).
+"""
+
+import requests
+
+OLLAMA_URL = "http://localhost:11434/api/generate"
+MODEL = "llama3.1:8b"
+
+SYSTEM_PROMPT_WITH_CONTEXT = (
+    "You are a helpful academic advising assistant for a university. "
+    "Answer the user's question using ONLY the retrieved context below. "
+    "If the context does not contain enough information to answer, say so "
+    "rather than guessing.\n\n"
+    "Always answer in one or more complete sentences that restate the "
+    "specific subject of the question (e.g. for \"What is the full "
+    "prerequisite chain for CSE489?\" answer \"The full prerequisite chain "
+    "for CSE489 is ...\", not just the bare list; for \"What is CMR's "
+    "designation?\" answer \"CMR is a Professor.\", not just \"Professor.\"). "
+    "Never answer with a single word, a bare list, or a sentence fragment. "
+    "State the answer directly and confidently -- do not include "
+    "meta-commentary such as \"Based on the retrieved context, I can see "
+    "that...\" or reasoning out loud about ambiguity in the context; if the "
+    "context is genuinely ambiguous or insufficient, say so in one direct "
+    "sentence instead of describing the ambiguity at length.\n\n"
+    "Retrieved context:\n{context}\n\n"
+    "Question: {query}\n"
+    "Answer:"
+)
+
+SYSTEM_PROMPT_NO_CONTEXT = (
+    "You are a helpful academic advising assistant for a university. "
+    "Answer the user's question as best you can. Always answer in one or "
+    "more complete sentences that restate the specific subject of the "
+    "question; never answer with a single word, a bare list, or a sentence "
+    "fragment.\n\n"
+    "Question: {query}\n"
+    "Answer:"
+)
+
+
+TRANSLATE_PROMPT = (
+    "Translate the following question into clear, standard English. The "
+    "question may be in Bengali (Banglish, written in Latin script), mixed "
+    "Bengali/English, or already in English. Preserve any course codes, "
+    "names, or identifiers exactly as written. Output ONLY the translated "
+    "English question, nothing else -- no explanation, no quotation marks.\n\n"
+    "Question: {query}\n"
+    "English translation:"
+)
+
+
+NORMALIZE_ENTITIES_PROMPT = (
+    "Rewrite the following question so that any course code or person name "
+    "is in its most standard, canonical written form -- e.g. 'cse 220' or "
+    "'CSE-220' becomes 'CSE220' (letters directly followed by digits, no "
+    "space or dash), and an informally-spelled or misspelled name is "
+    "corrected to its most likely standard spelling. Do not change "
+    "anything else about the question -- same wording, same meaning, same "
+    "language. If nothing needs normalizing, output the question exactly "
+    "as given. Output ONLY the rewritten question, nothing else -- no "
+    "explanation, no quotation marks.\n\n"
+    "Question: {query}\n"
+    "Normalized question:"
+)
+
+
+def build_prompt(query: str, context: str | None) -> str:
+    if context:
+        return SYSTEM_PROMPT_WITH_CONTEXT.format(context=context, query=query)
+    return SYSTEM_PROMPT_NO_CONTEXT.format(query=query)
+
+
+def translate_to_english(query: str, model: str = MODEL, timeout: int = 300) -> str:
+    """Used by novel_pipeline.py's cross-lingual query-translation retrieval
+    (tRAG pattern, see module docstring): translate a possibly-Banglish query
+    to English so it can ALSO be searched against the English-heavy portion
+    of the corpus, in addition to the original query. Same deterministic
+    decoding as generate() -- this is a retrieval-time utility call, not a
+    user-facing answer, but should still be reproducible."""
+    prompt = TRANSLATE_PROMPT.format(query=query)
+    resp = requests.post(
+        OLLAMA_URL,
+        json={
+            "model": model, "prompt": prompt, "stream": False,
+            "options": {"temperature": 0.0, "seed": 42, "num_ctx": 512},
+        },
+        timeout=timeout,
+    )
+    resp.raise_for_status()
+    return resp.json()["response"].strip()
+
+
+def normalize_entities(query: str, model: str = MODEL, timeout: int = 300) -> str:
+    """Used by novel_pipeline.py's entity-normalization retrieval fallback:
+    a deterministic regex fix (pipeline/patterns.py's COURSE_CODE_RE) already
+    handles the specific "CSE 220"/"CSE-220" spacing gap found by code
+    review, but cannot handle the broader class of non-canonical entity
+    mentions -- misspelled or informally-written faculty names not in the
+    alias table, unusual course-code capitalization patterns not anticipated
+    by any fixed regex. Motivated by Magomere et al. (2025, ACL Findings,
+    arXiv:2503.03417), who use an LLM-based "claim normalization" step as a
+    train-free, inference-time robustness mitigation for exactly this class
+    of input perturbation. Same deterministic decoding as generate() -- a
+    retrieval-time utility call, not a user-facing answer, but should still
+    be reproducible."""
+    prompt = NORMALIZE_ENTITIES_PROMPT.format(query=query)
+    resp = requests.post(
+        OLLAMA_URL,
+        json={
+            "model": model, "prompt": prompt, "stream": False,
+            "options": {"temperature": 0.0, "seed": 42, "num_ctx": 512},
+        },
+        timeout=timeout,
+    )
+    resp.raise_for_status()
+    return resp.json()["response"].strip()
+
+
+SUFFICIENT_CONTEXT_PROMPT = (
+    "Context:\n{context}\n\n"
+    "Question: {query}\n\n"
+    "Could a diligent reader, using ONLY the context above and no outside "
+    "knowledge, give a complete and correct answer to the question? Answer "
+    "with exactly one word: YES or NO."
+)
+
+
+def judge_sufficient_context(query: str, context: str, model: str = MODEL, timeout: int = 300) -> bool:
+    """Sufficient-context classification, per Joren et al. (2024/2025,
+    ICLR 2025, Google Research + UCSD, "Sufficient Context: A New Lens on
+    Retrieval Augmented Generation Systems", arXiv:2411.06037): a binary
+    judgment of whether the retrieved context alone would let a diligent
+    reader answer the question, independent of whether the model actually
+    would. Used by the cross-lingual sufficient-context gating experiment
+    (scripts/crosslingual_sufficient_context.py): the SAME question, judged
+    against context retrieved via the original (possibly Banglish) query
+    and separately against context retrieved via its English translation --
+    agreement/disagreement between the two is a diagnostic signal for
+    translation-sensitive retrieval sufficiency specific to code-mixed
+    querying, not explored (as far as this project's literature review
+    found) in the existing sufficient-context or code-mixed-RAG literature."""
+    prompt = SUFFICIENT_CONTEXT_PROMPT.format(context=context, query=query)
+    resp = requests.post(
+        OLLAMA_URL,
+        json={
+            "model": model, "prompt": prompt, "stream": False,
+            "options": {"temperature": 0.0, "seed": 42, "num_ctx": 2048},
+        },
+        timeout=timeout,
+    )
+    resp.raise_for_status()
+    text = resp.json()["response"].strip().upper()
+    return text.startswith("YES")
+
+
+def generate(query: str, context: str | None, model: str = MODEL, timeout: int = 900) -> str:
+    # CPU-only inference on this machine measured at 15-60s for short
+    # answers and 300s+ for detailed multi-paragraph ones (no GPU available
+    # -- see CLAUDE.md.md). 900s is a safety ceiling, not an expectation.
+    prompt = build_prompt(query, context)
+    resp = requests.post(
+        OLLAMA_URL,
+        json={
+            "model": model, "prompt": prompt, "stream": False,
+            # Deterministic (greedy) decoding: standard practice for
+            # reproducible RAG evaluation. Without this, two calls with
+            # IDENTICAL retrieved context can produce different correct
+            # phrasings by sampling chance alone (temperature defaults to
+            # ~0.8), which shows up as pure noise in metric comparisons
+            # between configs rather than a real quality difference --
+            # confirmed concretely: round B's full_hybrid vs novel-pipeline
+            # comparison had cases scoring BLEU 1.0 vs ~0.13 on the exact
+            # same underlying fact, phrased differently.
+            # num_ctx: 2048 was sized against an OLD measurement (~2508
+            # chars / ~700 tokens max context) taken before the novel
+            # pipeline started injecting prerequisite-graph blocks and
+            # pool-matched chunks on top of the base retrieval results. A
+            # fresh measurement (2026-07-28, results/novel_pipeline_raw_
+            # outputs_roundK_noreranker.csv, n=200) found the ACTUAL max is
+            # now 5,041 chars (~1,260 tokens), with p99 at ~1,140 tokens --
+            # already eating well into the old 2048 budget once the system
+            # prompt, question, and generated answer are added on top, with
+            # real risk of Ollama silently truncating the earliest part of
+            # the prompt (the graph block / first retrieved chunks) on the
+            # longest queries. Raised to 4096, still a deliberate choice
+            # below the model's full window: GPU + the page-file fix (see
+            # project notes) removed the memory pressure that originally
+            # motivated shrinking this, and 4096 keeps a wide margin over
+            # the new measured max without reverting to an unbounded
+            # default. Raising the ceiling alone does not fully solve the
+            # underlying risk, though: Liu et al. (2024, TACL, "Lost in the
+            # Middle") show models use information placed at the start/end
+            # of a long context far more reliably than information buried
+            # in the middle, regardless of whether it technically fits --
+            # see novel_pipeline.py's confidence-ordered context assembly,
+            # which places the highest-confidence chunk first and the
+            # second-highest last rather than leaving assembly order to
+            # incidental retrieval rank.
+            "options": {"temperature": 0.0, "seed": 42, "num_ctx": 4096},
+        },
+        timeout=timeout,
+    )
+    resp.raise_for_status()
+    return resp.json()["response"].strip()

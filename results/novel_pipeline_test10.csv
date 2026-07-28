@@ -1,0 +1,247 @@
+query_id,config,query,reference_answer,retrieved_context,generated_answer,route,fusion,lambda,abstained,graph_augmented,retrieval_s,rerank_s,generation_s,total_s,timestamp,query_confidence
+Q084,adaptive_novel,"New student here, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?","If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.","Question: New student here, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: What happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: Hey, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: My thesis defense got postponed due to a cyclone, and separately I want to change my thesis title before the (new) defense date. Are both of these OK?
+Answer: Both are handled, but through different mechanisms - a defense postponed for an external/valid reason like a cyclone is simply rescheduled, no penalty. Changing your thesis title before the (rescheduled) final defense is also possible, but the deadline for that varies by semester, so you'd want to check the current thesis deadlin
+
+Question (Banglish): Cyclone er moto external reason e thesis defense postpone hole ki hoy?
+Answer (English): If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.","If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.",open_ended,linear,0.5,False,False,0.0909,0.1425,5.2906,5.5240,2026-07-26T17:53:07.640318+00:00,0.0429
+Q054,adaptive_novel,"For a friend who's asking — are journals, magazines and reference books available for borrowing?","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.","Question: For a friend who's asking — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Can someone help — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Quick question — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: This might be a silly question, but are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Just wondering, are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",open_ended,linear,0.5,False,False,0.0255,0.0833,5.4724,5.5813,2026-07-26T17:53:13.222504+00:00,0.0992
+Q071,adaptive_novel,What are BRAC University's official colours?,"BRAC University's official colours are blue, black, and gray.","Question: What are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: Can you tell me what BRAC University's official colours are?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: I wanted to ask, what are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: I looked around the site but couldn't find it — what are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question (Banglish): BRAC University er official colour gula ki?
+Answer (English): BRAC University's official colours are blue, black, and gray.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,False,0.0217,0.0969,0.0000,0.1187,2026-07-26T17:53:13.340160+00:00,0.0028
+Q046,adaptive_novel,Before I forget to ask — how can students apply for scholarships at BRAC University?,"To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before notifying selected students through email or the university portal.","Question: Before I forget to ask — how can students apply for scholarships at BRAC University?
+Answer: To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committ
+
+Question: How can students apply for scholarships at BRAC University?
+Answer: To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before no
+
+Question: How can I apply for the scholarship?
+Answer: 1. Students who are eligible for Scholarship Based on Previous Academic Results / Sibling Scholarship / BRAC Scholarship / Physically Challenged Students / Children of Freedom Fighter / Debater’s Blue Scholarship / Children of Brac University Regular Confirmed Employee will have to apply for the first time through BracU prescribed form which is available at the Brac University website (https://www.bracu.ac.bd/admission/scholarships-financial
+
+Question: Quick question — how do I apply for the BRAC University international scholarship?
+Answer: International applicants fill out the online scholarship application form and submit it, along with required supporting documents (e.g., income declarations, trade license if a business owner), to the International & Scholarship Office at international-office@bracu.ac.bd.
+
+Question: How do I apply for the BRAC University international scholarship?
+Answer: International applicants fill out the online scholarship application form and submit it, along with required supporting documents (e.g., income declarations, trade license if a business owner), to the International & Scholarship Office at international-office@bracu.ac.bd.","To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before notification.",open_ended,linear,0.5,False,False,0.0239,0.1177,10.9455,11.0871,2026-07-26T17:53:24.430058+00:00,0.1533
+Q045,adaptive_novel,"Kind of urgent, but roughly how many students and academic staff does BRAC University have?","As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.","Question: Kind of urgent, but roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Quick question — roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Just wondering, roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question (Banglish): BRAC University te mote koto student ar academic staff ache?
+Answer (English): As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.","As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.",open_ended,linear,0.5,False,False,0.0276,0.0938,7.3125,7.4339,2026-07-26T17:53:31.864833+00:00,0.1166
+Q184,adaptive_novel,What is RBR's designation?,Mr. Rakin Bin Rabbani (RBR) is a Lecturer.,"Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Designation: Lecturer
+Status: Full Time
+Room: 4J60
+Email: rakin.rabbani@bracu.ac.bd
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE101-03 09B-12C; 12:30 PM - CSE101-04 09B-12C
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE370-03 09H-32C; 12:30 PM - CSE370-04 09H-32C; 2:00 PM - CSE101-02 (LAB) RBR,ANV FT11-04L; 3:30 PM - CSE101-02 (LAB) RBR,ANV FT11-04L
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE101-03 09B-12C; 12:30 PM - CSE101-04 09B-12C; 2:00 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L; 3:30 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE370-03 09H-32C; 12:30 PM - CSE370-04 09H-32C",Lecturer.,open_ended,linear,0.5,False,False,0.0215,0.1404,3.2432,3.4052,2026-07-26T17:53:35.270978+00:00,0.0943
+Q154,adaptive_novel,What day and time is the theory class for CSE250-10B?,The theory class for CSE250-10B is on MON+WED at 3:30 PM in room 10A-04C.,"Course: CSE250-10B
+Theory Initial: TAV
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 10A-04C
+Lab Faculty: AQT,TSE
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250-01B
+Theory Initial: MHY
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: UPM,ALSM
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250-02A
+Theory Initial: AKDB
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 07H-27C
+Lab Faculty: ZIZE,TSE
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250-01A
+Theory Initial: MHY
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: EHQ,MHY
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE320-05
+Theory Initial: NTR
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 10B-13C",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,entity_heavy,rrf,0.9,True,False,0.0250,0.1246,0.0000,0.1496,2026-07-26T17:53:35.418138+00:00,0.0000
+Q171,adaptive_novel,Who teaches the lab section of CSE110-17?,"The lab section of CSE110-17 is taught by WLV,NQM.","Course: CSE110-17
+Theory Initial: AOHE
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 09A-04C
+Lab Faculty: WLV,NQM
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: 10E-27L
+
+Course: CSE110-01
+Theory Initial: ANT
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 10B-17C
+Lab Faculty: ANT,ART
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 09B-10L
+
+Course: CSE110
+First Theory Coordinator: TAW
+Theory Coordinator Email: tawhid.anwar@bracu.ac.bd
+First Lab Coordinator: DFD
+Second Lab Coordinator: RKBM
+Lab Coordinator Email: fabian.dofadar@bracu.ac.bd,mohammad.rakibul@bracu.ac.bd
+
+Course: CSE110-02
+Theory Initial: STNM
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 10B-17C
+Lab Faculty: AOHE,RKBM
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: 09B-08L
+
+Course: CSE110-03
+Theory Initial: STNM
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 10B-17C
+Lab Faculty: YND,ATY
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09B-08L",WLV and NQM teach the lab section of CSE110-17.,entity_heavy,rrf,0.9,False,False,0.0190,0.2439,4.7160,4.9789,2026-07-26T17:53:40.400778+00:00,0.0014
+Q146,adaptive_novel,What is the coordinator email for CSE220?,The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd.,"Course: CSE220
+First Theory Coordinator: AIB
+Theory Coordinator Email: abu.ibrahim@bracu.ac.bd
+First Lab Coordinator: AIB
+Second Lab Coordinator: KKS
+Lab Coordinator Email: abu.ibrahim@bracu.ac.bd,md.khaliduzzaman@bracu.ac.bd
+
+Course: CSE310
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd
+
+Course: CSE370
+First Theory Coordinator: FEK
+Theory Coordinator Email: farden.khan@bracu.ac.bd
+First Lab Coordinator: FEK
+Lab Coordinator Email: farden.khan@bracu.ac.bd
+
+Course: CSE424
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE391
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,entity_heavy,rrf,0.9,True,False,0.0218,0.0995,0.0000,0.1213,2026-07-26T17:53:40.522010+00:00,0.0000
+Q145,adaptive_novel,What is the coordinator email for CSE482?,The coordinator email for CSE482 is shadman.shahriar@bracu.ac.bd.,"Course: CSE482
+First Theory Coordinator: SDS
+Theory Coordinator Email: shadman.shahriar@bracu.ac.bd
+First Lab Coordinator: SDS
+Lab Coordinator Email: shadman.shahriar@bracu.ac.bd
+
+Course: CSE422
+First Theory Coordinator: TRZ
+Theory Coordinator Email: tanzim.reza@bracu.ac.bd
+First Lab Coordinator: ZHS
+Lab Coordinator Email: shoumo.hasan@bracu.ac.bd
+
+Course: CSE430
+First Theory Coordinator: EHQ
+Theory Coordinator Email: ehtashamul.haque@bracu.ac.bd
+First Lab Coordinator: TAV
+Lab Coordinator Email: tarvir.anjum@bracu.ac.bd
+
+Course: CSE428
+First Theory Coordinator: SDQ
+Theory Coordinator Email: saiful.bari@bracu.ac.bd
+First Lab Coordinator: EHQ
+Lab Coordinator Email: ehtashamul.haque@bracu.ac.bd
+
+Course: CSE424
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,entity_heavy,rrf,0.9,True,False,0.0233,0.0791,0.0000,0.1024,2026-07-26T17:53:40.623594+00:00,0.0002

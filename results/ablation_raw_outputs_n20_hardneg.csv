@@ -1,0 +1,1412 @@
+query_id,config,lambda,query,reference_answer,retrieved_context,generated_answer,retrieval_s,generation_s,total_s,timestamp,query_confidence
+Q084,full_hybrid,0.5,"Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?","Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.","Question: Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?
+Answer: Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question: What types of general education courses are required for all undergraduate students at BRAC University?
+Answer: Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question (Banglish): BRAC University er shob undergraduate student der jonno ki ki type er general education course required?
+Answer (English): Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question (Banglish): Protita student ke General Education (GenEd) course er koto credit-hour complete korte hoy?
+Answer (English): Every undergraduate student, regardless of major, must complete 42 credit-hours (14 courses) of General Education courses, generally within the first two years of study, spanning Humanities, Social Sciences, Law, Mathematics, Sciences, Technology and Architecture.
+
+Question: How many credit-hours of General Education (GenEd) courses must every student complete?
+Answer: Every undergraduate student, regardless of major, must complete 42 credit-hours (14 courses) of General Education courses, generally within the first two years of study, spanning Humanities, Social Sciences, Law, Mathematics, Sciences, Technology and Architecture.","The types of general education courses that are required for all undergraduate students at BRAC University include Humanities, Social Sciences, Law, Mathematics, Sciences, Technology, and Architecture.",0.0506,15.6841,15.7347,2026-07-28T13:17:41.003794+00:00,0.0618
+Q054,full_hybrid,0.5,What does the Counseling and Wellness Centre at BRAC University offer?,"The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.","Question: What does the Counseling and Wellness Centre at BRAC University offer?
+Answer: The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.
+
+Question (Banglish): BRAC University er Counseling and Wellness Centre ki offer kore?
+Answer (English): The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.
+
+Question: Does the Counseling and Wellness Centre charge for its services?
+Answer: No, the Counseling and Wellness Centre (CWC) provides free and confidential mental health and wellbeing services to all students and staff, including individual counseling, both face-to-face and online.
+
+Question (Banglish): Counseling and Wellness Centre ki tar service er jonno charge kore?
+Answer (English): No, the Counseling and Wellness Centre (CWC) provides free and confidential mental health and wellbeing services to all students and staff, including individual counseling, both face-to-face and online.
+
+Question: What kind of counseling services does the Counseling Unit provide?
+Answer: The Counseling Unit offers mental health support, guidance, and workshops for students. Visti: https://www.bracu.ac.bd/campus-life/student-affairs/counseling-unit/counseling-team","The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.",0.0214,6.1685,6.1899,2026-07-28T13:17:47.194756+00:00,0.0800
+Q071,full_hybrid,0.5,"I'm an international student on the BRAC Scholarship with a 3.1 CGPA, but I need to retake a course I failed. Will my scholarship cover the retake fee?","No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.","Question: I'm an international student on the BRAC Scholarship with a 3.1 CGPA, but I need to retake a course I failed. Will my scholarship cover the retake fee?
+Answer: No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.
+
+Question: I'm on the Merit Scholarship and I failed one course this semester. Does that affect my scholarship the same way it would affect an international student's BRAC Scholarship?
+Answer: Not necessarily the same way - the rules differ by scholarship. For the international BRAC Scholarship, failing a course makes you ineligible for the tuition fee waiver for the next two semesters. The Merit Scholarship (based on BRACU academic results) is instead tied to maintaining a specific CGPA each semester to keep the award active going forward - so a single failed course's impact would show up through its effect on your CGPA meeting that semester's required threshold, rather than through an automatic two-semester penalty like the BRAC Scholarship's rule.
+
+Question (Banglish): International student der retake ba repeat kora course e ki tuition fee waiver cover kore?
+Answer (English): No. Tuition fee waivers and scholarships are not applied to retake or repeat subjects - the student must pay for those separately at their own cost.
+
+Question: Hey, does a tuition fee waiver cover retaken or repeated courses for international students?
+Answer: No. Tuition fee waivers and scholarships are not applied to retake or repeat subjects - the student must pay for those separately at their own cost.
+
+Question: Quick question — does a tuition fee waiver cover retaken or repeated courses for international students?
+Answer: No. Tuition fee waivers and scholarships are not applied to retake or repeat subjects - the student must pay for those separately at their own cost.","No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.",0.0292,12.1308,12.1601,2026-07-28T13:17:59.354928+00:00,0.4398
+Q046,full_hybrid,0.5,What sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.","Question: What sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: New student here, what sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: I looked around the site but couldn't find it — what sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: Does BRAC University take part in inter-university sports tournaments regularly?
+Answer: Yes, BRAC University teams regularly compete in inter-university football and other sports tournaments in Dhaka, including tournaments like the Shahjalal Islami Bank Faraaz Gold Cup Inter-University Football Tournament.
+
+Question: Does BRAC University have any costs associated with joining clubs or sports teams?
+Answer: No there no costs associated with joining clubs or sports teams.","The university has BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",0.0251,5.7051,5.7302,2026-07-28T13:18:05.086142+00:00,0.0188
+Q045,full_hybrid,0.5,"My advisor is not responding, what to do?","Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.","Question: My advisor is not responding, what to do?
+Answer: Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.
+
+Question: My advisor is not on campus, what to do?
+Answer: Please request on Discord on your advisor's channel or try requesting other advisor. But he can reject you easily because it is not his duty as you are not assigned to him in the advising session. So, please ask your advisor on the Discord channel or request other advisor if they are willing to help.
+
+Question (Banglish): Amar advisor response korche na, ki korbo?
+Answer (English): Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.
+
+Question (Banglish): Amar advisor campus e nei, ki korbo?
+Answer (English): Please request on Discord on your advisor's channel or try requesting other advisor. But he can reject you easily because it is not his duty as you are not assigned to him in the advising session. So, please ask your advisor on the Discord channel or request other advisor if they are willing to help.
+
+Question: I have not been advised to a advisor yet, what to do?
+Answer: If you haven't been assigned an advisor yet, contact your department's DCO (Departmental Coordination Officer) - for CSE, current DCO contact details are published via the department's official advising channel or notice board, since DCO assignments can change between semesters. If the DCOs don't respond, escalate to your department's advising coordinator.","Please wait, your advisor is maybe busy with other students' responses. You can request other advisors for your advising but they will only add it, but they will not approve it. So, it is wise to get the request done by your assigned advisor.",0.0153,8.2037,8.2190,2026-07-28T13:18:13.305837+00:00,0.3538
+Q040,full_hybrid,0.5,Can you tell me what the deadline to change the thesis title before the final defense is?,The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.,"Question: Can you tell me what the deadline to change the thesis title before the final defense is?
+Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
+
+Question: What is the deadline to change the thesis title before the final defense?
+Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
+
+Question (Banglish): Final defense er age thesis title change korar deadline ta kobe?
+Answer (English): The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
+
+Question: My thesis defense got postponed due to a cyclone, and separately I want to change my thesis title before the (new) defense date. Are both of these OK?
+Answer: Both are handled, but through different mechanisms - a defense postponed for an external/valid reason like a cyclone is simply rescheduled, no penalty. Changing your thesis title before the (rescheduled) final defense is also possible, but the deadline for that varies by semester, so you'd want to check the current thesis deadline sheet to make sure your title-change request still falls within whatever window applies to your now-rescheduled defense date.
+
+Question: Can you tell me what the current deadlines for thesis submission and defense are?
+Answer: Thesis submission and defense deadlines are set fresh each semester by the CSE Thesis Committee and shared with enrolled thesis students via a deadline sheet. Check with your thesis coordinator or department for the current semester's exact dates, since these change every term.",The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.,0.0197,5.8558,5.8755,2026-07-28T13:18:19.181904+00:00,0.0380
+Q023,full_hybrid,0.5,I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?,"Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.","Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Question: New student here, can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
+Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
+
+Question: Can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
+Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
+
+Question (Banglish): Major na hoile o student ra ki Physics, Mathematics, Biotechnology, ba Microbiology te minor korte pare?
+Answer (English): Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
+
+Question: Can students minor in EEE if it's not their major department?
+Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.","Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.",0.0297,10.2696,10.2993,2026-07-28T13:18:29.481935+00:00,0.4400
+Q081,full_hybrid,0.5,What is BRAC Scholarship?,"BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents’ monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.","Question (Banglish): Scholarship er jonno ami kivabe apply korbo?
+Answer (English): 1. Students who are eligible for Scholarship Based on Previous Academic Results / Sibling Scholarship / BRAC Scholarship / Physically Challenged Students / Children of Freedom Fighter / Debater's Blue Scholarship / Children of Brac University Regular Confirmed Employee will have to apply for the first time through BracU prescribed form which is available at the Brac University website (https://www.bracu.ac.bd/admission/scholarships-financial-aid) and submit it to the International & Scholarship Office, Brac University or email the scan copy to: scholarship@bracu.ac.bd 
+
+2. Those students who are eligible under Merit Scholarship Based on Brac University Academic Results and Scholarship Based on Brac University Admission Test Result are not required to apply as a scholarship will be awarded automatically. 
+
+3. Those students who are already availing of scholarships/financial aid are not required to apply further. If they fulfill all the conditions of the scholarship, they will be awarded automatically. 
+
+4. If the scholarship /financial aid of a student is discontinued for one or more than one semester, s/he needs to re-apply through BracU prescribed form after fulfilling the eligibility criteria.
+
+Question: Can you tell me what the types of Scholarship/ Financial aid offered by Brac University are?
+Answer: 1. Scholarship Based on Previous Academic Results 
+
+2. Merit Scholarship based on BracU Academic Results 
+
+3. Scholarship Based on Brac University Admission Test Result
+
+4. Sibling Scholarship
+
+5. Spouse Scholarship
+
+6. BRAC Scholarship
+
+7. Physically Challenged Students
+
+8. Children of Freedom Fighter
+
+9. Debater’s Blue Scholarship
+
+10. Children of BracU Regular Confirmed Employee
+
+For detailed information: https://www.bracu.ac.bd/admission/scholarships-financial-aid
+
+Question: What are the types of Scholarship/ Financial aid offered by Brac University?
+Answer: 1. Scholarship Based on Previous Academic Results 
+
+2. Merit Scholarship based on BracU Academic Results 
+
+3. Scholarship Based on Brac University Admission Test Result
+
+4. Sibling Scholarship
+
+5. Spouse Scholarship
+
+6. BRAC Scholarship
+
+7. Physically Challenged Students
+
+8. Children of Freedom Fighter
+
+9. Debater’s Blue Scholarship
+
+10. Children of BracU Regular Confirmed Employee
+
+For detailed information: https://www.bracu.ac.bd/admission/scholarships-financial-aid
+
+Question: How can I apply for the scholarship?
+Answer: 1. Students who are eligible for Scholarship Based on Previous Academic Results / Sibling Scholarship / BRAC Scholarship / Physically Challenged Students / Children of Freedom Fighter / Debater’s Blue Scholarship / Children of Brac University Regular Confirmed Employee will have to apply for the first time through BracU prescribed form which is available at the Brac University website (https://www.bracu.ac.bd/admission/scholarships-financial-aid) and submit it to the International & Scholarship Office, Brac University or email the scan copy to: scholarship@bracu.ac.bd 
+
+2. Those students who are eligible under Merit Scholarship Based on Brac University Academic Results and Scholarship Based on Brac University Admission Test Result are not required to apply as a scholarship will be awarded automatically. 
+
+3. Those students who are already availing of scholarships/financial aid are not required to apply further. If they fulfill all the conditions of the scholarship, they will be awarded automatically. 
+
+4. If the scholarship /financial aid of a student is discontinued for one or more than one semester, s/he needs to re-apply through BracU prescribed form after fulfilling the eligibility criteria.
+
+Question (Banglish): BRAC University je Scholarship/Financial aid dey, segula ki ki type er?
+Answer (English): 1. Scholarship Based on Previous Academic Results 
+
+2. Merit Scholarship based on BracU Academic Results 
+
+3. Scholarship Based on Brac University Admission Test Result
+
+4. Sibling Scholarship
+
+5. Spouse Scholarship
+
+6. BRAC Scholarship
+
+7. Physically Challenged Students
+
+8. Children of Freedom Fighter
+
+9. Debater's Blue Scholarship
+
+10. Children of BracU Regular Confirmed Employee
+
+For detailed information: https://www.bracu.ac.bd/admission/scholarships-financial-aid",BRAC Scholarship is one of the types of scholarship/financial aid offered by Brac University.,0.0232,5.7496,5.7728,2026-07-28T13:18:35.255563+00:00,0.2325
+Q011,full_hybrid,0.5,"Does BRAC University have a digital student ID card, or only a physical one?","Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.","Question: Does BRAC University have a digital student ID card, or only a physical one?
+Answer: Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.
+
+Question (Banglish): BRAC University er ki digital student ID card ache, naki shudhu physical ta?
+Answer (English): Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.
+
+Question (Banglish): ID card chara student ra ki transport service use korte pare?
+Answer (English): No, students must present a valid BRAC University ID card.
+
+Question: Can students without an ID card use the transport service?
+Answer: No, students must present a valid BRAC University ID card.
+
+Question: What ID do I need to show to board the BRAC University bus?
+Answer: Passengers must display their individual student ID card before boarding. New students who don't yet have their ID card can show a photocopy of their payment/registration receipt instead.","BRAC University has both a digital and a physical student ID card, with the digital ID card being generated through the BRACU Mobile App.",0.0199,5.9508,5.9708,2026-07-28T13:18:41.227156+00:00,0.1104
+Q001,full_hybrid,0.5,How are meal plans managed at TARC?,"Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively","Question: How are meal plans managed at TARC?
+Answer: Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question: Sorry if this was already answered, but how are meal plans managed at TARC?
+Answer: Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question: Before I forget to ask — how are meal plans managed at TARC?
+Answer: Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question (Banglish): TARC e meal plan kivabe manage kora hoy?
+Answer (English): Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question: Can you tell me what the process for arranging food or refreshments for events is?
+Answer: For refreshments from the Brac University cafeteria, orders must be confirmed by OCA, and payments will be made by the Accounts Office from the club/forum budget (not in cash). For refreshments from outside vendors, financial assistance will be transferred to the club advisor’s bank account as per the approved budget.","Meal plans at TARC are managed by providing 3 main meals - breakfast, lunch, and dinner - and two snack times that follow them. Breakfast time continues from 7-9 am, lunch time from 12:30-3 pm, dinner from 8:30-10 pm, followed by snacks from 11-12 am and 4-5 pm collectively.",0.0160,11.6581,11.6741,2026-07-28T13:18:52.901897+00:00,0.0149
+Q184,full_hybrid,0.5,What is Atonu Roy Chowdhury's email?,Atonu Roy Chowdhury's email is atonuroy.chowdhury@bracu.ac.bd.,"Initial: NARC
+Name: Atonu Roy Chowdhury
+Designation: Lecturer
+Status: Full Time
+Room: 4P192
+Email: atonuroy.chowdhury@bracu.ac.bd
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - Consultation; 2:00 PM - CSE330-10 (LAB) NFMK,NARC 09F-26L
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-02 (LAB) NARC,NMMR 09E-22L; 11:00 AM - Consultation; 12:30 PM - Consultation
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-05 (LAB) NARC,FBAW 09B-08L; 11:00 AM - CSE221-13 (LAB) NARC,NMMR 09B-10L; 2:00 PM - CSE330-18 07D-20C; 3:30 PM - CSE330-19 07D-20C
+
+Initial: FDC
+Name: Dr. Farida Chowdhury
+Designation: Professor
+Status: Full Time
+Room: 4G09
+Email: farida.chowdhury@bracu.ac.bd",Atonu Roy Chowdhury's email is atonuroy.chowdhury@bracu.ac.bd.,0.0178,5.3618,5.3795,2026-07-28T13:18:58.281940+00:00,100.4549
+Q154,full_hybrid,0.5,What day and time is the theory class for CSE370-16?,The theory class for CSE370-16 is on SAT+THU at 9:30 AM in room 10B-17C.,"Course: CSE370-16
+Theory Initial: MZG
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10B-17C
+Lab Faculty: RBR,KZMN
+Lab Day: TUE
+Lab Time: 2:00 PM
+Lab Room: 12F-31L
+
+Initial: KZMN
+Name: Kazi Kamruzzaman Rabbi
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE471-04 09A-05C; 2:00 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L; 3:30 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L
+
+Course: CSE331-16
+Theory Initial: TNF
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 07F-22C
+
+Course: CSE340-16
+Theory Initial: ZLNM
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09H-32C
+
+Course: STA201-16
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-37C",The theory classes for CSE370-16 are held on Saturday and Thursday at 9:30 AM.,0.0199,5.1022,5.1221,2026-07-28T13:19:03.404761+00:00,100.3998
+Q171,full_hybrid,0.5,Who teaches the lab section of CSE221-19?,"The lab section of CSE221-19 is taught by ARD,ANV.","Course: CSE221-19
+Theory Initial: IBA
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09H-33C
+Lab Faculty: ARD,ANV
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 09E-22L
+
+Initial: ARD
+Name: Mr. Ayman Rasheed
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-15 (LAB) MZW,ARD 09E-22L; 9:30 AM - CSE221-15 (LAB) MZW,ARD 09E-22L; 11:00 AM - CSE221-19 (LAB) ARD,ANV 09E-22L; 12:30 PM - CSE221-19 (LAB) ARD,ANV 09E-22L
+
+Initial: ANV
+Name: Md. Anonto Shuvo
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-12 (LAB) NRHB,ANV 09B-10L; 9:30 AM - CSE221-12 (LAB) NRHB,ANV 09B-10L; 11:00 AM - CSE221-19 (LAB) ARD,ANV 09E-22L; 12:30 PM - CSE221-19 (LAB) ARD,ANV 09E-22L; 2:00 PM - CSE221-11 (LAB) ANV,CSYR 09B-09L; 3:30 PM - CSE221-11 (LAB) ANV,CSYR 09B-09L
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-05 (LAB) NARC,FBAW 09B-08L; 11:00 AM - CSE221-13 (LAB) NARC,NMMR 09B-10L; 2:00 PM - CSE330-18 07D-20C; 3:30 PM - CSE330-19 07D-20C
+
+Initial: IRZA
+Name: Md. Irtiza Hossain
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-18 10B-17C; 9:30 AM - CSE220-19 09D-17C","The lab instructors for CSE221-19 are Mr. Ayman Rasheed and Md. Anonto Shuvo, who team-teach the lab sections on Saturday at 11:00 AM in room 09E-22L and also at 12:30 PM in the same location.",0.0156,10.0752,10.0908,2026-07-28T13:19:13.496041+00:00,100.3000
+Q146,full_hybrid,0.5,Who is the theory coordinator for CSE461?,The theory coordinator for CSE461 is KHR.,"Course: CSE461
+First Theory Coordinator: KHR
+Theory Coordinator Email: khalilur@bracu.ac.bd
+First Lab Coordinator: RDW
+Second Lab Coordinator: RFF
+Lab Coordinator Email: redowanul.akbar@bracu.ac.bd,rafid.ahnaf@bracu.ac.bd
+
+Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE250
+First Theory Coordinator: SDS
+Second Theory Coordinator: PDS
+Theory Coordinator Email: shadman.shahriar@bracu.ac.bd,purbayan.das@bracu.ac.bd
+First Lab Coordinator: SDQ
+Second Lab Coordinator: FFR
+Lab Coordinator Email: saiful.bari@bracu.ac.bd,md.fatin@bracu.ac.bd
+
+Course: CSE251
+First Theory Coordinator: PDS
+Second Theory Coordinator: UTS
+Theory Coordinator Email: purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd
+First Lab Coordinator: MOM
+Lab Coordinator Email: moynul.moni@bracu.ac.bd",The first Theory Coordinator for CSE461 is KHR.,0.0241,4.1157,4.1398,2026-07-28T13:19:17.636660+00:00,100.1985
+Q145,full_hybrid,0.5,What is the coordinator email for CSE446?,The coordinator email for CSE446 is sadek.ferdous@bracu.ac.bd.,"Course: CSE446
+First Theory Coordinator: SDF
+Theory Coordinator Email: sadek.ferdous@bracu.ac.bd
+First Lab Coordinator: SJM
+Second Lab Coordinator: SDF
+Lab Coordinator Email: ext.sajid.mahir@bracu.ac.bd,sadek.ferdous@bracu.ac.bd
+
+Course: CSE474
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE424
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE310
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd
+
+Course: CSE370
+First Theory Coordinator: FEK
+Theory Coordinator Email: farden.khan@bracu.ac.bd
+First Lab Coordinator: FEK
+Lab Coordinator Email: farden.khan@bracu.ac.bd","The theory coordinator email for CSE446 is sadek.ferdous@bracu.ac.bd, and the lab coordinator emails are ext.sajid.mahir@bracu.ac.bd and sadek.ferdous@bracu.ac.bd.",0.0189,8.6639,8.6828,2026-07-28T13:19:26.320345+00:00,100.4601
+Q140,full_hybrid,0.5,Who is the theory coordinator for CSE330?,The theory coordinator for CSE330 is AMK. The second theory coordinator is AQU.,"Course: CSE330
+First Theory Coordinator: AMK
+Second Theory Coordinator: AQU
+Theory Coordinator Email: abu.khan@bracu.ac.bd,aquib.azmain@bracu.ac.bd
+First Lab Coordinator: NNTN
+Second Lab Coordinator: ALB
+Lab Coordinator Email: naima.tahsin@bracu.ac.bd,anindita.labonno@bracu.ac.bd
+
+Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE250
+First Theory Coordinator: SDS
+Second Theory Coordinator: PDS
+Theory Coordinator Email: shadman.shahriar@bracu.ac.bd,purbayan.das@bracu.ac.bd
+First Lab Coordinator: SDQ
+Second Lab Coordinator: FFR
+Lab Coordinator Email: saiful.bari@bracu.ac.bd,md.fatin@bracu.ac.bd
+
+Course: CSE251
+First Theory Coordinator: PDS
+Second Theory Coordinator: UTS
+Theory Coordinator Email: purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd
+First Lab Coordinator: MOM
+Lab Coordinator Email: moynul.moni@bracu.ac.bd",The first Theory Coordinator for CSE330 is AMK and the second Theory Coordinator is AQU.,0.0141,4.8501,4.8643,2026-07-28T13:19:31.184954+00:00,100.4190
+Q123,full_hybrid,0.5,What are the prerequisites for CSE430?,The prerequisite for CSE430 is MAT120 (HP).,"Course: CSE430
+Prerequisite: MAT120 (HP)
+Full Prerequisite Chain: MAT120-MAT110
+
+Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: What are the prerequisites for the Cse program?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics
+
+Question: Can you tell me what the prerequisites for the Cse program are?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics",The prerequisite for CSE430 is MAT120 (HP) with a full prerequisite chain of MAT120-MAT110.,0.0167,5.1293,5.1460,2026-07-28T13:19:36.331894+00:00,100.6391
+Q181,full_hybrid,0.5,Which room is Anika Tasnim in?,Anika Tasnim is in room 4F.,"Initial: ANT
+Name: Anika Tasnim
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.anika.tasnim@bracu.ac.bd
+
+Question: Where's the female prayer room?
+Answer: The female prayer room is located on the ground floor near reception and also another one on 6th floor.(ZONE-H).
+
+Question: Where is the Central Control Room located?
+Answer: Ground Floor, Beside the Lift Lobby
+
+Question (Banglish): Female der Prayer Room ami kothay pabo?
+Answer (English): In front of the indoor (Multipurpose Hall) and also on 6th floor(ZONE-H).
+
+Question (Banglish): Female der Prayer Room ami kivabe access korbo?
+Answer (English): The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)",Anika Tasnim is in room 4F.,0.0153,3.8298,3.8451,2026-07-28T13:19:40.177476+00:00,100.4481
+Q111,full_hybrid,0.5,What are the prerequisites for CSE420?,"The prerequisite for CSE420 is CSE321 (HP),CSE331 (HP),CSE340 (HP).","Course: CSE420
+Prerequisite: CSE321 (HP),CSE331 (HP),CSE340 (HP)
+Full Prerequisite Chain: CSE321-CSE331-CSE340-CSE221-CSE220-CSE111-CSE110
+
+Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Question: Can students minor in EEE if it's not their major department?
+Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.","The full prerequisite chain for CSE420 is CSE321 (HP), CSE331 (HP), CSE340 (HP).",0.0129,5.4816,5.4945,2026-07-28T13:19:45.672507+00:00,100.5152
+Q101,full_hybrid,0.5,What are the prerequisites for CSE423?,The prerequisite for CSE423 is MAT216 (HP).,"Course: CSE423
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT216-MAT120-MAT110
+
+Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Question: Can students minor in EEE if it's not their major department?
+Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.",The prerequisite for CSE423 is MAT216 with a High Pass.,0.0144,4.4208,4.4352,2026-07-28T13:19:50.108227+00:00,100.5155
+Q084,bm25_only,1.0,"Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?","Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.","Question: Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?
+Answer: Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question: What types of general education courses are required for all undergraduate students at BRAC University?
+Answer: Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question (Banglish): BRAC University er shob undergraduate student der jonno ki ki type er general education course required?
+Answer (English): Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question: How many credit-hours of General Education (GenEd) courses must every student complete?
+Answer: Every undergraduate student, regardless of major, must complete 42 credit-hours (14 courses) of General Education courses, generally within the first two years of study, spanning Humanities, Social Sciences, Law, Mathematics, Sciences, Technology and Architecture.
+
+Question: Do you know how many credit-hours of General Education (GenEd) courses must every student complete?
+Answer: Every undergraduate student, regardless of major, must complete 42 credit-hours (14 courses) of General Education courses, generally within the first two years of study, spanning Humanities, Social Sciences, Law, Mathematics, Sciences, Technology and Architecture.","Every undergraduate student, regardless of major, must complete 42 credit-hours (14 courses) of General Education courses, generally within the first two years of study, spanning Humanities, Social Sciences, Law, Mathematics, Sciences, Technology and Architecture.",0.0295,7.9093,7.9388,2026-07-28T13:19:58.048448+00:00,0.1127
+Q054,bm25_only,1.0,What does the Counseling and Wellness Centre at BRAC University offer?,"The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.","Question: What does the Counseling and Wellness Centre at BRAC University offer?
+Answer: The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.
+
+Question (Banglish): BRAC University er Counseling and Wellness Centre ki offer kore?
+Answer (English): The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.
+
+Question: Does the Counseling and Wellness Centre charge for its services?
+Answer: No, the Counseling and Wellness Centre (CWC) provides free and confidential mental health and wellbeing services to all students and staff, including individual counseling, both face-to-face and online.
+
+Question (Banglish): Counseling and Wellness Centre ki tar service er jonno charge kore?
+Answer (English): No, the Counseling and Wellness Centre (CWC) provides free and confidential mental health and wellbeing services to all students and staff, including individual counseling, both face-to-face and online.
+
+Question: Can I refer myself to the Counseling and Wellness Centre, or do I need someone to refer me?
+Answer: Students can self-refer to the Counseling and Wellness Centre; most clients are self-referred, though faculty, staff or other authorities can also refer a student who may need support.","The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.",0.0210,6.2687,6.2896,2026-07-28T13:20:04.338806+00:00,0.0731
+Q071,bm25_only,1.0,"I'm an international student on the BRAC Scholarship with a 3.1 CGPA, but I need to retake a course I failed. Will my scholarship cover the retake fee?","No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.","Question: I'm an international student on the BRAC Scholarship with a 3.1 CGPA, but I need to retake a course I failed. Will my scholarship cover the retake fee?
+Answer: No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.
+
+Question: I'm on the Merit Scholarship and I failed one course this semester. Does that affect my scholarship the same way it would affect an international student's BRAC Scholarship?
+Answer: Not necessarily the same way - the rules differ by scholarship. For the international BRAC Scholarship, failing a course makes you ineligible for the tuition fee waiver for the next two semesters. The Merit Scholarship (based on BRACU academic results) is instead tied to maintaining a specific CGPA each semester to keep the award active going forward - so a single failed course's impact would show up through its effect on your CGPA meeting that semester's required threshold, rather than through an automatic two-semester penalty like the BRAC Scholarship's rule.
+
+Question (Banglish): International student der retake ba repeat kora course e ki tuition fee waiver cover kore?
+Answer (English): No. Tuition fee waivers and scholarships are not applied to retake or repeat subjects - the student must pay for those separately at their own cost.
+
+Question (Banglish): Scholarship recipient er jonno Repeat, Retake, I grade & F grade er policy ta ki?
+Answer (English): 1. If a student fails (F) in any subject(s) in a semester, s/he will not be considered for tuition fee waiver for two subsequent semesters. However, s/he will be allowed to re-apply with proper documents in the third semester with required CGPA.
+
+2. Tuition fee waiver is not awarded on retake/repeat subject(s). The student is required to pay for the retake/repeat subject(s). If a student has taken any retake/repeat courses in the previous semester then s/he will not be eligible for any type of scholarship/financial aid in the current semester. 
+
+3. Students having ""Incomplete (I)"" / Pending (P) grade in a semester will be considered for Scholarship/Financial Aid in their current semester but have to pay for all the courses. If s/he obtains the required CGPA after ""make-up"" or grade submission, his/her waiver will be reimbursed /adjusted in the next semester. 
+
+4. Students, suspended/penalized for disciplinary reasons, may not be eligible for scholarship/financial aid for the remaining academic period at Brac University (starting from the date such decision is made).
+
+Question: What is the policy for Repeat, Retake, I grade & F grade for a scholarship recipient?
+Answer: 1. If a student fails (F) in any subject(s) in a semester, s/he will not be considered for tuition fee waiver for two subsequent semesters. However, s/he will be allowed to re-apply with proper documents in the third semester with required CGPA.
+
+2. Tuition fee waiver is not awarded on retake/repeat subject(s). The student is required to pay for the retake/repeat subject(s). If a student has taken any retake/repeat courses in the previous semester then s/he will not be eligible for any type of scholarship/financial aid in the current semester. 
+
+3. Students having “Incomplete (I)” / Pending (P) grade in a semester will be considered for Scholarship/Financial Aid in their current semester but have to pay for all the courses. If s/he obtains the required CGPA after “make-up” or grade submission, his/her waiver will be reimbursed /adjusted in the next semester. 
+
+4. Students, suspended/penalized for disciplinary reasons, may not be eligible for scholarship/financial aid for the remaining academic period at Brac University (starting from the date such decision is made).","No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself.",0.0252,7.5213,7.5465,2026-07-28T13:20:11.885804+00:00,0.5385
+Q046,bm25_only,1.0,What sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.","Question: Does BRAC University have any costs associated with joining clubs or sports teams?
+Answer: No there no costs associated with joining clubs or sports teams.
+
+Question: Are there any costs associated with joining clubs or sports teams?
+Answer: No there no costs associated with joining clubs or sports teams.
+
+Question: Just wondering, are there any costs associated with joining clubs or sports teams?
+Answer: No there no costs associated with joining clubs or sports teams.
+
+Question: What sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: New student here, what sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.","BRAC University has several sports teams, including the BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",0.0176,6.2560,6.2736,2026-07-28T13:20:18.159943+00:00,0.0692
+Q045,bm25_only,1.0,"My advisor is not responding, what to do?","Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.","Question: My advisor is not responding, what to do?
+Answer: Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.
+
+Question: My advisor is not on campus, what to do?
+Answer: Please request on Discord on your advisor's channel or try requesting other advisor. But he can reject you easily because it is not his duty as you are not assigned to him in the advising session. So, please ask your advisor on the Discord channel or request other advisor if they are willing to help.
+
+Question (Banglish): Amar advisor campus e nei, ki korbo?
+Answer (English): Please request on Discord on your advisor's channel or try requesting other advisor. But he can reject you easily because it is not his duty as you are not assigned to him in the advising session. So, please ask your advisor on the Discord channel or request other advisor if they are willing to help.
+
+Question (Banglish): Amar advisor response korche na, ki korbo?
+Answer (English): Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.
+
+Question (Banglish): Onno advisor ra ki amar advising korte pare?
+Answer (English): Yes, they can. But they do not have any responsibility to do that. Please go to your advisor. Faculties can be busy with his advised students and also his other works.","Please wait, your advisor is maybe busy with other students' response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get the request done by the advisor.",0.0152,8.1762,8.1914,2026-07-28T13:20:26.351996+00:00,0.5763
+Q040,bm25_only,1.0,Can you tell me what the deadline to change the thesis title before the final defense is?,The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.,"Question: Can you tell me what the deadline to change the thesis title before the final defense is?
+Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
+
+Question: What is the deadline to change the thesis title before the final defense?
+Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
+
+Question (Banglish): Final defense er age thesis title change korar deadline ta kobe?
+Answer (English): The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
+
+Question: My thesis defense got postponed due to a cyclone, and separately I want to change my thesis title before the (new) defense date. Are both of these OK?
+Answer: Both are handled, but through different mechanisms - a defense postponed for an external/valid reason like a cyclone is simply rescheduled, no penalty. Changing your thesis title before the (rescheduled) final defense is also possible, but the deadline for that varies by semester, so you'd want to check the current thesis deadline sheet to make sure your title-change request still falls within whatever window applies to your now-rescheduled defense date.
+
+Question: Can you tell me what the current deadlines for thesis submission and defense are?
+Answer: Thesis submission and defense deadlines are set fresh each semester by the CSE Thesis Committee and shared with enrolled thesis students via a deadline sheet. Check with your thesis coordinator or department for the current semester's exact dates, since these change every term.",The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.,0.0185,5.6451,5.6637,2026-07-28T13:20:32.016559+00:00,0.0870
+Q023,bm25_only,1.0,I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?,"Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.","Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Question: New student here, can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
+Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
+
+Question: Can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
+Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
+
+Question (Banglish): Major na hoile o student ra ki Physics, Mathematics, Biotechnology, ba Microbiology te minor korte pare?
+Answer (English): Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
+
+Question: What are the prerequisites for the Cse program?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics","Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.",0.0298,10.6649,10.6947,2026-07-28T13:20:42.712086+00:00,0.4696
+Q081,bm25_only,1.0,What is BRAC Scholarship?,"BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents’ monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.","Question: What are the types of Scholarship/ Financial aid offered by Brac University?
+Answer: 1. Scholarship Based on Previous Academic Results 
+
+2. Merit Scholarship based on BracU Academic Results 
+
+3. Scholarship Based on Brac University Admission Test Result
+
+4. Sibling Scholarship
+
+5. Spouse Scholarship
+
+6. BRAC Scholarship
+
+7. Physically Challenged Students
+
+8. Children of Freedom Fighter
+
+9. Debater’s Blue Scholarship
+
+10. Children of BracU Regular Confirmed Employee
+
+For detailed information: https://www.bracu.ac.bd/admission/scholarships-financial-aid
+
+Question: Can you tell me what the types of Scholarship/ Financial aid offered by Brac University are?
+Answer: 1. Scholarship Based on Previous Academic Results 
+
+2. Merit Scholarship based on BracU Academic Results 
+
+3. Scholarship Based on Brac University Admission Test Result
+
+4. Sibling Scholarship
+
+5. Spouse Scholarship
+
+6. BRAC Scholarship
+
+7. Physically Challenged Students
+
+8. Children of Freedom Fighter
+
+9. Debater’s Blue Scholarship
+
+10. Children of BracU Regular Confirmed Employee
+
+For detailed information: https://www.bracu.ac.bd/admission/scholarships-financial-aid
+
+Question: How can I apply for the scholarship?
+Answer: 1. Students who are eligible for Scholarship Based on Previous Academic Results / Sibling Scholarship / BRAC Scholarship / Physically Challenged Students / Children of Freedom Fighter / Debater’s Blue Scholarship / Children of Brac University Regular Confirmed Employee will have to apply for the first time through BracU prescribed form which is available at the Brac University website (https://www.bracu.ac.bd/admission/scholarships-financial-aid) and submit it to the International & Scholarship Office, Brac University or email the scan copy to: scholarship@bracu.ac.bd 
+
+2. Those students who are eligible under Merit Scholarship Based on Brac University Academic Results and Scholarship Based on Brac University Admission Test Result are not required to apply as a scholarship will be awarded automatically. 
+
+3. Those students who are already availing of scholarships/financial aid are not required to apply further. If they fulfill all the conditions of the scholarship, they will be awarded automatically. 
+
+4. If the scholarship /financial aid of a student is discontinued for one or more than one semester, s/he needs to re-apply through BracU prescribed form after fulfilling the eligibility criteria.
+
+Question (Banglish): BRAC University je Scholarship/Financial aid dey, segula ki ki type er?
+Answer (English): 1. Scholarship Based on Previous Academic Results 
+
+2. Merit Scholarship based on BracU Academic Results 
+
+3. Scholarship Based on Brac University Admission Test Result
+
+4. Sibling Scholarship
+
+5. Spouse Scholarship
+
+6. BRAC Scholarship
+
+7. Physically Challenged Students
+
+8. Children of Freedom Fighter
+
+9. Debater's Blue Scholarship
+
+10. Children of BracU Regular Confirmed Employee
+
+For detailed information: https://www.bracu.ac.bd/admission/scholarships-financial-aid
+
+Question: What steps do I need to follow to apply for the scholarship?
+Answer: 1. Students who are eligible for Scholarship Based on Previous Academic Results / Sibling Scholarship / BRAC Scholarship / Physically Challenged Students / Children of Freedom Fighter / Debater’s Blue Scholarship / Children of Brac University Regular Confirmed Employee will have to apply for the first time through BracU prescribed form which is available at the Brac University website (https://www.bracu.ac.bd/admission/scholarships-financial-aid) and submit it to the International & Scholarship Office, Brac University or email the scan copy to: scholarship@bracu.ac.bd 
+
+2. Those students who are eligible under Merit Scholarship Based on Brac University Academic Results and Scholarship Based on Brac University Admission Test Result are not required to apply as a scholarship will be awarded automatically. 
+
+3. Those students who are already availing of scholarships/financial aid are not required to apply further. If they fulfill all the conditions of the scholarship, they will be awarded automatically. 
+
+4. If the scholarship /financial aid of a student is discontinued for one or more than one semester, s/he needs to re-apply through BracU prescribed form after fulfilling the eligibility criteria.",BRAC Scholarship is one of the types of scholarships/financial aid offered by Brac University.,0.0150,5.9188,5.9338,2026-07-28T13:20:48.646131+00:00,0.0007
+Q011,bm25_only,1.0,"Does BRAC University have a digital student ID card, or only a physical one?","Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.","Question: Does BRAC University have a digital student ID card, or only a physical one?
+Answer: Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.
+
+Question (Banglish): BRAC University er ki digital student ID card ache, naki shudhu physical ta?
+Answer (English): Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.
+
+Question: One thing I couldn't find anywhere: what's my student ID number?
+Answer: That's personal record information I don't have. Your student ID is on your ID card, admission documents, or Connect account.
+
+Question (Banglish): ID card chara student ra ki transport service use korte pare?
+Answer (English): No, students must present a valid BRAC University ID card.
+
+Question: Can students without an ID card use the transport service?
+Answer: No, students must present a valid BRAC University ID card.","BRAC University has both a digital and a physical student ID card. The digital ID card was introduced in 2017 through the BRACU Mobile App, which can be accessed via the app's 'ID Card' menu option. Both the physical and digital IDs have been usable, and students are advised to keep the app updated to generate their digital card.",0.0180,10.5938,10.6118,2026-07-28T13:20:59.258694+00:00,0.1070
+Q001,bm25_only,1.0,How are meal plans managed at TARC?,"Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively","Question: How are meal plans managed at TARC?
+Answer: Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question: Before I forget to ask — how are meal plans managed at TARC?
+Answer: Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question: Sorry if this was already answered, but how are meal plans managed at TARC?
+Answer: Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question (Banglish): TARC e meal plan kivabe manage kora hoy?
+Answer (English): Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question: What are the rules and regulations students must follow while at TARC?
+Answer: Students must maintain the time schedule for the meals.Nobody is provided meal after that particular time.Also nobody can roam in the campus after 10:00pm.","Meal plans at TARC are managed by providing three main meals, breakfast, lunch, and dinner, along with two snack times that follow each of these main meals. Specifically, breakfast time is from 7-9 am, lunch time is from 12:30-3 pm, dinner time is from 8:30-10 pm, followed by snacks from 11-12 am and 4-5 pm collectively.",0.0173,12.4369,12.4542,2026-07-28T13:21:11.713385+00:00,0.0240
+Q184,bm25_only,1.0,What is Atonu Roy Chowdhury's email?,Atonu Roy Chowdhury's email is atonuroy.chowdhury@bracu.ac.bd.,"Initial: NARC
+Name: Atonu Roy Chowdhury
+Designation: Lecturer
+Status: Full Time
+Room: 4P192
+Email: atonuroy.chowdhury@bracu.ac.bd
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - Consultation; 2:00 PM - CSE330-10 (LAB) NFMK,NARC 09F-26L
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-02 (LAB) NARC,NMMR 09E-22L; 11:00 AM - Consultation; 12:30 PM - Consultation
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - Consultation; 2:00 PM - CSE330-18 07D-20C; 3:30 PM - CSE330-19 07D-20C
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-05 (LAB) NARC,FBAW 09B-08L; 11:00 AM - CSE221-13 (LAB) NARC,NMMR 09B-10L; 2:00 PM - CSE330-18 07D-20C; 3:30 PM - CSE330-19 07D-20C",Atonu Roy Chowdhury's email is atonuroy.chowdhury@bracu.ac.bd.,0.0150,5.7068,5.7218,2026-07-28T13:21:17.436266+00:00,100.5953
+Q154,bm25_only,1.0,What day and time is the theory class for CSE370-16?,The theory class for CSE370-16 is on SAT+THU at 9:30 AM in room 10B-17C.,"Course: CSE370-16
+Theory Initial: MZG
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10B-17C
+Lab Faculty: RBR,KZMN
+Lab Day: TUE
+Lab Time: 2:00 PM
+Lab Room: 12F-31L
+
+Initial: KZMN
+Name: Kazi Kamruzzaman Rabbi
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE471-04 09A-05C; 2:00 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L; 3:30 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L
+
+Course: CSE331-16
+Theory Initial: TNF
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 07F-22C
+
+Course: CSE340-16
+Theory Initial: ZLNM
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09H-32C
+
+Course: STA201-16
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-37C",The theory classes for CSE370-16 are held on Saturday and Thursday at 9:30 AM.,0.0175,5.0398,5.0573,2026-07-28T13:21:22.493639+00:00,100.4996
+Q171,bm25_only,1.0,Who teaches the lab section of CSE221-19?,"The lab section of CSE221-19 is taught by ARD,ANV.","Course: CSE221-19
+Theory Initial: IBA
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09H-33C
+Lab Faculty: ARD,ANV
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 09E-22L
+
+Initial: ARD
+Name: Mr. Ayman Rasheed
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-15 (LAB) MZW,ARD 09E-22L; 9:30 AM - CSE221-15 (LAB) MZW,ARD 09E-22L; 11:00 AM - CSE221-19 (LAB) ARD,ANV 09E-22L; 12:30 PM - CSE221-19 (LAB) ARD,ANV 09E-22L
+
+Initial: ANV
+Name: Md. Anonto Shuvo
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-12 (LAB) NRHB,ANV 09B-10L; 9:30 AM - CSE221-12 (LAB) NRHB,ANV 09B-10L; 11:00 AM - CSE221-19 (LAB) ARD,ANV 09E-22L; 12:30 PM - CSE221-19 (LAB) ARD,ANV 09E-22L; 2:00 PM - CSE221-11 (LAB) ANV,CSYR 09B-09L; 3:30 PM - CSE221-11 (LAB) ANV,CSYR 09B-09L
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-05 (LAB) NARC,FBAW 09B-08L; 11:00 AM - CSE221-13 (LAB) NARC,NMMR 09B-10L; 2:00 PM - CSE330-18 07D-20C; 3:30 PM - CSE330-19 07D-20C
+
+Initial: IRZA
+Name: Md. Irtiza Hossain
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-18 10B-17C; 9:30 AM - CSE220-19 09D-17C","The lab instructors for CSE221-19 are Mr. Ayman Rasheed and Md. Anonto Shuvo, who team-teach the lab sections on Saturday at 11:00 AM in room 09E-22L and also at 12:30 PM in the same room.",0.0178,9.5508,9.5686,2026-07-28T13:21:32.063123+00:00,100.3000
+Q146,bm25_only,1.0,Who is the theory coordinator for CSE461?,The theory coordinator for CSE461 is KHR.,"Course: CSE461
+First Theory Coordinator: KHR
+Theory Coordinator Email: khalilur@bracu.ac.bd
+First Lab Coordinator: RDW
+Second Lab Coordinator: RFF
+Lab Coordinator Email: redowanul.akbar@bracu.ac.bd,rafid.ahnaf@bracu.ac.bd
+
+Course: CSE251
+First Theory Coordinator: PDS
+Second Theory Coordinator: UTS
+Theory Coordinator Email: purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd
+First Lab Coordinator: MOM
+Lab Coordinator Email: moynul.moni@bracu.ac.bd
+
+Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE321
+First Theory Coordinator: BDH
+Second Theory Coordinator: SZD
+Theory Coordinator Email: badrul.hossain@bracu.ac.bd,shazid.mahbub@bracu.ac.bd
+First Lab Coordinator: BDH
+Lab Coordinator Email: badrul.hossain@bracu.ac.bd
+
+Course: CSE423
+First Theory Coordinator: TMD
+Second Theory Coordinator: SMUR
+Theory Coordinator Email: tamkin.mahmud@bracu.ac.bd,rahman.samiur@bracu.ac.bd
+First Lab Coordinator: SRU
+Lab Coordinator Email: shakir.rouf@bracu.ac.bd","The first theory coordinator for CSE461 is KHR, whose email address is khalilur@bracu.ac.bd.",0.0143,5.4719,5.4862,2026-07-28T13:21:37.549561+00:00,100.5876
+Q145,bm25_only,1.0,What is the coordinator email for CSE446?,The coordinator email for CSE446 is sadek.ferdous@bracu.ac.bd.,"Course: CSE446
+First Theory Coordinator: SDF
+Theory Coordinator Email: sadek.ferdous@bracu.ac.bd
+First Lab Coordinator: SJM
+Second Lab Coordinator: SDF
+Lab Coordinator Email: ext.sajid.mahir@bracu.ac.bd,sadek.ferdous@bracu.ac.bd
+
+Course: CSE474
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE424
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE310
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd
+
+Course: CSE370
+First Theory Coordinator: FEK
+Theory Coordinator Email: farden.khan@bracu.ac.bd
+First Lab Coordinator: FEK
+Lab Coordinator Email: farden.khan@bracu.ac.bd","The theory coordinator email for CSE446 is sadek.ferdous@bracu.ac.bd, and the lab coordinator emails are ext.sajid.mahir@bracu.ac.bd and sadek.ferdous@bracu.ac.bd.",0.0141,9.0817,9.0958,2026-07-28T13:21:46.646249+00:00,100.6202
+Q140,bm25_only,1.0,Who is the theory coordinator for CSE330?,The theory coordinator for CSE330 is AMK. The second theory coordinator is AQU.,"Course: CSE330
+First Theory Coordinator: AMK
+Second Theory Coordinator: AQU
+Theory Coordinator Email: abu.khan@bracu.ac.bd,aquib.azmain@bracu.ac.bd
+First Lab Coordinator: NNTN
+Second Lab Coordinator: ALB
+Lab Coordinator Email: naima.tahsin@bracu.ac.bd,anindita.labonno@bracu.ac.bd
+
+Course: CSE251
+First Theory Coordinator: PDS
+Second Theory Coordinator: UTS
+Theory Coordinator Email: purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd
+First Lab Coordinator: MOM
+Lab Coordinator Email: moynul.moni@bracu.ac.bd
+
+Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE321
+First Theory Coordinator: BDH
+Second Theory Coordinator: SZD
+Theory Coordinator Email: badrul.hossain@bracu.ac.bd,shazid.mahbub@bracu.ac.bd
+First Lab Coordinator: BDH
+Lab Coordinator Email: badrul.hossain@bracu.ac.bd
+
+Course: CSE423
+First Theory Coordinator: TMD
+Second Theory Coordinator: SMUR
+Theory Coordinator Email: tamkin.mahmud@bracu.ac.bd,rahman.samiur@bracu.ac.bd
+First Lab Coordinator: SRU
+Lab Coordinator Email: shakir.rouf@bracu.ac.bd","The first Theory Coordinator for CSE330 is AMK, and the second Theory Coordinator is AQU.",0.0163,4.8626,4.8790,2026-07-28T13:21:51.525512+00:00,100.5480
+Q123,bm25_only,1.0,What are the prerequisites for CSE430?,The prerequisite for CSE430 is MAT120 (HP).,"Course: CSE430
+Prerequisite: MAT120 (HP)
+Full Prerequisite Chain: MAT120-MAT110
+
+Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Course: CSE430
+First Theory Coordinator: EHQ
+Theory Coordinator Email: ehtashamul.haque@bracu.ac.bd
+First Lab Coordinator: TAV
+Lab Coordinator Email: tarvir.anjum@bracu.ac.bd","The prerequisite for CSE430 is MAT120 (HP), with a full prerequisite chain of MAT120-MAT110.",0.0177,4.9666,4.9843,2026-07-28T13:21:56.510309+00:00,100.4901
+Q181,bm25_only,1.0,Which room is Anika Tasnim in?,Anika Tasnim is in room 4F.,"Initial: ANT
+Name: Anika Tasnim
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.anika.tasnim@bracu.ac.bd
+
+Initial: ANKH
+Name: Anika Ahmed
+Designation: Lecturer
+Status: Full Time
+Room: 4K72
+Email: anika.ahmed@bracu.ac.bd
+
+Initial: ANT
+Name: Anika Tasnim
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-16 09A-04C; 9:30 AM - Consultation; 11:00 AM - CSE110-01 10B-17C; 12:30 PM - Consultation
+
+Initial: ANT
+Name: Anika Tasnim
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-16 09A-04C; 9:30 AM - Consultation; 11:00 AM - CSE110-01 10B-17C; 12:30 PM - Consultation
+
+Initial: CAKM
+Name: ANIKA ISLAM
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.anika.islam@bracu.ac.bd",Anika Tasnim's room is 4F.,0.0166,3.9313,3.9479,2026-07-28T13:22:00.458915+00:00,100.7390
+Q111,bm25_only,1.0,What are the prerequisites for CSE420?,"The prerequisite for CSE420 is CSE321 (HP),CSE331 (HP),CSE340 (HP).","Course: CSE420
+Prerequisite: CSE321 (HP),CSE331 (HP),CSE340 (HP)
+Full Prerequisite Chain: CSE321-CSE331-CSE340-CSE221-CSE220-CSE111-CSE110
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Can students minor in EEE if it's not their major department?
+Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.","The prerequisites for CSE420 are CSE321 (HP), CSE331 (HP), and CSE340 (HP).",0.0147,5.1616,5.1764,2026-07-28T13:22:05.635857+00:00,100.2773
+Q101,bm25_only,1.0,What are the prerequisites for CSE423?,The prerequisite for CSE423 is MAT216 (HP).,"Course: CSE423
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT216-MAT120-MAT110
+
+Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Can students minor in EEE if it's not their major department?
+Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.",The prerequisite for CSE423 is MAT216 with a High Pass grade.,0.0146,4.1528,4.1674,2026-07-28T13:22:09.803922+00:00,100.2751
+Q084,vector_only,0.0,"Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?","Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.","Question: Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?
+Answer: Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question: What types of general education courses are required for all undergraduate students at BRAC University?
+Answer: Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question (Banglish): BRAC University er shob undergraduate student der jonno ki ki type er general education course required?
+Answer (English): Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question (Banglish): Protita student ke General Education (GenEd) course er koto credit-hour complete korte hoy?
+Answer (English): Every undergraduate student, regardless of major, must complete 42 credit-hours (14 courses) of General Education courses, generally within the first two years of study, spanning Humanities, Social Sciences, Law, Mathematics, Sciences, Technology and Architecture.
+
+Question: How many credit-hours of General Education (GenEd) courses must every student complete?
+Answer: Every undergraduate student, regardless of major, must complete 42 credit-hours (14 courses) of General Education courses, generally within the first two years of study, spanning Humanities, Social Sciences, Law, Mathematics, Sciences, Technology and Architecture.","The types of general education courses that are required for all undergraduate students at BRAC University include Humanities, Social Sciences, Law, Mathematics, Sciences, Technology, and Architecture.",0.0201,5.9069,5.9270,2026-07-28T13:22:15.731640+00:00,0.0108
+Q054,vector_only,0.0,What does the Counseling and Wellness Centre at BRAC University offer?,"The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.","Question: What does the Counseling and Wellness Centre at BRAC University offer?
+Answer: The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.
+
+Question (Banglish): BRAC University er Counseling and Wellness Centre ki offer kore?
+Answer (English): The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.
+
+Question: What kind of counseling services does the Counseling Unit provide?
+Answer: The Counseling Unit offers mental health support, guidance, and workshops for students. Visti: https://www.bracu.ac.bd/campus-life/student-affairs/counseling-unit/counseling-team
+
+Question: Does the Counseling and Wellness Centre charge for its services?
+Answer: No, the Counseling and Wellness Centre (CWC) provides free and confidential mental health and wellbeing services to all students and staff, including individual counseling, both face-to-face and online.
+
+Question (Banglish): Counseling and Wellness Centre ki tar service er jonno charge kore?
+Answer (English): No, the Counseling and Wellness Centre (CWC) provides free and confidential mental health and wellbeing services to all students and staff, including individual counseling, both face-to-face and online.","The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.",0.0161,6.0371,6.0531,2026-07-28T13:22:21.785493+00:00,0.0870
+Q071,vector_only,0.0,"I'm an international student on the BRAC Scholarship with a 3.1 CGPA, but I need to retake a course I failed. Will my scholarship cover the retake fee?","No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.","Question: I'm an international student on the BRAC Scholarship with a 3.1 CGPA, but I need to retake a course I failed. Will my scholarship cover the retake fee?
+Answer: No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.
+
+Question: Hey, does a tuition fee waiver cover retaken or repeated courses for international students?
+Answer: No. Tuition fee waivers and scholarships are not applied to retake or repeat subjects - the student must pay for those separately at their own cost.
+
+Question: Quick question — does a tuition fee waiver cover retaken or repeated courses for international students?
+Answer: No. Tuition fee waivers and scholarships are not applied to retake or repeat subjects - the student must pay for those separately at their own cost.
+
+Question: Does a tuition fee waiver cover retaken or repeated courses for international students?
+Answer: No. Tuition fee waivers and scholarships are not applied to retake or repeat subjects - the student must pay for those separately at their own cost.
+
+Question: Just wondering, does a tuition fee waiver cover retaken or repeated courses for international students?
+Answer: No. Tuition fee waivers and scholarships are not applied to retake or repeat subjects - the student must pay for those separately at their own cost.","No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.",0.0269,11.3687,11.3956,2026-07-28T13:22:33.181374+00:00,0.3295
+Q046,vector_only,0.0,What sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.","Question: What sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: I looked around the site but couldn't find it — what sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: New student here, what sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question (Banglish): University te ki ki sports team ache?
+Answer (English): BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: What are the sports opportunities in Tarc?
+Answer: During my period i have seen students playing volleyball,basketball,football and cricket.Football, cricket and tennis tournaments are arranged and students also get jersey.These tournaments are celebrated among the students in a big manner","The university has BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",0.0142,5.6740,5.6882,2026-07-28T13:22:38.870371+00:00,0.0071
+Q045,vector_only,0.0,"My advisor is not responding, what to do?","Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.","Question: My advisor is not responding, what to do?
+Answer: Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.
+
+Question: My advisor is not on campus, what to do?
+Answer: Please request on Discord on your advisor's channel or try requesting other advisor. But he can reject you easily because it is not his duty as you are not assigned to him in the advising session. So, please ask your advisor on the Discord channel or request other advisor if they are willing to help.
+
+Question: I have not been advised to a advisor yet, what to do?
+Answer: If you haven't been assigned an advisor yet, contact your department's DCO (Departmental Coordination Officer) - for CSE, current DCO contact details are published via the department's official advising channel or notice board, since DCO assignments can change between semesters. If the DCOs don't respond, escalate to your department's advising coordinator.
+
+Question: What should I do if a lab PC is not working or is unresponsive?
+Answer: If a lab PC is unresponsive or malfunctioning, inform the lab assistant immediately or contact IT support
+
+Question: My advising dashboard is not coming but my pre advising is still not going what to do?
+Answer: Oh no! You have login into these page using your g-suit to get help. LINK: https://bracu.atlassian.net/servicedesk/customer/portal/2/user/login?destination=portal%2F2 or try emailing at sic@bracu.ac.bd about you problem","If your advisor is not responding, please wait and consider requesting another advisor for assistance. However, keep in mind that they may only add the request but not approve it, so it's best to get a request done by your assigned advisor if possible.",0.0148,7.8817,7.8965,2026-07-28T13:22:46.767633+00:00,0.1312
+Q040,vector_only,0.0,Can you tell me what the deadline to change the thesis title before the final defense is?,The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.,"Question: What is the deadline to change the thesis title before the final defense?
+Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
+
+Question: Can you tell me what the deadline to change the thesis title before the final defense is?
+Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
+
+Question (Banglish): Final defense er age thesis title change korar deadline ta kobe?
+Answer (English): The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
+
+Question: My thesis defense got postponed due to a cyclone, and separately I want to change my thesis title before the (new) defense date. Are both of these OK?
+Answer: Both are handled, but through different mechanisms - a defense postponed for an external/valid reason like a cyclone is simply rescheduled, no penalty. Changing your thesis title before the (rescheduled) final defense is also possible, but the deadline for that varies by semester, so you'd want to check the current thesis deadline sheet to make sure your title-change request still falls within whatever window applies to your now-rescheduled defense date.
+
+Question: What are the current deadlines for thesis submission and defense?
+Answer: Thesis submission and defense deadlines are set fresh each semester by the CSE Thesis Committee and shared with enrolled thesis students via a deadline sheet. Check with your thesis coordinator or department for the current semester's exact dates, since these change every term.",The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.,0.0182,5.7425,5.7607,2026-07-28T13:22:52.528900+00:00,0.0110
+Q023,vector_only,0.0,I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?,"Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.","Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Question: New student here, can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
+Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
+
+Question: Can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
+Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
+
+Question: Can students minor in EEE if it's not their major department?
+Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.
+
+Question (Banglish): Major na hoile o student ra ki Physics, Mathematics, Biotechnology, ba Microbiology te minor korte pare?
+Answer (English): Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.","Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.",0.0271,10.0394,10.0665,2026-07-28T13:23:02.596048+00:00,0.4104
+Q081,vector_only,0.0,What is BRAC Scholarship?,"BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents’ monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.","Question: What is BRAC Scholarship?
+Answer: BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents’ monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.
+
+Question: Can you tell me what BRAC Scholarship is?
+Answer: BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents’ monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.
+
+Question (Banglish): BRAC Scholarship ta ki?
+Answer (English): BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents' monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.
+
+Question (Banglish): Scholarship er taka student der kivabe deya hoy?
+Answer (English): Scholarship funds at BRAC University are typically disbursed by directly applying the awarded amount as a tuition fee waiver. Instead of receiving cash, students benefit from a reduction in their tuition and other eligible fees based on the scholarship percentage they receive. In cases like the BRAC Scholarship, which covers additional expenses such as accommodation and fees, the university handles the payments directly, ensuring that the student's expenses are covered as per the scholarship terms.
+
+Question (Banglish): BRAC University protibochor scholarship e koto taka dey?
+Answer (English): BRAC University awards more than 100 million Taka each semester in scholarships and financial aid to undergraduate and postgraduate students.",BRAC Scholarship is for economically disadvantaged students.,0.0133,3.9206,3.9340,2026-07-28T13:23:06.530368+00:00,0.0038
+Q011,vector_only,0.0,"Does BRAC University have a digital student ID card, or only a physical one?","Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.","Question: Does BRAC University have a digital student ID card, or only a physical one?
+Answer: Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.
+
+Question (Banglish): BRAC University er ki digital student ID card ache, naki shudhu physical ta?
+Answer (English): Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.
+
+Question (Banglish): ID card na thakle notun student ra ki dekhabe?
+Answer (English): New students must show a photocopy of their payment receipt.
+
+Question: What should new students show if they don’t have an ID card?
+Answer: New students must show a photocopy of their payment receipt.
+
+Question (Banglish): ID card chara student ra ki transport service use korte pare?
+Answer (English): No, students must present a valid BRAC University ID card.",BRAC University has both a physical and a digital student ID card.,0.0188,4.0376,4.0564,2026-07-28T13:23:10.587339+00:00,0.1137
+Q001,vector_only,0.0,How are meal plans managed at TARC?,"Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively","Question: Sorry if this was already answered, but how are meal plans managed at TARC?
+Answer: Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question: How are meal plans managed at TARC?
+Answer: Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question: Before I forget to ask — how are meal plans managed at TARC?
+Answer: Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question (Banglish): TARC e meal plan kivabe manage kora hoy?
+Answer (English): Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively
+
+Question: Can you tell me what the process for arranging food or refreshments for events is?
+Answer: For refreshments from the Brac University cafeteria, orders must be confirmed by OCA, and payments will be made by the Accounts Office from the club/forum budget (not in cash). For refreshments from outside vendors, financial assistance will be transferred to the club advisor’s bank account as per the approved budget.","Meal plans at TARC are managed by providing 3 main meals - breakfast, lunch, and dinner - and two snack times that follow them. Breakfast time continues from 7-9 am, lunch time from 12:30-3 pm, dinner from 8:30-10 pm, followed by snacks from 11-12 am and 4-5 pm collectively.",0.0162,10.8670,10.8831,2026-07-28T13:23:21.471215+00:00,0.0043
+Q184,vector_only,0.0,What is Atonu Roy Chowdhury's email?,Atonu Roy Chowdhury's email is atonuroy.chowdhury@bracu.ac.bd.,"Initial: FDC
+Name: Dr. Farida Chowdhury
+Designation: Professor
+Status: Full Time
+Room: 4G09
+Email: farida.chowdhury@bracu.ac.bd
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Designation: Lecturer
+Status: Full Time
+Room: 4P192
+Email: atonuroy.chowdhury@bracu.ac.bd
+
+Initial: NARC
+Name: Atonu Roy Chowdhury
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE221-05 (LAB) NARC,FBAW 09B-08L; 11:00 AM - CSE221-13 (LAB) NARC,NMMR 09B-10L; 2:00 PM - CSE330-18 07D-20C; 3:30 PM - CSE330-19 07D-20C
+
+Initial: ACH
+Name: Dr. Amitabha Chakrabarty
+Designation: Professor
+Status: Full Time
+Room: 4G25
+Email: amitabha@bracu.ac.bd
+
+Initial: SDF
+Name: Dr. Md Sadek Ferdous
+Designation: Professor
+Status: Full Time
+Room: 4G10
+Email: sadek.ferdous@bracu.ac.bd",Atonu Roy Chowdhury's email is atonuroy.chowdhury@bracu.ac.bd.,0.0168,5.3538,5.3706,2026-07-28T13:23:26.842028+00:00,0.0026
+Q154,vector_only,0.0,What day and time is the theory class for CSE370-16?,The theory class for CSE370-16 is on SAT+THU at 9:30 AM in room 10B-17C.,"Course: CSE340-18
+Theory Initial: THR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09H-35C
+
+Course: STA101-03
+Theory Initial: TBS
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 10B-18C
+
+Course: STA101-02
+Theory Initial: TBS
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 10B-18C
+
+Course: CSE340-03
+Theory Initial: ACH
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T
+
+Course: STA101-05
+Theory Initial: TBS
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 10B-18C","I'm unable to answer that question as there is no information in the retrieved context about a course called ""CSE370-16"".",0.0185,5.2586,5.2771,2026-07-28T13:23:32.120031+00:00,0.0078
+Q171,vector_only,0.0,Who teaches the lab section of CSE221-19?,"The lab section of CSE221-19 is taught by ARD,ANV.","Course: CSE103
+First Lab Coordinator: RBR
+Second Lab Coordinator: SLAR
+Lab Coordinator Email: rakin.rabbani@bracu.ac.bd,ext.sadiul.rafi@bracu.ac.bd
+
+Course: CSE260
+First Theory Coordinator: DZK
+Theory Coordinator Email: ziaul.karim@bracu.ac.bd
+First Lab Coordinator: DZK
+Second Lab Coordinator: PBK
+Lab Coordinator Email: ziaul.karim@bracu.ac.bd,partha.bhoumik@bracu.ac.bd
+
+Course: CSE251
+First Theory Coordinator: PDS
+Second Theory Coordinator: UTS
+Theory Coordinator Email: purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd
+First Lab Coordinator: MOM
+Lab Coordinator Email: moynul.moni@bracu.ac.bd
+
+Course: CSE421
+First Theory Coordinator: MSMA
+Second Theory Coordinator: NDT
+Theory Coordinator Email: shamim.mia@bracu.ac.bd,nirjhor.datta@bracu.ac.bd
+First Lab Coordinator: SRJ
+Second Lab Coordinator: MSMA
+Lab Coordinator Email: seraj.mehnaz@bracu.ac.bd,shamim.mia@bracu.ac.bd
+
+Course: CSE110
+First Theory Coordinator: TAW
+Theory Coordinator Email: tawhid.anwar@bracu.ac.bd
+First Lab Coordinator: DFD
+Second Lab Coordinator: RKBM
+Lab Coordinator Email: fabian.dofadar@bracu.ac.bd,mohammad.rakibul@bracu.ac.bd","Unfortunately, there is no information about CSE221 in the retrieved context.",0.0140,4.3388,4.3528,2026-07-28T13:23:36.473495+00:00,0.0547
+Q146,vector_only,0.0,Who is the theory coordinator for CSE461?,The theory coordinator for CSE461 is KHR.,"Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE320
+First Theory Coordinator: SRJ
+Theory Coordinator Email: seraj.mehnaz@bracu.ac.bd
+
+Course: CSE443
+First Theory Coordinator: SWK
+Theory Coordinator Email: swakkhar.shatabda@bracu.ac.bd
+
+Course: CSE260
+First Theory Coordinator: DZK
+Theory Coordinator Email: ziaul.karim@bracu.ac.bd
+First Lab Coordinator: DZK
+Second Lab Coordinator: PBK
+Lab Coordinator Email: ziaul.karim@bracu.ac.bd,partha.bhoumik@bracu.ac.bd",I do not have enough information to answer that question.,0.0156,3.9069,3.9225,2026-07-28T13:23:40.396251+00:00,0.0006
+Q145,vector_only,0.0,What is the coordinator email for CSE446?,The coordinator email for CSE446 is sadek.ferdous@bracu.ac.bd.,"Initial: SMDS
+Name: Soumitra Das
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.soumitra.das@bracu.ac.bd
+
+Initial: RAO
+Name: Mohammed Radoan
+Designation: C. Lecturer
+Status: Contractual
+Room: 4P
+Email: ext.mohammed.radoan@bracu.ac.bd
+
+Initial: SJM
+Name: Sajid Imam Mahir
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.sajid.mahir@bracu.ac.bd
+
+Initial: AKHD
+Name: Abdullah Khondoker
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.abdullah@bracu.ac.bd
+
+Initial: SEF
+Name: Sheikh Iftekhar Ahmed
+Designation: C. Lecturer
+Status: Contractual
+Room: 4P
+Email: ext.sheikh.ahmed@bracu.ac.bd",I do not have enough information to answer your question about the coordinator email for CSE446.,0.0126,4.5266,4.5392,2026-07-28T13:23:44.935957+00:00,0.0010
+Q140,vector_only,0.0,Who is the theory coordinator for CSE330?,The theory coordinator for CSE330 is AMK. The second theory coordinator is AQU.,"Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE320
+First Theory Coordinator: SRJ
+Theory Coordinator Email: seraj.mehnaz@bracu.ac.bd
+
+Course: CSE260
+First Theory Coordinator: DZK
+Theory Coordinator Email: ziaul.karim@bracu.ac.bd
+First Lab Coordinator: DZK
+Second Lab Coordinator: PBK
+Lab Coordinator Email: ziaul.karim@bracu.ac.bd,partha.bhoumik@bracu.ac.bd
+
+Course: CSE420
+First Theory Coordinator: MNY
+Second Theory Coordinator: SUE
+Theory Coordinator Email: nur.yanhaona@bracu.ac.bd,sukarna.sarkar@bracu.ac.bd
+First Lab Coordinator: SUE
+Second Lab Coordinator: MNY
+Lab Coordinator Email: sukarna.sarkar@bracu.ac.bd,nur.yanhaona@bracu.ac.bd",I do not have enough information to answer that question.,0.0126,3.8361,3.8487,2026-07-28T13:23:48.785064+00:00,0.0032
+Q123,vector_only,0.0,What are the prerequisites for CSE430?,The prerequisite for CSE430 is MAT120 (HP).,"Course: CSE430
+Prerequisite: MAT120 (HP)
+Full Prerequisite Chain: MAT120-MAT110
+
+Course: CSE250
+Prerequisite: PHY112 (SP)
+
+Course: CSE421
+Prerequisite: CSE320 (SP)
+
+Course: CSE410
+Prerequisite: CSE321 (HP)
+Full Prerequisite Chain: CSE321-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE330
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT120-MAT110",The prerequisite for CSE430 is MAT120 with a grade of High Pass (HP).,0.0152,4.2925,4.3077,2026-07-28T13:23:53.093506+00:00,0.0109
+Q181,vector_only,0.0,Which room is Anika Tasnim in?,Anika Tasnim is in room 4F.,"Question: Where's the female prayer room?
+Answer: The female prayer room is located on the ground floor near reception and also another one on 6th floor.(ZONE-H).
+
+Question: Where is the Central Control Room located?
+Answer: Ground Floor, Beside the Lift Lobby
+
+Question (Banglish): Female der Prayer Room ami kivabe access korbo?
+Answer (English): The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
+
+Question (Banglish): Female der Prayer Room ami kothay pabo?
+Answer (English): In front of the indoor (Multipurpose Hall) and also on 6th floor(ZONE-H).
+
+Question (Banglish): Central Control Room kothay obosthito?
+Answer (English): Ground Floor, Beside the Lift Lobby",There is not enough information to answer this question.,0.0155,3.8318,3.8473,2026-07-28T13:23:56.941039+00:00,0.0014
+Q111,vector_only,0.0,What are the prerequisites for CSE420?,"The prerequisite for CSE420 is CSE321 (HP),CSE331 (HP),CSE340 (HP).","Question: Can you tell me what the prerequisites for the Cse program are?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics
+
+Course: CSE421
+Prerequisite: CSE320 (SP)
+
+Course: CSE423
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT216-MAT120-MAT110
+
+Course: CSE430
+Prerequisite: MAT120 (HP)
+Full Prerequisite Chain: MAT120-MAT110
+
+Course: CSE250
+Prerequisite: PHY112 (SP)",I do not have enough information to answer your question.,0.0148,3.7506,3.7654,2026-07-28T13:24:00.707331+00:00,0.1070
+Q101,vector_only,0.0,What are the prerequisites for CSE423?,The prerequisite for CSE423 is MAT216 (HP).,"Question: Can you tell me what the prerequisites for the Cse program are?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics
+
+Course: CSE421
+Prerequisite: CSE320 (SP)
+
+Course: CSE423
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT216-MAT120-MAT110
+
+Course: CSE250
+Prerequisite: PHY112 (SP)
+
+Course: CSE330
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT120-MAT110","The prerequisite for CSE423 is MAT216, which must be taken with a High Pass (HP) grade.",0.0145,4.6665,4.6810,2026-07-28T13:24:05.388977+00:00,0.1112
+Q084,no_retrieval,,"Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?","Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.",,"At BRAC University, all undergraduate students are required to complete a set of general education courses that are designed to provide a broad-based liberal arts education. These requirements typically include courses in English, mathematics, science, social sciences, and humanities, which aim to foster critical thinking, problem-solving skills, and cultural awareness among students.",0.0000,8.4927,8.4927,2026-07-28T13:24:13.882133+00:00,
+Q054,no_retrieval,,What does the Counseling and Wellness Centre at BRAC University offer?,"The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.",,"The Counseling and Wellness Centre at BRAC University offers a range of services to support students' mental health and well-being, including individual counseling sessions, group therapy, workshops, and educational programs on stress management, time management, and other topics related to academic success and personal growth. Additionally, the centre provides crisis intervention and emergency response services, as well as referrals for off-campus resources when needed.",0.0000,11.1769,11.1769,2026-07-28T13:24:25.059693+00:00,
+Q071,no_retrieval,,"I'm an international student on the BRAC Scholarship with a 3.1 CGPA, but I need to retake a course I failed. Will my scholarship cover the retake fee?","No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.",,"As an international student on the BRAC Scholarship, you are eligible for financial support for tuition fees and other academic expenses, but it's essential to review your specific scholarship agreement to confirm whether the retake fee is covered under the terms of your award. Typically, scholarships like BRAC cover tuition fees for courses that students need to retake due to failing or withdrawing from them, but it's crucial to check with the scholarship administrators or the university's financial aid office to confirm their policies regarding retake fees and any additional requirements you may need to meet.",0.0000,14.3398,14.3398,2026-07-28T13:24:39.400145+00:00,
+Q046,no_retrieval,,What sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",,"The university has a variety of sports teams that compete at the NCAA Division III level in the New England Small College Athletic Conference (NESCAC), including men's and women's teams in sports such as soccer, basketball, lacrosse, baseball, softball, field hockey, volleyball, and cross-country.",0.0000,8.7331,8.7331,2026-07-28T13:24:48.133669+00:00,
+Q045,no_retrieval,,"My advisor is not responding, what to do?","Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.",,"If your advisor is not responding, you may want to try sending them another email or message to see if they are simply busy or out of the office, and also consider reaching out to their department's administrative assistant or a colleague in the same department for guidance on how to proceed. Additionally, you can also check with the university's advising center or student affairs office to see if they have any recommendations for finding an alternative advisor or getting assistance with your academic planning needs.",0.0000,12.6038,12.6038,2026-07-28T13:25:00.738406+00:00,
+Q040,no_retrieval,,Can you tell me what the deadline to change the thesis title before the final defense is?,The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.,,"The deadline to change the thesis title before the final defense varies depending on the department and program, but generally it's recommended that students submit any changes to their thesis title at least two weeks prior to the scheduled defense date. However, I would recommend checking with your graduate program coordinator or departmental administrator for specific guidance on this matter, as some programs may have more stringent deadlines or requirements.",0.0000,10.9205,10.9205,2026-07-28T13:25:11.659034+00:00,
+Q023,no_retrieval,,I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?,"Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.",,"As an Electrical Engineering and Economics (EEE) student minoring in Physics, you will still be required to complete the prerequisite courses for the Physics minor, as these are specific requirements that must be met in order to fulfill the minor.",0.0000,6.6526,6.6526,2026-07-28T13:25:18.312166+00:00,
+Q081,no_retrieval,,What is BRAC Scholarship?,"BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents’ monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.",,"The BRAC (Bangladesh Rural Advancement Committee) Scholarship is a merit-based scholarship program offered by BRAC University in Bangladesh to support undergraduate and graduate students who are pursuing higher education at the university. It provides financial assistance to deserving students, particularly those from disadvantaged backgrounds, to help them cover their educational expenses and achieve their academic goals.",0.0000,9.3550,9.3550,2026-07-28T13:25:27.667778+00:00,
+Q011,no_retrieval,,"Does BRAC University have a digital student ID card, or only a physical one?","Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.",,"According to my knowledge, BRAC University does offer a digital student ID card in addition to the traditional physical one. The university has implemented an online system that allows students to access their digital ID cards through their portal, which can be used for various purposes such as accessing campus facilities and services, verifying identity, and more.",0.0000,9.4267,9.4267,2026-07-28T13:25:37.095363+00:00,
+Q001,no_retrieval,,How are meal plans managed at TARC?,"Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively",,"At TARC, meal plans are managed through a partnership with our dining services provider, which offers various plan options to students, including a declining balance system that allows students to add funds to their account as needed. Students can also choose from different meal plan types, such as the standard meal plan or the flex meal plan, and can adjust their plan at any time during the semester if their needs change. Additionally, students can use our online portal to view their meal plan balance, make payments, and track their spending throughout the semester.",0.0000,13.7503,13.7503,2026-07-28T13:25:50.845914+00:00,
+Q184,no_retrieval,,What is Atonu Roy Chowdhury's email?,Atonu Roy Chowdhury's email is atonuroy.chowdhury@bracu.ac.bd.,,"I'm not aware of any information about an individual named Atonu Roy Chowdhury being affiliated with our university. If you could provide more context or clarify who this person is, I'd be happy to try and assist you further.",0.0000,7.5436,7.5436,2026-07-28T13:25:58.389952+00:00,
+Q154,no_retrieval,,What day and time is the theory class for CSE370-16?,The theory class for CSE370-16 is on SAT+THU at 9:30 AM in room 10B-17C.,,The theory class for CSE 370-16 meets on Tuesdays from 2:00 pm to 3:15 pm in room 204 of the Engineering Building.,0.0000,6.6282,6.6282,2026-07-28T13:26:05.018567+00:00,
+Q171,no_retrieval,,Who teaches the lab section of CSE221-19?,"The lab section of CSE221-19 is taught by ARD,ANV.",,"The instructor for the lab section of CSE 221-19 is listed in the course schedule and can also be found on our university's online course roster. If you need to confirm the instructor or have any questions about the lab section, I recommend checking with the department of Computer Science and Engineering or contacting their office directly.",0.0000,9.8545,9.8545,2026-07-28T13:26:14.873435+00:00,
+Q146,no_retrieval,,Who is the theory coordinator for CSE461?,The theory coordinator for CSE461 is KHR.,,"The theory coordinator for CSE 461, which I believe is a computer science course, is Dr. Maria Rodriguez, an associate professor in the Computer Science Department who specializes in theoretical computer science and has been serving as the course coordinator for several semesters now.",0.0000,9.4518,9.4518,2026-07-28T13:26:24.326000+00:00,
+Q145,no_retrieval,,What is the coordinator email for CSE446?,The coordinator email for CSE446 is sadek.ferdous@bracu.ac.bd.,,"The course coordinator for CSE 446 is Professor Johnson, and their email address is [johnson@cs.university.edu](mailto:johnson@cs.university.edu).",0.0000,6.4609,6.4609,2026-07-28T13:26:30.787726+00:00,
+Q140,no_retrieval,,Who is the theory coordinator for CSE330?,The theory coordinator for CSE330 is AMK. The second theory coordinator is AQU.,,"The theory coordinator for CSE 330 is Dr. Maria Rodriguez, who can be reached through her office email at mr@csdept.university.edu or by visiting her office hours in the Computer Science Department building.",0.0000,7.2792,7.2792,2026-07-28T13:26:38.067828+00:00,
+Q123,no_retrieval,,What are the prerequisites for CSE430?,The prerequisite for CSE430 is MAT120 (HP).,,"To be eligible to enroll in CSE 430, students must have completed both CSE 230 and MATH 240, as these courses provide the necessary foundation in computer science and mathematics that is required for this upper-level course.",0.0000,7.5916,7.5916,2026-07-28T13:26:45.660018+00:00,
+Q181,no_retrieval,,Which room is Anika Tasnim in?,Anika Tasnim is in room 4F.,,"Anika Tasnim is likely to be located in her assigned residence hall room, which can be found on our university's online housing portal or by contacting the Residence Life office for more information.",0.0000,6.9884,6.9884,2026-07-28T13:26:52.648751+00:00,
+Q111,no_retrieval,,What are the prerequisites for CSE420?,"The prerequisite for CSE420 is CSE321 (HP),CSE331 (HP),CSE340 (HP).",,"To be eligible to enroll in CSE 420, students must have completed both CSE 320 and MATH 220 with a grade of C- or better. Additionally, they should also review the course catalog or consult with their academic advisor to confirm any other specific requirements that may apply.",0.0000,8.7030,8.7030,2026-07-28T13:27:01.352317+00:00,
+Q101,no_retrieval,,What are the prerequisites for CSE423?,The prerequisite for CSE423 is MAT216 (HP).,,"To be eligible to enroll in CSE 423, students must have completed both CSE 321 and MATH 322, as these courses provide the necessary foundational knowledge in computer science and mathematics that is required for success in this advanced course.",0.0000,7.7102,7.7102,2026-07-28T13:27:09.062951+00:00,

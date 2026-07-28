@@ -1,0 +1,8 @@
+table,n_rank1_queries,covered,example_query,example_source_file
+FacultyAvailability,19,True,What is Ruhan Habib's schedule on Sunday?,test_queries_faculty.csv
+Coordinator,20,True,Who is the theory coordinator for CSE490D?,test_queries.csv
+CourseDetails,30,True,What day and time is the theory class for CSE260-04A?,test_queries.csv
+Prerequisites,33,True,"New student here, I already did ENG102 in Badda campus which course I will be given in TARC?",test_queries.csv
+FacultyList,50,True,Which room is Anika Tasnim in?,test_queries.csv
+BanglishQA,102,True,What is BRAC Scholarship?,test_queries.csv
+EnglishQA,105,True,How are meal plans managed at TARC?,test_queries.csv

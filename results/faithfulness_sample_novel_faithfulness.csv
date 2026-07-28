@@ -1,0 +1,1183 @@
+query_id,config,query,reference_answer,retrieved_context,generated_answer,route,fusion,lambda,abstained,raw_abstain,sufficient_context_override,graph_augmented,exact_match_any,question_match_any,retrieval_s,rerank_s,generation_s,total_s,timestamp,query_confidence,query_top1_score,faithfulness,faithfulness_reason
+Q079,adaptive_novel,What steps do I need to follow to access the Prayer Room for females?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),"Question: What steps do I need to follow to access the Prayer Room for females?
+Answer: The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
+
+Question: How can I access the Prayer Room for females?
+Answer: The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
+
+Question: Where can I find the Prayer Room for females?
+Answer: In front of the indoor (Multipurpose Hall) and also on 6th floor(ZONE-H).
+
+Question (Banglish): Female der Prayer Room ami kivabe access korbo?
+Answer (English): The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
+
+Question: Where's the male prayer room?
+Answer: The male prayer room is on the 6th floor (ZONE-H).","To access the Prayer Room for females, you need to follow these steps: locate it in front of the indoor Multipurpose Hall and also find it on the 6th floor(ZONE-H).",open_ended,linear,0.5,False,False,False,False,False,True,0.022,0.0,6.4316,6.4538,2026-07-27T15:38:31.734931+00:00,0.227,1.0902,0.8,"SCORE: 0.8 | REASON: The answer's claim about finding the Prayer Room on the 6th floor is supported, but its claim about being in front of the indoor Multipurpose Hall is not unique to females and thus not fully justified by the context."
+Q017,adaptive_novel,"Hey, for further information regarding Admission who should I contact?","For more queries, please contact the Inquiry, Registration & Admissions Office, BRACU (Phone: +88 09638464646, Call Center Ext: 1001. You can also send e-mail at admissions@bracu.ac.bd.","Question: Hey, for further information regarding Admission who should I contact?
+Answer: For more queries, please contact the Inquiry, Registration & Admissions Office, BRACU (Phone: +88 09638464646, Call Center Ext: 1001. You can also send e-mail at admissions@bracu.ac.bd.
+
+Question: For further information regarding Admission who should I contact?
+Answer: For more queries, please contact the Inquiry, Registration & Admissions Office, BRACU (Phone: +88 09638464646, Call Center Ext: 1001. You can also send e-mail at admissions@bracu.ac.bd.
+
+Question (Banglish): Admission niye aro information er jonno kake contact korbo?
+Answer (English): For more queries, please contact the Inquiry, Registration & Admissions Office, BRACU (Phone: +88 09638464646, Call Center Ext: 1001. You can also send e-mail at admissions@bracu.ac.bd.
+
+Question: How do I contact the admissions office?
+Answer: You can mail to admissions@bracu.ac.bd
+
+Question: How can I get information about Scholarship/Financial Aid in BRAC University?
+Answer: Regarding all information about Financial Aid, please contact:
+BRACU (Phone: +88 09638464646, Call Center Ext: 1001 or email at scholarship@bracu.ac.bd
+(BRACU Scholarship Office)","For more queries about admission, please contact the Inquiry, Registration & Admissions Office, BRACU (Phone: +88 09638464646, Call Center Ext: 1001. You can also send e-mail at admissions@bracu.ac.bd.",open_ended,linear,0.5,False,False,False,False,False,True,0.0206,0.0,8.0949,8.1157,2026-07-27T15:30:43.305415+00:00,0.1016,1.0511,1.0,SCORE: 1.0 | REASON: All individual factual claims in the ANSWER are fully supported by the CONTEXT.
+Q066,adaptive_novel,Can you tell me what the prerequisites for the Cse program are?,"Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics","Question: Can you tell me what the prerequisites for the Cse program are?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics
+
+Question: What are the prerequisites for the Cse program?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics
+
+Question: Can you tell me what the specific core courses required for the CSE program are?
+Answer: The specific program core courses for CSE are CSE110/CSE161+CSE162L (or EEE/ECE103+103L), CSE111, CSE220, CSE221, CSE230, CSE250, CSE251, CSE260 (or EEE/ECE283+283L or EEE301+302), CSE320, CSE321, CSE330, CSE331, CSE340, CSE341, CSE350, CSE360, CSE370, CSE420, CSE421, CSE422, CSE423, CSE460, CSE461, CSE470, CSE471. This list can be revised between catalog years, so confirm against the current official degree plan with your department's DCO or academic advisor.
+
+Question (Banglish): CSE program er prerequisite gula ki?
+Answer (English): Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(""B"" grade in Physics & Mathematics),A-levels: ""C"" grade in Physics & Mathematics
+
+Question: What are the specific core courses required for the CSE program?
+Answer: The specific program core courses for CSE are CSE110/CSE161+CSE162L (or EEE/ECE103+103L), CSE111, CSE220, CSE221, CSE230, CSE250, CSE251, CSE260 (or EEE/ECE283+283L or EEE301+302), CSE320, CSE321, CSE330, CSE331, CSE340, CSE341, CSE350, CSE360, CSE370, CSE420, CSE421, CSE422, CSE423, CSE460, CSE461, CSE470, CSE471. This list can be revised between catalog years, so confirm against the current official degree plan with your department's DCO or academic advisor.","The prerequisites for the CSE program are Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics.",open_ended,linear,0.5,False,False,False,False,False,True,0.02,0.0,8.397,8.4172,2026-07-27T15:36:53.189592+00:00,0.1148,0.9902,1.0,SCORE: 1.0 | REASON: All claims are fully supported by the provided CONTEXT.
+Q116,adaptive_novel,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).,"Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Course: CSE360
+Prerequisite: CSE341 (HP)
+Full Prerequisite Chain: CSE341
+
+Question: What are the prerequisites for the Cse program?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics",The prerequisite for CSE360 is CSE341 (HP).,entity_heavy,rrf,0.9,False,True,True,False,True,False,0.0164,0.0,3.8562,3.8731,2026-07-27T15:42:11.669031+00:00,0.0005,0.0219,0.8,"SCORE: 0.8 | REASON: The answer partially matches the context, as it correctly states CSE341 (HP) is a prerequisite for CSE360, but does not mention the full prerequisite chain or other unrelated information."
+Q077,adaptive_novel,Consequence of not confirming advising during the Self-Registration period?,All selected courses will be automatically cancelled,"Question: Consequence of not confirming advising during the Self-Registration period?
+Answer: All selected courses will be automatically cancelled
+
+Question (Banglish): Self-Registration period e advising confirm na korle ki consequence hoy?
+Answer (English): All selected courses will be automatically cancelled
+
+Question: When must course selections be confirmed after Pre-Registration phases?
+Answer: During the Self-Registration period assigned after result publication
+
+Question (Banglish): Notun admitted student der jonno self-registration requirement ki?
+Answer (English): Not required; registration will be done by respective departments.
+
+Question: Just wondering, what happens if a student fails to confirm the Wishlist on time?
+Answer: Student will not be considered a participant and cannot register in Pre-Registration Phase 1",All selected courses will be automatically cancelled.,open_ended,linear,0.5,False,False,False,False,False,True,0.0233,0.0,3.6968,3.7203,2026-07-27T15:38:20.014040+00:00,0.2415,1.0419,0.5,"SCORE: 0.5 | REASON: Only two out of four claims are supported by the context. 
+
+The ANSWER ""All selected courses will be automatically cancelled"" is supported by the CONTEXT for the first question, but not for the other three questions. The second and fourth questions do not mention any consequences of not confirming advising during the Self-Registration period, so they do not support this claim. The third question mentions a different consequence (not being able to register in Pre-Registration Phase 1) if a student fails to confirm their Wishlist on time, which is unrelated to the ANSWER."
+Q020,adaptive_novel,What is checked at the Security Supervisor Office?,"Student ID Check, All workers In out","Question: What is checked at the Security Supervisor Office?
+Answer: Student ID Check, All workers In out
+
+Question: What is the function of the Security Supervisor Office?
+Answer: To check student IDs and monitor the entry and exit of all workers.
+
+Question (Banglish): Security Supervisor Office e ki check kora hoy?
+Answer (English): Student ID Check, All workers In out
+
+Question (Banglish): Security Supervisor Office er function ta ki?
+Answer (English): To check student IDs and monitor the entry and exit of all workers.
+
+Question: What exactly does the Office of the Proctor handle at BRAC University?
+Answer: The Office of the Proctor is responsible for student discipline and campus safety, acting as an intermediary for complaints about harassment, bullying, or intimidation involving anyone affiliated with BRACU - students, faculty, staff, or security personnel.","Student ID Check, All workers In out.",open_ended,linear,0.5,False,False,False,False,False,True,0.0221,0.0,3.5854,3.6076,2026-07-27T15:30:55.168705+00:00,0.2682,1.0276,1.0,SCORE: 1.0 | REASON: All claims are directly mentioned in the CONTEXT.
+Q124,adaptive_novel,What is the full prerequisite chain for CSE341?,The full prerequisite chain for CSE341 is CSE340-CSE321-CSE260-CSE221-CSE251-CSE220-CSE250-CSE111-CSE230-PHY112-CSE110-PHY111.,"Verified prerequisite chain for CSE341 (nearest prerequisite first, from the Prerequisites knowledge base): CSE340 -> CSE321 -> CSE260 -> CSE221 -> CSE251 -> CSE220 -> CSE250 -> CSE111 -> CSE230 -> PHY112 -> CSE110 -> PHY111.
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: CSE260
+Prerequisite: CSE251 (HP)
+Full Prerequisite Chain: CSE251-CSE250
+
+Course: CSE330
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT120-MAT110
+
+Course: CSE341-03
+Theory Initial: RKN
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09A-02C
+Lab Faculty: CABS,TRZA
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 09F-27L
+
+Course: CSE341
+First Theory Coordinator: RKN
+Theory Coordinator Email: raisul.kabir@bracu.ac.bd
+First Lab Coordinator: NHBN
+Second Lab Coordinator: RAHA
+Lab Coordinator Email: hamim.nasim@bracu.ac.bd,reefat.raha@bracu.ac.bd",The full prerequisite chain for CSE341 is not explicitly stated in the retrieved context.,entity_heavy,rrf,0.9,False,False,False,True,True,False,0.0198,0.0,4.4369,4.4567,2026-07-27T15:42:47.590329+00:00,0.0012,0.0163,0.5,"SCORE: 0.5 | REASON: The full prerequisite chain for CSE341 is not explicitly stated in the retrieved context, but individual prerequisites are listed."
+Q025,adaptive_novel,Can you tell me what the difference in focus between the BSEEE and BSECE programs is?,"BSEEE (Electrical and Electronic Engineering) has a broader focus spanning power, electronics and general EEE topics, while BSECE (Electronic and Communication Engineering) concentrates more specifically on communication-related topics such as signal processing, telecommunications, microwave engineering, and data/optical/satellite communications.","Question: Can you tell me what the difference in focus between the BSEEE and BSECE programs is?
+Answer: BSEEE (Electrical and Electronic Engineering) has a broader focus spanning power, electronics and general EEE topics, while BSECE (Electronic and Communication Engineering) concentrates more specifically on communication-related topics such as signal processing, telecommunications, microwave engineering, and data/optical/satellite communications.
+
+Question: What is the difference in focus between the BSEEE and BSECE programs?
+Answer: BSEEE (Electrical and Electronic Engineering) has a broader focus spanning power, electronics and general EEE topics, while BSECE (Electronic and Communication Engineering) concentrates more specifically on communication-related topics such as signal processing, telecommunications, microwave engineering, and data/optical/satellite communications.
+
+Question (Banglish): BSEEE ar BSECE program er focus e ki difference?
+Answer (English): BSEEE (Electrical and Electronic Engineering) has a broader focus spanning power, electronics and general EEE topics, while BSECE (Electronic and Communication Engineering) concentrates more specifically on communication-related topics such as signal processing, telecommunications, microwave engineering, and data/optical/satellite communications.
+
+Question: What undergraduate and graduate programs does the Department of EEE offer?
+Answer: The Department of Electrical and Electronic Engineering offers two undergraduate programs - Bachelor of Science in Electrical and Electronic Engineering (BSEEE) and Bachelor of Science in Electronic and Communication Engineering (BSECE) - plus two graduate programs, the Master of Science in EEE (MScEEE) and the Master of Engineering in EEE (MEnggEEE).
+
+Question: Is BRAC University's CSE program better than BUET's?
+Answer: I can't give an objective ranking there - 'better' depends on what you're optimizing for, and I don't have comparative data on BUET to draw from anyway.","BSEEE (Electrical and Electronic Engineering) has a broader focus spanning power, electronics and general EEE topics, while BSECE (Electronic and Communication Engineering) concentrates more specifically on communication-related topics such as signal processing, telecommunications, microwave engineering, and data/optical/satellite communications.",open_ended,linear,0.5,False,False,False,False,False,True,0.0234,0.0,9.2003,9.2239,2026-07-27T15:31:39.564207+00:00,0.0563,1.0068,1.0,SCORE: 1.0 | REASON: All individual factual claims are directly supported by the provided CONTEXT.
+Q067,adaptive_novel,I looked around the site but couldn't find it — how to submit report after a club event?,"After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.","Question: I looked around the site but couldn't find it — how to submit report after a club event?
+Answer: After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.
+
+Question: How to do event Budget and submit bill?
+Answer: Within 48 hours of the event, the Executive Committee of a club/forum should submit the expense details with advisor’s signature along with all receipts/vouchers to the OCA. They also need to submit a report and photographs of the event along with the bills.
+
+Question: Hey, how to do event Budget and submit bill?
+Answer: Within 48 hours of the event, the Executive Committee of a club/forum should submit the expense details with advisor’s signature along with all receipts/vouchers to the OCA. They also need to submit a report and photographs of the event along with the bills.
+
+Question: How to submit report after a club event?
+Answer: After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.
+
+Question: Hey, how to submit report after a club event?
+Answer: After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.","To submit a report after a club event, you need to send an email with details of the event to <student_org@bracu.ac.bd> within 7 working days. The report should be between 500 and 1000 words long, including detailed activities, discussion, social impact, and outcome, as well as any media coverage or social media data such as attendees, likes, shares, views, and comments collected immediately after the event.",open_ended,linear,0.5,False,False,False,False,False,True,0.0259,0.0,13.269,13.2951,2026-07-27T15:37:06.485780+00:00,0.3303,1.0249,1.0,SCORE: 1.0 | REASON: All claims in the ANSWER are directly supported by the CONTEXT.
+Q154,adaptive_novel,What day and time is the theory class for CSE370-16?,The theory class for CSE370-16 is on SAT+THU at 9:30 AM in room 10B-17C.,"Course: CSE370-16
+Theory Initial: MZG
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10B-17C
+Lab Faculty: RBR,KZMN
+Lab Day: TUE
+Lab Time: 2:00 PM
+Lab Room: 12F-31L
+
+Course: CSE340-16
+Theory Initial: ZLNM
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09H-32C
+
+Initial: KZMN
+Name: Kazi Kamruzzaman Rabbi
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE471-04 09A-05C; 2:00 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L; 3:30 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L
+
+Course: CSE331-16
+Theory Initial: TNF
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 07F-22C
+
+Course: STA201-16
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-37C",The theory classes for CSE370-16 are held on Saturday and Thursday at 9:30 AM.,entity_heavy,rrf,0.9,False,False,False,False,True,False,0.0228,0.0,4.9014,4.9242,2026-07-27T15:45:09.840242+00:00,99.9992,100.015,1.0,SCORE: 1.0 | REASON: The answer is fully supported by the context as all claims are explicitly mentioned in the retrieved information.
+Q046,adaptive_novel,What sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.","Question: What sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: New student here, what sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: I looked around the site but couldn't find it — what sports teams does the university have?
+Answer: BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.
+
+Question: Does BRAC University take part in inter-university sports tournaments regularly?
+Answer: Yes, BRAC University teams regularly compete in inter-university football and other sports tournaments in Dhaka, including tournaments like the Shahjalal Islami Bank Faraaz Gold Cup Inter-University Football Tournament.
+
+Question: Does BRAC University have any costs associated with joining clubs or sports teams?
+Answer: No there no costs associated with joining clubs or sports teams.","The university has BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",open_ended,linear,0.5,False,False,False,False,False,True,0.0188,0.0,5.7445,5.7634,2026-07-27T15:34:10.758170+00:00,0.0124,0.8982,1.0,SCORE: 1.0 | REASON: All individual factual claims about sports teams are directly supported by the CONTEXT.
+Q043,adaptive_novel,What are the pickup times for Route-01 (Abdullahpur)?,"1st Trip: 6:40 AM, 2nd Trip: 8:50 AM.","Question: What are the pickup times for Route-01 (Abdullahpur)?
+Answer: 1st Trip: 6:40 AM, 2nd Trip: 8:50 AM.
+
+Question (Banglish): Route-01 (Abdullahpur) er pickup time gula ki?
+Answer (English): 1st Trip: 6:40 AM, 2nd Trip: 8:50 AM.
+
+Question: What are the pickup times for Route-04 (Azimpur)?
+Answer: Route-04 (Azimpur): 1st Trip: 6:30 AM, 2nd Trip: 8:45 AM.
+
+Question: What are the pickup times for Route-07 (Mohammadpur)?
+Answer: 1st Trip: 6:25 AM, 2nd Trip: 8:55 AM.
+
+Question: What are the pickup times for Route-02 (Mirpur-A)?
+Answer: 1st Trip: 6:30 AM, 2nd Trip: 8:40 AM.","The pickup times for Route-01 (Abdullahpur) are 1st Trip: 6:40 AM, and 2nd Trip: 8:50 AM.",open_ended,linear,0.5,False,False,False,False,False,True,0.0203,0.0,6.1653,6.1858,2026-07-27T15:33:52.966887+00:00,0.1862,1.0647,0.5,"SCORE: 0.5 | REASON: The answer partially matches the context for Route-01 (Abdullahpur), but not for other routes mentioned in the context."
+Q113,adaptive_novel,What is the full prerequisite chain for ENG102?,The full prerequisite chain for ENG102 is ENG101.,"Verified prerequisite chain for ENG102 (nearest prerequisite first, from the Prerequisites knowledge base): ENG101.
+
+Course: ENG102
+Prerequisite: ENG101 (HP)
+Full Prerequisite Chain: ENG101
+
+Course: ENG103
+Prerequisite: ENG102 (HP)
+Full Prerequisite Chain: ENG102
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: CSE360
+Prerequisite: CSE341 (HP)
+Full Prerequisite Chain: CSE341
+
+Course: MAT120
+Prerequisite: MAT110 (HP)
+Full Prerequisite Chain: MAT110",The full prerequisite chain for ENG102 is ENG101.,entity_heavy,rrf,0.9,False,False,False,True,True,False,0.0179,0.0,3.8314,3.8494,2026-07-27T15:41:58.399802+00:00,100.0,100.015,1.0,SCORE: 1.0 | REASON: The answer is fully supported by the context as it directly matches the provided prerequisite chain for ENG102.
+Q084,adaptive_novel,"Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?","Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.","Question: Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?
+Answer: Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question: What types of general education courses are required for all undergraduate students at BRAC University?
+Answer: Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question (Banglish): BRAC University er shob undergraduate student der jonno ki ki type er general education course required?
+Answer (English): Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
+
+Question: What is the School of General Education at BRAC University?
+Answer: The School of General Education (SGED) provides the common foundational education (GenEd courses) that every student takes before focusing on their major/minor coursework, spanning subjects across Humanities, Social Sciences, Mathematics, and Sciences.
+
+Question: Can you tell me what the School of General Education at BRAC University is?
+Answer: The School of General Education (SGED) provides the common foundational education (GenEd courses) that every student takes before focusing on their major/minor coursework, spanning subjects across Humanities, Social Sciences, Mathematics, and Sciences.",The types of general education courses required for all undergraduate students at BRAC University include those in the streams and courses listed on the School of General Education's website.,open_ended,linear,0.5,False,False,False,False,False,True,0.0281,0.0,6.0514,6.0797,2026-07-27T15:38:59.697748+00:00,0.063,1.054,1.0,SCORE: 1.0 | REASON: All claims are directly supported by the provided CONTEXT.
+Q068,adaptive_novel,Can you tell me what the Syndicate at BRAC University is?,"The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.","Question: Can you tell me what the Syndicate at BRAC University is?
+Answer: The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.
+
+Question: I wanted to ask, what is the Syndicate at BRAC University?
+Answer: The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.
+
+Question: What is the Syndicate at BRAC University?
+Answer: The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.
+
+Question (Banglish): BRAC University er Syndicate bolte thik ki bujhay?
+Answer (English): The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.
+
+Question: When was BRAC University's current administrative/governance structure established?
+Answer: BRAC University's current governance structure (Board of Trustees, Syndicate, and Academic Council as currently organized) was established in 2011, a decade after the university's 2001 founding.","The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.",open_ended,linear,0.5,False,False,False,False,False,True,0.0182,0.0,4.9061,4.9244,2026-07-27T15:37:11.410742+00:00,0.1287,1.0082,1.0,SCORE: 1.0 | REASON: All claims are directly supported by the CONTEXT.
+Q016,adaptive_novel,How to contact with BRACU Finance and Accounts Department?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd","Question: How to contact with BRACU Finance and Accounts Department?
+Answer: BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd
+
+Question: Can someone help — how to contact with BRACU Finance and Accounts Department?
+Answer: BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd
+
+Question (Banglish): BRACU Finance and Accounts Department ke kivabe contact korbo?
+Answer (English): BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd
+
+Question: What services are offered by the Finance & Accounts Office?
+Answer: The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd
+
+Question (Banglish): Finance & Accounts Office ki ki service offer kore?
+Answer (English): The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd","To contact the BRACU Finance and Accounts Department, you can visit BRAC University located at Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda, Dhaka 1212, Bangladesh. You can also reach them by phone at +88 09638464646 Ext: 1220 or 1221, or by emailing queries-accounts@bracu.ac.bd.",open_ended,linear,0.5,False,False,False,False,False,True,0.0193,0.0,11.4862,11.5056,2026-07-27T15:30:35.189116+00:00,0.0225,1.0483,1.0,SCORE: 1.0 | REASON: All claims are directly supported by the provided CONTEXT.
+Q115,adaptive_novel,What are the prerequisites for ENG103?,The prerequisite for ENG103 is ENG102 (HP).,"Course: ENG103
+Prerequisite: ENG102 (HP)
+Full Prerequisite Chain: ENG102
+
+Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: What are the prerequisites for the Cse program?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Can you tell me what the prerequisites for the Cse program are?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics",The prerequisite for ENG103 is ENG102 (HP) with a full prerequisite chain of ENG102.,entity_heavy,rrf,0.9,False,False,False,False,True,False,0.0159,0.0,4.5717,4.5882,2026-07-27T15:42:07.795808+00:00,99.9936,100.0167,0.5,"SCORE: 0.5 | REASON: Only two out of four claims are supported by the context. 
+
+The ANSWER is decomposed into individual factual claims as follows:
+
+1. The prerequisite for ENG103 is ENG102 (HP).
+2. The full prerequisite chain for ENG103 is ENG102.
+3. Pre-Thesis I and Pre-Thesis II must be completed before the thesis defense.
+4. Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics are prerequisites for the Cse program.
+
+Claims 1 and 2 are supported by the CONTEXT as they directly match information provided. Claims 3 and 4 are not supported because the CONTEXT does not mention anything about thesis defenses or the Cse program prerequisites, only ENG103's prerequisites."
+Q167,adaptive_novel,Who teaches the lab section of CSE111-07?,"The lab section of CSE111-07 is taught by AFA,ZMD.","Course: CSE111-07
+Theory Initial: KNI
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09A-03C
+Lab Faculty: AFA,ZMD
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 09B-08L
+
+Initial: ZMD
+Name: Mr. Zaber Mohammad
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE420-05 08H-22C; 11:00 AM - CSE111-07 (LAB) AFA,ZMD 09B-08L; 12:30 PM - CSE111-07 (LAB) AFA,ZMD 09B-08L; 2:00 PM - CSE111-04 09D-17C
+
+Initial: AFA
+Name: Afroza Akhter
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE111-09 (LAB) AFA,ATY 09B-09L; 9:30 AM - CSE111-09 (LAB) AFA,ATY 09B-09L; 11:00 AM - CSE111-07 (LAB) AFA,ZMD 09B-08L; 12:30 PM - CSE111-07 (LAB) AFA,ZMD 09B-08L; 2:00 PM - CSE331-10 10B-16C; 3:30 PM - CSE331-09 10B-16C
+
+Initial: KNI
+Name: Ms. Khondoker Nazia Iqbal
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE111-08 09A-03C; 11:00 AM - CSE111-07 09A-03C; 12:30 PM - Consultation; 2:00 PM - CSE110-08 (LAB) DFD,KNI 09B-09L; 3:30 PM - CSE110-08 (LAB) DFD,KNI 09B-09L
+
+Initial: KNI
+Name: Ms. Khondoker Nazia Iqbal
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE111-08 09A-03C; 11:00 AM - CSE111-07 09A-03C; 12:30 PM - Consultation; 2:00 PM - Consultation",The lab section of CSE111-07 is taught by AFA and ZMD.,entity_heavy,rrf,0.9,False,False,False,False,True,False,0.0193,0.0,5.0974,5.1168,2026-07-27T15:46:17.926975+00:00,100.0,100.015,1.0,"SCORE: 1.0 | REASON: The CONTEXT supports all individual factual claims made in the ANSWER. 
+
+Here's how I broke down the process:
+
+1. Decomposed the ANSWER into its individual factual claims:
+   - Claim 1: AFA is a lab faculty for CSE111-07.
+   - Claim 2: ZMD is a lab faculty for CSE111-07.
+   - Claim 3: The lab section of CSE111-07 takes place on TUE (Tuesday).
+   - Claim 4: The lab section of CSE111-07 takes place at 11:00 AM.
+   - Claim 5: The lab section of CSE111-07 is held in room 09B-08L.
+
+2. Checked whether the CONTEXT supports each claim:
+   - Claim 1: Supported by Initial: ZMD, Name: Mr. Zaber Mohammad, Day: Tuesday, Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE111-07 (LAB) AFA,ZMD 09B-08L.
+   - Claim 2: Supported by Initial: ZMD, Name: Mr. Zaber Mohammad, Day: Tuesday, Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE111-07 (LAB) AFA,ZMD 09B-08L and Initial: AFA, Name: Afroza Akhter, Day: Tuesday, Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE111-07 (LAB) AFA,ZMD 09B-08L.
+   - Claim 3: Supported by Lab Day: TUE in the CONTEXT.
+   - Claim 4: Supported by Lab Time: 11:00 AM in the CONTEXT.
+   - Claim 5: Supported by Lab Room: 09B-08L in the CONTEXT.
+
+Since all claims are supported, the final score is 1.0."
+Q069,adaptive_novel,Can you tell me what the eligibility criteria for receiving financial aid are?,"BRAC University offers financial aid to students based on demonstrated financial need. Financial aid eligibility is reassessed regularly, and students may need to maintain satisfactory academic performance. Special consideration may be given to students from disadvantaged backgrounds or those facing extraordinary circumstances. The Financial Aid Office can provide more detailed information on the application process.","Question: Can you tell me what the eligibility criteria for receiving financial aid are?
+Answer: BRAC University offers financial aid to students based on demonstrated financial need. Financial aid eligibility is reassessed regularly, and students may need to maintain satisfactory academic performance. Special consideration may be given to students from disadvantaged backgrounds or those facing extraordinary circumstances. The Financial Aid Office can provide more detailed information on the application process.
+
+Question: What are the eligibility criteria for receiving financial aid?
+Answer: BRAC University offers financial aid to students based on demonstrated financial need. Financial aid eligibility is reassessed regularly, and students may need to maintain satisfactory academic performance. Special consideration may be given to students from disadvantaged backgrounds or those facing extraordinary circumstances. The Financial Aid Office can provide more detailed information on the application process.
+
+Question (Banglish): Financial aid pete eligibility criteria ki ki?
+Answer (English): BRAC University offers financial aid to students based on demonstrated financial need. Financial aid eligibility is reassessed regularly, and students may need to maintain satisfactory academic performance. Special consideration may be given to students from disadvantaged backgrounds or those facing extraordinary circumstances. The Financial Aid Office can provide more detailed information on the application process.
+
+Question: Can you tell me what the requirements for maintaining financial aid eligibility are?
+Answer: At BRAC University, students must maintain a minimum CGPA of 3.25, be enrolled full-time, meet satisfactory academic progress, follow the code of conduct, and sometimes demonstrate ongoing financial need to maintain financial aid eligibility.
+
+Question: What are the requirements for maintaining financial aid eligibility?
+Answer: At BRAC University, students must maintain a minimum CGPA of 3.25, be enrolled full-time, meet satisfactory academic progress, follow the code of conduct, and sometimes demonstrate ongoing financial need to maintain financial aid eligibility.","BRAC University offers financial aid to students based on demonstrated financial need. Financial aid eligibility is reassessed regularly, and students may need to maintain satisfactory academic performance. Special consideration may be given to students from disadvantaged backgrounds or those facing extraordinary circumstances. The Financial Aid Office can provide more detailed information on the application process.",open_ended,linear,0.5,False,False,False,False,False,True,0.0224,0.0,9.02,9.0426,2026-07-27T15:37:20.454370+00:00,0.0526,0.975,0.8,"SCORE: 0.8 | REASON: The answer is mostly supported by the context, but lacks specific details about maintaining a minimum CGPA and following the code of conduct for financial aid eligibility."
+Q120,adaptive_novel,What is the full prerequisite chain for CSE340?,The full prerequisite chain for CSE340 is CSE260-CSE251-CSE250-PHY112-PHY111.,"Verified prerequisite chain for CSE340 (nearest prerequisite first, from the Prerequisites knowledge base): CSE260 -> CSE251 -> CSE250 -> PHY112 -> PHY111.
+
+Course: CSE340
+Prerequisite: CSE260 (SP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: CSE340
+First Theory Coordinator: PBK
+Theory Coordinator Email: partha.bhoumik@bracu.ac.bd
+
+Course: CSE340-03
+Theory Initial: ACH
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T
+
+Course: CSE340-02
+Theory Initial: ACH
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T",The full prerequisite chain for CSE340 is CSE260 -> CSE251 -> CSE250.,entity_heavy,rrf,0.9,False,True,True,True,True,False,0.0196,0.0,4.812,4.8317,2026-07-27T15:42:28.673402+00:00,0.0006,0.0166,1.0,SCORE: 1.0 | REASON: All claims in the ANSWER are fully supported by the CONTEXT.
+Q144,adaptive_novel,What is the coordinator email for CSE460?,The coordinator email for CSE460 is arpa.roy@bracu.ac.bd.,"Course: CSE460-01
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09D-18C
+Lab Faculty: AKJ,UPM
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09E-21L
+
+Course: CSE460
+Prerequisite: CSE260 (HP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250
+
+Course: CSE460-03
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 07H-26C
+Lab Faculty: SDL,SDU
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 09E-22L
+
+Course: CSE460-02
+Theory Initial: ZIZE
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 07D-20C
+Lab Faculty: RAS,ZBH
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 10E-27L
+
+Course: CSE460
+First Theory Coordinator: ARPD
+Theory Coordinator Email: arpa.roy@bracu.ac.bd
+First Lab Coordinator: AKJ
+Second Lab Coordinator: SDL
+Lab Coordinator Email: anjum.akib@bracu.ac.bd,shadmin.sultana@bracu.ac.bd",The Theory Coordinator's email for CSE460 is arpa.roy@bracu.ac.bd and the Lab Coordinators' emails are anjum.akib@bracu.ac.bd and shadmin.sultana@bracu.ac.bd.,entity_heavy,rrf,0.9,False,True,True,False,True,False,0.0165,0.0,7.9927,8.0092,2026-07-27T15:44:16.113453+00:00,0.0,0.015,1.0,SCORE: 1.0 | REASON: All claims are fully supported by the provided CONTEXT.
+Q031,adaptive_novel,"New student here, could you please provide details about the tuition fee structure at BRAC University?","For students enrolled in the Computer Science and Engineering (CSE) program at BRAC University, the tuition fee structure includes a one-time, non-refundable admission fee of BDT 30,800. Each course within the CSE program costs BDT 22,500. Additionally, students are required to pay a semester fee of BDT 11,500, which covers various facilities such as IT services and library access. There is also a one-time library membership fee of BDT 2,500. This fee structure is designed to support the comprehensive education provided in the CSE program, ensuring access to advanced resources and facilities?","Question: New student here, could you please provide details about the tuition fee structure at BRAC University?
+Answer: For students enrolled in the Computer Science and Engineering (CSE) program at BRAC University, the tuition fee structure includes a one-time, non-refundable admission fee of BDT 30,800. Each course within the CSE program costs BDT 22,500. Additionally, students are required to pay a semester fee of BDT 11,500, which covers various facilities such as IT services and library access. There is also a one-time library membership fee of BDT 2,500. This fee structure is designed to support the comprehensive education provided in the CSE program, ensuring access to advanced resources and facilities?
+
+Question: Could you please provide details about the tuition fee structure at BRAC University?
+Answer: For students enrolled in the Computer Science and Engineering (CSE) program at BRAC University, the tuition fee structure includes a one-time, non-refundable admission fee of BDT 30,800. Each course within the CSE program costs BDT 22,500. Additionally, students are required to pay a semester fee of BDT 11,500, which covers various facilities such as IT services and library access. There is also a one-time library membership fee of BDT 2,500. This fee structure is designed to support the comprehensive education provided in the CSE program, ensuring access to advanced resources and facilities?
+
+Question (Banglish): BRAC University er tuition fee structure ta ektu bolben please?
+Answer (English): For students enrolled in the Computer Science and Engineering (CSE) program at BRAC University, the tuition fee structure includes a one-time, non-refundable admission fee of BDT 30,800. Each course within the CSE program costs BDT 22,500. Additionally, students are required to pay a semester fee of BDT 11,500, which covers various facilities such as IT services and library access. There is also a one-time library membership fee of BDT 2,500. This fee structure is designed to support the comprehensive education provided in the CSE program, ensuring access to advanced resources and facilities
+
+Question: What's the tuition fee at North South University?
+Answer: That's outside what I can help with - I only have information about BRAC University. North South University's own website would have their current fee structure.
+
+Question: Not sure if this is covered elsewhere, but what's the tuition fee at North South University?
+Answer: That's outside what I can help with - I only have information about BRAC University. North South University's own website would have their current fee structure.","For students enrolled in the Computer Science and Engineering (CSE) program at BRAC University, the tuition fee structure includes a one-time, non-refundable admission fee of BDT 30,800. Each course within the CSE program costs BDT 22,500. Additionally, students are required to pay a semester fee of BDT 11,500, which covers various facilities such as IT services and library access. There is also a one-time library membership fee of BDT 2,500. This fee structure is designed to support the comprehensive education provided in the CSE program, ensuring access to advanced resources and facilities.",open_ended,linear,0.5,False,False,False,False,False,True,0.0276,0.0,17.8091,17.837,2026-07-27T15:32:30.055192+00:00,0.0567,0.9935,1.0,SCORE: 1.0 | REASON: The answer is fully supported by the context as it directly quotes the provided answers for BRAC University's tuition fee structure.
+Q010,adaptive_novel,Purpose of the Wishlist event for Summer 2025?,To help plan course offerings based on student demand,"Question: Purpose of the Wishlist event for Summer 2025?
+Answer: To help plan course offerings based on student demand
+
+Question (Banglish): Summer 2025 er Wishlist event er purpose ki?
+Answer (English): To help plan course offerings based on student demand
+
+Question: Why is participation in the Wishlist event important?
+Answer: Course offerings will be based on student demand collected from Wishlist submissions
+
+Question (Banglish): Ke Wishlist event e participate korte hobe?
+Answer (English): All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students
+
+Question: What is Wishlist?
+Answer: Wishlist event – an online pre-advising activity where undergraduate students (all programs except LLB, PHR, and Residential-Semester-eligible cohorts) log in during an assigned time slot, select the courses they intend to take, and press “Confirm.”
+The collected course demands are then used by BRAC University to decide how many sections to open for each course, and only students who complete this step become eligible for Pre-Registration Phase 1.",To help plan course offerings based on student demand.,open_ended,linear,0.5,False,False,False,False,False,True,0.0195,0.0,3.6834,3.7031,2026-07-27T15:29:51.926120+00:00,0.0818,1.0537,1.0,SCORE: 1.0 | REASON: All individual factual claims are fully supported by the provided CONTEXT.
+Q121,adaptive_novel,What is the full prerequisite chain for CSE471?,The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE230-CSE110.,"Verified prerequisite chain for CSE471 (nearest prerequisite first, from the Prerequisites knowledge base): CSE370 -> CSE221 -> CSE220 -> CSE111 -> CSE230 -> CSE110.
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: CSE471
+First Theory Coordinator: MIH
+Theory Coordinator Email: iqbal.hossain@bracu.ac.bd
+First Lab Coordinator: AQU
+Lab Coordinator Email: aquib.azmain@bracu.ac.bd
+
+Course: CSE471-03
+Theory Initial: AQU
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: SADA,WHMJ
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09F-25L
+
+Course: CSE471-02
+Theory Initial: AQU
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: KZMN,WHMJ
+Lab Day: SUN
+Lab Time: 2:00 PM
+Lab Room: 09F-25L
+
+Course: CSE471
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110",The full prerequisite chain for CSE471 is CSE370 -> CSE221 -> CSE220 -> CSE111 -> CSE110.,entity_heavy,rrf,0.9,False,False,False,True,True,False,0.0207,0.0,5.6139,5.6347,2026-07-27T15:42:34.308617+00:00,0.0013,0.0163,1.0,SCORE: 1.0 | REASON: The ANSWER is fully supported by the CONTEXT as it exactly matches the prerequisite chain listed for CSE471.
+Q157,adaptive_novel,What day and time is the theory class for CSE460-04?,The theory class for CSE460-04 is on SAT+THU at 2:00 PM in room 09A-07C.,"Course: CSE460-04
+Theory Initial: SDU
+Theory Day: SAT+THU
+Theory Time: 2:00 PM
+Theory Room: 09A-07C
+Lab Faculty: AKJ,RAS
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09F-24L
+
+Initial: RAS
+Name: Md. Rasel Mia
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 12:30 PM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 2:00 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L; 3:30 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L
+
+Initial: AKJ
+Name: Akib Anjum
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 12:30 PM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 2:00 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L; 3:30 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L; 5:00 PM - Consultation
+
+Initial: SDU
+Name: Shomen Kundu
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE460-08 (LAB) MTOT,SDU 09F-24L; 12:30 PM - CSE460-08 (LAB) MTOT,SDU 09F-24L; 2:00 PM - CSE460-04 09A-07C
+
+Course: CSE460-01
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09D-18C
+Lab Faculty: AKJ,UPM
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09E-21L",The theory class for CSE460-04 is held on Saturday and Thursday at 2:00 PM.,entity_heavy,rrf,0.9,False,False,False,False,True,False,0.0206,0.0,5.9491,5.9698,2026-07-27T15:45:25.437867+00:00,100.0002,100.015,1.0,"SCORE: 1.0 | REASON: The CONTEXT supports all individual factual claims made in the ANSWER. 
+
+Here's how I broke down the process:
+
+1. Decomposed the ANSWER into its individual factual claims:
+   - Theory class for CSE460-04 is held on Saturday.
+   - Theory class for CSE460-04 is held on Thursday.
+   - Theory class for CSE460-04 is held at 2:00 PM.
+
+2. Checked whether the CONTEXT supports each claim:
+   - Claim 1: The CONTEXT states that the theory day for CSE460-04 is SAT+THU, which includes Saturday and Thursday.
+   - Claim 2: The CONTEXT also states that the theory day for CSE460-04 is SAT+THU, supporting this claim as well.
+   - Claim 3: The CONTEXT specifies that the theory time for CSE460-04 is indeed 2:00 PM.
+
+Since all claims are supported by the CONTEXT, the final score is 1.0."
+Q019,adaptive_novel,How are students informed about changes to the transport service?,Students are informed through official BRAC University notices and announcements.,"Question: How are students informed about changes to the transport service?
+Answer: Students are informed through official BRAC University notices and announcements.
+
+Question (Banglish): Transport service e change hole student der kivabe janano hoy?
+Answer (English): Students are informed through official BRAC University notices and announcements.
+
+Question: How can students report a problem with the transport service?
+Answer: Students can report issues by calling the designated route-specific numbers or reaching out to transport officers.
+
+Question: Can students suggest new routes for the transport service?
+Answer: Suggestions for new routes can be submitted to the transport office for review.
+
+Question: Does the university have plans to expand the transport service?
+Answer: No official announcement has been made about expanding the transport service.",Students are informed through official BRAC University notices and announcements.,open_ended,linear,0.5,False,False,False,False,False,True,0.0234,0.0,3.9308,3.9544,2026-07-27T15:30:51.560285+00:00,0.312,1.0586,1.0,SCORE: 1.0 | REASON: All claims are directly supported by the provided CONTEXT.
+Q134,adaptive_novel,Who is the theory coordinator for CSE426?,The theory coordinator for CSE426 is TSM.,"Course: CSE426
+First Theory Coordinator: TSM
+Theory Coordinator Email: mirza.mugdho@bracu.ac.bd
+
+Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE426-01
+Theory Initial: TSM
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 08H-22C
+
+Course: CSE426-02
+Theory Initial: RFR
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 07D-20C",The first Theory Coordinator for CSE426 is TSM.,entity_heavy,rrf,0.9,False,False,False,False,True,False,0.017,0.0,3.87,3.887,2026-07-27T15:43:29.250857+00:00,0.001,0.0165,1.0,SCORE: 1.0 | REASON: The CONTEXT supports that TSM is the first Theory Coordinator for CSE426.
+Q070,adaptive_novel,For a friend who's asking — do I need to pay any fee to collect my degree certificate at Convocation?,"No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.","Question: For a friend who's asking — do I need to pay any fee to collect my degree certificate at Convocation?
+Answer: No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.
+
+Question: Do I need to pay any fee to collect my degree certificate at Convocation?
+Answer: No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.
+
+Question: Am I required to need to pay any fee to collect my degree certificate at Convocation?
+Answer: No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.
+
+Question (Banglish): Convocation e degree certificate collect korte ki amake fee dite hobe?
+Answer (English): No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.
+
+Question (Banglish): Gato bochor convocation e amar certificate nite parini. Er procedure ta ki?
+Answer (English): If you missed collecting your certificate at last year's convocation, you can visit the Registrar's office on the fourth floor to collect it - bring your student ID card and any relevant payment slip.","No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.",open_ended,linear,0.5,False,False,False,False,False,True,0.0252,0.0,6.0619,6.0875,2026-07-27T15:37:26.542808+00:00,0.1081,1.0675,1.0,SCORE: 1.0 | REASON: All individual factual claims in the ANSWER are fully supported by the CONTEXT.
+Q097,adaptive_novel,Can you tell me what the important dates and deadlines for admission are?,"The exact admission test date, application deadline, and academic-session start date change every semester, so BRAC University publishes them on its Admissions page (bracu.ac.bd/admissions) ahead of each intake rather than fixing them year-round - check that page for the current cycle's dates.","Question: Can you tell me what the important dates and deadlines for admission are?
+Answer: The exact admission test date, application deadline, and academic-session start date change every semester, so BRAC University publishes them on its Admissions page (bracu.ac.bd/admissions) ahead of each intake rather than fixing them year-round - check that page for the current cycle's dates.
+
+Question: What are the important dates and deadlines for admission?
+Answer: The exact admission test date, application deadline, and academic-session start date change every semester, so BRAC University publishes them on its Admissions page (bracu.ac.bd/admissions) ahead of each intake rather than fixing them year-round - check that page for the current cycle's dates.
+
+Question (Banglish): Admission er important date ar deadline gula ki?
+Answer (English): The exact admission test date, application deadline, and academic-session start date change every semester, so BRAC University publishes them on its Admissions page (bracu.ac.bd/admissions) ahead of each intake rather than fixing them year-round - check that page for the current cycle's dates.
+
+Question: Can you tell me what the deadline for scholarship applications is?
+Answer: The deadline for scholarship applications at BRAC University typically varies depending on the type of scholarship and the academic semester. It is important for students to check the university's official announcements or contact the admissions or financial aid office for the specific deadlines related to each semester or scholarship program.
+
+Question: Can you tell me what the payment deadlines for tuition and fees are?
+Answer: At BRAC University, tuition and fees must be paid by the specified deadlines each semester.It's important to check specific dates each semester, as they may vary","The exact admission test date, application deadline, and academic-session start date change every semester, so BRAC University publishes them on its Admissions page (bracu.ac.bd/admissions) ahead of each intake rather than fixing them year-round - check that page for the current cycle's dates.",open_ended,linear,0.5,False,False,False,False,False,True,0.0205,0.0,8.7271,8.7478,2026-07-27T15:40:34.726938+00:00,0.069,0.9966,0.5,"SCORE: 0.5 | REASON: The answer contains two claims that are not supported by the context: ""The deadline for scholarship applications at BRAC University typically varies depending on the type of scholarship and the academic semester"" is not mentioned in any question, but it's actually a correct claim; however, the other claim ""At BRAC University, tuition and fees must be paid by the specified deadlines each semester"" contradicts the context which states that dates change every semester."
+Q125,adaptive_novel,What are the prerequisites for CSE422?,The prerequisite for CSE422 is CSE221 (HP).,"Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Course: CSE422
+Prerequisite: CSE221 (HP)
+Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
+
+Course: CSE422
+First Theory Coordinator: TRZ
+Theory Coordinator Email: tanzim.reza@bracu.ac.bd
+First Lab Coordinator: ZHS
+Lab Coordinator Email: shoumo.hasan@bracu.ac.bd",The prerequisite for CSE422 is CSE221 (HP).,entity_heavy,rrf,0.9,False,True,True,False,True,False,0.0157,0.0,3.8339,3.85,2026-07-27T15:42:51.441013+00:00,0.0005,0.0229,0.5,"SCORE: 0.5 | REASON: Only two out of four claims are supported by the context. 
+
+The ANSWER is decomposed into its individual factual claims:
+
+1. The prerequisite for CSE422 is CSE221 (HP).
+2. Pre-Thesis I and Pre-Thesis II must be completed before the thesis defense.
+3. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Claims 1 and 3 are supported by the context, but claim 2 is not mentioned in the provided CONTEXT."
+Q100,adaptive_novel,"When was the BRAC University School of Law established, and what degree does it offer?","The School of Law was founded in 2004 and offers a four-year undergraduate Bachelor of Laws (LL.B. Hons.) program, along with a postgraduate LL.M. program.","Question: When was the BRAC University School of Law established, and what degree does it offer?
+Answer: The School of Law was founded in 2004 and offers a four-year undergraduate Bachelor of Laws (LL.B. Hons.) program, along with a postgraduate LL.M. program.
+
+Question (Banglish): BRAC University School of Law kobe established hoyechilo, ar eta ki degree offer kore?
+Answer (English): The School of Law was founded in 2004 and offers a four-year undergraduate Bachelor of Laws (LL.B. Hons.) program, along with a postgraduate LL.M. program.
+
+Question: Does BRAC University's School of Law offer a Master of Laws (LL.M.) program?
+Answer: Yes, alongside the undergraduate LL.B. (Hons), the School of Law offers an LL.M. program aimed at both emerging and experienced legal professionals, covering areas from human rights and international law to corporate governance and digital/cyber law.
+
+Question (Banglish): BRAC University er School of Law ki Master of Laws (LL.M.) program offer kore?
+Answer (English): Yes, alongside the undergraduate LL.B. (Hons), the School of Law offers an LL.M. program aimed at both emerging and experienced legal professionals, covering areas from human rights and international law to corporate governance and digital/cyber law.
+
+Question: When was BRAC University established and who founded it?
+Answer: BRAC University was established in 2001, founded by Sir Fazle Hasan Abed, and is affiliated with the University Grants Commission (UGC) of Bangladesh.","The School of Law at BRAC University was established in 2004 and offers a four-year undergraduate Bachelor of Laws (LL.B. Hons.) program, along with a postgraduate LL.M. program.",open_ended,linear,0.5,False,False,False,False,False,True,0.0229,0.0,6.9722,6.9954,2026-07-27T15:40:56.961062+00:00,0.1597,1.0706,0.8,"SCORE: 0.8 | REASON: The answer's claim about the School of Law offering a four-year undergraduate LL.B. program is supported, but its claim about the postgraduate LL.M. program is not explicitly mentioned in the context for the first question, and the second question only mentions it as an additional program without specifying that it's postgraduate."
+Q170,adaptive_novel,Who teaches the lab section of CSE260-15A?,"The lab section of CSE260-15A is taught by MDF,NQM.","Course: CSE260-15A
+Theory Initial: LMI
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09C-13C
+Lab Faculty: MDF,NQM
+Lab Day: SAT
+Lab Time: 8:00 AM
+Lab Room: FT10-03L
+
+Question (Banglish): Main advising er shomoy kono course e extra seat kivabe pabo?
+Answer (English): Request the section's faculty. If he agrees then he will do the other procedures for your desired section. But you need to have a maximum of 9 credits and also if there is vacany in the other sections and the section is not clashing with the courses of the routine. Your request will be rejected. Extra Seat Request Policy [CSE]:
+• The section faculty has the right to deny any extra seat request in their section.
+• If a student already is in another section of the same course, the request will be denied. The student may apply for lab change when the form is circulated if they have a clash that is not solveable..
+If a student doesn't have the course at all and there are other sections with empty seats, then again the request will be denied. They might be added to an available section (depending on seat availability) without any notice from our side.
+• If a student has 4 courses or more then again the request will be denied.
+• No extra seat for hardware courses (CSE250,CSE251, CSE260, CSE350).
+• A faculty may request max 2 extra seats for a lab based course and theory based course. If the seat status is already -2 in connect, the request will be denied.
+Only when there is no suitable section for the student, the student maybe granted an extra seat.
+
+Question: How to get an extra seat in a particular course durning main advising?
+Answer: Request the section's faculty. If he agrees then he will do the other procedures for your desired section. But you need to have a maximum of 9 credits and also if there is vacany in the other sections and the section is not clashing with the courses of the routine. Your request will be rejected. Extra Seat Request Policy [CSE]:
+• The section faculty has the right to deny any extra seat request in their section.
+• If a student already is in another section of the same course, the request will be denied. The student may apply for lab change when the form is circulated if they have a clash that is not solveable..
+If a student doesn't have the course at all and there are other sections with empty seats, then again the request will be denied. They might be added to an available section (depending on seat availability) without any notice from our side.
+• If a student has 4 courses or more then again the request will be denied.
+• No extra seat for hardware courses (CSE250,CSE251, CSE260, CSE350).
+• A faculty may request max 2 extra seats for a lab based course and theory based course. If the seat status is already -2 in connect, the request will be denied.
+Only when there is no suitable section for the student, the student maybe granted an extra seat.
+
+Question: Random question, how to get an extra seat in a particular course durning main advising?
+Answer: Request the section's faculty. If he agrees then he will do the other procedures for your desired section. But you need to have a maximum of 9 credits and also if there is vacany in the other sections and the section is not clashing with the courses of the routine. Your request will be rejected. Extra Seat Request Policy [CSE]:
+• The section faculty has the right to deny any extra seat request in their section.
+• If a student already is in another section of the same course, the request will be denied. The student may apply for lab change when the form is circulated if they have a clash that is not solveable..
+If a student doesn't have the course at all and there are other sections with empty seats, then again the request will be denied. They might be added to an available section (depending on seat availability) without any notice from our side.
+• If a student has 4 courses or more then again the request will be denied.
+• No extra seat for hardware courses (CSE250,CSE251, CSE260, CSE350).
+• A faculty may request max 2 extra seats for a lab based course and theory based course. If the seat status is already -2 in connect, the request will be denied.
+Only when there is no suitable section for the student, the student maybe granted an extra seat.
+
+Initial: MDF
+Name: Mr. Mohammad Fahim
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-15A (LAB) MDF,NQM FT10-03L; 9:30 AM - CSE260-15A (LAB) MDF,NQM FT10-03L; 11:00 AM - CSE260-18A (LAB) MDF,NQM FT10-03L; 12:30 PM - CSE260-18A (LAB) MDF,NQM FT10-03L",The lab section of CSE260-15A is taught by Mr. Mohammad Fahim and NQM.,entity_heavy,rrf,0.9,False,False,False,False,True,False,0.0205,0.0,6.3188,6.3399,2026-07-27T15:46:35.502095+00:00,99.9977,100.015,0.5,"SCORE: 0.5 | REASON: The answer partially supports the context, as it correctly identifies Mr. Mohammad Fahim and NQM as lab instructors for CSE260-15A, but does not mention that there are no suitable sections available for extra seats. 
+
+Here's a breakdown of the claims in the ANSWER:
+
+1. Claim: The lab section of CSE260-15A is taught by Mr. Mohammad Fahim.
+   Context Support: Supported (Lab Faculty: MDF,NQM, Lab Day: SAT, Lab Time: 8:00 AM, Lab Room: FT10-03L)
+
+2. Claim: The lab section of CSE260-15A is taught by NQM.
+   Context Support: Supported (Lab Faculty: MDF,NQM, Lab Day: SAT, Lab Time: 8:00 AM, Lab Room: FT10-03L)
+
+3. Claim: There are no suitable sections available for extra seats in CSE260-15A.
+   Context Support: Not Supported (The context does not mention anything about the availability of sections or the policy regarding extra seats.)
+
+Since only two out of three claims are supported by the context, the final score is 0.5."
+Q102,adaptive_novel,What are the prerequisites for CSE251?,The prerequisite for CSE251 is CSE250 (HP).,"Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: CSE260
+Prerequisite: CSE251 (HP)
+Full Prerequisite Chain: CSE251-CSE250","The prerequisite for CSE251 is CSE250, which must be completed with a High Pass (HP).",entity_heavy,rrf,0.9,False,False,False,False,True,False,0.0174,0.0,4.7068,4.7247,2026-07-27T15:41:07.075155+00:00,0.0011,0.0224,1.0,SCORE: 1.0 | REASON: All claims are directly supported by the provided CONTEXT.
+Q141,adaptive_novel,Who is the theory coordinator for CSE490B?,The theory coordinator for CSE490B is TLQ.,"Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE490B-02
+Theory Initial: SDF
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 10A-04C
+Lab Faculty: ZMD,AIB
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 10E-27L
+
+Course: CSE490B
+First Theory Coordinator: TLQ
+Theory Coordinator Email: taiabul.haque@bracu.ac.bd
+First Lab Coordinator: ZMD
+Lab Coordinator Email: zaber.mohammad@bracu.ac.bd
+
+Course: CSE251
+First Theory Coordinator: PDS
+Second Theory Coordinator: UTS
+Theory Coordinator Email: purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd
+First Lab Coordinator: MOM
+Lab Coordinator Email: moynul.moni@bracu.ac.bd",The first theory coordinator for CSE490B is TLQ.,entity_heavy,rrf,0.9,False,True,True,False,True,False,0.0166,0.0,4.0123,4.029,2026-07-27T15:43:57.916923+00:00,0.0005,0.016,1.0,SCORE: 1.0 | REASON: The CONTEXT supports that TLQ is the first theory coordinator for CSE490B.
+Q030,adaptive_novel,What is the second outbound timing for Route-04 (Azimpur)?,Route-04 (Azimpur): Second trip departs at 5:10 PM.,"Question: What is the second outbound timing for Route-04 (Azimpur)?
+Answer: Route-04 (Azimpur): Second trip departs at 5:10 PM.
+
+Question (Banglish): Route-04 (Azimpur) er second outbound timing ta ki?
+Answer (English): Route-04 (Azimpur): Second trip departs at 5:10 PM.
+
+Question: What is the first outbound timing for Route-04 (Azimpur)?
+Answer: Route-04 (Azimpur): First trip departs at 2:05 PM.
+
+Question: What is the second outbound timing for Route-01 (Abdullahpur)?
+Answer: Route-01 (Abdullahpur): Second trip departs at 5:10 PM.
+
+Question: What is the second outbound timing for Route-02 (Mirpur-A)?
+Answer: Route-02 (Mirpur-A): Second trip departs at 5:10 PM.",The second outbound timing for Route-04 (Azimpur) is 5:10 PM.,open_ended,linear,0.5,False,False,False,False,False,True,0.0239,0.0,4.7463,4.7703,2026-07-27T15:32:12.216911+00:00,0.0789,1.0708,0.8,"SCORE: 0.8 | REASON: Only two out of three claims are supported by the context. 
+
+The ANSWER is decomposed into three individual factual claims:
+
+1. The second outbound timing for Route-04 (Azimpur) is 5:10 PM.
+2. This claim is supported by the CONTEXT, as it explicitly states ""Second trip departs at 5:10 PM"" for Route-04 (Azimpur).
+3. The first outbound timing for Route-04 (Azimpur) is not mentioned in the ANSWER, but it is mentioned in the CONTEXT that the first trip departs at 2:05 PM.
+4. This claim is supported by the CONTEXT, as it explicitly states ""First trip departs at 2:05 PM"" for Route-04 (Azimpur).
+5. The second outbound timing for Route-01 (Abdullahpur) and Route-02 (Mirpur-A) are not relevant to the ANSWER.
+6. This claim is supported by the CONTEXT, as it explicitly states ""Second trip departs at 5:10 PM"" for Route-01 (Abdullahpur) and Route-02 (Mirpur-A).
+
+Since two out of three claims are supported by the context, the score is 0.8."
+Q117,adaptive_novel,What are the prerequisites for CSE489?,The prerequisite for CSE489 is CSE370 (HP).,"Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: What elective courses are recommended for students interested in Software Engineering?
+Answer: CSE391, CSE484 and CSE489 are recommended for people who are interested in Software Engineering.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Course: CSE489
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110","The prerequisite for CSE489 is CSE370, which must be taken with a High Pass grade.",entity_heavy,rrf,0.9,False,False,False,False,True,False,0.0153,0.0,4.5803,4.5961,2026-07-27T15:42:16.265783+00:00,0.001,0.0227,0.8,"SCORE: 0.8 | REASON: The answer partially lacks support as it doesn't mention Pre-Thesis I and II for the first question, but is otherwise fully supported."
+Q160,adaptive_novel,What day and time is the theory class for CSE221-14?,The theory class for CSE221-14 is on MON+WED at 9:30 AM in room 07D-19C.,"Course: CSE221-14
+Theory Initial: WBH
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 07D-19C
+Lab Faculty: HFN,MZW
+Lab Day: SUN
+Lab Time: 8:00 AM
+Lab Room: 09F-24L
+
+Course: CSE331-14
+Theory Initial: RFR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 07F-22C
+
+Course: STA201-14
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 10B-18C
+
+Course: CSE320-14
+Theory Initial: YND
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 09D-18C
+
+Course: CSE340-14
+Theory Initial: LRK
+Theory Day: MON+WED
+Theory Time: 2:00 PM
+Theory Room: 09A-04C",The theory class for CSE221-14 meets on Monday and Wednesday at 9:30 AM.,entity_heavy,rrf,0.9,False,False,False,False,True,False,0.0227,0.0,4.6911,4.7138,2026-07-27T15:45:40.433696+00:00,100.0002,100.015,1.0,"To determine the score and reason for the given answer, we need to break down the answer into its individual factual claims and check which ones are supported by the provided context.
+
+The answer contains two main claims:
+
+1. The theory class for CSE221-14 meets.
+2. It meets on Monday and Wednesday at 9:30 AM.
+
+Checking each claim against the context:
+
+- Claim 1 is supported because the context specifies that the Theory Day for CSE221-14 is MON+WED, indicating it indeed has a meeting scheduled.
+  
+- Claim 2 is also supported as the context states the Theory Time for CSE221-14 is 9:30 AM.
+
+Given both claims are supported by the context, we calculate the score based on the number of supported claims out of the total. In this case, there are two claims and both are supported, so the score would be 1.0 (or 100%).
+
+The reason for the high score is that all the specific details mentioned in the answer about CSE221-14's theory class are indeed present in the context.
+
+Therefore, the output should be:
+
+SCORE: 1.0 | REASON: All claims about CSE221-14's theory class are supported by the context."
+Q032,adaptive_novel,From where does the bus leave on campus?,The bus leave campus from the Basement-1,"Question: From where does the bus leave on campus?
+Answer: The bus leave campus from the Basement-1
+
+Question (Banglish): Campus e bus kothay theke chare?
+Answer (English): The bus leave campus from the Basement-1
+
+Question: What are the general safety and conduct rules on the BRAC University bus service?
+Answer: Passengers should arrive at the designated stop at least 5 minutes before the scheduled pickup time (buses leave on time and seats are first-come, first-served), only board/alight at designated stoppages, avoid disturbing the driver (using headphones for music), and never throw anything in or out of the bus. All buses are under GPS tracking, and the university reserves the right to change any route, stoppage, schedule, or fare at any time.
+
+Question (Banglish): BRAC University bus service er general safety ar conduct rules ki ki?
+Answer (English): Passengers should arrive at the designated stop at least 5 minutes before the scheduled pickup time (buses leave on time and seats are first-come, first-served), only board/alight at designated stoppages, avoid disturbing the driver (using headphones for music), and never throw anything in or out of the bus. All buses are under GPS tracking, and the university reserves the right to change any route, stoppage, schedule, or fare at any time.
+
+Question: How often can students leave the Savar campus to visit home during RS?
+Answer: The Residential Semester is meant to be fully residential, so students are generally discouraged from leaving campus. Short leave may be granted in emergencies or exceptional cases with an approved leave application. Overstaying leave without valid reason is treated as a discipline violation and can result in further leave being denied for the rest of the semester.",The bus leaves from the Basement-1 on campus.,open_ended,linear,0.5,False,False,False,False,False,True,0.017,0.0,4.158,4.1751,2026-07-27T15:32:34.230911+00:00,0.1872,1.0474,0.5,"SCORE: 0.5 | REASON: Only two out of four individual factual claims are supported by the context. 
+
+Here's how I decomposed the ANSWER into its individual factual claims and checked whether the CONTEXT actually supports each claim:
+
+1. The bus leaves from the Basement-1 on campus.
+   - Supported by Context (first question/answer pair).
+
+2. Passengers should arrive at the designated stop at least 5 minutes before the scheduled pickup time.
+   - Not supported by Context (second question/answer pair mentions this, but it's not relevant to the ANSWER).
+
+3. Buses leave on time and seats are first-come, first-served.
+   - Not supported by Context (third question/answer pair mentions this, but it's not relevant to the ANSWER).
+
+4. All buses are under GPS tracking.
+   - Supported by Context (third question/answer pair)."
+Q013,adaptive_novel,"Random question, what should I do if I miss my mid/final?","You should inform your course instructor as soon as possible with a valid reason (such as medical emergencies). In some cases, you may need to provide documentation like medical certificates to appeal.","Question: Random question, what should I do if I miss my mid/final?
+Answer: You should inform your course instructor as soon as possible with a valid reason (such as medical emergencies). In some cases, you may need to provide documentation like medical certificates to appeal.
+
+Question: What should I do if I miss my mid/final?
+Answer: You should inform your course instructor as soon as possible with a valid reason (such as medical emergencies). In some cases, you may need to provide documentation like medical certificates to appeal.
+
+Question (Banglish): Mid/final miss korle ki korbo?
+Answer (English): You should inform your course instructor as soon as possible with a valid reason (such as medical emergencies). In some cases, you may need to provide documentation like medical certificates to appeal.
+
+Question: Random question, what should a course teacher do if a student misses the final exam for a valid reason?
+Answer: If a student misses the final exam for a documented valid reason (such as a medical emergency), the course teacher can arrange a make-up exam, and if course requirements genuinely can't be completed in time, an 'Incomplete' (I) grade with a defined completion deadline (up to 8 weeks after the final exam) may be assigned instead.
+
+Question: Random question, can a group split up mid-way through a thesis if members disagree on direction?
+Answer: Yes, but it comes with a mark penalty that increases the later it happens in the process - members can request to break/divide a group, with deductions rising from Pre-Thesis I through the Final Defense stage.","You should inform your course instructor as soon as possible with a valid reason (such as medical emergencies). In some cases, you may need to provide documentation like medical certificates to appeal.",open_ended,linear,0.5,False,False,False,False,False,True,0.0225,0.0,6.3801,6.4028,2026-07-27T15:30:09.090025+00:00,0.1007,0.9692,0.5,"SCORE: 0.5 | REASON: Only two out of four individual factual claims are supported by the retrieved CONTEXT. 
+
+The ANSWER can be decomposed into its individual factual claims as follows:
+
+1. You should inform your course instructor as soon as possible with a valid reason (such as medical emergencies).
+2. In some cases, you may need to provide documentation like medical certificates to appeal.
+3. A make-up exam can be arranged if a student misses the final exam for a documented valid reason (such as a medical emergency).
+4. An 'Incomplete' (I) grade with a defined completion deadline (up to 8 weeks after the final exam) may be assigned instead if course requirements genuinely can't be completed in time.
+
+The CONTEXT supports claims 1 and 2, but not claims 3 and 4."
+Q052,adaptive_novel,"How many semesters does BRAC University run per year, and when do they start?","BRAC University runs three semesters a year - Spring, Summer and Fall - starting in January, May and September respectively. Pharmacy admits in Spring or Summer, and LLB admits in Spring or Fall.","Question: How many semesters does BRAC University run per year, and when do they start?
+Answer: BRAC University runs three semesters a year - Spring, Summer and Fall - starting in January, May and September respectively. Pharmacy admits in Spring or Summer, and LLB admits in Spring or Fall.
+
+Question: Just wondering, how many semesters does BRAC University run per year, and when do they start?
+Answer: BRAC University runs three semesters a year - Spring, Summer and Fall - starting in January, May and September respectively. Pharmacy admits in Spring or Summer, and LLB admits in Spring or Fall.
+
+Question: How many semesters does BRAC University run each year, and what are they called?
+Answer: BRAC University follows a semester-based system with three equal semesters each year: Spring, Summer, and Fall.
+
+Question: Not sure if this is covered elsewhere, but how many semesters does BRAC University run each year, and what are they called?
+Answer: BRAC University follows a semester-based system with three equal semesters each year: Spring, Summer, and Fall.
+
+Question: Before I forget to ask — how many semesters does BRAC University run each year, and what are they called?
+Answer: BRAC University follows a semester-based system with three equal semesters each year: Spring, Summer, and Fall.","BRAC University runs three semesters a year - Spring, Summer and Fall - starting in January, May and September respectively.",open_ended,linear,0.5,False,False,False,False,False,True,0.0236,0.0,5.2616,5.2855,2026-07-27T15:35:07.316826+00:00,0.0091,1.0064,1.0,SCORE: 1.0 | REASON: All claims are directly supported by the context.
+Q042,adaptive_novel,What is the BRAC University Students' Transport Service?,"BRAC University provides an affordable, safe, and comfortable transport service with air-conditioned buses covering nine routes across Dhaka city.","Question: What is the BRAC University Students' Transport Service?
+Answer: BRAC University provides an affordable, safe, and comfortable transport service with air-conditioned buses covering nine routes across Dhaka city.
+
+Question (Banglish): BRAC University Students' Transport Service ta ki?
+Answer (English): BRAC University provides an affordable, safe, and comfortable transport service with air-conditioned buses covering nine routes across Dhaka city.
+
+Question: Can non-students use the BRAC University transport service?
+Answer: No, the service is exclusively for BRAC University students.
+
+Question (Banglish): Non-student ra ki BRAC University transport service use korte pare?
+Answer (English): No, the service is exclusively for BRAC University students.
+
+Question (Banglish): Student ra ki transport service niye feedback dite pare?
+Answer (English): Yes, students can share feedback via BRAC University's official transport service email or hotline.","The BRAC University Students' Transport Service provides an affordable, safe, and comfortable transport service with air-conditioned buses covering nine routes across Dhaka city.",open_ended,linear,0.5,False,False,False,False,False,True,0.0197,0.0,5.7603,5.7802,2026-07-27T15:33:46.780442+00:00,0.0523,0.9519,0.75,SCORE: 0.75 | REASON: Three out of four factual claims are supported by the context.
+Q087,adaptive_novel,Before I forget to ask — what are the consequences of violating TARC rules and regulations?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled","Question: Before I forget to ask — what are the consequences of violating TARC rules and regulations?
+Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
+
+Question: What are the consequences of violating TARC rules and regulations?
+Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
+
+Question: Just wondering, what are the consequences of violating TARC rules and regulations?
+Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
+
+Question: Can you tell me what the consequences of violating TARC rules and regulations are?
+Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
+
+Question (Banglish): TARC er rules bhanle ki consequence hoy?
+Answer (English): Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled","Violating rules and regulations can get one ousted from tarc. Eventually on severe violation the authority will call their parents and send them home. On minor violation, students are given warning. Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled.",open_ended,linear,0.5,False,False,False,False,False,True,0.023,0.0,8.6491,8.6724,2026-07-27T15:39:24.035350+00:00,0.1,1.0628,1.0,SCORE: 1.0 | REASON: All claims are directly mentioned in the provided CONTEXT.
+Q095,adaptive_novel,"Kind of urgent, but what should I do if I can’t log in to a lab PC?","If you've changed your password and can’t remember it, contact IT support at itsupport@bracu.ac.bd.","Question: Kind of urgent, but what should I do if I can’t log in to a lab PC?
+Answer: If you've changed your password and can’t remember it, contact IT support at itsupport@bracu.ac.bd.
+
+Question: This might be a silly question, but what should I do if I can’t log in to a lab PC?
+Answer: If you've changed your password and can’t remember it, contact IT support at itsupport@bracu.ac.bd.
+
+Question: Quick question — what should I do if I can’t log in to a lab PC?
+Answer: If you've changed your password and can’t remember it, contact IT support at itsupport@bracu.ac.bd.
+
+Question: What should I do if I can’t log in to a lab PC?
+Answer: If you've changed your password and can’t remember it, contact IT support at itsupport@bracu.ac.bd.
+
+Question: Kind of urgent, but how do I log in to the BRAC University lab PCs?
+Answer: To log in to the BRAC University lab PCs, use your university-provided credentials. Typically, your student ID is your username, and the default password is provided by the IT department during orientation.","If you've changed your password and can't remember it, contact IT support at itsupport@bracu.ac.bd.",open_ended,linear,0.5,False,False,False,False,False,True,0.0212,0.0,5.1684,5.1898,2026-07-27T15:40:21.142445+00:00,0.2272,1.0744,0.5,"SCORE: 0.5 | REASON: Only one claim is fully supported by the context, while another claim is partially supported but not directly addressed in the provided answers."
+Q057,adaptive_novel,Who must participate in the Wishlist event?,"All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students","Question: Who must participate in the Wishlist event?
+Answer: All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students
+
+Question: Which group of students is not required to participate in the Wishlist event?
+Answer: Students who are eligible for residential semester in the upcoming semester.
+
+Question (Banglish): Kon group er student der Wishlist event e participate korar requirement nei?
+Answer (English): Students who are eligible for residential semester in the upcoming semester.
+
+Question (Banglish): Ke Wishlist event e participate korte hobe?
+Answer (English): All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students
+
+Question: Group of students eligible for Pre-Registration Phase 2?
+Answer: Students who participated and did not participate in the Wishlist Event. It means all the students.","All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students.",open_ended,linear,0.5,False,False,False,False,False,True,0.0189,0.0,4.5536,4.5725,2026-07-27T15:35:32.540949+00:00,0.1203,1.036,0.75,"SCORE: 0.75 | REASON: The answer is partially supported because it correctly excludes RS-eligible students and LLB, PHR students, but does not mention students eligible for residential semester in the upcoming semester."
+Q039,adaptive_novel,Why is it advised not to select unnecessary courses in the Wishlist?,"Course demand influences planning, and unnecessary selections may misrepresent actual needs","Question: Why is it advised not to select unnecessary courses in the Wishlist?
+Answer: Course demand influences planning, and unnecessary selections may misrepresent actual needs
+
+Question (Banglish): Wishlist e unnecessary course select na korte keno bola hoy?
+Answer (English): Course demand influences planning, and unnecessary selections may misrepresent actual needs
+
+Question: Purpose of the Course Wishlist feature in the Connect system?
+Answer: Addition of preferred courses to a wishlist to secure seats as they become available while following university policies
+
+Question (Banglish): Connect system e Course Wishlist feature er purpose ki?
+Answer (English): Addition of preferred courses to a wishlist to secure seats as they become available while following university policies
+
+Question: What must be done after selecting courses in the Wishlist event?
+Answer: Press the ""Confirm"" button within the assigned slot time","It is advised not to select unnecessary courses in the Wishlist because course demand influences planning, and unnecessary selections may misrepresent actual needs.",open_ended,linear,0.5,False,False,False,False,False,True,0.0203,0.0,5.2531,5.2736,2026-07-27T15:33:26.070596+00:00,0.2632,1.0702,0.5,"SCORE: 0.5 | REASON: Two out of four claims are supported by the context. 
+
+The ANSWER is decomposed into its individual factual claims:
+
+1. It is advised not to select unnecessary courses in the Wishlist.
+2. Course demand influences planning.
+3. Unnecessary selections may misrepresent actual needs.
+
+Claims 2 and 3 are directly supported by the CONTEXT, as they appear verbatim or with slight variations in multiple questions and answers. However, claim 1 is only indirectly supported, as it's a conclusion drawn from the information provided about course demand influencing planning and unnecessary selections misrepresenting actual needs. Claim 4 (Press the ""Confirm"" button within the assigned slot time) is not mentioned in the CONTEXT at all.
+
+Therefore, two out of four claims are supported by the context, resulting in a score of 0.5."
+Q146,adaptive_novel,Who is the theory coordinator for CSE461?,The theory coordinator for CSE461 is KHR.,"Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE461-03
+Theory Initial: KHR
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 09C-16T
+Lab Faculty: RDW,KHR
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12B-18L
+
+Course: CSE461
+Prerequisite: CSE260 (HP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250
+
+Course: CSE461
+First Theory Coordinator: KHR
+Theory Coordinator Email: khalilur@bracu.ac.bd
+First Lab Coordinator: RDW
+Second Lab Coordinator: RFF
+Lab Coordinator Email: redowanul.akbar@bracu.ac.bd,rafid.ahnaf@bracu.ac.bd",The first Theory Coordinator for CSE461 is Khalilur Rahman (KHR).,entity_heavy,rrf,0.9,False,True,True,False,True,False,0.0171,0.0,4.2911,4.3083,2026-07-27T15:44:28.629851+00:00,0.0005,0.016,1.0,SCORE: 1.0 | REASON: The CONTEXT supports that Khalilur Rahman (KHR) is the first Theory Coordinator for CSE461.
+Q092,adaptive_novel,"I wanted to ask, is there an application fee, How much is it?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]","Question: I wanted to ask, is there an application fee, How much is it?
+Answer: Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]
+
+Question: Is there an application fee? How much is it?
+Answer: Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]
+
+Question: How much is the admission application fee?
+Answer: Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.
+
+Question: One thing I couldn't find anywhere: how much is the admission application fee?
+Answer: Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.
+
+Question: Before I start the application, how much money do I need to set aside just for the fee itself?
+Answer: Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.","The admission application fee is Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd].",open_ended,linear,0.5,False,False,False,False,False,True,0.021,0.0,8.2282,8.2493,2026-07-27T15:39:59.837989+00:00,0.1794,1.0271,1.0,SCORE: 1.0 | REASON: All individual factual claims in the ANSWER are fully supported by the CONTEXT.
+Q143,adaptive_novel,What is the coordinator email for CSE220?,The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd.,"Course: CSE220
+Prerequisite: CSE111 (HP),CSE230 (HP)
+Full Prerequisite Chain: CSE230-CSE111-CSE110
+
+Course: CSE220
+First Theory Coordinator: AIB
+Theory Coordinator Email: abu.ibrahim@bracu.ac.bd
+First Lab Coordinator: AIB
+Second Lab Coordinator: KKS
+Lab Coordinator Email: abu.ibrahim@bracu.ac.bd,md.khaliduzzaman@bracu.ac.bd
+
+Course: CSE220-02
+Theory Initial: MAHR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10B-15C
+Lab Faculty: FBAW,AIB
+Lab Day: SUN
+Lab Time: 2:00 PM
+Lab Room: 09B-10L
+
+Course: CSE220-01
+Theory Initial: MAHR
+Theory Day: SAT+THU
+Theory Time: 8:00 AM
+Theory Room: 10B-15C
+Lab Faculty: SWG,NZU
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 09B-10L
+
+Course: CSE220-03
+Theory Initial: MAHR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 10B-15C
+Lab Faculty: NZU,FBAW
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: 09B-08L","The theory and lab coordinator emails for CSE220 are abu.ibrahim@bracu.ac.bd, with a secondary email md.khaliduzzaman@bracu.ac.bd.",entity_heavy,rrf,0.9,False,True,True,False,True,False,0.0175,0.0,6.4661,6.4837,2026-07-27T15:44:08.102996+00:00,0.0,0.015,1.0,"SCORE: 1.0 | REASON: All claims are fully supported by the context. 
+
+Here's a breakdown of how I arrived at this score:
+
+1. The answer mentions ""The theory and lab coordinator emails for CSE220"". This is supported by the context, which lists ""Theory Coordinator Email"" as abu.ibrahim@bracu.ac.bd and ""Lab Coordinator Email"" as both abu.ibrahim@bracu.ac.bd and md.khaliduzzaman@bracu.ac.bd.
+
+2. The answer mentions ""with a secondary email"". This is also supported by the context, which lists two lab coordinator emails for CSE220.
+
+Since all claims in the answer are fully supported by the context, I gave it a score of 1.0."
+Q149,adaptive_novel,What is the coordinator email for CSE443?,The coordinator email for CSE443 is swakkhar.shatabda@bracu.ac.bd.,"Course: CSE443
+First Theory Coordinator: SWK
+Theory Coordinator Email: swakkhar.shatabda@bracu.ac.bd
+
+Course: CSE443-01
+Theory Initial: SWK
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 10A-05C
+
+Course: CSE443-02
+Theory Initial: ANWE
+Theory Day: SAT+THU
+Theory Time: 8:00 AM
+Theory Room: 09A-05C
+
+Course: CSE424
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE474
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd",The theory coordinator email for CSE443 is swakkhar.shatabda@bracu.ac.bd.,entity_heavy,rrf,0.9,False,True,True,False,True,False,0.0166,0.0,4.755,4.7716,2026-07-27T15:44:42.244954+00:00,0.0,0.015,1.0,SCORE: 1.0 | REASON: The CONTEXT supports that the theory coordinator email for CSE443 is swakkhar.shatabda@bracu.ac.bd.
+Q003,adaptive_novel,When is the next intake for the undergraduate program?,"BRAC University admits new undergraduates three times a year - Spring (classes start January), Summer (May), and Fall (September). The exact application deadline and admission test date for the next intake are published on the Admissions page (bracu.ac.bd/admissions) closer to that semester.","Question: When is the next intake for the undergraduate program?
+Answer: BRAC University admits new undergraduates three times a year - Spring (classes start January), Summer (May), and Fall (September). The exact application deadline and admission test date for the next intake are published on the Admissions page (bracu.ac.bd/admissions) closer to that semester.
+
+Question: Do you know when is the next intake for the undergraduate program?
+Answer: BRAC University admits new undergraduates three times a year - Spring (classes start January), Summer (May), and Fall (September). The exact application deadline and admission test date for the next intake are published on the Admissions page (bracu.ac.bd/admissions) closer to that semester.
+
+Question (Banglish): Undergraduate program e porer barer intake ta thik kobe theke shuru hobe?
+Answer (English): BRAC University admits new undergraduates three times a year - Spring (classes start January), Summer (May), and Fall (September). The exact application deadline and admission test date for the next intake are published on the Admissions page (bracu.ac.bd/admissions) closer to that semester.
+
+Question: When did the Department of Architecture at BRAC University start, and how large is its typical intake?
+Answer: The department started in Spring 2002 with 15 students and 3 faculty members. Admission is competitive and intake has historically been limited to around 25-30 students per year to maintain close studio supervision.
+
+Question: How many semesters are offered yearly at BRACU and when do they start?
+Answer: BRACU offers 3 semesters a year: Spring, Summer & Fall, and these start in January, May & September respectively.
+For Pharmacy & LLB: BRACU offers admission for Pharmacy & LLB department twice a year. You can apply in for Pharmacy: Spring or Summer semester and for LLB: Spring or Fall. The classes start from January and July for Pharmacy. January and September for LLB accordingly.
+Tentative Schedule - Admission Tests:
+Semester
+1st Intake
+2nd Intake
+Spring
+November
+December
+Summer
+March
+April
+Fall
+July
+August","BRAC University admits new undergraduates three times a year - Spring (classes start January), Summer (May), and Fall (September). The exact application deadline and admission test date for the next intake are published on the Admissions page (bracu.ac.bd/admissions) closer to that semester.",open_ended,linear,0.5,False,False,False,False,False,True,0.0202,0.0,8.8946,8.9149,2026-07-27T15:29:09.879286+00:00,0.0203,1.0125,1.0,SCORE: 1.0 | REASON: All factual claims made in the ANSWER are directly supported by the CONTEXT.

@@ -1,0 +1,7 @@
+{
+  "_readme": "Seed alias -> canonical course code lookup for pipeline/hybrid_retriever.py's alias resolution. Only 'nummeth' is populated here because it is the one alias CLAUDE.md.md verifies explicitly (the paper's own Limitations example). Every other entry is a placeholder with confidence:'unverified' -- do NOT treat these as ground truth for the paper. Populate this properly by pulling real informal course names from the actual Facebook-group source text used to build dataset/QUES - Sheet1.csv / BRACU_QA_Dataset_FINAL.csv (that raw scrape isn't present in this repo, so it can't be mined here). Each entry: alias phrase (lowercase, matched as a substring of the lowercased query) -> canonical course code (must exist in Prerequisites/Coordinator/CourseDetails).",
+  "aliases": [
+    {"alias": "nummeth", "canonical": "CSE330", "confidence": "verified", "source": "CLAUDE.md.md limitations example"},
+    {"alias": "numerical methods", "canonical": "CSE330", "confidence": "verified", "source": "CLAUDE.md.md limitations example"}
+  ]
+}

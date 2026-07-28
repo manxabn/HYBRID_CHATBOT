@@ -1,0 +1,1581 @@
+query_id,config,query,reference_answer,retrieved_context,generated_answer,llm_judge_score,nli_score,disagreement,human_label,human_notes
+Q126,full_hybrid,What are the prerequisites for CSE111?,The prerequisite for CSE111 is CSE110 (HP).,"Course: CSE111
+Prerequisite: CSE110 (HP)
+
+Course: CSE111-02
+Theory Initial: TAW
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 10A-05C
+Lab Faculty: WLV,CAKM
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12D-27L
+
+Course: CSE111-03
+Theory Initial: TAW
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 10A-05C
+Lab Faculty: TAW,MAF
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: 12F-32L
+
+Course: CSE111
+First Theory Coordinator: TAW
+Theory Coordinator Email: tawhid.anwar@bracu.ac.bd
+First Lab Coordinator: KNI
+Second Lab Coordinator: ADU
+Lab Coordinator Email: nazia.iqbal@bracu.ac.bd,ahmed.ruhan@bracu.ac.bd
+
+Course: CSE111-01
+Theory Initial: TAW
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 10A-05C
+Lab Faculty: TAW,AOHE
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12F-32L",The prerequisite for CSE111 is CSE110 (HP).,1.0,0.0479650124907493,0.9520349875092508,,
+Q057,bm25_only,Who must participate in the Wishlist event?,"All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students","Question: Who must participate in the Wishlist event?
+Answer: All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students
+
+Question: Which group of students is not required to participate in the Wishlist event?
+Answer: Students who are eligible for residential semester in the upcoming semester.
+
+Question: Group of students eligible for Pre-Registration Phase 2?
+Answer: Students who participated and did not participate in the Wishlist Event. It means all the students.
+
+Question: Hey, group of students eligible for Pre-Registration Phase 2?
+Answer: Students who participated and did not participate in the Wishlist Event. It means all the students.
+
+Question (Banglish): Wishlist event e participate na korle ki consequence hoy?
+Answer (English): Student will not be allowed to register during Pre-Registration Phase 1","All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students.",0.8,0.0150204012170434,0.7849795987829566,,
+Q153,bm25_only,What day and time is the theory class for CSE460-03?,The theory class for CSE460-03 is on SAT+THU at 12:30 PM in room 07H-26C.,"Course: CSE460-03
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 07H-26C
+Lab Faculty: SDL,SDU
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 09E-22L
+
+Initial: SDU
+Name: Shomen Kundu
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE460-03 (LAB) SDL,SDU 09E-22L; 9:30 AM - CSE460-03 (LAB) SDL,SDU 09E-22L; 12:30 PM - CSE460-06 09A-07C
+
+Course: CSE460-09
+Theory Initial: UPM
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09A-07C
+Lab Faculty: ARPD,RAS
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 09E-21L
+
+Course: CSE460-10
+Theory Initial: MTOT
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09A-07C
+Lab Faculty: ARPD,UPM
+Lab Day: SUN
+Lab Time: 8:00 AM
+Lab Room: 12D-27L
+
+Course: CSE460-01
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09D-18C
+Lab Faculty: AKJ,UPM
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09E-21L","The theory class for CSE460-03 meets on Saturday (SAT) and Thursday (THU), at 12:30 PM.",1.0,0.1224244982004165,0.8775755017995835,,
+Q105,full_hybrid,What is the full prerequisite chain for PHY112?,The full prerequisite chain for PHY112 is PHY111.,"Course: PHY112
+Prerequisite: PHY111 (HP)
+Full Prerequisite Chain: PHY111
+
+Course: MAT120
+Prerequisite: MAT110 (HP)
+Full Prerequisite Chain: MAT110
+
+Course: ENG103
+Prerequisite: ENG102 (HP)
+Full Prerequisite Chain: ENG102
+
+Course: ENG102
+Prerequisite: ENG101 (HP)
+Full Prerequisite Chain: ENG101
+
+Course: CSE330
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT120-MAT110",The full prerequisite chain for PHY112 is PHY111.,1.0,0.2563703954219818,0.7436296045780182,,
+Q146,adaptive_novel,Who is the theory coordinator for CSE461?,The theory coordinator for CSE461 is KHR.,"Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE461-03
+Theory Initial: KHR
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 09C-16T
+Lab Faculty: RDW,KHR
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12B-18L
+
+Course: CSE461
+Prerequisite: CSE260 (HP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250
+
+Course: CSE461
+First Theory Coordinator: KHR
+Theory Coordinator Email: khalilur@bracu.ac.bd
+First Lab Coordinator: RDW
+Second Lab Coordinator: RFF
+Lab Coordinator Email: redowanul.akbar@bracu.ac.bd,rafid.ahnaf@bracu.ac.bd",The first Theory Coordinator for CSE461 is Khalilur Rahman (KHR).,1.0,0.0618432685732841,0.9381567314267159,,
+Q085,vector_only,Does BRAC University offer any short professional certificate courses outside its degree programs?,"Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.","Question: Does BRAC University offer any short professional certificate courses outside its degree programs?
+Answer: Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.
+
+Question (Banglish): BRAC University ki degree program er baire kono short professional certificate course offer kore?
+Answer (English): Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.
+
+Question: What kinds of Postgraduate Certificate and Diploma courses does BRAC University offer?
+Answer: Examples include the Postgraduate Certificate in Construction Management (CCM), described as the first program of its kind in Bangladesh, aimed at graduates in Architecture, Engineering, Management or related fields, with candidates required to pass an interview as part of admission.
+
+Question: I looked around the site but couldn't find it — what kinds of Postgraduate Certificate and Diploma courses does BRAC University offer?
+Answer: Examples include the Postgraduate Certificate in Construction Management (CCM), described as the first program of its kind in Bangladesh, aimed at graduates in Architecture, Engineering, Management or related fields, with candidates required to pass an interview as part of admission.
+
+Question: Does BRAC University offer any online courses?
+Answer: We do not offer online courses or degree programs.","Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.",0.5,0.9848228693008424,0.4848228693008424,,
+Q157,adaptive_novel,What day and time is the theory class for CSE460-04?,The theory class for CSE460-04 is on SAT+THU at 2:00 PM in room 09A-07C.,"Course: CSE460-04
+Theory Initial: SDU
+Theory Day: SAT+THU
+Theory Time: 2:00 PM
+Theory Room: 09A-07C
+Lab Faculty: AKJ,RAS
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09F-24L
+
+Initial: RAS
+Name: Md. Rasel Mia
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 12:30 PM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 2:00 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L; 3:30 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L
+
+Initial: AKJ
+Name: Akib Anjum
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 12:30 PM - CSE460-04 (LAB) AKJ,RAS 09F-24L; 2:00 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L; 3:30 PM - CSE460-05 (LAB) AKJ,RAS 12F-30L; 5:00 PM - Consultation
+
+Initial: SDU
+Name: Shomen Kundu
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE460-08 (LAB) MTOT,SDU 09F-24L; 12:30 PM - CSE460-08 (LAB) MTOT,SDU 09F-24L; 2:00 PM - CSE460-04 09A-07C
+
+Course: CSE460-01
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09D-18C
+Lab Faculty: AKJ,UPM
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09E-21L",The theory class for CSE460-04 is held on Saturday and Thursday at 2:00 PM.,1.0,0.1152163743972778,0.8847836256027222,,
+Q159,full_hybrid,What day and time is the theory class for CSE250-06A?,The theory class for CSE250-06A is on SUN+TUE at 2:00 PM in room 07H-27C.,"Course: CSE250-06A
+Theory Initial: RAO
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 07H-27C
+Lab Faculty: FFR,MHY
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: 12B-20L
+
+Initial: FFR
+Name: Md. Fatin Ishraq Faruqui
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE250-06A (LAB) FFR,MHY 12B-20L; 9:30 AM - CSE250-06A (LAB) FFR,MHY 12B-20L; 11:00 AM - CSE250-04A (LAB) SDQ,FFR 12B-20L; 12:30 PM - CSE250-04A (LAB) SDQ,FFR 12B-20L
+
+Initial: SDAS
+Name: Sowmitra Das
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE250-09A (LAB) SDAS,SZZ 12B-20L; 9:30 AM - CSE250-09A (LAB) SDAS,SZZ 12B-20L; 11:00 AM - CSE251-06A (LAB) SDAS,UPM 12B-20L; 12:30 PM - CSE251-06A (LAB) SDAS,UPM 12B-20L
+
+Course: CSE251-06A
+Theory Initial: AQT
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 07H-27C
+Lab Faculty: SDAS,UPM
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE350-06A
+Theory Initial: ZBH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09A-07C
+Lab Faculty: TSE,AQT
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: FT10-01L",The theory class for CSE250-06A is held on Sunday and Tuesday at 2:00 PM.,1.0,0.1035545766353607,0.8964454233646393,,
+Q102,adaptive_novel,What are the prerequisites for CSE251?,The prerequisite for CSE251 is CSE250 (HP).,"Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: CSE260
+Prerequisite: CSE251 (HP)
+Full Prerequisite Chain: CSE251-CSE250","The prerequisite for CSE251 is CSE250, which must be completed with a High Pass (HP).",1.0,0.1385067552328109,0.8614932447671891,,
+Q067,full_hybrid,I looked around the site but couldn't find it — how to submit report after a club event?,"After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.","Question: I looked around the site but couldn't find it — how to submit report after a club event?
+Answer: After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.
+
+Question: How to do event Budget and submit bill?
+Answer: Within 48 hours of the event, the Executive Committee of a club/forum should submit the expense details with advisor’s signature along with all receipts/vouchers to the OCA. They also need to submit a report and photographs of the event along with the bills.
+
+Question: Hey, how to do event Budget and submit bill?
+Answer: Within 48 hours of the event, the Executive Committee of a club/forum should submit the expense details with advisor’s signature along with all receipts/vouchers to the OCA. They also need to submit a report and photographs of the event along with the bills.
+
+Question: How to submit report after a club event?
+Answer: After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.
+
+Question: Hey, how to submit report after a club event?
+Answer: After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.","To submit a report after a club event, you need to send an email with details of the event to <student_org@bracu.ac.bd> within 7 working days. The report should be between 500 and 1000 words long, including detailed activities, discussion, social impact, and outcome, as well as any media coverage or social media data such as attendees, likes, shares, views, and comments collected immediately after the event.",1.0,0.0689212083816528,0.9310787916183472,,
+Q149,vector_only,What is the coordinator email for CSE443?,The coordinator email for CSE443 is swakkhar.shatabda@bracu.ac.bd.,"Initial: CSSA
+Name: Sadman Sakib Alif
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.sadman.alif@bracu.ac.bd
+
+Initial: SMDS
+Name: Soumitra Das
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.soumitra.das@bracu.ac.bd
+
+Initial: SJM
+Name: Sajid Imam Mahir
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.sajid.mahir@bracu.ac.bd
+
+Initial: ESF
+Name: Eshat Fareeha
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.eshat.fareeha@bracu.ac.bd
+
+Initial: CMHH
+Name: Maheer Helal
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.maheer.helal@bracu.ac.bd",I do not have enough information to answer your question about the coordinator email for CSE443.,1.0,0.0459522306919097,0.9540477693080903,,
+Q136,vector_only,Who is the theory coordinator for CSE447?,The theory coordinator for CSE447 is MIH.,"Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE449
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE320
+First Theory Coordinator: SRJ
+Theory Coordinator Email: seraj.mehnaz@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE250
+First Theory Coordinator: SDS
+Second Theory Coordinator: PDS
+Theory Coordinator Email: shadman.shahriar@bracu.ac.bd,purbayan.das@bracu.ac.bd
+First Lab Coordinator: SDQ
+Second Lab Coordinator: FFR
+Lab Coordinator Email: saiful.bari@bracu.ac.bd,md.fatin@bracu.ac.bd",I do not have enough information to answer that question.,1.0,0.008380145765841,0.991619854234159,,
+Q129,bm25_only,What is the full prerequisite chain for CSE421?,The full prerequisite chain for CSE421 is CSE320.,"Course: CSE421-03
+Theory Initial: NKMA
+Theory Day: SAT+THU
+Theory Time: 2:00 PM
+Theory Room: 09D-17C
+Lab Faculty: SRJ,NKMA
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12D-26L
+
+Course: CSE421-02
+Theory Initial: ARF
+Theory Day: MON+WED
+Theory Time: 2:00 PM
+Theory Room: 10A-04C
+Lab Faculty: CQAE,WBH
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12D-26L
+
+Course: CSE421
+Prerequisite: CSE320 (SP)
+
+Course: CSE421-01
+Theory Initial: ARF
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 10A-04C
+Lab Faculty: CQAE,WBH
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12D-26L
+
+Course: CSE421
+First Theory Coordinator: MSMA
+Second Theory Coordinator: NDT
+Theory Coordinator Email: shamim.mia@bracu.ac.bd,nirjhor.datta@bracu.ac.bd
+First Lab Coordinator: SRJ
+Second Lab Coordinator: MSMA
+Lab Coordinator Email: seraj.mehnaz@bracu.ac.bd,shamim.mia@bracu.ac.bd",The full prerequisite chain for CSE421 is CSE320 (SP).,1.0,0.1781670600175857,0.8218329399824142,,
+Q154,adaptive_novel,What day and time is the theory class for CSE370-16?,The theory class for CSE370-16 is on SAT+THU at 9:30 AM in room 10B-17C.,"Course: CSE370-16
+Theory Initial: MZG
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10B-17C
+Lab Faculty: RBR,KZMN
+Lab Day: TUE
+Lab Time: 2:00 PM
+Lab Room: 12F-31L
+
+Course: CSE340-16
+Theory Initial: ZLNM
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09H-32C
+
+Initial: KZMN
+Name: Kazi Kamruzzaman Rabbi
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE471-04 09A-05C; 2:00 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L; 3:30 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L
+
+Course: CSE331-16
+Theory Initial: TNF
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 07F-22C
+
+Course: STA201-16
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-37C",The theory classes for CSE370-16 are held on Saturday and Thursday at 9:30 AM.,1.0,0.0315293706953525,0.9684706293046474,,
+Q165,vector_only,What day and time is the theory class for CSE260-04B?,The theory class for CSE260-04B is on SUN+TUE at 11:00 AM in room 09A-03C.,"Course: CSE340-18
+Theory Initial: THR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09H-35C
+
+Course: CSE340-13
+Theory Initial: PBK
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 08H-22C
+
+Course: CSE340-12
+Theory Initial: RDW
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09A-03C
+
+Course: CSE340-11
+Theory Initial: RDW
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09A-03C
+
+Course: CSE340-22
+Theory Initial: TWK
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 09A-03C",I do not have enough information to answer that question.,1.0,0.0077410382218658,0.9922589617781342,,
+Q125,bm25_only,What are the prerequisites for CSE422?,The prerequisite for CSE422 is CSE221 (HP).,"Course: CSE422-01
+Theory Initial: ZHS
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09E-20T
+Lab Faculty: ZHS,NFF
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 09B-11L
+
+Course: CSE422
+First Theory Coordinator: TRZ
+Theory Coordinator Email: tanzim.reza@bracu.ac.bd
+First Lab Coordinator: ZHS
+Lab Coordinator Email: shoumo.hasan@bracu.ac.bd
+
+Course: CSE422-03
+Theory Initial: ZHS
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09E-20T
+Lab Faculty: PLN,MHDE
+Lab Day: THU
+Lab Time: 2:00 PM
+Lab Room: 09B-10L
+
+Course: CSE422
+Prerequisite: CSE221 (HP)
+Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
+
+Course: CSE422-02
+Theory Initial: ZHS
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09E-20T
+Lab Faculty: SHAH,YND
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 09B-11L",The full prerequisite chain for CSE422 is CSE221-CSE220-CSE111-CSE110.,1.0,0.0249685682356357,0.9750314317643644,,
+Q187,full_hybrid,What is FEK's designation?,Farden Ehsan Khan (FEK) is a Lecturer.,"Initial: FEK
+Name: Farden Ehsan Khan
+Designation: Lecturer
+Status: Full Time
+Room: 4M117
+Email: farden.khan@bracu.ac.bd
+
+Initial: FEK
+Name: Farden Ehsan Khan
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - Consultation By Appointment; 11:00 AM - CSE370-02 (LAB) FEK,MAU 12F-30L; 12:30 PM - CSE370-02 (LAB) FEK,MAU 12F-30L; 2:00 PM - CSE370-05 (LAB) FEK,MRIA 12F-30L; 3:30 PM - CSE370-05 (LAB) FEK,MRIA 12F-30L
+
+Initial: FEK
+Name: Farden Ehsan Khan
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE370-08 09D-17C; 11:00 AM - CSE111-05 (LAB) AFA,FEK 09B-10L; 12:30 PM - CSE111-05 (LAB) AFA,FEK 09B-10L; 2:00 PM - CSE370-06 08H-22C
+
+Course: CSE370
+First Theory Coordinator: FEK
+Theory Coordinator Email: farden.khan@bracu.ac.bd
+First Lab Coordinator: FEK
+Lab Coordinator Email: farden.khan@bracu.ac.bd
+
+Course: CSE370-05
+Theory Initial: FEK
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09A-05C
+Lab Faculty: FEK,MRIA
+Lab Day: THU
+Lab Time: 2:00 PM
+Lab Room: 12F-30L",FEK's designation is Lecturer.,1.0,0.3777762651443481,0.6222237348556519,,
+Q166,vector_only,Who teaches the lab section of CSE321-18?,"The lab section of CSE321-18 is taught by TNF,SVKG.","Question (Banglish): CSE Lab gula kothay obosthito?
+Answer (English): CSE Labs are located on the 8th, 9th, 10th, 11th and 12th Floor.
+
+Question (Banglish): Learning Labs ar Classroom gula kothay obosthito?
+Answer (English): Learning Labs/Classrooms are located on the 7th, 8th, 9th, 10th, 11th, and 12th Floors.
+
+Course: CSE103
+First Lab Coordinator: RBR
+Second Lab Coordinator: SLAR
+Lab Coordinator Email: rakin.rabbani@bracu.ac.bd,ext.sadiul.rafi@bracu.ac.bd
+
+Course: CSE260
+First Theory Coordinator: DZK
+Theory Coordinator Email: ziaul.karim@bracu.ac.bd
+First Lab Coordinator: DZK
+Second Lab Coordinator: PBK
+Lab Coordinator Email: ziaul.karim@bracu.ac.bd,partha.bhoumik@bracu.ac.bd
+
+Course: CSE111
+First Theory Coordinator: TAW
+Theory Coordinator Email: tawhid.anwar@bracu.ac.bd
+First Lab Coordinator: KNI
+Second Lab Coordinator: ADU
+Lab Coordinator Email: nazia.iqbal@bracu.ac.bd,ahmed.ruhan@bracu.ac.bd","Unfortunately, there is no information in the retrieved context about who teaches the lab section of CSE321-18.",0.5,0.0021458282135427,0.4978541717864573,,
+Q115,adaptive_novel,What are the prerequisites for ENG103?,The prerequisite for ENG103 is ENG102 (HP).,"Course: ENG103
+Prerequisite: ENG102 (HP)
+Full Prerequisite Chain: ENG102
+
+Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: What are the prerequisites for the Cse program?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Can you tell me what the prerequisites for the Cse program are?
+Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics",The prerequisite for ENG103 is ENG102 (HP) with a full prerequisite chain of ENG102.,0.5,0.0914844274520874,0.4085155725479126,,
+Q143,adaptive_novel,What is the coordinator email for CSE220?,The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd.,"Course: CSE220
+Prerequisite: CSE111 (HP),CSE230 (HP)
+Full Prerequisite Chain: CSE230-CSE111-CSE110
+
+Course: CSE220
+First Theory Coordinator: AIB
+Theory Coordinator Email: abu.ibrahim@bracu.ac.bd
+First Lab Coordinator: AIB
+Second Lab Coordinator: KKS
+Lab Coordinator Email: abu.ibrahim@bracu.ac.bd,md.khaliduzzaman@bracu.ac.bd
+
+Course: CSE220-02
+Theory Initial: MAHR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10B-15C
+Lab Faculty: FBAW,AIB
+Lab Day: SUN
+Lab Time: 2:00 PM
+Lab Room: 09B-10L
+
+Course: CSE220-01
+Theory Initial: MAHR
+Theory Day: SAT+THU
+Theory Time: 8:00 AM
+Theory Room: 10B-15C
+Lab Faculty: SWG,NZU
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 09B-10L
+
+Course: CSE220-03
+Theory Initial: MAHR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 10B-15C
+Lab Faculty: NZU,FBAW
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: 09B-08L","The theory and lab coordinator emails for CSE220 are abu.ibrahim@bracu.ac.bd, with a secondary email md.khaliduzzaman@bracu.ac.bd.",1.0,0.0595501586794853,0.9404498413205147,,
+Q083,bm25_only,How long does the Early Childhood Development (ECD) program take to complete?,"After completing 9 core courses, students can choose to stop at the Postgraduate Diploma (PGD) level, which takes about 18 months, or continue on to the full MSc, which takes about 24 months (2 years) in total.","Question: How long does the Early Childhood Development (ECD) program take to complete?
+Answer: After completing 9 core courses, students can choose to stop at the Postgraduate Diploma (PGD) level, which takes about 18 months, or continue on to the full MSc, which takes about 24 months (2 years) in total.
+
+Question (Banglish): Early Childhood Development (ECD) program complete korte koto shomoy lage?
+Answer (English): After completing 9 core courses, students can choose to stop at the Postgraduate Diploma (PGD) level, which takes about 18 months, or continue on to the full MSc, which takes about 24 months (2 years) in total.
+
+Question: Who is the Early Childhood Development program aimed at?
+Answer: It's designed for a wide range of people interested in child development - from fresh graduates to experienced school teachers, principals, NGO and government professionals, curriculum developers, researchers, and evaluation specialists.
+
+Question: Can you tell me who is the Early Childhood Development program aimed at?
+Answer: It's designed for a wide range of people interested in child development - from fresh graduates to experienced school teachers, principals, NGO and government professionals, curriculum developers, researchers, and evaluation specialists.
+
+Question (Banglish): Early Childhood Development program kader jonno aimed?
+Answer (English): It's designed for a wide range of people interested in child development - from fresh graduates to experienced school teachers, principals, NGO and government professionals, curriculum developers, researchers, and evaluation specialists.",The Early Childhood Development (ECD) program takes about 18 months to complete at the Postgraduate Diploma level or about 24 months (2 years) in total if students choose to continue on to the full MSc.,1.0,0.0350420586764812,0.9649579413235188,,
+Q141,adaptive_novel,Who is the theory coordinator for CSE490B?,The theory coordinator for CSE490B is TLQ.,"Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE490B-02
+Theory Initial: SDF
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 10A-04C
+Lab Faculty: ZMD,AIB
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 10E-27L
+
+Course: CSE490B
+First Theory Coordinator: TLQ
+Theory Coordinator Email: taiabul.haque@bracu.ac.bd
+First Lab Coordinator: ZMD
+Lab Coordinator Email: zaber.mohammad@bracu.ac.bd
+
+Course: CSE251
+First Theory Coordinator: PDS
+Second Theory Coordinator: UTS
+Theory Coordinator Email: purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd
+First Lab Coordinator: MOM
+Lab Coordinator Email: moynul.moni@bracu.ac.bd",The first theory coordinator for CSE490B is TLQ.,1.0,0.0614588297903537,0.9385411702096463,,
+Q159,bm25_only,What day and time is the theory class for CSE250-06A?,The theory class for CSE250-06A is on SUN+TUE at 2:00 PM in room 07H-27C.,"Course: CSE250-06A
+Theory Initial: RAO
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 07H-27C
+Lab Faculty: FFR,MHY
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: 12B-20L
+
+Initial: FFR
+Name: Md. Fatin Ishraq Faruqui
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE250-06A (LAB) FFR,MHY 12B-20L; 9:30 AM - CSE250-06A (LAB) FFR,MHY 12B-20L; 11:00 AM - CSE250-04A (LAB) SDQ,FFR 12B-20L; 12:30 PM - CSE250-04A (LAB) SDQ,FFR 12B-20L
+
+Initial: SDAS
+Name: Sowmitra Das
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE250-09A (LAB) SDAS,SZZ 12B-20L; 9:30 AM - CSE250-09A (LAB) SDAS,SZZ 12B-20L; 11:00 AM - CSE251-06A (LAB) SDAS,UPM 12B-20L; 12:30 PM - CSE251-06A (LAB) SDAS,UPM 12B-20L
+
+Course: CSE251-06A
+Theory Initial: AQT
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 07H-27C
+Lab Faculty: SDAS,UPM
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE350-06A
+Theory Initial: ZBH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09A-07C
+Lab Faculty: TSE,AQT
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: FT10-01L",The theory class for CSE250-06A is held on Sunday and Tuesday at 2:00 PM.,1.0,0.1035545766353607,0.8964454233646393,,
+Q087,adaptive_novel,Before I forget to ask — what are the consequences of violating TARC rules and regulations?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled","Question: Before I forget to ask — what are the consequences of violating TARC rules and regulations?
+Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
+
+Question: What are the consequences of violating TARC rules and regulations?
+Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
+
+Question: Just wondering, what are the consequences of violating TARC rules and regulations?
+Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
+
+Question: Can you tell me what the consequences of violating TARC rules and regulations are?
+Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
+
+Question (Banglish): TARC er rules bhanle ki consequence hoy?
+Answer (English): Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled","Violating rules and regulations can get one ousted from tarc. Eventually on severe violation the authority will call their parents and send them home. On minor violation, students are given warning. Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled.",1.0,0.1468776315450668,0.8531223684549332,,
+Q153,full_hybrid,What day and time is the theory class for CSE460-03?,The theory class for CSE460-03 is on SAT+THU at 12:30 PM in room 07H-26C.,"Course: CSE460-03
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 07H-26C
+Lab Faculty: SDL,SDU
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 09E-22L
+
+Initial: SDU
+Name: Shomen Kundu
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE460-03 (LAB) SDL,SDU 09E-22L; 9:30 AM - CSE460-03 (LAB) SDL,SDU 09E-22L; 12:30 PM - CSE460-06 09A-07C
+
+Course: CSE460-09
+Theory Initial: UPM
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09A-07C
+Lab Faculty: ARPD,RAS
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 09E-21L
+
+Course: CSE460-10
+Theory Initial: MTOT
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09A-07C
+Lab Faculty: ARPD,UPM
+Lab Day: SUN
+Lab Time: 8:00 AM
+Lab Room: 12D-27L
+
+Course: CSE460-01
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09D-18C
+Lab Faculty: AKJ,UPM
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09E-21L","The theory class for CSE460-03 meets on Saturday (SAT) and Thursday (THU), at 12:30 PM.",1.0,0.1224244982004165,0.8775755017995835,,
+Q129,vector_only,What is the full prerequisite chain for CSE421?,The full prerequisite chain for CSE421 is CSE320.,"Course: CSE423
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT216-MAT120-MAT110
+
+Course: CSE430
+Prerequisite: MAT120 (HP)
+Full Prerequisite Chain: MAT120-MAT110
+
+Course: CSE330
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT120-MAT110
+
+Course: CSE410
+Prerequisite: CSE321 (HP)
+Full Prerequisite Chain: CSE321-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE460
+Prerequisite: CSE260 (HP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250","There is no information in the retrieved context about a course called CSE421, so I do not have enough information to answer this question.",1.0,0.0024945370387285,0.9975054629612715,,
+Q125,adaptive_novel,What are the prerequisites for CSE422?,The prerequisite for CSE422 is CSE221 (HP).,"Question: What prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: Curious about something: what prerequisites must be completed before the thesis defense?
+Answer: Pre-Thesis I and Pre-Thesis II.
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
+
+Course: CSE422
+Prerequisite: CSE221 (HP)
+Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
+
+Course: CSE422
+First Theory Coordinator: TRZ
+Theory Coordinator Email: tanzim.reza@bracu.ac.bd
+First Lab Coordinator: ZHS
+Lab Coordinator Email: shoumo.hasan@bracu.ac.bd",The prerequisite for CSE422 is CSE221 (HP).,0.5,0.9826395511627196,0.4826395511627196,,
+Q165,bm25_only,What day and time is the theory class for CSE260-04B?,The theory class for CSE260-04B is on SUN+TUE at 11:00 AM in room 09A-03C.,"Course: CSE260-04B
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09A-03C
+Lab Faculty: NNTN,MAZW
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: FT10-04L
+
+Course: CSE250-04B
+Theory Initial: FFR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 07H-27C
+Lab Faculty: MHY,PDS
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE350-04B
+Theory Initial: ARA
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09A-07C
+Lab Faculty: MHY,PDS
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Initial: MAZW
+Name: Mirza Azwad Wakil
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - Consultation by Appointment; 9:30 AM - CSE470-01 07F-22C; 11:00 AM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 12:30 PM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 2:00 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L; 3:30 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L
+
+Course: CSE251-04B
+Theory Initial: AKJ
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 07H-27C
+Lab Faculty: SEF,ALSM
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: 12B-20L",The theory class for CSE260-04B is held on Sunday and Tuesday at 11:00 AM.,1.0,0.1178358942270279,0.8821641057729721,,
+Q133,full_hybrid,Who is the theory coordinator for CSE370?,The theory coordinator for CSE370 is FEK.,"Course: CSE370
+First Theory Coordinator: FEK
+Theory Coordinator Email: farden.khan@bracu.ac.bd
+First Lab Coordinator: FEK
+Lab Coordinator Email: farden.khan@bracu.ac.bd
+
+Course: CSE370
+Prerequisite: CSE221 (HP)
+Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
+
+Course: CSE370-01
+Theory Initial: MNY
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 10A-04C
+Lab Faculty: SHRR,MAU
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 12F-30L
+
+Course: CSE370-02
+Theory Initial: ANNH
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 10A-05C
+Lab Faculty: FEK,MAU
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: 12F-30L
+
+Course: CSE370-03
+Theory Initial: RBR
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09H-32C
+Lab Faculty: MRIA,MAHS
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12F-30L",The first theory coordinator for CSE370 is FEK.,1.0,0.1459866017103195,0.8540133982896805,,
+Q125,vector_only,What are the prerequisites for CSE422?,The prerequisite for CSE422 is CSE221 (HP).,"Course: CSE421
+Prerequisite: CSE320 (SP)
+
+Course: CSE420
+Prerequisite: CSE321 (HP),CSE331 (HP),CSE340 (HP)
+Full Prerequisite Chain: CSE321-CSE331-CSE340-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE410
+Prerequisite: CSE321 (HP)
+Full Prerequisite Chain: CSE321-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE423
+Prerequisite: MAT216 (HP)
+Full Prerequisite Chain: MAT216-MAT120-MAT110
+
+Course: CSE422
+Prerequisite: CSE221 (HP)
+Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110",The prerequisite for CSE422 is CSE221 with a High Pass.,1.0,0.0194625798612833,0.9805374201387167,,
+Q125,full_hybrid,What are the prerequisites for CSE422?,The prerequisite for CSE422 is CSE221 (HP).,"Course: CSE422
+Prerequisite: CSE221 (HP)
+Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
+
+Course: CSE422-01
+Theory Initial: ZHS
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09E-20T
+Lab Faculty: ZHS,NFF
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 09B-11L
+
+Course: CSE422
+First Theory Coordinator: TRZ
+Theory Coordinator Email: tanzim.reza@bracu.ac.bd
+First Lab Coordinator: ZHS
+Lab Coordinator Email: shoumo.hasan@bracu.ac.bd
+
+Course: CSE422-03
+Theory Initial: ZHS
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09E-20T
+Lab Faculty: PLN,MHDE
+Lab Day: THU
+Lab Time: 2:00 PM
+Lab Room: 09B-10L
+
+Course: CSE422-02
+Theory Initial: ZHS
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09E-20T
+Lab Faculty: SHAH,YND
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 09B-11L",The full prerequisite chain for CSE422 is CSE221 (HP) - CSE220 - CSE111 - CSE110.,1.0,0.1184926778078079,0.8815073221921921,,
+Q138,vector_only,What is the coordinator email for CSE437?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.,"Initial: CSSA
+Name: Sadman Sakib Alif
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.sadman.alif@bracu.ac.bd
+
+Initial: RAO
+Name: Mohammed Radoan
+Designation: C. Lecturer
+Status: Contractual
+Room: 4P
+Email: ext.mohammed.radoan@bracu.ac.bd
+
+Initial: MZW
+Name: Maazin Munawar
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.maazin.munawar@bracu.ac.bd
+
+Initial: ESF
+Name: Eshat Fareeha
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.eshat.fareeha@bracu.ac.bd
+
+Initial: MHSK
+Name: Maharin Mosfakin
+Designation: C. Lecturer
+Status: Contractual
+Room: 4F
+Email: ext.maharin.mosfakin@bracu.ac.bd",I do not have enough information to answer your question about the coordinator email for CSE437.,1.0,0.0448606982827186,0.9551393017172813,,
+Q136,full_hybrid,Who is the theory coordinator for CSE447?,The theory coordinator for CSE447 is MIH.,"Course: CSE447-02
+Theory Initial: MIH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09E-20T
+Lab Faculty: FFU,RDS
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09E-21L
+
+Course: CSE447-03
+Theory Initial: MIH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09E-20T
+Lab Faculty: FFU,SJM
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: 09E-21L
+
+Course: CSE447
+First Theory Coordinator: MIH
+Theory Coordinator Email: iqbal.hossain@bracu.ac.bd
+First Lab Coordinator: FFU
+Lab Coordinator Email: farhan.faruk@bracu.ac.bd
+
+Course: CSE447-01
+Theory Initial: MIH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09E-20T
+Lab Faculty: FFU,SJM
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 09E-22L
+
+Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd",The first theory coordinator for CSE447 is MIH.,1.0,0.1708371192216873,0.8291628807783127,,
+Q159,vector_only,What day and time is the theory class for CSE250-06A?,The theory class for CSE250-06A is on SUN+TUE at 2:00 PM in room 07H-27C.,"Course: CSE340-18
+Theory Initial: THR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09H-35C
+
+Course: CSE340-13
+Theory Initial: PBK
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 08H-22C
+
+Course: CSE470-13
+Theory Initial: SOSB
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09B-12C
+
+Course: CSE340-05
+Theory Initial: TNMF
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09C-16T
+
+Course: CSE340-11
+Theory Initial: RDW
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09A-03C",I do not have enough information to answer that question.,1.0,0.0075052995234727,0.9924947004765273,,
+Q151,bm25_only,What day and time is the theory class for CSE260-04A?,The theory class for CSE260-04A is on SUN+TUE at 11:00 AM in room 09A-03C.,"Course: CSE260-04A
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09A-03C
+Lab Faculty: NFF,MZW
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: FT10-03L
+
+Initial: MZW
+Name: Maazin Munawar
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-03B (LAB) MZW,ADD FT10-04L; 9:30 AM - CSE260-03B (LAB) MZW,ADD FT10-04L; 11:00 AM - CSE260-04A (LAB) NFF,MZW FT10-03L; 12:30 PM - CSE260-04A (LAB) NFF,MZW FT10-03L
+
+Course: CSE250-04A
+Theory Initial: FFR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 07H-27C
+Lab Faculty: SDQ,FFR
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE350-04A
+Theory Initial: ARA
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09A-07C
+Lab Faculty: SDAS,TSE
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: FT10-01L
+
+Course: CSE251-04A
+Theory Initial: AKJ
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 07H-27C
+Lab Faculty: EHQ,SHJR
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: 12B-20L",The theory class for CSE260-04A is held on Sunday and Tuesday at 11:00 AM.,1.0,0.0782261341810226,0.9217738658189774,,
+Q133,vector_only,Who is the theory coordinator for CSE370?,The theory coordinator for CSE370 is FEK.,"Course: CSE350
+First Theory Coordinator: ZAZ
+Second Theory Coordinator: TSE
+Theory Coordinator Email: ihzaz.sadik@bracu.ac.bd,tasneem.mazhar@bracu.ac.bd
+First Lab Coordinator: TSE
+Lab Coordinator Email: tasneem.mazhar@bracu.ac.bd
+
+Course: CSE320
+First Theory Coordinator: SRJ
+Theory Coordinator Email: seraj.mehnaz@bracu.ac.bd
+
+Course: CSE230
+First Theory Coordinator: AVB
+Second Theory Coordinator: FIC
+Theory Coordinator Email: avinandan@bracu.ac.bd,fatiha.ishrar@bracu.ac.bd
+
+Course: CSE250
+First Theory Coordinator: SDS
+Second Theory Coordinator: PDS
+Theory Coordinator Email: shadman.shahriar@bracu.ac.bd,purbayan.das@bracu.ac.bd
+First Lab Coordinator: SDQ
+Second Lab Coordinator: FFR
+Lab Coordinator Email: saiful.bari@bracu.ac.bd,md.fatin@bracu.ac.bd
+
+Course: CSE449
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd",I do not have enough information to answer that question.,1.0,0.0075419545173645,0.9924580454826355,,
+Q016,full_hybrid,How to contact with BRACU Finance and Accounts Department?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd","Question: How to contact with BRACU Finance and Accounts Department?
+Answer: BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd
+
+Question: Can someone help — how to contact with BRACU Finance and Accounts Department?
+Answer: BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd
+
+Question (Banglish): BRACU Finance and Accounts Department ke kivabe contact korbo?
+Answer (English): BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd
+
+Question: What services are offered by the Finance & Accounts Office?
+Answer: The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd
+
+Question (Banglish): Finance & Accounts Office ki ki service offer kore?
+Answer (English): The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd","To contact the BRACU Finance and Accounts Department, you can visit BRAC University located at Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda, Dhaka 1212, Bangladesh. You can also reach them by phone at +88 09638464646 Ext: 1220 or 1221, or by emailing queries-accounts@bracu.ac.bd.",1.0,0.8225950598716736,0.17740494012832642,,
+Q116,bm25_only,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).,"Course: CSE360-01
+Theory Initial: ASA
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 09H-34C
+Lab Faculty: SMYA,IRZA
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12B-19L
+
+Course: CSE360-03
+Theory Initial: RDW
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-33C
+Lab Faculty: RDW,SMYA
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 12B-19L
+
+Course: CSE360
+First Theory Coordinator: UJT
+Theory Coordinator Email: jannat.taposhi@bracu.ac.bd
+First Lab Coordinator: UJT
+Second Lab Coordinator: RDW
+Lab Coordinator Email: jannat.taposhi@bracu.ac.bd,redowanul.akbar@bracu.ac.bd
+
+Course: CSE360-04
+Theory Initial: RDW
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09H-33C
+Lab Faculty: RDW,SMYA
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 12B-19L
+
+Course: CSE360
+Prerequisite: CSE341 (HP)
+Full Prerequisite Chain: CSE341",The prerequisite for CSE360 is CSE341 with a grade of High Pass. The full prerequisite chain for CSE360 is CSE341.,1.0,0.1480668038129806,0.8519331961870193,,
+Q126,bm25_only,What are the prerequisites for CSE111?,The prerequisite for CSE111 is CSE110 (HP).,"Course: CSE111-02
+Theory Initial: TAW
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 10A-05C
+Lab Faculty: WLV,CAKM
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12D-27L
+
+Course: CSE111-03
+Theory Initial: TAW
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 10A-05C
+Lab Faculty: TAW,MAF
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: 12F-32L
+
+Course: CSE111
+First Theory Coordinator: TAW
+Theory Coordinator Email: tawhid.anwar@bracu.ac.bd
+First Lab Coordinator: KNI
+Second Lab Coordinator: ADU
+Lab Coordinator Email: nazia.iqbal@bracu.ac.bd,ahmed.ruhan@bracu.ac.bd
+
+Course: CSE111-01
+Theory Initial: TAW
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 10A-05C
+Lab Faculty: TAW,AOHE
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12F-32L
+
+Course: CSE111
+Prerequisite: CSE110 (HP)",The prerequisite for CSE111 is CSE110 with a grade of High Pass (HP).,1.0,0.1008217483758926,0.8991782516241074,,
+Q076,full_hybrid,Provide me the contact information of library staffs.,"You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd","Question: Provide me the contact information of library staffs.
+Answer: You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd
+
+Question: This might be a silly question, but provide me the contact information of library staffs?
+Answer: You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd
+
+Question: Can someone help — provide me the contact information of library staffs?
+Answer: You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd
+
+Question: I wanted to ask, provide me the contact information of library staffs?
+Answer: You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd
+
+Question: For a friend who's asking — provide me the contact information of library staffs?
+Answer: You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd","You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd",1.0,0.9184495210647584,0.08155047893524159,,
+Q144,adaptive_novel,What is the coordinator email for CSE460?,The coordinator email for CSE460 is arpa.roy@bracu.ac.bd.,"Course: CSE460-01
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09D-18C
+Lab Faculty: AKJ,UPM
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09E-21L
+
+Course: CSE460
+Prerequisite: CSE260 (HP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250
+
+Course: CSE460-03
+Theory Initial: SDL
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 07H-26C
+Lab Faculty: SDL,SDU
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 09E-22L
+
+Course: CSE460-02
+Theory Initial: ZIZE
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 07D-20C
+Lab Faculty: RAS,ZBH
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 10E-27L
+
+Course: CSE460
+First Theory Coordinator: ARPD
+Theory Coordinator Email: arpa.roy@bracu.ac.bd
+First Lab Coordinator: AKJ
+Second Lab Coordinator: SDL
+Lab Coordinator Email: anjum.akib@bracu.ac.bd,shadmin.sultana@bracu.ac.bd",The Theory Coordinator's email for CSE460 is arpa.roy@bracu.ac.bd and the Lab Coordinators' emails are anjum.akib@bracu.ac.bd and shadmin.sultana@bracu.ac.bd.,1.0,0.044495690613985,0.955504309386015,,
+Q151,full_hybrid,What day and time is the theory class for CSE260-04A?,The theory class for CSE260-04A is on SUN+TUE at 11:00 AM in room 09A-03C.,"Course: CSE260-04A
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09A-03C
+Lab Faculty: NFF,MZW
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: FT10-03L
+
+Initial: MZW
+Name: Maazin Munawar
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-03B (LAB) MZW,ADD FT10-04L; 9:30 AM - CSE260-03B (LAB) MZW,ADD FT10-04L; 11:00 AM - CSE260-04A (LAB) NFF,MZW FT10-03L; 12:30 PM - CSE260-04A (LAB) NFF,MZW FT10-03L
+
+Course: CSE250-04A
+Theory Initial: FFR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 07H-27C
+Lab Faculty: SDQ,FFR
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE350-04A
+Theory Initial: ARA
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09A-07C
+Lab Faculty: SDAS,TSE
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: FT10-01L
+
+Course: CSE251-04A
+Theory Initial: AKJ
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 07H-27C
+Lab Faculty: EHQ,SHJR
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: 12B-20L",The theory class for CSE260-04A is held on Sunday and Tuesday at 11:00 AM.,1.0,0.0782261341810226,0.9217738658189774,,
+Q116,full_hybrid,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).,"Course: CSE360
+Prerequisite: CSE341 (HP)
+Full Prerequisite Chain: CSE341
+
+Course: CSE360-01
+Theory Initial: ASA
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 09H-34C
+Lab Faculty: SMYA,IRZA
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12B-19L
+
+Course: CSE360-03
+Theory Initial: RDW
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-33C
+Lab Faculty: RDW,SMYA
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 12B-19L
+
+Course: CSE360
+First Theory Coordinator: UJT
+Theory Coordinator Email: jannat.taposhi@bracu.ac.bd
+First Lab Coordinator: UJT
+Second Lab Coordinator: RDW
+Lab Coordinator Email: jannat.taposhi@bracu.ac.bd,redowanul.akbar@bracu.ac.bd
+
+Course: CSE360-04
+Theory Initial: RDW
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09H-33C
+Lab Faculty: RDW,SMYA
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 12B-19L",The full prerequisite chain for CSE360 is CSE341 (HP).,1.0,0.0661668106913566,0.9338331893086433,,
+Q105,bm25_only,What is the full prerequisite chain for PHY112?,The full prerequisite chain for PHY112 is PHY111.,"Course: PHY112
+Prerequisite: PHY111 (HP)
+Full Prerequisite Chain: PHY111
+
+Course: CSE360
+Prerequisite: CSE341 (HP)
+Full Prerequisite Chain: CSE341
+
+Course: ENG103
+Prerequisite: ENG102 (HP)
+Full Prerequisite Chain: ENG102
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: ENG102
+Prerequisite: ENG101 (HP)
+Full Prerequisite Chain: ENG101",The full prerequisite chain for PHY112 is PHY111.,1.0,0.3427022695541382,0.6572977304458618,,
+Q067,adaptive_novel,I looked around the site but couldn't find it — how to submit report after a club event?,"After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.","Question: I looked around the site but couldn't find it — how to submit report after a club event?
+Answer: After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.
+
+Question: How to do event Budget and submit bill?
+Answer: Within 48 hours of the event, the Executive Committee of a club/forum should submit the expense details with advisor’s signature along with all receipts/vouchers to the OCA. They also need to submit a report and photographs of the event along with the bills.
+
+Question: Hey, how to do event Budget and submit bill?
+Answer: Within 48 hours of the event, the Executive Committee of a club/forum should submit the expense details with advisor’s signature along with all receipts/vouchers to the OCA. They also need to submit a report and photographs of the event along with the bills.
+
+Question: How to submit report after a club event?
+Answer: After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.
+
+Question: Hey, how to submit report after a club event?
+Answer: After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.","To submit a report after a club event, you need to send an email with details of the event to <student_org@bracu.ac.bd> within 7 working days. The report should be between 500 and 1000 words long, including detailed activities, discussion, social impact, and outcome, as well as any media coverage or social media data such as attendees, likes, shares, views, and comments collected immediately after the event.",1.0,0.0689212083816528,0.9310787916183472,,
+Q160,adaptive_novel,What day and time is the theory class for CSE221-14?,The theory class for CSE221-14 is on MON+WED at 9:30 AM in room 07D-19C.,"Course: CSE221-14
+Theory Initial: WBH
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 07D-19C
+Lab Faculty: HFN,MZW
+Lab Day: SUN
+Lab Time: 8:00 AM
+Lab Room: 09F-24L
+
+Course: CSE331-14
+Theory Initial: RFR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 07F-22C
+
+Course: STA201-14
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 10B-18C
+
+Course: CSE320-14
+Theory Initial: YND
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 09D-18C
+
+Course: CSE340-14
+Theory Initial: LRK
+Theory Day: MON+WED
+Theory Time: 2:00 PM
+Theory Room: 09A-04C",The theory class for CSE221-14 meets on Monday and Wednesday at 9:30 AM.,1.0,0.0266784075647592,0.9733215924352407,,
+Q085,bm25_only,Does BRAC University offer any short professional certificate courses outside its degree programs?,"Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.","Question: Does BRAC University offer any short professional certificate courses outside its degree programs?
+Answer: Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.
+
+Question (Banglish): BRAC University ki degree program er baire kono short professional certificate course offer kore?
+Answer (English): Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.
+
+Question: Does BRAC University offer any online courses?
+Answer: We do not offer online courses or degree programs.
+
+Question: Just wondering, does BRAC University offer any online courses?
+Answer: We do not offer online courses or degree programs.
+
+Question (Banglish): BRAC University ki kono online course offer kore?
+Answer (English): We do not offer online courses or degree programs.","Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.",0.5,0.9848228693008424,0.4848228693008424,,
+Q121,adaptive_novel,What is the full prerequisite chain for CSE471?,The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE230-CSE110.,"Verified prerequisite chain for CSE471 (nearest prerequisite first, from the Prerequisites knowledge base): CSE370 -> CSE221 -> CSE220 -> CSE111 -> CSE230 -> CSE110.
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: CSE471
+First Theory Coordinator: MIH
+Theory Coordinator Email: iqbal.hossain@bracu.ac.bd
+First Lab Coordinator: AQU
+Lab Coordinator Email: aquib.azmain@bracu.ac.bd
+
+Course: CSE471-03
+Theory Initial: AQU
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: SADA,WHMJ
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09F-25L
+
+Course: CSE471-02
+Theory Initial: AQU
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: KZMN,WHMJ
+Lab Day: SUN
+Lab Time: 2:00 PM
+Lab Room: 09F-25L
+
+Course: CSE471
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110",The full prerequisite chain for CSE471 is CSE370 -> CSE221 -> CSE220 -> CSE111 -> CSE110.,1.0,0.0560824498534202,0.9439175501465797,,
+Q165,full_hybrid,What day and time is the theory class for CSE260-04B?,The theory class for CSE260-04B is on SUN+TUE at 11:00 AM in room 09A-03C.,"Course: CSE260-04B
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09A-03C
+Lab Faculty: NNTN,MAZW
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: FT10-04L
+
+Course: CSE250-04B
+Theory Initial: FFR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 07H-27C
+Lab Faculty: MHY,PDS
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE350-04B
+Theory Initial: ARA
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09A-07C
+Lab Faculty: MHY,PDS
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Initial: MAZW
+Name: Mirza Azwad Wakil
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - Consultation by Appointment; 9:30 AM - CSE470-01 07F-22C; 11:00 AM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 12:30 PM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 2:00 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L; 3:30 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L
+
+Course: CSE251-04B
+Theory Initial: AKJ
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 07H-27C
+Lab Faculty: SEF,ALSM
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: 12B-20L",The theory class for CSE260-04B is held on Sunday and Tuesday at 11:00 AM.,1.0,0.1178358942270279,0.8821641057729721,,
+Q129,full_hybrid,What is the full prerequisite chain for CSE421?,The full prerequisite chain for CSE421 is CSE320.,"Course: CSE421-03
+Theory Initial: NKMA
+Theory Day: SAT+THU
+Theory Time: 2:00 PM
+Theory Room: 09D-17C
+Lab Faculty: SRJ,NKMA
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12D-26L
+
+Course: CSE421-02
+Theory Initial: ARF
+Theory Day: MON+WED
+Theory Time: 2:00 PM
+Theory Room: 10A-04C
+Lab Faculty: CQAE,WBH
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12D-26L
+
+Course: CSE421
+Prerequisite: CSE320 (SP)
+
+Course: CSE421-01
+Theory Initial: ARF
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 10A-04C
+Lab Faculty: CQAE,WBH
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12D-26L
+
+Course: CSE421
+First Theory Coordinator: MSMA
+Second Theory Coordinator: NDT
+Theory Coordinator Email: shamim.mia@bracu.ac.bd,nirjhor.datta@bracu.ac.bd
+First Lab Coordinator: SRJ
+Second Lab Coordinator: MSMA
+Lab Coordinator Email: seraj.mehnaz@bracu.ac.bd,shamim.mia@bracu.ac.bd",The full prerequisite chain for CSE421 is CSE320 (SP).,1.0,0.1781670600175857,0.8218329399824142,,

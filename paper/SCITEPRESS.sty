@@ -1,0 +1,19 @@
+% Minimal LOCAL STAND-IN for the official SCITEPRESS conference class,
+% written only so paper.tex can be compiled locally to check for real
+% LaTeX errors (undefined refs, unbalanced environments, bad math, etc.)
+% before submission. This is NOT the official SCITEPRESS.sty distributed
+% by the conference -- it does not reproduce their camera-ready visual
+% formatting (margins, fonts, column layout) and must be replaced with the
+% real file (obtained from the conference/publisher) before any actual
+% submission or camera-ready compile.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{SCITEPRESS}[2026/07/28 local structural stand-in, not official]
+
+\RequirePackage{geometry}
+\geometry{margin=2.2cm}
+
+\newcommand{\keywords}[1]{\par\noindent\textbf{KEYWORDS:}\ #1\par\bigskip}
+\renewcommand{\abstract}[1]{\par\noindent\textbf{Abstract:}\ #1\par\bigskip}
+\newcommand{\authorname}[1]{#1}
+\newcommand{\affiliation}[1]{, #1}
+\newcommand{\email}[1]{, \texttt{#1}}

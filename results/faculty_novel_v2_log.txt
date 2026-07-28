@@ -1,0 +1,61 @@
+﻿python : 
+At line:5 char:1
++ python -u scripts/run_novel_pipeline.py --queries data/test_queries_f ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8695.92it/s]
+[entity_heavy/rrf] FAC-R001: 4.03s gen, 0.047s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R002: 4.57s gen, 0.019s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R003: 3.79s gen, 0.016s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R004: 4.44s gen, 0.016s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R005: 4.13s gen, 0.017s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R006: 4.63s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R007: 5.31s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R008: 4.86s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R009: 4.72s gen, 0.017s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R010: 5.39s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R011: 3.86s gen, 0.015s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R012: 4.43s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R013: 4.24s gen, 0.016s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R014: 4.79s gen, 0.025s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R015: 4.16s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R016: 4.68s gen, 0.019s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R017: 5.33s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R018: 4.78s gen, 0.019s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R019: 5.65s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R020: 4.61s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R021: 4.52s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R022: 5.07s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R023: 4.62s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R024: 4.78s gen, 0.016s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R025: 4.55s gen, 0.022s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R026: 4.72s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R027: 4.84s gen, 0.022s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R028: 4.81s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R029: 4.43s gen, 0.019s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-R030: 5.48s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D001: 8.36s gen, 0.014s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D002: 16.11s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D003: 12.26s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D004: 15.46s gen, 0.022s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D005: 8.14s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D006: 15.65s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D007: 9.64s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D008: 9.69s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D009: 11.14s gen, 0.019s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D010: 9.47s gen, 0.017s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D011: 8.13s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D012: 6.79s gen, 0.026s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D013: 9.70s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D014: 9.39s gen, 0.019s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D015: 14.49s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D016: 11.14s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D017: 11.30s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D018: 11.14s gen, 0.016s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D019: 9.89s gen, 0.026s retrieval, 0.000s rerank
+[entity_heavy/rrf] FAC-D020: 21.58s gen, 0.019s retrieval, 0.000s rerank
+Wrote metadata to results\novel_pipeline_raw_outputs_faculty_v2_metadata.json
+Wrote 50 rows to results\novel_pipeline_raw_outputs_faculty_v2.csv (0 abstained)

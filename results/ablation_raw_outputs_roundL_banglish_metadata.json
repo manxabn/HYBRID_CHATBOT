@@ -1,0 +1,30 @@
+{
+  "model": "llama3.1:8b",
+  "fusion": "linear",
+  "n_queries": 100,
+  "is_full_run": true,
+  "sample_size_requested": null,
+  "sample_seed": null,
+  "n_configs": 4,
+  "n_rows_written": 400,
+  "configs": [
+    {
+      "name": "full_hybrid",
+      "lambda": 0.5
+    },
+    {
+      "name": "bm25_only",
+      "lambda": 1.0
+    },
+    {
+      "name": "vector_only",
+      "lambda": 0.0
+    },
+    {
+      "name": "no_retrieval",
+      "lambda": null
+    }
+  ],
+  "start_time_utc": "2026-07-28T08:35:26.614122+00:00",
+  "end_time_utc": "2026-07-28T09:32:00.736502+00:00"
+}

@@ -1,0 +1,237 @@
+query_id,query,reference_answer,is_entity_heavy,source
+Q001,How are meal plans managed at TARC?,"Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively",False,EnglishQA
+Q002,Reason for late fee appearing on pay slip of scholarship recipients after 29 June 2025?,The fee appears temporarily and will be waived automatically once the scholarship is adjusted.,False,EnglishQA
+Q003,When is the next intake for the undergraduate program?,"BRAC University admits new undergraduates three times a year - Spring (classes start January), Summer (May), and Fall (September). The exact application deadline and admission test date for the next intake are published on the Admissions page (bracu.ac.bd/admissions) closer to that semester.",False,EnglishQA
+Q004,Can you tell me what the minimum and maximum number of group members for a thesis/project is?,A thesis/project group must have a minimum of 1 member and a maximum of 5 members.,False,EnglishQA
+Q005,Before I forget to ask — what should students do if they have a scheduling conflict with their exams?,"The first step is to inform the course instructor about the conflict as soon as possible. If the conflict involves multiple exams or cannot be resolved with the instructor, students should consult their department office. The department can provide additional support or coordinate with other instructors to find a solution.",False,EnglishQA
+Q006,Where is the EEE Department?,The EEE Department is located on the 4th floor and the labs are on 11th and 12th.,False,EnglishQA
+Q007,What services does the BRAC University Medical Center provide?,"The Medical Center offers emergency medical services and free consultations/medicine to students and employees, health checkups with an official Health Card, referrals to partner hospitals for emergencies, ambulance support, and workshops on reproductive health and family planning. It also runs blood donation programs in collaboration with student clubs, arranges vaccination drives for communicable diseases, and holds regular STD/reproductive health workshops each semester with BRAC James P Grant School of Public Health.",False,EnglishQA
+Q008,When must course selections be confirmed after Pre-Registration phases?,During the Self-Registration period assigned after result publication,False,EnglishQA
+Q009,Where do i have to park the vehicle?,You can park your vehicle at basement-2.,False,EnglishQA
+Q010,Purpose of the Wishlist event for Summer 2025?,To help plan course offerings based on student demand,False,EnglishQA
+Q011,"Does BRAC University have a digital student ID card, or only a physical one?","Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.",False,EnglishQA
+Q012,What is the contact number for Route-05 (Jatrabari)?,Route-05 (Jatrabari) Service Assistant contact: 01700-877297.,False,EnglishQA
+Q013,"Random question, what should I do if I miss my mid/final?","You should inform your course instructor as soon as possible with a valid reason (such as medical emergencies). In some cases, you may need to provide documentation like medical certificates to appeal.",False,EnglishQA
+Q014,How to do advising as my advising is blocked but my payment is clear?,You have login into these page using your g-suit to get help. LINK: https://bracu.atlassian.net/servicedesk/customer/portal/2/user/login?destination=portal%2F2 or try emailing at sic@bracu.ac.bd,False,EnglishQA
+Q015,What elective courses are recommended for students interested in Cybersecurity?,"CSE446, CSE447, CSE490 and CSE496 can be beneficial for students interested in Cyber Security.",False,EnglishQA
+Q016,How to contact with BRACU Finance and Accounts Department?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd",False,EnglishQA
+Q017,"Hey, for further information regarding Admission who should I contact?","For more queries, please contact the Inquiry, Registration & Admissions Office, BRACU (Phone: +88 09638464646, Call Center Ext: 1001. You can also send e-mail at admissions@bracu.ac.bd.",False,EnglishQA
+Q018,"I wanted to ask, what are BRAC University's official colours?","BRAC University's official colours are blue, black, and gray.",False,EnglishQA
+Q019,How are students informed about changes to the transport service?,Students are informed through official BRAC University notices and announcements.,False,EnglishQA
+Q020,What is checked at the Security Supervisor Office?,"Student ID Check, All workers In out",False,EnglishQA
+Q021,What support does the Center of Entrepreneurship Development (CED) provide?,"The Center for Entrepreneurship Development (CED) at BRAC University supports students and alumni in developing entrepreneurial skills and launching their own ventures. It offers various services, including:
+Training and mentorship programs for aspiring entrepreneurs.
+Workshops and seminars on business development and innovation.
+Networking opportunities with industry professionals.
+Resources and guidance for business planning and startup funding.
+CED aims to foster a culture of entrepreneurship and innovation within the university community, providing both theoretical knowledge and practical experience to help students succeed in their entrepreneurial endeavors.Visit more for details: https://ced.bracu.ac.bd/",False,EnglishQA
+Q022,Before I forget to ask — whats the procedure for changing my section?,If you are already enrolled in a section then your request will be rejected by DCO due to the policies set by department.,False,EnglishQA
+Q023,I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?,"Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.",False,EnglishQA
+Q024,"Does every undergraduate program require a thesis, or can students choose a project/internship instead?","It depends on the program and department; in CSE, for example, students can fulfill the CSE400 capstone requirement through a Thesis, a Project, or an Internship track, each with its own supervision and marking rubric, rather than thesis being the only option.",False,EnglishQA
+Q025,Can you tell me what the difference in focus between the BSEEE and BSECE programs is?,"BSEEE (Electrical and Electronic Engineering) has a broader focus spanning power, electronics and general EEE topics, while BSECE (Electronic and Communication Engineering) concentrates more specifically on communication-related topics such as signal processing, telecommunications, microwave engineering, and data/optical/satellite communications.",False,EnglishQA
+Q026,What is BRAC University's general contact information?,"The university can be reached at +88 09638464646 (extension 1001 for the operator), and general queries can be emailed to info@bracu.ac.bd.",False,EnglishQA
+Q027,What amenities and facilities are provided for students at TARC?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.",False,EnglishQA
+Q028,How many stoppages are there for each route?,Each route has between 5 and 12 designated stoppages.,False,EnglishQA
+Q029,"This might be a silly question, but what services do library provide?","The library offers a variety of study facilities to suit different preferences. If you enjoy studying in a group, you can reserve a study room in advance, providing a dedicated space for collaboration. For those who prefer studying alone, there are single seats and study capsules available on a first-come, first-served basis. Additionally, the library features various other quiet and comfortable areas where you can focus on your studies.",False,EnglishQA
+Q030,What is the second outbound timing for Route-04 (Azimpur)?,Route-04 (Azimpur): Second trip departs at 5:10 PM.,False,EnglishQA
+Q031,"New student here, could you please provide details about the tuition fee structure at BRAC University?","For students enrolled in the Computer Science and Engineering (CSE) program at BRAC University, the tuition fee structure includes a one-time, non-refundable admission fee of BDT 30,800. Each course within the CSE program costs BDT 22,500. Additionally, students are required to pay a semester fee of BDT 11,500, which covers various facilities such as IT services and library access. There is also a one-time library membership fee of BDT 2,500. This fee structure is designed to support the comprehensive education provided in the CSE program, ensuring access to advanced resources and facilities?",False,EnglishQA
+Q032,From where does the bus leave on campus?,The bus leave campus from the Basement-1,False,EnglishQA
+Q033,Where are the designated bus stops for Route-03 (Jigatola)?,"The designated stops are: Jigatola Bus Stand, City College, Science Lab, Kataban, Shahbagh, High Court, Press Club, Motsho Bhaban, Bijoynagar, Kakrail Mosque, Shantinagar, Malibagh Railgate, Rampura TV Centre, Badda Link Road, BRAC University.",False,EnglishQA
+Q034,Can you tell me what 'Freshman Enrollment and Class Sign' at BRAC University is?,"This is the official process new/incoming ('freshman') students go through after being admitted, to confirm their enrollment and get registered into their first semester's classes; details and instructions are published on the Admissions section of the university website.",False,EnglishQA
+Q035,What facilities are available on the 5th Floor?,"School of General Education, ENH, ESS, School of Pharmacy, MNS, School of Architecture and Design, BRAC Business School, and BRAC Institute of Languages.",False,EnglishQA
+Q036,Can students reserve seats in advance?,"No, seating is strictly first-come, first-served.",False,EnglishQA
+Q037,How can I stay updated on upcoming games and events?,"Check BRACU Events Page. As the website is not fully functional yet, keep an eye on clubs’ Facebook pages or BRACU Facebook groups for updates.
+ and you can also go to this page for detailed updates : https://www.bracu.ac.bd/news-events/upcoming-events",False,EnglishQA
+Q038,Can students receive visitors while at the Savar campus?,"Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.",False,EnglishQA
+Q039,Why is it advised not to select unnecessary courses in the Wishlist?,"Course demand influences planning, and unnecessary selections may misrepresent actual needs",False,EnglishQA
+Q040,Can you tell me what the deadline to change the thesis title before the final defense is?,The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.,False,EnglishQA
+Q041,Where do MPH faculty members at BRAC JPGSPH come from?,"MPH faculty are drawn from a mix of BRAC University, icddr,b, and BRAC itself, along with international partner institutions such as the University of Heidelberg, Harvard, Johns Hopkins, George Washington University, the Karolinska Institute, and the London School of Hygiene & Tropical Medicine.",False,EnglishQA
+Q042,What is the BRAC University Students' Transport Service?,"BRAC University provides an affordable, safe, and comfortable transport service with air-conditioned buses covering nine routes across Dhaka city.",False,EnglishQA
+Q043,What are the pickup times for Route-01 (Abdullahpur)?,"1st Trip: 6:40 AM, 2nd Trip: 8:50 AM.",False,EnglishQA
+Q044,"New student here, do international students need to submit any medical reports?","Yes, Health checkup/medical certificates are needed to be submitted.",False,EnglishQA
+Q045,"My advisor is not responding, what to do?","Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.",False,EnglishQA
+Q046,What sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",False,EnglishQA
+Q047,I looked around the site but couldn't find it — what opportunities are there for student leadership in volunteer organizations?,"BRAC University Leadership Development Forum (BULDF) is a club working on training and grooming leadership traits. The club mainly focuses on young students in enhancing their leadership qualities and bringing out their hidden talents, which will help them in the future. The club has always been there for assisting the official events and programs of BRAC University as volunteers besides its own activities, which mainly include Accession, Love for Humanity, and Saving Tomorrow.
+
+Contact: club.buldf@g.bracu.ac.bd",False,EnglishQA
+Q048,"Kind of urgent, but can students appeal their grades if they believe there has been a mistake?","A student may apply to the Chair of Department or the Dean for the re-checking of an examination script. Such a request may be made on the grounds of evidence of procedural errors, arbitrariness or prejudice. The student must make any request within Seven (07) calendar days of the publication of the mark. The Chair of Department or the Dean may, after checking with the original grader, arrange for the evaluation of an examination script to be conducted by two members of the faculty not previously involved in the examination and marking process, supported by a member of the Examination Controller’s office. The rechecking process and submission of any revised grade to the Examinations Controller should be completed within 15 calendar days.",False,EnglishQA
+Q049,"Hey, what subjects are tested for BSS in Anthropology, BA in English, and LLB admission?","Applicants to BSS in Anthropology, BA in English, and LLB (Hons) are tested only in English as part of the admission test.",False,EnglishQA
+Q050,Do lab-based or design-based programs pay an additional fee beyond regular tuition?,"Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.",False,EnglishQA
+Q051,Curious about something: what items are prohibited in the exam hall?,"Mobile phones, tablets, smartwatches, and other electronic gadgets are not allowed. Bringing textbooks, notes, or any other written materials is prohibited unless explicitly allowed by the instructor.Bags, backpacks, and personal belongings should be left outside the exam hall or in designated areas.",False,EnglishQA
+Q052,"How many semesters does BRAC University run per year, and when do they start?","BRAC University runs three semesters a year - Spring, Summer and Fall - starting in January, May and September respectively. Pharmacy admits in Spring or Summer, and LLB admits in Spring or Fall.",False,EnglishQA
+Q053,Does BRAC University have any separate exam for awarding Scholarship/Financial Aid?,There is no separate exam for Scholarship/Financial Aid.,False,EnglishQA
+Q054,What does the Counseling and Wellness Centre at BRAC University offer?,"The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.",False,EnglishQA
+Q055,Can you tell me what the CGPA requirement for eligibility to start a thesis is?,CGPA equal to or above 3.0.,False,EnglishQA
+Q056,"New student here, when was BRAC University established and who founded it?","BRAC University was established in 2001, founded by Sir Fazle Hasan Abed, and is affiliated with the University Grants Commission (UGC) of Bangladesh.",False,EnglishQA
+Q057,Who must participate in the Wishlist event?,"All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students",False,EnglishQA
+Q058,"New student here, I already did ENG102 in Badda campus which course I will be given in TARC?","If you completed ENG102 already, you will be given BUS201 at TARC.",False,EnglishQA
+Q059,Curious about something: what are the basic requirements and application process to start a new club at BRAC University?,"To start a new club, you need at least 50 interested student members and one BRACU faculty advisor. The applicants then submit an application to the Director of Co-Curricular Activities, including the club's goals, objectives, a program calendar, and mode of operation, signed by the advisor. The new club's Executive Committee follows the same eligibility rules as any club's committee (see the Executive Committee CGPA/credit requirements). One faculty member can advise only one club at a time, but can additionally co-advise up to one more; a faculty member who isn't an advisor of any club can co-advise up to two.",False,EnglishQA
+Q060,Before I forget to ask — has BRAC University ever won the World Universities Debating Championship (WUDC)?,"Yes, twice. In 2013, BRAC Bangladesh A (Ratib Murtaza Ali and Aaqib Farhan Hossain) won the English-as-a-Second-Language (ESL) category at WUDC in Berlin - Bangladesh's first such win. In 2022, BRAC University students Sourodip Paul and Sajid Asbat Khandaker won the WUDC open category outright in Belgrade, becoming the first Asian team ever to win the tournament's top title.",False,EnglishQA
+Q061,How do I access the Multipurpose Hall?,"Ground Floor, Find the lift lobby(2nd escalator); go straight to the West Side, where you will find some seats next to the Multipurpose Hall.",False,EnglishQA
+Q062,Can you tell me what the formula BRAC University uses to calculate GPA is?,"GPA is calculated as the sum of (grade points x credits) for all courses, divided by the sum of credits attempted - i.e., a credit-weighted average, so a 4-credit course affects the GPA more than a 1-credit course.",False,EnglishQA
+Q063,I looked around the site but couldn't find it — whats the procedure to pay my fees in installment?,A form will be shared by gsuite if the facility is available for that particular semester and you can fill up the form and apply for installment payment.,False,EnglishQA
+Q064,"Hi, what exactly does the Office of the Proctor handle at BRAC University?","The Office of the Proctor is responsible for student discipline and campus safety, acting as an intermediary for complaints about harassment, bullying, or intimidation involving anyone affiliated with BRACU - students, faculty, staff, or security personnel.",False,EnglishQA
+Q065,Can non-students use the BRAC University transport service?,"No, the service is exclusively for BRAC University students.",False,EnglishQA
+Q066,Can you tell me what the prerequisites for the Cse program are?,"Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics",False,EnglishQA
+Q067,I looked around the site but couldn't find it — how to submit report after a club event?,"After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.",False,EnglishQA
+Q068,Can you tell me what the Syndicate at BRAC University is?,"The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.",False,EnglishQA
+Q069,Can you tell me what the eligibility criteria for receiving financial aid are?,"BRAC University offers financial aid to students based on demonstrated financial need. Financial aid eligibility is reassessed regularly, and students may need to maintain satisfactory academic performance. Special consideration may be given to students from disadvantaged backgrounds or those facing extraordinary circumstances. The Financial Aid Office can provide more detailed information on the application process.",False,EnglishQA
+Q070,For a friend who's asking — do I need to pay any fee to collect my degree certificate at Convocation?,"No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.",False,EnglishQA
+Q071,"I'm an international student on the BRAC Scholarship with a 3.1 CGPA, but I need to retake a course I failed. Will my scholarship cover the retake fee?","No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.",False,EnglishQA
+Q072,How is the Joint PhD program with SOAS structured over time?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.",False,EnglishQA
+Q073,"My brother/sister is studying at BracU, how would I apply for Sibling Scholarship?","Tuition fee waiver is awarded to one of the siblings who will enroll later at Brac
+University.
+
+Supporting documents for applying for Sibling Scholarship:
+
+a) Photocopy of National ID Cards/Passports of both the applicant and parents
+b) Passport-size photos of both the siblings,
+c) Photocopy of BracU Grade sheet of both the siblings,
+d) Photocopy of BracU advising sheet of both the siblings,
+e) Photocopy of Transcript of HSC & SSC/ A level & O level of both the siblings",False,EnglishQA
+Q074,What is the first outbound timing for Route-02 (Mirpur-A)?,Route-02 (Mirpur-A): First trip departs at 2:05 PM.,False,EnglishQA
+Q075,Can you tell me what required for a student to apply for an internship is?,The student must apply to the Chairperson of the CSE Department and may suggest a company with a detailed profile for approval.,False,EnglishQA
+Q076,Provide me the contact information of library staffs.,"You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd",False,EnglishQA
+Q077,Consequence of not confirming advising during the Self-Registration period?,All selected courses will be automatically cancelled,False,EnglishQA
+Q078,"Not sure if this is covered elsewhere, but how early should students arrive at the exam hall?",Students should aim to arrive at the exam hall at least 15 to 30 minutes before the scheduled start time of their exam.,False,EnglishQA
+Q079,What steps do I need to follow to access the Prayer Room for females?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),False,EnglishQA
+Q080,"What platform is buX built on, and when was it launched?","BuX is BRAC University's online learning platform, built on the same open-source platform originally developed by MIT and Harvard (Open edX). It was launched in 2020 in response to the shift to online learning during the COVID-19 pandemic.",False,EnglishQA
+Q081,What is BRAC Scholarship?,"BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents’ monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.",False,EnglishQA
+Q082,What was BRAC University's student system called before it became 'Connect'?,"Before the current 'Connect' Student Lifecycle Management System, students used a system called USIS (University Student Information System) for functions like registration, pay slips, and academic records.",False,EnglishQA
+Q083,How long does the Early Childhood Development (ECD) program take to complete?,"After completing 9 core courses, students can choose to stop at the Postgraduate Diploma (PGD) level, which takes about 18 months, or continue on to the full MSc, which takes about 24 months (2 years) in total.",False,EnglishQA
+Q084,"Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?","Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.",False,EnglishQA
+Q085,Does BRAC University offer any short professional certificate courses outside its degree programs?,"Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.",False,EnglishQA
+Q086,Who handles student discipline and safety issues on campus?,"The Office of the Proctor handles student discipline and campus safety matters. It can be reached at proctor@bracu.ac.bd or by phone, and is open 9:00 AM to 5:30 PM.",False,EnglishQA
+Q087,Before I forget to ask — what are the consequences of violating TARC rules and regulations?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled",False,EnglishQA
+Q088,Where can I find the official student payment manual?,"BRAC University publishes a 'Payment Manual for Students' PDF, linked from the Tuition and Fees page, which explains the accepted payment methods and installment options in detail.",False,EnglishQA
+Q089,What are the pickup times for Route-03 (Jigatola)?,"Route-03 (Jigatola): 1st Trip: 6:30 AM, 2nd Trip: 8:45 AM.",False,EnglishQA
+Q090,"I wanted to ask, how many credit hours must a scholarship-holding international student take each semester?","Students on scholarship or financial aid are generally required to take a minimum of 9 credit hours in all semesters (applicable from Summer 2023 admits onward), except for approved reduced course loads such as in the first semester.",False,EnglishQA
+Q091,One thing I couldn't find anywhere: can I renew a book I have borrowed from the library?,"Yes, an item can be renewed if no other user has placed a hold on it. Renewal can be done through the online catalogue (OPAC) or by contacting the circulation desk.",False,EnglishQA
+Q092,"I wanted to ask, is there an application fee, How much is it?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]",False,EnglishQA
+Q093,What should a course teacher do if a student misses the final exam for a valid reason?,"If a student misses the final exam for a documented valid reason (such as a medical emergency), the course teacher can arrange a make-up exam, and if course requirements genuinely can't be completed in time, an 'Incomplete' (I) grade with a defined completion deadline (up to 8 weeks after the final exam) may be assigned instead.",False,EnglishQA
+Q094,Does ENH offer a minor for students outside the department?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.",False,EnglishQA
+Q095,"Kind of urgent, but what should I do if I can’t log in to a lab PC?","If you've changed your password and can’t remember it, contact IT support at itsupport@bracu.ac.bd.",False,EnglishQA
+Q096,"Are journals, magazines and reference books available for borrowing?","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",False,EnglishQA
+Q097,Can you tell me what the important dates and deadlines for admission are?,"The exact admission test date, application deadline, and academic-session start date change every semester, so BRAC University publishes them on its Admissions page (bracu.ac.bd/admissions) ahead of each intake rather than fixing them year-round - check that page for the current cycle's dates.",False,EnglishQA
+Q098,Can you tell me what the Office of the Registrar responsible for at BRAC University is?,"The Office of the Registrar handles core academic-record functions such as processing semester drop forms, maintaining student registration and grade records, and coordinating with departments on academic policy matters like leave of absence and inter-department transfers.",False,EnglishQA
+Q099,Can you tell me what BRAC University's policy on sexual harassment is?,"BRAC University maintains a 'Zero Tolerance' policy toward sexual harassment of any kind, formalized in its Code of Conduct on Sexual Harassment, which is part of the university's broader safeguarding framework alongside the Academic Handbook and the Regulations of Students Conduct.",False,EnglishQA
+Q100,"When was the BRAC University School of Law established, and what degree does it offer?","The School of Law was founded in 2004 and offers a four-year undergraduate Bachelor of Laws (LL.B. Hons.) program, along with a postgraduate LL.M. program.",False,EnglishQA
+Q101,What are the prerequisites for CSE423?,The prerequisite for CSE423 is MAT216 (HP).,True,Prerequisites
+Q102,What are the prerequisites for CSE251?,The prerequisite for CSE251 is CSE250 (HP).,True,Prerequisites
+Q103,What are the prerequisites for CSE391?,The prerequisite for CSE391 is CSE370 (HP).,True,Prerequisites
+Q104,What are the prerequisites for CSE330?,The prerequisite for CSE330 is MAT216 (HP).,True,Prerequisites
+Q105,What is the full prerequisite chain for PHY112?,The full prerequisite chain for PHY112 is PHY111.,True,Prerequisites
+Q106,What are the prerequisites for MAT215?,The prerequisite for MAT215 is MAT216 (HP).,True,Prerequisites
+Q107,What is the full prerequisite chain for CSE310?,The full prerequisite chain for CSE310 is CSE370-CSE221-CSE220-CSE111-CSE230-CSE110.,True,Prerequisites
+Q108,What are the prerequisites for CSE410?,The prerequisite for CSE410 is CSE321 (HP).,True,Prerequisites
+Q109,What is the full prerequisite chain for MAT216?,The full prerequisite chain for MAT216 is MAT120-MAT110.,True,Prerequisites
+Q110,What is the full prerequisite chain for CSE460?,The full prerequisite chain for CSE460 is CSE260-CSE251-CSE250-PHY112-PHY111.,True,Prerequisites
+Q111,What are the prerequisites for CSE420?,"The prerequisite for CSE420 is CSE321 (HP),CSE331 (HP),CSE340 (HP).",True,Prerequisites
+Q112,What are the prerequisites for CSE461?,The prerequisite for CSE461 is CSE260 (HP).,True,Prerequisites
+Q113,What is the full prerequisite chain for ENG102?,The full prerequisite chain for ENG102 is ENG101.,True,Prerequisites
+Q114,What are the prerequisites for CSE321?,The prerequisite for CSE321 is CSE221 (HP).,True,Prerequisites
+Q115,What are the prerequisites for ENG103?,The prerequisite for ENG103 is ENG102 (HP).,True,Prerequisites
+Q116,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).,True,Prerequisites
+Q117,What are the prerequisites for CSE489?,The prerequisite for CSE489 is CSE370 (HP).,True,Prerequisites
+Q118,What are the prerequisites for CSE250?,The prerequisite for CSE250 is PHY112 (SP).,True,Prerequisites
+Q119,What are the prerequisites for CSE392?,The prerequisite for CSE392 is MAT215 (HP).,True,Prerequisites
+Q120,What is the full prerequisite chain for CSE340?,The full prerequisite chain for CSE340 is CSE260-CSE251-CSE250-PHY112-PHY111.,True,Prerequisites
+Q121,What is the full prerequisite chain for CSE471?,The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE230-CSE110.,True,Prerequisites
+Q122,What is the full prerequisite chain for CSE260?,The full prerequisite chain for CSE260 is CSE251-CSE250-PHY112-PHY111.,True,Prerequisites
+Q123,What are the prerequisites for CSE430?,The prerequisite for CSE430 is MAT120 (HP).,True,Prerequisites
+Q124,What is the full prerequisite chain for CSE341?,The full prerequisite chain for CSE341 is CSE340-CSE321-CSE260-CSE221-CSE251-CSE220-CSE250-CSE111-CSE230-PHY112-CSE110-PHY111.,True,Prerequisites
+Q125,What are the prerequisites for CSE422?,The prerequisite for CSE422 is CSE221 (HP).,True,Prerequisites
+Q126,What are the prerequisites for CSE111?,The prerequisite for CSE111 is CSE110 (HP).,True,Prerequisites
+Q127,What is the full prerequisite chain for CSE220?,The full prerequisite chain for CSE220 is CSE111-CSE230-CSE110.,True,Prerequisites
+Q128,What are the prerequisites for MAT120?,The prerequisite for MAT120 is MAT110 (HP).,True,Prerequisites
+Q129,What is the full prerequisite chain for CSE421?,The full prerequisite chain for CSE421 is CSE320.,True,Prerequisites
+Q130,What is the full prerequisite chain for CSE221?,The full prerequisite chain for CSE221 is CSE220-CSE111-CSE230-CSE110.,True,Prerequisites
+Q131,Who is the theory coordinator for CSE490D?,The theory coordinator for CSE490D is TAV.,True,Coordinator
+Q132,Who is the theory coordinator for CSE428?,The theory coordinator for CSE428 is SDQ.,True,Coordinator
+Q133,Who is the theory coordinator for CSE370?,The theory coordinator for CSE370 is FEK.,True,Coordinator
+Q134,Who is the theory coordinator for CSE426?,The theory coordinator for CSE426 is TSM.,True,Coordinator
+Q135,Who is the theory coordinator for CSE481?,The theory coordinator for CSE481 is SDS.,True,Coordinator
+Q136,Who is the theory coordinator for CSE447?,The theory coordinator for CSE447 is MIH.,True,Coordinator
+Q137,Who is the theory coordinator for CSE472?,The theory coordinator for CSE472 is FDC.,True,Coordinator
+Q138,What is the coordinator email for CSE437?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.,True,Coordinator
+Q139,Who is the theory coordinator for CSE310?,The theory coordinator for CSE310 is ADR.,True,Coordinator
+Q140,Who is the theory coordinator for CSE330?,The theory coordinator for CSE330 is AMK. The second theory coordinator is AQU.,True,Coordinator
+Q141,Who is the theory coordinator for CSE490B?,The theory coordinator for CSE490B is TLQ.,True,Coordinator
+Q142,Who is the theory coordinator for CSE331?,The theory coordinator for CSE331 is RSS.,True,Coordinator
+Q143,What is the coordinator email for CSE220?,The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd.,True,Coordinator
+Q144,What is the coordinator email for CSE460?,The coordinator email for CSE460 is arpa.roy@bracu.ac.bd.,True,Coordinator
+Q145,What is the coordinator email for CSE446?,The coordinator email for CSE446 is sadek.ferdous@bracu.ac.bd.,True,Coordinator
+Q146,Who is the theory coordinator for CSE461?,The theory coordinator for CSE461 is KHR.,True,Coordinator
+Q147,What is the coordinator email for CSE419?,The coordinator email for CSE419 is kabbya.kantam@bracu.ac.bd.,True,Coordinator
+Q148,Who is the theory coordinator for CSE482?,The theory coordinator for CSE482 is SDS.,True,Coordinator
+Q149,What is the coordinator email for CSE443?,The coordinator email for CSE443 is swakkhar.shatabda@bracu.ac.bd.,True,Coordinator
+Q150,What is the coordinator email for CSE430?,The coordinator email for CSE430 is ehtashamul.haque@bracu.ac.bd.,True,Coordinator
+Q151,What day and time is the theory class for CSE260-04A?,The theory class for CSE260-04A is on SUN+TUE at 11:00 AM in room 09A-03C.,True,CourseDetails
+Q152,What day and time is the theory class for CSE360-10?,The theory class for CSE360-10 is on SUN+TUE at 9:30 AM in room 09A-05C.,True,CourseDetails
+Q153,What day and time is the theory class for CSE460-03?,The theory class for CSE460-03 is on SAT+THU at 12:30 PM in room 07H-26C.,True,CourseDetails
+Q154,What day and time is the theory class for CSE370-16?,The theory class for CSE370-16 is on SAT+THU at 9:30 AM in room 10B-17C.,True,CourseDetails
+Q155,What day and time is the theory class for CSE221-13?,The theory class for CSE221-13 is on SUN+TUE at 3:30 PM in room 09A-03C.,True,CourseDetails
+Q156,What day and time is the theory class for CSE110-01?,The theory class for CSE110-01 is on SUN+TUE at 11:00 AM in room 10B-17C.,True,CourseDetails
+Q157,What day and time is the theory class for CSE460-04?,The theory class for CSE460-04 is on SAT+THU at 2:00 PM in room 09A-07C.,True,CourseDetails
+Q158,What day and time is the theory class for STA201-12?,The theory class for STA201-12 is on MON+WED at 2:00 PM in room 09H-37C.,True,CourseDetails
+Q159,What day and time is the theory class for CSE250-06A?,The theory class for CSE250-06A is on SUN+TUE at 2:00 PM in room 07H-27C.,True,CourseDetails
+Q160,What day and time is the theory class for CSE221-14?,The theory class for CSE221-14 is on MON+WED at 9:30 AM in room 07D-19C.,True,CourseDetails
+Q161,What day and time is the theory class for STA101-04?,The theory class for STA101-04 is on SUN+TUE at 2:00 PM in room 10B-18C.,True,CourseDetails
+Q162,What day and time is the theory class for CSE330-10?,The theory class for CSE330-10 is on SUN+TUE at 12:30 PM in room 09A-03C.,True,CourseDetails
+Q163,What day and time is the theory class for CSE472-01?,The theory class for CSE472-01 is on MON+WED at 11:00 AM in room 10C-21C.,True,CourseDetails
+Q164,What day and time is the theory class for CSE341-02?,The theory class for CSE341-02 is on SUN+TUE at 12:30 PM in room 09H-33C.,True,CourseDetails
+Q165,What day and time is the theory class for CSE260-04B?,The theory class for CSE260-04B is on SUN+TUE at 11:00 AM in room 09A-03C.,True,CourseDetails
+Q166,Who teaches the lab section of CSE321-18?,"The lab section of CSE321-18 is taught by TNF,SVKG.",True,CourseDetails
+Q167,Who teaches the lab section of CSE111-07?,"The lab section of CSE111-07 is taught by AFA,ZMD.",True,CourseDetails
+Q168,Who teaches the lab section of CSE260-05A?,"The lab section of CSE260-05A is taught by CSYR,SMDS.",True,CourseDetails
+Q169,Who teaches the lab section of CSE330-06?,"The lab section of CSE330-06 is taught by ALB,RFTS.",True,CourseDetails
+Q170,Who teaches the lab section of CSE260-15A?,"The lab section of CSE260-15A is taught by MDF,NQM.",True,CourseDetails
+Q171,Who teaches the lab section of CSE221-19?,"The lab section of CSE221-19 is taught by ARD,ANV.",True,CourseDetails
+Q172,Who teaches the lab section of CSE350-06B?,"The lab section of CSE350-06B is taught by RAO,SHJR.",True,CourseDetails
+Q173,Who teaches the lab section of CSE420-23?,"The lab section of CSE420-23 is taught by RKBR,NLAM.",True,CourseDetails
+Q174,Who teaches the lab section of CSE427-05?,"The lab section of CSE427-05 is taught by QUZA,ITTSC.",True,CourseDetails
+Q175,Who teaches the lab section of CSE260-19B?,"The lab section of CSE260-19B is taught by CMHQ,CABS.",True,CourseDetails
+Q176,Who teaches the lab section of CSE422-04?,"The lab section of CSE422-04 is taught by RSS,NFF.",True,CourseDetails
+Q177,Who teaches the lab section of CSE471-15?,"The lab section of CSE471-15 is taught by PLN,ART.",True,CourseDetails
+Q178,Who teaches the lab section of CSE423-05?,"The lab section of CSE423-05 is taught by MAHS,ZLNM.",True,CourseDetails
+Q179,Who teaches the lab section of CSE420-13?,"The lab section of CSE420-13 is taught by SUE,NFMK.",True,CourseDetails
+Q180,Who teaches the lab section of CSE101-05?,"The lab section of CSE101-05 is taught by CMHH,SLAR.",True,CourseDetails
+Q181,Which room is Anika Tasnim in?,Anika Tasnim is in room 4F.,True,FacultyList
+Q182,What is Dr. Md. Shafiul Alam Shuvo's email?,Dr. Md. Shafiul Alam Shuvo's email is ext.shafiul.shuvo@bracu.ac.bd.,True,FacultyList
+Q183,Which room is Mr. Md. Tawhid Anwar in?,Mr. Md. Tawhid Anwar is in room 4G03.,True,FacultyList
+Q184,What is Atonu Roy Chowdhury's email?,Atonu Roy Chowdhury's email is atonuroy.chowdhury@bracu.ac.bd.,True,FacultyList
+Q185,What is Aunon Halder's email?,Aunon Halder's email is ext.aunon.halder@bracu.ac.bd.,True,FacultyList
+Q186,What is BIJS's designation?,Bijoy Ahmed Saiem (BIJS) is a Lecturer.,True,FacultyList
+Q187,What is FEK's designation?,Farden Ehsan Khan (FEK) is a Lecturer.,True,FacultyList
+Q188,Which room is Dr. Matin Saad Abdullah in?,Dr. Matin Saad Abdullah is in room 4G04.,True,FacultyList
+Q189,What is Mr. Dewan Ziaul Karim's email?,Mr. Dewan Ziaul Karim's email is ziaul.karim@bracu.ac.bd.,True,FacultyList
+Q190,What is Dr. Chowdhury Mofizur Rahman's email?,Dr. Chowdhury Mofizur Rahman's email is rahman.mofizur@bracu.ac.bd.,True,FacultyList
+Q191,What is FDZ's designation?,Fardin Zaman (FDZ) is a C. Lecturer.,True,FacultyList
+Q192,What is FYS's designation?,Dr. Farig Yousuf Sadeque (FYS) is a Associate Professor.,True,FacultyList
+Q193,What is Mr. Md. Shamim Mia's email?,Mr. Md. Shamim Mia's email is shamim.mia@bracu.ac.bd.,True,FacultyList
+Q194,What is MVH's designation?,Mohammad Naveed Hossain (MVH) is a Lecturer.,True,FacultyList
+Q195,Which room is Wahida Mahjabin in?,Wahida Mahjabin is in room 4P179.,True,FacultyList
+Q196,What is Lara khanom's email?,Lara khanom's email is lara.khanom@bracu.ac.bd.,True,FacultyList
+Q197,What is CSSA's designation?,Sadman Sakib Alif (CSSA) is a C. Lecturer.,True,FacultyList
+Q198,Which room is MD MIZANUR RAHMAN MUSTAKIM in?,MD MIZANUR RAHMAN MUSTAKIM is in room 4P171.,True,FacultyList
+Q199,What is Labib Hasan Khan's email?,Labib Hasan Khan's email is labib.hasan@bracu.ac.bd.,True,FacultyList
+Q200,Which room is A S M Nasim Khan in?,A S M Nasim Khan is in room 4F.,True,FacultyList

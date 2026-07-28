@@ -1,0 +1,20 @@
+﻿.\.venv\Scripts\python.exe : Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to 
+enable higher rate limits and faster downloads.
+At line:3 char:1
++ .\.venv\Scripts\python.exe scripts\run_ablation.py --out results\abla ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: You ar...ster downloads.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 102542.92it/s]
+Traceback (most recent call last):
+  File "E:\RAG\updated_Rag\RAG-main\scripts\run_ablation.py", line 187, in <module>
+  File "E:\RAG\updated_Rag\RAG-main\scripts\run_ablation.py", line 80, in run
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\RAG\updated_Rag\RAG-main\pipeline\hybrid_retriever.py", line 185, in __init__
+    question_vecs = self.embedding_function.embed_documents(question_texts)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chroma1xEmbeddingFunction' object has no attribute 'embed_documents'

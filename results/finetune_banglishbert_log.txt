@@ -1,0 +1,46 @@
+﻿.\.venv\Scripts\python.exe : E:\RAG\updated_Rag\RAG-main\scripts\finetune_embeddings.py:35: DeprecationWarning: 
+Importing from 'sentence_transformers.losses' is deprecated and will be removed in a future version. Please use 
+'sentence_transformers.sentence_transformer.losses' instead.
+At line:3 char:1
++ .\.venv\Scripts\python.exe scripts\finetune_embeddings.py --base-mode ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (E:\RAG\updated_...osses' instead.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  from sentence_transformers.losses import MultipleNegativesRankingLoss
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits 
+and faster downloads.
+Base model: csebuetnlp/banglishbert
+Train pairs (EnglishQA+BanglishQA, Split=train only): 2508
+Val pairs (Split=val, held out, not trained on): 297
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 27887.47it/s]
+[transformers] [1mElectraModel LOAD REPORT[0m from: csebuetnlp/banglishbert
+Key                                               | Status     |  | 
+--------------------------------------------------+------------+--+-
+discriminator_predictions.dense_prediction.weight | UNEXPECTED |  | 
+discriminator_predictions.dense.weight            | UNEXPECTED |  | 
+discriminator_predictions.dense_prediction.bias   | UNEXPECTED |  | 
+discriminator_predictions.dense.bias              | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+Computing widget examples:   0%|          | 0/1 [00:00<?, ?example/s]
+                                                                     
+
+  0%|          | 0/471 [00:00<?, 
+?it/s]E:\RAG\updated_Rag\RAG-main\.venv\Lib\site-packages\torch\utils\data\dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+
+  0%|          | 1/471 [00:15<2:00:01, 15.32s/it]
+  0%|          | 2/471 [00:21<1:17:19,  9.89s/it]
+  1%|          | 3/471 [00:33<1:26:20, 11.07s/it]
+  1%|          | 4/471 [00:48<1:36:48, 12.44s/it]
+  1%|          | 5/471 [00:53<1:15:35,  9.73s/it]
+  1%|▏         | 6/471 [01:02<1:13:32,  9.49s/it]
+  1%|▏         | 7/471 [01:10<1:08:48,  8.90s/it]
+  2%|▏         | 8/471 [01:18<1:06:42,  8.64s/it]
+  2%|▏         | 9/471 [01:24<1:01:56,  8.04s/it]

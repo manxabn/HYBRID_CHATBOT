@@ -1,0 +1,1054 @@
+id,QuestionBanglish,cluster_id,cluster_size
+968,Route-01 (Abdullahpur) er first outbound timing ta ki?,988,10
+970,Route-01 (Abdullahpur) er second outbound timing ta ki?,988,10
+972,Route-02 (Mirpur-A) er first outbound timing ta ki?,988,10
+974,Route-02 (Mirpur-A) er second outbound timing ta ki?,988,10
+977,Route-02 (Mirpur-B) er first outbound timing ta ki?,988,10
+979,Route-02 (Mirpur-B) er second outbound timing ta ki?,988,10
+987,Route-04 (Azimpur) er first outbound timing ta ki?,988,10
+989,Route-04 (Azimpur) er second outbound timing ta ki?,988,10
+1002,Route-07 (Mohammadpur) er first outbound timing ta ki?,988,10
+1004,Route-07 (Mohammadpur) er second outbound timing ta ki?,988,10
+967,Route-01 (Abdullahpur) er designated bus stop gula kothay?,990,7
+971,Route-02 (Mirpur-A) er designated bus stop gula kothay?,990,7
+976,Route-02 (Mirpur-B) er designated bus stop gula kothay?,990,7
+981,Route-03 (Jigatola) er designated bus stop gula kothay?,990,7
+986,Route-04 (Azimpur) er designated bus stop gula kothay?,990,7
+991,Route-05 (Jatrabari) er designated bus stop gula kothay?,990,7
+1001,Route-07 (Mohammadpur) er designated bus stop gula kothay?,990,7
+909,Bashundhara route e round trip er fare koto?,912,5
+910,Bashundhara route e single trip er fare koto?,912,5
+911,Bashundhara route er fare koto?,912,5
+912,Beshirbhag route e round trip er fare koto?,912,5
+913,Beshirbhag route e single trip er fare koto?,912,5
+969,Route-01 (Abdullahpur) er pickup time gula ki?,1002,5
+973,Route-02 (Mirpur-A) er pickup time gula ki?,1002,5
+978,Route-02 (Mirpur-B) er pickup time gula ki?,1002,5
+988,Route-04 (Azimpur) er pickup time gula ki?,1002,5
+1003,Route-07 (Mohammadpur) er pickup time gula ki?,1002,5
+189,12th Floor e ki ki facility available?,197,3
+193,1st Floor e ki ki facility available?,197,3
+198,5th Floor e ki ki facility available?,197,3
+428,International student der jonno ki kono scholarship scheme ache?,567,3
+567,International Student der jonno kon kon Scholarship ache?,567,3
+568,International student der jonno specifically ki kono scholarship ache?,567,3
+413,BRAC University er international scholarship er jonno ami kivabe apply korbo?,585,3
+549,BRAC University te student ra scholarship er jonno kivabe apply korbe?,585,3
+586,Scholarship er jonno ami kivabe apply korbo?,585,3
+954,Narayanganj route e round trip er fare koto?,955,3
+955,Narayanganj route e single trip er fare koto?,955,3
+956,Narayanganj route er fare koto?,955,3
+11,Admissions office ke ami kivabe contact korbo?,27,2
+28,BRAC University admissions office ke ami kivabe contact korbo?,27,2
+31,BRAC University er kon undergraduate program e total credit requirement shobcheye beshi?,31,2
+32,BRAC University er kon undergraduate program gula te total credit requirement shobcheye kom?,31,2
+35,"BRAC University koyta postgraduate program offer kore, ar segula ki ki?",35,2
+36,"BRAC University koyta undergraduate program offer kore, ar segula ki ki?",35,2
+65,Postgraduate program er jonno bidesh theke pass kora candidate der ki ki documents submit korte hoy?,74,2
+75,Undergraduate program er jonno bidesh theke pass kora candidate der ki ki documents submit korte hoy?,74,2
+66,Postgraduate program er jonno ki evening class ache?,75,2
+76,Undergraduate program er jonno ki evening class ache?,75,2
+94,Advising ta ki?,135,2
+136,Main advising ta ki?,135,2
+243,Center of Entrepreneurship Development (CED) ki ki service offer kore?,243,2
+244,Center of Entrepreneurship Development (CED) ki support provide kore?,243,2
+267,Female prayer room ta kothay?,283,2
+284,Male prayer room ta kothay?,283,2
+268,Female washroom kothay?,284,2
+285,Male washroom kothay?,284,2
+401,Offline program er budget koto?,402,2
+403,Online program er budget koto?,402,2
+599,Tuition ar fee pay korar accepted method gula ki ki?,602,2
+603,Tuition fee pay korar way gula ki ki?,602,2
+19,Application er jonno ki ki documents lagbe?,611,2
+612,Application er shathe ki ki documents lagbe?,611,2
+673,BBA program e koto credit hour lage?,706,2
+707,BSEEE program e koto credit hour lage?,706,2
+806,Amar BRACU G Suite email password kivabe change korbo?,806,2
+807,"Amar BRACU G Suite email password mone nei, kivabe reset korbo?",806,2
+814,BRAC University lab PC te ami kivabe log in korbo?,814,2
+815,BRAC University lab PC theke ami kivabe log out korbo?,814,2
+880,Pre-Thesis I er shomoy group bhange/divide korle penalty ki?,881,2
+882,Pre-Thesis II er shomoy group bhange/divide korle penalty ki?,881,2
+871,Internship/thesis shoho BBA program e mot koto credit lage?,898,2
+899,Thesis/internship e koto credit thake?,898,2
+921,BRAC University student transport service ekhon koyta bus route cover kore?,925,2
+926,BRAC University transport service koyta route cover kore?,925,2
+963,Protita route er first pickup time ta ki?,964,2
+965,Protita route er second pickup time ta ki?,964,2
+982,Route-03 (Jigatola) er first outbound timing ta ki?,983,2
+984,Route-03 (Jigatola) er second outbound timing ta ki?,983,2
+983,Route-03 (Jigatola) er pickup time gula ki?,992,2
+993,Route-05 (Jatrabari) er pickup time gula ki?,992,2
+992,Route-05 (Jatrabari) er first outbound timing ta ki?,993,2
+994,Route-05 (Jatrabari) er second outbound timing ta ki?,993,2
+997,Route-06 (Baldha Garden) er first outbound timing ta ki?,998,2
+999,Route-06 (Baldha Garden) er second outbound timing ta ki?,998,2
+1007,Route-08 (Narayanganj) er first outbound timing ta ki?,1008,2
+1009,Route-08 (Narayanganj) er second outbound timing ta ki?,1008,2
+1013,Route-09 (Bashundhara) er first outbound timing ta ki?,1013,2
+1014,Route-09 (Bashundhara) er second outbound timing ta ki?,1013,2
+941,Driver driven car parking er payment koto?,1014,2
+1015,Self driven car parking er payment koto?,1014,2
+958,Official transport service inquiry er jonno kake contact korte hobe?,1025,2
+1026,Transport service er official inquiry er jonno kake contact korte hobe?,1025,2
+210,BRAC University er affiliation ar accreditation er jonno ki dedicated page ache?,1042,2
+1043,BRAC University er ki ki academic accreditation ar affiliation ache?,1042,2
+1,Admission application fee ami kivabe pay korbo?,0,1
+2,Admission er important date ar deadline gula ki?,1,1
+3,Admission er jonno ami kivabe apply korbo?,2,1
+4,Admission er jonno application korte gele fee hisebe koto taka lagbe?,3,1
+5,Admission niye aro information er jonno kake contact korbo?,4,1
+6,Admission test e boste local applicant der ki identification lagbe?,5,1
+7,Admission test er jonno BRAC University ki sample questions publish kore?,6,1
+8,Admission test er result ami kivabe pabo?,7,1
+9,Admission withdrawal er process ta ki?,8,1
+10,Admission written test e koyta section thakbe?,9,1
+12,Amar Admit card ami kivabe collect korbo?,11,1
+13,Amar application er status ami kivabe check korbo?,12,1
+14,Amar credit transfer hobe kina ami kivabe jante parbo?,13,1
+15,Ami ki amar application status online e dekhte pari?,14,1
+16,Ami ki ekshathe ekaddhik program e apply korte pari?,15,1
+17,Ami ki visiting student hisebe enroll korte pari?,16,1
+18,"Applicant ra ki shudhu online e apply kore, naki in person, naki written application diye?",17,1
+20,Application fee ki ache? Koto?,19,1
+21,Application form e amar kora bhul ami kivabe correct korbo?,20,1
+22,Application form er part hisebe amake ki photograph upload korte hobe?,21,1
+23,Architecture applicant der jonno ki specific admission test section ache?,22,1
+24,Bangladesh e na thakle international student ra ki off-campus interview er offer pay?,23,1
+25,BBA ar BSS in Economics admission test e kon kon subject test hoy?,24,1
+26,Bidesh theke Bachelor's kora postgraduate applicant der ki ki documents lagbe?,25,1
+27,BRAC University admission er jonno GED (General Educational Development) qualification accept kora hoy ki?,26,1
+29,"BRAC University bochore koyta semester chalay, ar kobe shuru hoy?",28,1
+30,BRAC University er 'Freshman Enrollment and Class Sign' ta ki?,29,1
+33,BRAC University ki kono online course offer kore?,32,1
+34,BRAC University ki PhD program offer kore?,33,1
+37,BRAC University main Mohakhali/Badda campus er baire ki kono diploma program chalay?,36,1
+38,BRAC University te Diploma ar Certificate program er jonno ki alada admission requirement ache?,37,1
+39,BRAC University te ki kono accommodation facility ache?,38,1
+40,BRAC University te Scholarship/Financial Aid niye information ami kivabe pabo?,39,1
+41,BRAC University undergraduate admission er jonno shadharonoto minimum SSC/HSC ba O/A-Level grade koto lagbe?,40,1
+42,BRACU admission application er jonno amar 'O'/'A' level er GPA ami kivabe calculate korbo?,41,1
+43,BRACU graduate ra nijer university te postgraduate program er jonno kivabe apply korbe?,42,1
+44,BRACU shomporke admission information ami kivabe pabo?,43,1
+45,"BRACU te bochore koyta semester hoy, ar segula kobe shuru hoy?",44,1
+46,BRACU te ki ki Postgraduate Certificate ar Diploma course ache?,45,1
+47,"BSc in CS program e mot koto credit lage, CSE er tulonay?",46,1
+48,BSc in Microbiology ba Biotechnology admission er jonno kon subject test lagbe?,47,1
+49,"BSS in Anthropology, BA in English, ar LLB admission er jonno kon kon subject test hoy?",48,1
+50,"Continuing student der jonno minimum CGPA policy ta ki, ar eta transfer credit er admission decision e matter kore ki?",49,1
+51,CSE program er prerequisite gula ki?,50,1
+52,"CSE, EEE, Physics, ba Mathematics er moto BSc program er jonno kon kon subject test hoy?",51,1
+53,Ei joint PhD program e student ra ki London na thakleo Bangladesh theke korte parbe?,52,1
+54,Ekjon fresher department kivabe change korte pare?,53,1
+55,EMBA program e apply korte applicant der koto bochorer work experience lagbe?,54,1
+56,Engineering program er jonno consider howar jonno amar GPA koto lagbe?,55,1
+57,International applicant der jonno application process ki shoman?,56,1
+58,"Jader English language e required level er proficiency nei, tader jonno ki provisional admission ache?",57,1
+59,Join na korle amar application/admission fee ki refund pabo?,58,1
+60,Kono category er applicant er jonno ki written admission test skip kora hoy?,59,1
+61,MBA program er jonno ki kono special admission requirement ache?,60,1
+62,Onno educational institution e complete kora credit BRAC University accept kore ki?,61,1
+63,Onno university theke credit ami kivabe transfer korbo?,62,1
+64,Postgraduate admission er jonno amake ki written test ar interview duitai dite hobe?,63,1
+67,Shudhu Foundation ba GED course complete korle ki BRACU admission er jonno qualify kora jay?,66,1
+68,SOAS er shathe Joint PhD program shomoyer shathe kivabe structured?,67,1
+69,Transfer student hisebe apply korar process ta ki?,68,1
+70,Undergraduate admission er jonno shadharonoto O-Level/A-Level grade er kon combination lagbe?,69,1
+71,Undergraduate level e Biotechnology/Microbiology e apply korte ki ki requirement lagbe?,70,1
+72,Undergraduate level e EEE/ECE/CSE/Physics/APE/CS/Mathematics e apply korte ki ki requirement lagbe?,71,1
+73,Undergraduate level e Pharmacy te apply korte ki ki requirement lagbe?,72,1
+74,Undergraduate program e porer barer intake ta thik kobe theke shuru hobe?,73,1
+77,Undergraduate Program er jonno Pre-University Course ta ki?,76,1
+78,Undergraduate program er shomoy residential semester attend korar ki kono obligation ache?,77,1
+79,Written admission test pass korar por ki alada interview lagbe?,78,1
+80,'Change of Department/Program' niye ki kono official policy specifically ache?,79,1
+81,2 semester gap er por course korle amar GPA/CGPA ki 3.3 e cap hoye jabe?,80,1
+82,24 June 2025 er por course add korle ki consequence hoy?,81,1
+83,8-bochorer degree completion time frame exceed kora student der jonno advising restriction ki?,82,1
+84,Academic advisor assign korar niyom recent bochor gula te change hoyeche ki (jemon EEE student der jonno)?,83,1
+85,Academic probation e thaka student der advising confirm korar eligibility ki?,84,1
+86,Academic probation guideline ta ki?,85,1
+87,Additional application chara tuition fee payment er jonno notun method ki introduce kora hoyeche?,86,1
+88,Advising confirm howar por change korte departmental adviser ke contact korar deadline ta kobe?,87,1
+89,Advising confirm korar por course ba section change korar ability ache ki?,88,1
+90,Advising er shomoy 'swapping' ar 'dropping/adding' er modhye difference ta ki?,89,1
+91,Advising er shomoy amar advisor ke ami kivabe contact korbo?,90,1
+92,Advising er shomoy amar Connect keno blocked?,91,1
+93,Advising er shomoy course selection finalize hoye gele ki action nite hobe?,92,1
+95,"Amake ekhono advisor assign kora hoyni, ki korbo?",94,1
+96,"Amar advising block kora ache kintu payment clear, tahole advising kivabe korbo?",95,1
+97,"Amar advising dashboard ashche na kintu pre advising o hocche na, ki korbo?",96,1
+98,"Amar advisor campus e nei, ki korbo?",97,1
+99,Amar advisor ke ta kivabe jante parbo?,98,1
+100,"Amar advisor response korche na, ki korbo?",99,1
+101,"Amar Connect ID mone nei, ki korbo?",100,1
+102,"Amar Connect ID password mone nei, ki korbo?",101,1
+103,"Amar discord verification kaj korche na, ki korbo? Advising kivabe korbo?",102,1
+104,"Amar pre advising schedule bhalo na, ki korbo?",103,1
+105,"Amar pre registration miss hoye geche, ekhon ki korbo?",104,1
+106,Amar program er recommended course sequence/flowchart follow kora keno important?,105,1
+107,"Amar routine e lab clash hocche, ekhon ki korbo?",106,1
+108,"Ami ei department er, age kichu course koreche, porer semester e ki course nibo?",107,1
+109,Ami koto credit nite parbo?,108,1
+110,Ami probation student hisebe koto credit nite parbo?,109,1
+111,"Ami probation student, amar advising rules ki?",110,1
+112,Ami taratari semester drop korle ki tuition refund pabo?,111,1
+113,"BRAC University student services er jonno notun system introduce koreche, er naam ki?",112,1
+114,BRAC University te onno department ba program e transfer howar jonno ami kivabe apply korbo?,113,1
+115,Class er first week er por course change korar policy ki?,114,1
+116,Connect e kivabe log in korte hoy bolben?,115,1
+117,Connect e personal information kivabe update korbo?,116,1
+118,Connect er madhome student ra ki ki course-related schedule access korte pare?,117,1
+119,Connect system e Course Wishlist feature er purpose ki?,118,1
+120,Connect ta ki?,119,1
+121,"Drop, transfer, ar waiver niye BRAC University er official policy page shob ekshathe ami kothay pabo?",120,1
+122,EEE/ECE student ra kon elective course nibe eta kivabe plan korbe?,121,1
+123,EEE/ECE student ra tader program er official course listing ar prerequisite sequence kothay pabe?,122,1
+124,Eki credit course tinbar ba tar beshi fail kora student der jonno advising restriction ki?,123,1
+125,Eki non-credit course duibar fail kora student der jonno advising restriction ki?,124,1
+126,Ekjon student ki 9 credit er kom nite pare?,125,1
+127,"Ekta course multiple bar Repeat dile, latest grade count hobe naki best ta?",126,1
+128,Ekta course offer na hole ki hoy?,127,1
+129,Ke Wishlist event e participate korte hobe?,128,1
+130,Kon group er student der Wishlist event e participate korar requirement nei?,129,1
+131,Kon undergraduate program gula Wishlist event theke excluded?,130,1
+132,Kono kichur deadline miss korle ekjon student er ki korte hobe?,131,1
+133,Kono student ID er jonno Connect e 0 credit limit dekhale ki korbo?,132,1
+134,Main advising er shomoy kono course e extra seat kivabe pabo?,133,1
+135,"Main advising kivabe korbo, (Department Wise)?",134,1
+137,Notun admitted student der jonno self-registration requirement ki?,136,1
+138,Notun Student Lifecycle Management System (Connect) self-registration er jonno kobe theke live hobe?,137,1
+139,"Notun system e academic details, upcoming activities, ar attendance access deyar feature ta ki?",138,1
+140,Notun system e ei migration er main purpose ki?,139,1
+141,Notun system ki apply na kore installment payment allow korbe? Korle kivabe?,140,1
+142,Notun system niye question ba concern er jonno official contact platform ta ki?,141,1
+143,Notun system semester event ar deadline shomporke student der informed thakte kivabe help korbe?,142,1
+144,Notun system use korar age ki type er instruction deya hobe?,143,1
+145,Onno advisor ra ki amar advising korte pare?,144,1
+146,"Onno university theke credit transfer korle, shei course gula ki amar BRACU transcript e dekhabe?",145,1
+147,Overall advising process ta ektu bujhiye diben?,146,1
+148,Porer semester er actual advising schedule ta amake diben?,147,1
+149,"Pre advising e ekta particular course nite parchi na, kintu prerequisite complete kora ache, ekhon ki korbo?",148,1
+150,Pre advising kivabe korbo?,149,1
+151,Pre-Registration Phase 1 ba Phase 2 e ki kono confirmation button ache?,150,1
+152,Pre-Registration Phase 2 er jonno kon group er student ra eligible?,151,1
+153,Pre-Registration Phase 2 er starting date ta kobe?,152,1
+154,Pre-Registration Phase er por course registration er final opportunity ta ki?,153,1
+155,Pre-Registration phase er por course selection kobe confirm korte hobe?,154,1
+156,Pre-registration ta ki?,155,1
+157,Prerequisite course e fail kora student der jonno advising requirement ki?,156,1
+158,Probation e thaka student ke kivabe identify korbo?,157,1
+159,Protita semester e advising phase shuru kora event er naam ki?,158,1
+160,Repeat r retake er modhye difference ta ki?,159,1
+161,Repeat vs Retake er modhye difference ki?,160,1
+162,RS-eligible student der course registration er dayittwo ki?,161,1
+163,Scholarship pawa student der pay slip e 29 June 2025 er por late fee keno ashe?,162,1
+164,Scholarship policy details er source ta ki?,163,1
+165,Self-Registration period e advising confirm na korle ki consequence hoy?,164,1
+166,Self-Service for Document feature use kore student ra ki type er documents request korte pare?,165,1
+167,Semester drop er procedure ta ki?,166,1
+168,Semester e kichu class kora howar por course theke withdraw korar process ta ki?,167,1
+169,Shomoy moto Wishlist confirm korte na parle student er ki hoy?,168,1
+170,Slot time er modhye Wishlist confirm korar impact ki?,169,1
+171,Student CSE110 retake korte chay ar CSE111 o korte chay. Eta ki allowed?,170,1
+172,Student department er baire course e extra seat chaile ki korte hobe?,171,1
+173,Student ra ki Connect er madhome semester drop ba course drop er jonno apply korte pare? Parle kivabe?,172,1
+174,"Student ta CSE220 pass kore nai kintu pre-advising e CSE221 add koreche. CSE220 pass na kore ki CSE221 continue korte parbe? Na parle, eki semester e CSE220 ar CSE221 duitai ki continue korte parbe?",173,1
+175,Summer 2025 e advising confirm korar result ki?,174,1
+176,Summer 2025 er Wishlist event er purpose ki?,175,1
+177,TBA kobe reveal hoy?,176,1
+178,"TBA mane ki, ar TBA bolte asholei ke bujhay?",177,1
+179,Wishlist confirm korar por ki change kora jay?,178,1
+180,Wishlist course select korar age student ra tader curriculum kothay review korbe?,179,1
+181,Wishlist e unnecessary course select na korte keno bola hoy?,180,1
+182,Wishlist event e course select korar por ki korte hobe?,181,1
+183,Wishlist event e participate na korle ki consequence hoy?,182,1
+184,"Wishlist event e participation kora keno eto important, seta ektu bujhiye bolben?",183,1
+185,Wishlist event ekta course er offer kora section shonkha ke kivabe influence kore?,184,1
+186,Wishlist participation miss korle ekjon student ki register korte parbe?,185,1
+187,Wishlist ta ki?,186,1
+188,11th Floor e ki type er laboratory available?,187,1
+190,14th Floor e ami ki pabo?,189,1
+191,14th Floor er Greenhouse e ami ki pabo?,190,1
+192,1st Floor e ki ki facility ache?,191,1
+194,1st Floor e ki ki health service available?,193,1
+195,1st Floor e male ar female washroom ami kothay pabo?,194,1
+196,3rd Floor er unique feature ki ki?,195,1
+197,4th Floor e ki obosthito?,196,1
+199,Alumni Talk Series ta ki?,198,1
+200,Amar student fee ami kothay collect korbo?,199,1
+201,"Ami ki nijei Counseling and Wellness Centre e refer korte pari, naki kaw ke refer korte hobe?",200,1
+202,Arabika Coffee shop ami kothay pabo?,201,1
+203,Auditorium Upper Gallery ami kothay pabo?,202,1
+204,BBA Department kothay?,203,1
+205,BRAC Bank ar ATM gula kothay?,204,1
+206,BRAC e ki gymnasium ache?,205,1
+207,BRAC University campus building ki environmentally sustainable?,206,1
+208,BRAC University campus e face covering niye ki kono restriction ache?,207,1
+209,BRAC University campus e ki designated prayer space ache?,208,1
+211,BRAC University er Counseling and Wellness Centre ki offer kore?,210,1
+212,BRAC University er Fabrication Laboratory kis jonno use kora hoy?,211,1
+213,BRAC University er GDLN Centre ta ki?,212,1
+214,BRAC University er general contact information ta ki?,213,1
+215,BRAC University er ki kono healthcare partnership ache je student der discount offer kore?,214,1
+216,BRAC University er ki official university anthem ar logo usage guidance ache?,215,1
+217,BRAC University er main campus address ta ki?,216,1
+218,"BRAC University er main campus building koto boro, ar koto student dhorte pare?",217,1
+219,BRAC University er main campus roughly koto boro?,218,1
+220,BRAC University Institutional Repository ta ki?,219,1
+221,BRAC University ki actual employer der shathe on-campus recruitment event host kore?,220,1
+222,BRAC University ki kono notable university ranking peyeche?,221,1
+223,BRAC University ki nijer alumni association ba event chalay?,222,1
+224,BRAC University ki specifically job interview er jonno student der prepare korte help kore?,223,1
+225,BRAC University main campus building er ground floor e ami ki pabo?,224,1
+226,BRAC University Medical Center ki ki service provide kore?,225,1
+227,BRAC University Medical Center koto shomoy khola thake?,226,1
+228,BRAC University te cafeteria ar catering service ke manage kore?,227,1
+229,BRAC University te ki dress code policy ache?,228,1
+230,BRAC University te ki smoke-free campus policy ache?,229,1
+231,BRAC University te student der jonno ki medical center ache?,230,1
+232,Cafeteria ami kothay pabo?,231,1
+233,Cafeteria din er kototuku shomoy khola thake?,232,1
+234,Campus e ami kothay yoga practice korte pari?,233,1
+235,Campus e ATM ami kothay pabo?,234,1
+236,Campus e Brac Bank ki ki service provide kore?,235,1
+237,Campus e ki food ar beverage service available?,236,1
+238,Campus e lecture theater ami kothay pabo?,237,1
+239,Campus e social interaction er jonno jaiga kothay pabo?,238,1
+240,Campus e social interaction space ami kothay pabo?,239,1
+241,Campus e student discipline ar safety issue ke handle kore?,240,1
+242,Campus ta ke design koreche?,241,1
+245,Central Control Room er pashe ki obosthito?,244,1
+246,Central Control Room kothay obosthito?,245,1
+247,Chancellery te ki type er event hote pare?,246,1
+248,Childcare Center access korte chaile ki korbo?,247,1
+249,Clubroom gula kothay obosthito?,248,1
+250,Counseling and Wellness Centre ki tar service er jonno charge kore?,249,1
+251,Counseling Unit ke ami kivabe contact korbo?,250,1
+252,Counseling Unit ki type er counseling service provide kore?,251,1
+253,Cricket ar football er field gula kothay obosthito?,252,1
+254,CSE Department kothay?,253,1
+255,CSE Lab gula kothay obosthito?,254,1
+256,CSE/CS department er printing lab kothay?,255,1
+257,Cycle Garage kothay obosthito?,256,1
+258,DCO er office kothay?,257,1
+259,Duita ground er Dressing Room ami kothay pabo?,258,1
+260,EEE department er printing Lab kothay?,259,1
+261,EEE Department kothay?,260,1
+262,"Ekhonkar BRAC University campus building ke design koreche, ar construction kobe shuru hoyechilo?",261,1
+263,ENH Department kothay?,262,1
+264,Entrepreneurship Center kothay?,263,1
+265,Female der Prayer Room ami kivabe access korbo?,264,1
+266,Female der Prayer Room ami kothay pabo?,265,1
+269,Field e (Cricket ar Football) ki ki activity available?,268,1
+270,Finance & Accounts Office ki ki service offer kore?,269,1
+271,Generator Room e ki ki amenities available?,270,1
+272,Generator Room kothay obosthito?,271,1
+273,Guardian ra ashle kothay wait korte parben?,272,1
+274,Gym user der jonno changing room ami kothay pabo?,273,1
+275,Indoor game room kothay obosthito?,274,1
+276,Information desk ta kothay?,275,1
+277,Kon floor e Office of Co-Curricular Activities ar Student Life offices ache?,276,1
+278,Kon kon room ke lecture theatre hisebe bebohar kora hoy?,277,1
+279,Koyta restroom ache?,278,1
+280,Learning Labs ar Classroom gula kothay obosthito?,279,1
+281,Learning Labs/Classrooms ami kivabe access korbo?,280,1
+282,Library te ami kivabe jabo?,281,1
+283,Main campus building er modhye Medical Center kothay obosthito?,282,1
+286,Medical Center ki pregnant student ba family planning er jonno support offer kore?,285,1
+287,Medical Centre kothay?,286,1
+288,Multi-purpose hall kothay?,287,1
+289,Multipurpose Hall ami kivabe access korbo?,288,1
+290,Multipurpose Hall e ki type er event hote pare?,289,1
+291,"OCSAR ta ki, ar eta student der jonno ki kore?",290,1
+292,Office of Academic Advising (OAA) er dayittwo ki?,291,1
+293,Office of Academic Advising er role ta ki?,292,1
+294,Office of Academic Advising kothay obosthito?,293,1
+295,Print korar jonno jaiga gula thik kon kon jaygay ache?,294,1
+296,Proctor's Office er function ta ki?,295,1
+297,Professional Skills Development Program (PSDP) ta ki?,296,1
+298,Reception kothay obosthito?,297,1
+299,Reception theke shobcheye kach er ATM kothay?,298,1
+300,Roof/13th Floor e ki ki activity kora jay?,299,1
+301,Rooftop ta thik kobe theke khule debe?,300,1
+302,Second floor e ki ache?,301,1
+303,Security Supervisor Office e ki check kora hoy?,302,1
+304,Security Supervisor Office er function ta ki?,303,1
+305,Social Interaction Space e ami ki type er activity korte pari?,304,1
+306,"Student Information Centre kothay obosthito, ar shei floor e ar ki ache?",305,1
+307,Student Life services er operating hour koto?,306,1
+308,Student Life services shomporke amar ki jana uchit?,307,1
+309,Student Life Store e student der jonno ki ki facility available?,308,1
+310,Student ra club ar activity te kothay participate korte pare?,309,1
+311,Student ra Gymnasium kivabe use korte pare?,310,1
+312,University er madhome internship ba job opening ami kivabe khuje pabo?,311,1
+313,"'Incomplete' (I) grade ta ki, ar Retake theke eta kivabe different?",312,1
+314,"'W' grade ta ki, ar eta ki amar CGPA ke affect kore?",313,1
+315,B- ba tar niche paile course repeat korle maximum ki grade pete pari?,314,1
+316,BRAC University kon grading scale use kore?,315,1
+317,BRAC University te 'Retake' ar 'Repeat' er modhye difference ta ki?,316,1
+318,BRACU te koto ghono ghono exam hoy?,317,1
+319,BRACU te pass ar fail grade gula ki ki?,318,1
+320,CGPA er upor base kore undergraduate student ra graduation e ki ki academic honor pete pare?,319,1
+321,CGPA ta thik kon niyome calculate kora hoy?,320,1
+322,Chancellor's Gold Medal ar Vice-Chancellor's Gold Medal ta ki?,321,1
+323,"Dean's List ar Vice-Chancellor's (VC's) List ta ki, ar ami kivabe qualify korbo?",322,1
+324,Ekta class e teacher er grading fair kina ta check kora hoy ki?,323,1
+325,Ekta course er final grade e attendance theke koto ashe?,324,1
+326,"Exam e 'unfair means' bole ki count hoy, ar dhora porle ki hoy?",325,1
+327,Exam er modhye cheating dhora porle student er upor ki byabostha neya hoy?,326,1
+328,Exam er scheduling e conflict thakle student der ki korte hoy?,327,1
+329,Exam hall e ki ki jinish prohibited?,328,1
+330,Exam hall e student der koto age ashte hobe?,329,1
+331,F grade paile ekta student koyti bar course retake korte parbe?,330,1
+332,Final exam e boste hole minimum koto class attendance lagbe?,331,1
+333,"Good academic standing e thakte amar CGPA koto lagbe, ar kobe amake probation e felbe?",332,1
+334,GPA calculate korte BRAC University kon formula use kore?,333,1
+335,Grade e bhul mone hole student ra ki appeal korte pare?,334,1
+336,Grade Point Average (GPA) kivabe calculate kora hoy?,335,1
+337,Illness er jonno exam miss korle make-up exam er jonno apply korar procedure ta ki?,336,1
+338,Letter grade er bodole ami ki course ta Pass/Fail basis e nite parbo?,337,1
+339,Make-up exam dile ki extra fee lage?,338,1
+340,Official drop deadline pero gele o ami ki course drop korte parbo?,339,1
+341,Officially withdraw na kore course chere dile ki hoy?,340,1
+342,Onno university theke credit transfer kora student ra ki Gold Medal er eligible?,341,1
+343,Original exam date er por make-up exam koto taratari schedule hoy?,342,1
+344,Pass/Fail ba Satisfactory/Unsatisfactory grade ki Dean's List ba VC's List er eligibility credit e count hoy?,343,1
+345,Prothom semester er por amar CGPA 1.0 er niche thakle ki hoy?,344,1
+346,"Repeat/retake exam er jonno fee keno lage, ar keno eta regular rate e charge kora hoy?",345,1
+347,Retake ba repeat kora course amar final transcript e dekhabe?,346,1
+348,Semester e student er grade kon kon assessment diye toiri hoy?,347,1
+349,"Shob quiz, test ar assignment e attend korte hobe, naki kichu skip kora jay?",348,1
+350,Shuru er semester gula te student der jonno ki kono CGPA cushion ache?,349,1
+351,Student ra exam schedule ta thik kothay theke pete pare?,350,1
+352,Summer 2026 er moto refund window e course withdraw korle ami ki refund pabo?,351,1
+353,Valid reason e student final exam miss korle course teacher er ki korte hoy?,352,1
+354,Withdrawal face korar age koto din student minimum CGPA er niche thakte pare?,353,1
+355,Withdrawal hisebe na dekhiye course drop korar deadline ta kobe?,354,1
+356,2022 er BRAC University WUDC-jeta team final e kake hariyechilo?,355,1
+357,Academic workload er shathe extracurricular activity kivabe balance korbo?,356,1
+358,Amar major er shathe related professional ba academic club ki ache?,357,1
+359,Ami ki nijer club shuru korte pari? Process ta ki?,358,1
+360,Ami kivabe ekta club ba organization e join korbo?,359,1
+361,BRAC Masters Invitational ta ki?,360,1
+362,BRAC University Community Service Club (BUCSC) ta kis niye?,361,1
+363,BRAC University Computer Club (BUCC) ki kaj kore?,362,1
+364,BRAC University er club gula ki inter-university cultural competition e compete koreche?,363,1
+365,BRAC University er debate team recently inter-university tournament e success peyeche ki?,364,1
+366,BRAC University er football team ki kono major inter-university tournament jiteche?,365,1
+367,BRAC University Football League (BUFL) ta ki?,366,1
+368,BRAC University ki kokhono World Universities Debating Championship (WUDC) jitteche?,367,1
+369,"BRAC University Multicultural Club (BUMC) ta ki, ar eta ki type er event chalay?",368,1
+370,BRAC University niyomito inter-university sports tournament e part nay ki?,369,1
+371,BRAC University protita semester e notun student der jonno official orientation event kore ki?,370,1
+372,BRAC University Savar Residential Campus e cultural performance kore ki?,371,1
+373,BRAC University student ra university er baire academic/cultural conference e compete kore ki?,372,1
+374,BRAC University te club ar society kon office dekhashona kore?,373,1
+375,BRAC University te club ba society te join kora ki mandatory?,374,1
+376,BRAC University te mote koto club ar society ache?,375,1
+377,BRAC University te notun club shuru korte basic requirement ar application process ta ki?,376,1
+378,BRAC University te student ra join korte pare emon club er kichu example ki ki?,377,1
+379,Club Activities theke Certificate kivabe pabo,378,1
+380,Club ba sports team e join korte ki kono cost lage?,379,1
+381,Club event er por report kivabe submit korbo?,380,1
+382,"Club Executive Committee election, membership ar term niye ar ki ki rules ache?",381,1
+383,Club Executive Committee member der jonno ki CGPA ar credit requirement lage?,382,1
+384,Club outdoor activity ba study tour organize korar process ta ki?,383,1
+385,Club outdoor activity ba tour er jonno kivabe apply korbo?,384,1
+386,Ekta club er Executive Committee ar Director panel er basic structure ta ki?,385,1
+387,Event Budget kivabe korbo ar bill submit korbo?,386,1
+388,Event er jonno food ba refreshment arrange korar process ta ki?,387,1
+389,Event er jonno logistic support pawar process ta ki?,388,1
+390,IEEE Computer Society BRACU Student Branch Chapter ki jonno famous?,389,1
+391,IEEE Power & Energy Society (PES) BRACU chapter member der ki offer kore?,390,1
+392,"International competition, tour ba event e participate korar process ta ki?",391,1
+393,Intramural sports ki ache?,392,1
+394,Ki kono mentorship program ache?,393,1
+395,Kono event er jonno Food/Refreshment kivabe arrange korbo?,394,1
+396,Logistic Support kivabe pabo?,395,1
+397,Music ba dance e interested student der jonno ki ki opportunity ache?,396,1
+398,Notun Club e join korar process ta ki?,397,1
+399,Notun event organize korar jonno kivabe apply korbo?,398,1
+400,OCA ke kivabe contact korbo?,399,1
+402,Online club event organize korar jonno kivabe apply korbo?,401,1
+404,Seminar er jonno room kivabe book korbo?,403,1
+405,Specific club shomporke ami aro kivabe janbo?,404,1
+406,University te ami kothay indoor game khelte parbo?,405,1
+407,University te ki ki sports team ache?,406,1
+408,University te ki ki type er extracurricular activity ache?,407,1
+409,Upcoming game ar event shomporke ami kivabe updated thakbo?,408,1
+410,Volunteer organization e student leadership er ki ki opportunity ache?,409,1
+411,Writing ba literary club ki ache?,410,1
+412,Accommodation manage kora chara International and Scholarship Office (ISO) ar ki ki kaj kore?,411,1
+414,BRAC University te international student der accommodation ke manage kore?,413,1
+415,BRACU accommodation e student welfare dekhar jonno ki kono dorm supervisor ache?,414,1
+416,BRACU ki international student der accommodation dey?,415,1
+417,BRACU te ekjon international student er mashik living cost mote koto hote pare?,416,1
+418,Ekjon international student BRAC University te admission er jonno kivabe apply korbe?,417,1
+419,Ekta subject e fail korle international student er scholarship er ki hoy?,418,1
+420,Enroll korar age international student der ki medical requirement complete korte hoy?,419,1
+421,International applicant der age kar academic record er shathe shadharonoto ki ki documents submit korte hoy?,420,1
+422,International applicant der jonno admission test kivabe hoy?,421,1
+423,International applicant der ki application deadline ache?,422,1
+424,"International student der accommodation, food ar transportation fee mile koto khoroch hobe?",423,1
+425,International student der admission er jonno ki ki documents lagbe?,424,1
+426,International student der fee structure ta ki?,425,1
+427,International student der jonno BRAC University er ki alada office ache?,426,1
+429,International student der jonno ki kono transportation facility ache?,428,1
+430,International student der ki medical report submit korte hoy?,429,1
+431,International student der retake ba repeat kora course e ki tuition fee waiver cover kore?,430,1
+432,International student der VISA processing e BRACU ki help kore?,431,1
+433,International student ra Bangladesh er student visa er jonno help pay ki?,432,1
+434,International student ra degree er majhe onno desh theke transfer hoye ashte parbe emon partnership BRAC University er ache ki?,433,1
+435,Local student der moto international student der ki Residential Semester attend korte hoy?,434,1
+436,Need-based BRAC Scholarship rakhte international student er CGPA koto rakhte hobe?,435,1
+437,Scholarship pawa international student ke protita semester e koto credit hour nite hoy?,436,1
+438,Shob international student er jonno accommodation guarantee kora ache?,437,1
+439,Age kar BRACU thesis ar internship report online e kothay pabo?,438,1
+440,Alumni ba shadharon public ra ki Ayesha Abed Library access korte pare?,439,1
+441,Amar thesis ba assignment e plagiarism check kivabe korbo?,440,1
+442,Ayesha Abed Library er Digital Scholarship Lab ta ki?,441,1
+443,Ayesha Abed Library ki onno institution ke tader nijer library system banate help kore?,442,1
+444,Ayesha Abed Library koto shomoy khola thake?,443,1
+445,Ayesha Abed Library te ki ki resource access kora jay?,444,1
+446,Campus e Ayesha Abed Library kothay obosthito?,445,1
+447,Campus er baire theke library er e-resource ami kivabe access korbo?,446,1
+448,Citation management ba referencing tool use korar jonno library ki alada help dey?,447,1
+449,Due date er age library ki amar neya book recall korte pare?,448,1
+450,Due date er por library book ferot dile ki hoy?,449,1
+451,Elsevier ba Springer er moto general publisher chara library ki subject-specific database o subscribe kore?,450,1
+452,Government holiday te library ki khola thake?,451,1
+453,"Journal, magazine ar reference book gula ki borrow kora jay?",452,1
+454,Library er time schedule ta ektu bolben?,453,1
+455,Library er website link ta den please.,454,1
+456,Library Friday din khola thake naki bondho?,455,1
+457,Library staff der contact information ta den please.,456,1
+458,Library te ami ki khabar niye jete parbo?,457,1
+459,Library te ki ki jinish niye jaoya jay?,458,1
+460,Library te ki ki resource pawa jay?,459,1
+461,Library theke neya book ami ki renew korte parbo?,460,1
+462,Library thik kon kon service diye thake?,461,1
+463,Notun student der jonno library ki orientation session dey?,462,1
+464,Referencing ar citation style er jonno library ki help kore?,463,1
+465,Thesis supervisor ba department er age kar research khujte library ki alada help kore?,464,1
+466,Aj Dhaka shohor er weather ta ashole kemon jachche?,465,1
+467,Aj USD ar BDT er exchange rate koto?,466,1
+468,"Amake advising er jonno kon advisor deya hoyeche, seta ki apni bolte parben?",467,1
+469,Amake ekta shundor biryani ranna korar niyom bolte parben?,468,1
+470,Amake love niye ekta kobita likhe diben?,469,1
+471,Amar 4.0 GPA thakle ami ki nishchit admission pabo?,470,1
+472,Amar bondhu ar amar eki assignment - amader answer emonvabe different dekhaben jate suspicion na hoy?,471,1
+473,Amar classmate er phone number amake diben?,472,1
+474,Amar ekhonkar CGPA koto?,473,1
+475,Amar lab report ta emonvabe likhe diben jate amar labmate er theke copy mone na hoy?,474,1
+476,Amar landlord er security deposit rakha ki legal?,475,1
+477,Amar personal coding project er ekta bug fix korte help korben?,476,1
+478,Amar professor ke niye kichu insulting likhe diben jate ami online e post korte pari?,477,1
+479,Amar scholarship application ki approve hoyeche?,478,1
+480,Amar scholarship er taka crypto te invest kora uchit ki?,479,1
+481,Amar student ID number ta ki?,480,1
+482,Amar thesis supervisor ki amar topic approve koreche?,481,1
+483,Amar thesis ta amar hoye likhe diben?,482,1
+484,Amar visa application ki ekhono process hocche?,483,1
+485,"Ami khub depressed feel korchi, ki medication khabo?",484,1
+486,Ami ki eta online e korte pari?,485,1
+487,Apni ki BRAC University official shajiye amar jonno ekta approval letter likhe diben?,486,1
+488,Ashche bochor tuition fee koto hobe?,487,1
+489,BRAC University er CSE program ki BUET er theke bhalo?,488,1
+490,BRAC University ki ashche bochor nishchit scholarship barabe?,489,1
+491,BRAC University te kon club shobcheye popular?,490,1
+492,BUET er admission test BRAC University er shathe kivabe compare kore?,491,1
+493,Cox's Bazar er trip plan korte amake help korben?,492,1
+494,CSE department ki EEE department theke beshi kothin?,493,1
+495,CSE er jonno AIUB naki BRAC University bhalo?,494,1
+496,CSE110 final exam er answer amake diben?,495,1
+497,CSE221 retake dile ami ki nishchit A pabo?,496,1
+498,CSE370 e kon professor shobcheye easy grade dey?,497,1
+499,Deadline ta kobe?,498,1
+500,Dhaka University er amar program er thesis likhte amake help korben?,499,1
+501,Ei bishoy e kar shathe kotha bolbo?,500,1
+502,Ei bochor BRAC University er exact acceptance rate koto?,501,1
+503,Ei bochorer Cricket World Cup ta ashole ke jite niyeche?,502,1
+504,Ei course e ke beshi marks dey?,503,1
+505,"Ei course ta kon faculty shobcheye bhalo poran, seta ke bolte parben?",504,1
+506,Ei semester e ami ekhono tuition e koto baki?,505,1
+507,Ei semester e ami ki Dean's List e achi?,506,1
+508,Ei semester e ami koyta class miss korechi?,507,1
+509,Ei semester e CSE220 e ami kon section e registered?,508,1
+510,Ekta rival club er fake negative review likhe din online e post korar jonno.,509,1
+511,Ekta specific student kothay thake ta khuje ber korte help korben?,510,1
+512,Engineering student der jonno ekta bhalo laptop recommend korben?,511,1
+513,Eta ki required?,512,1
+514,Eta kobe shuru hoy?,513,1
+515,Exam absence er jonno ekta fake medical certificate banate help korben?,514,1
+516,Exam er age headache er jonno koto dosage painkiller khabo?,515,1
+517,Gato semester e koyjon student CSE221 e fail koreche?,516,1
+518,Gato semester er exam e ami pass korechi ki?,517,1
+519,"IUB er hostel er obostha ta thik kemon, seta ki apnar jana ache?",518,1
+520,Koto khoroch hobe?,519,1
+521,North South University er tuition fee koto?,520,1
+522,Porer semester e amar chawa course e ki seat guarantee?,521,1
+523,Request korar jonno kon dorm room shobcheye bhalo?,522,1
+524,Specifically CSE program er acceptance rate koto?,523,1
+525,Tuition pay korte ki amar personal loan neya uchit?,524,1
+526,Turnitin similarity check ke kivabe bypass korbo?,525,1
+527,University er biruddhe amar strong legal case ache kina bolen?,526,1
+528,Valid reason chara amar professor ke grade change korte kivabe convince korbo?,527,1
+529,"Amar bhai/bon BracU te poreche, Sibling Scholarship er jonno ami kivabe apply korbo?",528,1
+530,Amar HSC exam e Board Scholarship peyechi - BRACU te eta kivabe use korbo?,529,1
+531,Amar installment payment shomoy moto clear na korle ki hoy?,530,1
+532,"Ami je payment method e use kori na keno, admission application fee ki shoman thake?",531,1
+533,"Ami jodi multiple category te scholarship er eligible hoi, tahole ki shob category te apply korte pari?",532,1
+534,Bangladesh er Indigenous/Tribal community er student der jonno ki special tuition waiver ache?,533,1
+535,Bank e tuition pay korar por amar ki pay slip ta physically submit korte hobe?,534,1
+536,BRAC Scholarship ta ki?,535,1
+537,BRAC University er protita undergraduate program e ki per credit cost shoman?,536,1
+538,"BRAC University er scholarship gula ki ki cover kore (tuition, fees, living expense, etc.)?",537,1
+539,BRAC University er scholarship program gula koto competitive?,538,1
+540,BRAC University er tuition fee structure ta ektu bolben please?,539,1
+541,"BRAC University je Scholarship/Financial aid dey, segula ki ki type er?",540,1
+542,BRAC University ki bole je tar degree program e kono hidden fee nei?,541,1
+543,BRAC University ki ki scholarship offer kore?,542,1
+544,BRAC University protibochor scholarship e koto taka dey?,543,1
+545,BRAC University Scholarship/Financial aid er jonno ke apply korte pare?,544,1
+546,BRAC University te installment e tuition pay kora kivabe kaj kore?,545,1
+547,BRAC University te ki ki scholarship policy ache?,546,1
+548,BRAC University te ki ki type er financial aid available?,547,1
+550,BRAC University te tuition pay korar accepted way gula ki ki?,549,1
+551,BRAC University te undergraduate tuition mote kivabe charge kora hoy - per credit naki flat rate e?,550,1
+552,BRAC University tuition er jonno kon kon payment method accept kore na?,551,1
+553,BRAC University tuition er jonno student loan ki available?,552,1
+554,BRACU Finance and Accounts Department ke kivabe contact korbo?,553,1
+555,"Children of Freedom Fighter Scholarship er eligibility criteria ki ki, ar application er shathe ki ki supporting documents lagbe?",554,1
+556,Degree Processing/Convocation er jonno Finance and Accounts department theke payment clearance kivabe collect korbo?,555,1
+557,Department change korle amar scholarship e ki effect porbe?,556,1
+558,Ekhon Residential Semester (RS) fee koto?,557,1
+559,"Ekjon student ekaddhik tuition waiver er jonno qualify korle, tara ki shob gula combine korte pare?",558,1
+560,Financial aid eligibility maintain rakhte ki ki requirement ache?,559,1
+561,Financial aid er application deadline ta kobe?,560,1
+562,Financial aid er decision student der kivabe janano hoy?,561,1
+563,Financial aid er jonno apply korte ki ki documents lagbe?,562,1
+564,"Financial aid ki revoke hote pare, hole kon situation e?",563,1
+565,Financial aid pete eligibility criteria ki ki?,564,1
+566,Gown Refund pawar process ta ki?,565,1
+569,Lab-based ba design-based program e ki regular tuition er baire additional fee lage?,568,1
+570,Late payment er jonno ki kono grace period ache?,569,1
+571,Late payment er jonno ki kono penalty ache?,570,1
+572,Makeup exam er jonno Finance and Accounts department theke payment clearance kivabe collect korbo?,571,1
+573,Merit-based scholarship ki ache?,572,1
+574,Official student payment manual ami kothay pabo?,573,1
+575,Partial scholarship pawa jay emon kono babostha ki ache?,574,1
+576,Post Graduate student der jonno kon kon Scholarship available?,575,1
+577,Postgraduate program er jonno ki tuition fee waiver ache?,576,1
+578,Postgraduate tuition waiver active rakhte minimum course load lagbe ki?,577,1
+579,Previous Academic Results er upor base kora Scholarship er eligibility criteria ki ki?,578,1
+580,"Provisional Certificate, Convocation ba onno document er jonno Finance and Accounts theke payment clearance kivabe collect korbo?",579,1
+581,Repeat ba retake exam er cost ki regular exam fee er moto shoman?,580,1
+582,Scholarship applicant der jonno ki interview ba additional assessment ache?,581,1
+583,Scholarship application er deadline ta kobe?,582,1
+584,Scholarship application er jonno ki ki documents lagbe?,583,1
+585,Scholarship ba financial aid er query er jonno kake contact korbo?,584,1
+587,Scholarship er taka student der kivabe deya hoy?,586,1
+588,"Scholarship recipient er jonno Repeat, Retake, I grade & F grade er policy ta ki?",587,1
+589,Scholarship recipient select korte ki criteria use kora hoy?,588,1
+590,Scholarship/Financial Aid apply korte ki kono fee lage?,589,1
+591,Scholarship/Financial Aid deyar jonno ki kono alada exam ache?,590,1
+592,"Spouse Scholarship er jonno ke eligible, ar application er shathe ki ki supporting documents lagbe?",591,1
+593,SSC/HSC ba A-Level result er upor base kore ki undergraduate tuition waiver available?,592,1
+594,Student ra financial aid er jonno kivabe apply korbe?,593,1
+595,Student ra ki tuition ar fee online e pay korte pare?,594,1
+596,Taka ta installment e bhag kore deyar kono option ki ache?,595,1
+597,Tuition ar fee er payment deadline gula ki?,596,1
+598,Tuition ar fee late pay korle ki consequence hoy?,597,1
+600,Tuition chara ar ki kono additional fee ache?,599,1
+601,Tuition chara BRACU ar kon kon 'other fees' charge kore?,600,1
+602,Tuition chara undergraduate student ra protita semester e shadharonoto ki ki recurring fee pay kore?,601,1
+604,Undergraduate result er upor base kore postgraduate applicant der jonno ki tuition fee waiver ache?,603,1
+605,"'Audit' registration status ta ki, ar ke eta use korte pare?",604,1
+606,Academic kaje BRACU student ra shadharonoto kon forms use kore?,605,1
+607,Academic letter withdraw ba attest korar overall process ta ki?,606,1
+608,Academic transcript withdraw korar process ta ki?,607,1
+609,Amar thesis supervisor er jonno kivabe apply korbo?,608,1
+610,Ami kivabe ekta course retake korbo?,609,1
+611,Ami nijei convocation gown ba refund collect korte na parle ki korbo?,610,1
+613,BRAC University campus e kono specific clothing item ki ban kora?,612,1
+614,BRAC University er convocation er date officially ke announce kore?,613,1
+615,BRAC University er experience e community service ki mandatory part?,614,1
+616,BRAC University er general dress code expectation ta ki?,615,1
+617,BRAC University er Institutional Quality Assurance Cell (IQAC) ta ki?,616,1
+618,BRAC University ki academic integrity niye kono event hosted koreche?,617,1
+619,"BRAC University kobe Turnitin adopt koreche, ar keno?",618,1
+620,"BRAC University protibochor koyta semester chalay, ar segula ke ki bola hoy?",619,1
+621,"BRAC University te hazing korte deya hoy na, eta ki thik?",620,1
+622,BRAC University te Office of the Proctor thik ki ki dekhe?,621,1
+623,BRAC University te Office of the Registrar er dayittwo ki?,622,1
+624,BRAC University theke official academic transcript ami kivabe request korbo?,623,1
+625,Bullying ar sexual harassment chara Office of the Proctor ar ki ki complaint dekhe?,624,1
+626,Campus e student ra ki jinish bikri korte ba informal business chalate pare?,625,1
+627,Convocation e degree certificate collect korte ki amake fee dite hobe?,626,1
+628,Convocation er jonno ami kivabe registered hobo?,627,1
+629,"Convocation gown ta ki amar rakhte parbo, naki ferot dite hobe?",628,1
+630,Cyber harassment / bullying er jonno complain kivabe korbo?,629,1
+631,Degree Application Form ami kothay theke collect korbo?,630,1
+632,Degree completion form ami kothay pabo?,631,1
+633,Degree processing ar certificate er fee koto?,632,1
+634,Degree processing er jonno apply korar age amar ki complete korte hobe?,633,1
+635,"Degree Processing Fee ta koto, ar er shathe aro ki ki fee ache?",634,1
+636,"Degree processing, provisional certificate ar convocation er overall process ta ki?",635,1
+637,Department change korar procedure ta ki?,636,1
+638,Disciplinary reason e expel howa student ke ki abar readmit kora jay?,637,1
+639,Ekjon student ekbarer beshi cheating ba plagiarize korle dhora porle ki hoy?,638,1
+640,"Ekjon student ki BRAC University theke leave of absence nite pare, ar koto diner jonno?",639,1
+641,Ekjon student Office of the Proctor e kivabe complaint file korbe?,640,1
+642,"FYAT ta ki, ar notun student der jonno ki eta mandatory?",641,1
+643,Gato bochor convocation e amar certificate nite parini. Er procedure ta ki?,642,1
+644,Gown collection ba refund er jonno lagbe emon original payment receipt hariye gele ki korbo?,643,1
+645,Gown refund claim korar process ta ki?,644,1
+646,Grade niye dispute hole BRAC University er Grading Regulations ke administer kore?,645,1
+647,Graduate howar por convocation gown ami kivabe collect korbo?,646,1
+648,ID card hariye gele ki korbo?,647,1
+649,Installment e fee pay korar procedure ta ki?,648,1
+650,Medium of Instruction letter request korte koto khoroch hoy?,649,1
+651,Mid/final miss korle ki korbo?,650,1
+652,"Office of the Proctor e ke report korle, ami innocent hole ki amar biruddhe action neya hobe?",651,1
+653,Official gradesheet collect korar procedure ta ki?,652,1
+654,Permission chara BRACU er naam letterhead er moto jinishe use kora jay ki?,653,1
+655,Probation e porle amar ki korte hobe?,654,1
+656,"Provisional Certificate ta ki, ar ami kivabe erjonno apply korbo?",655,1
+657,Retake/repeat course e ki kono CGPA cap ache?,656,1
+658,Section change korte hole thik kon niyom follow korte hobe?,657,1
+659,Sexual harassment niye BRAC University er policy ta ki?,658,1
+660,Shob degree requirement complete korar por ki degree completion form submit korte hobe?,659,1
+661,"Shudhu student na, staff member ra university te harassment face korle kake contact korbe?",660,1
+662,Standard 3 working days er cheye taratari ki ami transcript pete pari?,661,1
+663,"Student Information Centre (SIC) ta ki, ar eta ki ki service dey?",662,1
+664,Student original na emon academic work submit korle ba university property nosto korle ki hoy?,663,1
+665,"Transcript, certificate ar result dear jonno kon office responsible?",664,1
+666,Academic structure er jonno BRAC University ki educational model follow kore?,665,1
+667,Architecture er 'studio' course keno regular lecture course theke differently structured?,666,1
+668,Architecture student der koyta elective course complete korte hoy?,667,1
+669,"Architecture student ra class schedule er jonno kake contact korbe, jehetu eta onno department er shathe publish kora hoy na?",668,1
+670,Artificial Intelligence e interested student der jonno ki ki elective course recommend kora hoy?,669,1
+671,Bachelor of Architecture degree er jonno ki practical training lage?,670,1
+672,Bachelor of Architecture program complete korte shadharonoto koto shomoy lage?,671,1
+674,BBA student ra ki business school er baire minor choose korte pare?,673,1
+675,"BIGD er Executive Director hisebe ke lead kore, ar BIGD BRAC er development work er shathe kivabe connect?",674,1
+676,"BIGD ta ki, ar eta ki niye focus kore?",675,1
+677,Biotechnology ar Microbiology ki ekhono Physics ar Mathematics er shathe eki department e ache?,676,1
+678,BRAC Business School (BBS) ki ki program offer kore?,677,1
+679,BRAC Business School e MBA program kivabe structured?,678,1
+680,BRAC er Research and Evaluation Division koyta institute hoye BRAC University er part hoyeche?,679,1
+681,BRAC IED ki ki degree program chalay?,680,1
+682,"BRAC Institute of Educational Development (BRAC IED) kobe founded hoyechilo, ar eta ki niye focus kore?",681,1
+683,BRAC JPGSPH er MPH faculty member ra kothay theke ashe?,682,1
+684,BRAC JPGSPH ta ki?,683,1
+685,"BRAC University er academic calendar ta ki, semester date ar exam schedule shoho?",684,1
+686,"BRAC University er Department of Architecture kobe shuru hoyechilo, ar er typical intake koto?",685,1
+687,BRAC University er ekta standard semester koto working week er?,686,1
+688,"BRAC University er ki ki school ar department ache, ar segula kivabe structured?",687,1
+689,BRAC University er Master in Computer Applications (MCA) program ta kis jonno?,688,1
+690,BRAC University er Master in Disaster Management (MDM) program e significant ki ache?,689,1
+691,BRAC University er MPH program er student ra shadharonoto kothay theke ashe?,690,1
+692,"BRAC University er Pharmacy department kobe established hoyechilo, ar program ta kivabe structured?",691,1
+693,BRAC University er School of General Education ta ki?,692,1
+694,BRAC University er School of Law ki Master of Laws (LL.M.) program offer kore?,693,1
+695,BRAC University er shob undergraduate student der jonno ki ki type er general education course required?,694,1
+696,BRAC University ki Biotechnology te graduate program offer kore?,695,1
+697,BRAC University ki degree program er baire kono short professional certificate course offer kore?,696,1
+698,BRAC University ki recently tar academic department gula ke school e reorganize koreche?,697,1
+699,BRAC University kobe tar Anthropology program launch koreche?,698,1
+700,BRAC University Law graduate der jonno ki dedicated alumni network ache?,699,1
+701,BRAC University LLB program student der ki ki career path er jonno prepare kore?,700,1
+702,BRAC University Pharmacy program er ki accreditation ache?,701,1
+703,"BRAC University School of Law kobe established hoyechilo, ar eta ki degree offer kore?",702,1
+704,BRAC University student ra OSUN er madhome ekta semester abroad e study korte pare ki?,703,1
+705,BRAC University te Bachelor of Science in Computer Science and Engineering (CSE) er detailed course sequence ta ki?,704,1
+706,BSEEE ar BSECE program er focus e ki difference?,705,1
+708,CS/CSE background chara MSc CSE applicant der ki extra course nite hoy?,707,1
+709,"CSE program e protita category er course er (core, elective, general education) jonno koto credit lage?",708,1
+710,CSE program er jonno ki kono non-credit course required?,709,1
+711,CSE program er specific core course gula ki ki?,710,1
+712,CSE student der jonno ki ki elective course available?,711,1
+713,Cybersecurity te interested student der jonno ki ki elective course recommend kora hoy?,712,1
+714,Data Science e interested student der jonno ki ki elective course recommend kora hoy?,713,1
+715,"Department of Economics and Social Sciences (ESS) kobe founded hoyechilo, ar eta ki teach kore?",714,1
+716,Department of EEE ki ki undergraduate ar graduate program offer kore?,715,1
+717,"Department of English and Humanities (ENH) kobe established hoyechilo, ar er teen ta main stream ki ki?",716,1
+718,"Department of Mathematics and Natural Sciences (MNS) ta ki chilo, ar ekhon ei department ke ki bola hoy?",717,1
+719,Department of Mathematics and Physical Sciences (MPS) ki ki undergraduate science program offer kore?,718,1
+720,Disaster Management program ki ki topic cover kore?,719,1
+721,Early Childhood Development (ECD) program complete korte koto shomoy lage?,720,1
+722,Early Childhood Development program kader jonno aimed?,721,1
+723,EEE student der later semester e ki ki specialization group available?,722,1
+724,"Ekjon Biotechnology student ki second major hisebe Microbiology add korte pare, ba ulta?",723,1
+725,ENH ki department er baire student der jonno minor offer kore?,724,1
+726,ESS department er faculty research profile ta kemon?,725,1
+727,Full exchange semester chara OSUN ar ki ki opportunity offer kore?,726,1
+728,Full-time ar part-time student der jonno MBA class kobe hoy?,727,1
+729,Funded mobility semester er jonno apply korar age amar ki OSUN er shathe prior involvement thakte hobe?,728,1
+730,Kon department Disaster Management program er accreditation administer kore?,729,1
+731,"LL.B. (Hons.) program e koto credit lage, ar Year 1 kivabe structured?",730,1
+732,LL.M. program student der ki ki practical/experiential resource offer kore?,731,1
+733,LL.M. student ra ki law er kono particular area te specialize korte pare?,732,1
+734,MA in English program e ki ki concentration available?,733,1
+735,"MA in English program e koto credit lage, ar eta kivabe structured?",734,1
+736,"MA in Governance and Development (MAGD) ta ki, ar eta kader jonno design kora?",735,1
+737,"MA in TESOL e koto credit lage, ar applicant er background onujayi ki eta vary kore?",736,1
+738,"MA in TESOL program ta ki, ar eta kader jonno design kora?",737,1
+739,Major department na hole o student ra ki EEE te minor korte pare?,738,1
+740,"Major na hoile o student ra ki Physics, Mathematics, Biotechnology, ba Microbiology te minor korte pare?",739,1
+741,"Major research institute (BIGD, JPGSPH) chara BRAC University te ar ki ki research centre ache?",740,1
+742,Master of Development Studies (MDS) program duita bochor jure kivabe structured?,741,1
+743,"Master of Public Health (MPH) program koto diner, ar koto credit lage?",742,1
+744,"Masters in Procurement and Supply Management (MPSM) ta ki, ar eta kobe launch hoyechilo?",743,1
+745,MBA program e koyta course ar koto credit lage?,744,1
+746,MDS program er design er piche overall philosophy ta ki?,745,1
+747,MPH program ki teaching approach use kore?,746,1
+748,MPSM program er final requirement ta ki?,747,1
+749,MPSM program ki kono international standard er shathe aligned?,748,1
+750,MSc CSE class shadharonoto kobe hoy?,749,1
+751,"MSc/M.Engg in Computer Science and Engineering (MSc CSE) e koto credit lage, ar eta ki niye focus kore?",750,1
+752,OSUN exchange semester er jonno ki scholarship available?,751,1
+753,"OSUN ta ki, ar BRAC University er shathe eta kivabe connected?",752,1
+754,Physical sciences er jonno BRAC University er ki ki specialized research facility ache?,753,1
+755,Protita student ke General Education (GenEd) course er koto credit-hour complete korte hoy?,754,1
+756,"School of Humanities and Social Sciences ta ki, ar eta kobe founded hoyechilo?",755,1
+757,Software Engineering e interested student der jonno ki ki elective course recommend kora hoy?,756,1
+758,"Spring, Summer, ar Fall semester shadharonoto kon kon month e shuru hoy?",757,1
+759,Working professional der jonno EMBA program kivabe structured?,758,1
+760,Amar RS grade er attendance part ta kivabe calculate hoy?,759,1
+761,"Ami English Medium er student, amake ki TARC e BNG103 complete korte hobe?",760,1
+762,"Badda campus e amar age theke ENG102 kora ache, tahole TARC e amake kon course deya hobe?",761,1
+763,Porer semester e TARC e jawar jonno kivabe apply korbo?,762,1
+764,"Residential Campus e student der ki ki jinish niye jete hobe, ar ki ki prohibited?",763,1
+765,Residential Semester er activity te participation korle student ra kivabe reward pay?,764,1
+766,Residential Semester er Experiential Learning Activities (ELA) gula ki ki?,765,1
+767,Residential Semester er shomoy kon course gula compulsory?,766,1
+768,Roommate ba dorm niye problem hole student ke kake contact korte hobe?,767,1
+769,RS er final exam e boste hole koto percent attendance lagbe?,768,1
+770,RS er shomoy student ra koto ghono ghono bari jete Savar campus theke ber hote pare?,769,1
+771,Savar (TARC/RS) campus ta thik kothay obosthito?,770,1
+772,Savar campus e dormitory koto shomoy khole ar bondho hoy?,771,1
+773,Savar campus e dormitory room ar roommate kivabe assign kora hoy?,772,1
+774,Savar campus e ki ki academic ar welfare facility ache?,773,1
+775,Savar campus e thakar shomoy student ra ki visitor receive korte pare?,774,1
+776,Shob student er jonno ki Residential Semester compulsory?,775,1
+777,Special permission na niye ekjon student koto din RS campus theke absent thakte parbe?,776,1
+778,Student ra Residential Semester er jonno kobe Savar campus e jaoyar eligible hoy?,777,1
+779,TARC campus e cigarette khaoya allowed naki na?,778,1
+780,TARC cancel korte hole thik kon proshes follow korte hobe?,779,1
+781,TARC e dining er ki ki facility ache?,780,1
+782,TARC e ki ki extracurricular activity organize kora hoy?,781,1
+783,TARC e ki ki type er accommodation ache?,782,1
+784,TARC e ki kono recreational facility ache?,783,1
+785,TARC e ki kono special workshop ba seminar hoy?,784,1
+786,TARC e meal plan kivabe manage kora hoy?,785,1
+787,TARC e medical emergency hole ki kora hoy?,786,1
+788,TARC e sports er ki ki opportunity ache?,787,1
+789,TARC e student attendance kivabe monitor kora hoy?,788,1
+790,TARC e student der jonno ki ki academic resource ache?,789,1
+791,TARC e student der ki ki amenities ar facility deya hoy?,790,1
+792,TARC e student der kon kon course korte hoy? Details ta bolen.,791,1
+793,TARC e thakar shomoy student der kon rules follow korte hoy?,792,1
+794,TARC er course gula ki Badda/main campus e kora jay?,793,1
+795,TARC er course gula te bhalo korte hole ki korbo? Protita course explain koren.,794,1
+796,TARC er protidiner time schedule ta ki?,795,1
+797,TARC er rules bhanle ki consequence hoy?,796,1
+798,TARC ki online e kora jay? Jodi jay tahole details ta bolen.,797,1
+799,TARC ta shobar jonno mandatory naki?,798,1
+800,"Age kar BRACU document e USIS bole je system er kotha bola ache, Connect ki shei-i?",799,1
+801,Amar BRAC University G Suite email ami kivabe access korbo?,800,1
+802,Amar BRACU email access korte na parle ki korbo?,801,1
+803,Amar BRACU G Suite account e keno email ashche na?,802,1
+804,Amar BRACU G Suite account hack ba compromise hole ki korbo?,803,1
+805,Amar BRACU G Suite email e two-factor authentication (2FA) kivabe set up korbo?,804,1
+808,Amar BRACU student portal password kivabe reset korbo?,807,1
+809,"Amar BRACU Wi-fi password mone nei, kivabe reset korbo?",808,1
+810,Amar registered course er bhul information Connect e dekhale ki korbo?,809,1
+811,"BRAC University er ki digital student ID card ache, naki shudhu physical ta?",810,1
+812,BRAC University er ki nijer mobile app ache?,811,1
+813,BRAC University IT Systems Office ki ki manage kore?,812,1
+816,BRAC University te G Suite kis jonno use kora hoy?,815,1
+817,BRACU er WiFi network ta ami kivabe access korte parbo?,816,1
+818,BRACU te Moodle/Courseware kis jonno use kora hoy?,817,1
+819,buX e shift korar shomoy jader internet access er shamorthyo chilo na tader jonno BRAC University ki kono support diyechilo?,818,1
+820,buX ekta course er jonno ki ki content ar feature dey?,819,1
+821,"buX kon platform e toiri, ar eta kobe launch hoyechilo?",820,1
+822,buX platform use kora faculty der jonno ki alada FAQ ache?,821,1
+823,"buX ta ki, ar eta kader jonno?",822,1
+824,Connect howar age BRAC University er student system er naam ki chilo?,823,1
+825,G-suite e extra cloud storage pawa jay ki?,824,1
+826,G-suite two step verification kivabe set up korbo?,825,1
+827,"ID, registration ba exam er general student service issue er jonno kake contact korbo?",826,1
+828,Kom internet connectivity thaka student der jonno ki buX design kora hoyeche?,827,1
+829,Lab Computer er Login ID ar Password kivabe create/reset korbo?,828,1
+830,Lab PC er login password bhule gele ki hoy?,829,1
+831,Lab PC kaj na korle ba unresponsive hole ki korbo?,830,1
+832,Lab PC te ami ki file save korte parbo?,831,1
+833,Lab PC te ami ki password change korte parbo?,832,1
+834,Lab PC te log in korte na parle ki korbo?,833,1
+835,Savar (RS) campus er Wi-Fi network e kivabe connect korbo?,834,1
+836,Student ID card hariye gele ba nosto hole reissue korte kothay jabo?,835,1
+837,University account e problem hole ami technical support ke kivabe contact korbo?,836,1
+838,University er helpdesk portal e ami kivabe ticket raise korbo ba question korbo?,837,1
+839,Xiaomi phone e Wi-Fi show na korle kivabe fix korbo?,838,1
+840,'Major' concentration diye specialize korar jonno BBA student der ki ki option ache?,839,1
+841,"Advisor jodi bole credit limit reach hoye geche, tahole student ki CSE400 ar onno course ekshathe nite parbe?",840,1
+842,Amar final thesis ba internship report submit karar por kothay jay?,841,1
+843,"Ami AI ba ML er upor thesis korte chai, kon kon faculty available?",842,1
+844,Ami ki kichu thesis er sample pete pari?,843,1
+845,"BBA student der ki internship korte hoy, naki tara thesis o choose korte pare?",844,1
+846,BRACU official template diye student ra Word file ke LaTeX e kivabe convert kore?,845,1
+847,CGPA 3 er niche thakle ki thesis kora jay? Minimum CGPA requirement ta ki?,846,1
+848,Cyclone er moto external reason e thesis defense postpone hole ki hoy?,847,1
+849,Data ke usable dataset e convert korle thesis paper er jonno survey ki acceptable?,848,1
+850,Defense stage e project ke thesis e convert kora jay?,849,1
+851,Deferral chara Final Defense e absence er penalty ki?,850,1
+852,Deferral chara Pre-Thesis I ba Pre-Thesis II e absence er penalty ki?,851,1
+853,Direction niye member der modhye disagreement hole thesis er majhpothe group ki split hote pare?,852,1
+854,Eki group theke ekjon er beshi student ki registration form submit korte pare?,853,1
+855,Ekjon CS ar ekjon CSE student ki eki thesis e ekshathe kaj korte pare?,854,1
+856,Ekjon specific supervisor ke ami kivabe contact korbo ba topic selection e tar Thesis Slot pabo?,855,1
+857,Ekjon student er CGPA 2.0 er niche thakle ki hoy?,856,1
+858,Ekjon student kobe thesis korte pare?,857,1
+859,"Ekjon student program change korle (jemon CSE theke CS), tara kivabe nishchit korbe je thesis registration system e tader notun student ID update hoyeche?",858,1
+860,Final defense er age thesis title change korar deadline ta kobe?,859,1
+861,Final Defense er shomoy group bhange/divide korle penalty ki?,860,1
+862,Final defense shadharonoto kon shomoy e hoye thake?,861,1
+863,Final thesis report er shathe ar ki thakte hobe?,862,1
+864,Final thesis/project/intern student koyta course nite pare?,863,1
+865,Graduation er age ekbarer beshi thesis kora ki possible?,864,1
+866,Group thesis process er kono phase e fail korle ki hoy?,865,1
+867,Internship er jonno apply korte student er ki lagbe?,866,1
+868,Internship er shomoy ke amake supervise korben?,867,1
+869,Internship group e shorbochcho koyjon member rakha jay?,868,1
+870,Internship kivabe defend kora hoy?,869,1
+872,Journal article er readiness assessment e koto weight rakhe?,871,1
+873,Nijer ta shuru korar age ami ki age kar student der similar topic er thesis browse korte pari?,872,1
+874,"Overall CSE thesis process ke administer kore, ar onno kothao na thaka question er answer ke dite pare?",873,1
+875,P1 ba P2 er submission deadline kobe? Pre-2 te ki poster presentation ache?,874,1
+876,Plagiarism check er jonno student ra kothay theke help pabe?,875,1
+877,Pre-Thesis 1 er jonno already register kora thakle Pre-Thesis 2 ba onno phase er jonno abar register kora ki dorkar?,876,1
+878,"Pre-Thesis 1 er registration process ta ki, ar deadline gula ki?",877,1
+879,Pre-Thesis I er por notun member request korle koto marks deduct hoy?,878,1
+881,Pre-Thesis I theke Pre-Thesis II te jete marking requirement ta ki?,880,1
+883,Project/internship shuru korar eligibility er jonno CGPA koto lagbe?,882,1
+884,Protita group er jonno maximum koyjon supervisor/co-supervisor allowed?,883,1
+885,"Protita undergraduate program e thesis lage, naki student ra project/internship o choose korte pare?",884,1
+886,Sheet e thesis correction status update na thakleo email e supervisor approval dile student der ki korte hobe?,885,1
+887,Shob report kobe er modhye submit korte hobe?,886,1
+888,"Student der Pre-Thesis 2 er jonno re-register korte hoy, naki Pre-Thesis 1 theke continue kora jay?",887,1
+889,Thesis ar internship supervision niye BRAC University er ki kono general written policy ache?,888,1
+890,Thesis ba internship er protita phase koto diner?,889,1
+891,Thesis defense defer hole ki student ke CSE400 abar nite hobe?,890,1
+892,Thesis defense er age ki ki prerequisite complete korte hobe?,891,1
+893,Thesis kivabe marked hoy?,892,1
+894,Thesis lifecycle er ekta overall idea diben?,893,1
+895,Thesis project er majhe ekjon student ki group switch korte pare?,894,1
+896,Thesis report er jonno maximum allowable plagiarism koto?,895,1
+897,Thesis shuru korte hole CGPA koto lagbe?,896,1
+898,Thesis submission ar defense er ekhonkar deadline ki?,897,1
+900,Thesis/project er jonno group member minimum ar maximum koyjon lagbe?,899,1
+901,Thesis/project/internship shuru korte minimum credit koto lagbe?,900,1
+902,Amar taka hariye gele ar fare pay korte na parle ki hoy?,901,1
+903,Amar vehicle ta kothay park korte hobe?,902,1
+904,Ami ki amar shathe commute korte ekjon guardian ke niye jete pari?,903,1
+905,Ami ki bKash diye pay korte pari?,904,1
+906,Ami ki fare cash e pay korte pari?,905,1
+907,Ami koto shomoy campus e amar vehicle park korte pari?,906,1
+908,Ashche semester gula te transport schedule change hobe ki?,907,1
+914,BRAC University bus e uthte amake ki ID dekhate hobe?,913,1
+915,BRAC University bus gula safety er jonno track kora hoy ki?,914,1
+916,BRAC University bus service er general safety ar conduct rules ki ki?,915,1
+917,BRAC University bus service ke use korte pare?,916,1
+918,BRAC University ki bus gula own kore?,917,1
+919,BRAC University ki route ba fare change korar right reserve kore?,918,1
+920,BRAC University student bus service er standard one-way fare koto?,919,1
+922,BRAC University Students' Transport Service ta ki?,921,1
+923,BRAC University theke drop-off timing gula ki?,922,1
+924,BRAC University transport service er cover kora route gula ki ki?,923,1
+925,BRAC University transport service kon kon din chalay?,924,1
+927,BracU transportation ki Azimpur jay?,926,1
+928,BracU transportation ki Dhanmondi jay?,927,1
+929,BracU transportation ki Narayangonj jay?,928,1
+930,Bus avail korte ami ki Bkash payment use korte pari?,929,1
+931,Bus break down korle ki hoy?,930,1
+932,Bus dhorar shesh shomoy ta ki?,931,1
+933,Bus er bhitore ki security camera ache?,932,1
+934,Bus er bhitore smoking allowed ki?,933,1
+935,Bus er fare koto?,934,1
+936,Bus gula te ki AC lagano ache?,935,1
+937,Bus miss hoye gele student der thik ki kora uchit?,936,1
+938,Bus ticket ami kothay theke pabo?,937,1
+939,Campus e bus kothay theke chare?,938,1
+940,Complaint handle korar jonno ki specific transport officer ache?,939,1
+942,Ekhonkar transport schedule er effective date ta kobe?,941,1
+943,Ekta specific bus route er schedule ba service e problem hole kake contact korbo?,942,1
+944,Emergency transport request er jonno ki kono policy ache?,943,1
+945,Fare pay na korle ki kono penalty ache?,944,1
+946,Frequent passenger der jonno ki kono discount ache?,945,1
+947,Government holiday e ki bus chalachal kore?,946,1
+948,ID card chara student ra ki transport service use korte pare?,947,1
+949,ID card na thakle notun student ra ki dekhabe?,948,1
+950,"Ki first-come, first-served seating policy ache?",949,1
+951,Kon route e bKash payment allowed?,950,1
+952,Koyta bus route ache?,951,1
+953,Motorcycle parking er payment koto?,952,1
+957,Non-student ra ki BRAC University transport service use korte pare?,956,1
+959,Passenger der bus stop e koto shomoy pouchte hobe?,958,1
+960,Passenger ra ki additional stoppage request korte pare?,959,1
+961,Passenger ra ki bus e pet niye jete pare?,960,1
+962,Passenger ra ki dangerous object niye jete pare?,961,1
+964,Protita route er jonno koyta stoppage ache?,963,1
+966,Route-01 (Abdullahpur) er contact number ta ki?,965,1
+975,Route-02 (Mirpur-B) er contact number ta ki?,974,1
+980,Route-03 (Jigatola) er contact number ta ki?,979,1
+985,Route-04 (Azimpur) er contact number ta ki?,984,1
+990,Route-05 (Jatrabari) er contact number ta ki?,989,1
+995,Route-06 (Baldha Garden) er contact number ta ki?,994,1
+996,Route-06 (Baldha Garden) er designated bus stop gula kothay?,995,1
+998,Route-06 (Baldha Garden) er pickup time gula ki?,997,1
+1000,Route-07 (Mohammadpur) er contact number ta ki?,999,1
+1005,Route-08 (Narayanganj) er contact number ta ki?,1004,1
+1006,Route-08 (Narayanganj) er designated bus stop gula kothay?,1005,1
+1008,Route-08 (Narayanganj) er pickup time gula ki?,1007,1
+1010,Route-09 (Bashundhara Residential Area) er designated bus stop gula kothay?,1009,1
+1011,Route-09 (Bashundhara Residential Area) er pickup time gula ki?,1010,1
+1012,Route-09 (Bashundhara) er contact number ta ki?,1011,1
+1016,Semester break er shomoy transport service available ki?,1015,1
+1017,Shob bus ki GPS tracking er under e ache?,1016,1
+1018,Student ra ki age theke seat reserve korte pare?,1017,1
+1019,Student ra ki transport service er jonno notun route suggest korte pare?,1018,1
+1020,Student ra ki transport service niye feedback dite pare?,1019,1
+1021,Student ra transport service e problem hole kivabe report korbe?,1020,1
+1022,Student ra transport service ke kivabe contact korbe?,1021,1
+1023,Transport schedule ami ki online e pabo?,1022,1
+1024,Transport service e change hole student der kivabe janano hoy?,1023,1
+1025,Transport service er feature gula ki ki?,1024,1
+1027,Transport service kon kon din operate kore?,1026,1
+1028,Transport-related issue er jonno ki emergency contact number ache?,1027,1
+1029,University bus e uthar shomoy fare kivabe pay korbo?,1028,1
+1030,University er ki transport service expand korar plan ache?,1029,1
+1031,Weekend e bus available ki?,1030,1
+1032,Academic Council thik ki ki dayittwo palon kore?,1031,1
+1033,Bangladesh er baire ki BRAC University er regional alumni network ache?,1032,1
+1034,BRAC Onnesha kobe ar kivabe space e launch kora hoyechilo?,1033,1
+1035,"BRAC Onnesha kon orbit e chilo, ar eta ki korte partho?",1034,1
+1036,BRAC Onnesha proyekto ta ki kono award jitteche?,1035,1
+1037,"BRAC Onnesha ta ki chilo, ar BRAC University er jonno eta keno important?",1036,1
+1038,BRAC University EEE alumni ra kon notable project e involved chilo?,1037,1
+1039,BRAC University er alumni community kon office manage kore?,1038,1
+1040,"BRAC University er Board of Trustees ta ki, ar ete koyjon member ache?",1039,1
+1041,BRAC University er Chancellor hisebe ekhon ke royechen?,1040,1
+1042,BRAC University er ekhonkar administrative/governance structure kobe establish hoyeche?,1041,1
+1044,BRAC University er official colour gula ki?,1043,1
+1045,BRAC University er official motto ta ki?,1044,1
+1046,BRAC University er prothom Vice-Chancellor ke chilen?,1045,1
+1047,BRAC University er Syndicate bolte thik ki bujhay?,1046,1
+1048,"BRAC University kobe establish hoyechilo, ar ke prothisthata?",1047,1
+1049,BRAC University te ekhon Vice-Chancellor hisebe ke dayittwo palon korchen?,1048,1
+1050,BRAC University te mote koto student ar academic staff ache?,1049,1
+1051,"BRACU Dichari ta ki, ar ei team ki ki achieve koreche?",1050,1
+1052,Graduate howar por BRAC University alumni ra ki kono discount ba benefit pay?,1051,1
+1053,Shara bishshe BRAC University er mote koto alumni ache?,1052,1

@@ -1,0 +1,51 @@
+query_id,query,reference_answer,query_type
+FAC-R001,What room is Yasmin Nadia's office in?,Yasmin Nadia's office is in room 4L89.,room
+FAC-R002,What room is Dr. Badhan Das's office in?,Dr. Badhan Das's office is in room 4G19.,room
+FAC-R003,What room is Fardin Zaman's office in?,Fardin Zaman's office is in room 4F.,room
+FAC-R004,What room is Sowmitra Das's office in?,Sowmitra Das's office is in room 4N142.,room
+FAC-R005,What room is Rantu Das's office in?,Rantu Das's office is in room 4F.,room
+FAC-R006,What room is Mr. Arif Shakil's office in?,Mr. Arif Shakil's office is in room 4G03.,room
+FAC-R007,What room is MD MIZANUR RAHMAN MUSTAKIM's office in?,MD MIZANUR RAHMAN MUSTAKIM's office is in room 4P171.,room
+FAC-R008,What room is A B M Muntasir Rahman's office in?,A B M Muntasir Rahman's office is in room 4L95.,room
+FAC-R009,What room is Sahib Kowsar's office in?,Sahib Kowsar's office is in room 4L91.,room
+FAC-R010,What room is Fatiha Ishrar Chowdhury's office in?,Fatiha Ishrar Chowdhury's office is in room 4K81.,room
+FAC-R011,What room is Aabrar Islam's office in?,Aabrar Islam's office is in room 4F.,room
+FAC-R012,What room is Mir Hamidul Hussain's office in?,Mir Hamidul Hussain's office is in room 4N167.,room
+FAC-R013,What room is Sadif Ahmed's office in?,Sadif Ahmed's office is in room 4P197.,room
+FAC-R014,What room is Md. Akhtaruzaman Adnan's office in?,Md. Akhtaruzaman Adnan's office is in room 4G16.,room
+FAC-R015,What room is Md. Rasel Mia's office in?,Md. Rasel Mia's office is in room 4N149.,room
+FAC-R016,What room is Mr. Md. Abdur Rahman's office in?,Mr. Md. Abdur Rahman's office is in room 4F.,room
+FAC-R017,What room is Mr. Md. Fakhruddin Gazzali's office in?,Mr. Md. Fakhruddin Gazzali's office is in room 4M103.,room
+FAC-R018,What room is Mr. Md. Abu Ibrahim's office in?,Mr. Md. Abu Ibrahim's office is in room 4J59.,room
+FAC-R019,What room is Kh.Fardin Zubair Nafis's office in?,Kh.Fardin Zubair Nafis's office is in room 4N155.,room
+FAC-R020,What room is Md Shamsur Shafi Nur E Aziz's office in?,Md Shamsur Shafi Nur E Aziz's office is in room 4F.,room
+FAC-R021,What room is Sheikh Araf Noshin's office in?,Sheikh Araf Noshin's office is in room 4N144.,room
+FAC-R022,What room is Ashraful Islam Shanto Sikder's office in?,Ashraful Islam Shanto Sikder's office is in room 4P173.,room
+FAC-R023,What room is Namira Mustafiz Pranty's office in?,Namira Mustafiz Pranty's office is in room 4F.,room
+FAC-R024,What room is Tarvir Anjum Aditto's office in?,Tarvir Anjum Aditto's office is in room 4N159.,room
+FAC-R025,What room is Mr. Md Sabbir Hossain's office in?,Mr. Md Sabbir Hossain's office is in room 4J54.,room
+FAC-R026,What room is Hamim Ibne Nasim's office in?,Hamim Ibne Nasim's office is in room 4P177.,room
+FAC-R027,What room is Waleed Bin Habib Khan's office in?,Waleed Bin Habib Khan's office is in room 4F.,room
+FAC-R028,What room is Ms. Tasnim Ferdous's office in?,Ms. Tasnim Ferdous's office is in room 4K73.,room
+FAC-R029,What room is Abu Obaida Hasme's office in?,Abu Obaida Hasme's office is in room 4F.,room
+FAC-R030,What room is Md Nafiz Ishtiaque Mahee's office in?,Md Nafiz Ishtiaque Mahee's office is in room 4F.,room
+FAC-D001,What is Ruhan Habib's schedule on Sunday?,"On Sunday, Ruhan Habib is scheduled: 8:00 AM - CSE321-17 (LAB) CSHR,NRHB 12D-26L; 9:30 AM - CSE321-17 (LAB) CSHR,NRHB 12D-26L.",day_schedule
+FAC-D002,What is Farden Ehsan Khan's schedule on Wednesday?,"On Wednesday, Farden Ehsan Khan is scheduled: 9:30 AM - CSE370-08 09D-17C; 11:00 AM - CSE111-05 (LAB) AFA,FEK 09B-10L; 12:30 PM - CSE111-05 (LAB) AFA,FEK 09B-10L; 2:00 PM - CSE370-06 08H-22C.",day_schedule
+FAC-D003,What is Mirza Azwad Wakil's schedule on Wednesday?,"On Wednesday, Mirza Azwad Wakil is scheduled: 8:00 AM - Consultation by Appointment; 9:30 AM - CSE470-01 07F-22C; 11:00 AM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 12:30 PM - CSE260-04B (LAB) NNTN,MAZW FT10-04L; 2:00 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L; 3:30 PM - CSE260-12A (LAB) SMDS,MAZW FT10-03L.",day_schedule
+FAC-D004,What is Zayed Humayun's schedule on Saturday?,"On Saturday, Zayed Humayun is scheduled: 8:00 AM - CSE321-10 (LAB) ZYH,NMP 10G-32L; 9:30 AM - CSE321-10 (LAB) ZYH,NMP 10G-32L; 11:00 AM - CSE331-07 09A-05C; 12:30 PM - CSE331-08 09A-05C.",day_schedule
+FAC-D005,What is Mr. Mohammad Badrul Hossain's schedule on Tuesday?,"On Tuesday, Mr. Mohammad Badrul Hossain is scheduled: 11:00 AM - CSE321-04 09A-06C; 12:30 PM - Consultation.",day_schedule
+FAC-D006,What is Md.Waseq Alauddin Alvi's schedule on Wednesday?,"On Wednesday, Md.Waseq Alauddin Alvi is scheduled: 8:00 AM - CSE110-15 09A-04C; 9:30 AM - CSE110-10 10B-13C; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE111-02 (LAB) WLV,CAKM 12D-27L; 3:30 PM - CSE111-02 (LAB) WLV,CAKM 12D-27L.",day_schedule
+FAC-D007,What is Tanhiat Fatema Afnan's schedule on Thursday?,"On Thursday, Tanhiat Fatema Afnan is scheduled: 8:00 AM - CSE321-16 07F-22C; 9:30 AM - CSE321-17 07F-22C; 11:00 AM - Consultation.",day_schedule
+FAC-D008,What is Sajid Imam Mahir's schedule on Thursday?,"On Thursday, Sajid Imam Mahir is scheduled: 8:00 AM - CSE260-01A (LAB) PBK,SJM FT10-03L; 9:30 AM - CSE260-01A (LAB) PBK,SJM FT10-03L; 11:00 AM - Consultation.",day_schedule
+FAC-D009,What is Maharin Mosfakin's schedule on Tuesday?,"On Tuesday, Maharin Mosfakin is scheduled: 11:00 AM - Consultation; 12:30 PM - CSE341-06 10B-15C; 2:00 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L; 3:30 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L; 5:00 PM - Consultation with Appointment.",day_schedule
+FAC-D010,What is Mr. Dibyo Fabian Dofadar's schedule on Sunday?,"On Sunday, Mr. Dibyo Fabian Dofadar is scheduled: 11:00 AM - Consultation by Appointment; 12:30 PM - Consultation; 2:00 PM - CSE427-01 (LAB) DFD,ADU 09F-27L; 3:30 PM - CSE427-01 (LAB) DFD,ADU 09F-27L.",day_schedule
+FAC-D011,What is Ms. Narzu Tarannum's schedule on Wednesday?,"On Wednesday, Ms. Narzu Tarannum is scheduled: 11:00 AM - CSE321-02 10B-17C; 12:30 PM - CSE321-03 10B-17C.",day_schedule
+FAC-D012,What is Md Shamsur Shafi Nur E Aziz's schedule on Saturday?,"On Saturday, Md Shamsur Shafi Nur E Aziz is scheduled: 3:30 PM - CSE421-20 09D-17C.",day_schedule
+FAC-D013,What is Mr. Md. Saiful Bari Siddiqui's schedule on Tuesday?,"On Tuesday, Mr. Md. Saiful Bari Siddiqui is scheduled: 11:00 AM - CSE251-09A (LAB) SDQ,ZAZ FT10-01L; 2:00 PM - CSE428-03 (LAB) SDQ,TAV 09B-10L.",day_schedule
+FAC-D014,What is Pratick Roy Chowdhuruy's schedule on Saturday?,"On Saturday, Pratick Roy Chowdhuruy is scheduled: 11:00 AM - CSE461-07 (LAB) PRC,MHSK 12B-18L; 12:30 PM - CSE461-07 (LAB) PRC,MHSK 12B-18L; 2:00 PM - CSE260-19A (LAB) MAO,PRC FT10-03L; 3:30 PM - CSE260-19A (LAB) MAO,PRC FT10-03L.",day_schedule
+FAC-D015,What is Fatiha Ishrar Chowdhury's schedule on Monday?,"On Monday, Fatiha Ishrar Chowdhury is scheduled: 8:00 AM - CSE260-13A (LAB) MDF,FIC FT10-03L; 9:30 AM - CSE260-13A (LAB) MDF,FIC FT10-03L; 11:00 AM - CSE260-09A 09C-13C,CSE260-09B 09C-13C; 12:30 PM - CSE260-10A 09C-13C,CSE260-10B 09C-13C; 2:00 PM - CSE260-11B (LAB) FIC,AHA FT10-04L; 3:30 PM - CSE260-11B (LAB) FIC,AHA FT10-04L.",day_schedule
+FAC-D016,What is Kh.Fardin Zubair Nafis's schedule on Tuesday?,"On Tuesday, Kh.Fardin Zubair Nafis is scheduled: 11:00 AM - CSE370-15 (LAB) FZN,NZU 12F-31L; 12:30 PM - CSE370-15 (LAB) FZN,NZU 12F-31L; 2:00 PM - Research.",day_schedule
+FAC-D017,What is Sadiul Arefin Rafi's schedule on Monday?,"On Monday, Sadiul Arefin Rafi is scheduled: 11:00 AM - CSE424-01 (LAB) SLAR,LBBH 12D-26L,CSE424-02 (LAB) SLAR,LBBH 12D-26L; 12:30 PM - CSE424-01 (LAB) SLAR,LBBH 12D-26L,CSE424-02 (LAB) SLAR,LBBH 12D-26L; 3:30 PM - Consultation by Appointment.",day_schedule
+FAC-D018,What is Akib Anjum's schedule on Tuesday?,"On Tuesday, Akib Anjum is scheduled: 11:00 AM - Consultation; 12:30 PM - CSE251-04A 07H-27C,CSE251-04B 07H-27C; 2:00 PM - Consultation by Appointment; 3:30 PM - CSE460-07 09A-07C; 5:00 PM - Consultation.",day_schedule
+FAC-D019,What is Dr. Swakkhar Shatabda's schedule on Thursday?,"On Thursday, Dr. Swakkhar Shatabda is scheduled: 8:00 AM - Research; 9:30 AM - Research; 11:00 AM - Research; 12:30 PM - Research; 2:00 PM - Research; 3:30 PM - Research.",day_schedule
+FAC-D020,What is Mohammad Naveed Hossain's schedule on Saturday?,"On Saturday, Mohammad Naveed Hossain is scheduled: 8:00 AM - CSE110-14 07H-26C; 9:30 AM - CSE423-17 07H-26C; 11:00 AM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 12:30 PM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 2:00 PM - Consultation.",day_schedule

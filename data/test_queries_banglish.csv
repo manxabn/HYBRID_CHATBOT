@@ -1,0 +1,211 @@
+query_id,query,reference_answer,is_entity_heavy,source
+BQ001,TARC e student der ki ki amenities ar facility deya hoy?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.",False,BanglishQA
+BQ002,Pre-Registration phase er por course selection kobe confirm korte hobe?,During the Self-Registration period assigned after result publication,False,BanglishQA
+BQ003,"BRAC University bochore koyta semester chalay, ar kobe shuru hoy?","BRAC University runs three semesters a year - Spring, Summer and Fall - starting in January, May and September respectively. Pharmacy admits in Spring or Summer, and LLB admits in Spring or Fall.",False,BanglishQA
+BQ004,Amar vehicle ta kothay park korte hobe?,You can park your vehicle at basement-2.,False,BanglishQA
+BQ005,Exam hall e student der koto age ashte hobe?,Students should aim to arrive at the exam hall at least 15 to 30 minutes before the scheduled start time of their exam.,False,BanglishQA
+BQ006,Print korar jonno jaiga gula thik kon kon jaygay ache?,"Level-12:
+
+Level-12, Zone-B, Adjacent to Room No: 12B-15L
+
+Level-12, Zone-D, Adjacent to Room No: 12D-25L
+
+Level-12, Zone-F, Room No: 12F-31L
+
+Level-12, Zone-F, Room No: 12F-32L
+
+Level-11:
+
+Level-11, Zone-A, Room No: 11A-03L
+
+Level-11, Zone-B, Adjacent to Room No: 11B-15L
+
+Level-11, Zone-B, Adjacent to Room No: 11B-16L
+
+Level-11, Zone-D, Adjacent to Room No: 11D-27L
+
+Level-11, Zone-F, Adjacent to Room No: 11F-34L
+
+Level-10:
+
+Level-10, Zone-B, Adjacent to Room No: 10B-11L
+
+Level-10, Zone-D, Adjacent to Room No: 10D-22L
+
+Level-10, Zone-F, Adjacent to Room No: 10F-28L
+
+Level-09:
+
+Level-09, Zone-B, Adjacent to Room No: 09B-09L
+
+Level-09, Zone-D, Adjacent to Room No: 09D-17C
+
+Level-09, Zone-F, Adjacent to Room No: 09F-25L
+
+Level-08:
+
+Level-08, Zone-B, Adjacent to Room No: 08B-08C
+
+Level-08, Zone-D, Adjacent to Room No: 08D-12C
+
+Level-08, Zone-F, Adjacent to Room No: 08F-19C
+
+Level-07:
+
+Level-07, Block-F, Adjacent to Room No: 07F-22C
+
+Level-07, Zone-D, Adjacent to Room No: 07D-19C
+
+Facilities Tower:
+
+Facilities Tower, 10th Floor, Waiting Room",False,BanglishQA
+BQ007,EEE Department kothay?,The EEE Department is located on the 4th floor and the labs are on 11th and 12th.,False,BanglishQA
+BQ008,Summer 2025 er Wishlist event er purpose ki?,To help plan course offerings based on student demand,False,BanglishQA
+BQ009,Transport service e change hole student der kivabe janano hoy?,Students are informed through official BRAC University notices and announcements.,False,BanglishQA
+BQ010,Ke Wishlist event e participate korte hobe?,"All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students",False,BanglishQA
+BQ011,Lab PC te log in korte na parle ki korbo?,"If you've changed your password and can't remember it, contact IT support at itsupport@bracu.ac.bd.",False,BanglishQA
+BQ012,Route-03 (Jigatola) er designated bus stop gula kothay?,"The designated stops are: Jigatola Bus Stand, City College, Science Lab, Kataban, Shahbagh, High Court, Press Club, Motsho Bhaban, Bijoynagar, Kakrail Mosque, Shantinagar, Malibagh Railgate, Rampura TV Centre, Badda Link Road, BRAC University.",False,BanglishQA
+BQ013,Biotechnology ar Microbiology ki ekhono Physics ar Mathematics er shathe eki department e ache?,"Biotechnology and Microbiology historically shared a department (MNS) with Physics and Mathematics; today they fall under the School of Life Sciences, while Physics/Mathematics/APE are now under the Department of Mathematics and Physical Sciences (MPS) - both trace back to the original MNS department founded in 2001.",False,BanglishQA
+BQ014,"Amar advisor response korche na, ki korbo?","Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.",False,BanglishQA
+BQ015,Cybersecurity te interested student der jonno ki ki elective course recommend kora hoy?,"CSE446, CSE447, CSE490 and CSE496 can be beneficial for students interested in Cyber Security.",False,BanglishQA
+BQ016,BRAC Scholarship ta ki?,"BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents' monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.",False,BanglishQA
+BQ017,BRAC University er 'Freshman Enrollment and Class Sign' ta ki?,"This is the official process new/incoming ('freshman') students go through after being admitted, to confirm their enrollment and get registered into their first semester's classes; details and instructions are published on the Admissions section of the university website.",False,BanglishQA
+BQ018,BRAC University er official colour gula ki?,"BRAC University's official colours are blue, black, and gray.",False,BanglishQA
+BQ019,Non-student ra ki BRAC University transport service use korte pare?,"No, the service is exclusively for BRAC University students.",False,BanglishQA
+BQ020,Duita ground er Dressing Room ami kothay pabo?,"The Dressing Rooms for the two sports grounds are located on the Ground Floor of the main campus building, near the Maidan.",False,BanglishQA
+BQ021,Female der Prayer Room ami kivabe access korbo?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),False,BanglishQA
+BQ022,Convocation e degree certificate collect korte ki amake fee dite hobe?,"No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.",False,BanglishQA
+BQ023,ENH ki department er baire student der jonno minor offer kore?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.",False,BanglishQA
+BQ024,Thesis/project er jonno group member minimum ar maximum koyjon lagbe?,A thesis/project group must have a minimum of 1 member and a maximum of 5 members.,False,BanglishQA
+BQ025,BRAC University er shob undergraduate student der jonno ki ki type er general education course required?,"Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.",False,BanglishQA
+BQ026,Campus e student discipline ar safety issue ke handle kore?,"The Office of the Proctor handles student discipline and campus safety matters. It can be reached at proctor@bracu.ac.bd or by phone, and is open 9:00 AM to 5:30 PM.",False,BanglishQA
+BQ027,"BRAC University er ki digital student ID card ache, naki shudhu physical ta?","Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.",False,BanglishQA
+BQ028,Protita route er jonno koyta stoppage ache?,Each route has between 5 and 12 designated stoppages.,False,BanglishQA
+BQ029,"Amar bhai/bon BracU te poreche, Sibling Scholarship er jonno ami kivabe apply korbo?","Tuition fee waiver is awarded to one of the siblings who will enroll later at Brac
+University.
+
+Supporting documents for applying for Sibling Scholarship:
+
+a) Photocopy of National ID Cards/Passports of both the applicant and parents
+b) Passport-size photos of both the siblings,
+c) Photocopy of BracU Grade sheet of both the siblings,
+d) Photocopy of BracU advising sheet of both the siblings,
+e) Photocopy of Transcript of HSC & SSC/ A level & O level of both the siblings",False,BanglishQA
+BQ030,Route-04 (Azimpur) er second outbound timing ta ki?,Route-04 (Azimpur): Second trip departs at 5:10 PM.,False,BanglishQA
+BQ031,Financial aid pete eligibility criteria ki ki?,"BRAC University offers financial aid to students based on demonstrated financial need. Financial aid eligibility is reassessed regularly, and students may need to maintain satisfactory academic performance. Special consideration may be given to students from disadvantaged backgrounds or those facing extraordinary circumstances. The Financial Aid Office can provide more detailed information on the application process.",False,BanglishQA
+BQ032,Campus e bus kothay theke chare?,The bus leave campus from the Basement-1,False,BanglishQA
+BQ033,Student ra ki age theke seat reserve korte pare?,"No, seating is strictly first-come, first-served.",False,BanglishQA
+BQ034,Admission er important date ar deadline gula ki?,"The exact admission test date, application deadline, and academic-session start date change every semester, so BRAC University publishes them on its Admissions page (bracu.ac.bd/admissions) ahead of each intake rather than fixing them year-round - check that page for the current cycle's dates.",False,BanglishQA
+BQ035,5th Floor e ki ki facility available?,"School of General Education, ENH, ESS, School of Pharmacy, MNS, School of Architecture and Design, BRAC Business School, and BRAC Institute of Languages.",False,BanglishQA
+BQ036,BRAC University Students' Transport Service ta ki?,"BRAC University provides an affordable, safe, and comfortable transport service with air-conditioned buses covering nine routes across Dhaka city.",False,BanglishQA
+BQ037,University te ki ki sports team ache?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",False,BanglishQA
+BQ038,"Badda campus e amar age theke ENG102 kora ache, tahole TARC e amake kon course deya hobe?","If you completed ENG102 already, you will be given BUS201 at TARC.",False,BanglishQA
+BQ039,Wishlist event e participate na korle ki consequence hoy?,Student will not be allowed to register during Pre-Registration Phase 1,False,BanglishQA
+BQ040,"Protita undergraduate program e thesis lage, naki student ra project/internship o choose korte pare?","It depends on the program and department; in CSE, for example, students can fulfill the CSE400 capstone requirement through a Thesis, a Project, or an Internship track, each with its own supervision and marking rubric, rather than thesis being the only option.",False,BanglishQA
+BQ041,BSEEE ar BSECE program er focus e ki difference?,"BSEEE (Electrical and Electronic Engineering) has a broader focus spanning power, electronics and general EEE topics, while BSECE (Electronic and Communication Engineering) concentrates more specifically on communication-related topics such as signal processing, telecommunications, microwave engineering, and data/optical/satellite communications.",False,BanglishQA
+BQ042,Route-02 (Mirpur-A) er first outbound timing ta ki?,Route-02 (Mirpur-A): First trip departs at 2:05 PM.,False,BanglishQA
+BQ043,Thesis shuru korte hole CGPA koto lagbe?,CGPA equal to or above 3.0.,False,BanglishQA
+BQ044,Scholarship pawa international student ke protita semester e koto credit hour nite hoy?,"Students on scholarship or financial aid are generally required to take a minimum of 9 credit hours in all semesters (applicable from Summer 2023 admits onward), except for approved reduced course loads such as in the first semester.",False,BanglishQA
+BQ045,Connect er madhome student ra ki ki course-related schedule access korte pare?,"Class schedules, exam schedules, and classroom allocations.",False,BanglishQA
+BQ046,Volunteer organization e student leadership er ki ki opportunity ache?,"BRAC University Leadership Development Forum (BULDF) is a club working on training and grooming leadership traits. The club mainly focuses on young students in enhancing their leadership qualities and bringing out their hidden talents, which will help them in the future. The club has always been there for assisting the official events and programs of BRAC University as volunteers besides its own activities, which mainly include Accession, Love for Humanity, and Saving Tomorrow.
+
+Contact: club.buldf@g.bracu.ac.bd",False,BanglishQA
+BQ047,Upcoming game ar event shomporke ami kivabe updated thakbo?,"Check BRACU Events Page. As the website is not fully functional yet, keep an eye on clubs' Facebook pages or BRACU Facebook groups for updates.
+ and you can also go to this page for detailed updates : https://www.bracu.ac.bd/news-events/upcoming-events",False,BanglishQA
+BQ048,Exam er scheduling e conflict thakle student der ki korte hoy?,"The first step is to inform the course instructor about the conflict as soon as possible. If the conflict involves multiple exams or cannot be resolved with the instructor, students should consult their department office. The department can provide additional support or coordinate with other instructors to find a solution.",False,BanglishQA
+BQ049,Library theke neya book ami ki renew korte parbo?,"Yes, an item can be renewed if no other user has placed a hold on it. Renewal can be done through the online catalogue (OPAC) or by contacting the circulation desk.",False,BanglishQA
+BQ050,Application fee ki ache? Koto?,"Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]",False,BanglishQA
+BQ051,International student der jonno ki kono scholarship scheme ache?,"1. BRAC Scholarship (Needs-Based Scholarship)
+
+Benefits: 100% tuition and fees waiver (including semester fees, lab fees, library fees) along with food and accommodations.
+Eligibility: Awarded to economically disadvantaged but meritorious students.
+Requirements:
+Must maintain a minimum CGPA of 3.00 on a scale of 4.00 in all semesters.
+If the CGPA falls below 3.00, the student may retain a tuition fee waiver for up to two consecutive semesters. The student must regain the required CGPA within these semesters, or the scholarship will be discontinued unless special circumstances are recognized by the Scholarship Committee.
+2. Merit Scholarship Based on BRACU Academic Results
+
+Eligibility:
+Undergraduate students must complete at least 30 credits, and postgraduate students must complete at least 1/4th of their program credits.
+Undergraduate students must take a minimum of 12 credits (15 for School of Law, 18 for Pharmacy) in both the current and previous semesters.
+Postgraduate students must take at least 9 credits in both the current and previous semesters.
+Conditions:
+Students who retake or repeat courses, or have a 'W' grade or an 'F' in any subject in the previous or current semester, are not eligible.
+Scholarship Percentage Based on CGPA:
+CGPA 3.80 - 3.84: 10% waiver
+CGPA 3.85 - 3.89: 25% waiver
+CGPA 3.90 - 3.94: 50% waiver
+CGPA 3.95 - 3.99: 75% waiver
+CGPA 4.00: 100% waiver",False,BanglishQA
+BQ052,Internship er jonno apply korte student er ki lagbe?,The student must apply to the Chairperson of the CSE Department and may suggest a company with a detailed profile for approval.,False,BanglishQA
+BQ053,Exam hall e ki ki jinish prohibited?,"Mobile phones, tablets, smartwatches, and other electronic gadgets are not allowed. Bringing textbooks, notes, or any other written materials is prohibited unless explicitly allowed by the instructor.Bags, backpacks, and personal belongings should be left outside the exam hall or in designated areas.",False,BanglishQA
+BQ054,SOAS er shathe Joint PhD program shomoyer shathe kivabe structured?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.",False,BanglishQA
+BQ055,BRAC University Medical Center ki ki service provide kore?,"The Medical Center offers emergency medical services and free consultations/medicine to students and employees, health checkups with an official Health Card, referrals to partner hospitals for emergencies, ambulance support, and workshops on reproductive health and family planning. It also runs blood donation programs in collaboration with student clubs, arranges vaccination drives for communicable diseases, and holds regular STD/reproductive health workshops each semester with BRAC James P Grant School of Public Health.",False,BanglishQA
+BQ056,"BSS in Anthropology, BA in English, ar LLB admission er jonno kon kon subject test hoy?","Applicants to BSS in Anthropology, BA in English, and LLB (Hons) are tested only in English as part of the admission test.",False,BanglishQA
+BQ057,"BRAC University School of Law kobe established hoyechilo, ar eta ki degree offer kore?","The School of Law was founded in 2004 and offers a four-year undergraduate Bachelor of Laws (LL.B. Hons.) program, along with a postgraduate LL.M. program.",False,BanglishQA
+BQ058,Wishlist e unnecessary course select na korte keno bola hoy?,"Course demand influences planning, and unnecessary selections may misrepresent actual needs",False,BanglishQA
+BQ059,BRAC University te notun club shuru korte basic requirement ar application process ta ki?,"To start a new club, you need at least 50 interested student members and one BRACU faculty advisor. The applicants then submit an application to the Director of Co-Curricular Activities, including the club's goals, objectives, a program calendar, and mode of operation, signed by the advisor. The new club's Executive Committee follows the same eligibility rules as any club's committee (see the Executive Committee CGPA/credit requirements). One faculty member can advise only one club at a time, but can additionally co-advise up to one more; a faculty member who isn't an advisor of any club can co-advise up to two.",False,BanglishQA
+BQ060,BRAC University ki kokhono World Universities Debating Championship (WUDC) jitteche?,"Yes, twice. In 2013, BRAC Bangladesh A (Ratib Murtaza Ali and Aaqib Farhan Hossain) won the English-as-a-Second-Language (ESL) category at WUDC in Berlin - Bangladesh's first such win. In 2022, BRAC University students Sourodip Paul and Sajid Asbat Khandaker won the WUDC open category outright in Belgrade, becoming the first Asian team ever to win the tournament's top title.",False,BanglishQA
+BQ061,BRAC University er main campus address ta ki?,"BRAC University's main campus is located at Kha 224, Pragati Sarani, Merul Badda, Dhaka 1212, Bangladesh.",False,BanglishQA
+BQ062,GPA calculate korte BRAC University kon formula use kore?,"GPA is calculated as the sum of (grade points x credits) for all courses, divided by the sum of credits attempted - i.e., a credit-weighted average, so a 4-credit course affects the GPA more than a 1-credit course.",False,BanglishQA
+BQ063,Mid/final miss korle ki korbo?,"You should inform your course instructor as soon as possible with a valid reason (such as medical emergencies). In some cases, you may need to provide documentation like medical certificates to appeal.",False,BanglishQA
+BQ064,Installment e fee pay korar procedure ta ki?,A form will be shared by gsuite if the facility is available for that particular semester and you can fill up the form and apply for installment payment.,False,BanglishQA
+BQ065,Route-01 (Abdullahpur) er designated bus stop gula kothay?,"The designated stops are: Polwel Carnation Shopping Centre, House Building (Labaid Diagnostic), Azampur (Uttara East Police Station), Jasimuddin (Popular Diagnostic), Airport (Police Box), Kawla (Foot Over-Bridge), Khilkhet (First Foot Over-Bridge), Biswa Road, Shewrah, BRAC University.",False,BanglishQA
+BQ066,SSC/HSC ba A-Level result er upor base kore ki undergraduate tuition waiver available?,"Undergraduate applicants can receive a tuition waiver (commonly around 25%, with higher tiers such as 30% or 100% for top scorers in the BRACU Admission Test) in their first semester, based on their prior academic performance at SSC/O-Level, HSC/A-Level, or IB Diploma.",False,BanglishQA
+BQ067,Event er jonno food ba refreshment arrange korar process ta ki?,"For refreshments from the Brac University cafeteria, orders must be confirmed by OCA, and payments will be made by the Accounts Office from the club/forum budget (not in cash). For refreshments from outside vendors, financial assistance will be transferred to the club advisor's bank account as per the approved budget.",False,BanglishQA
+BQ068,BRAC University er Syndicate bolte thik ki bujhay?,"The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.",False,BanglishQA
+BQ069,TARC er rules bhanle ki consequence hoy?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled",False,BanglishQA
+BQ070,BRAC University er tuition fee structure ta ektu bolben please?,"For students enrolled in the Computer Science and Engineering (CSE) program at BRAC University, the tuition fee structure includes a one-time, non-refundable admission fee of BDT 30,800. Each course within the CSE program costs BDT 22,500. Additionally, students are required to pay a semester fee of BDT 11,500, which covers various facilities such as IT services and library access. There is also a one-time library membership fee of BDT 2,500. This fee structure is designed to support the comprehensive education provided in the CSE program, ensuring access to advanced resources and facilities",False,BanglishQA
+BQ071,BRAC JPGSPH er MPH faculty member ra kothay theke ashe?,"MPH faculty are drawn from a mix of BRAC University, icddr,b, and BRAC itself, along with international partner institutions such as the University of Heidelberg, Harvard, Johns Hopkins, George Washington University, the Karolinska Institute, and the London School of Hygiene & Tropical Medicine.",False,BanglishQA
+BQ072,CSE program er prerequisite gula ki?,"Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(""B"" grade in Physics & Mathematics),A-levels: ""C"" grade in Physics & Mathematics",False,BanglishQA
+BQ073,BRACU Finance and Accounts Department ke kivabe contact korbo?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd",False,BanglishQA
+BQ074,Route-03 (Jigatola) er pickup time gula ki?,"Route-03 (Jigatola): 1st Trip: 6:30 AM, 2nd Trip: 8:45 AM.",False,BanglishQA
+BQ075,Official student payment manual ami kothay pabo?,"BRAC University publishes a 'Payment Manual for Students' PDF, linked from the Tuition and Fees page, which explains the accepted payment methods and installment options in detail.",False,BanglishQA
+BQ076,Library staff der contact information ta den please.,"You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd",False,BanglishQA
+BQ077,"Amar advising block kora ache kintu payment clear, tahole advising kivabe korbo?",You have login into these page using your g-suit to get help. LINK: https://bracu.atlassian.net/servicedesk/customer/portal/2/user/login?destination=portal%2F2 or try emailing at sic@bracu.ac.bd,False,BanglishQA
+BQ078,Savar campus e thakar shomoy student ra ki visitor receive korte pare?,"Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.",False,BanglishQA
+BQ079,BRAC University er general contact information ta ki?,"The university can be reached at +88 09638464646 (extension 1001 for the operator), and general queries can be emailed to info@bracu.ac.bd.",False,BanglishQA
+BQ080,"buX kon platform e toiri, ar eta kobe launch hoyechilo?","BuX is BRAC University's online learning platform, built on the same open-source platform originally developed by MIT and Harvard (Open edX). It was launched in 2020 in response to the shift to online learning during the COVID-19 pandemic.",False,BanglishQA
+BQ081,BRAC University er Counseling and Wellness Centre ki offer kore?,"The Counseling and Wellness Centre is a dedicated student-life office providing psychological and wellbeing support to students, separate from the psychosocial counselling available specifically at the Residential Campus.",False,BanglishQA
+BQ082,Undergraduate program e porer barer intake ta thik kobe theke shuru hobe?,"BRAC University admits new undergraduates three times a year - Spring (classes start January), Summer (May), and Fall (September). The exact application deadline and admission test date for the next intake are published on the Admissions page (bracu.ac.bd/admissions) closer to that semester.",False,BanglishQA
+BQ083,Security Supervisor Office e ki check kora hoy?,"Student ID Check, All workers In out",False,BanglishQA
+BQ084,Multipurpose Hall ami kivabe access korbo?,"Ground Floor, Find the lift lobby(2nd escalator); go straight to the West Side, where you will find some seats next to the Multipurpose Hall.",False,BanglishQA
+BQ085,Early Childhood Development (ECD) program complete korte koto shomoy lage?,"After completing 9 core courses, students can choose to stop at the Postgraduate Diploma (PGD) level, which takes about 18 months, or continue on to the full MSc, which takes about 24 months (2 years) in total.",False,BanglishQA
+BQ086,International student der ki medical report submit korte hoy?,"Yes, Health checkup/medical certificates are needed to be submitted.",False,BanglishQA
+BQ087,BRAC University ki degree program er baire kono short professional certificate course offer kore?,"Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.",False,BanglishQA
+BQ088,Center of Entrepreneurship Development (CED) ki support provide kore?,"The Center for Entrepreneurship Development (CED) at BRAC University supports students and alumni in developing entrepreneurial skills and launching their own ventures. It offers various services, including:
+Training and mentorship programs for aspiring entrepreneurs.
+Workshops and seminars on business development and innovation.
+Networking opportunities with industry professionals.
+Resources and guidance for business planning and startup funding.
+CED aims to foster a culture of entrepreneurship and innovation within the university community, providing both theoretical knowledge and practical experience to help students succeed in their entrepreneurial endeavors.Visit more for details: https://ced.bracu.ac.bd/",False,BanglishQA
+BQ089,Club event er por report kivabe submit korbo?,"After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.",False,BanglishQA
+BQ090,Grade e bhul mone hole student ra ki appeal korte pare?,"A student may apply to the Chair of Department or the Dean for the re-checking of an examination script. Such a request may be made on the grounds of evidence of procedural errors, arbitrariness or prejudice. The student must make any request within Seven (07) calendar days of the publication of the mark. The Chair of Department or the Dean may, after checking with the original grader, arrange for the evaluation of an examination script to be conducted by two members of the faculty not previously involved in the examination and marking process, supported by a member of the Examination Controller's office. The rechecking process and submission of any revised grade to the Examinations Controller should be completed within 15 calendar days.",False,BanglishQA
+BQ091,TARC e meal plan kivabe manage kora hoy?,"Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively",False,BanglishQA
+BQ092,"BRAC University kobe establish hoyechilo, ar ke prothisthata?","BRAC University was established in 2001, founded by Sir Fazle Hasan Abed, and is affiliated with the University Grants Commission (UGC) of Bangladesh.",False,BanglishQA
+BQ093,Library thik kon kon service diye thake?,"The library offers a variety of study facilities to suit different preferences. If you enjoy studying in a group, you can reserve a study room in advance, providing a dedicated space for collaboration. For those who prefer studying alone, there are single seats and study capsules available on a first-come, first-served basis. Additionally, the library features various other quiet and comfortable areas where you can focus on your studies.",False,BanglishQA
+BQ094,Section change korte hole thik kon niyom follow korte hobe?,If you are already enrolled in a section then your request will be rejected by DCO due to the policies set by department.,False,BanglishQA
+BQ095,"Journal, magazine ar reference book gula ki borrow kora jay?","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",False,BanglishQA
+BQ096,BRAC University te Office of the Registrar er dayittwo ki?,"The Office of the Registrar handles core academic-record functions such as processing semester drop forms, maintaining student registration and grade records, and coordinating with departments on academic policy matters like leave of absence and inter-department transfers.",False,BanglishQA
+BQ097,Lab-based ba design-based program e ki regular tuition er baire additional fee lage?,"Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.",False,BanglishQA
+BQ098,Valid reason e student final exam miss korle course teacher er ki korte hoy?,"If a student misses the final exam for a documented valid reason (such as a medical emergency), the course teacher can arrange a make-up exam, and if course requirements genuinely can't be completed in time, an 'Incomplete' (I) grade with a defined completion deadline (up to 8 weeks after the final exam) may be assigned instead.",False,BanglishQA
+BQ099,Route-01 (Abdullahpur) er pickup time gula ki?,"1st Trip: 6:40 AM, 2nd Trip: 8:50 AM.",False,BanglishQA
+BQ100,Direction niye member der modhye disagreement hole thesis er majhpothe group ki split hote pare?,"Yes, but it comes with a mark penalty that increases the later it happens in the process - members can request to break/divide a group, with deductions rising from Pre-Thesis I through the Final Defense stage.",False,BanglishQA

@@ -1,0 +1,1514 @@
+query_id,config,lambda,query,reference_answer,retrieved_context,generated_answer,retrieval_s,generation_s,total_s,timestamp,query_confidence
+Q084,full_hybrid,0.5,"New student here, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?","If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.","Question: New student here, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: What happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: Hey, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question (Banglish): Cyclone er moto external reason e thesis defense postpone hole ki hoy?
+Answer (English): If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: My thesis defense got postponed due to a cyclone, and separately I want to change my thesis title before the (new) defense date. Are both of these OK?
+Answer: Both are handled, but through different mechanisms - a defense postponed for an external/valid reason like a cyclone is simply rescheduled, no penalty. Changing your thesis title before the (rescheduled) final defense is also possible, but the deadline for that varies by semester, so you'd want to check the current thesis deadlin","If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.",0.3083,127.2573,127.5656,2026-07-26T11:52:21.030366+00:00,0.0429
+Q054,full_hybrid,0.5,"For a friend who's asking — are journals, magazines and reference books available for borrowing?","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.","Question: For a friend who's asking — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Just wondering, are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Can someone help — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: This might be a silly question, but are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",2.4073,21.6082,24.0155,2026-07-26T11:52:45.195942+00:00,0.0992
+Q071,full_hybrid,0.5,What are BRAC University's official colours?,"BRAC University's official colours are blue, black, and gray.","Question: What are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: I wanted to ask, what are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: Can you tell me what BRAC University's official colours are?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: I looked around the site but couldn't find it — what are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question (Banglish): BRAC University er official colour gula ki?
+Answer (English): BRAC University's official colours are blue, black, and gray.","BRAC University's official colours are blue, black, and gray.",0.2002,15.1999,15.4001,2026-07-26T11:53:00.600511+00:00,0.0028
+Q046,full_hybrid,0.5,Before I forget to ask — how can students apply for scholarships at BRAC University?,"To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before notifying selected students through email or the university portal.","Question: Before I forget to ask — how can students apply for scholarships at BRAC University?
+Answer: To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committ
+
+Question: How can students apply for scholarships at BRAC University?
+Answer: To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before no
+
+Question: How can I apply for the scholarship?
+Answer: 1. Students who are eligible for Scholarship Based on Previous Academic Results / Sibling Scholarship / BRAC Scholarship / Physically Challenged Students / Children of Freedom Fighter / Debater’s Blue Scholarship / Children of Brac University Regular Confirmed Employee will have to apply for the first time through BracU prescribed form which is available at the Brac University website (https://www.bracu.ac.bd/admission/scholarships-financial
+
+Question: Quick question — how do I apply for the BRAC University international scholarship?
+Answer: International applicants fill out the online scholarship application form and submit it, along with required supporting documents (e.g., income declarations, trade license if a business owner), to the International & Scholarship Office at international-office@bracu.ac.bd.
+
+Question: How do I apply for the BRAC University international scholarship?
+Answer: International applicants fill out the online scholarship application form and submit it, along with required supporting documents (e.g., income declarations, trade license if a business owner), to the International & Scholarship Office at international-office@bracu.ac.bd.","To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before notifying recipients.",0.1336,50.4352,50.5688,2026-07-26T11:53:51.231141+00:00,0.1533
+Q045,full_hybrid,0.5,"Kind of urgent, but roughly how many students and academic staff does BRAC University have?","As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.","Question: Kind of urgent, but roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Just wondering, roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Quick question — roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question (Banglish): BRAC University te mote koto student ar academic staff ache?
+Answer (English): As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.","As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.",2.4421,33.3045,35.7466,2026-07-26T11:54:27.061950+00:00,0.1166
+Q040,full_hybrid,0.5,"New student here, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?",Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link,"Question: New student here, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question: How to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question: Hey, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question: I looked around the site but couldn't find it — how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question (Banglish): Xiaomi phone e Wi-Fi show na korle kivabe fix korbo?
+Answer (English): Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link","Since you're a new student and this is a university's academic advising service, I'm afraid we don't have any information about troubleshooting Xiaomi phones. The context provided suggests that there are steps to follow for fixing the Wi-Fi problem on a Xiaomi phone, but it appears to be from a different department or service (e.g. IT support) rather than our academic advising team.
+
+I would recommend checking with the university's IT support services or online resources to see if they have any guidance on this issue. I'm happy to help you with any questions related to your course schedule, registration, or academic progress, though!",0.7246,112.7824,113.5070,2026-07-26T11:56:20.581923+00:00,0.0364
+Q023,full_hybrid,0.5,No idea if this is written down anywhere — how much does it cost?,"Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.","Question: No idea if this is written down anywhere — how much does it cost?
+Answer: Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.
+
+Question: No idea if this is written down anywhere — how much does it cost to request a Medium of Instruction letter?
+Answer: Based on published fee notices, the Medium of Instruction Fee is BDT 200.
+
+Question: No idea if this is written down anywhere — how much it will cost for accomodation, food and transportation fee for international students?
+Answer: Approximately US$ 400 per month will be charged for accommodation and food.
+
+Question: No idea if this is written down anywhere — how much do I still owe in tuition this semester?
+Answer: That's on your personal account, which I can't see. Check your pay slip in Connect for your exact outstanding balance.
+
+Question: No idea if this is written down anywhere — how much of my final grade in a course comes from class attendance?
+Answer: Class attendance is compulsory, and 5% of the total marks in a course are typically allocated for attendance under the university's grading guidelines.","Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.",1.3074,60.0318,61.3391,2026-07-26T11:57:22.019451+00:00,0.0234
+Q081,full_hybrid,0.5,"Not sure if this is covered elsewhere, but is there a dorm supervisor who oversees student welfare in BRACU accommodation?","Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.","Question: Not sure if this is covered elsewhere, but is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: Is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: Sorry if this was already answered, but is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: For a friend who's asking — is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: New student here, is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.","Yes. BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.",1.2609,58.8030,60.0639,2026-07-26T11:58:22.256371+00:00,0.1300
+Q011,full_hybrid,0.5,What is the minimum SSC/HSC or O/A-Level grade generally required for BRAC University undergraduate admission?,"As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.","Question: What is the minimum SSC/HSC or O/A-Level grade generally required for BRAC University undergraduate admission?
+Answer: As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.
+
+Question (Banglish): BRAC University undergraduate admission er jonno shadharonoto minimum SSC/HSC ba O/A-Level grade koto lagbe?
+Answer (English): As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.
+
+Question: What O-Level/A-Level grade combination is generally required for undergraduate admission?
+Answer: Applicants typically need a minimum GPA of 2.5 separately in O-Level (best 5 subjects) and A-Level (best 2 subjects), calculated on BRACU's scale (A=5, B=4, C=3, D=2, with only one E=1 grade accepted); subjects with more than one E grade are not considered.
+
+Question: For a friend who's asking — what O-Level/A-Level grade combination is generally required for undergraduate admission?
+Answer: Applicants typically need a minimum GPA of 2.5 separately in O-Level (best 5 subjects) and A-Level (best 2 subjects), calculated on BRACU's scale (A=5, B=4, C=3, D=2, with only one E=1 grade accepted); subjects with more than one E grade are not considered.
+
+Question: What are the passing and failing grades at BRAC University?
+Answer: At BRAC University, the minimum passing grade for undergraduate courses is D (1.0), while for graduate courses, it is typically C (2.0). Grades below these thresholds are considered failing. Specifically, a grade of F (0.0) indicates failure.","The minimum SSC/HSC or O/A-Level grade generally required for BRAC University undergraduate admission is as follows:
+
+* Minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC
+* Minimum C grade at O-Level
+* Minimum C grade at A-Level",2.2832,175.1498,177.4330,2026-07-26T12:01:19.792252+00:00,0.1519
+Q001,full_hybrid,0.5,Am I allowed to take a course on a Pass/Fail basis instead of a letter grade?,"Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.","Question: Am I allowed to take a course on a Pass/Fail basis instead of a letter grade?
+Answer: Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question: Can I take a course on a Pass/Fail basis instead of a letter grade?
+Answer: Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question: Hey, can I take a course on a Pass/Fail basis instead of a letter grade?
+Answer: Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question (Banglish): Letter grade er bodole ami ki course ta Pass/Fail basis e nite parbo?
+Answer (English): Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question: Does a Pass/Fail grade or a Satisfactory/Unsatisfactory grade count toward Dean's List or VC's List eligibility credits?
+Answer: No. Dean's List and VC's List eligibility is calculated only from credits with regular letter grades; Pass/Fail and Satisfactory/Unsatisfactory graded credits are excluded from that count.","Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.",1.3557,65.1727,66.5284,2026-07-26T12:02:26.346034+00:00,0.0413
+Q184,full_hybrid,0.5,What is RBR's designation?,Mr. Rakin Bin Rabbani (RBR) is a Lecturer.,"Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Designation: Lecturer
+Status: Full Time
+Room: 4J60
+Email: rakin.rabbani@bracu.ac.bd
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE370-03 09H-32C; 12:30 PM - CSE370-04 09H-32C; 2:00 PM - CSE101-02 (LAB) RBR,ANV FT11-04L; 3:30 PM - CSE101-02 (LAB) RBR,ANV FT11-04L
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE101-03 09B-12C; 12:30 PM - CSE101-04 09B-12C; 2:00 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L; 3:30 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L
+
+Course: CSE101
+First Theory Coordinator: RBR
+Theory Coordinator Email: rakin.rabbani@bracu.ac.bd
+First Lab Coordinator: RBR
+Second Lab Coordinator: SLAR
+Lab Coordinator Email: rakin.rabbani@bracu.ac.bd,ext.sadiul.rafi@bracu.ac.bd
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE101-03 09B-12C; 12:30 PM - CSE101-04 09B-12C",Mr. Rakin Bin Rabbani's designation is Lecturer.,1.8348,44.7761,46.6109,2026-07-26T12:03:13.035220+00:00,0.0943
+Q154,full_hybrid,0.5,What day and time is the theory class for CSE250-10B?,The theory class for CSE250-10B is on MON+WED at 3:30 PM in room 10A-04C.,"Course: CSE250-10B
+Theory Initial: TAV
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 10A-04C
+Lab Faculty: AQT,TSE
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250
+Prerequisite: PHY112 (SP)
+
+Course: CSE250-01B
+Theory Initial: MHY
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: UPM,ALSM
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250-02A
+Theory Initial: AKDB
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 07H-27C
+Lab Faculty: ZIZE,TSE
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250
+First Theory Coordinator: SDS
+Second Theory Coordinator: PDS
+Theory Coordinator Email: shadman.shahriar@bracu.ac.bd,purbayan.das@bracu.ac.bd
+First Lab Coordinator: SDQ
+Second Lab Coordinator: FFR
+Lab Coordinator Email: saiful.bari@bracu.ac.bd,md.fatin@bracu.ac.bd",The theory class for CSE250-10B meets on Monday (MON) and Wednesday (WED) at 3:30 PM.,1.0522,32.7801,33.8323,2026-07-26T12:03:46.971340+00:00,0.0000
+Q171,full_hybrid,0.5,Who teaches the lab section of CSE110-17?,"The lab section of CSE110-17 is taught by WLV,NQM.","Course: CSE110
+First Theory Coordinator: TAW
+Theory Coordinator Email: tawhid.anwar@bracu.ac.bd
+First Lab Coordinator: DFD
+Second Lab Coordinator: RKBM
+Lab Coordinator Email: fabian.dofadar@bracu.ac.bd,mohammad.rakibul@bracu.ac.bd
+
+Course: CSE110-03
+Theory Initial: STNM
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 10B-17C
+Lab Faculty: YND,ATY
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09B-08L
+
+Course: CSE110-01
+Theory Initial: ANT
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 10B-17C
+Lab Faculty: ANT,ART
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 09B-10L
+
+Course: CSE110-02
+Theory Initial: STNM
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 10B-17C
+Lab Faculty: AOHE,RKBM
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: 09B-08L
+
+Initial: NQM
+Name: Md Nafiz Ishtiaque Mahee
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-07 (LAB) AAF,NQM 09B-09L; 9:30 AM - CSE110-07 (LAB) AAF,NQM 09B-09L; 11:00 AM - CSE110-17 (LAB) WLV,NQM 10E-27L; 12:30 PM - CSE110-17 (LAB) WLV,NQM 10E-27L","According to the context, the lab faculty for CSE110-17 is listed as ""WLV, NQM"". However, since NQM is likely an abbreviation for Md. Nafiz Ishtiaque Mahee (the student), I will only mention WLV as the person teaching the lab section.
+
+The answer is: WLV",1.2807,60.8883,62.1690,2026-07-26T12:04:49.474028+00:00,0.2877
+Q146,full_hybrid,0.5,What is the coordinator email for CSE220?,The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd.,"Course: CSE220-02
+Theory Initial: MAHR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10B-15C
+Lab Faculty: FBAW,AIB
+Lab Day: SUN
+Lab Time: 2:00 PM
+Lab Room: 09B-10L
+
+Course: CSE220-03
+Theory Initial: MAHR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 10B-15C
+Lab Faculty: NZU,FBAW
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: 09B-08L
+
+Course: CSE220-01
+Theory Initial: MAHR
+Theory Day: SAT+THU
+Theory Time: 8:00 AM
+Theory Room: 10B-15C
+Lab Faculty: SWG,NZU
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 09B-10L
+
+Course: CSE220
+First Theory Coordinator: AIB
+Theory Coordinator Email: abu.ibrahim@bracu.ac.bd
+First Lab Coordinator: AIB
+Second Lab Coordinator: KKS
+Lab Coordinator Email: abu.ibrahim@bracu.ac.bd,md.khaliduzzaman@bracu.ac.bd
+
+Course: CSE220
+Prerequisite: CSE111 (HP),CSE230 (HP)
+Full Prerequisite Chain: CSE230-CSE111-CSE110","The course coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd,md.khaliduzzaman@bracu.ac.bd.",5.3109,54.7047,60.0156,2026-07-26T12:05:50.161834+00:00,0.0000
+Q145,full_hybrid,0.5,What is the coordinator email for CSE482?,The coordinator email for CSE482 is shadman.shahriar@bracu.ac.bd.,"Course: CSE482
+First Theory Coordinator: SDS
+Theory Coordinator Email: shadman.shahriar@bracu.ac.bd
+First Lab Coordinator: SDS
+Lab Coordinator Email: shadman.shahriar@bracu.ac.bd
+
+Course: CSE424
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE474
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE370
+First Theory Coordinator: FEK
+Theory Coordinator Email: farden.khan@bracu.ac.bd
+First Lab Coordinator: FEK
+Lab Coordinator Email: farden.khan@bracu.ac.bd
+
+Course: CSE391
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd",shadman.shahriar@bracu.ac.bd,1.1700,25.0101,26.1801,2026-07-26T12:06:16.440577+00:00,0.1930
+Q140,full_hybrid,0.5,What is the coordinator email for CSE447?,The coordinator email for CSE447 is iqbal.hossain@bracu.ac.bd.,"Course: CSE447-01
+Theory Initial: MIH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09E-20T
+Lab Faculty: FFU,SJM
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 09E-22L
+
+Course: CSE447-02
+Theory Initial: MIH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09E-20T
+Lab Faculty: FFU,RDS
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09E-21L
+
+Course: CSE447-03
+Theory Initial: MIH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09E-20T
+Lab Faculty: FFU,SJM
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: 09E-21L
+
+Course: CSE447
+First Theory Coordinator: MIH
+Theory Coordinator Email: iqbal.hossain@bracu.ac.bd
+First Lab Coordinator: FFU
+Lab Coordinator Email: farhan.faruk@bracu.ac.bd
+
+Course: CSE424
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd","The first theory coordinator of course CSE447 is MIH, and the theory coordinator email is iqbal.hossain@bracu.ac.bd. 
+
+However, it's mentioned that there is a ""First Theory Coordinator"" but no specific mention of a ""coordinator email for CSE447"". There is only one ""Theory Coordinator Email"" mentioned which is for course CSE447 but as part of the overall information about CSE447.
+
+There is also a separate field mentioning Lab Coordinator.",0.0495,68.8207,68.8701,2026-07-26T12:07:25.312880+00:00,0.0000
+Q123,full_hybrid,0.5,What is the full prerequisite chain for CSE471?,The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE110.,"Course: CSE471
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: CSE260
+Prerequisite: CSE251 (HP)
+Full Prerequisite Chain: CSE251-CSE250
+
+Course: CSE471-01
+Theory Initial: AQU
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: SADA,WHMJ
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 09F-25L
+
+Course: CSE471-03
+Theory Initial: AQU
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: SADA,WHMJ
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09F-25L","The full prerequisite chain for CSE471 is listed as CSE370-CSE221-CSE220-CSE111-CSE110, according to the retrieved context.",0.4131,29.0234,29.4365,2026-07-26T12:07:54.759121+00:00,0.1049
+Q181,full_hybrid,0.5,What is SHBK's designation?,Sahib Kowsar (SHBK) is a Lecturer.,"Initial: SHBK
+Name: Sahib Kowsar
+Designation: Lecturer
+Status: Full Time
+Room: 4L91
+Email: sahib.kowsar@bracu.ac.bd
+
+Initial: SHBK
+Name: Sahib Kowsar
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE360-09 09A-05C; 9:30 AM - CSE360-10 09A-05C; 11:00 AM - CSE330-16 (LAB) MNP,SHBK 09F-26L; 12:30 PM - CSE330-16 (LAB) MNP,SHBK 09F-26L
+
+Initial: SHBK
+Name: Sahib Kowsar
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE360-09 09A-05C; 9:30 AM - CSE360-10 09A-05C; 11:00 AM - Consultation; 12:30 PM - Consultation
+
+Initial: SHBK
+Name: Sahib Kowsar
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE321-13 09A-01C; 9:30 AM - CSE321-14 09A-01C; 11:00 AM - Consultation; 12:30 PM - Consultation
+
+Initial: SHBK
+Name: Sahib Kowsar
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE321-13 09A-01C; 9:30 AM - CSE321-14 09A-01C; 11:00 AM - CSE330-12 (LAB) SHBK,ANNH 09F-26L; 12:30 PM - CSE330-12 (LAB) SHBK,ANNH 09F-26L; 2:00 PM - CSE330-09 (LAB) SADF,SHBK 09F-24L; 3:30 PM - CSE330-09 (LAB) SADF,SHBK 09F-24L",SHBK's designation is Lecturer.,0.1523,28.5513,28.7036,2026-07-26T12:08:23.464801+00:00,0.0876
+Q111,full_hybrid,0.5,What is the full prerequisite chain for CSE489?,The full prerequisite chain for CSE489 is CSE370-CSE221-CSE220-CSE111-CSE110.,"Course: CSE489
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE251
+Prerequisite: CSE250 (HP)
+Full Prerequisite Chain: CSE250
+
+Course: CSE260
+Prerequisite: CSE251 (HP)
+Full Prerequisite Chain: CSE251-CSE250
+
+Course: CSE350
+Prerequisite: CSE251 (HP)
+Full Prerequisite Chain: CSE251-CSE250
+
+Course: CSE489
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd","The full prerequisite chain for CSE489 is already provided in the context:
+
+CSE370 (HP) 
+
+(Note: The context also mentions that CSE370 has its own prerequisite chain, but this chain is not relevant to determining prerequisites for CSE489. It only says ""Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110"", which indicates the prerequisites for taking CSE370 itself.)",0.0633,47.7538,47.8172,2026-07-26T12:09:11.357967+00:00,0.1402
+Q101,full_hybrid,0.5,What are the prerequisites for CSE321?,The prerequisite for CSE321 is CSE221 (HP).,"Course: CSE321
+Prerequisite: CSE221 (HP)
+Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
+
+Course: CSE410
+Prerequisite: CSE321 (HP)
+Full Prerequisite Chain: CSE321-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE321
+First Theory Coordinator: BDH
+Second Theory Coordinator: SZD
+Theory Coordinator Email: badrul.hossain@bracu.ac.bd,shazid.mahbub@bracu.ac.bd
+First Lab Coordinator: BDH
+Lab Coordinator Email: badrul.hossain@bracu.ac.bd
+
+Course: CSE321-02
+Theory Initial: NTR
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 10B-17C
+Lab Faculty: SZD,MAFZ
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 10G-32L
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and ",The prerequisite for CSE321 is CSE221 (HP).,1.2840,31.8794,33.1634,2026-07-26T12:09:44.629412+00:00,0.0850
+Q084,bm25_only,1.0,"New student here, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?","If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.","Question: New student here, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: What happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: Hey, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question (Banglish): Cyclone er moto external reason e thesis defense postpone hole ki hoy?
+Answer (English): If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: My thesis defense got postponed due to a cyclone, and separately I want to change my thesis title before the (new) defense date. Are both of these OK?
+Answer: Both are handled, but through different mechanisms - a defense postponed for an external/valid reason like a cyclone is simply rescheduled, no penalty. Changing your thesis title before the (rescheduled) final defense is also possible, but the deadline for that varies by semester, so you'd want to check the current thesis deadlin","If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.",0.6627,12.5711,13.2338,2026-07-26T12:09:58.017029+00:00,0.0618
+Q054,bm25_only,1.0,"For a friend who's asking — are journals, magazines and reference books available for borrowing?","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.","Question: For a friend who's asking — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Just wondering, are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Quick question — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Can someone help — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",0.1984,20.6717,20.8700,2026-07-26T12:10:18.890430+00:00,0.1616
+Q071,bm25_only,1.0,What are BRAC University's official colours?,"BRAC University's official colours are blue, black, and gray.","Question: What are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: Can you tell me what BRAC University's official colours are?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: I wanted to ask, what are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: I looked around the site but couldn't find it — what are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question (Banglish): BRAC University er official colour gula ki?
+Answer (English): BRAC University's official colours are blue, black, and gray.","BRAC University's official colours are blue, black, and gray.",0.3036,17.3222,17.6258,2026-07-26T12:10:36.519441+00:00,0.0125
+Q046,bm25_only,1.0,Before I forget to ask — how can students apply for scholarships at BRAC University?,"To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before notifying selected students through email or the university portal.","Question: Before I forget to ask — how can students apply for scholarships at BRAC University?
+Answer: To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committ
+
+Question: How can students apply for scholarships at BRAC University?
+Answer: To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before no
+
+Question: Before I forget to ask — does BRAC University have a medical center for students?
+Answer: Yes, BRAC University's Student Life section lists a Medical Center that provides healthcare services to students on campus, in addition to the medical facilities available at the Savar Residential Campus.
+
+Question: Before I forget to ask — is accommodation guaranteed for all international students?
+Answer: BRAC University provides accommodation assistance for international students, but availability is subject to seats and is arranged through the International & Scholarship Office; it is not an unconditional guarantee for every applicant.
+
+Question (Banglish): BRAC University te student ra scholarship er jonno kivabe apply korbe?
+Answer (English): To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship ","To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before notifying applicants.",0.1270,39.3178,39.4448,2026-07-26T12:11:15.966278+00:00,0.3014
+Q045,bm25_only,1.0,"Kind of urgent, but roughly how many students and academic staff does BRAC University have?","As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.","Question: Kind of urgent, but roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Just wondering, roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Quick question — roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question (Banglish): BRAC University te mote koto student ar academic staff ache?
+Answer (English): As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.","As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.",0.8848,61.0775,61.9623,2026-07-26T12:12:18.149993+00:00,0.2119
+Q040,bm25_only,1.0,"New student here, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?",Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link,"Question: New student here, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question: How to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question: Hey, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question: I looked around the site but couldn't find it — how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question (Banglish): Xiaomi phone e Wi-Fi show na korle kivabe fix korbo?
+Answer (English): Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link","Unfortunately, I don't have enough information to answer your question. The retrieved context only contains previous responses to similar questions about how to fix a Xiaomi phone's Wi-Fi issues, but it doesn't provide any specific advice or guidance for new students. If you're having trouble with your university-related coursework or academic advising, I'd be happy to help with that!",3.2626,51.6717,54.9343,2026-07-26T12:13:13.300342+00:00,0.0594
+Q023,bm25_only,1.0,No idea if this is written down anywhere — how much does it cost?,"Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.","Question: No idea if this is written down anywhere — how much does it cost?
+Answer: Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.
+
+Question: No idea if this is written down anywhere — how much does it cost to request a Medium of Instruction letter?
+Answer: Based on published fee notices, the Medium of Instruction Fee is BDT 200.
+
+Question: No idea if this is written down anywhere — how much it will cost for accomodation, food and transportation fee for international students?
+Answer: Approximately US$ 400 per month will be charged for accommodation and food.
+
+Question: No idea if this is written down anywhere — how much do I still owe in tuition this semester?
+Answer: That's on your personal account, which I can't see. Check your pay slip in Connect for your exact outstanding balance.
+
+Question: No idea if this is written down anywhere — how much of my final grade in a course comes from class attendance?
+Answer: Class attendance is compulsory, and 5% of the total marks in a course are typically allocated for attendance under the university's grading guidelines.","Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.",1.3018,12.5868,13.8886,2026-07-26T12:13:27.297608+00:00,0.0387
+Q081,bm25_only,1.0,"Not sure if this is covered elsewhere, but is there a dorm supervisor who oversees student welfare in BRACU accommodation?","Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.","Question: Not sure if this is covered elsewhere, but is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: New student here, is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: Is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: For a friend who's asking — is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: Does BRAC University have a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.","Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.",0.2811,39.6738,39.9549,2026-07-26T12:14:07.257771+00:00,0.2368
+Q011,bm25_only,1.0,What is the minimum SSC/HSC or O/A-Level grade generally required for BRAC University undergraduate admission?,"As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.","Question: What is the minimum SSC/HSC or O/A-Level grade generally required for BRAC University undergraduate admission?
+Answer: As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.
+
+Question (Banglish): BRAC University undergraduate admission er jonno shadharonoto minimum SSC/HSC ba O/A-Level grade koto lagbe?
+Answer (English): As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.
+
+Question: What undergraduate tuition waiver is available based on SSC/HSC or A-Level results?
+Answer: Undergraduate applicants can receive a tuition waiver (commonly around 25%, with higher tiers such as 30% or 100% for top scorers in the BRACU Admission Test) in their first semester, based on their prior academic performance at SSC/O-Level, HSC/A-Level, or IB Diploma.
+
+Question: What are the requirements to apply for Pharmacy in Undergraduate level?
+Answer: Candidates must have a minimum aggregate GPA of 8.00 out of 10 (on a scale of 10), with no grade lower than 3.5 in SSC/O Level/Equivalent and HSC/A Level/Equivalent. In addition, they must achieve a minimum GPA of 4.00 in Chemistry and Biology in both examinations. They also need a minimum GPA of 3.5 in Mathematics and Physics in both examinations (on a scale of 5 in HSC or equivalent). For “O” Level and ""A
+
+Question: What O-Level/A-Level grade combination is generally required for undergraduate admission?
+Answer: Applicants typically need a minimum GPA of 2.5 separately in O-Level (best 5 subjects) and A-Level (best 2 subjects), calculated on BRACU's scale (A=5, B=4, C=3, D=2, with only one E=1 grade accepted); subjects with more than one E grade are not considered.","As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.",0.1206,37.3283,37.4489,2026-07-26T12:14:44.710980+00:00,0.1793
+Q001,bm25_only,1.0,Am I allowed to take a course on a Pass/Fail basis instead of a letter grade?,"Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.","Question: Am I allowed to take a course on a Pass/Fail basis instead of a letter grade?
+Answer: Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question: Can I take a course on a Pass/Fail basis instead of a letter grade?
+Answer: Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question: Hey, can I take a course on a Pass/Fail basis instead of a letter grade?
+Answer: Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question (Banglish): Letter grade er bodole ami ki course ta Pass/Fail basis e nite parbo?
+Answer (English): Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question: Does a Pass/Fail grade or a Satisfactory/Unsatisfactory grade count toward Dean's List or VC's List eligibility credits?
+Answer: No. Dean's List and VC's List eligibility is calculated only from credits with regular letter grades; Pass/Fail and Satisfactory/Unsatisfactory graded credits are excluded from that count.","Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.",0.0908,24.5580,24.6488,2026-07-26T12:15:09.359971+00:00,0.0707
+Q184,bm25_only,1.0,What is RBR's designation?,Mr. Rakin Bin Rabbani (RBR) is a Lecturer.,"Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Designation: Lecturer
+Status: Full Time
+Room: 4J60
+Email: rakin.rabbani@bracu.ac.bd
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE101-03 09B-12C; 12:30 PM - CSE101-04 09B-12C; 2:00 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L; 3:30 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE370-03 09H-32C; 12:30 PM - CSE370-04 09H-32C; 2:00 PM - CSE101-02 (LAB) RBR,ANV FT11-04L; 3:30 PM - CSE101-02 (LAB) RBR,ANV FT11-04L
+
+Initial: ANV
+Name: Md. Anonto Shuvo
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - CSE101-02 (LAB) RBR,ANV FT11-04L; 3:30 PM - CSE101-02 (LAB) RBR,ANV FT11-04L
+
+Course: CSE101
+First Theory Coordinator: RBR
+Theory Coordinator Email: rakin.rabbani@bracu.ac.bd
+First Lab Coordinator: RBR
+Second Lab Coordinator: SLAR
+Lab Coordinator Email: rakin.rabbani@bracu.ac.bd,ext.sadiul.rafi@bracu.ac.bd",RBR's (Mr. Rakin Bin Rabbani) designation is Lecturer.,0.1691,31.1066,31.2756,2026-07-26T12:15:40.638166+00:00,0.2012
+Q154,bm25_only,1.0,What day and time is the theory class for CSE250-10B?,The theory class for CSE250-10B is on MON+WED at 3:30 PM in room 10A-04C.,"Course: CSE250-10B
+Theory Initial: TAV
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 10A-04C
+Lab Faculty: AQT,TSE
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250
+Prerequisite: PHY112 (SP)
+
+Course: CSE250-01B
+Theory Initial: MHY
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: UPM,ALSM
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250-02A
+Theory Initial: AKDB
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 07H-27C
+Lab Faculty: ZIZE,TSE
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250
+First Theory Coordinator: SDS
+Second Theory Coordinator: PDS
+Theory Coordinator Email: shadman.shahriar@bracu.ac.bd,purbayan.das@bracu.ac.bd
+First Lab Coordinator: SDQ
+Second Lab Coordinator: FFR
+Lab Coordinator Email: saiful.bari@bracu.ac.bd,md.fatin@bracu.ac.bd","According to the retrieved context, the theory class for CSE250-10B has the following details:
+
+Day: MON + WED
+Time: 3:30 PM
+Room: 10A-04C",0.2142,28.0251,28.2394,2026-07-26T12:16:08.888780+00:00,0.0000
+Q171,bm25_only,1.0,Who teaches the lab section of CSE110-17?,"The lab section of CSE110-17 is taught by WLV,NQM.","Course: CSE110-03
+Theory Initial: STNM
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 10B-17C
+Lab Faculty: YND,ATY
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09B-08L
+
+Course: CSE110-01
+Theory Initial: ANT
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 10B-17C
+Lab Faculty: ANT,ART
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 09B-10L
+
+Course: CSE110
+First Theory Coordinator: TAW
+Theory Coordinator Email: tawhid.anwar@bracu.ac.bd
+First Lab Coordinator: DFD
+Second Lab Coordinator: RKBM
+Lab Coordinator Email: fabian.dofadar@bracu.ac.bd,mohammad.rakibul@bracu.ac.bd
+
+Course: CSE110-02
+Theory Initial: STNM
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 10B-17C
+Lab Faculty: AOHE,RKBM
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: 09B-08L
+
+Initial: NQM
+Name: Md Nafiz Ishtiaque Mahee
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-07 (LAB) AAF,NQM 09B-09L; 9:30 AM - CSE110-07 (LAB) AAF,NQM 09B-09L; 11:00 AM - CSE110-17 (LAB) WLV,NQM 10E-27L; 12:30 PM - CSE110-17 (LAB) WLV,NQM 10E-27L","According to the context, the Lab Faculty for CSE110-01 is listed as ANT and ART. However, there is no information available about the lab faculty for CSE110-17.
+
+But, looking at the Initials in the scheduled commitments section, I found that WLV is mentioned as teaching a lab section of CSE110-17 on Thursday (Day: Thursday). 
+
+Additionally, NQM (Md Nafiz Ishtiaque Mahee) is also listed as being involved in this lab.",0.4311,85.7948,86.2259,2026-07-26T12:17:35.146122+00:00,0.0000
+Q146,bm25_only,1.0,What is the coordinator email for CSE220?,The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd.,"Course: CSE220-02
+Theory Initial: MAHR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10B-15C
+Lab Faculty: FBAW,AIB
+Lab Day: SUN
+Lab Time: 2:00 PM
+Lab Room: 09B-10L
+
+Course: CSE220-03
+Theory Initial: MAHR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 10B-15C
+Lab Faculty: NZU,FBAW
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: 09B-08L
+
+Course: CSE220-01
+Theory Initial: MAHR
+Theory Day: SAT+THU
+Theory Time: 8:00 AM
+Theory Room: 10B-15C
+Lab Faculty: SWG,NZU
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 09B-10L
+
+Course: CSE220
+First Theory Coordinator: AIB
+Theory Coordinator Email: abu.ibrahim@bracu.ac.bd
+First Lab Coordinator: AIB
+Second Lab Coordinator: KKS
+Lab Coordinator Email: abu.ibrahim@bracu.ac.bd,md.khaliduzzaman@bracu.ac.bd
+
+Course: CSE220
+Prerequisite: CSE111 (HP),CSE230 (HP)
+Full Prerequisite Chain: CSE230-CSE111-CSE110",The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd and also md.khaliduzzaman@bracu.ac.bd.,0.8741,13.0546,13.9287,2026-07-26T12:17:49.143443+00:00,0.0000
+Q145,bm25_only,1.0,What is the coordinator email for CSE482?,The coordinator email for CSE482 is shadman.shahriar@bracu.ac.bd.,"Course: CSE482
+First Theory Coordinator: SDS
+Theory Coordinator Email: shadman.shahriar@bracu.ac.bd
+First Lab Coordinator: SDS
+Lab Coordinator Email: shadman.shahriar@bracu.ac.bd
+
+Course: CSE424
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE474
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd
+
+Course: CSE370
+First Theory Coordinator: FEK
+Theory Coordinator Email: farden.khan@bracu.ac.bd
+First Lab Coordinator: FEK
+Lab Coordinator Email: farden.khan@bracu.ac.bd
+
+Course: CSE391
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd",shadman.shahriar@bracu.ac.bd,0.1000,7.1096,7.2096,2026-07-26T12:17:56.354259+00:00,0.3860
+Q140,bm25_only,1.0,What is the coordinator email for CSE447?,The coordinator email for CSE447 is iqbal.hossain@bracu.ac.bd.,"Course: CSE447-01
+Theory Initial: MIH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09E-20T
+Lab Faculty: FFU,SJM
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 09E-22L
+
+Course: CSE447-02
+Theory Initial: MIH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09E-20T
+Lab Faculty: FFU,RDS
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09E-21L
+
+Course: CSE447-03
+Theory Initial: MIH
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09E-20T
+Lab Faculty: FFU,SJM
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: 09E-21L
+
+Course: CSE447
+First Theory Coordinator: MIH
+Theory Coordinator Email: iqbal.hossain@bracu.ac.bd
+First Lab Coordinator: FFU
+Lab Coordinator Email: farhan.faruk@bracu.ac.bd
+
+Course: CSE424
+First Theory Coordinator: AAR
+Theory Coordinator Email: annajiat@bracu.ac.bd
+First Lab Coordinator: AAR
+Lab Coordinator Email: annajiat@bracu.ac.bd",The coordinator email for CSE447 is iqbal.hossain@bracu.ac.bd.,0.0354,9.0863,9.1216,2026-07-26T12:18:05.476312+00:00,0.0000
+Q123,bm25_only,1.0,What is the full prerequisite chain for CSE471?,The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE110.,"Course: CSE471-01
+Theory Initial: AQU
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: SADA,WHMJ
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 09F-25L
+
+Course: CSE471-03
+Theory Initial: AQU
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: SADA,WHMJ
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09F-25L
+
+Course: CSE471-02
+Theory Initial: AQU
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: KZMN,WHMJ
+Lab Day: SUN
+Lab Time: 2:00 PM
+Lab Room: 09F-25L
+
+Course: CSE471
+First Theory Coordinator: MIH
+Theory Coordinator Email: iqbal.hossain@bracu.ac.bd
+First Lab Coordinator: AQU
+Lab Coordinator Email: aquib.azmain@bracu.ac.bd
+
+Course: CSE471
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110",The full prerequisite chain for CSE471 is: CSE370-CSE221-CSE220-CSE111-CSE110.,0.1483,44.9471,45.0953,2026-07-26T12:18:50.797966+00:00,0.0000
+Q181,bm25_only,1.0,What is SHBK's designation?,Sahib Kowsar (SHBK) is a Lecturer.,"Initial: SHBK
+Name: Sahib Kowsar
+Designation: Lecturer
+Status: Full Time
+Room: 4L91
+Email: sahib.kowsar@bracu.ac.bd
+
+Initial: SHBK
+Name: Sahib Kowsar
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE321-13 09A-01C; 9:30 AM - CSE321-14 09A-01C; 11:00 AM - CSE330-12 (LAB) SHBK,ANNH 09F-26L; 12:30 PM - CSE330-12 (LAB) SHBK,ANNH 09F-26L; 2:00 PM - CSE330-09 (LAB) SADF,SHBK 09F-24L; 3:30 PM - CSE330-09 (LAB) SADF,SHBK 09F-24L
+
+Initial: SHBK
+Name: Sahib Kowsar
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE360-09 09A-05C; 9:30 AM - CSE360-10 09A-05C; 11:00 AM - CSE330-16 (LAB) MNP,SHBK 09F-26L; 12:30 PM - CSE330-16 (LAB) MNP,SHBK 09F-26L
+
+Initial: MNP
+Name: Mushfique Nasir Probor
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - Consultation; 11:00 AM - CSE330-16 (LAB) MNP,SHBK 09F-26L; 12:30 PM - CSE330-16 (LAB) MNP,SHBK 09F-26L; 2:00 PM - CSE330-03 07H-26C; 3:30 PM - CSE330-04 07H-26C
+
+Initial: ANNH
+Name: Aunon Halder
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE330-11 09A-04C; 9:30 AM - Consultation; 11:00 AM - CSE330-12 (LAB) SHBK,ANNH 09F-26L; 12:30 PM - CSE330-12 (LAB) SHBK,ANNH 09F-26L; 2:00 PM - CSE330-13 (LAB) NMP,ANNH 09F-26L; 3:30 PM - CSE330-13 (LAB) NMP,ANNH 09F-26L",SHBK's designation is Lecturer.,4.2042,228.0680,232.2722,2026-07-26T12:22:43.629401+00:00,0.1456
+Q111,bm25_only,1.0,What is the full prerequisite chain for CSE489?,The full prerequisite chain for CSE489 is CSE370-CSE221-CSE220-CSE111-CSE110.,"Course: CSE489
+First Theory Coordinator: ADR
+Theory Coordinator Email: abdur.rahman@bracu.ac.bd
+First Lab Coordinator: ADR
+Lab Coordinator Email: abdur.rahman@bracu.ac.bd
+
+Course: CSE489-01
+Theory Initial: ADR
+Theory Day: TUE+TUE
+Theory Time: 11:00 AM+12:30 PM
+Theory Room: FT11-04L
+Lab Faculty: CPTH,ADR
+Lab Day: SUN
+Lab Time: 2:00 PM
+Lab Room: FT11-04L
+
+Course: CSE489
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110
+
+Course: PHY112
+Prerequisite: PHY111 (HP)
+Full Prerequisite Chain: PHY111
+
+Course: ENG102
+Prerequisite: ENG101 (HP)
+Full Prerequisite Chain: ENG101",The full prerequisite chain for CSE489 is: CSE370-CSE221-CSE220-CSE111-CSE110.,2.4367,198.6189,201.0556,2026-07-26T12:26:05.088202+00:00,0.0000
+Q101,bm25_only,1.0,What are the prerequisites for CSE321?,The prerequisite for CSE321 is CSE221 (HP).,"Course: CSE321
+First Theory Coordinator: BDH
+Second Theory Coordinator: SZD
+Theory Coordinator Email: badrul.hossain@bracu.ac.bd,shazid.mahbub@bracu.ac.bd
+First Lab Coordinator: BDH
+Lab Coordinator Email: badrul.hossain@bracu.ac.bd
+
+Course: CSE321-02
+Theory Initial: NTR
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 10B-17C
+Lab Faculty: SZD,MAFZ
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 10G-32L
+
+Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
+Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and 
+
+Course: CSE321-01
+Theory Initial: TVRR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09A-04C
+Lab Faculty: SMUR,CSSD
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 10G-32L
+
+Course: CSE321-03
+Theory Initial: NTR
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 10B-17C
+Lab Faculty: CTFZ,NMMR
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 10G-32L","Unfortunately, I couldn't find any information on the prerequisites for CSE321 in the retrieved context. The retrieved context only provides information on course offerings, theory and lab coordinators, days, times, and rooms for different sections of CSE321 (CSE321-01, CSE321-02, CSE321-03), but does not mention any prerequisites for taking the course.",4.5049,324.3659,328.8708,2026-07-26T12:31:34.340135+00:00,0.0000
+Q084,vector_only,0.0,"New student here, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?","If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.","Question: New student here, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: What happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: Hey, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?
+Answer: If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question (Banglish): Cyclone er moto external reason e thesis defense postpone hole ki hoy?
+Answer (English): If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.
+
+Question: My thesis defense got postponed due to a cyclone, and separately I want to change my thesis title before the (new) defense date. Are both of these OK?
+Answer: Both are handled, but through different mechanisms - a defense postponed for an external/valid reason like a cyclone is simply rescheduled, no penalty. Changing your thesis title before the (rescheduled) final defense is also possible, but the deadline for that varies by semester, so you'd want to check the current thesis deadlin","If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.",2.4880,15.5709,18.0589,2026-07-26T12:31:52.663190+00:00,0.0239
+Q054,vector_only,0.0,"For a friend who's asking — are journals, magazines and reference books available for borrowing?","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.","Question: For a friend who's asking — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Can someone help — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Just wondering, are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: This might be a silly question, but are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.
+
+Question: Quick question — are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",0.2907,23.0560,23.3467,2026-07-26T12:32:16.012490+00:00,0.0193
+Q071,vector_only,0.0,What are BRAC University's official colours?,"BRAC University's official colours are blue, black, and gray.","Question: I looked around the site but couldn't find it — what are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: I wanted to ask, what are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: What are BRAC University's official colours?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question: Can you tell me what BRAC University's official colours are?
+Answer: BRAC University's official colours are blue, black, and gray.
+
+Question (Banglish): BRAC University er official colour gula ki?
+Answer (English): BRAC University's official colours are blue, black, and gray.","BRAC University's official colours are blue, black, and gray.",0.1426,13.2912,13.4338,2026-07-26T12:32:29.450651+00:00,0.0001
+Q046,vector_only,0.0,Before I forget to ask — how can students apply for scholarships at BRAC University?,"To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before notifying selected students through email or the university portal.","Question: Before I forget to ask — how can students apply for scholarships at BRAC University?
+Answer: To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committ
+
+Question: How can students apply for scholarships at BRAC University?
+Answer: To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before no
+
+Question: How can I apply for the scholarship?
+Answer: 1. Students who are eligible for Scholarship Based on Previous Academic Results / Sibling Scholarship / BRAC Scholarship / Physically Challenged Students / Children of Freedom Fighter / Debater’s Blue Scholarship / Children of Brac University Regular Confirmed Employee will have to apply for the first time through BracU prescribed form which is available at the Brac University website (https://www.bracu.ac.bd/admission/scholarships-financial
+
+Question: Quick question — how do I apply for the BRAC University international scholarship?
+Answer: International applicants fill out the online scholarship application form and submit it, along with required supporting documents (e.g., income declarations, trade license if a business owner), to the International & Scholarship Office at international-office@bracu.ac.bd.
+
+Question: How do I apply for the BRAC University international scholarship?
+Answer: International applicants fill out the online scholarship application form and submit it, along with required supporting documents (e.g., income declarations, trade license if a business owner), to the International & Scholarship Office at international-office@bracu.ac.bd.","To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before notifying the winners.",0.1245,40.3235,40.4480,2026-07-26T12:33:09.902062+00:00,0.0052
+Q045,vector_only,0.0,"Kind of urgent, but roughly how many students and academic staff does BRAC University have?","As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.","Question: Kind of urgent, but roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Just wondering, roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Quick question — roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question: Roughly how many students and academic staff does BRAC University have?
+Answer: As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.
+
+Question (Banglish): BRAC University te mote koto student ar academic staff ache?
+Answer (English): As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.","As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.",0.1088,44.3053,44.4141,2026-07-26T12:33:54.321534+00:00,0.0124
+Q040,vector_only,0.0,"New student here, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?",Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link,"Question: New student here, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question: How to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question: Hey, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question: I looked around the site but couldn't find it — how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?
+Answer: Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link
+
+Question (Banglish): Xiaomi phone e Wi-Fi show na korle kivabe fix korbo?
+Answer (English): Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link","Unfortunately, I don't have enough information in the retrieved context to answer your question. The previous answers seem to be related to troubleshooting a specific issue with a Xiaomi phone's Wi-Fi connectivity, but there is no general guidance or explanation on how to access an issue fixing manual. If you could provide more details about what kind of issue you're experiencing, I may be able to help further.",1.4046,34.0371,35.4416,2026-07-26T12:34:29.847975+00:00,0.0134
+Q023,vector_only,0.0,No idea if this is written down anywhere — how much does it cost?,"Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.","Question: No idea if this is written down anywhere — how much does it cost?
+Answer: Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.
+
+Question: No idea if this is written down anywhere — how much does it cost to request a Medium of Instruction letter?
+Answer: Based on published fee notices, the Medium of Instruction Fee is BDT 200.
+
+Question: I looked around the site but couldn't find it — how much it will cost for accomodation, food and transportation fee for international students?
+Answer: Approximately US$ 400 per month will be charged for accommodation and food.
+
+Question: Kind of urgent, but how much does it cost to request a Medium of Instruction letter?
+Answer: Based on published fee notices, the Medium of Instruction Fee is BDT 200.
+
+Question: How much does it cost to request a Medium of Instruction letter?
+Answer: Based on published fee notices, the Medium of Instruction Fee is BDT 200.","Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.",1.2770,26.5513,27.8283,2026-07-26T12:34:57.801715+00:00,0.0082
+Q081,vector_only,0.0,"Not sure if this is covered elsewhere, but is there a dorm supervisor who oversees student welfare in BRACU accommodation?","Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.","Question: Not sure if this is covered elsewhere, but is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: Sorry if this was already answered, but is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: Is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: For a friend who's asking — is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.
+
+Question: New student here, is there a dorm supervisor who oversees student welfare in BRACU accommodation?
+Answer: Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.","Yes. According to the context, yes, there is a dorm supervisor who oversees student welfare in BRACU accommodation (e.g., the female students' dormitory). This person has various responsibilities including enforcing dorm rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics.",0.3663,43.6916,44.0578,2026-07-26T12:35:41.869413+00:00,0.0035
+Q011,vector_only,0.0,What is the minimum SSC/HSC or O/A-Level grade generally required for BRAC University undergraduate admission?,"As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.","Question: What is the minimum SSC/HSC or O/A-Level grade generally required for BRAC University undergraduate admission?
+Answer: As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.
+
+Question (Banglish): BRAC University undergraduate admission er jonno shadharonoto minimum SSC/HSC ba O/A-Level grade koto lagbe?
+Answer (English): As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.
+
+Question: For a friend who's asking — what O-Level/A-Level grade combination is generally required for undergraduate admission?
+Answer: Applicants typically need a minimum GPA of 2.5 separately in O-Level (best 5 subjects) and A-Level (best 2 subjects), calculated on BRACU's scale (A=5, B=4, C=3, D=2, with only one E=1 grade accepted); subjects with more than one E grade are not considered.
+
+Question: What O-Level/A-Level grade combination is generally required for undergraduate admission?
+Answer: Applicants typically need a minimum GPA of 2.5 separately in O-Level (best 5 subjects) and A-Level (best 2 subjects), calculated on BRACU's scale (A=5, B=4, C=3, D=2, with only one E=1 grade accepted); subjects with more than one E grade are not considered.
+
+Question: What are the passing and failing grades at BRAC University?
+Answer: At BRAC University, the minimum passing grade for undergraduate courses is D (1.0), while for graduate courses, it is typically C (2.0). Grades below these thresholds are considered failing. Specifically, a grade of F (0.0) indicates failure.","As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.",0.5833,35.6627,36.2460,2026-07-26T12:36:18.179170+00:00,0.1245
+Q001,vector_only,0.0,Am I allowed to take a course on a Pass/Fail basis instead of a letter grade?,"Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.","Question: Am I allowed to take a course on a Pass/Fail basis instead of a letter grade?
+Answer: Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question: Hey, can I take a course on a Pass/Fail basis instead of a letter grade?
+Answer: Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question: Can I take a course on a Pass/Fail basis instead of a letter grade?
+Answer: Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question (Banglish): Letter grade er bodole ami ki course ta Pass/Fail basis e nite parbo?
+Answer (English): Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.
+
+Question: What are the passing and failing grades at BRAC University?
+Answer: At BRAC University, the minimum passing grade for undergraduate courses is D (1.0), while for graduate courses, it is typically C (2.0). Grades below these thresholds are considered failing. Specifically, a grade of F (0.0) indicates failure.","Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.",1.1686,53.1787,54.3473,2026-07-26T12:37:12.641294+00:00,0.0067
+Q184,vector_only,0.0,What is RBR's designation?,Mr. Rakin Bin Rabbani (RBR) is a Lecturer.,"Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE101-03 09B-12C; 12:30 PM - CSE101-04 09B-12C
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE370-03 09H-32C; 12:30 PM - CSE370-04 09H-32C
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE370-03 09H-32C; 12:30 PM - CSE370-04 09H-32C; 2:00 PM - CSE101-02 (LAB) RBR,ANV FT11-04L; 3:30 PM - CSE101-02 (LAB) RBR,ANV FT11-04L
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE101-03 09B-12C; 12:30 PM - CSE101-04 09B-12C; 2:00 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L; 3:30 PM - CSE370-16 (LAB) RBR,KZMN 12F-31L
+
+Initial: RBR
+Name: Mr. Rakin Bin Rabbani
+Designation: Lecturer
+Status: Full Time
+Room: 4J60
+Email: rakin.rabbani@bracu.ac.bd",Lecturer,0.2666,21.4971,21.7637,2026-07-26T12:37:34.407965+00:00,0.0152
+Q154,vector_only,0.0,What day and time is the theory class for CSE250-10B?,The theory class for CSE250-10B is on MON+WED at 3:30 PM in room 10A-04C.,"Course: CSE437-10
+Theory Initial: NBD
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 10A-05C
+
+Course: CSE340-13
+Theory Initial: PBK
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 08H-22C
+
+Course: CSE340-18
+Theory Initial: THR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09H-35C
+
+Course: CSE422-20
+Theory Initial: ITTSC
+Theory Day: MON+WED
+Theory Time: 2:00 PM
+Theory Room: 07H-26C
+Lab Faculty: RRH,FDZ
+Lab Day: SAT
+Lab Time: 8:00 AM
+Lab Room: 09E-21L
+
+Course: CSE437-04
+Theory Initial: SBB
+Theory Day: SAT+THU
+Theory Time: 2:00 PM
+Theory Room: 09C-16T","There is no information in the retrieved context about a course called ""CSE250-10B"". The only courses mentioned are CSE437-10, CSE340-13, CSE340-18, CSE422-20, and CSE437-04. Therefore, I cannot provide an answer to your question.",0.1067,34.5549,34.6616,2026-07-26T12:38:09.073220+00:00,0.0199
+Q171,vector_only,0.0,Who teaches the lab section of CSE110-17?,"The lab section of CSE110-17 is taught by WLV,NQM.","Course: CSE103
+First Lab Coordinator: RBR
+Second Lab Coordinator: SLAR
+Lab Coordinator Email: rakin.rabbani@bracu.ac.bd,ext.sadiul.rafi@bracu.ac.bd
+
+Course: CSE111
+Prerequisite: CSE110 (HP)
+
+Course: CSE260-16A
+Theory Initial: ADD
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09D-17C
+Lab Faculty: NNTN,LMI
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: FT11-01L
+
+Course: CSE220
+Prerequisite: CSE111 (HP),CSE230 (HP)
+Full Prerequisite Chain: CSE230-CSE111-CSE110
+
+Course: CSE310
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110","Sorry, I don't have enough information to answer that question. There is no course code ""CSE110"" in the retrieved context, only a prerequisite for ""Course: CSE111"".",0.3294,24.5619,24.8913,2026-07-26T12:38:33.965524+00:00,0.0305
+Q146,vector_only,0.0,What is the coordinator email for CSE220?,The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd.,"Question: Can someone help — which section am I registered in for CSE220 this semester?
+Answer: That's on your personal account, not something I can see. Check your registered sections in Connect under your course schedule.
+
+Question: Which section am I registered in for CSE220 this semester?
+Answer: That's on your personal account, not something I can see. Check your registered sections in Connect under your course schedule.
+
+Course: CSE251
+First Theory Coordinator: PDS
+Second Theory Coordinator: UTS
+Theory Coordinator Email: purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd
+First Lab Coordinator: MOM
+Lab Coordinator Email: moynul.moni@bracu.ac.bd
+
+Question: Name of the event that begins the advising phase fr every semeester?
+Answer: Wishlist event, the schedule will be mailed by the registrar.
+
+Question (Banglish): Amar advisor ke ta kivabe jante parbo?
+Answer (English): For CSE department, you can know you advisor by going to the CSE Advising Server. Then look for link-resources in the general section and find the link. It maybe titled as: 2024 [Current Semester] CSE Registration / Advising List [v1] [Student] List or wait until you see your advisor channel visible. Or visit: https://cse.sds.bracu.ac.bd/advising","I don't have enough information to answer the question about the coordinator email for CSE220. The context only mentions the coordinators and emails for CSE251, not CSE220.",0.1917,26.7771,26.9687,2026-07-26T12:39:00.942460+00:00,0.0012
+Q145,vector_only,0.0,What is the coordinator email for CSE482?,The coordinator email for CSE482 is shadman.shahriar@bracu.ac.bd.,"Question: Name of the event that begins the advising phase fr every semeester?
+Answer: Wishlist event, the schedule will be mailed by the registrar.
+
+Question (Banglish): Amar advisor ke ta kivabe jante parbo?
+Answer (English): For CSE department, you can know you advisor by going to the CSE Advising Server. Then look for link-resources in the general section and find the link. It maybe titled as: 2024 [Current Semester] CSE Registration / Advising List [v1] [Student] List or wait until you see your advisor channel visible. Or visit: https://cse.sds.bracu.ac.bd/advising
+
+Question: Can someone help — which section am I registered in for CSE220 this semester?
+Answer: That's on your personal account, not something I can see. Check your registered sections in Connect under your course schedule.
+
+Question: Which section am I registered in for CSE220 this semester?
+Answer: That's on your personal account, not something I can see. Check your registered sections in Connect under your course schedule.
+
+see your advisor channel visible. Or visit: https://cse.sds.bracu.ac.bd/advising","Unfortunately, there is no information about the coordinator email for CSE482 in the provided context.",0.0448,17.7069,17.7517,2026-07-26T12:39:18.695445+00:00,0.0070
+Q140,vector_only,0.0,What is the coordinator email for CSE447?,The coordinator email for CSE447 is iqbal.hossain@bracu.ac.bd.,"Question: Which section am I registered in for CSE220 this semester?
+Answer: That's on your personal account, not something I can see. Check your registered sections in Connect under your course schedule.
+
+Question: Can someone help — which section am I registered in for CSE220 this semester?
+Answer: That's on your personal account, not something I can see. Check your registered sections in Connect under your course schedule.
+
+Course: CSE446
+First Theory Coordinator: SDF
+Theory Coordinator Email: sadek.ferdous@bracu.ac.bd
+First Lab Coordinator: SJM
+Second Lab Coordinator: SDF
+Lab Coordinator Email: ext.sajid.mahir@bracu.ac.bd,sadek.ferdous@bracu.ac.bd
+
+Course: CSE251
+First Theory Coordinator: PDS
+Second Theory Coordinator: UTS
+Theory Coordinator Email: purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd
+First Lab Coordinator: MOM
+Lab Coordinator Email: moynul.moni@bracu.ac.bd
+
+Course: CSE490C
+First Theory Coordinator: SDAS
+Theory Coordinator Email: sowmitra.das@bracu.ac.bd",I don't have any information about a course called CSE447. It's not listed in the provided context.,0.0537,20.2474,20.3011,2026-07-26T12:39:38.997054+00:00,0.0002
+Q123,vector_only,0.0,What is the full prerequisite chain for CSE471?,The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE110.,"Course: CSE410
+Prerequisite: CSE321 (HP)
+Full Prerequisite Chain: CSE321-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE470
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE471
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE340
+Prerequisite: CSE260 (SP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250
+
+Course: CSE461
+Prerequisite: CSE260 (HP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250",The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE110.,0.1092,17.2797,17.3890,2026-07-26T12:39:56.387762+00:00,0.0012
+Q181,vector_only,0.0,What is SHBK's designation?,Sahib Kowsar (SHBK) is a Lecturer.,"Initial: SHBK
+Name: Sahib Kowsar
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE360-09 09A-05C; 9:30 AM - CSE360-10 09A-05C; 11:00 AM - Consultation; 12:30 PM - Consultation
+
+Initial: SHBK
+Name: Sahib Kowsar
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE360-09 09A-05C; 9:30 AM - CSE360-10 09A-05C; 11:00 AM - CSE330-16 (LAB) MNP,SHBK 09F-26L; 12:30 PM - CSE330-16 (LAB) MNP,SHBK 09F-26L
+
+Initial: SHBK
+Name: Sahib Kowsar
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE321-13 09A-01C; 9:30 AM - CSE321-14 09A-01C; 11:00 AM - Consultation; 12:30 PM - Consultation
+
+Initial: SHBK
+Name: Sahib Kowsar
+Designation: Lecturer
+Status: Full Time
+Room: 4L91
+Email: sahib.kowsar@bracu.ac.bd
+
+Initial: PBK
+Name: Mr. Partha Bhoumik
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE340-13 08H-22C; 9:30 AM - CSE260-07A 08H-22C,CSE260-07B 08H-22C; 11:00 AM - Consultation; 12:30 PM - CSE260-08A 07F-22C,CSE260-08B 07F-22C; 2:00 PM - Thesis (UG)",Lecturer.,0.0904,31.5701,31.6605,2026-07-26T12:40:28.050315+00:00,0.0004
+Q111,vector_only,0.0,What is the full prerequisite chain for CSE489?,The full prerequisite chain for CSE489 is CSE370-CSE221-CSE220-CSE111-CSE110.,"Course: CSE340
+Prerequisite: CSE260 (SP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250
+
+Course: CSE489
+Prerequisite: CSE370 (HP)
+Full Prerequisite Chain: CSE370-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE460
+Prerequisite: CSE260 (HP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250
+
+Course: CSE410
+Prerequisite: CSE321 (HP)
+Full Prerequisite Chain: CSE321-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE461
+Prerequisite: CSE260 (HP)
+Full Prerequisite Chain: CSE260-CSE251-CSE250",The full prerequisite chain for CSE489 is CSE370-CSE221-CSE220-CSE111-CSE110.,0.1900,17.5299,17.7199,2026-07-26T12:40:45.774136+00:00,0.0038
+Q101,vector_only,0.0,What are the prerequisites for CSE321?,The prerequisite for CSE321 is CSE221 (HP).,"Course: CSE421
+Prerequisite: CSE320 (SP)
+
+Course: CSE341
+Prerequisite: CSE340 (SP),CSE321 (SP)
+
+Course: CSE321
+Prerequisite: CSE221 (HP)
+Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
+
+Course: CSE410
+Prerequisite: CSE321 (HP)
+Full Prerequisite Chain: CSE321-CSE221-CSE220-CSE111-CSE110
+
+Course: CSE111
+Prerequisite: CSE110 (HP)",The prerequisite for CSE321 is CSE221 (Higher Placement).,0.1056,11.5050,11.6105,2026-07-26T12:40:57.386457+00:00,0.0228
+Q084,no_retrieval,,"New student here, what happens if a thesis defense is postponed due to external reasons, such as a cyclone?","If a thesis defense is postponed due to external reasons such as a cyclone, the date is simply rescheduled rather than penalized.",,"Welcome to our university!
+
+Regarding your question about a thesis defense being postponed due to external reasons, I'd like to explain the general policies we have in place. While every situation is unique, I'll provide you with an overview of how we typically handle such situations.
+
+If a cyclone or any other external reason forces a postponement of a thesis defense, the department and faculty members usually work together to find a suitable alternative date for the defense. The student's academic progress and graduation timeline would be considered when determining the new date.
+
+Here are some general steps that might occur:
+
+1. **Notification**: As soon as possible, the student or their advisor notifies the relevant departments and administrative offices about the postponement.
+2. **Agreement on a new date**: A mutually agreeable date for the rescheduled thesis defense is determined in consultation with the student's committee members, department chair, and other stakeholders.
+3. **Updated timelines**: The revised timeline for completion of the degree is adjusted to accommodate the new defense date, ensuring that the student remains on track for graduation.
+
+While external factors like cyclones can cause disruptions, our university prioritizes academic integrity and ensures that students have ample time to complete their research and meet graduation requirements.
+
+To minimize potential delays, we recommend:
+
+* Regular communication with your thesis committee and advisors
+* Keeping your project timeline flexible to accommodate unexpected events
+* Maintaining a contingency plan for backup dates or alternative solutions
+
+Feel free to reach out if you have any further questions or concerns about your specific situation.",0.0000,132.0351,132.0351,2026-07-26T12:43:09.563126+00:00,
+Q054,no_retrieval,,"For a friend who's asking — are journals, magazines and reference books available for borrowing?","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",,"For your friend, I'd be happy to clarify that availability of materials for borrowing varies depending on their format and source.
+
+**Journals:** Many academic libraries offer online access to journal articles, either through the library's website or through subscription-based databases. However, some journals might not be available in print for borrowing due to licensing agreements or copyright restrictions. But don't worry, you can often request an article from a journal we have in our collection and we'll try to provide it digitally!
+
+**Magazines:** Some magazines are available on the shelves for borrowing, while others may only be accessible online through subscription services like EBSCO's Masterfile Premier database. If your friend is interested in borrowing print copies of a magazine, they should check our catalog or visit the library's periodicals section to see what's currently available.
+
+**Reference Books:** Most reference books are available on the shelves for borrowing, but there might be restrictions on checking them out due to their high value and potential demand. Your friend can always ask at the circulation desk about borrowing a specific book.
+
+To make it easier for your friend to find what they need, I recommend:
+
+1. Checking our online catalog (you can have them search by title or author) to see if we have any print copies available.
+2. Looking up journals and magazines in our databases (like JSTOR or EBSCO) to access online articles.
+3. Visiting the library's website for information on borrowing policies, including any restrictions or requirements.
+
+If they have trouble finding what they need, feel free to have them reach out to me or our circulation desk for assistance!",0.0000,104.9311,104.9311,2026-07-26T12:44:54.681194+00:00,
+Q071,no_retrieval,,What are BRAC University's official colours?,"BRAC University's official colours are blue, black, and gray.",,"I'm happy to help with your question about BRAC University!
+
+According to my knowledge, the official colors of BRAC University are Navy Blue and Green Gold.
+
+If you need more information or have any further questions, feel free to ask!",0.0000,30.7162,30.7162,2026-07-26T12:45:25.415613+00:00,
+Q046,no_retrieval,,Before I forget to ask — how can students apply for scholarships at BRAC University?,"To apply for scholarships at BRAC University, students must first be admitted to a program. They can then fill out a scholarship application form, available through the admissions or financial aid office. Supporting documents, such as academic transcripts and financial proof (for need-based scholarships), are required. Applications must be submitted by the deadlines, and the Scholarship Committee reviews them before notifying selected students through email or the university portal.",,"Applying for scholarships at BRAC University is relatively straightforward. Students can follow these steps:
+
+1.  Check Eligibility Criteria: First, students need to review the eligibility criteria for each scholarship program available on the university's website or by contacting the Office of Student Affairs.
+2.  Gather Required Documents: Once a student determines which scholarships they are eligible for, they will typically need to provide supporting documents such as academic records, financial statements, and personal statements.
+3.  Apply Online: Many scholarship applications at BRAC University can be completed online through their dedicated portal or website. Students should submit the application with all required documents before the deadline.
+4.  Seek Guidance: If a student needs help finding information about specific scholarships or has questions about the application process, they can reach out to the Office of Student Affairs for support.
+5.  Monitor Application Status: After submitting their scholarship application, students can track its status through the university's online portal.",0.0000,57.6529,57.6529,2026-07-26T12:46:23.072880+00:00,
+Q045,no_retrieval,,"Kind of urgent, but roughly how many students and academic staff does BRAC University have?","As of recent figures, BRAC University has over 20,000 students in total (around 17,000+ undergraduates and 3,000+ postgraduates) and roughly 649 academic staff.",,"I'm happy to help!
+
+After checking our latest data, I can tell you that BRAC University has around 4,000-5,000 undergraduate and graduate students. As for the faculty and staff, we have approximately 600-700 full-time academic staff members, including professors, associate professors, assistant professors, lecturers, and instructors.
+
+Please note that these numbers are subject to change from year to year due to various factors such as student enrollment and hiring decisions. If you need more up-to-date information or specific details, feel free to ask!",0.0000,35.6953,35.6953,2026-07-26T12:46:58.769484+00:00,
+Q040,no_retrieval,,"New student here, how to fix the problem of Xiaomi phone Wi-Fi does not show issue fixing manual?",Step 1 and 2: https://drive.google.com/file/d/1uMQ4v7k5PI2B42uIn5XzXMfuQ5T_U2cz/view?usp=drive_link Step 3 and 4: https://drive.google.com/file/d/1jZ6E6FWCrhZsSxwz6Dhy04-5Ihoyrvo-/view?usp=drive_link,,"I'm happy to help with your question! However, I need to clarify that our university is primarily focused on academic advising and support for students, rather than technical issues related to personal devices.
+
+That being said, if you're experiencing issues with your Xiaomi phone's Wi-Fi connectivity, there are a few general troubleshooting steps you can try:
+
+1. Restart your device: Sometimes, a simple restart can resolve the issue.
+2. Check your network settings: Ensure that Wi-Fi is enabled on your device and that you are connected to the correct network.
+3. Forget the network: Try forgetting the network on your phone and then reconnecting to see if it resolves the issue.
+4. Update your software: Make sure your phone's operating system and software are up-to-date, as updates often include bug fixes and improvements.
+
+If these steps don't resolve the issue, you may want to reach out to Xiaomi's customer support or visit their website for more specific troubleshooting guides.
+
+However, if you'd like some recommendations on how to find online resources or support for your phone's issue, I can try to provide some guidance on that.",0.0000,71.9956,71.9956,2026-07-26T12:48:10.775900+00:00,
+Q023,no_retrieval,,No idea if this is written down anywhere — how much does it cost?,"Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.",,"I'd be happy to help you with your question about costs!
+
+To get an estimate of the total cost, I'll need to know a bit more information. Could you please let me know what program or major you're interested in? Are you a freshman, transfer student, or continuing student?
+
+Additionally, do you have any idea which type of tuition and fees you'd like to focus on (e.g., undergraduate, graduate, online courses)?
+
+Once I have that info, I can provide you with some estimates based on our university's current costs. We also offer a net price calculator on our website that can give you a more personalized estimate based on your family's income and other factors.
+
+Let me know if there's anything specific you'd like to know or any particular areas of concern!",0.0000,58.5699,58.5699,2026-07-26T12:49:09.348628+00:00,
+Q081,no_retrieval,,"Not sure if this is covered elsewhere, but is there a dorm supervisor who oversees student welfare in BRACU accommodation?","Yes, BRACU accommodation (e.g., the female students' dormitory) has a dedicated Dorm Supervisor role responsible for enforcing dormitory rules, coordinating with the Medical Center, overseeing meals and hygiene, managing attendance and security, and organizing extracurricular logistics like airport pickup and cultural trips for residents.",,"At Bangladeshi University (BRACU), we take student welfare very seriously. Yes, each of our residential halls has a dedicated Dorm Supervisor or Resident Advisor (RA) who oversees the well-being and safety of students residing on campus.
+
+These supervisors are responsible for:
+
+1. Monitoring student activities and ensuring that they adhere to university rules and regulations.
+2. Providing support and guidance to students in need, such as academic or personal challenges.
+3. Maintaining a safe and healthy living environment within the dormitory.
+4. Facilitating communication between students and university administration on any issues or concerns.
+
+If you're residing in BRACU accommodation, your Dorm Supervisor will likely be introduced to you during orientation or at the beginning of the semester. They can be reached through their designated email address or contact number, which is usually available on the university's website or shared with students upon arrival.
+
+Feel free to reach out to them if you have any concerns or need assistance with anything related to your stay in the dormitory!",0.0000,59.1125,59.1125,2026-07-26T12:50:08.468709+00:00,
+Q011,no_retrieval,,What is the minimum SSC/HSC or O/A-Level grade generally required for BRAC University undergraduate admission?,"As a general baseline (subject-specific requirements can be higher), applicants typically need a minimum GPA of 3.0 out of 5.0 (or 2nd division) in both SSC and HSC, a minimum C grade at O-Level, and a minimum C grade at A-Level.",,"For undergraduate admission to BRAC University, the general requirement is:
+
+* For SSC and HSC (or equivalent) students: Minimum CGPA 5.0 out of 10 in SSC and HSC examinations.
+* For O/A-Level students: A minimum grade of B in at least 5 subjects.
+
+Please note that these requirements are subject to change, and I would recommend checking the official BRAC University website or contacting their admissions office for the most up-to-date and accurate information.",0.0000,30.5204,30.5204,2026-07-26T12:50:38.990979+00:00,
+Q001,no_retrieval,,Am I allowed to take a course on a Pass/Fail basis instead of a letter grade?,"Yes, with conditions: the course instructor must approve the Pass/Fail option, the student must be carrying at least 12 credits for regular letter grades that same semester, no more than 4 credits can be taken Pass/Fail in any one semester, and a maximum of 16 credits total may be taken under the Pass/Fail option across a degree.",,"Yes, many universities offer the option to take certain courses on a Pass/Fail (P/F) or Satisfactory/Unsatisfactory (S/U) basis. However, there are some conditions and restrictions that may apply.
+
+To determine if you're eligible to take a course P/F, I'd recommend checking your university's catalog or speaking with an academic advisor from the relevant department. Typically, courses that can be taken on a P/F basis include:
+
+* Courses in certain disciplines, such as arts, humanities, social sciences, and general education requirements.
+* Some upper-level courses or special topics courses may not allow P/F grading.
+
+To take a course P/F, you'll usually need to meet specific eligibility criteria, which may include:
+
+* Having a minimum GPA or academic standing (e.g., good academic standing or higher).
+* Being at least a certain number of credits into your program.
+* Obtaining permission from the instructor, department chair, or dean.
+
+It's also worth noting that while taking a course P/F can be beneficial in some situations (e.g., exploring new areas without risk to GPA), it may have implications for graduate school applications, scholarships, or other academic pursuits where letter grades are required. I'd recommend discussing your options with an advisor to determine the best fit for your goals and circumstances.
+
+Would you like me to check if a specific course you're interested in can be taken P/F? Or would you like more information on how this option affects your degree requirements and long-term plans?",0.0000,96.5554,96.5554,2026-07-26T12:52:15.564749+00:00,
+Q184,no_retrieval,,What is RBR's designation?,Mr. Rakin Bin Rabbani (RBR) is a Lecturer.,,"RBR, also known as Respiratory Therapy or Respiratory Care, is often designated by the American Association for Respiratory Care (AARC) and in some institutions, as a separate program. However, I would need more context to provide an accurate answer regarding the specific RBR designation you're referring to.
+
+Could you please provide more information about what you are looking for or which institution's RBR designation you are asking about? This will help me give you a more precise and accurate response.",0.0000,31.5750,31.5750,2026-07-26T12:52:47.190029+00:00,
+Q154,no_retrieval,,What day and time is the theory class for CSE250-10B?,The theory class for CSE250-10B is on MON+WED at 3:30 PM in room 10A-04C.,,"Let me check on that for you!
+
+According to our system, the Theory Class for CSE 250-10B meets on... (checking...) ...Mondays from 2:00 pm to 3:15 pm.
+
+Please confirm with your instructor or check the university's online course schedule if you have any doubts.",0.0000,21.0134,21.0134,2026-07-26T12:53:08.209015+00:00,
+Q171,no_retrieval,,Who teaches the lab section of CSE110-17?,"The lab section of CSE110-17 is taught by WLV,NQM.",,"To find out who is teaching the lab section of CSE 110-17, I'll need to check on our course catalog or contact the Department of Computer Science and Engineering. However, for your convenience, you can also try the following:
+
+1. Check the university's online course schedule: You can visit our university's website and look up the course schedule for CSE 110-17. It should list the instructor(s) teaching each section.
+2. Contact the Department of Computer Science and Engineering: Reach out to the department directly via phone or email, and they should be able to provide you with the information on who is teaching the lab section of CSE 110-17.
+
+If I happen to have access to our course catalog right now, I can try to look it up for you. After checking, I see that the instructor leading the lab section of CSE 110-17 is Dr. Patel, but please note that this information might be subject to change and may not reflect any updates made after my knowledge cutoff.
+
+Would you like me to confirm this information or would you prefer to reach out to the department for more up-to-date information?",0.0000,66.9268,66.9268,2026-07-26T12:54:15.137128+00:00,
+Q146,no_retrieval,,What is the coordinator email for CSE220?,The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd.,,"Let me check on that for you!
+
+According to our records, the coordinator email for CSE 220 (Computer Science I) is: cs220@cs.university.edu. Please note that this email address may only be checked periodically by the instructor or teaching assistant, but it's a good place to start if you have questions about the course.
+
+If you're looking for more immediate assistance or have specific concerns about the course, I'd be happy to help direct you to the right person!",0.0000,29.2619,29.2619,2026-07-26T12:54:44.441831+00:00,
+Q145,no_retrieval,,What is the coordinator email for CSE482?,The coordinator email for CSE482 is shadman.shahriar@bracu.ac.bd.,,"After checking our system, I was able to find that the contact information for the instructor of record for CSE 482 is:
+
+ Instructor Email: [cse482_instructor@university.edu](mailto:cse482_instructor@university.edu)
+
+However, if you're looking for a coordinator or departmental contact for this course, it's likely going to be our Department Administrator. They would be able to assist with any questions about the course, its schedule, and requirements.
+
+Department Administrator Email: [cse_admin@university.edu](mailto:cse_admin@university.edu)",0.0000,33.7353,33.7353,2026-07-26T12:55:18.179757+00:00,
+Q140,no_retrieval,,What is the coordinator email for CSE447?,The coordinator email for CSE447 is iqbal.hossain@bracu.ac.bd.,,"Let me check our course schedule and instructor information for the semester.
+
+According to our records, the coordinator email for CSE 447 is cse447@departmentmail.university.edu. However, please note that this may be subject to change, and I recommend verifying with the department's main office or checking the university's online portal (MyUniversity) for the most up-to-date contact information.
+
+Would you like me to provide any additional details about the course or instructors?",0.0000,27.4779,27.4779,2026-07-26T12:55:45.658614+00:00,
+Q123,no_retrieval,,What is the full prerequisite chain for CSE471?,The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE110.,,"To determine the full prerequisite chain for CSE 471, I'll need to check our university's catalog and course listings. After verifying the information, I found that:
+
+CSE 471 requires the following prerequisites:
+
+1. CSE 271 (Data Structures) with a grade of C- or better.
+2. MATH 220 (Discrete Mathematics) with a grade of C- or better.
+
+However, to take CSE 271, you typically need to have completed one of the following:
+1. CSE 171 (Programming I) with a grade of C- or better.
+2. Equivalent transfer credits in programming and computer science courses.
+
+And for MATH 220, you usually need to have completed:
+1. MATH 120 (Mathematical Proof and Reasoning) with a grade of C- or better.
+2. Or have demonstrated proficiency in mathematical reasoning through other means (e.g., placement exam).
+
+Please note that prerequisite requirements may be subject to change, and some courses may have additional prerequisites not listed here. I recommend verifying this information with the course instructor or department chair if you're unsure.
+
+Would you like me to help with anything else?",0.0000,66.6581,66.6581,2026-07-26T12:56:52.318282+00:00,
+Q181,no_retrieval,,What is SHBK's designation?,Sahib Kowsar (SHBK) is a Lecturer.,,"After checking, I found that SHBK stands for Social History of Britain and its Kindred Studies (the ""S"" often standing in for other variations like Social History of Scotland or other regional histories).",0.0000,13.5297,13.5297,2026-07-26T12:57:05.848520+00:00,
+Q111,no_retrieval,,What is the full prerequisite chain for CSE489?,The full prerequisite chain for CSE489 is CSE370-CSE221-CSE220-CSE111-CSE110.,,"To determine the full prerequisite chain for CSE 489, I'd like to check our university's course catalog and registration system.
+
+According to our records, the current prerequisites for CSE 489 are:
+
+* CSE 202: Data Structures
+* CSE 303: Algorithms
+* CSE 312: Computer Systems
+
+However, there may be additional prerequisites or co-requisites that I'd like to confirm. May I also check if you have any other questions about these courses or if there's anything else I can help you with?",0.0000,31.6504,31.6504,2026-07-26T12:57:37.499360+00:00,
+Q101,no_retrieval,,What are the prerequisites for CSE321?,The prerequisite for CSE321 is CSE221 (HP).,,"CSE321 is a course in our Computer Science department, and I'm happy to help!
+
+According to our course catalog, the prerequisite for CSE321 is:
+
+* CSE220 (Introduction to Data Structures) with a grade of C or better
+* Math 210 (Discrete Mathematics) with a grade of C or better
+
+Please note that these prerequisites are subject to change, and it's always best to check with the course instructor or our departmental website for any updates.",0.0000,28.5514,28.5514,2026-07-26T12:58:06.051873+00:00,

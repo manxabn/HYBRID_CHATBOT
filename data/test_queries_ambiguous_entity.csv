@@ -1,0 +1,393 @@
+query_id,query,name_token,is_ambiguous,n_true_candidates,true_doc_ids,true_names
+AMB001,What is Aabrar's office room?,aabrar,False,1,FacultyList-177-chunk0,Aabrar Islam
+AMB002,What is Abdullah's office room?,abdullah,True,4,FacultyList-13-chunk0|FacultyList-168-chunk0|FacultyList-58-chunk0|FacultyList-68-chunk0,Abdullah Nayem Wasi Emran|Abdullah Khondoker|Mirza Abdullah Al Noman|Dr. Matin Saad Abdullah
+AMB003,What is Abdur's office room?,abdur,False,1,FacultyList-165-chunk0,Mr. Md. Abdur Rahman
+AMB004,What is Abid's office room?,abid,True,2,FacultyList-166-chunk0|FacultyList-7-chunk0,Abid Hossain Ashik|Mr. Abid Jahan Apon
+AMB005,What is Abrar's office room?,abrar,False,1,FacultyList-157-chunk0,Ihzaz Abrar Sadik
+AMB006,What is Aditto's office room?,aditto,False,1,FacultyList-141-chunk0,Tarvir Anjum Aditto
+AMB007,What is Adnan's office room?,adnan,False,1,FacultyList-9-chunk0,Md. Akhtaruzaman Adnan
+AMB008,What is Afnan's office room?,afnan,False,1,FacultyList-145-chunk0,Tanhiat Fatema Afnan
+AMB009,What is Afrin's office room?,afrin,False,1,FacultyList-163-chunk0,Anika Afrin
+AMB010,What is Afroza's office room?,afroza,False,1,FacultyList-4-chunk0,Afroza Akhter
+AMB011,What is Agomoni's office room?,agomoni,False,1,FacultyList-74-chunk0,Ahmed Mayeesha Reza Agomoni
+AMB012,What is Ahmad's office room?,ahmad,False,1,FacultyList-32-chunk0,Ahmad Farhan Shahriar Chowdhury
+AMB013,What is Ahmed's office room?,ahmed,True,11,FacultyList-101-chunk0|FacultyList-113-chunk0|FacultyList-114-chunk0|FacultyList-115-chunk0|FacultyList-12-chunk0|FacultyList-126-chunk0|FacultyList-211-chunk0|FacultyList-23-chunk0|FacultyList-27-chunk0|FacultyList-3-chunk0|FacultyList-74-chunk0,Mr. Rubayat Ahmed Khan|Sadif Ahmed|Saadat Rafid Ahmed|Md. Sabbir Ahmed|Anika Ahmed|Nazmus Sakib Ahmed|Sheikh Iftekhar Ahmed|Ateya Ahmed Subarna|Bijoy Ahmed Saiem|Mr. Ahmed Mahir Ruhan|Ahmed Mayeesha Reza Agomoni
+AMB014,What is Ahnaf's office room?,ahnaf,False,1,FacultyList-105-chunk0,Rafid Ahnaf
+AMB015,What is Ahsan's office room?,ahsan,False,1,FacultyList-140-chunk0,Ms. Tasnim Ahsan Prome
+AMB016,What is Akbar's office room?,akbar,False,1,FacultyList-104-chunk0,Redowanul Akbar
+AMB017,What is Akhtaruzaman's office room?,akhtaruzaman,False,1,FacultyList-9-chunk0,Md. Akhtaruzaman Adnan
+AMB018,What is Akhter's office room?,akhter,False,1,FacultyList-4-chunk0,Afroza Akhter
+AMB019,What is Akib's office room?,akib,False,1,FacultyList-8-chunk0,Akib Anjum
+AMB020,What is Alam's office room?,alam,True,3,FacultyList-20-chunk0|FacultyList-210-chunk0|FacultyList-42-chunk0,Dr. Md. Ashraful Alam|Dr. Md. Shafiul Alam Shuvo|Dr. Md. Golam Rabiul Alam
+AMB021,What is Alauddin's office room?,alauddin,False,1,FacultyList-221-chunk0,Md.Waseq Alauddin Alvi
+AMB022,What is Alif's office room?,alif,False,1,FacultyList-184-chunk0,Sadman Sakib Alif
+AMB023,What is Alim's office room?,alim,False,1,FacultyList-1-chunk0,Mr. Annajiat Alim Rasel
+AMB024,What is Aliva's office room?,aliva,False,1,FacultyList-169-chunk0,Aliva Sadnim Mahmud
+AMB025,What is Alvi's office room?,alvi,False,1,FacultyList-221-chunk0,Md.Waseq Alauddin Alvi
+AMB026,What is Amitabha's office room?,amitabha,False,1,FacultyList-2-chunk0,Dr. Amitabha Chakrabarty
+AMB027,What is Anam's office room?,anam,False,1,FacultyList-151-chunk0,Towshik Anam Taj
+AMB028,What is Angkon's office room?,angkon,False,1,FacultyList-167-chunk0,Angkon Deb
+AMB029,What is Anika's office room?,anika,True,4,FacultyList-12-chunk0|FacultyList-163-chunk0|FacultyList-171-chunk0|FacultyList-178-chunk0,Anika Ahmed|Anika Afrin|Anika Tasnim|ANIKA ISLAM
+AMB030,What is Anindita's office room?,anindita,False,1,FacultyList-10-chunk0,Anindita Labonno
+AMB031,What is Aniqa's office room?,aniqa,False,1,FacultyList-14-chunk0,Aniqa Tabassum
+AMB032,What is Anjum's office room?,anjum,True,2,FacultyList-141-chunk0|FacultyList-8-chunk0,Tarvir Anjum Aditto|Akib Anjum
+AMB033,What is Ankon's office room?,ankon,False,1,FacultyList-21-chunk0,Arnob Saha Ankon
+AMB034,What is Annajiat's office room?,annajiat,False,1,FacultyList-1-chunk0,Mr. Annajiat Alim Rasel
+AMB035,What is Anonto's office room?,anonto,False,1,FacultyList-172-chunk0,Md. Anonto Shuvo
+AMB036,What is Anwar's office room?,anwar,False,1,FacultyList-142-chunk0,Mr. Md. Tawhid Anwar
+AMB037,What is Apon's office room?,apon,False,1,FacultyList-7-chunk0,Mr. Abid Jahan Apon
+AMB038,What is Aquib's office room?,aquib,False,1,FacultyList-15-chunk0,Mr. Md. Aquib Azmain
+AMB039,What is Araf's office room?,araf,False,1,FacultyList-43-chunk0,Sheikh Araf Noshin
+AMB040,What is Arefin's office room?,arefin,False,1,FacultyList-215-chunk0,Sadiul Arefin Rafi
+AMB041,What is Arif's office room?,arif,True,2,FacultyList-17-chunk0|FacultyList-56-chunk0,Mr. Arif Shakil|Md Arif Hasan
+AMB042,What is Ariyan's office room?,ariyan,False,1,FacultyList-25-chunk0,Ariyan Hossain
+AMB043,What is Arju's office room?,arju,False,1,FacultyList-158-chunk0,Md Zayed Bin Zahir Arju
+AMB044,What is Arnob's office room?,arnob,False,1,FacultyList-21-chunk0,Arnob Saha Ankon
+AMB045,What is Arpa's office room?,arpa,False,1,FacultyList-18-chunk0,Arpa Roy Dastider
+AMB046,What is Ashary's office room?,ashary,False,1,FacultyList-198-chunk0,Abu Musa Al Ashary
+AMB047,What is Ashfaqul's office room?,ashfaqul,False,1,FacultyList-5-chunk0,Mohammed Ashfaqul Haque
+AMB048,What is Ashik's office room?,ashik,False,1,FacultyList-166-chunk0,Abid Hossain Ashik
+AMB049,What is Ashikur's office room?,ashikur,True,2,FacultyList-175-chunk0|FacultyList-99-chunk0,Md Ashikur Rahman Any|Quazi Ashikur Rahman
+AMB050,What is Ashiqur's office room?,ashiqur,False,1,FacultyList-174-chunk0,Ashiqur Jubaier
+AMB051,What is Ashraf's office room?,ashraf,False,1,FacultyList-94-chunk0,Niaz Ashraf Khan
+AMB052,What is Ashraful's office room?,ashraful,True,2,FacultyList-20-chunk0|FacultyList-22-chunk0,Dr. Md. Ashraful Alam|Ashraful Islam Shanto Sikder
+AMB053,What is Asif's office room?,asif,True,3,FacultyList-123-chunk0|FacultyList-194-chunk0|FacultyList-76-chunk0,Asif Shahriar|MD ASIF|Asif Hasan Chowdhury
+AMB054,What is Asik's office room?,asik,False,1,FacultyList-66-chunk0,Md. Moynul Asik Moni
+AMB055,What is Atanu's office room?,atanu,False,1,FacultyList-19-chunk0,Atanu Roy
+AMB056,What is Ateya's office room?,ateya,False,1,FacultyList-23-chunk0,Ateya Ahmed Subarna
+AMB057,What is Atonu's office room?,atonu,False,1,FacultyList-77-chunk0,Atonu Roy Chowdhury
+AMB058,What is Aunon's office room?,aunon,False,1,FacultyList-170-chunk0,Aunon Halder
+AMB059,What is Avinandan's office room?,avinandan,False,1,FacultyList-24-chunk0,Mr. Avinandan Banerjee
+AMB060,What is Awal's office room?,awal,False,1,FacultyList-33-chunk0,Faria Binta Awal
+AMB061,What is Ayen's office room?,ayen,False,1,FacultyList-182-chunk0,Qurratul Ayen Elma
+AMB062,What is Ayesha's office room?,ayesha,False,1,FacultyList-164-chunk0,Ayesha Siddika
+AMB063,What is Ayman's office room?,ayman,False,1,FacultyList-16-chunk0,Mr. Ayman Rasheed
+AMB064,What is Azad's office room?,azad,False,1,FacultyList-45-chunk0,Mr. Md. Imran Bin Azad
+AMB065,What is Aziz's office room?,aziz,False,1,FacultyList-186-chunk0,Md Shamsur Shafi Nur E Aziz
+AMB066,What is Azmain's office room?,azmain,False,1,FacultyList-15-chunk0,Mr. Md. Aquib Azmain
+AMB067,What is Azwad's office room?,azwad,True,2,FacultyList-196-chunk0|FacultyList-85-chunk0,Mirza Azwad Wakil|K. M. Azwad Hossain
+AMB068,What is Badhan's office room?,badhan,False,1,FacultyList-79-chunk0,Dr. Badhan Das
+AMB069,What is Badrul's office room?,badrul,False,1,FacultyList-26-chunk0,Mr. Mohammad Badrul Hossain
+AMB070,What is Banerjee's office room?,banerjee,False,1,FacultyList-24-chunk0,Mr. Avinandan Banerjee
+AMB071,What is Bari's office room?,bari,False,1,FacultyList-120-chunk0,Mr. Md. Saiful Bari Siddiqui
+AMB072,What is Bayzid's office room?,bayzid,False,1,FacultyList-212-chunk0,Dr. Md Shamsuzzoha Bayzid
+AMB073,What is Benta's office room?,benta,False,1,FacultyList-84-chunk0,Kefaya Benta Shahnoor
+AMB074,What is Bhoumik's office room?,bhoumik,False,1,FacultyList-96-chunk0,Mr. Partha Bhoumik
+AMB075,What is Bijoy's office room?,bijoy,False,1,FacultyList-27-chunk0,Bijoy Ahmed Saiem
+AMB076,What is Binta's office room?,binta,False,1,FacultyList-33-chunk0,Faria Binta Awal
+AMB077,What is Biswas's office room?,biswas,False,1,FacultyList-130-chunk0,Soumya Swagata Biswas
+AMB078,What is Bonhi's office room?,bonhi,False,1,FacultyList-46-chunk0,Ms. Ipshita Bonhi Upoma
+AMB079,What is Chakrabarty's office room?,chakrabarty,False,1,FacultyList-2-chunk0,Dr. Amitabha Chakrabarty
+AMB080,What is Chowdhuruy's office room?,chowdhuruy,False,1,FacultyList-206-chunk0,Pratick Roy Chowdhuruy
+AMB081,What is Chowdhury's office room?,chowdhury,True,7,FacultyList-28-chunk0|FacultyList-32-chunk0|FacultyList-34-chunk0|FacultyList-39-chunk0|FacultyList-47-chunk0|FacultyList-76-chunk0|FacultyList-77-chunk0,Dr. Chowdhury Mofizur Rahman|Ahmad Farhan Shahriar Chowdhury|Dr. Farida Chowdhury|Fatiha Ishrar Chowdhury|Ittehad Saleh Chowdhury|Asif Hasan Chowdhury|Atonu Roy Chowdhury
+AMB082,What is Dastider's office room?,dastider,False,1,FacultyList-18-chunk0,Arpa Roy Dastider
+AMB083,What is Datta's office room?,datta,False,1,FacultyList-80-chunk0,NIRJHOR DATTA
+AMB084,What is Dewan's office room?,dewan,False,1,FacultyList-30-chunk0,Mr. Dewan Ziaul Karim
+AMB085,What is Dibya's office room?,dibya,False,1,FacultyList-185-chunk0,Suprava Saha Dibya
+AMB086,What is Dibyo's office room?,dibyo,False,1,FacultyList-29-chunk0,Mr. Dibyo Fabian Dofadar
+AMB087,What is Disha's office room?,disha,False,1,FacultyList-57-chunk0,Majisha Jahan Disha
+AMB088,What is Dofadar's office room?,dofadar,False,1,FacultyList-29-chunk0,Mr. Dibyo Fabian Dofadar
+AMB089,What is Ehsan's office room?,ehsan,False,1,FacultyList-35-chunk0,Farden Ehsan Khan
+AMB090,What is Ehtashamul's office room?,ehtashamul,False,1,FacultyList-31-chunk0,Ehtashamul Haque
+AMB091,What is Elma's office room?,elma,False,1,FacultyList-182-chunk0,Qurratul Ayen Elma
+AMB092,What is Emran's office room?,emran,False,1,FacultyList-13-chunk0,Abdullah Nayem Wasi Emran
+AMB093,What is Eshat's office room?,eshat,False,1,FacultyList-189-chunk0,Eshat Fareeha
+AMB094,What is Fabian's office room?,fabian,False,1,FacultyList-29-chunk0,Mr. Dibyo Fabian Dofadar
+AMB095,What is Fahim's office room?,fahim,False,1,FacultyList-60-chunk0,Mr. Mohammad Fahim
+AMB096,What is Faisal's office room?,faisal,False,1,FacultyList-82-chunk0,Nafis Faisal
+AMB097,What is Fakhruddin's office room?,fakhruddin,False,1,FacultyList-38-chunk0,Mr. Md. Fakhruddin Gazzali
+AMB098,What is Farden's office room?,farden,False,1,FacultyList-35-chunk0,Farden Ehsan Khan
+AMB099,What is Fardin's office room?,fardin,True,3,FacultyList-190-chunk0|FacultyList-191-chunk0|FacultyList-41-chunk0,Md Fardin Rahman Ami|Fardin Zaman|Kh.Fardin Zubair Nafis
+AMB100,What is Fareeha's office room?,fareeha,False,1,FacultyList-189-chunk0,Eshat Fareeha
+AMB101,What is Farhan's office room?,farhan,True,3,FacultyList-32-chunk0|FacultyList-37-chunk0|FacultyList-87-chunk0,Ahmad Farhan Shahriar Chowdhury|Farhan Faruk|Niloy Farhan
+AMB102,What is Faria's office room?,faria,False,1,FacultyList-33-chunk0,Faria Binta Awal
+AMB103,What is Farida's office room?,farida,False,1,FacultyList-34-chunk0,Dr. Farida Chowdhury
+AMB104,What is Farig's office room?,farig,False,1,FacultyList-40-chunk0,Dr. Farig Yousuf Sadeque
+AMB105,What is Faruk's office room?,faruk,False,1,FacultyList-37-chunk0,Farhan Faruk
+AMB106,What is Faruqui's office room?,faruqui,False,1,FacultyList-36-chunk0,Md. Fatin Ishraq Faruqui
+AMB107,What is Farzana's office room?,farzana,False,1,FacultyList-100-chunk0,Farzana Reefat Raha
+AMB108,What is Fatema's office room?,fatema,False,1,FacultyList-145-chunk0,Tanhiat Fatema Afnan
+AMB109,What is Fatiha's office room?,fatiha,False,1,FacultyList-39-chunk0,Fatiha Ishrar Chowdhury
+AMB110,What is Fatin's office room?,fatin,False,1,FacultyList-36-chunk0,Md. Fatin Ishraq Faruqui
+AMB111,What is Fazal's office room?,fazal,False,1,FacultyList-195-chunk0,Mehnaz Ara Fazal
+AMB112,What is Ferdous's office room?,ferdous,True,2,FacultyList-118-chunk0|FacultyList-146-chunk0,Dr. Md Sadek Ferdous|Ms. Tasnim Ferdous
+AMB113,What is Gazzali's office room?,gazzali,False,1,FacultyList-38-chunk0,Mr. Md. Fakhruddin Gazzali
+AMB114,What is Ghose's office room?,ghose,False,1,FacultyList-136-chunk0,Mr. Swattic Ghose
+AMB115,What is Ghosh's office room?,ghosh,False,1,FacultyList-135-chunk0,Souvik Ghosh
+AMB116,What is Golam's office room?,golam,False,1,FacultyList-42-chunk0,Dr. Md. Golam Rabiul Alam
+AMB117,What is Habib's office room?,habib,True,2,FacultyList-220-chunk0|FacultyList-90-chunk0,Waleed Bin Habib Khan|Ruhan Habib
+AMB118,What is Halder's office room?,halder,False,1,FacultyList-170-chunk0,Aunon Halder
+AMB119,What is Hamid's office room?,hamid,False,1,FacultyList-127-chunk0,Dr. Sadia Hamid Kazi
+AMB120,What is Hamidul's office room?,hamidul,False,1,FacultyList-44-chunk0,Mir Hamidul Hussain
+AMB121,What is Hamim's office room?,hamim,False,1,FacultyList-83-chunk0,Hamim Ibne Nasim
+AMB122,What is Haque's office room?,haque,True,4,FacultyList-143-chunk0|FacultyList-180-chunk0|FacultyList-31-chunk0|FacultyList-5-chunk0,Dr. Taiabul Haque|Moinul Haque|Ehtashamul Haque|Mohammed Ashfaqul Haque
+AMB123,What is Hasan's office room?,hasan,True,7,FacultyList-108-chunk0|FacultyList-159-chunk0|FacultyList-222-chunk0|FacultyList-53-chunk0|FacultyList-56-chunk0|FacultyList-61-chunk0|FacultyList-76-chunk0,Mohammad Rakibul Hasan Mahin|Mr. Syed Zamil Hasan Shoumo|Zobayer Hasan|Labib Hasan Khan|Md Arif Hasan|Mehedi Hasan Emo|Asif Hasan Chowdhury
+AMB124,What is Hasme's office room?,hasme,False,1,FacultyList-173-chunk0,Abu Obaida Hasme
+AMB125,What is Hassan's office room?,hassan,False,1,FacultyList-181-chunk0,Purba Tahia Hassan
+AMB126,What is Helal's office room?,helal,False,1,FacultyList-179-chunk0,Maheer Helal
+AMB127,What is Hossain's office room?,hossain,True,9,FacultyList-116-chunk0|FacultyList-166-chunk0|FacultyList-192-chunk0|FacultyList-25-chunk0|FacultyList-26-chunk0|FacultyList-62-chunk0|FacultyList-69-chunk0|FacultyList-73-chunk0|FacultyList-85-chunk0,Mr. Md Sabbir Hossain|Abid Hossain Ashik|Md. Irtiza Hossain|Ariyan Hossain|Mr. Mohammad Badrul Hossain|Dr. Muhammad Iqbal Hossain|Dr. Md. Sakir Hossain|Mohammad Naveed Hossain|K. M. Azwad Hossain
+AMB128,What is Humayun's office room?,humayun,False,1,FacultyList-162-chunk0,Zayed Humayun
+AMB129,What is Hussain's office room?,hussain,False,1,FacultyList-44-chunk0,Mir Hamidul Hussain
+AMB130,What is Ibne's office room?,ibne,False,1,FacultyList-83-chunk0,Hamim Ibne Nasim
+AMB131,What is Ibrahim's office room?,ibrahim,False,1,FacultyList-6-chunk0,Mr. Md. Abu Ibrahim
+AMB132,What is Iftekhar's office room?,iftekhar,False,1,FacultyList-211-chunk0,Sheikh Iftekhar Ahmed
+AMB133,What is Ihzaz's office room?,ihzaz,False,1,FacultyList-157-chunk0,Ihzaz Abrar Sadik
+AMB134,What is Imam's office room?,imam,False,1,FacultyList-214-chunk0,Sajid Imam Mahir
+AMB135,What is Imran's office room?,imran,False,1,FacultyList-45-chunk0,Mr. Md. Imran Bin Azad
+AMB136,What is Imtiaz's office room?,imtiaz,False,1,FacultyList-201-chunk0,Nafiz Imtiaz Rafin
+AMB137,What is Ipshita's office room?,ipshita,False,1,FacultyList-46-chunk0,Ms. Ipshita Bonhi Upoma
+AMB138,What is Iqbal's office room?,iqbal,True,3,FacultyList-223-chunk0|FacultyList-50-chunk0|FacultyList-62-chunk0,Zahin Iqbal Zeal|Ms. Khondoker Nazia Iqbal|Dr. Muhammad Iqbal Hossain
+AMB139,What is Irtiza's office room?,irtiza,False,1,FacultyList-192-chunk0,Md. Irtiza Hossain
+AMB140,What is Ishraq's office room?,ishraq,False,1,FacultyList-36-chunk0,Md. Fatin Ishraq Faruqui
+AMB141,What is Ishrar's office room?,ishrar,False,1,FacultyList-39-chunk0,Fatiha Ishrar Chowdhury
+AMB142,What is Ishtiaque's office room?,ishtiaque,False,1,FacultyList-203-chunk0,Md Nafiz Ishtiaque Mahee
+AMB143,What is Islam's office room?,islam,True,7,FacultyList-139-chunk0|FacultyList-177-chunk0|FacultyList-178-chunk0|FacultyList-22-chunk0|FacultyList-86-chunk0|FacultyList-91-chunk0|FacultyList-95-chunk0,Sazzadul Islam|Aabrar Islam|ANIKA ISLAM|Ashraful Islam Shanto Sikder|Namirul Islam|Riazul Islam Rifat|Nazmul Islam
+AMB144,What is Israt's office room?,israt,False,1,FacultyList-193-chunk0,Lamiah Israt
+AMB145,What is Ittehad's office room?,ittehad,False,1,FacultyList-47-chunk0,Ittehad Saleh Chowdhury
+AMB146,What is Jahan's office room?,jahan,True,2,FacultyList-57-chunk0|FacultyList-7-chunk0,Majisha Jahan Disha|Mr. Abid Jahan Apon
+AMB147,What is Jannat's office room?,jannat,False,1,FacultyList-152-chunk0,Umme Jannat Taposhi
+AMB148,What is Joarder's office room?,joarder,False,1,FacultyList-213-chunk0,Shourov Joarder
+AMB149,What is Jubaier's office room?,jubaier,False,1,FacultyList-174-chunk0,Ashiqur Jubaier
+AMB150,What is Kabir's office room?,kabir,False,1,FacultyList-110-chunk0,Raisul Kabir News
+AMB151,What is Kadir's office room?,kadir,False,1,FacultyList-217-chunk0,Sheikh Samiul Kadir
+AMB152,What is Kamruzzaman's office room?,kamruzzaman,False,1,FacultyList-52-chunk0,Kazi Kamruzzaman Rabbi
+AMB153,What is Karim's office room?,karim,False,1,FacultyList-30-chunk0,Mr. Dewan Ziaul Karim
+AMB154,What is Kaykobad's office room?,kaykobad,False,1,FacultyList-51-chunk0,Dr. Mohammad Kaykobad
+AMB155,What is Kazi's office room?,kazi,True,2,FacultyList-127-chunk0|FacultyList-52-chunk0,Dr. Sadia Hamid Kazi|Kazi Kamruzzaman Rabbi
+AMB156,What is Kefaya's office room?,kefaya,False,1,FacultyList-84-chunk0,Kefaya Benta Shahnoor
+AMB157,What is Khaliduzzaman's office room?,khaliduzzaman,False,1,FacultyList-49-chunk0,Md. Khaliduzzaman Khan Samrat
+AMB158,What is Khalilur's office room?,khalilur,False,1,FacultyList-48-chunk0,Dr. Md. Khalilur Rahman
+AMB159,What is Khan's office room?,khan,True,8,FacultyList-101-chunk0|FacultyList-11-chunk0|FacultyList-176-chunk0|FacultyList-220-chunk0|FacultyList-35-chunk0|FacultyList-49-chunk0|FacultyList-53-chunk0|FacultyList-94-chunk0,Mr. Rubayat Ahmed Khan|Dr. Abu Mohammad Khan|A S M Nasim Khan|Waleed Bin Habib Khan|Farden Ehsan Khan|Md. Khaliduzzaman Khan Samrat|Labib Hasan Khan|Niaz Ashraf Khan
+AMB160,What is Khanom's office room?,khanom,False,1,FacultyList-54-chunk0,Lara khanom
+AMB161,What is Khondoker's office room?,khondoker,True,2,FacultyList-168-chunk0|FacultyList-50-chunk0,Abdullah Khondoker|Ms. Khondoker Nazia Iqbal
+AMB162,What is Kibria's office room?,kibria,False,1,FacultyList-109-chunk0,Rakib Kibria
+AMB163,What is Kowsar's office room?,kowsar,False,1,FacultyList-124-chunk0,Sahib Kowsar
+AMB164,What is Kumar's office room?,kumar,False,1,FacultyList-154-chunk0,Utsha Kumar Roy
+AMB165,What is Kundu's office room?,kundu,False,1,FacultyList-122-chunk0,Shomen Kundu
+AMB166,What is Labib's office room?,labib,False,1,FacultyList-53-chunk0,Labib Hasan Khan
+AMB167,What is Labonno's office room?,labonno,False,1,FacultyList-10-chunk0,Anindita Labonno
+AMB168,What is Lamiah's office room?,lamiah,False,1,FacultyList-193-chunk0,Lamiah Israt
+AMB169,What is Lara's office room?,lara,False,1,FacultyList-54-chunk0,Lara khanom
+AMB170,What is Maazin's office room?,maazin,False,1,FacultyList-200-chunk0,Maazin Munawar
+AMB171,What is Maharin's office room?,maharin,False,1,FacultyList-197-chunk0,Maharin Mosfakin
+AMB172,What is Mahbub's office room?,mahbub,False,1,FacultyList-138-chunk0,Md. Shazid Bin Mahbub
+AMB173,What is Mahee's office room?,mahee,False,1,FacultyList-203-chunk0,Md Nafiz Ishtiaque Mahee
+AMB174,What is Maheer's office room?,maheer,False,1,FacultyList-179-chunk0,Maheer Helal
+AMB175,What is Mahin's office room?,mahin,False,1,FacultyList-108-chunk0,Mohammad Rakibul Hasan Mahin
+AMB176,What is Mahir's office room?,mahir,True,2,FacultyList-214-chunk0|FacultyList-3-chunk0,Sajid Imam Mahir|Mr. Ahmed Mahir Ruhan
+AMB177,What is Mahjabin's office room?,mahjabin,False,1,FacultyList-155-chunk0,Wahida Mahjabin
+AMB178,What is Mahmud's office room?,mahmud,True,3,FacultyList-144-chunk0|FacultyList-169-chunk0|FacultyList-71-chunk0,Mr. Tamkin Mahmud Tan|Aliva Sadnim Mahmud|MD. MUHTASIM MAHMUD
+AMB179,What is Mahrin's office room?,mahrin,False,1,FacultyList-55-chunk0,Mahrin Tasfe
+AMB180,What is Majisha's office room?,majisha,False,1,FacultyList-57-chunk0,Majisha Jahan Disha
+AMB181,What is Maria's office room?,maria,False,1,FacultyList-67-chunk0,Ummay Maria Muna
+AMB182,What is Marshia's office room?,marshia,False,1,FacultyList-59-chunk0,Marshia Nujhat
+AMB183,What is Matin's office room?,matin,False,1,FacultyList-68-chunk0,Dr. Matin Saad Abdullah
+AMB184,What is Mayeesha's office room?,mayeesha,False,1,FacultyList-74-chunk0,Ahmed Mayeesha Reza Agomoni
+AMB185,What is Mazhar's office room?,mazhar,False,1,FacultyList-148-chunk0,Tasneem Mazhar
+AMB186,What is Mehedi's office room?,mehedi,False,1,FacultyList-61-chunk0,Mehedi Hasan Emo
+AMB187,What is Mehnaz's office room?,mehnaz,True,2,FacultyList-131-chunk0|FacultyList-195-chunk0,Ms. Mehnaz Seraj|Mehnaz Ara Fazal
+AMB188,What is Mirza's office room?,mirza,True,3,FacultyList-149-chunk0|FacultyList-196-chunk0|FacultyList-58-chunk0,Mr. Mirza Md. Tanjim Shorif Mugdho|Mirza Azwad Wakil|Mirza Abdullah Al Noman
+AMB189,What is Mizanur's office room?,mizanur,False,1,FacultyList-88-chunk0,MD MIZANUR RAHMAN MUSTAKIM
+AMB190,What is Mofizur's office room?,mofizur,False,1,FacultyList-28-chunk0,Dr. Chowdhury Mofizur Rahman
+AMB191,What is Mohammad's office room?,mohammad,True,8,FacultyList-108-chunk0|FacultyList-11-chunk0|FacultyList-161-chunk0|FacultyList-26-chunk0|FacultyList-51-chunk0|FacultyList-60-chunk0|FacultyList-73-chunk0|FacultyList-93-chunk0,Mohammad Rakibul Hasan Mahin|Dr. Abu Mohammad Khan|Mr. Zaber Mohammad|Mr. Mohammad Badrul Hossain|Dr. Mohammad Kaykobad|Mr. Mohammad Fahim|Mohammad Naveed Hossain|Nur Mohammad Shaon
+AMB192,What is Mohammed's office room?,mohammed,True,2,FacultyList-207-chunk0|FacultyList-5-chunk0,Mohammed Radoan|Mohammed Ashfaqul Haque
+AMB193,What is Moin's office room?,moin,False,1,FacultyList-63-chunk0,Mr. Moin Mostakim
+AMB194,What is Moinul's office room?,moinul,False,1,FacultyList-180-chunk0,Moinul Haque
+AMB195,What is Mokarrom's office room?,mokarrom,False,1,FacultyList-81-chunk0,Md. Saif Mokarrom
+AMB196,What is Moni's office room?,moni,False,1,FacultyList-66-chunk0,Md. Moynul Asik Moni
+AMB197,What is Mosfakin's office room?,mosfakin,False,1,FacultyList-197-chunk0,Maharin Mosfakin
+AMB198,What is Mostakim's office room?,mostakim,False,1,FacultyList-63-chunk0,Mr. Moin Mostakim
+AMB199,What is Moynul's office room?,moynul,False,1,FacultyList-66-chunk0,Md. Moynul Asik Moni
+AMB200,What is Mugdho's office room?,mugdho,False,1,FacultyList-149-chunk0,Mr. Mirza Md. Tanjim Shorif Mugdho
+AMB201,What is Muhammad's office room?,muhammad,True,2,FacultyList-62-chunk0|FacultyList-65-chunk0,Dr. Muhammad Iqbal Hossain|Dr. Muhammad Nur Yanhaona
+AMB202,What is Muhtasim's office room?,muhtasim,False,1,FacultyList-71-chunk0,MD. MUHTASIM MAHMUD
+AMB203,What is Muna's office room?,muna,False,1,FacultyList-67-chunk0,Ummay Maria Muna
+AMB204,What is Munawar's office room?,munawar,False,1,FacultyList-200-chunk0,Maazin Munawar
+AMB205,What is Muntasir's office room?,muntasir,False,1,FacultyList-72-chunk0,A B M Muntasir Rahman
+AMB206,What is Musa's office room?,musa,False,1,FacultyList-198-chunk0,Abu Musa Al Ashary
+AMB207,What is Mushfique's office room?,mushfique,False,1,FacultyList-64-chunk0,Mushfique Nasir Probor
+AMB208,What is Mustafiz's office room?,mustafiz,False,1,FacultyList-202-chunk0,Namira Mustafiz Pranty
+AMB209,What is Mustakim's office room?,mustakim,False,1,FacultyList-88-chunk0,MD MIZANUR RAHMAN MUSTAKIM
+AMB210,What is Nadia's office room?,nadia,False,1,FacultyList-156-chunk0,Yasmin Nadia
+AMB211,What is Nafis's office room?,nafis,True,2,FacultyList-41-chunk0|FacultyList-82-chunk0,Kh.Fardin Zubair Nafis|Nafis Faisal
+AMB212,What is Nafiu's office room?,nafiu,False,1,FacultyList-75-chunk0,Md Nafiu Rahman
+AMB213,What is Nafiz's office room?,nafiz,True,2,FacultyList-201-chunk0|FacultyList-203-chunk0,Nafiz Imtiaz Rafin|Md Nafiz Ishtiaque Mahee
+AMB214,What is Naim's office room?,naim,False,1,FacultyList-160-chunk0,Md. Zulkar Naim
+AMB215,What is Naima's office room?,naima,False,1,FacultyList-89-chunk0,Naima Tahsin Nodi
+AMB216,What is Namira's office room?,namira,False,1,FacultyList-202-chunk0,Namira Mustafiz Pranty
+AMB217,What is Namirul's office room?,namirul,False,1,FacultyList-86-chunk0,Namirul Islam
+AMB218,What is Narzu's office room?,narzu,False,1,FacultyList-92-chunk0,Ms. Narzu Tarannum
+AMB219,What is Nasim's office room?,nasim,True,2,FacultyList-176-chunk0|FacultyList-83-chunk0,A S M Nasim Khan|Hamim Ibne Nasim
+AMB220,What is Nasir's office room?,nasir,False,1,FacultyList-64-chunk0,Mushfique Nasir Probor
+AMB221,What is Naveed's office room?,naveed,False,1,FacultyList-73-chunk0,Mohammad Naveed Hossain
+AMB222,What is Nayem's office room?,nayem,False,1,FacultyList-13-chunk0,Abdullah Nayem Wasi Emran
+AMB223,What is Nazia's office room?,nazia,False,1,FacultyList-50-chunk0,Ms. Khondoker Nazia Iqbal
+AMB224,What is Nazmul's office room?,nazmul,False,1,FacultyList-95-chunk0,Nazmul Islam
+AMB225,What is Nazmus's office room?,nazmus,True,2,FacultyList-126-chunk0|FacultyList-78-chunk0,Nazmus Sakib Ahmed|Nazmus Sakib Touhid
+AMB226,What is News's office room?,news,False,1,FacultyList-110-chunk0,Raisul Kabir News
+AMB227,What is Niaz's office room?,niaz,False,1,FacultyList-94-chunk0,Niaz Ashraf Khan
+AMB228,What is Niloy's office room?,niloy,False,1,FacultyList-87-chunk0,Niloy Farhan
+AMB229,What is Nirjhor's office room?,nirjhor,False,1,FacultyList-80-chunk0,NIRJHOR DATTA
+AMB230,What is Nodi's office room?,nodi,False,1,FacultyList-89-chunk0,Naima Tahsin Nodi
+AMB231,What is Noman's office room?,noman,False,1,FacultyList-58-chunk0,Mirza Abdullah Al Noman
+AMB232,What is Noshin's office room?,noshin,False,1,FacultyList-43-chunk0,Sheikh Araf Noshin
+AMB233,What is Nowshin's office room?,nowshin,False,1,FacultyList-205-chunk0,Nowshin Tabassum
+AMB234,What is Nujhat's office room?,nujhat,False,1,FacultyList-59-chunk0,Marshia Nujhat
+AMB235,What is Nusrat's office room?,nusrat,False,1,FacultyList-204-chunk0,Nusrat Zaman Raya
+AMB236,What is Obaida's office room?,obaida,False,1,FacultyList-173-chunk0,Abu Obaida Hasme
+AMB237,What is Partha's office room?,partha,False,1,FacultyList-96-chunk0,Mr. Partha Bhoumik
+AMB238,What is Pollock's office room?,pollock,False,1,FacultyList-98-chunk0,Pollock Nag
+AMB239,What is Pranty's office room?,pranty,False,1,FacultyList-202-chunk0,Namira Mustafiz Pranty
+AMB240,What is Pratick's office room?,pratick,False,1,FacultyList-206-chunk0,Pratick Roy Chowdhuruy
+AMB241,What is Probor's office room?,probor,False,1,FacultyList-64-chunk0,Mushfique Nasir Probor
+AMB242,What is Prome's office room?,prome,False,1,FacultyList-140-chunk0,Ms. Tasnim Ahsan Prome
+AMB243,What is Purba's office room?,purba,False,1,FacultyList-181-chunk0,Purba Tahia Hassan
+AMB244,What is Purbayan's office room?,purbayan,False,1,FacultyList-97-chunk0,Mr. Purbayan Das
+AMB245,What is Quazi's office room?,quazi,False,1,FacultyList-99-chunk0,Quazi Ashikur Rahman
+AMB246,What is Qurratul's office room?,qurratul,False,1,FacultyList-182-chunk0,Qurratul Ayen Elma
+AMB247,What is Rabbani's office room?,rabbani,False,1,FacultyList-103-chunk0,Mr. Rakin Bin Rabbani
+AMB248,What is Rabbi's office room?,rabbi,False,1,FacultyList-52-chunk0,Kazi Kamruzzaman Rabbi
+AMB249,What is Rabiul's office room?,rabiul,False,1,FacultyList-42-chunk0,Dr. Md. Golam Rabiul Alam
+AMB250,What is Radoan's office room?,radoan,False,1,FacultyList-207-chunk0,Mohammed Radoan
+AMB251,What is Rafatul's office room?,rafatul,False,1,FacultyList-209-chunk0,Md. Rafatul Haq
+AMB252,What is Rafeed's office room?,rafeed,False,1,FacultyList-111-chunk0,Mr. Rafeed Rahman
+AMB253,What is Rafi's office room?,rafi,False,1,FacultyList-215-chunk0,Sadiul Arefin Rafi
+AMB254,What is Rafiad's office room?,rafiad,False,1,FacultyList-112-chunk0,Rafiad Sadat Shahir
+AMB255,What is Rafid's office room?,rafid,True,2,FacultyList-105-chunk0|FacultyList-114-chunk0,Rafid Ahnaf|Saadat Rafid Ahmed
+AMB256,What is Rafin's office room?,rafin,False,1,FacultyList-201-chunk0,Nafiz Imtiaz Rafin
+AMB257,What is Raha's office room?,raha,False,1,FacultyList-100-chunk0,Farzana Reefat Raha
+AMB258,What is Rahman's office room?,rahman,True,16,FacultyList-106-chunk0|FacultyList-111-chunk0|FacultyList-125-chunk0|FacultyList-128-chunk0|FacultyList-150-chunk0|FacultyList-165-chunk0|FacultyList-175-chunk0|FacultyList-183-chunk0|FacultyList-187-chunk0|FacultyList-190-chunk0|FacultyList-28-chunk0|FacultyList-48-chunk0|FacultyList-72-chunk0|FacultyList-75-chunk0|FacultyList-88-chunk0|FacultyList-99-chunk0,Md. Rifat Rahman|Mr. Rafeed Rahman|Mr. Shahriar Rahman Rana|Samiur Rahman|Tanveer Rahman|Mr. Md. Abdur Rahman|Md Ashikur Rahman Any|Shehran Rahman|Sayeedur Rahman|Md Fardin Rahman Ami|Dr. Chowdhury Mofizur Rahman|Dr. Md. Khalilur Rahman|A B M Muntasir Rahman|Md Nafiu Rahman|MD MIZANUR RAHMAN MUSTAKIM|Quazi Ashikur Rahman
+AMB259,What is Raisul's office room?,raisul,False,1,FacultyList-110-chunk0,Raisul Kabir News
+AMB260,What is Rakib's office room?,rakib,False,1,FacultyList-109-chunk0,Rakib Kibria
+AMB261,What is Rakibul's office room?,rakibul,False,1,FacultyList-108-chunk0,Mohammad Rakibul Hasan Mahin
+AMB262,What is Rakin's office room?,rakin,False,1,FacultyList-103-chunk0,Mr. Rakin Bin Rabbani
+AMB263,What is Ramisha's office room?,ramisha,False,1,FacultyList-218-chunk0,Tahsin Tanim Ramisha
+AMB264,What is Rana's office room?,rana,False,1,FacultyList-125-chunk0,Mr. Shahriar Rahman Rana
+AMB265,What is Rantu's office room?,rantu,False,1,FacultyList-208-chunk0,Rantu Das
+AMB266,What is Rasel's office room?,rasel,True,2,FacultyList-1-chunk0|FacultyList-102-chunk0,Mr. Annajiat Alim Rasel|Md. Rasel Mia
+AMB267,What is Rasheed's office room?,rasheed,False,1,FacultyList-16-chunk0,Mr. Ayman Rasheed
+AMB268,What is Raya's office room?,raya,False,1,FacultyList-204-chunk0,Nusrat Zaman Raya
+AMB269,What is Redowanul's office room?,redowanul,False,1,FacultyList-104-chunk0,Redowanul Akbar
+AMB270,What is Reefat's office room?,reefat,False,1,FacultyList-100-chunk0,Farzana Reefat Raha
+AMB271,What is Reza's office room?,reza,True,3,FacultyList-147-chunk0|FacultyList-219-chunk0|FacultyList-74-chunk0,Mr. Md. Tanzim Reza|Tanjim Reza|Ahmed Mayeesha Reza Agomoni
+AMB272,What is Riazul's office room?,riazul,False,1,FacultyList-91-chunk0,Riazul Islam Rifat
+AMB273,What is Rifa's office room?,rifa,False,1,FacultyList-107-chunk0,Rifa Tasfiya
+AMB274,What is Rifat's office room?,rifat,True,2,FacultyList-106-chunk0|FacultyList-91-chunk0,Md. Rifat Rahman|Riazul Islam Rifat
+AMB275,What is Rouf's office room?,rouf,False,1,FacultyList-132-chunk0,Mr. Shakir Rouf
+AMB276,What is Rubayat's office room?,rubayat,False,1,FacultyList-101-chunk0,Mr. Rubayat Ahmed Khan
+AMB277,What is Ruhan's office room?,ruhan,True,2,FacultyList-3-chunk0|FacultyList-90-chunk0,Mr. Ahmed Mahir Ruhan|Ruhan Habib
+AMB278,What is Saad's office room?,saad,False,1,FacultyList-68-chunk0,Dr. Matin Saad Abdullah
+AMB279,What is Saadat's office room?,saadat,False,1,FacultyList-114-chunk0,Saadat Rafid Ahmed
+AMB280,What is Sabbir's office room?,sabbir,True,2,FacultyList-115-chunk0|FacultyList-116-chunk0,Md. Sabbir Ahmed|Mr. Md Sabbir Hossain
+AMB281,What is Sadat's office room?,sadat,False,1,FacultyList-112-chunk0,Rafiad Sadat Shahir
+AMB282,What is Sadek's office room?,sadek,False,1,FacultyList-118-chunk0,Dr. Md Sadek Ferdous
+AMB283,What is Sadeque's office room?,sadeque,False,1,FacultyList-40-chunk0,Dr. Farig Yousuf Sadeque
+AMB284,What is Sadia's office room?,sadia,False,1,FacultyList-127-chunk0,Dr. Sadia Hamid Kazi
+AMB285,What is Sadif's office room?,sadif,False,1,FacultyList-113-chunk0,Sadif Ahmed
+AMB286,What is Sadik's office room?,sadik,False,1,FacultyList-157-chunk0,Ihzaz Abrar Sadik
+AMB287,What is Sadiul's office room?,sadiul,False,1,FacultyList-215-chunk0,Sadiul Arefin Rafi
+AMB288,What is Sadman's office room?,sadman,False,1,FacultyList-184-chunk0,Sadman Sakib Alif
+AMB289,What is Sadnim's office room?,sadnim,False,1,FacultyList-169-chunk0,Aliva Sadnim Mahmud
+AMB290,What is Saha's office room?,saha,True,2,FacultyList-185-chunk0|FacultyList-21-chunk0,Suprava Saha Dibya|Arnob Saha Ankon
+AMB291,What is Sahib's office room?,sahib,False,1,FacultyList-124-chunk0,Sahib Kowsar
+AMB292,What is Saiem's office room?,saiem,False,1,FacultyList-27-chunk0,Bijoy Ahmed Saiem
+AMB293,What is Saif's office room?,saif,False,1,FacultyList-81-chunk0,Md. Saif Mokarrom
+AMB294,What is Saiful's office room?,saiful,False,1,FacultyList-120-chunk0,Mr. Md. Saiful Bari Siddiqui
+AMB295,What is Sajid's office room?,sajid,False,1,FacultyList-214-chunk0,Sajid Imam Mahir
+AMB296,What is Sakib's office room?,sakib,True,3,FacultyList-126-chunk0|FacultyList-184-chunk0|FacultyList-78-chunk0,Nazmus Sakib Ahmed|Sadman Sakib Alif|Nazmus Sakib Touhid
+AMB297,What is Sakir's office room?,sakir,False,1,FacultyList-69-chunk0,Dr. Md. Sakir Hossain
+AMB298,What is Saleh's office room?,saleh,False,1,FacultyList-47-chunk0,Ittehad Saleh Chowdhury
+AMB299,What is Samiul's office room?,samiul,False,1,FacultyList-217-chunk0,Sheikh Samiul Kadir
+AMB300,What is Samiur's office room?,samiur,False,1,FacultyList-128-chunk0,Samiur Rahman
+AMB301,What is Samrat's office room?,samrat,False,1,FacultyList-49-chunk0,Md. Khaliduzzaman Khan Samrat
+AMB302,What is Sanjida's office room?,sanjida,False,1,FacultyList-133-chunk0,Sanjida Tasnim
+AMB303,What is Sarker's office room?,sarker,False,1,FacultyList-134-chunk0,Sukarna Sarker
+AMB304,What is Sayeedur's office room?,sayeedur,False,1,FacultyList-187-chunk0,Sayeedur Rahman
+AMB305,What is Sazzadul's office room?,sazzadul,False,1,FacultyList-139-chunk0,Sazzadul Islam
+AMB306,What is Seraj's office room?,seraj,False,1,FacultyList-131-chunk0,Ms. Mehnaz Seraj
+AMB307,What is Shadman's office room?,shadman,False,1,FacultyList-121-chunk0,Mr. Shadman Shahriar
+AMB308,What is Shadmin's office room?,shadmin,False,1,FacultyList-119-chunk0,Shadmin Sultana
+AMB309,What is Shafi's office room?,shafi,False,1,FacultyList-186-chunk0,Md Shamsur Shafi Nur E Aziz
+AMB310,What is Shafiul's office room?,shafiul,False,1,FacultyList-210-chunk0,Dr. Md. Shafiul Alam Shuvo
+AMB311,What is Shahir's office room?,shahir,False,1,FacultyList-112-chunk0,Rafiad Sadat Shahir
+AMB312,What is Shahnoor's office room?,shahnoor,False,1,FacultyList-84-chunk0,Kefaya Benta Shahnoor
+AMB313,What is Shahriar's office room?,shahriar,True,4,FacultyList-121-chunk0|FacultyList-123-chunk0|FacultyList-125-chunk0|FacultyList-32-chunk0,Mr. Shadman Shahriar|Asif Shahriar|Mr. Shahriar Rahman Rana|Ahmad Farhan Shahriar Chowdhury
+AMB314,What is Shakil's office room?,shakil,False,1,FacultyList-17-chunk0,Mr. Arif Shakil
+AMB315,What is Shakir's office room?,shakir,False,1,FacultyList-132-chunk0,Mr. Shakir Rouf
+AMB316,What is Shamim's office room?,shamim,False,1,FacultyList-70-chunk0,Mr. Md. Shamim Mia
+AMB317,What is Shamsur's office room?,shamsur,False,1,FacultyList-186-chunk0,Md Shamsur Shafi Nur E Aziz
+AMB318,What is Shamsuzzoha's office room?,shamsuzzoha,False,1,FacultyList-212-chunk0,Dr. Md Shamsuzzoha Bayzid
+AMB319,What is Shanto's office room?,shanto,False,1,FacultyList-22-chunk0,Ashraful Islam Shanto Sikder
+AMB320,What is Shaon's office room?,shaon,False,1,FacultyList-93-chunk0,Nur Mohammad Shaon
+AMB321,What is Shatabda's office room?,shatabda,False,1,FacultyList-137-chunk0,Dr. Swakkhar Shatabda
+AMB322,What is Shazid's office room?,shazid,False,1,FacultyList-138-chunk0,Md. Shazid Bin Mahbub
+AMB323,What is Shehran's office room?,shehran,False,1,FacultyList-183-chunk0,Shehran Rahman
+AMB324,What is Sheikh's office room?,sheikh,True,3,FacultyList-211-chunk0|FacultyList-217-chunk0|FacultyList-43-chunk0,Sheikh Iftekhar Ahmed|Sheikh Samiul Kadir|Sheikh Araf Noshin
+AMB325,What is Shomen's office room?,shomen,False,1,FacultyList-122-chunk0,Shomen Kundu
+AMB326,What is Shorif's office room?,shorif,False,1,FacultyList-149-chunk0,Mr. Mirza Md. Tanjim Shorif Mugdho
+AMB327,What is Shoumo's office room?,shoumo,False,1,FacultyList-159-chunk0,Mr. Syed Zamil Hasan Shoumo
+AMB328,What is Shourov's office room?,shourov,False,1,FacultyList-213-chunk0,Shourov Joarder
+AMB329,What is Shuvo's office room?,shuvo,True,2,FacultyList-172-chunk0|FacultyList-210-chunk0,Md. Anonto Shuvo|Dr. Md. Shafiul Alam Shuvo
+AMB330,What is Siddika's office room?,siddika,False,1,FacultyList-164-chunk0,Ayesha Siddika
+AMB331,What is Siddiqui's office room?,siddiqui,False,1,FacultyList-120-chunk0,Mr. Md. Saiful Bari Siddiqui
+AMB332,What is Sikder's office room?,sikder,False,1,FacultyList-22-chunk0,Ashraful Islam Shanto Sikder
+AMB333,What is Sobhan's office room?,sobhan,False,1,FacultyList-153-chunk0,Tasnim Sobhan Upoma
+AMB334,What is Soumitra's office room?,soumitra,False,1,FacultyList-216-chunk0,Soumitra Das
+AMB335,What is Soumya's office room?,soumya,False,1,FacultyList-130-chunk0,Soumya Swagata Biswas
+AMB336,What is Souvik's office room?,souvik,False,1,FacultyList-135-chunk0,Souvik Ghosh
+AMB337,What is Sowmitra's office room?,sowmitra,False,1,FacultyList-117-chunk0,Sowmitra Das
+AMB338,What is Subarna's office room?,subarna,False,1,FacultyList-23-chunk0,Ateya Ahmed Subarna
+AMB339,What is Sukarna's office room?,sukarna,False,1,FacultyList-134-chunk0,Sukarna Sarker
+AMB340,What is Sultana's office room?,sultana,False,1,FacultyList-119-chunk0,Shadmin Sultana
+AMB341,What is Sumaiya's office room?,sumaiya,False,1,FacultyList-129-chunk0,Sumaiya
+AMB342,What is Suprava's office room?,suprava,False,1,FacultyList-185-chunk0,Suprava Saha Dibya
+AMB343,What is Swagata's office room?,swagata,False,1,FacultyList-130-chunk0,Soumya Swagata Biswas
+AMB344,What is Swakkhar's office room?,swakkhar,False,1,FacultyList-137-chunk0,Dr. Swakkhar Shatabda
+AMB345,What is Swattic's office room?,swattic,False,1,FacultyList-136-chunk0,Mr. Swattic Ghose
+AMB346,What is Syed's office room?,syed,False,1,FacultyList-159-chunk0,Mr. Syed Zamil Hasan Shoumo
+AMB347,What is Tabassum's office room?,tabassum,True,2,FacultyList-14-chunk0|FacultyList-205-chunk0,Aniqa Tabassum|Nowshin Tabassum
+AMB348,What is Tahia's office room?,tahia,False,1,FacultyList-181-chunk0,Purba Tahia Hassan
+AMB349,What is Tahsin's office room?,tahsin,True,2,FacultyList-218-chunk0|FacultyList-89-chunk0,Tahsin Tanim Ramisha|Naima Tahsin Nodi
+AMB350,What is Taiabul's office room?,taiabul,False,1,FacultyList-143-chunk0,Dr. Taiabul Haque
+AMB351,What is Tamkin's office room?,tamkin,False,1,FacultyList-144-chunk0,Mr. Tamkin Mahmud Tan
+AMB352,What is Tanhiat's office room?,tanhiat,False,1,FacultyList-145-chunk0,Tanhiat Fatema Afnan
+AMB353,What is Tanim's office room?,tanim,False,1,FacultyList-218-chunk0,Tahsin Tanim Ramisha
+AMB354,What is Tanjim's office room?,tanjim,True,2,FacultyList-149-chunk0|FacultyList-219-chunk0,Mr. Mirza Md. Tanjim Shorif Mugdho|Tanjim Reza
+AMB355,What is Tanveer's office room?,tanveer,False,1,FacultyList-150-chunk0,Tanveer Rahman
+AMB356,What is Tanzim's office room?,tanzim,False,1,FacultyList-147-chunk0,Mr. Md. Tanzim Reza
+AMB357,What is Taposhi's office room?,taposhi,False,1,FacultyList-152-chunk0,Umme Jannat Taposhi
+AMB358,What is Tarannum's office room?,tarannum,False,1,FacultyList-92-chunk0,Ms. Narzu Tarannum
+AMB359,What is Tarvir's office room?,tarvir,False,1,FacultyList-141-chunk0,Tarvir Anjum Aditto
+AMB360,What is Tasfe's office room?,tasfe,False,1,FacultyList-55-chunk0,Mahrin Tasfe
+AMB361,What is Tasfia's office room?,tasfia,False,1,FacultyList-188-chunk0,Tasfia Zaman
+AMB362,What is Tasfiya's office room?,tasfiya,False,1,FacultyList-107-chunk0,Rifa Tasfiya
+AMB363,What is Tasneem's office room?,tasneem,False,1,FacultyList-148-chunk0,Tasneem Mazhar
+AMB364,What is Tasnim's office room?,tasnim,True,5,FacultyList-133-chunk0|FacultyList-140-chunk0|FacultyList-146-chunk0|FacultyList-153-chunk0|FacultyList-171-chunk0,Sanjida Tasnim|Ms. Tasnim Ahsan Prome|Ms. Tasnim Ferdous|Tasnim Sobhan Upoma|Anika Tasnim
+AMB365,What is Tawhid's office room?,tawhid,False,1,FacultyList-142-chunk0,Mr. Md. Tawhid Anwar
+AMB366,What is Tazwar's office room?,tazwar,False,1,FacultyList-199-chunk0,Md Toky Tazwar
+AMB367,What is Toky's office room?,toky,False,1,FacultyList-199-chunk0,Md Toky Tazwar
+AMB368,What is Touhid's office room?,touhid,False,1,FacultyList-78-chunk0,Nazmus Sakib Touhid
+AMB369,What is Towshik's office room?,towshik,False,1,FacultyList-151-chunk0,Towshik Anam Taj
+AMB370,What is Ummay's office room?,ummay,False,1,FacultyList-67-chunk0,Ummay Maria Muna
+AMB371,What is Umme's office room?,umme,False,1,FacultyList-152-chunk0,Umme Jannat Taposhi
+AMB372,What is Upoma's office room?,upoma,True,2,FacultyList-153-chunk0|FacultyList-46-chunk0,Tasnim Sobhan Upoma|Ms. Ipshita Bonhi Upoma
+AMB373,What is Utsha's office room?,utsha,False,1,FacultyList-154-chunk0,Utsha Kumar Roy
+AMB374,What is Wahida's office room?,wahida,False,1,FacultyList-155-chunk0,Wahida Mahjabin
+AMB375,What is Wakil's office room?,wakil,False,1,FacultyList-196-chunk0,Mirza Azwad Wakil
+AMB376,What is Waleed's office room?,waleed,False,1,FacultyList-220-chunk0,Waleed Bin Habib Khan
+AMB377,What is Waseq's office room?,waseq,False,1,FacultyList-221-chunk0,Md.Waseq Alauddin Alvi
+AMB378,What is Wasi's office room?,wasi,False,1,FacultyList-13-chunk0,Abdullah Nayem Wasi Emran
+AMB379,What is Yanhaona's office room?,yanhaona,False,1,FacultyList-65-chunk0,Dr. Muhammad Nur Yanhaona
+AMB380,What is Yasmin's office room?,yasmin,False,1,FacultyList-156-chunk0,Yasmin Nadia
+AMB381,What is Yousuf's office room?,yousuf,False,1,FacultyList-40-chunk0,Dr. Farig Yousuf Sadeque
+AMB382,What is Zaber's office room?,zaber,False,1,FacultyList-161-chunk0,Mr. Zaber Mohammad
+AMB383,What is Zahin's office room?,zahin,False,1,FacultyList-223-chunk0,Zahin Iqbal Zeal
+AMB384,What is Zahir's office room?,zahir,False,1,FacultyList-158-chunk0,Md Zayed Bin Zahir Arju
+AMB385,What is Zaman's office room?,zaman,True,3,FacultyList-188-chunk0|FacultyList-191-chunk0|FacultyList-204-chunk0,Tasfia Zaman|Fardin Zaman|Nusrat Zaman Raya
+AMB386,What is Zamil's office room?,zamil,False,1,FacultyList-159-chunk0,Mr. Syed Zamil Hasan Shoumo
+AMB387,What is Zayed's office room?,zayed,True,2,FacultyList-158-chunk0|FacultyList-162-chunk0,Md Zayed Bin Zahir Arju|Zayed Humayun
+AMB388,What is Zeal's office room?,zeal,False,1,FacultyList-223-chunk0,Zahin Iqbal Zeal
+AMB389,What is Ziaul's office room?,ziaul,False,1,FacultyList-30-chunk0,Mr. Dewan Ziaul Karim
+AMB390,What is Zobayer's office room?,zobayer,False,1,FacultyList-222-chunk0,Zobayer Hasan
+AMB391,What is Zubair's office room?,zubair,False,1,FacultyList-41-chunk0,Kh.Fardin Zubair Nafis
+AMB392,What is Zulkar's office room?,zulkar,False,1,FacultyList-160-chunk0,Md. Zulkar Naim

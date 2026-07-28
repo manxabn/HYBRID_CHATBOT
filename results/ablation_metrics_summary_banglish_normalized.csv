@@ -1,0 +1,5 @@
+config,bleu,rougeL,bertscore,meteor,n
+bm25_only,0.7895,0.8731,0.9743,0.8787,100
+full_hybrid,0.8206,0.903,0.9791,0.9122,100
+no_retrieval,0.0145,0.1344,0.8317,0.1837,100
+vector_only,0.78,0.8618,0.9731,0.8632,100

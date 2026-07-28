@@ -1,0 +1,3 @@
+table,n_rows,n_pairs_above_threshold,n_rows_in_multi_clusters,n_multi_clusters
+EnglishQA,2297,2072,1877,663
+BanglishQA,1053,91,95,36

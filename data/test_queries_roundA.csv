@@ -1,0 +1,303 @@
+query_id,query,reference_answer,is_entity_heavy,source
+Q001,How long does the Early Childhood Development (ECD) program take to complete?,"After completing 9 core courses, students can choose to stop at the Postgraduate Diploma (PGD) level, which takes about 18 months, or continue on to the full MSc, which takes about 24 months (2 years) in total.",False,EnglishQA
+Q002,Why is it advised not to select unnecessary courses in the Wishlist?,"Course demand influences planning, and unnecessary selections may misrepresent actual needs",False,EnglishQA
+Q003,"Hey, what subjects are tested for BSS in Anthropology, BA in English, and LLB admission?","Applicants to BSS in Anthropology, BA in English, and LLB (Hons) are tested only in English as part of the admission test.",False,EnglishQA
+Q004,"Sorry if this was already answered, but how are meal plans managed at TARC?","Tarc provides 3 main meals breakfast,lunch and dinner and two snack time followed by them.Breakfast time continues from 7-9 am, lunch time continues from 12:30-3 pm,dinner continues from 8:30-10 pm followed by snacks time which are from 11-12 am and 4-5 pm colleectively",False,EnglishQA
+Q005,"Hey, how to submit report after a club event?","After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.",False,EnglishQA
+Q006,What items are prohibited in the exam hall?,"Mobile phones, tablets, smartwatches, and other electronic gadgets are not allowed. Bringing textbooks, notes, or any other written materials is prohibited unless explicitly allowed by the instructor.Bags, backpacks, and personal belongings should be left outside the exam hall or in designated areas.",False,EnglishQA
+Q007,One thing I couldn't find anywhere: can students appeal their grades if they believe there has been a mistake?,"A student may apply to the Chair of Department or the Dean for the re-checking of an examination script. Such a request may be made on the grounds of evidence of procedural errors, arbitrariness or prejudice. The student must make any request within Seven (07) calendar days of the publication of the mark. The Chair of Department or the Dean may, after checking with the original grader, arrange for the evaluation of an examination script to be conducted by two members of the faculty not previously involved in the examination and marking process, supported by a member of the Examination Controller’s office. The rechecking process and submission of any revised grade to the Examinations Controller should be completed within 15 calendar days.",False,EnglishQA
+Q008,What is BRAC University's general contact information?,"The university can be reached at +88 09638464646 (extension 1001 for the operator), and general queries can be emailed to info@bracu.ac.bd.",False,EnglishQA
+Q009,"Sorry if this was already answered, but can students receive visitors while at the Savar campus?","Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.",False,EnglishQA
+Q010,When must course selections be confirmed after Pre-Registration phases?,During the Self-Registration period assigned after result publication,False,EnglishQA
+Q011,Where do MPH faculty members at BRAC JPGSPH come from?,"MPH faculty are drawn from a mix of BRAC University, icddr,b, and BRAC itself, along with international partner institutions such as the University of Heidelberg, Harvard, Johns Hopkins, George Washington University, the Karolinska Institute, and the London School of Hygiene & Tropical Medicine.",False,EnglishQA
+Q012,Quick question — when was BRAC University established and who founded it?,"BRAC University was established in 2001, founded by Sir Fazle Hasan Abed, and is affiliated with the University Grants Commission (UGC) of Bangladesh.",False,EnglishQA
+Q013,What is the contact number for Route-05 (Jatrabari)?,Route-05 (Jatrabari) Service Assistant contact: 01700-877297.,False,EnglishQA
+Q014,What is BRAC Scholarship?,"BRAC Scholarship is for economically disadvantaged students.
+
+Eligibility criteria and other requirements:
+
+1. Parents’ monthly income - not more than Tk. 20,000. 
+
+2. Students must have a GPA of 4.50 (without 4th subject) in SSC and HSC from Science, Arts & Commerce Group.",False,EnglishQA
+Q015,Reason for late fee appearing on pay slip of scholarship recipients after 29 June 2025?,The fee appears temporarily and will be waived automatically once the scholarship is adjusted.,False,EnglishQA
+Q016,"Kind of urgent, but what exactly does the Office of the Proctor handle at BRAC University?","The Office of the Proctor is responsible for student discipline and campus safety, acting as an intermediary for complaints about harassment, bullying, or intimidation involving anyone affiliated with BRACU - students, faculty, staff, or security personnel.",False,EnglishQA
+Q017,Can someone help — what services do library provide?,"The library offers a variety of study facilities to suit different preferences. If you enjoy studying in a group, you can reserve a study room in advance, providing a dedicated space for collaboration. For those who prefer studying alone, there are single seats and study capsules available on a first-come, first-served basis. Additionally, the library features various other quiet and comfortable areas where you can focus on your studies.",False,EnglishQA
+Q018,"How many semesters does BRAC University run per year, and when do they start?","BRAC University runs three semesters a year - Spring, Summer and Fall - starting in January, May and September respectively. Pharmacy admits in Spring or Summer, and LLB admits in Spring or Fall.",False,EnglishQA
+Q019,How is the Joint PhD program with SOAS structured over time?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.",False,EnglishQA
+Q020,What is the consequence of not participating in the Wishlist event?,Student will not be allowed to register during Pre-Registration Phase 1,False,EnglishQA
+Q021,"Kind of urgent, but what is the formula BRAC University uses to calculate GPA?","GPA is calculated as the sum of (grade points x credits) for all courses, divided by the sum of credits attempted - i.e., a credit-weighted average, so a 4-credit course affects the GPA more than a 1-credit course.",False,EnglishQA
+Q022,"Random question, what should students do if they have a scheduling conflict with their exams?","The first step is to inform the course instructor about the conflict as soon as possible. If the conflict involves multiple exams or cannot be resolved with the instructor, students should consult their department office. The department can provide additional support or coordinate with other instructors to find a solution.",False,EnglishQA
+Q023,Do lab-based or design-based programs pay an additional fee beyond regular tuition?,"Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.",False,EnglishQA
+Q024,What is BRAC University's policy on sexual harassment?,"BRAC University maintains a 'Zero Tolerance' policy toward sexual harassment of any kind, formalized in its Code of Conduct on Sexual Harassment, which is part of the university's broader safeguarding framework alongside the Academic Handbook and the Regulations of Students Conduct.",False,EnglishQA
+Q025,What are BRAC University's official colours?,"BRAC University's official colours are blue, black, and gray.",False,EnglishQA
+Q026,Before I forget to ask — whats the procedure for changing my section?,If you are already enrolled in a section then your request will be rejected by DCO due to the policies set by department.,False,EnglishQA
+Q027,Can you tell me what the formula BRAC University uses to calculate GPA is?,"GPA is calculated as the sum of (grade points x credits) for all courses, divided by the sum of credits attempted - i.e., a credit-weighted average, so a 4-credit course affects the GPA more than a 1-credit course.",False,EnglishQA
+Q028,I already did ENG102 in Badda campus which course I will be given in TARC?,"If you completed ENG102 already, you will be given BUS201 at TARC.",False,EnglishQA
+Q029,I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?,"Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.",False,EnglishQA
+Q030,Curious about something: what amenities and facilities are provided for students at TARC?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.",False,EnglishQA
+Q031,What is the second outbound timing for Route-04 (Azimpur)?,Route-04 (Azimpur): Second trip departs at 5:10 PM.,False,EnglishQA
+Q032,Can someone help — provide me the contact information of library staffs?,"You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd",False,EnglishQA
+Q033,"Not sure if this is covered elsewhere, but how early should students arrive at the exam hall?",Students should aim to arrive at the exam hall at least 15 to 30 minutes before the scheduled start time of their exam.,False,EnglishQA
+Q034,"Just wondering, are journals, magazines and reference books available for borrowing?","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",False,EnglishQA
+Q035,I looked around the site but couldn't find it — whats the procedure to pay my fees in installment?,A form will be shared by gsuite if the facility is available for that particular semester and you can fill up the form and apply for installment payment.,False,EnglishQA
+Q036,How can I stay updated on upcoming games and events?,"Check BRACU Events Page. As the website is not fully functional yet, keep an eye on clubs’ Facebook pages or BRACU Facebook groups for updates.
+ and you can also go to this page for detailed updates : https://www.bracu.ac.bd/news-events/upcoming-events",False,EnglishQA
+Q037,Can someone help — what is the CGPA requirement for eligibility to start a thesis?,CGPA equal to or above 3.0.,False,EnglishQA
+Q038,Can you tell me what the important dates and deadlines for admission are?,"The exact admission test date, application deadline, and academic-session start date change every semester, so BRAC University publishes them on its Admissions page (bracu.ac.bd/admissions) ahead of each intake rather than fixing them year-round - check that page for the current cycle's dates.",False,EnglishQA
+Q039,"Hi, what was BRAC University's student system called before it became 'Connect'?","Before the current 'Connect' Student Lifecycle Management System, students used a system called USIS (University Student Information System) for functions like registration, pay slips, and academic records.",False,EnglishQA
+Q040,What support does the Center of Entrepreneurship Development (CED) provide?,"The Center for Entrepreneurship Development (CED) at BRAC University supports students and alumni in developing entrepreneurial skills and launching their own ventures. It offers various services, including:
+Training and mentorship programs for aspiring entrepreneurs.
+Workshops and seminars on business development and innovation.
+Networking opportunities with industry professionals.
+Resources and guidance for business planning and startup funding.
+CED aims to foster a culture of entrepreneurship and innovation within the university community, providing both theoretical knowledge and practical experience to help students succeed in their entrepreneurial endeavors.Visit more for details: https://ced.bracu.ac.bd/",False,EnglishQA
+Q041,Can you tell me what the consequences of violating TARC rules and regulations are?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled",False,EnglishQA
+Q042,What is the BRAC University Students' Transport Service?,"BRAC University provides an affordable, safe, and comfortable transport service with air-conditioned buses covering nine routes across Dhaka city.",False,EnglishQA
+Q043,Curious about something: do international students need to submit any medical reports?,"Yes, Health checkup/medical certificates are needed to be submitted.",False,EnglishQA
+Q044,Can you tell me what required for a student to apply for an internship is?,The student must apply to the Chairperson of the CSE Department and may suggest a company with a detailed profile for approval.,False,EnglishQA
+Q045,What steps do I need to follow to access the Prayer Room for females?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),False,EnglishQA
+Q046,How are students informed about changes to the transport service?,Students are informed through official BRAC University notices and announcements.,False,EnglishQA
+Q047,"Just wondering, what was BRAC University's student system called before it became 'Connect'?","Before the current 'Connect' Student Lifecycle Management System, students used a system called USIS (University Student Information System) for functions like registration, pay slips, and academic records.",False,EnglishQA
+Q048,Before I forget to ask — is there any scholarship scheme for international students?,"1. BRAC Scholarship (Needs-Based Scholarship)
+
+Benefits: 100% tuition and fees waiver (including semester fees, lab fees, library fees) along with food and accommodations.
+Eligibility: Awarded to economically disadvantaged but meritorious students.
+Requirements:
+Must maintain a minimum CGPA of 3.00 on a scale of 4.00 in all semesters.
+If the CGPA falls below 3.00, the student may retain a tuition fee waiver for up to two consecutive semesters. The student must regain the required CGPA within these semesters, or the scholarship will be discontinued unless special circumstances are recognized by the Scholarship Committee.
+2. Merit Scholarship Based on BRACU Academic Results
+
+Eligibility:
+Undergraduate students must complete at least 30 credits, and postgraduate students must complete at least 1/4th of their program credits.
+Undergraduate students must take a minimum of 12 credits (15 for School of Law, 18 for Pharmacy) in both the current and previous semesters.
+Postgraduate students must take at least 9 credits in both the current and previous semesters.
+Conditions:
+Students who retake or repeat courses, or have a 'W' grade or an 'F' in any subject in the previous or current semester, are not eligible.
+Scholarship Percentage Based on CGPA:
+CGPA 3.80 - 3.84: 10% waiver
+CGPA 3.85 - 3.89: 25% waiver
+CGPA 3.90 - 3.94: 50% waiver
+CGPA 3.95 - 3.99: 75% waiver
+CGPA 4.00: 100% waiver",False,EnglishQA
+Q049,Can you tell me what BRAC University's official colours are?,"BRAC University's official colours are blue, black, and gray.",False,EnglishQA
+Q050,How many stoppages are there for each route?,Each route has between 5 and 12 designated stoppages.,False,EnglishQA
+Q051,Is there any scholarship scheme for international students?,"1. BRAC Scholarship (Needs-Based Scholarship)
+
+Benefits: 100% tuition and fees waiver (including semester fees, lab fees, library fees) along with food and accommodations.
+Eligibility: Awarded to economically disadvantaged but meritorious students.
+Requirements:
+Must maintain a minimum CGPA of 3.00 on a scale of 4.00 in all semesters.
+If the CGPA falls below 3.00, the student may retain a tuition fee waiver for up to two consecutive semesters. The student must regain the required CGPA within these semesters, or the scholarship will be discontinued unless special circumstances are recognized by the Scholarship Committee.
+2. Merit Scholarship Based on BRACU Academic Results
+
+Eligibility:
+Undergraduate students must complete at least 30 credits, and postgraduate students must complete at least 1/4th of their program credits.
+Undergraduate students must take a minimum of 12 credits (15 for School of Law, 18 for Pharmacy) in both the current and previous semesters.
+Postgraduate students must take at least 9 credits in both the current and previous semesters.
+Conditions:
+Students who retake or repeat courses, or have a 'W' grade or an 'F' in any subject in the previous or current semester, are not eligible.
+Scholarship Percentage Based on CGPA:
+CGPA 3.80 - 3.84: 10% waiver
+CGPA 3.85 - 3.89: 25% waiver
+CGPA 3.90 - 3.94: 50% waiver
+CGPA 3.95 - 3.99: 75% waiver
+CGPA 4.00: 100% waiver",False,EnglishQA
+Q052,What is the difference between 'swapping' and 'dropping/adding' a course during advising?,Swapping refers to dropping one course and adding another within the same advising window; a swap does not count against a student's separate drop/add limits the way an independent drop or add would.,False,EnglishQA
+Q053,Does BRAC University have any scholarship scheme for international students?,"1. BRAC Scholarship (Needs-Based Scholarship)
+
+Benefits: 100% tuition and fees waiver (including semester fees, lab fees, library fees) along with food and accommodations.
+Eligibility: Awarded to economically disadvantaged but meritorious students.
+Requirements:
+Must maintain a minimum CGPA of 3.00 on a scale of 4.00 in all semesters.
+If the CGPA falls below 3.00, the student may retain a tuition fee waiver for up to two consecutive semesters. The student must regain the required CGPA within these semesters, or the scholarship will be discontinued unless special circumstances are recognized by the Scholarship Committee.
+2. Merit Scholarship Based on BRACU Academic Results
+
+Eligibility:
+Undergraduate students must complete at least 30 credits, and postgraduate students must complete at least 1/4th of their program credits.
+Undergraduate students must take a minimum of 12 credits (15 for School of Law, 18 for Pharmacy) in both the current and previous semesters.
+Postgraduate students must take at least 9 credits in both the current and previous semesters.
+Conditions:
+Students who retake or repeat courses, or have a 'W' grade or an 'F' in any subject in the previous or current semester, are not eligible.
+Scholarship Percentage Based on CGPA:
+CGPA 3.80 - 3.84: 10% waiver
+CGPA 3.85 - 3.89: 25% waiver
+CGPA 3.90 - 3.94: 50% waiver
+CGPA 3.95 - 3.99: 75% waiver
+CGPA 4.00: 100% waiver",False,EnglishQA
+Q054,Curious about something: how many credit hours must a scholarship-holding international student take each semester?,"Students on scholarship or financial aid are generally required to take a minimum of 9 credit hours in all semesters (applicable from Summer 2023 admits onward), except for approved reduced course loads such as in the first semester.",False,EnglishQA
+Q055,Can non-students use the BRAC University transport service?,"No, the service is exclusively for BRAC University students.",False,EnglishQA
+Q056,Can you tell me what the process for arranging food or refreshments for events is?,"For refreshments from the Brac University cafeteria, orders must be confirmed by OCA, and payments will be made by the Accounts Office from the club/forum budget (not in cash). For refreshments from outside vendors, financial assistance will be transferred to the club advisor’s bank account as per the approved budget.",False,EnglishQA
+Q057,"Just wondering, how many semesters does BRAC University run per year, and when do they start?","BRAC University runs three semesters a year - Spring, Summer and Fall - starting in January, May and September respectively. Pharmacy admits in Spring or Summer, and LLB admits in Spring or Fall.",False,EnglishQA
+Q058,One thing I couldn't find anywhere: I already did ENG102 in Badda campus which course I will be given in TARC?,"If you completed ENG102 already, you will be given BUS201 at TARC.",False,EnglishQA
+Q059,One thing I couldn't find anywhere: can I renew a book I have borrowed from the library?,"Yes, an item can be renewed if no other user has placed a hold on it. Renewal can be done through the online catalogue (OPAC) or by contacting the circulation desk.",False,EnglishQA
+Q060,"Sorry if this was already answered, but what undergraduate tuition waiver is available based on SSC/HSC or A-Level results?","Undergraduate applicants can receive a tuition waiver (commonly around 25%, with higher tiers such as 30% or 100% for top scorers in the BRACU Admission Test) in their first semester, based on their prior academic performance at SSC/O-Level, HSC/A-Level, or IB Diploma.",False,EnglishQA
+Q061,How can I access the Prayer Room for females?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),False,EnglishQA
+Q062,"I'm an international student on the BRAC Scholarship with a 3.1 CGPA, but I need to retake a course I failed. Will my scholarship cover the retake fee?","No - tuition fee waivers and scholarships, including the BRAC Scholarship, are not applied to retake or repeat courses; you'd need to pay for the retake yourself. Separately, since you failed a course, you also won't be considered for the tuition fee waiver for the following two semesters even on your other coursework, regardless of your CGPA being above the 3.0 minimum.",False,EnglishQA
+Q063,"My advisor is not responding, what to do?","Please wait, your advisor is maybe busy with other students response. You can request other advisors for your advising but he will only add it but he will not approve it. So, it is wise to get request done by the advisor.",False,EnglishQA
+Q064,Where can I find the official student payment manual?,"BRAC University publishes a 'Payment Manual for Students' PDF, linked from the Tuition and Fees page, which explains the accepted payment methods and installment options in detail.",False,EnglishQA
+Q065,I looked around the site but couldn't find it — what sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",False,EnglishQA
+Q066,Can you tell me what the difference in focus between the BSEEE and BSECE programs is?,"BSEEE (Electrical and Electronic Engineering) has a broader focus spanning power, electronics and general EEE topics, while BSECE (Electronic and Communication Engineering) concentrates more specifically on communication-related topics such as signal processing, telecommunications, microwave engineering, and data/optical/satellite communications.",False,EnglishQA
+Q067,Whats the procedure to pay my fees in installment?,A form will be shared by gsuite if the facility is available for that particular semester and you can fill up the form and apply for installment payment.,False,EnglishQA
+Q068,"Hey, do international students need to submit any medical reports?","Yes, Health checkup/medical certificates are needed to be submitted.",False,EnglishQA
+Q069,For a friend who's asking — do I need to pay any fee to collect my degree certificate at Convocation?,"No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.",False,EnglishQA
+Q070,Can students appeal their grades if they believe there has been a mistake?,"A student may apply to the Chair of Department or the Dean for the re-checking of an examination script. Such a request may be made on the grounds of evidence of procedural errors, arbitrariness or prejudice. The student must make any request within Seven (07) calendar days of the publication of the mark. The Chair of Department or the Dean may, after checking with the original grader, arrange for the evaluation of an examination script to be conducted by two members of the faculty not previously involved in the examination and marking process, supported by a member of the Examination Controller’s office. The rechecking process and submission of any revised grade to the Examinations Controller should be completed within 15 calendar days.",False,EnglishQA
+Q071,Can you tell me what the consequence of not participating in the Wishlist event is?,Student will not be allowed to register during Pre-Registration Phase 1,False,EnglishQA
+Q072,Quick question — what amenities and facilities are provided for students at TARC?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.",False,EnglishQA
+Q073,What elective courses are recommended for students interested in Cybersecurity?,"CSE446, CSE447, CSE490 and CSE496 can be beneficial for students interested in Cyber Security.",False,EnglishQA
+Q074,"Random question, what should a course teacher do if a student misses the final exam for a valid reason?","If a student misses the final exam for a documented valid reason (such as a medical emergency), the course teacher can arrange a make-up exam, and if course requirements genuinely can't be completed in time, an 'Incomplete' (I) grade with a defined completion deadline (up to 8 weeks after the final exam) may be assigned instead.",False,EnglishQA
+Q075,I looked around the site but couldn't find it — what opportunities are there for student leadership in volunteer organizations?,"BRAC University Leadership Development Forum (BULDF) is a club working on training and grooming leadership traits. The club mainly focuses on young students in enhancing their leadership qualities and bringing out their hidden talents, which will help them in the future. The club has always been there for assisting the official events and programs of BRAC University as volunteers besides its own activities, which mainly include Accession, Love for Humanity, and Saving Tomorrow.
+
+Contact: club.buldf@g.bracu.ac.bd",False,EnglishQA
+Q076,For a friend who's asking — what amenities and facilities are provided for students at TARC?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.",False,EnglishQA
+Q077,From where does the bus leave on campus?,The bus leave campus from the Basement-1,False,EnglishQA
+Q078,What kinds of course-related schedules can students access through connect?,"Class schedules, exam schedules, and classroom allocations.",False,EnglishQA
+Q079,"Does BRAC University have a digital student ID card, or only a physical one?","Yes, BRAC University introduced a digital ID card in 2017, generated through the BRACU Mobile App (accessible via the app's 'ID Card' menu option). Both the physical and digital ID have been usable, and students are advised to keep the app updated to generate their digital card.",False,EnglishQA
+Q080,"Sorry if this was already answered, but what platform is buX built on, and when was it launched?","BuX is BRAC University's online learning platform, built on the same open-source platform originally developed by MIT and Harvard (Open edX). It was launched in 2020 in response to the shift to online learning during the COVID-19 pandemic.",False,EnglishQA
+Q081,No idea if this is written down anywhere — can I renew a book I have borrowed from the library?,"Yes, an item can be renewed if no other user has placed a hold on it. Renewal can be done through the online catalogue (OPAC) or by contacting the circulation desk.",False,EnglishQA
+Q082,Does ENH offer a minor for students outside the department?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.",False,EnglishQA
+Q083,"Hi, is there any scholarship scheme for international students?","1. BRAC Scholarship (Needs-Based Scholarship)
+
+Benefits: 100% tuition and fees waiver (including semester fees, lab fees, library fees) along with food and accommodations.
+Eligibility: Awarded to economically disadvantaged but meritorious students.
+Requirements:
+Must maintain a minimum CGPA of 3.00 on a scale of 4.00 in all semesters.
+If the CGPA falls below 3.00, the student may retain a tuition fee waiver for up to two consecutive semesters. The student must regain the required CGPA within these semesters, or the scholarship will be discontinued unless special circumstances are recognized by the Scholarship Committee.
+2. Merit Scholarship Based on BRACU Academic Results
+
+Eligibility:
+Undergraduate students must complete at least 30 credits, and postgraduate students must complete at least 1/4th of their program credits.
+Undergraduate students must take a minimum of 12 credits (15 for School of Law, 18 for Pharmacy) in both the current and previous semesters.
+Postgraduate students must take at least 9 credits in both the current and previous semesters.
+Conditions:
+Students who retake or repeat courses, or have a 'W' grade or an 'F' in any subject in the previous or current semester, are not eligible.
+Scholarship Percentage Based on CGPA:
+CGPA 3.80 - 3.84: 10% waiver
+CGPA 3.85 - 3.89: 25% waiver
+CGPA 3.90 - 3.94: 50% waiver
+CGPA 3.95 - 3.99: 75% waiver
+CGPA 4.00: 100% waiver",False,EnglishQA
+Q084,Where can I find the Dressing Room for the two grounds?,"The Dressing Rooms for the two sports grounds are located on the Ground Floor of the main campus building, near the Maidan.",False,EnglishQA
+Q085,How many credit hours must a scholarship-holding international student take each semester?,"Students on scholarship or financial aid are generally required to take a minimum of 9 credit hours in all semesters (applicable from Summer 2023 admits onward), except for approved reduced course loads such as in the first semester.",False,EnglishQA
+Q086,Do you know how many credit hours must a scholarship-holding international student take each semester?,"Students on scholarship or financial aid are generally required to take a minimum of 9 credit hours in all semesters (applicable from Summer 2023 admits onward), except for approved reduced course loads such as in the first semester.",False,EnglishQA
+Q087,How early should students arrive at the exam hall?,Students should aim to arrive at the exam hall at least 15 to 30 minutes before the scheduled start time of their exam.,False,EnglishQA
+Q088,Curious about something: what are the basic requirements and application process to start a new club at BRAC University?,"To start a new club, you need at least 50 interested student members and one BRACU faculty advisor. The applicants then submit an application to the Director of Co-Curricular Activities, including the club's goals, objectives, a program calendar, and mode of operation, signed by the advisor. The new club's Executive Committee follows the same eligibility rules as any club's committee (see the Executive Committee CGPA/credit requirements). One faculty member can advise only one club at a time, but can additionally co-advise up to one more; a faculty member who isn't an advisor of any club can co-advise up to two.",False,EnglishQA
+Q089,Consequence of not confirming advising during the Self-Registration period?,All selected courses will be automatically cancelled,False,EnglishQA
+Q090,Where is the EEE Department?,The EEE Department is located on the 4th floor and the labs are on 11th and 12th.,False,EnglishQA
+Q091,One thing I couldn't find anywhere: where can I find the official student payment manual?,"BRAC University publishes a 'Payment Manual for Students' PDF, linked from the Tuition and Fees page, which explains the accepted payment methods and installment options in detail.",False,EnglishQA
+Q092,"I wanted to ask, what is the Syndicate at BRAC University?","The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.",False,EnglishQA
+Q093,What should I do if I can’t log in to a lab PC?,"If you've changed your password and can’t remember it, contact IT support at itsupport@bracu.ac.bd.",False,EnglishQA
+Q094,Provide me the contact information of library staffs.,"You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd",False,EnglishQA
+Q095,"I wanted to ask, where do MPH faculty members at BRAC JPGSPH come from?","MPH faculty are drawn from a mix of BRAC University, icddr,b, and BRAC itself, along with international partner institutions such as the University of Heidelberg, Harvard, Johns Hopkins, George Washington University, the Karolinska Institute, and the London School of Hygiene & Tropical Medicine.",False,EnglishQA
+Q096,Has BRAC University ever won the World Universities Debating Championship (WUDC)?,"Yes, twice. In 2013, BRAC Bangladesh A (Ratib Murtaza Ali and Aaqib Farhan Hossain) won the English-as-a-Second-Language (ESL) category at WUDC in Berlin - Bangladesh's first such win. In 2022, BRAC University students Sourodip Paul and Sajid Asbat Khandaker won the WUDC open category outright in Belgrade, becoming the first Asian team ever to win the tournament's top title.",False,EnglishQA
+Q097,Am I required to need to pay any fee to collect my degree certificate at Convocation?,"No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.",False,EnglishQA
+Q098,Can you tell me what the minimum and maximum number of group members for a thesis/project is?,A thesis/project group must have a minimum of 1 member and a maximum of 5 members.,False,EnglishQA
+Q099,What sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",False,EnglishQA
+Q100,What is 'Freshman Enrollment and Class Sign' at BRAC University?,"This is the official process new/incoming ('freshman') students go through after being admitted, to confirm their enrollment and get registered into their first semester's classes; details and instructions are published on the Admissions section of the university website.",False,EnglishQA
+Q101,What is the full prerequisite chain for CSE370?,The full prerequisite chain for CSE370 is CSE221-CSE220-CSE111-CSE110.,True,Prerequisites
+Q102,What are the prerequisites for CSE221?,The prerequisite for CSE221 is CSE220 (HP).,True,Prerequisites
+Q103,What are the prerequisites for CSE422?,The prerequisite for CSE422 is CSE221 (HP).,True,Prerequisites
+Q104,What are the prerequisites for CSE350?,The prerequisite for CSE350 is CSE251 (HP).,True,Prerequisites
+Q105,What are the prerequisites for CSE330?,The prerequisite for CSE330 is MAT216 (HP).,True,Prerequisites
+Q106,What are the prerequisites for MAT216?,The prerequisite for MAT216 is MAT120 (HP).,True,Prerequisites
+Q107,What is the full prerequisite chain for CSE310?,The full prerequisite chain for CSE310 is CSE370-CSE221-CSE220-CSE111-CSE110.,True,Prerequisites
+Q108,What are the prerequisites for CSE420?,"The prerequisite for CSE420 is CSE321 (HP),CSE331 (HP),CSE340 (HP).",True,Prerequisites
+Q109,What is the full prerequisite chain for CSE430?,The full prerequisite chain for CSE430 is MAT120-MAT110.,True,Prerequisites
+Q110,What is the full prerequisite chain for CSE340?,The full prerequisite chain for CSE340 is CSE260-CSE251-CSE250.,True,Prerequisites
+Q111,What is the full prerequisite chain for CSE489?,The full prerequisite chain for CSE489 is CSE370-CSE221-CSE220-CSE111-CSE110.,True,Prerequisites
+Q112,What is the full prerequisite chain for MAT215?,The full prerequisite chain for MAT215 is MAT216-MAT120-MAT110.,True,Prerequisites
+Q113,What are the prerequisites for CSE391?,The prerequisite for CSE391 is CSE370 (HP).,True,Prerequisites
+Q114,What are the prerequisites for MAT120?,The prerequisite for MAT120 is MAT110 (HP).,True,Prerequisites
+Q115,What is the full prerequisite chain for PHY112?,The full prerequisite chain for PHY112 is PHY111.,True,Prerequisites
+Q116,What is the full prerequisite chain for CSE251?,The full prerequisite chain for CSE251 is CSE250.,True,Prerequisites
+Q117,What are the prerequisites for ENG103?,The prerequisite for ENG103 is ENG102 (HP).,True,Prerequisites
+Q118,What is the full prerequisite chain for CSE471?,The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE110.,True,Prerequisites
+Q119,What is the full prerequisite chain for CSE321?,The full prerequisite chain for CSE321 is CSE221-CSE220-CSE111-CSE110.,True,Prerequisites
+Q120,What are the prerequisites for CSE341?,"The prerequisite for CSE341 is CSE340 (SP),CSE321 (SP).",True,Prerequisites
+Q121,What is the full prerequisite chain for CSE410?,The full prerequisite chain for CSE410 is CSE321-CSE221-CSE220-CSE111-CSE110.,True,Prerequisites
+Q122,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).,True,Prerequisites
+Q123,What are the prerequisites for CSE392?,The prerequisite for CSE392 is MAT215 (HP).,True,Prerequisites
+Q124,What are the prerequisites for CSE331?,The prerequisite for CSE331 is CSE221 (HP).,True,Prerequisites
+Q125,What are the prerequisites for CSE460?,The prerequisite for CSE460 is CSE260 (HP).,True,Prerequisites
+Q126,What is the full prerequisite chain for CSE461?,The full prerequisite chain for CSE461 is CSE260-CSE251-CSE250.,True,Prerequisites
+Q127,What are the prerequisites for CSE260?,The prerequisite for CSE260 is CSE251 (HP).,True,Prerequisites
+Q128,What are the prerequisites for CSE220?,"The prerequisite for CSE220 is CSE111 (HP),CSE230 (HP).",True,Prerequisites
+Q129,What is the full prerequisite chain for CSE470?,The full prerequisite chain for CSE470 is CSE370-CSE221-CSE220-CSE111-CSE110.,True,Prerequisites
+Q130,What are the prerequisites for CSE421?,The prerequisite for CSE421 is CSE320 (SP).,True,Prerequisites
+Q131,Who is the theory coordinator for CSE446?,The theory coordinator for CSE446 is SDF.,True,Coordinator
+Q132,What is the coordinator email for CSE490C?,The coordinator email for CSE490C is sowmitra.das@bracu.ac.bd.,True,Coordinator
+Q133,Who is the theory coordinator for CSE443?,The theory coordinator for CSE443 is SWK.,True,Coordinator
+Q134,What is the coordinator email for CSE101?,The coordinator email for CSE101 is rakin.rabbani@bracu.ac.bd.,True,Coordinator
+Q135,What is the coordinator email for CSE461?,The coordinator email for CSE461 is khalilur@bracu.ac.bd.,True,Coordinator
+Q136,Who is the theory coordinator for CSE419?,The theory coordinator for CSE419 is KKP.,True,Coordinator
+Q137,Who is the theory coordinator for CSE437?,The theory coordinator for CSE437 is GRA.,True,Coordinator
+Q138,What is the coordinator email for CSE110?,The coordinator email for CSE110 is tawhid.anwar@bracu.ac.bd.,True,Coordinator
+Q139,What is the coordinator email for CSE251?,"The coordinator email for CSE251 is purbayan.das@bracu.ac.bd,utsab.saha@bracu.ac.bd.",True,Coordinator
+Q140,What is the coordinator email for CSE422?,The coordinator email for CSE422 is tanzim.reza@bracu.ac.bd.,True,Coordinator
+Q141,What is the coordinator email for CSE391?,The coordinator email for CSE391 is abdur.rahman@bracu.ac.bd.,True,Coordinator
+Q142,What is the coordinator email for CSE341?,The coordinator email for CSE341 is raisul.kabir@bracu.ac.bd.,True,Coordinator
+Q143,Who is the theory coordinator for CSE220?,The theory coordinator for CSE220 is AIB.,True,Coordinator
+Q144,Who is the theory coordinator for CSE463?,The theory coordinator for CSE463 is ASA.,True,Coordinator
+Q145,Who is the theory coordinator for CSE449?,The theory coordinator for CSE449 is AAR.,True,Coordinator
+Q146,Who is the theory coordinator for CSE230?,The theory coordinator for CSE230 is AVB. The second theory coordinator is FIC.,True,Coordinator
+Q147,What is the coordinator email for CSE447?,The coordinator email for CSE447 is iqbal.hossain@bracu.ac.bd.,True,Coordinator
+Q148,Who is the theory coordinator for CSE481?,The theory coordinator for CSE481 is SDS.,True,Coordinator
+Q149,Who is the theory coordinator for CSE221?,The theory coordinator for CSE221 is FGZ. The second theory coordinator is IBA.,True,Coordinator
+Q150,Who is the theory coordinator for CSE260?,The theory coordinator for CSE260 is DZK.,True,Coordinator
+Q151,What day and time is the theory class for CSE103-01?,The theory class for CSE103-01 is on XXX at 11:00 AM in room XXX.,True,CourseDetails
+Q152,What day and time is the theory class for CSE221-11?,The theory class for CSE221-11 is on SUN+TUE at 11:00 AM in room 09H-34C.,True,CourseDetails
+Q153,What day and time is the theory class for CSE220-18?,The theory class for CSE220-18 is on SUN+TUE at 2:00 PM in room 09B-12C.,True,CourseDetails
+Q154,What day and time is the theory class for CSE331-07?,The theory class for CSE331-07 is on SAT+THU at 11:00 AM in room 09A-05C.,True,CourseDetails
+Q155,What day and time is the theory class for CSE221-07?,The theory class for CSE221-07 is on SUN+TUE at 8:00 AM in room 09A-02C.,True,CourseDetails
+Q156,What day and time is the theory class for CSE111-04?,The theory class for CSE111-04 is on SUN+TUE at 2:00 PM in room 09D-17C.,True,CourseDetails
+Q157,What day and time is the theory class for CSE420-14?,The theory class for CSE420-14 is on SAT+THU at 2:00 PM in room 09B-12C.,True,CourseDetails
+Q158,What day and time is the theory class for CSE713-01?,The theory class for CSE713-01 is on SUN+SUN at 6:00 PM+7:30 PM in room 08F-20C.,True,CourseDetails
+Q159,What day and time is the theory class for CSE331-16?,The theory class for CSE331-16 is on MON+WED at 8:00 AM in room 07F-22C.,True,CourseDetails
+Q160,What day and time is the theory class for CSE350-03B?,The theory class for CSE350-03B is on SAT+THU at 11:00 AM in room 09A-07C.,True,CourseDetails
+Q161,What day and time is the theory class for CSE470-08?,The theory class for CSE470-08 is on MON+WED at 2:00 PM in room 09A-01C.,True,CourseDetails
+Q162,What day and time is the theory class for CSE330-11?,The theory class for CSE330-11 is on SAT+THU at 8:00 AM in room 09A-04C.,True,CourseDetails
+Q163,What day and time is the theory class for STA101-06?,The theory class for STA101-06 is on MON+WED at 9:30 AM in room 09H-37C.,True,CourseDetails
+Q164,What day and time is the theory class for CSE260-04B?,The theory class for CSE260-04B is on SUN+TUE at 11:00 AM in room 09A-03C.,True,CourseDetails
+Q165,What day and time is the theory class for STA301-01?,The theory class for STA301-01 is on SAT+THU at 2:00 PM in room 09H-37C.,True,CourseDetails
+Q166,Who teaches the lab section of CSE421-14?,"The lab section of CSE421-14 is taught by RDS,WBH.",True,CourseDetails
+Q167,Who teaches the lab section of CSE370-02?,"The lab section of CSE370-02 is taught by FEK,MAU.",True,CourseDetails
+Q168,Who teaches the lab section of CSE260-04B?,"The lab section of CSE260-04B is taught by NNTN,MAZW.",True,CourseDetails
+Q169,Who teaches the lab section of CSE463-02?,"The lab section of CSE463-02 is taught by STNM,ASMN.",True,CourseDetails
+Q170,Who teaches the lab section of CSE471-15?,"The lab section of CSE471-15 is taught by PLN,ART.",True,CourseDetails
+Q171,Who teaches the lab section of CSE341-06?,"The lab section of CSE341-06 is taught by RKN,NHBN.",True,CourseDetails
+Q172,Who teaches the lab section of CSE250-09A?,"The lab section of CSE250-09A is taught by SDAS,SZZ.",True,CourseDetails
+Q173,Who teaches the lab section of CSE220-06?,"The lab section of CSE220-06 is taught by MZG,FDM.",True,CourseDetails
+Q174,Who teaches the lab section of CSE220-07?,"The lab section of CSE220-07 is taught by MZG,FDM.",True,CourseDetails
+Q175,Who teaches the lab section of CSE423-08?,"The lab section of CSE423-08 is taught by ANKH,MVH.",True,CourseDetails
+Q176,Who teaches the lab section of CSE350-04B?,"The lab section of CSE350-04B is taught by MHY,PDS.",True,CourseDetails
+Q177,Who teaches the lab section of CSE321-21?,"The lab section of CSE321-21 is taught by SVKG,AHA.",True,CourseDetails
+Q178,Who teaches the lab section of CSE350-02B?,"The lab section of CSE350-02B is taught by RAO,AKJ.",True,CourseDetails
+Q179,Who teaches the lab section of CSE341-08?,"The lab section of CSE341-08 is taught by RAHA,CABS.",True,CourseDetails
+Q180,Who teaches the lab section of CSE360-09?,"The lab section of CSE360-09 is taught by UJT,PRC.",True,CourseDetails
+Q181,What is ZBYR's designation?,Zobayer Hasan (ZBYR) is a C. Lecturer.,True,FacultyList
+Q182,What is Sayeedur Rahman's email?,Sayeedur Rahman's email is ext.sayeedur.rahman@bracu.ac.bd.,True,FacultyList
+Q183,What is Aniqa Tabassum's email?,Aniqa Tabassum's email is aniqa.tabassum@bracu.ac.bd.,True,FacultyList
+Q184,What is AOHE's designation?,Abu Obaida Hasme (AOHE) is a C. Lecturer.,True,FacultyList
+Q185,What is AKHD's designation?,Abdullah Khondoker (AKHD) is a C. Lecturer.,True,FacultyList
+Q186,What is Abid Hossain Ashik's email?,Abid Hossain Ashik's email is ext.abid.ashik@bracu.ac.bd.,True,FacultyList
+Q187,Which room is Mr. Mohammad Badrul Hossain in?,Mr. Mohammad Badrul Hossain is in room 4J67.,True,FacultyList
+Q188,What is ARD's designation?,Mr. Ayman Rasheed (ARD) is a Lecturer.,True,FacultyList
+Q189,What is RDW's designation?,Redowanul Akbar (RDW) is a Lecturer.,True,FacultyList
+Q190,Which room is Niloy Farhan in?,Niloy Farhan is in room 4M123.,True,FacultyList
+Q191,Which room is Nowshin Tabassum in?,Nowshin Tabassum is in room 4F.,True,FacultyList
+Q192,What is WLV's designation?,Md.Waseq Alauddin Alvi (WLV) is a C. Lecturer.,True,FacultyList
+Q193,What is CMR's designation?,Dr. Chowdhury Mofizur Rahman (CMR) is a Professor.,True,FacultyList
+Q194,What is MNP's designation?,Mushfique Nasir Probor (MNP) is a Lecturer.,True,FacultyList
+Q195,What is KNI's designation?,Ms. Khondoker Nazia Iqbal (KNI) is a Lecturer.,True,FacultyList
+Q196,What is Md. Khaliduzzaman Khan Samrat's email?,Md. Khaliduzzaman Khan Samrat's email is md.khaliduzzaman@bracu.ac.bd.,True,FacultyList
+Q197,What is Md. Shazid Bin Mahbub's email?,Md. Shazid Bin Mahbub's email is shazid.mahbub@bracu.ac.bd.,True,FacultyList
+Q198,What is Md. Sabbir Ahmed's email?,Md. Sabbir Ahmed's email is sabbir.ahmed@bracu.ac.bd.,True,FacultyList
+Q199,What is FFR's designation?,Md. Fatin Ishraq Faruqui (FFR) is a Lecturer.,True,FacultyList
+Q200,What is Rakib Kibria's email?,Rakib Kibria's email is rakib.kibria@bracu.ac.bd.,True,FacultyList

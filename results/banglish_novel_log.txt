@@ -1,0 +1,116 @@
+﻿.\.venv\Scripts\python.exe : Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to 
+enable higher rate limits and faster downloads.
+At line:3 char:1
++ .\.venv\Scripts\python.exe scripts\run_novel_pipeline.py --queries da ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: You ar...ster downloads.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6577.35it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 6713.96it/s]
+[open_ended/linear] BQ001: 9.85s gen, 0.061s retrieval, 0.222s rerank
+[open_ended/linear] BQ002: 3.92s gen, 0.029s retrieval, 0.073s rerank
+[open_ended/linear] BQ003: 5.27s gen, 0.027s retrieval, 0.164s rerank
+[open_ended/linear] BQ004: 3.73s gen, 0.023s retrieval, 0.086s rerank
+[open_ended/linear] BQ005: 5.34s gen, 0.025s retrieval, 0.110s rerank
+[open_ended/linear] BQ006: 12.89s gen, 0.029s retrieval, 0.484s rerank
+[open_ended/linear] BQ007: 5.13s gen, 0.020s retrieval, 0.116s rerank
+[open_ended/linear] BQ008: 3.80s gen, 0.027s retrieval, 0.128s rerank
+[open_ended/linear] BQ009: 3.90s gen, 0.028s retrieval, 0.087s rerank
+[open_ended/linear] BQ010: 4.68s gen, 0.022s retrieval, 0.068s rerank
+[open_ended/linear] BQ011: 5.15s gen, 0.025s retrieval, 0.108s rerank
+[open_ended/linear] BQ012: 11.61s gen, 0.025s retrieval, 0.167s rerank
+[open_ended/linear] BQ013: 5.44s gen, 0.034s retrieval, 0.120s rerank
+[open_ended/linear] BQ014: 7.54s gen, 0.028s retrieval, 0.138s rerank
+[open_ended/linear] BQ015: 5.97s gen, 0.032s retrieval, 0.398s rerank
+[open_ended/linear] BQ016: 5.21s gen, 0.022s retrieval, 0.152s rerank
+[open_ended/linear] BQ017: 7.44s gen, 0.026s retrieval, 0.107s rerank
+[open_ended/linear] BQ018: 4.10s gen, 0.023s retrieval, 0.150s rerank
+[open_ended/linear] BQ019: 3.86s gen, 0.032s retrieval, 0.087s rerank
+[open_ended/linear] BQ020: 5.15s gen, 0.024s retrieval, 0.098s rerank
+[open_ended/linear] BQ021: 5.13s gen, 0.023s retrieval, 0.104s rerank
+[open_ended/linear] BQ022: 6.15s gen, 0.027s retrieval, 0.185s rerank
+[open_ended/linear] BQ023: 5.92s gen, 0.031s retrieval, 0.103s rerank
+[open_ended/linear] BQ024: 4.68s gen, 0.032s retrieval, 0.101s rerank
+[open_ended/linear] BQ025: 9.86s gen, 0.035s retrieval, 0.137s rerank
+[open_ended/linear] BQ026: 7.44s gen, 0.025s retrieval, 0.153s rerank
+[open_ended/linear] BQ027: 8.93s gen, 0.030s retrieval, 0.122s rerank
+[open_ended/linear] BQ028: 4.14s gen, 0.023s retrieval, 0.148s rerank
+[open_ended/linear] BQ029: 10.20s gen, 0.031s retrieval, 0.187s rerank
+[open_ended/linear] BQ030: 4.80s gen, 0.024s retrieval, 0.067s rerank
+[open_ended/linear] BQ031: 6.58s gen, 0.023s retrieval, 0.125s rerank
+[open_ended/linear] BQ032: 3.94s gen, 0.023s retrieval, 0.142s rerank
+[open_ended/linear] BQ033: 4.01s gen, 0.024s retrieval, 0.092s rerank
+[open_ended/linear] BQ034: 8.65s gen, 0.024s retrieval, 0.123s rerank
+[open_ended/linear] BQ035: 7.41s gen, 0.022s retrieval, 0.069s rerank
+[open_ended/linear] BQ036: 5.17s gen, 0.025s retrieval, 0.092s rerank
+[open_ended/linear] BQ037: 5.98s gen, 0.024s retrieval, 0.151s rerank
+[entity_heavy/rrf] BQ038: 5.00s gen, 0.036s retrieval, 0.105s rerank
+[open_ended/linear] BQ039: 4.16s gen, 0.027s retrieval, 0.072s rerank
+[open_ended/linear] BQ040: 8.37s gen, 0.031s retrieval, 0.130s rerank
+[open_ended/linear] BQ041: 9.25s gen, 0.024s retrieval, 0.116s rerank
+[open_ended/linear] BQ042: 4.68s gen, 0.031s retrieval, 0.071s rerank
+[open_ended/linear] BQ043: 3.82s gen, 0.025s retrieval, 0.116s rerank
+[open_ended/linear] BQ044: 7.30s gen, 0.032s retrieval, 0.110s rerank
+[open_ended/linear] BQ045: 5.08s gen, 0.030s retrieval, 0.249s rerank
+[open_ended/linear] BQ046: 13.96s gen, 0.026s retrieval, 0.154s rerank
+[open_ended/linear] BQ047: 6.04s gen, 0.029s retrieval, 0.107s rerank
+[open_ended/linear] BQ048: 8.10s gen, 0.030s retrieval, 0.124s rerank
+[open_ended/linear] BQ049: 6.40s gen, 0.027s retrieval, 0.114s rerank
+[open_ended/linear] BQ050: 5.31s gen, 0.022s retrieval, 0.103s rerank
+[open_ended/linear] BQ051: 6.47s gen, 0.027s retrieval, 0.421s rerank
+[open_ended/linear] BQ052: 5.23s gen, 0.030s retrieval, 0.109s rerank
+[open_ended/linear] BQ053: 8.43s gen, 0.024s retrieval, 0.160s rerank
+[open_ended/linear] BQ054: 9.85s gen, 0.027s retrieval, 0.155s rerank
+[open_ended/linear] BQ055: 12.16s gen, 0.024s retrieval, 0.131s rerank
+[open_ended/linear] BQ056: 6.02s gen, 0.036s retrieval, 0.265s rerank
+[open_ended/linear] BQ057: 7.05s gen, 0.030s retrieval, 0.189s rerank
+[open_ended/linear] BQ058: 4.11s gen, 0.029s retrieval, 0.073s rerank
+[open_ended/linear] BQ059: 10.16s gen, 0.031s retrieval, 0.199s rerank
+[open_ended/linear] BQ060: 14.90s gen, 0.027s retrieval, 0.168s rerank
+[open_ended/linear] BQ061: 6.11s gen, 0.026s retrieval, 0.098s rerank
+[open_ended/linear] BQ062: 8.78s gen, 0.026s retrieval, 0.227s rerank
+[open_ended/linear] BQ063: 6.14s gen, 0.020s retrieval, 0.129s rerank
+[open_ended/linear] BQ064: 5.73s gen, 0.023s retrieval, 0.183s rerank
+[open_ended/linear] BQ065: 12.20s gen, 0.028s retrieval, 0.167s rerank
+[open_ended/linear] BQ066: 10.14s gen, 0.032s retrieval, 0.284s rerank
+[open_ended/linear] BQ067: 9.14s gen, 0.033s retrieval, 0.142s rerank
+[open_ended/linear] BQ068: 5.12s gen, 0.027s retrieval, 0.172s rerank
+[open_ended/linear] BQ069: 8.35s gen, 0.023s retrieval, 0.104s rerank
+[open_ended/linear] BQ070: 17.67s gen, 0.028s retrieval, 0.206s rerank
+[open_ended/linear] BQ071: 9.16s gen, 0.027s retrieval, 0.113s rerank
+[open_ended/linear] BQ072: 6.67s gen, 0.022s retrieval, 0.259s rerank
+[open_ended/linear] BQ073: 7.07s gen, 0.023s retrieval, 0.183s rerank
+[open_ended/linear] BQ074: 6.42s gen, 0.025s retrieval, 0.076s rerank
+[open_ended/linear] BQ075: 5.98s gen, 0.023s retrieval, 0.146s rerank
+[open_ended/linear] BQ076: 7.63s gen, 0.023s retrieval, 0.088s rerank
+[open_ended/linear] BQ077: 8.38s gen, 0.029s retrieval, 0.182s rerank
+[open_ended/linear] BQ078: 6.26s gen, 0.027s retrieval, 0.145s rerank
+[open_ended/linear] BQ079: 6.32s gen, 0.023s retrieval, 0.182s rerank
+[open_ended/linear] BQ080: 7.97s gen, 0.028s retrieval, 0.123s rerank
+[open_ended/linear] BQ081: 6.00s gen, 0.024s retrieval, 0.148s rerank
+[open_ended/linear] BQ082: 8.84s gen, 0.031s retrieval, 0.270s rerank
+[open_ended/linear] BQ083: 3.80s gen, 0.026s retrieval, 0.126s rerank
+[open_ended/linear] BQ084: 6.19s gen, 0.021s retrieval, 0.101s rerank
+[open_ended/linear] BQ085: 7.98s gen, 0.028s retrieval, 0.122s rerank
+[open_ended/linear] BQ086: 4.29s gen, 0.027s retrieval, 0.119s rerank
+[open_ended/linear] BQ087: 8.23s gen, 0.031s retrieval, 0.142s rerank
+[open_ended/linear] BQ088: 13.29s gen, 0.024s retrieval, 0.175s rerank
+[open_ended/linear] BQ089: 10.55s gen, 0.023s retrieval, 0.258s rerank
+[open_ended/linear] BQ090: 9.18s gen, 0.027s retrieval, 0.197s rerank
+[open_ended/linear] BQ091: 10.47s gen, 0.026s retrieval, 0.135s rerank
+[open_ended/linear] BQ092: 6.05s gen, 0.026s retrieval, 0.117s rerank
+[open_ended/linear] BQ093: 11.20s gen, 0.022s retrieval, 0.129s rerank
+[open_ended/linear] BQ094: 5.08s gen, 0.029s retrieval, 0.079s rerank
+[open_ended/linear] BQ095: 5.25s gen, 0.025s retrieval, 0.112s rerank
+[open_ended/linear] BQ096: 6.80s gen, 0.025s retrieval, 0.118s rerank
+[open_ended/linear] BQ097: 6.75s gen, 0.035s retrieval, 0.220s rerank
+[open_ended/linear] BQ098: 9.94s gen, 0.030s retrieval, 0.125s rerank
+[open_ended/linear] BQ099: 6.56s gen, 0.028s retrieval, 0.070s rerank
+[open_ended/linear] BQ100: 6.93s gen, 0.031s retrieval, 0.119s rerank
+Wrote metadata to results\novel_pipeline_raw_outputs_banglish_metadata.json
+Wrote 100 rows to results\novel_pipeline_raw_outputs_banglish.csv (0 abstained)

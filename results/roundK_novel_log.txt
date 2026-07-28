@@ -1,0 +1,216 @@
+﻿.\.venv\Scripts\python.exe : 
+At line:3 char:1
++ .\.venv\Scripts\python.exe scripts\run_novel_pipeline.py --out result ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6586.47it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits 
+and faster downloads.
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 6699.15it/s]
+[open_ended/linear] Q001: 10.78s gen, 0.058s retrieval, 0.199s rerank
+[open_ended/linear] Q002: 6.59s gen, 0.029s retrieval, 0.196s rerank
+[open_ended/linear] Q003: 8.87s gen, 0.022s retrieval, 0.154s rerank
+[open_ended/linear] Q004: 4.76s gen, 0.026s retrieval, 0.083s rerank
+[open_ended/linear] Q005: 8.11s gen, 0.023s retrieval, 0.138s rerank
+[open_ended/linear] Q006: 5.02s gen, 0.016s retrieval, 0.114s rerank
+[open_ended/linear] Q007: 12.28s gen, 0.022s retrieval, 0.145s rerank
+[open_ended/linear] Q008: 4.28s gen, 0.026s retrieval, 0.070s rerank
+[open_ended/linear] Q009: 3.68s gen, 0.016s retrieval, 0.059s rerank
+[open_ended/linear] Q010: 3.84s gen, 0.024s retrieval, 0.133s rerank
+[open_ended/linear] Q011: 5.53s gen, 0.024s retrieval, 0.120s rerank
+[open_ended/linear] Q012: 4.66s gen, 0.025s retrieval, 0.071s rerank
+[open_ended/linear] Q013: 6.18s gen, 0.020s retrieval, 0.131s rerank
+[open_ended/linear] Q014: 8.64s gen, 0.020s retrieval, 0.128s rerank
+[open_ended/linear] Q015: 5.20s gen, 0.023s retrieval, 0.150s rerank
+[open_ended/linear] Q016: 11.43s gen, 0.024s retrieval, 0.196s rerank
+[open_ended/linear] Q017: 8.08s gen, 0.025s retrieval, 0.104s rerank
+[open_ended/linear] Q018: 4.13s gen, 0.022s retrieval, 0.089s rerank
+[open_ended/linear] Q019: 3.83s gen, 0.020s retrieval, 0.071s rerank
+[open_ended/linear] Q020: 3.61s gen, 0.024s retrieval, 0.095s rerank
+[open_ended/linear] Q021: 9.59s gen, 0.024s retrieval, 0.181s rerank
+[open_ended/linear] Q022: 6.06s gen, 0.024s retrieval, 0.080s rerank
+[open_ended/linear] Q023: 10.08s gen, 0.037s retrieval, 0.240s rerank
+[open_ended/linear] Q024: 8.52s gen, 0.031s retrieval, 0.129s rerank
+[open_ended/linear] Q025: 9.00s gen, 0.025s retrieval, 0.143s rerank
+[open_ended/linear] Q026: 6.50s gen, 0.020s retrieval, 0.124s rerank
+[open_ended/linear] Q027: 8.59s gen, 0.020s retrieval, 0.111s rerank
+[open_ended/linear] Q028: 4.10s gen, 0.018s retrieval, 0.103s rerank
+[open_ended/linear] Q029: 7.84s gen, 0.022s retrieval, 0.126s rerank
+[open_ended/linear] Q030: 4.90s gen, 0.026s retrieval, 0.075s rerank
+[open_ended/linear] Q031: 17.60s gen, 0.030s retrieval, 0.246s rerank
+[open_ended/linear] Q032: 3.88s gen, 0.021s retrieval, 0.245s rerank
+[open_ended/linear] Q033: 12.37s gen, 0.027s retrieval, 0.162s rerank
+[open_ended/linear] Q034: 7.57s gen, 0.027s retrieval, 0.243s rerank
+[open_ended/linear] Q035: 7.31s gen, 0.019s retrieval, 0.083s rerank
+[open_ended/linear] Q036: 4.06s gen, 0.027s retrieval, 0.113s rerank
+[open_ended/linear] Q037: 8.58s gen, 0.022s retrieval, 0.145s rerank
+[open_ended/linear] Q038: 6.30s gen, 0.022s retrieval, 0.123s rerank
+[open_ended/linear] Q039: 5.20s gen, 0.020s retrieval, 0.083s rerank
+[open_ended/linear] Q040: 5.59s gen, 0.026s retrieval, 0.177s rerank
+[open_ended/linear] Q041: 9.14s gen, 0.024s retrieval, 0.127s rerank
+[open_ended/linear] Q042: 5.72s gen, 0.024s retrieval, 0.069s rerank
+[open_ended/linear] Q043: 6.13s gen, 0.020s retrieval, 0.072s rerank
+[open_ended/linear] Q044: 4.07s gen, 0.027s retrieval, 0.097s rerank
+[open_ended/linear] Q045: 8.11s gen, 0.016s retrieval, 0.122s rerank
+[open_ended/linear] Q046: 6.06s gen, 0.022s retrieval, 0.095s rerank
+[open_ended/linear] Q047: 12.65s gen, 0.030s retrieval, 0.178s rerank
+[open_ended/linear] Q048: 20.07s gen, 0.025s retrieval, 0.245s rerank
+[open_ended/linear] Q049: 6.01s gen, 0.029s retrieval, 0.116s rerank
+[open_ended/linear] Q050: 6.70s gen, 0.029s retrieval, 0.191s rerank
+[open_ended/linear] Q051: 8.48s gen, 0.024s retrieval, 0.170s rerank
+[open_ended/linear] Q052: 5.36s gen, 0.030s retrieval, 0.172s rerank
+[open_ended/linear] Q053: 3.96s gen, 0.026s retrieval, 0.161s rerank
+[open_ended/linear] Q054: 6.03s gen, 0.022s retrieval, 0.199s rerank
+[open_ended/linear] Q055: 4.94s gen, 0.024s retrieval, 0.144s rerank
+[open_ended/linear] Q056: 6.06s gen, 0.023s retrieval, 0.134s rerank
+[open_ended/linear] Q057: 4.53s gen, 0.019s retrieval, 0.076s rerank
+[entity_heavy/rrf] Q058: 4.52s gen, 0.027s retrieval, 0.114s rerank
+[open_ended/linear] Q059: 20.05s gen, 0.044s retrieval, 0.242s rerank
+[open_ended/linear] Q060: 15.98s gen, 0.030s retrieval, 0.178s rerank
+[open_ended/linear] Q061: 7.24s gen, 0.022s retrieval, 0.088s rerank
+[open_ended/linear] Q062: 9.01s gen, 0.025s retrieval, 0.151s rerank
+[open_ended/linear] Q063: 7.00s gen, 0.032s retrieval, 0.516s rerank
+[open_ended/linear] Q064: 7.59s gen, 0.026s retrieval, 0.143s rerank
+[open_ended/linear] Q065: 4.00s gen, 0.027s retrieval, 0.082s rerank
+[open_ended/linear] Q066: 7.94s gen, 0.024s retrieval, 0.314s rerank
+[open_ended/linear] Q067: 12.70s gen, 0.029s retrieval, 0.258s rerank
+[open_ended/linear] Q068: 4.78s gen, 0.023s retrieval, 0.102s rerank
+[open_ended/linear] Q069: 9.47s gen, 0.026s retrieval, 0.137s rerank
+[open_ended/linear] Q070: 6.16s gen, 0.032s retrieval, 0.125s rerank
+[open_ended/linear] Q071: 6.41s gen, 0.037s retrieval, 0.223s rerank
+[open_ended/linear] Q072: 11.99s gen, 0.025s retrieval, 0.130s rerank
+[open_ended/linear] Q073: 17.83s gen, 0.029s retrieval, 0.325s rerank
+[open_ended/linear] Q074: 4.77s gen, 0.024s retrieval, 0.083s rerank
+[open_ended/linear] Q075: 6.22s gen, 0.023s retrieval, 0.125s rerank
+[open_ended/linear] Q076: 7.73s gen, 0.024s retrieval, 0.100s rerank
+[open_ended/linear] Q077: 3.65s gen, 0.024s retrieval, 0.065s rerank
+[open_ended/linear] Q078: 5.23s gen, 0.026s retrieval, 0.096s rerank
+[open_ended/linear] Q079: 7.81s gen, 0.024s retrieval, 0.081s rerank
+[open_ended/linear] Q080: 7.91s gen, 0.023s retrieval, 0.114s rerank
+[open_ended/linear] Q081: 0.00s gen, 0.020s retrieval, 0.346s rerank [ABSTAINED]
+[open_ended/linear] Q082: 6.28s gen, 0.025s retrieval, 0.095s rerank
+[open_ended/linear] Q083: 7.23s gen, 0.027s retrieval, 0.122s rerank
+[open_ended/linear] Q084: 5.92s gen, 0.029s retrieval, 0.164s rerank
+[open_ended/linear] Q085: 8.35s gen, 0.028s retrieval, 0.132s rerank
+[open_ended/linear] Q086: 7.29s gen, 0.025s retrieval, 0.113s rerank
+[open_ended/linear] Q087: 8.65s gen, 0.023s retrieval, 0.116s rerank
+[open_ended/linear] Q088: 7.30s gen, 0.020s retrieval, 0.500s rerank
+[open_ended/linear] Q089: 6.28s gen, 0.024s retrieval, 0.077s rerank
+[open_ended/linear] Q090: 7.43s gen, 0.036s retrieval, 0.170s rerank
+[open_ended/linear] Q091: 6.55s gen, 0.025s retrieval, 0.108s rerank
+[open_ended/linear] Q092: 8.12s gen, 0.021s retrieval, 0.098s rerank
+[open_ended/linear] Q093: 10.07s gen, 0.028s retrieval, 0.177s rerank
+[open_ended/linear] Q094: 5.96s gen, 0.024s retrieval, 0.112s rerank
+[open_ended/linear] Q095: 5.01s gen, 0.024s retrieval, 0.105s rerank
+[open_ended/linear] Q096: 4.82s gen, 0.023s retrieval, 0.081s rerank
+[open_ended/linear] Q097: 8.73s gen, 0.023s retrieval, 0.120s rerank
+[open_ended/linear] Q098: 6.87s gen, 0.022s retrieval, 0.103s rerank
+[open_ended/linear] Q099: 8.01s gen, 0.023s retrieval, 0.149s rerank
+[open_ended/linear] Q100: 6.73s gen, 0.023s retrieval, 0.186s rerank
+[entity_heavy/rrf] Q101: 4.69s gen, 0.016s retrieval, 0.310s rerank
+[entity_heavy/rrf] Q102: 4.81s gen, 0.019s retrieval, 0.162s rerank
+[entity_heavy/rrf] Q103: 4.01s gen, 0.017s retrieval, 0.153s rerank
+[entity_heavy/rrf] Q104: 4.47s gen, 0.017s retrieval, 0.154s rerank
+[entity_heavy/rrf] Q105: 3.81s gen, 0.022s retrieval, 0.055s rerank
+[entity_heavy/rrf] Q106: 4.00s gen, 0.016s retrieval, 0.146s rerank
+[entity_heavy/rrf] Q107: 5.91s gen, 0.020s retrieval, 0.071s rerank
+[entity_heavy/rrf] Q108: 4.51s gen, 0.016s retrieval, 0.148s rerank
+[entity_heavy/rrf] Q109: 4.02s gen, 0.018s retrieval, 0.055s rerank
+[entity_heavy/rrf] Q110: 4.94s gen, 0.022s retrieval, 0.104s rerank
+[entity_heavy/rrf] Q111: 5.54s gen, 0.016s retrieval, 0.209s rerank
+[entity_heavy/rrf] Q112: 4.75s gen, 0.022s retrieval, 0.158s rerank
+[entity_heavy/rrf] Q113: 3.77s gen, 0.021s retrieval, 0.058s rerank
+[entity_heavy/rrf] Q114: 4.67s gen, 0.017s retrieval, 0.149s rerank
+[entity_heavy/rrf] Q115: 4.62s gen, 0.017s retrieval, 0.150s rerank
+[entity_heavy/rrf] Q116: 4.11s gen, 0.017s retrieval, 0.287s rerank
+[entity_heavy/rrf] Q117: 5.42s gen, 0.016s retrieval, 0.152s rerank
+[entity_heavy/rrf] Q118: 4.22s gen, 0.017s retrieval, 0.152s rerank
+[entity_heavy/rrf] Q119: 3.81s gen, 0.016s retrieval, 0.151s rerank
+[entity_heavy/rrf] Q120: 4.85s gen, 0.020s retrieval, 0.101s rerank
+[entity_heavy/rrf] Q121: 6.10s gen, 0.019s retrieval, 0.100s rerank
+[entity_heavy/rrf] Q122: 4.61s gen, 0.021s retrieval, 0.111s rerank
+[entity_heavy/rrf] Q123: 5.09s gen, 0.016s retrieval, 0.155s rerank
+[entity_heavy/rrf] Q124: 8.95s gen, 0.021s retrieval, 0.093s rerank
+[entity_heavy/rrf] Q125: 5.29s gen, 0.016s retrieval, 0.155s rerank
+[entity_heavy/rrf] Q126: 4.40s gen, 0.017s retrieval, 0.155s rerank
+[entity_heavy/rrf] Q127: 5.00s gen, 0.018s retrieval, 0.095s rerank
+[entity_heavy/rrf] Q128: 4.14s gen, 0.016s retrieval, 0.149s rerank
+[entity_heavy/rrf] Q129: 4.30s gen, 0.019s retrieval, 0.124s rerank
+[entity_heavy/rrf] Q130: 6.43s gen, 0.018s retrieval, 0.130s rerank
+[entity_heavy/rrf] Q131: 5.70s gen, 0.018s retrieval, 0.136s rerank
+[entity_heavy/rrf] Q132: 4.50s gen, 0.020s retrieval, 0.116s rerank
+[entity_heavy/rrf] Q133: 4.46s gen, 0.016s retrieval, 0.118s rerank
+[entity_heavy/rrf] Q134: 4.10s gen, 0.018s retrieval, 0.100s rerank
+[entity_heavy/rrf] Q135: 4.04s gen, 0.018s retrieval, 0.117s rerank
+[entity_heavy/rrf] Q136: 4.44s gen, 0.018s retrieval, 0.117s rerank
+[entity_heavy/rrf] Q137: 4.27s gen, 0.017s retrieval, 0.111s rerank
+[entity_heavy/rrf] Q138: 4.81s gen, 0.018s retrieval, 0.072s rerank
+[entity_heavy/rrf] Q139: 4.03s gen, 0.017s retrieval, 0.108s rerank
+[entity_heavy/rrf] Q140: 5.36s gen, 0.019s retrieval, 0.120s rerank
+[entity_heavy/rrf] Q141: 4.20s gen, 0.018s retrieval, 0.115s rerank
+[entity_heavy/rrf] Q142: 4.10s gen, 0.017s retrieval, 0.119s rerank
+[entity_heavy/rrf] Q143: 7.86s gen, 0.018s retrieval, 0.093s rerank
+[entity_heavy/rrf] Q144: 8.86s gen, 0.018s retrieval, 0.091s rerank
+[entity_heavy/rrf] Q145: 8.53s gen, 0.018s retrieval, 0.103s rerank
+[entity_heavy/rrf] Q146: 4.60s gen, 0.017s retrieval, 0.115s rerank
+[entity_heavy/rrf] Q147: 4.82s gen, 0.018s retrieval, 0.075s rerank
+[entity_heavy/rrf] Q148: 5.69s gen, 0.017s retrieval, 0.120s rerank
+[entity_heavy/rrf] Q149: 4.93s gen, 0.017s retrieval, 0.078s rerank
+[entity_heavy/rrf] Q150: 4.99s gen, 0.017s retrieval, 0.081s rerank
+[entity_heavy/rrf] Q151: 5.78s gen, 0.022s retrieval, 0.185s rerank
+[entity_heavy/rrf] Q152: 4.93s gen, 0.025s retrieval, 0.184s rerank
+[entity_heavy/rrf] Q153: 5.61s gen, 0.022s retrieval, 0.131s rerank
+[entity_heavy/rrf] Q154: 5.50s gen, 0.024s retrieval, 0.156s rerank
+[entity_heavy/rrf] Q155: 4.86s gen, 0.023s retrieval, 0.212s rerank
+[entity_heavy/rrf] Q156: 4.94s gen, 0.024s retrieval, 0.098s rerank
+[entity_heavy/rrf] Q157: 5.62s gen, 0.022s retrieval, 0.163s rerank
+[entity_heavy/rrf] Q158: 4.67s gen, 0.023s retrieval, 0.064s rerank
+[entity_heavy/rrf] Q159: 5.83s gen, 0.023s retrieval, 0.175s rerank
+[entity_heavy/rrf] Q160: 4.86s gen, 0.026s retrieval, 0.197s rerank
+[entity_heavy/rrf] Q161: 4.74s gen, 0.022s retrieval, 0.061s rerank
+[entity_heavy/rrf] Q162: 4.97s gen, 0.022s retrieval, 0.094s rerank
+[entity_heavy/rrf] Q163: 4.74s gen, 0.023s retrieval, 0.140s rerank
+[entity_heavy/rrf] Q164: 4.89s gen, 0.022s retrieval, 0.184s rerank
+[entity_heavy/rrf] Q165: 5.04s gen, 0.022s retrieval, 0.200s rerank
+[entity_heavy/rrf] Q166: 5.69s gen, 0.022s retrieval, 0.236s rerank
+[entity_heavy/rrf] Q167: 7.81s gen, 0.020s retrieval, 0.213s rerank
+[entity_heavy/rrf] Q168: 5.32s gen, 0.023s retrieval, 0.379s rerank
+[entity_heavy/rrf] Q169: 5.23s gen, 0.021s retrieval, 0.215s rerank
+[entity_heavy/rrf] Q170: 5.17s gen, 0.021s retrieval, 0.377s rerank
+[entity_heavy/rrf] Q171: 5.05s gen, 0.021s retrieval, 0.244s rerank
+[entity_heavy/rrf] Q172: 5.00s gen, 0.022s retrieval, 0.366s rerank
+[entity_heavy/rrf] Q173: 5.45s gen, 0.020s retrieval, 0.284s rerank
+[entity_heavy/rrf] Q174: 5.99s gen, 0.020s retrieval, 0.190s rerank
+[entity_heavy/rrf] Q175: 5.25s gen, 0.022s retrieval, 0.381s rerank
+[entity_heavy/rrf] Q176: 4.93s gen, 0.020s retrieval, 0.235s rerank
+[entity_heavy/rrf] Q177: 5.41s gen, 0.020s retrieval, 0.232s rerank
+[entity_heavy/rrf] Q178: 5.29s gen, 0.020s retrieval, 0.302s rerank
+[entity_heavy/rrf] Q179: 5.23s gen, 0.019s retrieval, 0.296s rerank
+[entity_heavy/rrf] Q180: 5.14s gen, 0.021s retrieval, 0.230s rerank
+[open_ended/linear] Q181: 0.00s gen, 0.019s retrieval, 0.074s rerank [ABSTAINED]
+[open_ended/linear] Q182: 0.00s gen, 0.024s retrieval, 0.086s rerank [ABSTAINED]
+[open_ended/linear] Q183: 0.00s gen, 0.019s retrieval, 0.077s rerank [ABSTAINED]
+[open_ended/linear] Q184: 0.00s gen, 0.016s retrieval, 0.129s rerank [ABSTAINED]
+[open_ended/linear] Q185: 0.00s gen, 0.014s retrieval, 0.168s rerank [ABSTAINED]
+[open_ended/linear] Q186: 0.00s gen, 0.014s retrieval, 0.075s rerank [ABSTAINED]
+[open_ended/linear] Q187: 0.00s gen, 0.017s retrieval, 0.217s rerank [ABSTAINED]
+[open_ended/linear] Q188: 0.00s gen, 0.021s retrieval, 0.076s rerank [ABSTAINED]
+[open_ended/linear] Q189: 0.00s gen, 0.018s retrieval, 0.146s rerank [ABSTAINED]
+[open_ended/linear] Q190: 0.00s gen, 0.017s retrieval, 0.092s rerank [ABSTAINED]
+[open_ended/linear] Q191: 0.00s gen, 0.013s retrieval, 0.181s rerank [ABSTAINED]
+[open_ended/linear] Q192: 0.00s gen, 0.016s retrieval, 0.150s rerank [ABSTAINED]
+[open_ended/linear] Q193: 0.00s gen, 0.017s retrieval, 0.110s rerank [ABSTAINED]
+[open_ended/linear] Q194: 0.00s gen, 0.014s retrieval, 0.191s rerank [ABSTAINED]
+[open_ended/linear] Q195: 0.00s gen, 0.015s retrieval, 0.050s rerank [ABSTAINED]
+[open_ended/linear] Q196: 0.00s gen, 0.016s retrieval, 0.087s rerank [ABSTAINED]
+[open_ended/linear] Q197: 0.00s gen, 0.014s retrieval, 0.154s rerank [ABSTAINED]
+[open_ended/linear] Q198: 0.00s gen, 0.016s retrieval, 0.071s rerank [ABSTAINED]
+[open_ended/linear] Q199: 0.00s gen, 0.017s retrieval, 0.185s rerank [ABSTAINED]
+[open_ended/linear] Q200: 0.00s gen, 0.015s retrieval, 0.058s rerank [ABSTAINED]
+Wrote metadata to results\novel_pipeline_raw_outputs_roundK_metadata.json
+Wrote 200 rows to results\novel_pipeline_raw_outputs_roundK.csv (21 abstained)
