@@ -398,10 +398,41 @@ class HybridRetriever:
             for base in [COURSE_CODE_RE.match(fid)] if base
         }
 
+        # Table-type disambiguation (see PREREQ_KEYWORD_RE/COORDINATOR_KEYWORD_RE
+        # docstring above): a query about "prerequisites"/"chain" for a course
+        # wants the single Prerequisites row, not any CourseDetails sections or
+        # the Coordinator row that happen to share the same code; symmetrically
+        # for "coordinator". Checked once per query, not per code, since the
+        # keyword describes intent about the whole query. Computed here
+        # (moved up from below) because the codes_covered_by_full_match
+        # exclusion immediately below needs it.
+        wants_prereq = bool(PREREQ_KEYWORD_RE.search(query))
+        wants_coordinator = bool(COORDINATOR_KEYWORD_RE.search(query))
+
         # canonicalize_course_code strips any space/dash separator the query
         # matched (e.g. "CSE 220"/"CSE-220" -> "CSE220") so it finds the
         # corpus's always-glued course_index key -- see patterns.py.
-        codes = {canonicalize_course_code(m) for m in COURSE_CODE_RE.findall(query)} - codes_covered_by_full_match
+        #
+        # codes_covered_by_full_match is only excluded here when the query
+        # does NOT also want Prerequisites/Coordinator -- a full section
+        # match (e.g. "CSE111-04") only covers CourseDetails, not those
+        # other base-code-keyed tables. Found live (2026-08-01) via a
+        # compound query ("What is the prerequisite for CSE111-04 and
+        # which room is its theory class held in?"): bm25_only retrieved
+        # the WRONG Prerequisites row (CSE220's, which merely mentions
+        # "CSE111" in its own prerequisite text) because "CSE111" was
+        # unconditionally dropped from `codes` once "CSE111-04" matched as
+        # a full section id, so the correct Prerequisites-CSE111 row never
+        # got a chance to be looked up at all, let alone forced to rank 0
+        # -- a real retrieval gap, not evidence BM25 is inherently weaker
+        # at this query shape. Without this fix, only full_hybrid's vector
+        # component happened to compensate; this fix makes bm25_only (and
+        # therefore every fusion mode) resolve it correctly via exact
+        # match directly, the same guarantee entity-heavy queries already
+        # get elsewhere.
+        codes = {canonicalize_course_code(m) for m in COURSE_CODE_RE.findall(query)}
+        if not (wants_prereq or wants_coordinator):
+            codes -= codes_covered_by_full_match
         query_lower = query.lower()
         for alias, canonical in self.aliases:
             if alias in query_lower:
@@ -420,14 +451,6 @@ class HybridRetriever:
         # cut; other tables have at most a couple of rows per code anyway
         # so they're left uncapped.
         MAX_COURSEDETAILS_PER_CODE = 3
-        # Table-type disambiguation (see PREREQ_KEYWORD_RE/COORDINATOR_KEYWORD_RE
-        # docstring above): a query about "prerequisites"/"chain" for a course
-        # wants the single Prerequisites row, not any CourseDetails sections or
-        # the Coordinator row that happen to share the same code; symmetrically
-        # for "coordinator". Checked once per query, not per code, since the
-        # keyword describes intent about the whole query.
-        wants_prereq = bool(PREREQ_KEYWORD_RE.search(query))
-        wants_coordinator = bool(COORDINATOR_KEYWORD_RE.search(query))
 
         ids = set(matched_full_doc_ids)
         for code in codes:
