@@ -1113,6 +1113,81 @@ one write at the end) specifically because of these failures --
 worth keeping as the pattern for any future long Ollama-dependent batch
 job on this machine.
 
+## 2026-07-31: CRITICAL — the abstract's one clearly-positive claim has FLIPPED under the current embedding model, not just failed to replicate
+Direct follow-up to the "sharper full_hybrid/bm25_only test" section above.
+The abstract, RQ1 discussion (Section~\ref{sec:discussion}), Section~
+\ref{subsec:novel-vs-baselines} (line ~306), and the conclusion (line ~607)
+of `paper/paper.tex` all assert: "the full adaptive pipeline is now
+significantly ahead of BM25-only on two of four metrics (ROUGE-L,
+BERTScore)." That claim's source, `results/significance_tests_novel_
+roundL_noreranker.csv`, is dated 2026-07-28 — BEFORE the Banglish-expanded
+embedding retrain that already flipped every other stale table in this
+project this session (main ablation, adaptive-routing IR test, lambda
+sweep).
+
+**Regenerated it properly under the current model** (not assumed stale,
+actually re-run): `scripts/run_novel_pipeline.py --out results/novel_
+pipeline_raw_outputs_roundM.csv` (full 200 queries, reranker off, the
+deployed default; 1 abstention), scored with `scripts/compute_metrics.py`
+-> `results/novel_pipeline_metrics_per_query_roundM.csv` / `_summary_
+roundM.csv`, then `scripts/significance_tests_novel.py` against the
+current (already-regenerated 2026-07-31) `results/ablation_metrics_per_
+query.csv` -> `results/significance_tests_novel_roundM.csv`.
+
+**Hit the known BERTScore/Ollama GPU segfault** (documented below) on the
+first attempt — `compute_metrics.py` segfaulted (exit 139) because Ollama's
+8B model was still resident from the generation run. Fixed per the
+documented workaround (`curl .../api/generate -d '{"model":"llama3.1:8b",
+"prompt":"","keep_alive":0}'` to unload, confirmed 0MiB GPU used via
+`nvidia-smi`, then re-ran) — succeeded immediately.
+
+**Result: the claim does not just fail to replicate — it inverts, and
+partially reaches significance in the OPPOSITE direction.** Under the
+current model, `adaptive_novel` vs. `bm25_only`: bleu mean_diff=-0.0251
+(not sig, p=0.152), rougeL mean_diff=-0.0220 (not sig, p=0.084),
+**bertscore mean_diff=-0.0042, p=0.0398, SIGNIFICANT — but NEGATIVE, i.e.
+bm25_only now significantly beats adaptive_novel on BERTScore**, and
+**meteor mean_diff=-0.0320, p=0.0094 (paired t) / p=0.0239 (Wilcoxon),
+SIGNIFICANT and NEGATIVE** — bm25_only significantly beats adaptive_novel
+on METEOR too. ROUGE-L and BLEU are
+both negative in point estimate (adaptive_novel behind) but not
+significant. Every one of the four metrics now has adaptive_novel behind
+bm25_only in point estimate, the exact opposite of the abstract's claimed
+direction, and two of them (BERTScore, METEOR — not the ROUGE-L/BERTScore
+pair the abstract names) reach significance in that opposite direction.
+vs. `full_hybrid`: all four metrics also negative in point estimate for
+adaptive_novel (bleu -0.022, rougeL -0.0196, bertscore -0.0026,
+meteor -0.0202), none individually significant. vs. `vector_only`:
+essentially flat/tied (all |mean_diff|<0.013, none significant). vs.
+`no_retrieval`: still hugely, correctly significant in adaptive_novel's
+favor on all four metrics (p<0.0001) — the sanity-check comparison still
+passes, so this is not a broken scoring pipeline, it is a genuine,
+specific reversal of the one baseline comparison the abstract leans on.
+
+**This is now a correctness problem for the paper, not a framing
+preference.** The abstract's headline positive claim, repeated in three
+separate places in the paper, is currently false under the system's
+actual current behavior. Recommended fix (not yet applied — `paper.tex`
+still untouched per the standing rule, holding for explicit user
+authorization given this is now a correctness issue rather than a framing
+one): replace "significantly ahead of BM25-only on two of four metrics" ...
+with an honest statement that the deployed pipeline is statistically tied
+with or slightly (non-significantly, mostly) behind bm25_only/full_hybrid
+on generation-quality metrics, consistent with this session's McNemar
+finding and the deconfounded adaptive-routing result above — the system's
+real, defensible value lies in abstention, graph augmentation, and
+bilingual coverage (capabilities the baselines don't have at all), not in
+beating them on BLEU/ROUGE/BERTScore/METEOR. Table~\ref{tab:novel-sig}'s
+actual numbers also need replacing with `results/significance_tests_
+novel_roundM.csv`'s current values.
+
+Files: `results/novel_pipeline_raw_outputs_roundM.csv`, `results/novel_
+pipeline_metrics_per_query_roundM.csv`, `results/novel_pipeline_metrics_
+summary_roundM.csv`, `results/significance_tests_novel_roundM.csv`. The
+pre-retrain files (`..._roundL_noreranker.csv` etc.) are left in place as
+a labeled historical snapshot, not deleted, per this project's "don't
+silently overwrite a superseded result set" convention.
+
 ## Infrastructure note: BERTScore (roberta-large) segfaults on GPU when Ollama is also resident
 `scripts/compute_metrics.py` reproducibly segfaulted (exit 139, twice in a
 row, same command) loading `roberta-large` on CUDA while Ollama's 8B model
