@@ -1192,6 +1192,46 @@ pre-retrain files (`..._roundL_noreranker.csv` etc.) are left in place as
 a labeled historical snapshot, not deleted, per this project's "don't
 silently overwrite a superseded result set" convention.
 
+## 2026-07-31: compound (two-fact) queries — a real, promising, but underpowered edge for full_hybrid
+User-suggested query shape, never tested before in this project: a single
+query asking for TWO structured facts from TWO different source tables
+about the same course (e.g. "What is the prerequisite for CSE221 and who
+is the theory coordinator?"). Every existing entity-heavy test query needs
+only one fact from one table, which is why BM25 exact-match alone already
+solves them (Section above, McNemar 0 discordant). A compound query is a
+genuinely different, harder retrieval task: the two target chunks
+(`Prerequisites-*` and `Coordinator-*` for the same course) don't share
+much lexical overlap with each other or with the full query text, so
+there's a real, non-hypothetical mechanism by which combining lexical and
+semantic signals could behave differently here.
+
+`scripts/test_compound_queries.py` (`results/compound_query_raw.csv`,
+`results/compound_query_mcnemar.csv`): built 26 real compound queries from
+every course with both a `Prerequisites` row and a named `Coordinator` row
+(join on `Course`, no invented facts). Relevance = does the top-k contain
+BOTH a `Prerequisites` chunk and a `Coordinator` chunk for that course
+(retrieval-only, no generation).
+
+**Result: full_hybrid genuinely outperforms bm25_only at top-3** —
+`both_hit@3`: full_hybrid 1.000 (26/26) vs. bm25_only 0.885 (23/26), a real
++0.115 gap. All 3 discordant queries favor full_hybrid; zero favor
+bm25_only (a clean sweep, not a mixed 2-1). At top-5 and top-10 both
+configs converge to 1.000 (ceiling effect once more candidates are
+returned). vector_only also reaches 1.000 at every k tested here (small-n
+compound set doesn't yet show a case where lexical matching was needed to
+find the coordinator chunk specifically, unlike the existing entity-heavy
+set where vector_only is badly weak, recall@1=0.17).
+
+**Honest limitation: n=26 with only 3 discordant pairs does not clear
+McNemar significance (p=0.25)**, despite the clean directional sweep. This
+is a legitimately promising, previously-untested result — not a proven
+win — and should be reported as exactly that if used: real, current,
+directionally consistent, underpowered. Expanding to more fact-pair
+combinations (prerequisite+room, faculty+schedule, course+coordinator+
+room three-way) would add real statistical weight to an already-clean
+direction, unlike re-testing something already shown flat (RRF k) or
+already explained (adaptive routing's tie).
+
 ## Infrastructure note: BERTScore (roberta-large) segfaults on GPU when Ollama is also resident
 `scripts/compute_metrics.py` reproducibly segfaulted (exit 139, twice in a
 row, same command) loading `roberta-large` on CUDA while Ollama's 8B model
