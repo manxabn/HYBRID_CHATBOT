@@ -1,0 +1,2 @@
+config,bleu,rougeL,bertscore,meteor,n
+adaptive_novel_bge_v2m3,0.5885,0.7684,0.955,0.7812,40

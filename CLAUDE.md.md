@@ -1757,6 +1757,53 @@ Files: `results/combined_signal_check.csv`. No change to the deployed
 abstention gate -- three independent, honestly-tested attempts to fix
 this have now been tried and reported exactly as they turned out.
 
+## 2026-08-01: tested a substantially larger, still-local reranker -- also negative, closing this avenue honestly
+Motivated by a literature check (arXiv:2604.01733) showing a comparable
+paper's reranker win came from a much larger commercial reranker (Cohere
+Rerank v4.0 Pro), not from reranking in general. Tested whether capacity
+was the missing ingredient, using a real open-weight model within this
+project's own local-model design -- `BAAI/bge-reranker-v2-m3` (~568M
+params, the same model BanglAssist itself uses, verified earlier), a
+large step up from the existing 33M-param MS-MARCO MiniLM.
+
+**Real infrastructure issues hit and fixed along the way, not hidden**:
+(1) the first run crashed with a CUDA OOM loading the model; the
+standalone test script hadn't checkpointed writes, so the 10 already
+-processed queries were lost -- rewrote it to check point per-row with
+`flush=True`, the same pattern this project already uses everywhere else,
+after making exactly this mistake once. (2) A second crash left an
+orphaned process (`python3.11.exe`, launched via a different Python
+install than the project's venv) holding ~3.9GB of the 4GB GPU almost
+entirely -- confirmed via `wmic process ... get CommandLine` that it was
+this project's own script before terminating it, not an unrelated
+process. (3) Re-ran cleanly afterward, GPU verified clear first.
+
+**Result (n=40, stratified, real Ollama generations,
+`results/significance_bge_reranker_v2m3.csv`): the larger reranker also
+does not help -- if anything, it is directionally BEHIND every baseline
+on every metric**, not just failing to improve: vs. full_hybrid (bleu
+-0.066, rougeL -0.054, bertscore -0.007, meteor -0.059, none significant
+at this n), vs. bm25_only (meteor -0.079, p=0.020 paired-t / 0.052
+Wilcoxon -- the one comparison that reaches significance, and it is a
+loss), vs. vector_only (also directionally behind on all four, none
+significant). The no-retrieval sanity check still passes cleanly
+(p<0.0001 all four), confirming the pipeline itself works correctly.
+
+**Conclusion: reranker capacity was not the missing ingredient on this
+corpus.** The comparable paper's win came from a query type (multi-hop
+numerical reasoning across tables) this corpus's direct factual-lookup
+queries don't have, not from reranker size alone -- a real, informative
+negative result that rules out "just use a bigger reranker" as a fix,
+consistent with (not contradicting) the smaller reranker's already
+-established negative result. Every reranker configuration tested this
+project (generic small, fine-tuned small at two pool sizes, and now a
+much larger pretrained model) has been negative; reranker stays off by
+default.
+
+Files: `scripts/test_larger_reranker.py`, `results/novel_pipeline_raw_
+outputs_bge_reranker_v2m3.csv`, `results/novel_pipeline_metrics_per_query_
+bge_v2m3.csv`, `results/significance_bge_reranker_v2m3.csv`.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

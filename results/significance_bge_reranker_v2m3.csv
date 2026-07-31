@@ -1,0 +1,17 @@
+comparison,metric,n,bge_mean,baseline_mean,mean_diff,p_t,p_w,sig
+bge_v2m3_vs_full_hybrid,bleu,40,0.5885,0.6541,-0.0656,0.1262,0.1592,False
+bge_v2m3_vs_full_hybrid,rougeL,40,0.7684,0.8224,-0.054,0.1401,0.1337,False
+bge_v2m3_vs_full_hybrid,bertscore,40,0.955,0.9621,-0.0071,0.19,0.4491,False
+bge_v2m3_vs_full_hybrid,meteor,40,0.7812,0.8401,-0.0589,0.0984,0.0674,False
+bge_v2m3_vs_bm25_only,bleu,40,0.5885,0.6518,-0.0634,0.117,0.1084,False
+bge_v2m3_vs_bm25_only,rougeL,40,0.7684,0.8249,-0.0565,0.1167,0.1359,False
+bge_v2m3_vs_bm25_only,bertscore,40,0.955,0.9638,-0.0088,0.1119,0.1648,False
+bge_v2m3_vs_bm25_only,meteor,40,0.7812,0.8604,-0.0792,0.02,0.0522,True
+bge_v2m3_vs_vector_only,bleu,40,0.5885,0.6186,-0.0301,0.4932,0.7771,False
+bge_v2m3_vs_vector_only,rougeL,40,0.7684,0.8223,-0.0539,0.1733,0.1359,False
+bge_v2m3_vs_vector_only,bertscore,40,0.955,0.9652,-0.0102,0.1114,0.056,False
+bge_v2m3_vs_vector_only,meteor,40,0.7812,0.8163,-0.0351,0.3586,0.5277,False
+bge_v2m3_vs_no_retrieval,bleu,40,0.5885,0.047,0.5415,0.0,0.0,True
+bge_v2m3_vs_no_retrieval,rougeL,40,0.7684,0.1933,0.5751,0.0,0.0,True
+bge_v2m3_vs_no_retrieval,bertscore,40,0.955,0.8696,0.0854,0.0,0.0,True
+bge_v2m3_vs_no_retrieval,meteor,40,0.7812,0.2984,0.4828,0.0,0.0,True
