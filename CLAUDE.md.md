@@ -2017,6 +2017,36 @@ metadata, not a query-expansion technique) -- confirms the ceiling is
 real and general, not an artifact of the two previous methods tried. Not
 adopted.
 
+## 2026-08-01: chunk-size/overlap tuning -- provably a dead end, not run as a retrieval test at all
+Proposed as a genuinely different category of lever (changes what content
+exists to be retrieved, not a post-retrieval refinement signal like every
+other recent attempt). Checked whether it was actually testable before
+spending a retrieval-quality experiment on it.
+
+`scripts/build_corpus.py`'s `chunk_text()` uses `chunk_size=2000,
+overlap=50` -- already deliberately tuned BEFORE this session (dated
+2026-07-27 in its own comment): the corpus's measured p99 row length is
+~1350 chars and max is ~1900 chars, so 2000 was chosen specifically so
+that (chunking is per-row) every record becomes exactly one intact
+chunk, eliminating a real, previously-measured fragmentation problem
+(11.4% of EnglishQA / 9.0% of BanglishQA rows used to fragment at the
+old 500-char setting, confirmed to cause truncated multi-bullet answers).
+
+**Verified directly rather than trusted the comment**: counted chunks
+per (table, row_id) across the full current `data/corpus.jsonl` (7,138
+chunks). Result: **0.00% of rows are split into more than one chunk.**
+Every single record is already exactly one chunk.
+
+**Conclusion: this lever is provably inert, not just untried.** Since
+chunking is per-row and every row already fits in one chunk, increasing
+`chunk_size` further changes nothing (the corpus.jsonl output is
+byte-identical for any value >= ~1900 chars) -- there is no retrieval
+-quality experiment to run, because there is no possible change in what
+gets indexed. Decreasing it would only reintroduce the already-diagnosed
+and already-fixed fragmentation problem. No test was run against the
+retrieval pipeline for this reason specifically -- not skipped, ruled out
+by direct measurement of the thing the parameter controls.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
