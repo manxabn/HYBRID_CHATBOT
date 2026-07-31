@@ -1,0 +1,11 @@
+group,query_id,query,signal_value,would_abstain_new_threshold
+heldout_paraphrase_SHOULD_NOT_abstain,Q079-p1,How do I get access to the female Prayer Room?,0.9158231020974567,True
+heldout_paraphrase_SHOULD_NOT_abstain,Q079-p2,What's the process for female students to use the Prayer Room?,0.8495124038206474,True
+heldout_paraphrase_SHOULD_NOT_abstain,Q092-p1,"Do I have to pay an application fee, and what's the amount?",0.9139772332679085,True
+heldout_paraphrase_SHOULD_NOT_abstain,Q092-p2,"Is there a fee for applying, and how much does it cost?",0.571693017642591,True
+heldout_paraphrase_SHOULD_NOT_abstain,Q094-p1,Can non-department students take a minor under ENH?,0.9110776011042185,True
+heldout_paraphrase_SHOULD_NOT_abstain,Q094-p2,Is a minor with ENH available to students from other departments?,0.9681127895652044,True
+heldout_paraphrase_SHOULD_NOT_abstain,Q072-p1,What does the timeline look like for the Joint PhD program with SOAS?,0.9452994118883743,True
+heldout_paraphrase_SHOULD_NOT_abstain,Q072-p2,Can you explain how the SOAS Joint PhD program is organized across its duration?,0.9934450123099026,False
+heldout_paraphrase_SHOULD_NOT_abstain,Q087-p1,What happens if someone breaks the TARC rules and regulations?,0.9316432644150773,True
+heldout_paraphrase_SHOULD_NOT_abstain,Q087-p2,What penalties are there for violating TARC's rules?,0.9633837015719744,True

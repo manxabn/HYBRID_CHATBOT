@@ -1658,6 +1658,57 @@ finding, a real investigation into its cause, a real fix, and an honest
 update when the fix changed the picture, not a result held back to keep
 an earlier number's favorable answer.
 
+## 2026-08-01: second fix attempt for paraphrase robustness -- also fails, reported honestly
+Direct follow-up to the semantic-override fix attempt (which failed: real
+out-of-scope queries scored higher average s_vec than the paraphrases
+needing rescue). This attempt is more principled: instead of a new
+heuristic signal, actually redo the abstention calibration itself
+(`scripts/recalibrate_abstention_paraphrase_aware.py`) with real
+paraphrased-but-answerable queries folded into the open_ended route's
+training distribution, using the same held-out discipline as the lambda
+sweep (10 open-ended base queries split 5 tuning / 5 held-out by
+`base_query_id`; only the 5 tuning bases' paraphrases enter calibration,
+the other 5 are checked afterward, never seen during threshold selection).
+
+**Result: also fails, and more decisively than the first attempt.** The
+new threshold (0.9916, down slightly from the deployed 1.0283) rescues
+only <b>1 of the 10 held-out paraphrases</b> -- 9 still incorrectly
+abstain. Worse, overall open_ended calibration accuracy actually
+<b>dropped</b> from 0.710 (original, n=372) to 0.622 (n=381) once the 10
+tuning paraphrases were added -- 10 examples out of 381 total wasn't
+enough weight to meaningfully shift the accuracy-optimal threshold in the
+direction that helps paraphrases, and the shift that did occur made
+overall classification worse, not better.
+
+**A genuine data-availability limit surfaced while trying to validate the
+true-negative rate**: this corpus's entire "Out of Scope / Unanswerable"
+category is exactly 190 rows (127 EnglishQA + 63 BanglishQA), and the
+ORIGINAL calibration already used all 190 -- there is no fresh,
+genuinely-unseen out-of-scope data left in this corpus to validate
+against at all. This is a real, disclosed corpus-size limitation, not a
+script bug (the script bug -- comparing against the wrong source pool --
+was found and fixed first, then this deeper limitation was found
+underneath it).
+
+**Conclusion, now confirmed by two independent, honestly-tested attempts:
+the paraphrase-robustness gap is a genuinely hard problem for a
+single-threshold, single-signal abstention gate, not something a modest,
+targeted intervention fixes.** Both a new heuristic signal (semantic
+similarity) and directly recalibrating the existing signal against
+paraphrase-augmented data failed to help without cost. A real fix likely
+needs either (a) a proportionally much larger set of real paraphrased
+calibration examples than this corpus's small out-of-scope category can
+supply, or (b) a structurally different confidence mechanism (e.g. a
+learned classifier over multiple signals jointly, rather than one
+threshold on one signal) -- both larger undertakings than fit in this
+session, and reported here as genuinely open, not glossed over with a
+fix that only looks like it works.
+
+Files: `scripts/recalibrate_abstention_paraphrase_aware.py`, `results/
+abstention_threshold_paraphrase_aware.json`, `results/paraphrase_
+recalibration_heldout_check.csv`. Deployed `abstention_threshold.json`
+is untouched -- this was a standalone experiment, not integrated.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
