@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  28 JUL 2026 19:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  31 JUL 2026 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -622,40 +622,47 @@ Package hyperref Info: Link coloring OFF on input line 19.
 \@outlinefile=\write3
 \openout3 = `paper.out'.
 
- [1
-
-{C:/Users/manxa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/manx
-a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
- 32.
+ 30.
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line
- 32.
+ 30.
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+psycm on input line
- 32.
+ 30.
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
 
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
 
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+
+[1
+
+{C:/Users/manxa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/manx
+a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
@@ -667,18 +674,15 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 34.
 
+
+Package natbib Warning: Citation `rahman2025mentorship' on page 2 undefined on 
+input line 41.
+
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
 4.
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
-
 [2
 
 ]
@@ -686,30 +690,25 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 54.
 
-[3]
+[3] [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 75.
 
-
-Underfull \vbox (badness 2065) has occurred while \output is active []
-
- [4]
-<fig_dataset_dist.png, id=277, 469.755pt x 289.08pt>
+<fig_dataset_dist.png, id=280, 469.755pt x 289.08pt>
 File: fig_dataset_dist.png Graphic file (type png)
 <use fig_dataset_dist.png>
 Package pdftex.def Info: fig_dataset_dist.png  used on input line 85.
 (pdftex.def)             Requested size: 204.85974pt x 126.06636pt.
-<fig_db_population.png, id=280, 126.4725pt x 268.1217pt>
+<fig_db_population.png, id=283, 126.4725pt x 268.1217pt>
 File: fig_db_population.png Graphic file (type png)
 <use fig_db_population.png>
 Package pdftex.def Info: fig_db_population.png  used on input line 97.
 (pdftex.def)             Requested size: 199.16928pt x 422.24892pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig_hybrid_retriever.png, id=284, 232.7094pt x 555.7563pt>
+<fig_hybrid_retriever.png, id=287, 232.7094pt x 555.7563pt>
 File: fig_hybrid_retriever.png Graphic file (type png)
 <use fig_hybrid_retriever.png>
 Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 109.
@@ -717,8 +716,10 @@ Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 109.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5 <./fig_dataset_dist.png>] [6 <./fig_db_population.png>] [7 <./fig_hybrid_ret
-riever.png>] [8] [9]
+[5 <./fig_dataset_dist.png>] [6 <./fig_db_population.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./fig_hybrid_retriever.png>] [8] [9]
 Overfull \hbox (86.60915pt too wide) in paragraph at lines 213--214
 \OT1/ptm/m/n/10 maintained piece of code, and the two copies silently drifted a
 part. We ad-dressed the spe-cific in-stance -- \OT1/pcr/m/n/10 pipeline/prerequ
@@ -726,7 +727,7 @@ isite[]graph.py
  []
 
 [10]
-<fig_response_gen.png, id=379, 3334.4575pt x 3519.1475pt>
+<fig_response_gen.png, id=383, 3334.4575pt x 3519.1475pt>
 File: fig_response_gen.png Graphic file (type png)
 <use fig_response_gen.png>
 Package pdftex.def Info: fig_response_gen.png  used on input line 232.
@@ -757,60 +758,77 @@ rse-code/email/faculty-identity en-ti-ties (Sec-tion []4.5[]'s method-
  []
 
 [12] [13] [14]
-<fig_lambda_sweep.png, id=452, 794.97pt x 578.16pt>
+<fig_lambda_sweep.png, id=456, 794.97pt x 578.16pt>
 File: fig_lambda_sweep.png Graphic file (type png)
 <use fig_lambda_sweep.png>
 Package pdftex.def Info: fig_lambda_sweep.png  used on input line 379.
 (pdftex.def)             Requested size: 227.62204pt x 165.54482pt.
- [15 <./fig_lambda_sweep.png>] [16]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15] [16 <./fig_lambda_sweep.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 421.
+(hyperref)                removing `math shift' on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 421.
+(hyperref)                removing `math shift' on input line 423.
 
-[17] [18] [19]
-Underfull \vbox (badness 1281) has occurred while \output is active []
 
- [20]
-Overfull \hbox (324.66574pt too wide) in paragraph at lines 558--576
+Underfull \vbox (badness 5189) has occurred while \output is active []
+
+ [17]
+[18] [19] [20]
+Overfull \hbox (324.66574pt too wide) in paragraph at lines 560--578
  [][] 
  []
 
-<fig_ingestion_time.png, id=550, 504.80595pt x 342.19846pt>
+[21]
+<fig_ingestion_time.png, id=562, 504.80595pt x 342.19846pt>
 File: fig_ingestion_time.png Graphic file (type png)
 <use fig_ingestion_time.png>
-Package pdftex.def Info: fig_ingestion_time.png  used on input line 587.
+Package pdftex.def Info: fig_ingestion_time.png  used on input line 589.
 (pdftex.def)             Requested size: 204.85974pt x 138.87157pt.
 
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 592.
+(hyperref)                removing `\uppercase' on input line 594.
 
-
-Underfull \vbox (badness 1990) has occurred while \output is active []
-
- [21 <./fig_ingestion_time.png>] [22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[22 <./fig_ingestion_time.png>]
+Underfull \vbox (badness 4569) has occurred while \output is active []
 
  [23]
-[24] [25] (paper.aux)
+[24] [25]
+
+Package natbib Warning: There were undefined citations.
+
+[26] (paper.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 6C9C1633A6A90F2206B866951285DD03;10759.
  ) 
 Here is how much of TeX's memory you used:
- 14100 strings out of 467871
- 224316 string characters out of 5418376
+ 14129 strings out of 467871
+ 225074 string characters out of 5418376
  656953 words of memory out of 5000000
- 42659 multiletter control sequences out of 15000+600000
+ 42680 multiletter control sequences out of 15000+600000
  665418 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,5763b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,5763b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -821,9 +839,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (25 pages, 827023 bytes).
+Output written on paper.pdf (26 pages, 836600 bytes).
 PDF statistics:
- 685 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
+ 703 PDF objects out of 1000 (max. 8388607)
+ 138 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 
