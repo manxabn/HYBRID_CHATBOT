@@ -1482,6 +1482,45 @@ py`), verify it rescues these 20 paraphrase abstentions AND does not
 reduce the true-abstention rate on genuinely out-of-scope queries, before
 considering it for deployment.
 
+## 2026-07-31: tested the semantic-override fix candidate for paraphrase robustness — it does NOT work, reported honestly
+Direct follow-up to the paraphrase-robustness finding above. The proposed
+fix (use `s_vec`, the vector-similarity component of retrieval, as an
+additional sufficiency signal alongside `query_top1_score`, since `s_vec`
+stays relatively stable across paraphrases while the BM25-weighted
+composite score drops) was tested properly against real held-out data
+before being trusted -- `scripts/test_semantic_sufficiency_override.py`
+(`results/semantic_sufficiency_check.csv`): `max(s_vec)` across the
+retrieved pool for (a) the 24 abstained paraphrase queries that need
+rescuing, and (b) 40 real out-of-scope queries (same source table/
+category as `scripts/calibrate_abstention.py`'s own calibration set, not
+invented negatives) that must NOT be rescued.
+
+**Result: the fix does not work.** Out-of-scope queries have a HIGHER
+mean `max(s_vec)` (0.713) than the paraphrases needing rescue (0.624).
+At every threshold tested (0.55-0.75), the false-rescue rate on
+out-of-scope queries is greater than or equal to the true-rescue rate on
+paraphrases -- e.g. threshold=0.65 rescues 50% of paraphrases but falsely
+rescues 80% of out-of-scope queries; threshold=0.60 rescues 79% of
+paraphrases but falsely rescues 92% of out-of-scope queries. There is no
+threshold that helps more than it harms. Raw vector similarity alone does
+not reliably separate "correctly answerable, just reworded" from
+"genuinely out-of-scope but topically adjacent" on this corpus -- a real,
+substantive negative result about the fix candidate, not a reason to
+force it in anyway.
+
+**Honest conclusion: this is not a quick-patch problem.** The paraphrase
+-robustness gap found above is real and stands undisputed; this specific,
+otherwise-plausible fix for it does not survive testing against real
+data, and forcing it in despite that would trade a known problem
+(paraphrase fragility) for a worse, less visible one (more confident
+wrong answers on genuinely out-of-scope queries) -- exactly the kind of
+harm the standing "verify before integrating" discipline exists to catch.
+A real fix likely requires redoing the abstention calibration itself
+(`scripts/calibrate_abstention.py`) with paraphrased answerable examples
+included as an explicit training signal, not a single new heuristic
+threshold -- a larger piece of work than remained time for this session,
+and reported as genuinely open rather than patched over.
+
 ## Infrastructure note: BERTScore (roberta-large) segfaults on GPU when Ollama is also resident
 `scripts/compute_metrics.py` reproducibly segfaulted (exit 139, twice in a
 row, same command) loading `roberta-large` on CUDA while Ollama's 8B model
