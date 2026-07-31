@@ -103,8 +103,8 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Adaptive Pipeline vs.\ Baselines}{13}{subsection.4.3}\protected@file@percent }
 \newlabel{subsec:novel-vs-baselines}{{4.3}{13}{Adaptive Pipeline vs.\ Baselines}{subsection.4.3}{}}
 \citation{magomere2025}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Cross-encoder reranker on (fine-tuned) vs.\ off, otherwise identical pipeline, matched vs.\ full hybrid and BM25-only ($n=199$).}}{14}{table.caption.11}\protected@file@percent }
-\newlabel{tab:reranker-ablation}{{7}{14}{Cross-encoder reranker on (fine-tuned) vs.\ off, otherwise identical pipeline, matched vs.\ full hybrid and BM25-only ($n=199$)}{table.caption.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Cross-encoder reranker on (fine-tuned) vs.\ off, otherwise identical pipeline, matched vs.\ full hybrid and BM25-only ($n=199$). Both rows re-measured 2026-07-31 under the current, hard-negative-mined embedding model (the reranker-on row was previously stale, dated 2026-07-28, before this retrain -- see discussion below).}}{14}{table.caption.11}\protected@file@percent }
+\newlabel{tab:reranker-ablation}{{7}{14}{Cross-encoder reranker on (fine-tuned) vs.\ off, otherwise identical pipeline, matched vs.\ full hybrid and BM25-only ($n=199$). Both rows re-measured 2026-07-31 under the current, hard-negative-mined embedding model (the reranker-on row was previously stale, dated 2026-07-28, before this retrain -- see discussion below)}{table.caption.11}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Reranker Ablation}{14}{subsection.4.4}\protected@file@percent }
 \newlabel{subsec:reranker-ablation}{{4.4}{14}{Reranker Ablation}{subsection.4.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Unambiguous-Match Score Guarantee, Isolated}{14}{subsection.4.5}\protected@file@percent }
@@ -117,24 +117,24 @@
 \newlabel{subsec:faculty-coverage}{{4.6}{15}{Faculty Lookup Coverage}{subsection.4.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.7}English Lambda Sensitivity}{15}{subsection.4.7}\protected@file@percent }
 \newlabel{subsec:lambda-sweep-en}{{4.7}{15}{English Lambda Sensitivity}{subsection.4.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.1}Is There Room for a Learned, Continuous Fusion Weight?}{15}{subsubsection.4.7.1}\protected@file@percent }
-\newlabel{subsec:dat-ceiling}{{4.7.1}{15}{Is There Room for a Learned, Continuous Fusion Weight?}{subsubsection.4.7.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Automated metrics vs.\ $\lambda $ under the base (non-adaptive) linear fusion mode, on a fixed 60-query subset. No $\lambda $ value significantly exceeds $\lambda =1$ (BM25-only) on any metric (paired $t$-test).}}{16}{figure.caption.14}\protected@file@percent }
 \newlabel{fig:lambda-sweep}{{5}{16}{Automated metrics vs.\ $\lambda $ under the base (non-adaptive) linear fusion mode, on a fixed 60-query subset. No $\lambda $ value significantly exceeds $\lambda =1$ (BM25-only) on any metric (paired $t$-test)}{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.2}Isolating the Router's Own Contribution}{16}{subsubsection.4.7.2}\protected@file@percent }
-\newlabel{subsec:adaptive-isolated}{{4.7.2}{16}{Isolating the Router's Own Contribution}{subsubsection.4.7.2}{}}
-\citation{cormack2009}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.1}Is There Room for a Learned, Continuous Fusion Weight?}{16}{subsubsection.4.7.1}\protected@file@percent }
+\newlabel{subsec:dat-ceiling}{{4.7.1}{16}{Is There Room for a Learned, Continuous Fusion Weight?}{subsubsection.4.7.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Adaptive routing, isolated to the 100 entity-heavy test queries where it actually diverges from a fixed-$\lambda $ baseline (paired bootstrap, 2000 resamples). Re-confirmed after deploying the mined-hard-negatives embedding model (Section~\ref {subsec:hard-negatives}); see text for the original, pre-deployment numbers.}}{17}{table.caption.15}\protected@file@percent }
 \newlabel{tab:adaptive-isolated}{{10}{17}{Adaptive routing, isolated to the 100 entity-heavy test queries where it actually diverges from a fixed-$\lambda $ baseline (paired bootstrap, 2000 resamples). Re-confirmed after deploying the mined-hard-negatives embedding model (Section~\ref {subsec:hard-negatives}); see text for the original, pre-deployment numbers}{table.caption.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.2}Isolating the Router's Own Contribution}{17}{subsubsection.4.7.2}\protected@file@percent }
+\newlabel{subsec:adaptive-isolated}{{4.7.2}{17}{Isolating the Router's Own Contribution}{subsubsection.4.7.2}{}}
+\citation{cormack2009}
 \citation{es2023ragas}
-\citation{halt2025}
-\citation{summac2022}
 \@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Automated faithfulness score (LLM-judge, 0--1), English sample.}}{18}{table.caption.16}\protected@file@percent }
 \newlabel{tab:faithfulness}{{11}{18}{Automated faithfulness score (LLM-judge, 0--1), English sample}{table.caption.16}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.3}RRF $k$ Sweep: Confirming, Not Assuming, the Same Explanation}{18}{subsubsection.4.7.3}\protected@file@percent }
 \newlabel{subsec:rrf-k-sweep}{{4.7.3}{18}{RRF $k$ Sweep: Confirming, Not Assuming, the Same Explanation}{subsubsection.4.7.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Faithfulness (Automated LLM-Judge)}{18}{subsection.4.8}\protected@file@percent }
 \newlabel{subsec:faithfulness}{{4.8}{18}{Faithfulness (Automated LLM-Judge)}{subsection.4.8}{}}
+\citation{halt2025}
+\citation{summac2022}
 \@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score.}}{19}{table.caption.17}\protected@file@percent }
 \newlabel{tab:nli-faithfulness}{{12}{19}{Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score}{table.caption.17}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Banglish retrieval ablation and adaptive pipeline, after the exact-match coverage fix ($n=100$).}}{19}{table.caption.18}\protected@file@percent }
@@ -143,44 +143,44 @@
 \newlabel{subsec:nli-faithfulness}{{4.8.1}{19}{An Architecturally Independent Cross-Check}{subsubsection.4.8.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Banglish Evaluation}{19}{subsection.4.9}\protected@file@percent }
 \newlabel{subsec:banglish}{{4.9}{19}{Banglish Evaluation}{subsection.4.9}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.1}Query Translation (Null Result)}{19}{subsubsection.4.9.1}\protected@file@percent }
 \citation{joren2024}
-\citation{dogruoz2023representativeness}
 \@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Cross-lingual stress test: top-5 retrieval accuracy, query translation on vs.\ off ($n=9$, EnglishQA-only content, Banglish-phrased queries).}}{20}{table.caption.19}\protected@file@percent }
 \newlabel{tab:crosslingual-stress}{{14}{20}{Cross-lingual stress test: top-5 retrieval accuracy, query translation on vs.\ off ($n=9$, EnglishQA-only content, Banglish-phrased queries)}{table.caption.19}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.1}Query Translation (Null Result)}{20}{subsubsection.4.9.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.2}BM25 Code-Mixed Normalization (Null Result)}{20}{subsubsection.4.9.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.3}Why the Two Banglish-Specific Ablations Show Null Effects}{20}{subsubsection.4.9.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.4}Cross-Lingual Stress Test: Query Translation, Validated}{20}{subsubsection.4.9.4}\protected@file@percent }
 \newlabel{subsec:crosslingual-stress}{{4.9.4}{20}{Cross-Lingual Stress Test: Query Translation, Validated}{subsubsection.4.9.4}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.5}Cross-Lingual Sufficient-Context Gating: A Mechanistic Diagnostic}{20}{subsubsection.4.9.5}\protected@file@percent }
 \newlabel{subsec:crosslingual-sufficient-context}{{4.9.5}{20}{Cross-Lingual Sufficient-Context Gating: A Mechanistic Diagnostic}{subsubsection.4.9.5}{}}
+\citation{dogruoz2023representativeness}
 \citation{huang2026survey}
 \citation{huang2026survey}
 \citation{huang2026survey}
 \@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Cross-lingual sufficient-context outcomes ($n=9$, same stress-test queries as Table~\ref {tab:crosslingual-stress}).}}{21}{table.caption.20}\protected@file@percent }
 \newlabel{tab:sufficient-context-bilingual}{{15}{21}{Cross-lingual sufficient-context outcomes ($n=9$, same stress-test queries as Table~\ref {tab:crosslingual-stress})}{table.caption.20}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces This paper's ablations regrouped by RAG pipeline stage \citep  {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies).}}{21}{table.caption.21}\protected@file@percent }
-\newlabel{tab:by-stage}{{16}{21}{This paper's ablations regrouped by RAG pipeline stage \citep {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies)}{table.caption.21}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.6}Expanding the Stress Test: A More Cautious Picture at Larger \emph  {n}}{21}{subsubsection.4.9.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Results Organized by Pipeline Stage}{21}{subsection.4.10}\protected@file@percent }
 \newlabel{subsec:by-stage}{{4.10}{21}{Results Organized by Pipeline Stage}{subsection.4.10}{}}
-\citation{cormack2009}
-\citation{henderson2017mnr}
-\citation{joren2024}
-\citation{liu2024lost,jin2024longcontext}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.11}Pipeline Efficiency}{22}{subsection.4.11}\protected@file@percent }
-\newlabel{subsec:efficiency}{{4.11}{22}{Pipeline Efficiency}{subsection.4.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.11}Pipeline Efficiency}{21}{subsection.4.11}\protected@file@percent }
+\newlabel{subsec:efficiency}{{4.11}{21}{Pipeline Efficiency}{subsection.4.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces This paper's ablations regrouped by RAG pipeline stage \citep  {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies).}}{22}{table.caption.21}\protected@file@percent }
+\newlabel{tab:by-stage}{{16}{22}{This paper's ablations regrouped by RAG pipeline stage \citep {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies)}{table.caption.21}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Comparison of data ingestion time across cold-start, incremental-update, and no-change scenarios.}}{22}{figure.caption.22}\protected@file@percent }
 \newlabel{fig:ingestion-time}{{6}{22}{Comparison of data ingestion time across cold-start, incremental-update, and no-change scenarios}{figure.caption.22}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}\uppercase {Discussion}}{22}{section.5}\protected@file@percent }
 \newlabel{sec:discussion}{{5}{22}{\uppercase {Discussion}}{section.5}{}}
+\citation{cormack2009}
+\citation{henderson2017mnr}
+\citation{joren2024}
+\citation{liu2024lost,jin2024longcontext}
 \citation{dror2018hitchhiker}
 \citation{dogruoz2023representativeness}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Limitations}{23}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Future Work}{24}{subsection.5.2}\protected@file@percent }
 \bibcite{adamopoulou2021}{{1}{2021}{{Adamopoulou and Moussiades}}{{}}}
 \bibcite{banerjee2005}{{2}{2005}{{Banerjee and Lavie}}{{}}}
 \bibcite{brandtzaeg2017}{{3}{2017}{{Brandtzaeg and F{\o }lstad}}{{}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Future Work}{24}{subsection.5.2}\protected@file@percent }
 \bibcite{cormack2009}{{4}{2009}{{Cormack et~al.}}{{}}}
 \bibcite{athanasiou2026semeval}{{5}{2026}{{Athanasiou et~al.}}{{}}}
 \bibcite{huang2026survey}{{6}{2026}{{Huang and Huang}}{{}}}

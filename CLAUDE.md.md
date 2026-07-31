@@ -1369,12 +1369,30 @@ weakness into either a non-issue or a much smaller one — a real result
 either way, to be reported honestly once measured, not assumed positive
 in advance.
 
-**3. Reranker-on numbers, re-verification in progress**: `scripts/run_
-novel_pipeline.py --use-reranker --out results/novel_pipeline_raw_outputs_
-roundN_reranker.csv`, full 200 queries, fine-tuned reranker (auto-detected
-from `models/finetuned_reranker_domain`), under the current embedding
-model — the exact same fix already applied to the reranker-off comparison
-earlier today. Running in the background; results to follow.
+**3. RESOLVED 2026-07-31: reranker-on numbers re-verified under the
+current embedding model.** `scripts/run_novel_pipeline.py --use-reranker
+--out results/novel_pipeline_raw_outputs_roundN_reranker.csv`, full 200
+queries (1 abstained), fine-tuned reranker (auto-detected from `models/
+finetuned_reranker_domain`) — the exact same fix already applied to the
+reranker-off comparison earlier today. Scored via `scripts/compute_
+metrics.py` (`results/novel_pipeline_metrics_per_query_roundN_reranker.csv`)
+and tested via `scripts/significance_tests_novel.py` against the current
+`results/ablation_metrics_per_query.csv` (`results/significance_tests_
+novel_roundN_reranker.csv`).
+
+**Result: the qualitative conclusion is unchanged — the reranker still
+loses — but now confirmed current rather than assumed to still hold.**
+vs. Full Hybrid: bleu mean_diff=-0.0404 (p=0.030/0.022), rougeL=-0.0279
+(p=0.050/0.044, borderline), bertscore=-0.0033 (n.s.), meteor=-0.0304
+(p=0.027/0.008). vs. BM25-only: bleu=-0.0436 (p=0.011/0.009), rougeL=
+-0.0304 (p=0.016/0.019), bertscore=-0.0049 (p=0.020 paired-t / 0.081
+Wilcoxon, inconclusive), meteor=-0.0422 (p=0.001/0.001). Margins are
+larger than the stale pre-retrain numbers in every case, consistent with
+BM25-only itself now being a harder baseline to beat (point 1 above) —
+the reranker isn't just failing to help, it's failing against a stronger
+opponent than before. Updated `paper/paper.tex`'s Table~\ref{tab:reranker
+-ablation} and its surrounding discussion with these current numbers;
+recompiled cleanly (26 pages, no errors).
 
 **4. Underpowered comparisons (n=12 prereq-graph trigger, n=26 compound
 -query, n=17-40 faithfulness NLI)**: partially addressable (more real

@@ -309,24 +309,25 @@ The adaptive pipeline (reranker off) is not significantly different from full hy
 \label{subsec:reranker-ablation}
 
 \begin{table}[t]
-\caption{Cross-encoder reranker on (fine-tuned) vs.\ off, otherwise identical pipeline, matched vs.\ full hybrid and BM25-only ($n=199$).}\label{tab:reranker-ablation} \centering
+\caption{Cross-encoder reranker on (fine-tuned) vs.\ off, otherwise identical pipeline, matched vs.\ full hybrid and BM25-only ($n=199$). Both rows re-measured 2026-07-31 under the current, hard-negative-mined embedding model (the reranker-on row was previously stale, dated 2026-07-28, before this retrain -- see discussion below).}\label{tab:reranker-ablation} \centering
 \begin{tabular}{|l|c|c|c|}
 \hline
 Reranker & Comparison & Mean diff & $p$ \\
 \hline
-On (fine-tuned) & vs.\ Full Hybrid, BLEU & $-0.069$ & $<0.001$ \\
-On (fine-tuned) & vs.\ Full Hybrid, BERTScore & $-0.0046$ & \textbf{0.007} \\
-On (fine-tuned) & vs.\ Full Hybrid, METEOR & $-0.028$ & \textbf{0.005} \\
-On (fine-tuned) & vs.\ BM25-only, BLEU & $-0.030$ & 0.066 \\
-Off & vs.\ Full Hybrid, BLEU & $-0.014$ & 0.226 \\
-Off & vs.\ BM25-only, ROUGE-L & $+0.030$ & \textbf{0.0015} \\
+On (fine-tuned) & vs.\ Full Hybrid, BLEU & $-0.040$ & \textbf{0.030} \\
+On (fine-tuned) & vs.\ Full Hybrid, METEOR & $-0.030$ & \textbf{0.027} \\
+On (fine-tuned) & vs.\ BM25-only, BLEU & $-0.044$ & \textbf{0.011} \\
+On (fine-tuned) & vs.\ BM25-only, ROUGE-L & $-0.030$ & \textbf{0.016} \\
+On (fine-tuned) & vs.\ BM25-only, METEOR & $-0.042$ & \textbf{0.001} \\
+Off & vs.\ Full Hybrid, BLEU & $-0.022$ & 0.242 \\
+Off & vs.\ BM25-only, METEOR & $-0.032$ & \textbf{0.009} \\
 \hline
 \end{tabular}
 \end{table}
 
 We also fine-tuned the reranker itself on this corpus's own hard negatives -- real retrieved near-misses from the live retriever, not random text -- via a contrastive binary-cross-entropy objective, to test whether domain adaptation could flip its earlier net-negative result (Section~\ref{subsec:reranker}) once training data actually came from the retriever it would be paired with. A first fine-tuning run happened to complete just before the exact-match coverage fix (Section~\ref{subsec:unambiguous}) landed in the codebase, so its hard negatives reflected the OLD, pre-fix retriever's candidate distribution rather than the one it would actually be deployed against -- a genuine train/deploy mismatch we caught by comparing file timestamps rather than assuming the first result was clean, and which we flag here as a concrete pitfall for anyone fine-tuning a downstream component while the upstream retriever is still being iterated on. We re-ran the fine-tuning from scratch against the fixed retriever before drawing any conclusion.
 
-Table~\ref{tab:reranker-ablation} reports the fair, non-confounded comparison. Fine-tuning does not flip the reranker from negative to positive: with it enabled, the pipeline loses significantly to full hybrid on BLEU, BERTScore, and METEOR ($p<0.001$, $p=0.007$, $p=0.005$; ROUGE-L is directionally worse but not significant, $p=0.078$), and shows no advantage over BM25-only either (BLEU $p=0.066$, not significant). Every other result in this paper uses the reranker-off configuration: the negative result is not an artifact of an undertrained reranker, and reranker-off remains the deployed default even though, as Section~\ref{subsec:novel-vs-baselines} now reports under the current embedding model, it does not beat BM25-only on generation-quality metrics either -- disabling the reranker avoids making an already-unfavorable comparison against BM25-only worse still.
+Table~\ref{tab:reranker-ablation} reports the fair, non-confounded comparison, re-measured under the current embedding model (the reranker-on condition was previously only tested pre-retrain, 2026-07-28 -- the same staleness class already found and corrected in Section~\ref{subsec:novel-vs-baselines}; re-running it here closes that gap rather than leave it unverified). Fine-tuning does not flip the reranker from negative to positive: with it enabled, the pipeline loses significantly to full hybrid on BLEU and METEOR ($p=0.030$, $p=0.027$; ROUGE-L is directionally worse but not significant, $p=0.050$) and loses significantly to BM25-only on BLEU, ROUGE-L, and METEOR ($p=0.011$, $p=0.016$, $p=0.001$; BERTScore is directionally worse and reaches significance under the paired $t$-test only, $p=0.020$, not the matched Wilcoxon test, $p=0.081$, so treated as inconclusive). The qualitative conclusion is unchanged from the pre-retrain measurement -- the reranker still loses, now confirmed rather than assumed current -- but the specific margins are larger under the current model, since BM25-only itself is now a harder baseline to beat (Section~\ref{subsec:novel-vs-baselines}). Every other result in this paper uses the reranker-off configuration: the negative result is not an artifact of an undertrained reranker, and reranker-off remains the deployed default even though, as Section~\ref{subsec:novel-vs-baselines} also reports, it does not beat BM25-only on generation-quality metrics either -- disabling the reranker avoids making an already-unfavorable comparison against BM25-only worse still.
 
 As a further, literature-motivated check, we tested whether the reranker's regression is a candidate-set-size effect: \citet{magomere2025} find that reranking a wide candidate pool can inject noise that disproportionately harms an already-strong first-stage ranking, and recommend reranking a smaller pool as a direct mitigation. We re-ran the fine-tuned reranker restricted to a pool of 5 candidates (equal to \texttt{final\_k}, so reranking can only reorder the already-selected top-5 rather than pull in noisier candidates from further down the ranking). This did not rescue the reranker: it remained significantly behind full hybrid on all four metrics ($p\leq0.019$), if anything a slightly worse significance profile than the wider pool-of-10 test above. We report this as evidence against candidate-set noise being the (sole) explanation for this corpus -- the reranker's joint relevance judgments disagree with the fine-tuned embeddings' ranking even when given only the five candidates the embeddings already selected as best.
 
