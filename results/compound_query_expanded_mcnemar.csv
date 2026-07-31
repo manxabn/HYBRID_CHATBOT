@@ -1,0 +1,10 @@
+subset,metric,n,full_hybrid_only_correct,bm25_only_only_correct,n_discordant,mcnemar_p,significant_at_0.05
+all,both_hit@3,566,3,0,3,0.25,False
+all,both_hit@5,566,1,0,1,1.0,False
+all,both_hit@10,566,0,0,0,1.0,False
+prereq_coordinator,both_hit@3,26,3,0,3,0.25,False
+prereq_coordinator,both_hit@5,26,1,0,1,1.0,False
+prereq_coordinator,both_hit@10,26,0,0,0,1.0,False
+faculty_room,both_hit@3,540,0,0,0,1.0,False
+faculty_room,both_hit@5,540,0,0,0,1.0,False
+faculty_room,both_hit@10,540,0,0,0,1.0,False

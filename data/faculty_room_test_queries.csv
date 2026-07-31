@@ -1,0 +1,41 @@
+query_id,query,reference_answer,course
+FR-00,Who teaches the theory section of CSE251-03B and what is their office room?,Md. Fatin Ishraq Faruqui (Lecturer) teaches the theory section of CSE251-03B. Their office room is 4N169.,CSE251-03B
+FR-01,Who teaches the theory section of CSE110-19 and what is their office room?,Tahsin Tanim Ramisha (C. Lecturer) teaches the theory section of CSE110-19. Their office room is 4F.,CSE110-19
+FR-02,Who teaches the theory section of CSE350-02B and what is their office room?,Nur Mohammad Shaon (Lecturer) teaches the theory section of CSE350-02B. Their office room is 4N170.,CSE350-02B
+FR-03,Who teaches the theory section of CSE340-09 and what is their office room?,Mohammed Ashfaqul Haque (Lecturer) teaches the theory section of CSE340-09. Their office room is 4N137.,CSE340-09
+FR-04,Who teaches the theory section of CSE331-03 and what is their office room?,Dr. Badhan Das (Assistant Professor) teaches the theory section of CSE331-03. Their office room is 4G19.,CSE331-03
+FR-05,Who teaches the theory section of CSE260-09A and what is their office room?,Fatiha Ishrar Chowdhury (Lecturer) teaches the theory section of CSE260-09A. Their office room is 4K81.,CSE260-09A
+FR-06,Who teaches the theory section of CSE250-08A and what is their office room?,Mr. Shadman Shahriar (Lecturer) teaches the theory section of CSE250-08A. Their office room is 4N143.,CSE250-08A
+FR-07,Who teaches the theory section of CSE230-11 and what is their office room?,Yasmin Nadia (Lecturer) teaches the theory section of CSE230-11. Their office room is 4L89.,CSE230-11
+FR-08,Who teaches the theory section of CSE427-04 and what is their office room?,Mr. Dibyo Fabian Dofadar (Lecturer) teaches the theory section of CSE427-04. Their office room is 4M106.,CSE427-04
+FR-09,Who teaches the theory section of CSE111-06 and what is their office room?,Mr. Ahmed Mahir Ruhan (Lecturer) teaches the theory section of CSE111-06. Their office room is 4L93.,CSE111-06
+FR-10,Who teaches the theory section of CSE111-04 and what is their office room?,Mr. Zaber Mohammad (Lecturer) teaches the theory section of CSE111-04. Their office room is 4J61.,CSE111-04
+FR-11,Who teaches the theory section of CSE250-03B and what is their office room?,Sheikh Iftekhar Ahmed (C. Lecturer) teaches the theory section of CSE250-03B. Their office room is 4P.,CSE250-03B
+FR-12,Who teaches the theory section of CSE330-17 and what is their office room?,Mr. Md. Aquib Azmain (Senior Lecturer) teaches the theory section of CSE330-17. Their office room is 4M104.,CSE330-17
+FR-13,Who teaches the theory section of CSE331-13 and what is their office room?,Md. Rifat Rahman (Lecturer) teaches the theory section of CSE331-13. Their office room is 4N164.,CSE331-13
+FR-14,Who teaches the theory section of CSE481-01 and what is their office room?,Mr. Shadman Shahriar (Lecturer) teaches the theory section of CSE481-01. Their office room is 4N143.,CSE481-01
+FR-15,Who teaches the theory section of CSE111-01 and what is their office room?,Mr. Md. Tawhid Anwar (Senior Lecturer) teaches the theory section of CSE111-01. Their office room is 4G03.,CSE111-01
+FR-16,Who teaches the theory section of CSE321-20 and what is their office room?,Souvik Ghosh (Lecturer) teaches the theory section of CSE321-20. Their office room is 4M131.,CSE321-20
+FR-17,Who teaches the theory section of CSE427-01 and what is their office room?,Dr. Chowdhury Mofizur Rahman (Professor) teaches the theory section of CSE427-01. Their office room is 4G18.,CSE427-01
+FR-18,Who teaches the theory section of CSE330-19 and what is their office room?,Atonu Roy Chowdhury (Lecturer) teaches the theory section of CSE330-19. Their office room is 4P192.,CSE330-19
+FR-19,Who teaches the theory section of CSE446-01 and what is their office room?,Mr. Mohammad Badrul Hossain (Lecturer) teaches the theory section of CSE446-01. Their office room is 4J67.,CSE446-01
+FR-20,Who teaches the theory section of CSE350-04A and what is their office room?,Md Ashikur Rahman Any (C. Lecturer) teaches the theory section of CSE350-04A. Their office room is 4P.,CSE350-04A
+FR-21,Who teaches the theory section of CSE101-07 and what is their office room?,Md Fardin Rahman Ami (C. Lecturer) teaches the theory section of CSE101-07. Their office room is 4F.,CSE101-07
+FR-22,Who teaches the theory section of CSE260-19B and what is their office room?,Towshik Anam Taj (Lecturer) teaches the theory section of CSE260-19B. Their office room is 4M119.,CSE260-19B
+FR-23,Who teaches the theory section of CSE421-02 and what is their office room?,Mr. Arif Shakil (Senior Lecturer) teaches the theory section of CSE421-02. Their office room is 4G03.,CSE421-02
+FR-24,Who teaches the theory section of CSE260-17B and what is their office room?,Majisha Jahan Disha (Lecturer) teaches the theory section of CSE260-17B. Their office room is 4K71.,CSE260-17B
+FR-25,Who teaches the theory section of CSE330-14 and what is their office room?,Rifa Tasfiya (Lecturer) teaches the theory section of CSE330-14. Their office room is 4K69.,CSE330-14
+FR-26,Who teaches the theory section of CSE420-24 and what is their office room?,Abdullah Khondoker (C. Lecturer) teaches the theory section of CSE420-24. Their office room is 4F.,CSE420-24
+FR-27,Who teaches the theory section of CSE250-03A and what is their office room?,Sheikh Iftekhar Ahmed (C. Lecturer) teaches the theory section of CSE250-03A. Their office room is 4P.,CSE250-03A
+FR-28,Who teaches the theory section of CSE422-15 and what is their office room?,Rafiad Sadat Shahir (Lecturer) teaches the theory section of CSE422-15. Their office room is 4N154.,CSE422-15
+FR-29,Who teaches the theory section of CSE250-05B and what is their office room?,Mr. Purbayan Das (Lecturer) teaches the theory section of CSE250-05B. Their office room is 4N140.,CSE250-05B
+FR-30,Who teaches the theory section of CSE421-21 and what is their office room?,Tanveer Rahman (Lecturer) teaches the theory section of CSE421-21. Their office room is 4M112.,CSE421-21
+FR-31,Who teaches the theory section of CSE421-06 and what is their office room?,Dr. Md. Sakir Hossain (Associate Professor) teaches the theory section of CSE421-06. Their office room is 4G17.,CSE421-06
+FR-32,Who teaches the theory section of CSE341-03 and what is their office room?,Raisul Kabir News (Lecturer) teaches the theory section of CSE341-03. Their office room is 4L94.,CSE341-03
+FR-33,Who teaches the theory section of CSE220-04 and what is their office room?,Mahrin Tasfe (Senior Lecturer) teaches the theory section of CSE220-04. Their office room is 4G30.,CSE220-04
+FR-34,Who teaches the theory section of CSE460-07 and what is their office room?,Akib Anjum (Lecturer) teaches the theory section of CSE460-07. Their office room is 4N161.,CSE460-07
+FR-35,Who teaches the theory section of CSE260-01B and what is their office room?,Mr. Dewan Ziaul Karim (Senior Lecturer) teaches the theory section of CSE260-01B. Their office room is 4G05.,CSE260-01B
+FR-36,Who teaches the theory section of CSE422-13 and what is their office room?,Mr. Swattic Ghose (Lecturer) teaches the theory section of CSE422-13. Their office room is 4M109.,CSE422-13
+FR-37,Who teaches the theory section of CSE230-02 and what is their office room?,Niaz Ashraf Khan (Senior Lecturer) teaches the theory section of CSE230-02. Their office room is 4M125.,CSE230-02
+FR-38,Who teaches the theory section of CSE360-05 and what is their office room?,Mr. Shakir Rouf (Lecturer) teaches the theory section of CSE360-05. Their office room is 4J53.,CSE360-05
+FR-39,Who teaches the theory section of CSE421-24 and what is their office room?,NIRJHOR DATTA (Lecturer) teaches the theory section of CSE421-24. Their office room is 4M132.,CSE421-24

@@ -34,7 +34,7 @@ FIELDNAMES = [
     "query_id", "config", "query", "reference_answer",
     "retrieved_context", "generated_answer",
     "route", "fusion", "lambda", "abstained", "raw_abstain",
-    "sufficient_context_override", "graph_augmented", "exact_match_any", "question_match_any",
+    "sufficient_context_override", "graph_augmented", "faculty_room_augmented", "exact_match_any", "question_match_any",
     "translated_query", "normalized_query",
     "retrieval_s", "rerank_s", "generation_s", "total_s",
     "timestamp", "query_confidence", "query_top1_score",
@@ -45,7 +45,7 @@ SAMPLE_SEED = 42
 
 def run(smoke: bool, out_path: Path, sample_size: int = None, queries_path: Path = None,
         use_reranker: bool = False, use_query_translation: bool = False, rerank_pool_size: int = 10,
-        use_entity_normalization: bool = False):
+        use_entity_normalization: bool = False, use_faculty_room_lookup: bool = False):
     df = pd.read_csv(queries_path or QUERIES_PATH)
     if smoke:
         df = df.head(5)
@@ -59,7 +59,8 @@ def run(smoke: bool, out_path: Path, sample_size: int = None, queries_path: Path
         )
 
     pipeline = NovelPipeline(use_reranker=use_reranker, use_query_translation=use_query_translation,
-                              rerank_pool_size=rerank_pool_size, use_entity_normalization=use_entity_normalization)
+                              rerank_pool_size=rerank_pool_size, use_entity_normalization=use_entity_normalization,
+                              use_faculty_room_lookup=use_faculty_room_lookup)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     start_time = datetime.now(timezone.utc).isoformat()
@@ -95,6 +96,7 @@ def run(smoke: bool, out_path: Path, sample_size: int = None, queries_path: Path
                 "raw_abstain": meta["raw_abstain"],
                 "sufficient_context_override": meta["sufficient_context_override"],
                 "graph_augmented": meta["graph_augmented"],
+                "faculty_room_augmented": meta["faculty_room_augmented"],
                 "exact_match_any": meta["exact_match_any"],
                 "question_match_any": meta["question_match_any"],
                 "translated_query": meta["translated_query"],
@@ -162,6 +164,10 @@ if __name__ == "__main__":
                               "candidate set can inject noise that hurts an already-strong first-"
                               "stage ranking, and recommend a smaller pool as a mitigation -- "
                               "pass e.g. 3 or 5 to test that directly on this pipeline.")
+    parser.add_argument("--use-faculty-room-lookup", action="store_true",
+                         help="Enable the course->instructor->office-room cross-reference lookup "
+                              "(OFF by default as of 2026-07-31 -- new component, not yet default "
+                              "pending its own isolated ablation, same practice as --use-reranker).")
     parser.add_argument("--entity-normalization", action="store_true",
                          help="Enable LLM-based entity-normalization retrieval fallback for "
                               "queries where exact-match found nothing but a loose entity-shaped "
@@ -181,4 +187,5 @@ if __name__ == "__main__":
 
     run(smoke=args.smoke, out_path=out_path, sample_size=args.sample_size, queries_path=args.queries,
         use_reranker=args.use_reranker, use_query_translation=args.query_translation,
-        rerank_pool_size=args.rerank_pool_size, use_entity_normalization=args.entity_normalization)
+        rerank_pool_size=args.rerank_pool_size, use_entity_normalization=args.entity_normalization,
+        use_faculty_room_lookup=args.use_faculty_room_lookup)

@@ -1,0 +1,1487 @@
+query_id,config,query,reference_answer,retrieved_context,generated_answer,route,fusion,lambda,abstained,raw_abstain,sufficient_context_override,graph_augmented,faculty_room_augmented,exact_match_any,question_match_any,translated_query,normalized_query,retrieval_s,rerank_s,generation_s,total_s,timestamp,query_confidence,query_top1_score,bleu,rougeL,meteor,bertscore
+FR-00,adaptive_novel,Who teaches the theory section of CSE251-03B and what is their office room?,Md. Fatin Ishraq Faruqui (Lecturer) teaches the theory section of CSE251-03B. Their office room is 4N169.,"Course: CSE251-03B
+Theory Initial: FFR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: NFS,SZZ
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12B-20L
+
+Course: CSE350-03B
+Theory Initial: ZBH
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09A-07C
+Lab Faculty: NUR,AKDB
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Course: CSE260-03B
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 09E-20T
+Lab Faculty: MZW,ADD
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: FT10-04L
+
+Course: CSE250-03B
+Theory Initial: SEF
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 07H-26C
+Lab Faculty: AKDB,ALSM
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12B-20L
+
+Initial: NFS
+Name: Nafis Faisal
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE251-05B (LAB) SDQ,NFS 12B-20L; 12:30 PM - CSE251-05B (LAB) SDQ,NFS 12B-20L; 2:00 PM - CSE251-03B (LAB) NFS,SZZ 12B-20L; 3:30 PM - CSE251-03B (LAB) NFS,SZZ 12B-20L","The instructor teaching the theory section of CSE251-03B is not specified in the retrieved context, but it does mention that the initial for the theory section is FFR.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0737,0.0,6.7371,6.8108,2026-07-31T16:11:53.703233+00:00,100.0019,100.0166,0.1264203703898735,0.34782608695652173,0.3207049086757991,0.8683855533599854
+FR-01,adaptive_novel,Who teaches the theory section of CSE110-19 and what is their office room?,Tahsin Tanim Ramisha (C. Lecturer) teaches the theory section of CSE110-19. Their office room is 4F.,"Course: CSE110-19
+Theory Initial: THR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 10B-16C
+Lab Faculty: PRC,FZN
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12F-30L
+
+Course: CSE470-19
+Theory Initial: SKIB
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09D-17C
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 9:30 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE110-19 (LAB) PRC,FZN 12F-30L; 3:30 PM - CSE110-19 (LAB) PRC,FZN 12F-30L
+
+Course: STA201-19
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-35C
+
+Course: CSE340-19
+Theory Initial: SADA
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 10B-16C","The theory section of CSE110-19 is taught by faculty members with initials THR, but their specific names and office rooms are not specified in the retrieved context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0269,0.0,6.4425,6.4695,2026-07-31T16:12:00.173330+00:00,100.0019,100.0167,0.13952118378975725,0.39999999999999997,0.45849974297125234,0.8750491738319397
+FR-02,adaptive_novel,Who teaches the theory section of CSE350-02B and what is their office room?,Nur Mohammad Shaon (Lecturer) teaches the theory section of CSE350-02B. Their office room is 4N170.,"Course: CSE350-02B
+Theory Initial: NUR
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09A-07C
+Lab Faculty: RAO,AKJ
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: FT10-02L
+
+Course: CSE350-01B
+Theory Initial: NUR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09A-07C
+Lab Faculty: SDU,RFQ
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Course: CSE350-03B
+Theory Initial: ZBH
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09A-07C
+Lab Faculty: NUR,AKDB
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Initial: NUR
+Name: Nur Mohammad Shaon
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE350-01A 09A-07C,CSE350-01B 09A-07C; 12:30 PM - CSE350-02A 09A-07C,CSE350-02B 09A-07C
+
+Course: CSE350-01A
+Theory Initial: NUR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09A-07C
+Lab Faculty: ARA,SHJR
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: FT10-01L","The instructor teaching the theory section of CSE350-02B is Nur Mohammad Shaon, but unfortunately, there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.028,0.0,6.3276,6.3557,2026-07-31T16:12:06.529514+00:00,100.0013,100.0167,0.23203058032469892,0.5,0.6944732207603854,0.9322408437728882
+FR-03,adaptive_novel,Who teaches the theory section of CSE340-09 and what is their office room?,Mohammed Ashfaqul Haque (Lecturer) teaches the theory section of CSE340-09. Their office room is 4N137.,"Course: CSE340-09
+Theory Initial: AFQ
+Theory Day: SAT+THU
+Theory Time: 8:00 AM
+Theory Room: 09C-16T
+
+Course: CSE340-04
+Theory Initial: MTSM
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T
+
+Course: CSE340-07
+Theory Initial: TNMF
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09C-16T
+
+Course: CSE340-05
+Theory Initial: TNMF
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09C-16T
+
+Course: CSE340-01
+Theory Initial: ACH
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T","The instructor for the theory section of CSE340-09, AFQ, does not have an office room listed in this context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0265,0.0,5.7694,5.7959,2026-07-31T16:12:12.326141+00:00,100.0004,100.0166,0.19228544753133758,0.4444444444444445,0.4035783678756477,0.8810982704162598
+FR-04,adaptive_novel,Who teaches the theory section of CSE331-03 and what is their office room?,Dr. Badhan Das (Assistant Professor) teaches the theory section of CSE331-03. Their office room is 4G19.,"Course: CSE331-03
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T
+
+Course: CSE331-02
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T
+
+Course: CSE331-07
+Theory Initial: ZYH
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09A-05C
+
+Course: CSE331-06
+Theory Initial: RSS
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09A-04C
+
+Course: CSE331-01
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T","The instructor for the theory section of CSE331-03 is NBD, but unfortunately, I do not have information on their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0257,0.0,5.7571,5.7829,2026-07-31T16:12:18.109576+00:00,100.0003,100.0166,0.20828838183973028,0.46153846153846156,0.47450980392156866,0.9018084406852722
+FR-05,adaptive_novel,Who teaches the theory section of CSE260-09A and what is their office room?,Fatiha Ishrar Chowdhury (Lecturer) teaches the theory section of CSE260-09A. Their office room is 4K81.,"Course: CSE260-09A
+Theory Initial: FIC
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09C-13C
+Lab Faculty: ANKH,FIC
+Lab Day: TUE
+Lab Time: 2:00 PM
+Lab Room: FT10-03L
+
+Course: CSE260-04B
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09A-03C
+Lab Faculty: NNTN,MAZW
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: FT10-04L
+
+Course: CSE260-05B
+Theory Initial: NLH
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09A-03C
+Lab Faculty: PBK,NQM
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: FT10-04L
+
+Course: CSE260-05A
+Theory Initial: NLH
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09A-03C
+Lab Faculty: CSYR,SMDS
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: FT10-03L
+
+Course: CSE260-04A
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09A-03C
+Lab Faculty: NFF,MZW
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: FT10-03L","The instructor who teaches the theory section of CSE260-09A is FIC, but unfortunately, there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0257,0.0,6.1831,6.2088,2026-07-31T16:12:24.318613+00:00,100.0017,100.0167,0.24835336815593242,0.5128205128205128,0.5477314892899308,0.893309473991394
+FR-06,adaptive_novel,Who teaches the theory section of CSE250-08A and what is their office room?,Mr. Shadman Shahriar (Lecturer) teaches the theory section of CSE250-08A. Their office room is 4N143.,"Course: CSE250-08A
+Theory Initial: SDS
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 07H-27C
+Lab Faculty: ALSM,NFS
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 12B-20L
+
+Course: CSE260-08A
+Theory Initial: PBK
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 07F-22C
+Lab Faculty: AFQ,TWK
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: FT10-03L
+
+Initial: NFS
+Name: Nafis Faisal
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE250-08A (LAB) ALSM,NFS 12B-20L; 9:30 AM - CSE250-08A (LAB) ALSM,NFS 12B-20L; 12:30 PM - CSE402-01 09A-06C
+
+Course: CSE350-08A
+Theory Initial: SZZ
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 09A-07C
+Lab Faculty: TSE,MOM
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: FT10-01L
+
+Course: CSE251-08A
+Theory Initial: PDS
+Theory Day: MON+WED
+Theory Time: 2:00 PM
+Theory Room: 09H-35C
+Lab Faculty: ZBH,RAS
+Lab Day: SAT
+Lab Time: 8:00 AM
+Lab Room: 12B-20L","The instructor teaching the theory section of CSE250-08A is not specified in the provided context, but it does mention that Nafis Faisal (NFS) is one of the lab faculty members for this course. However, there is no information about who teaches the theory section or their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0271,0.0,9.9632,9.9904,2026-07-31T16:12:34.309610+00:00,100.0014,100.0167,0.1179691761258836,0.3076923076923077,0.5395691609977324,0.8805906772613525
+FR-07,adaptive_novel,Who teaches the theory section of CSE230-11 and what is their office room?,Yasmin Nadia (Lecturer) teaches the theory section of CSE230-11. Their office room is 4L89.,"Course: CSE230-11
+Theory Initial: YND
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 09D-18C
+
+Course: CSE230-05
+Theory Initial: TSM
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 08H-22C
+
+Course: CSE230-01
+Theory Initial: NZRF
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 07D-20C
+
+Course: CSE230-07
+Theory Initial: QUZA
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09D-18C
+
+Course: CSE230-03
+Theory Initial: TSM
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 08H-22C","The instructor teaching the theory section of CSE230-11 is not specified in the retrieved context, but the Theory Initial for CSE230-11 is YND.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0241,0.0,6.3702,6.3943,2026-07-31T16:12:40.704704+00:00,100.0017,100.0167,0.15337404749451009,0.4,0.33756684491978606,0.8653877377510071
+FR-08,adaptive_novel,Who teaches the theory section of CSE427-04 and what is their office room?,Mr. Dibyo Fabian Dofadar (Lecturer) teaches the theory section of CSE427-04. Their office room is 4M106.,"Course: CSE427-04
+Theory Initial: DFD
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: NDT,ITTSC
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 09F-27L
+
+Course: CSE427-09
+Theory Initial: NAST
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 07H-26C
+Lab Faculty: ITTSC,HFN
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 09F-24L
+
+Initial: DFD
+Name: Mr. Dibyo Fabian Dofadar
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - Consultation; 12:30 PM - CSE427-01 CSE427-02 CSE427-03 CSE427-04 09C-16T; 2:00 PM - Consultation; 3:30 PM - Consultation by Appointment
+
+Initial: ITTSC
+Name: Ittehad Saleh Chowdhury
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE427-03 (LAB) ITTSC,RKBM 09F-27L; 9:30 AM - CSE427-03 (LAB) ITTSC,RKBM 09F-27L; 11:00 AM - CSE427-04 (LAB) NDT,ITTSC 09F-27L; 12:30 PM - CSE427-04 (LAB) NDT,ITTSC 09F-27L
+
+Course: CSE427-05
+Theory Initial: QUZA
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09C-13C
+Lab Faculty: QUZA,ITTSC
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09F-27L","The instructor who teaches the theory section of CSE427-04 is Mr. Dibyo Fabian Dofadar, and his scheduled commitment for this course is at 12:30 PM in Room 09C-16T.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0262,0.0,8.1488,8.175,2026-07-31T16:12:48.880502+00:00,100.001,100.0166,0.24819948911232714,0.3333333333333333,0.6014370245139476,0.9200652837753296
+FR-09,adaptive_novel,Who teaches the theory section of CSE111-06 and what is their office room?,Mr. Ahmed Mahir Ruhan (Lecturer) teaches the theory section of CSE111-06. Their office room is 4L93.,"Course: CSE111-06
+Theory Initial: ADU
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 09H-35C
+Lab Faculty: MAFZ,MAU
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 09B-11L
+
+Course: CSE331-06
+Theory Initial: RSS
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09A-04C
+
+Course: CSE437-06
+Theory Initial: SADF
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07D-19C
+
+Course: CSE340-06
+Theory Initial: TNMF
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09C-16T
+
+Initial: MAU
+Name: Marshia Nujhat
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE111-11 (LAB) MAU,AFA 09E-21L; 9:30 AM - CSE111-11 (LAB) MAU,AFA 09E-21L; 2:00 PM - CSE111-06 (LAB) MAFZ,MAU 09B-11L; 3:30 PM - CSE111-06 (LAB) MAFZ,MAU 09B-11L","The instructor for the theory section of CSE111-06 is not specified in the provided context. However, it does mention that the lab faculty for CSE111-06 are MAFZ and MAU, but it does not provide information about who teaches the theory section.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0279,0.0,9.0469,9.0749,2026-07-31T16:12:57.955836+00:00,100.0019,100.0167,0.11085434134712652,0.23333333333333336,0.3407407407407408,0.8574730157852173
+FR-10,adaptive_novel,Who teaches the theory section of CSE111-04 and what is their office room?,Mr. Zaber Mohammad (Lecturer) teaches the theory section of CSE111-04. Their office room is 4J61.,"Course: CSE111-04
+Theory Initial: ZMD
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09D-17C
+Lab Faculty: AVB,CABS
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: 09B-11L
+
+Course: CSE230-04
+Theory Initial: TSM
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 08H-22C
+
+Course: CSE331-04
+Theory Initial: RSS
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 07F-22C
+
+Course: CSE320-04
+Theory Initial: AKTD
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 10B-16C
+
+Course: CSE340-04
+Theory Initial: MTSM
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T","The instructor teaching the theory section of CSE111-04 is ZMD, but unfortunately, there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0268,0.0,5.8363,5.8632,2026-07-31T16:13:03.819653+00:00,100.0019,100.0166,0.20828838183973028,0.5263157894736842,0.5505403687221869,0.9059507846832275
+FR-11,adaptive_novel,Who teaches the theory section of CSE250-03B and what is their office room?,Sheikh Iftekhar Ahmed (C. Lecturer) teaches the theory section of CSE250-03B. Their office room is 4P.,"Course: CSE250-03B
+Theory Initial: SEF
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 07H-26C
+Lab Faculty: AKDB,ALSM
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12B-20L
+
+Course: CSE251-03B
+Theory Initial: FFR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: NFS,SZZ
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12B-20L
+
+Course: CSE250-01B
+Theory Initial: MHY
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: UPM,ALSM
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE260-03B
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 09E-20T
+Lab Faculty: MZW,ADD
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: FT10-04L
+
+Course: CSE350-03B
+Theory Initial: ZBH
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09A-07C
+Lab Faculty: NUR,AKDB
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: FT10-02L","The instructor teaching the theory section of CSE250-03B is not specified in the provided context, but it does mention that the course has a Theory Initial of SEF.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0236,0.0,6.708,6.7317,2026-07-31T16:13:10.552007+00:00,100.0004,100.0167,0.1264203703898735,0.34782608695652173,0.19047619047619052,0.8716526627540588
+FR-12,adaptive_novel,Who teaches the theory section of CSE330-17 and what is their office room?,Mr. Md. Aquib Azmain (Senior Lecturer) teaches the theory section of CSE330-17. Their office room is 4M104.,"Course: CSE330-17
+Theory Initial: AQU
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 10B-16C
+Lab Faculty: ARD,NKBS
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09F-26L
+
+Initial: ARD
+Name: Mr. Ayman Rasheed
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE330-17 (LAB) ARD,NKBS 09F-26L; 12:30 PM - CSE330-17 (LAB) ARD,NKBS 09F-26L
+
+Course: STA101-17
+Theory Initial: TBS
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 10F-31C
+
+Course: STA201-17
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 8:00 AM
+Theory Room: 09H-37C
+
+Course: CSE340-17
+Theory Initial: ZLNM
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 09A-05C","The theory section of CSE330-17 is taught by Mr. Ayman Rasheed, but there is no information provided about his office room in the retrieved context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.028,0.0,6.5068,6.5348,2026-07-31T16:13:17.087342+00:00,100.0007,100.0167,0.16336470131023162,0.3636363636363637,0.4258953168044078,0.8966569900512695
+FR-13,adaptive_novel,Who teaches the theory section of CSE331-13 and what is their office room?,Md. Rifat Rahman (Lecturer) teaches the theory section of CSE331-13. Their office room is 4N164.,"Course: CSE331-13
+Theory Initial: RFR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 07F-22C
+
+Course: CSE331-11
+Theory Initial: LBBH
+Theory Day: SAT+THU
+Theory Time: 8:00 AM
+Theory Room: 07D-20C
+
+Course: CSE331-14
+Theory Initial: RFR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 07F-22C
+
+Course: CSE331-12
+Theory Initial: LBBH
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07D-20C
+
+Course: CSE331-01
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T","The instructor teaching the theory section of CSE331-13 is RFR, but unfortunately, there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0251,0.0,5.8612,5.8863,2026-07-31T16:13:22.974662+00:00,100.0004,100.0167,0.20828838183973028,0.5263157894736842,0.5262518230432669,0.9049745798110962
+FR-14,adaptive_novel,Who teaches the theory section of CSE481-01 and what is their office room?,Mr. Shadman Shahriar (Lecturer) teaches the theory section of CSE481-01. Their office room is 4N143.,"Course: CSE481-01
+Theory Initial: SDS
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09A-05C
+Lab Faculty: SDS,NFS
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 09F-26L
+
+Course: STA201-01
+Theory Initial: TBS
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09H-37C
+
+Course: CSE331-01
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T
+
+Initial: SDS
+Name: Mr. Shadman Shahriar
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE481-01 (LAB) SDS,NFS 09F-26L; 9:30 AM - CSE481-01 (LAB) SDS,NFS 09F-26L; 11:00 AM - CSE251-02A (LAB) SDS,RFQ 12B-20L; 12:30 PM - CSE251-02A (LAB) SDS,RFQ 12B-20L
+
+Initial: NFS
+Name: Nafis Faisal
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE481-01 (LAB) SDS,NFS 09F-26L; 9:30 AM - CSE481-01 (LAB) SDS,NFS 09F-26L; 11:00 AM - CSE402-01 (LAB) NFS,EHQ 09B-10L; 12:30 PM - CSE402-01 (LAB) NFS,EHQ 09B-10L","The instructor teaching the theory section of CSE481-01 is SDS, but there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0299,0.0,5.6795,5.7095,2026-07-31T16:13:28.684743+00:00,100.0019,100.0166,0.22866722231574907,0.5405405405405405,0.5562454502633495,0.9051676988601685
+FR-15,adaptive_novel,Who teaches the theory section of CSE111-01 and what is their office room?,Mr. Md. Tawhid Anwar (Senior Lecturer) teaches the theory section of CSE111-01. Their office room is 4G03.,"Course: CSE111-01
+Theory Initial: TAW
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 10A-05C
+Lab Faculty: TAW,AOHE
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12F-32L
+
+Course: CSE111-03
+Theory Initial: TAW
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 10A-05C
+Lab Faculty: TAW,MAF
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: 12F-32L
+
+Course: CSE111-05
+Theory Initial: ADU
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09H-35C
+Lab Faculty: AFA,FEK
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09B-10L
+
+Course: CSE111-04
+Theory Initial: ZMD
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09D-17C
+Lab Faculty: AVB,CABS
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: 09B-11L
+
+Course: CSE111-11
+Theory Initial: CAKM
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 10B-16C
+Lab Faculty: MAU,AFA
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: 09E-21L","The instructor who teaches the theory section of CSE111-01 is TAW. Unfortunately, I do not have information on TAW's office room in the retrieved context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0267,0.0,6.6931,6.7199,2026-07-31T16:13:35.405388+00:00,100.001,100.0166,0.19306698300385472,0.4,0.4221429351585539,0.8899615406990051
+FR-16,adaptive_novel,Who teaches the theory section of CSE321-20 and what is their office room?,Souvik Ghosh (Lecturer) teaches the theory section of CSE321-20. Their office room is 4M131.,"Course: CSE321-20
+Theory Initial: SVKG
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 07D-20C
+Lab Faculty: MTSM,SSKD
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: 10G-32L
+
+Course: CSE340-20
+Theory Initial: SADA
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 10B-16C
+
+Course: CSE220-20
+Theory Initial: WHMJ
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09A-04C
+Lab Faculty: ESF,IRZA
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09E-22L
+
+Initial: MTSM
+Name: MD. MUHTASIM MAHMUD
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE321-20 (LAB) MTSM,SSKD 10G-32L; 12:30 PM - CSE321-20 (LAB) MTSM,SSKD 10G-32L
+
+Initial: SSKD
+Name: Sheikh Samiul Kadir
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE321-15 (LAB) NKBS,SSKD 10G-32L; 9:30 AM - CSE321-15 (LAB) NKBS,SSKD 10G-32L; 11:00 AM - CSE321-20 (LAB) MTSM,SSKD 10G-32L; 12:30 PM - CSE321-20 (LAB) MTSM,SSKD 10G-32L; 2:00 PM - CSE110-20 (LAB) STNM,SSKD 09E-21L; 3:30 PM - CSE110-20 (LAB) STNM,SSKD 09E-21L","The instructor who teaches the theory section of CSE321-20 is SVKG. Unfortunately, I do not have information on their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0279,0.0,6.0046,6.0326,2026-07-31T16:13:41.438317+00:00,100.0019,100.0167,0.26512298021756175,0.5405405405405405,0.6218264635603346,0.9035691022872925
+FR-17,adaptive_novel,Who teaches the theory section of CSE427-01 and what is their office room?,Dr. Chowdhury Mofizur Rahman (Professor) teaches the theory section of CSE427-01. Their office room is 4G18.,"Course: CSE427-01
+Theory Initial: CMR
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: DFD,ADU
+Lab Day: SUN
+Lab Time: 2:00 PM
+Lab Room: 09F-27L
+
+Course: CSE427-03
+Theory Initial: CMR
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: ITTSC,RKBM
+Lab Day: SUN
+Lab Time: 8:00 AM
+Lab Room: 09F-27L
+
+Initial: CMR
+Name: Dr. Chowdhury Mofizur Rahman
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE427-01 09C-16T,CSE427-02 09C-16T,CSE427-03 09C-16T
+
+Course: CSE427-04
+Theory Initial: DFD
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 09C-16T
+Lab Faculty: NDT,ITTSC
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 09F-27L
+
+Course: CSE427-09
+Theory Initial: NAST
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 07H-26C
+Lab Faculty: ITTSC,HFN
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 09F-24L","The theory section of CSE427-01 is taught by Dr. Chowdhury Mofizur Rahman, whose scheduled commitments include teaching this course at 12:30 PM on Monday in room 09C-16T.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.025,0.0,7.8845,7.9096,2026-07-31T16:13:49.348488+00:00,100.0011,100.0166,0.2168299905777652,0.2978723404255319,0.5914328586393364,0.9221760630607605
+FR-18,adaptive_novel,Who teaches the theory section of CSE330-19 and what is their office room?,Atonu Roy Chowdhury (Lecturer) teaches the theory section of CSE330-19. Their office room is 4P192.,"Course: CSE330-19
+Theory Initial: NARC
+Theory Day: SAT+THU
+Theory Time: 3:30 PM
+Theory Room: 07D-20C
+Lab Faculty: MAJIJ,NRZR
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: 09F-26L
+
+Course: CSE470-19
+Theory Initial: SKIB
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09D-17C
+
+Initial: NRZR
+Name: Riazul Islam Rifat
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE330-19 (LAB) MAJIJ,NRZR 09F-26L; 9:30 AM - CSE330-19 (LAB) MAJIJ,NRZR 09F-26L; 11:00 AM - Consultation by Appointment
+
+Course: STA201-19
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-35C
+
+Course: CSE340-19
+Theory Initial: SADA
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 10B-16C","The theory section of CSE330-19 is taught by NRZR, but unfortunately, there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0273,0.0,5.7789,5.8062,2026-07-31T16:13:55.155764+00:00,100.0003,100.0167,0.21800193956058223,0.4864864864864864,0.5403851069268126,0.8926164507865906
+FR-19,adaptive_novel,Who teaches the theory section of CSE446-01 and what is their office room?,Mr. Mohammad Badrul Hossain (Lecturer) teaches the theory section of CSE446-01. Their office room is 4J67.,"Course: CSE446-01
+Theory Initial: BDH
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 07D-20C
+Lab Faculty: MTSM,SJM
+Lab Day: TUE
+Lab Time: 2:00 PM
+Lab Room: 10E-27L
+
+Initial: MTSM
+Name: MD. MUHTASIM MAHMUD
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE340-04 09E-20T; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE446-01 (LAB) MTSM,SJM 10E-27L; 3:30 PM - CSE446-01 (LAB) MTSM,SJM 10E-27L
+
+Course: CSE340-01
+Theory Initial: ACH
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T
+
+Course: CSE331-01
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T
+
+Initial: SJM
+Name: Sajid Imam Mahir
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - Consultation; 2:00 PM - CSE446-01 (LAB) MTSM,SJM 10E-27L; 3:30 PM - CSE446-01 (LAB) MTSM,SJM 10E-27L","The instructor who teaches the theory section of CSE446-01 is MD. MUHTASIM MAHMUD, whose initial is MTSM, but unfortunately, there is no information provided about his office room in the retrieved context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0266,0.0,8.0321,8.0588,2026-07-31T16:14:03.215052+00:00,100.0019,100.0166,0.14950940007863794,0.36,0.44159652664051496,0.8878982067108154
+FR-20,adaptive_novel,Who teaches the theory section of CSE350-04A and what is their office room?,Md Ashikur Rahman Any (C. Lecturer) teaches the theory section of CSE350-04A. Their office room is 4P.,"Course: CSE350-04A
+Theory Initial: ARA
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09A-07C
+Lab Faculty: SDAS,TSE
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: FT10-01L
+
+Course: CSE350-01B
+Theory Initial: NUR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09A-07C
+Lab Faculty: SDU,RFQ
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Initial: SDAS
+Name: Sowmitra Das
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE350-04A (LAB) SDAS,TSE FT10-01L; 12:30 PM - CSE350-04A (LAB) SDAS,TSE FT10-01L; 2:00 PM - CSE251-01A (LAB) SDAS,SDQ 12B-20L; 3:30 PM - CSE251-01A (LAB) SDAS,SDQ 12B-20L
+
+Course: CSE350-03A
+Theory Initial: ZBH
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09A-07C
+Lab Faculty: AQT,UPM
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: FT10-01L
+
+Course: CSE350-01A
+Theory Initial: NUR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09A-07C
+Lab Faculty: ARA,SHJR
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: FT10-01L","The instructor who teaches the theory section of CSE350-04A is ARA, but there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0246,0.0,5.961,5.9856,2026-07-31T16:14:09.201464+00:00,100.0012,100.0166,0.27151607333166955,0.5,0.5063932636831436,0.9003042578697205
+FR-21,adaptive_novel,Who teaches the theory section of CSE101-07 and what is their office room?,Md Fardin Rahman Ami (C. Lecturer) teaches the theory section of CSE101-07. Their office room is 4F.,"Course: CSE101-07
+Theory Initial: FDM
+Theory Day: MON+WED
+Theory Time: 2:00 PM
+Theory Room: 09D-17C
+Lab Faculty: NQM,SLAR
+Lab Day: SUN
+Lab Time: 8:00 AM
+Lab Room: 12F-31L
+
+Course: CSE101-03
+Theory Initial: RBR
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09B-12C
+Lab Faculty: ESF,ANV
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: FT11-03L
+
+Course: CSE101-05
+Theory Initial: SBHN
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 09A-06C
+Lab Faculty: CMHH,SLAR
+Lab Day: SAT
+Lab Time: 8:00 AM
+Lab Room: FT11-03L
+
+Course: CSE101-04
+Theory Initial: RBR
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 09B-12C
+Lab Faculty: NKMA,NMP
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: FT11-04L
+
+Course: CSE101-01
+Theory Initial: NZRF
+Theory Day: MON+WED
+Theory Time: 3:30 PM
+Theory Room: 09H-35C
+Lab Faculty: SBHN,ESF
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: FT11-03L","The instructor teaching the theory section of CSE101-07 does not appear in the retrieved context, so I do not have enough information to answer this question.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0278,0.0,6.1829,6.2108,2026-07-31T16:14:15.412532+00:00,100.0008,100.0167,0.13083737883508872,0.3111111111111111,0.2924856578576131,0.8682912588119507
+FR-22,adaptive_novel,Who teaches the theory section of CSE260-19B and what is their office room?,Towshik Anam Taj (Lecturer) teaches the theory section of CSE260-19B. Their office room is 4M119.,"Course: CSE260-19B
+Theory Initial: TWK
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 09A-02C
+Lab Faculty: CMHQ,CABS
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: FT10-04L
+
+Initial: CMHQ
+Name: Moinul Haque
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-10A (LAB) CSYR,CMHQ FT11-01L; 9:30 AM - CSE260-10A (LAB) CSYR,CMHQ FT11-01L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE260-19B (LAB) CMHQ,CABS FT10-04L; 3:30 PM - CSE260-19B (LAB) CMHQ,CABS FT10-04L
+
+Initial: TWK
+Name: Towshik Anam Taj
+Day: Sunday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-22B (LAB) TWK,AAF FT10-04L; 9:30 AM - CSE260-22B (LAB) TWK,AAF FT10-04L; 11:00 AM - CSE260-08A (LAB) AFQ,TWK FT10-03L; 12:30 PM - CSE260-08A (LAB) AFQ,TWK FT10-03L; 2:00 PM - CSE260-19A 09A-02C,CSE260-19B 09A-02C; 3:30 PM - Consultation
+
+Initial: TWK
+Name: Towshik Anam Taj
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - Consultation; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE260-19A 09A-02C,CSE260-19B 09A-02C; 3:30 PM - Consultation
+
+Initial: CABS
+Name: Aabrar Islam
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - CSE260-19B (LAB) CMHQ,CABS FT10-04L; 3:30 PM - CSE260-19B (LAB) CMHQ,CABS FT10-04L","The instructor who teaches the theory section of CSE260-19B is Towshik Anam Taj, and the theory section meets in room 09A-02C on Sundays and Tuesdays at 2:00 PM.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0235,0.0,8.5865,8.61,2026-07-31T16:14:24.023183+00:00,100.0019,100.0167,0.20920996857999105,0.3404255319148936,0.5377625760088446,0.89768385887146
+FR-23,adaptive_novel,Who teaches the theory section of CSE421-02 and what is their office room?,Mr. Arif Shakil (Senior Lecturer) teaches the theory section of CSE421-02. Their office room is 4G03.,"Course: CSE421-02
+Theory Initial: ARF
+Theory Day: MON+WED
+Theory Time: 2:00 PM
+Theory Room: 10A-04C
+Lab Faculty: CQAE,WBH
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12D-26L
+
+Course: CSE320-02
+Theory Initial: SRJ
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10A-05C
+
+Course: CSE340-02
+Theory Initial: ACH
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T
+
+Course: CSE331-02
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T
+
+Initial: WBH
+Name: Waleed Bin Habib Khan
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - CSE421-01 (LAB) CQAE,WBH 12D-26L,CSE421-02 (LAB) CQAE,WBH 12D-26L; 3:30 PM - CSE421-01 (LAB) CQAE,WBH 12D-26L,CSE421-02 (LAB) CQAE,WBH 12D-26L","The instructor teaching the theory section of CSE421-02 is not specified in the retrieved context, but it does mention that Waleed Bin Habib Khan (WBH) has a scheduled commitment at 2:00 PM on Saturday for the lab section of CSE421-02. The office room for WBH is not provided in the context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0219,0.0,11.09,11.1119,2026-07-31T16:14:35.135749+00:00,100.0019,100.0167,0.09950006149078018,0.2816901408450704,0.45945742653695726,0.8714586496353149
+FR-24,adaptive_novel,Who teaches the theory section of CSE260-17B and what is their office room?,Majisha Jahan Disha (Lecturer) teaches the theory section of CSE260-17B. Their office room is 4K71.,"Course: CSE260-17B
+Theory Initial: MAJIJ
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 09D-17C
+Lab Faculty: MAZW,MHSK
+Lab Day: TUE
+Lab Time: 2:00 PM
+Lab Room: FT11-01L
+
+Initial: MHSK
+Name: Maharin Mosfakin
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - Consultation; 12:30 PM - CSE341-06 10B-15C; 2:00 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L; 3:30 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L; 5:00 PM - Consultation with Appointment
+
+Initial: MAJIJ
+Name: Majisha Jahan Disha
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE330-19 (LAB) MAJIJ,NRZR 09F-26L; 9:30 AM - CSE330-19 (LAB) MAJIJ,NRZR 09F-26L; 12:30 PM - CSE260-17A 09D-17C,CSE260-17B 09D-17C
+
+Initial: MAJIJ
+Name: Majisha Jahan Disha
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 12:30 PM - CSE260-17A 09D-17C,CSE260-17B 09D-17C; 2:00 PM - CSE260-12B (LAB) MAJIJ,ADD FT10-04L; 3:30 PM - CSE260-12B (LAB) MAJIJ,ADD FT10-04L
+
+Initial: MAZW
+Name: Mirza Azwad Wakil
+Day: Tuesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE470-03 07D-19C; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L; 3:30 PM - CSE260-17B (LAB) MAZW,MHSK FT11-01L","The instructor who teaches the theory section of CSE260-17B is Majisha Jahan Disha, also known as MAJIJ, and their office room is not specified in this context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0259,0.0,7.7061,7.732,2026-07-31T16:14:42.868519+00:00,100.0019,100.0167,0.27785054611340393,0.5,0.6883947608894303,0.9164708256721497
+FR-25,adaptive_novel,Who teaches the theory section of CSE330-14 and what is their office room?,Rifa Tasfiya (Lecturer) teaches the theory section of CSE330-14. Their office room is 4K69.,"Course: CSE330-14
+Theory Initial: RFTS
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09H-34C
+Lab Faculty: MZW,SADF
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 09F-24L
+
+Course: CSE340-14
+Theory Initial: LRK
+Theory Day: MON+WED
+Theory Time: 2:00 PM
+Theory Room: 09A-04C
+
+Course: STA201-14
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 10B-18C
+
+Course: CSE330-01
+Theory Initial: AMK
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09H-35C
+Lab Faculty: ALB,CTFZ
+Lab Day: THU
+Lab Time: 11:00 AM
+Lab Room: 09F-26L
+
+Course: CSE331-14
+Theory Initial: RFR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 07F-22C",The instructor for the theory section of CSE330-14 is not specified in the retrieved context.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0248,0.0,5.0217,5.0466,2026-07-31T16:14:47.915579+00:00,100.0004,100.0167,0.21977073101999892,0.45161290322580644,0.3565695941297868,0.8798354268074036
+FR-26,adaptive_novel,Who teaches the theory section of CSE420-24 and what is their office room?,Abdullah Khondoker (C. Lecturer) teaches the theory section of CSE420-24. Their office room is 4F.,"Course: CSE420-24
+Theory Initial: AKHD
+Theory Day: SAT+THU
+Theory Time: 2:00 PM
+Theory Room: 09H-34C
+Lab Faculty: NLAM,SMDS
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: 12F-32L
+
+Course: CSE423-24
+Theory Initial: ASAK
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 08H-22C
+Lab Faculty: SOSB,MAHS
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 12D-27L
+
+Course: CSE340-24
+Theory Initial: SMYA
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 10C-21C
+
+Initial: SMDS
+Name: Soumitra Das
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - CSE420-24 (LAB) NLAM,SMDS 12F-32L; 3:30 PM - CSE420-24 (LAB) NLAM,SMDS 12F-32L
+
+Course: CSE421-24
+Theory Initial: NDT
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09H-34C
+Lab Faculty: CPTH,NKMA
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12D-26L","The theory section of CSE420-24 is taught by AKHD, but unfortunately, there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0271,0.0,5.8,5.8272,2026-07-31T16:14:53.743460+00:00,100.0012,100.0167,0.21800193956058223,0.4864864864864864,0.5403851069268126,0.8994404077529907
+FR-27,adaptive_novel,Who teaches the theory section of CSE250-03A and what is their office room?,Sheikh Iftekhar Ahmed (C. Lecturer) teaches the theory section of CSE250-03A. Their office room is 4P.,"Course: CSE250-03A
+Theory Initial: SEF
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 07H-26C
+Lab Faculty: RFQ,UPM
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12B-20L
+
+Course: CSE250-01A
+Theory Initial: MHY
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: EHQ,MHY
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250-01B
+Theory Initial: MHY
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: UPM,ALSM
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Initial: UPM
+Name: Tasnim Sobhan Upoma
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE250-01B (LAB) UPM,ALSM 12B-20L; 12:30 PM - CSE250-01B (LAB) UPM,ALSM 12B-20L; 2:00 PM - CSE250-03A (LAB) RFQ,UPM 12B-20L; 3:30 PM - CSE250-03A (LAB) RFQ,UPM 12B-20L
+
+Course: CSE251-03A
+Theory Initial: FFR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: FFR,RFQ
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12B-20L","The instructor who teaches the theory section of CSE250-03A is SEF, but unfortunately, there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0229,0.0,6.2122,6.2352,2026-07-31T16:14:59.978924+00:00,100.0008,100.0167,0.24835336815593242,0.5,0.5236847409796412,0.9021102786064148
+FR-28,adaptive_novel,Who teaches the theory section of CSE422-15 and what is their office room?,Rafiad Sadat Shahir (Lecturer) teaches the theory section of CSE422-15. Their office room is 4N154.,"Course: CSE422-15
+Theory Initial: RSS
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09A-04C
+Lab Faculty: RRH,FFU
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 09B-11L
+
+Course: CSE331-15
+Theory Initial: RFR
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 07D-20C
+
+Course: STA201-15
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09H-37C
+
+Course: STA101-15
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 10B-18C
+
+Initial: RRH
+Name: Mr. Rafeed Rahman
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE422-15 (LAB) RRH,FFU 09B-11L; 9:30 AM - CSE422-15 (LAB) RRH,FFU 09B-11L; 11:00 AM - CSE422-19 (LAB) MHDE,RRH 09B-11L; 12:30 PM - CSE422-19 (LAB) MHDE,RRH 09B-11L","The instructor teaching the theory section of CSE422-15 is not specified in the provided context. However, it does mention that Mr. Rafeed Rahman (RRH) has scheduled commitments for the lab sections of CSE422-15 on Thursday at 8:00 AM and 9:30 AM, but it does not provide information about who teaches the theory section.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0273,0.0,11.5125,11.5399,2026-07-31T16:15:11.519679+00:00,100.0019,100.0167,0.08816582219728929,0.2191780821917808,0.4166367229608337,0.8568655848503113
+FR-29,adaptive_novel,Who teaches the theory section of CSE250-05B and what is their office room?,Mr. Purbayan Das (Lecturer) teaches the theory section of CSE250-05B. Their office room is 4N140.,"Course: CSE250-05B
+Theory Initial: PDS
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 07H-27C
+Lab Faculty: MTOT,RFQ
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: 12B-20L
+
+Course: CSE251-05B
+Theory Initial: RAO
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 07H-27C
+Lab Faculty: SDQ,NFS
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE250-04B
+Theory Initial: FFR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 07H-27C
+Lab Faculty: MHY,PDS
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Course: CSE350-05B
+Theory Initial: ARA
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09A-07C
+Lab Faculty: ARA,TSE
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: FT10-02L
+
+Course: CSE260-05B
+Theory Initial: NLH
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09A-03C
+Lab Faculty: PBK,NQM
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: FT10-04L","The instructor teaching the theory section of CSE250-05B is PDS, but unfortunately, there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0243,0.0,6.1063,6.1307,2026-07-31T16:15:17.650731+00:00,100.0003,100.0167,0.20828838183973028,0.5263157894736842,0.5505403687221869,0.9112088084220886
+FR-30,adaptive_novel,Who teaches the theory section of CSE421-21 and what is their office room?,Tanveer Rahman (Lecturer) teaches the theory section of CSE421-21. Their office room is 4M112.,"Course: CSE421-21
+Theory Initial: TVRR
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 10B-15C
+Lab Faculty: CPTH,NKMA
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12D-26L
+
+Initial: NKMA
+Name: K. M. Azwad Hossain
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE421-21 (LAB) CPTH,NKMA 12D-26L,CSE421-24 (LAB) CPTH,NKMA 12D-26L; 12:30 PM - CSE421-21 (LAB) CPTH,NKMA 12D-26L,CSE421-24 (LAB) CPTH,NKMA 12D-26L; 2:00 PM - CSE421-03 09D-17C; 3:30 PM - Consultation
+
+Initial: TVRR
+Name: Tanveer Rahman
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE421-21 10B-15C; 12:30 PM - CSE421-22 10B-13C
+
+Initial: TVRR
+Name: Tanveer Rahman
+Day: Monday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE421-21 10B-15C; 12:30 PM - CSE421-22 10B-13C
+
+Course: CSE340-21
+Theory Initial: FARS
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09H-33C","The instructor who teaches the theory section of CSE421-21 is Tanveer Rahman, and according to the retrieved context, there is no information about his office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0228,0.0,6.7382,6.7611,2026-07-31T16:15:24.412614+00:00,100.0019,100.0167,0.2050651441691591,0.42857142857142855,0.5659176847004072,0.916100263595581
+FR-31,adaptive_novel,Who teaches the theory section of CSE421-06 and what is their office room?,Dr. Md. Sakir Hossain (Associate Professor) teaches the theory section of CSE421-06. Their office room is 4G17.,"Course: CSE421-06
+Theory Initial: MSAH
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09G-31T
+Lab Faculty: NKMA,CSSN
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: 12D-27L
+
+Course: CSE340-06
+Theory Initial: TNMF
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09C-16T
+
+Course: STA101-06
+Theory Initial: TBS
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09H-37C
+
+Course: CSE437-06
+Theory Initial: SADF
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07D-19C
+
+Course: CSE331-06
+Theory Initial: RSS
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09A-04C","The instructor for the theory section of CSE421-06 is MSAH, but there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.025,0.0,5.7966,5.8216,2026-07-31T16:15:30.234490+00:00,100.0019,100.0167,0.22866722231574907,0.4615384615384615,0.44,0.8983170986175537
+FR-32,adaptive_novel,Who teaches the theory section of CSE341-03 and what is their office room?,Raisul Kabir News (Lecturer) teaches the theory section of CSE341-03. Their office room is 4L94.,"Course: CSE341-03
+Theory Initial: RKN
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09A-02C
+Lab Faculty: CABS,TRZA
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: 09F-27L
+
+Initial: TRZA
+Name: Tanjim Reza
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE341-03 (LAB) CABS,TRZA 09F-27L; 9:30 AM - CSE341-03 (LAB) CABS,TRZA 09F-27L; 11:00 AM - CSE220-17 10B-16C
+
+Course: CSE341-08
+Theory Initial: FFU
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 10A-04C
+Lab Faculty: RAHA,CABS
+Lab Day: SUN
+Lab Time: 8:00 AM
+Lab Room: 12F-30L
+
+Course: CSE341-05
+Theory Initial: UJT
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 10B-15C
+Lab Faculty: NHBN,NWT
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: 09F-27L
+
+Course: CSE341-01
+Theory Initial: RKN
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09H-33C
+Lab Faculty: NHBN,RAHA
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 09F-27L","The theory section of CSE341-03 is taught by RKN, but unfortunately, there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0422,0.0,6.0147,6.057,2026-07-31T16:15:36.292290+00:00,100.0005,100.0166,0.21800193956058223,0.4864864864864864,0.5403851069268126,0.8970068693161011
+FR-33,adaptive_novel,Who teaches the theory section of CSE220-04 and what is their office room?,Mahrin Tasfe (Senior Lecturer) teaches the theory section of CSE220-04. Their office room is 4G30.,"Course: CSE220-04
+Theory Initial: MAHR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 10B-15C
+Lab Faculty: KKS,CSSA
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: 09B-08L
+
+Course: CSE230-04
+Theory Initial: TSM
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 08H-22C
+
+Course: CSE331-04
+Theory Initial: RSS
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 07F-22C
+
+Course: CSE320-04
+Theory Initial: AKTD
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 10B-16C
+
+Course: CSE340-04
+Theory Initial: MTSM
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T","The instructor for the theory section of CSE220-04 is MAHR, but there is no information provided about their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0554,0.0,5.8228,5.8782,2026-07-31T16:15:42.171055+00:00,100.0019,100.0167,0.22866722231574907,0.4864864864864864,0.5015544041450777,0.9021152853965759
+FR-34,adaptive_novel,Who teaches the theory section of CSE460-07 and what is their office room?,Akib Anjum (Lecturer) teaches the theory section of CSE460-07. Their office room is 4N161.,"Course: CSE460-07
+Theory Initial: AKJ
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 09A-07C
+Lab Faculty: SDL,ZIZE
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 12D-26L
+
+Course: CSE460-09
+Theory Initial: UPM
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 09A-07C
+Lab Faculty: ARPD,RAS
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 09E-21L
+
+Course: CSE320-07
+Theory Initial: MAFZ
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 07D-19C
+
+Course: CSE230-07
+Theory Initial: QUZA
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09D-18C
+
+Initial: SDL
+Name: Shadmin Sultana
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE460-07 (LAB) SDL,ZIZE 12D-26L; 12:30 PM - CSE460-07 (LAB) SDL,ZIZE 12D-26L; 2:00 PM - CSE460-06 (LAB) SDL,AKJ 09E-21L; 3:30 PM - CSE460-06 (LAB) SDL,AKJ 09E-21L","The instructor teaching the theory section of CSE460-07 is AKJ. Unfortunately, I do not have information on AKJ's office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0247,0.0,5.9687,5.9935,2026-07-31T16:15:48.165136+00:00,100.0019,100.0167,0.18519747038795875,0.4864864864864865,0.5636274771172133,0.9085617065429688
+FR-35,adaptive_novel,Who teaches the theory section of CSE260-01B and what is their office room?,Mr. Dewan Ziaul Karim (Senior Lecturer) teaches the theory section of CSE260-01B. Their office room is 4G05.,"Course: CSE260-01B
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 09E-20T
+Lab Faculty: ADD,DZK
+Lab Day: THU
+Lab Time: 8:00 AM
+Lab Room: FT10-04L
+
+Course: CSE260-04B
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09A-03C
+Lab Faculty: NNTN,MAZW
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: FT10-04L
+
+Course: CSE350-01B
+Theory Initial: NUR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09A-07C
+Lab Faculty: SDU,RFQ
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Course: CSE250-01B
+Theory Initial: MHY
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: UPM,ALSM
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12B-20L
+
+Initial: ADD
+Name: Ayesha Siddika
+Day: Thursday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE260-01B (LAB) ADD,DZK FT10-04L; 9:30 AM - CSE260-01B (LAB) ADD,DZK FT10-04L; 11:00 AM - CSE260-20B (LAB) AAF,ADD FT11-01L; 12:30 PM - CSE260-20B (LAB) AAF,ADD FT11-01L; 2:00 PM - CSE260-06B (LAB) DZK,ADD FT10-04L; 3:30 PM - CSE260-06B (LAB) DZK,ADD FT10-04L","The instructor who teaches the theory section of CSE260-01B is DZK. Unfortunately, I do not have information on DZK's office room in the retrieved context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0233,0.0,7.0525,7.0758,2026-07-31T16:15:55.241582+00:00,100.0019,100.0167,0.19306698300385472,0.4,0.4395708544999621,0.8866452574729919
+FR-36,adaptive_novel,Who teaches the theory section of CSE422-13 and what is their office room?,Mr. Swattic Ghose (Lecturer) teaches the theory section of CSE422-13. Their office room is 4M109.,"Course: CSE422-13
+Theory Initial: SWG
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 10A-05C
+Lab Faculty: ZHS,NWT
+Lab Day: WED
+Lab Time: 11:00 AM
+Lab Room: 09E-22L
+
+Course: CSE331-13
+Theory Initial: RFR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 07F-22C
+
+Course: CSE470-13
+Theory Initial: SOSB
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09B-12C
+
+Course: CSE340-13
+Theory Initial: PBK
+Theory Day: MON+WED
+Theory Time: 8:00 AM
+Theory Room: 08H-22C
+
+Initial: ZHS
+Name: Mr. Syed Zamil Hasan Shoumo
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE422-01 09E-20T ,CSE422-02 09E-20T ,CSE422-03 09E-20T; 9:30 AM - Consultation; 11:00 AM - CSE422-13 (LAB) ZHS,NWT 09E-22L; 12:30 PM - CSE422-13 (LAB) ZHS,NWT 09E-22L","The instructor for the theory section of CSE422-13 is not specified in the retrieved context, but it does mention that the lab faculty for CSE422-13 are ZHS and NWT. The office room for ZHS (Mr. Syed Zamil Hasan Shoumo) is not provided in the context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0235,0.0,10.1409,10.1645,2026-07-31T16:16:05.406762+00:00,100.0019,100.0167,0.09165155901991762,0.2857142857142857,0.4543629012824976,0.8591920733451843
+FR-37,adaptive_novel,Who teaches the theory section of CSE230-02 and what is their office room?,Niaz Ashraf Khan (Senior Lecturer) teaches the theory section of CSE230-02. Their office room is 4M125.,"Course: CSE230-02
+Theory Initial: NZRF
+Theory Day: SUN+TUE
+Theory Time: 3:30 PM
+Theory Room: 07D-20C
+
+Course: CSE230-01
+Theory Initial: NZRF
+Theory Day: SUN+TUE
+Theory Time: 2:00 PM
+Theory Room: 07D-20C
+
+Course: CSE230-05
+Theory Initial: TSM
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 08H-22C
+
+Course: CSE230-04
+Theory Initial: TSM
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 08H-22C
+
+Course: CSE230-03
+Theory Initial: TSM
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 08H-22C","The instructor for the theory section of CSE230-02 is not specified in the retrieved context, but it does indicate that the course meets on Sundays and Tuesdays at 3:30 PM in room 07D-20C.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0272,0.0,7.7405,7.7677,2026-07-31T16:16:13.175006+00:00,100.0004,100.0167,0.11117895489854909,0.2641509433962264,0.326671511627907,0.862163782119751
+FR-38,adaptive_novel,Who teaches the theory section of CSE360-05 and what is their office room?,Mr. Shakir Rouf (Lecturer) teaches the theory section of CSE360-05. Their office room is 4J53.,"Course: CSE360-05
+Theory Initial: SRU
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 09C-13C
+Lab Faculty: PRC,IRZA
+Lab Day: MON
+Lab Time: 8:00 AM
+Lab Room: 12B-19L
+
+Course: CSE360-03
+Theory Initial: RDW
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-33C
+Lab Faculty: RDW,SMYA
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 12B-19L
+
+Course: CSE360-06
+Theory Initial: SRU
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09A-06C
+Lab Faculty: SMYA,IRZA
+Lab Day: TUE
+Lab Time: 11:00 AM
+Lab Room: 12B-19L
+
+Course: CSE360-07
+Theory Initial: SRU
+Theory Day: MON+WED
+Theory Time: 12:30 PM
+Theory Room: 09A-06C
+Lab Faculty: FIC,IRZA
+Lab Day: TUE
+Lab Time: 8:00 AM
+Lab Room: 12B-19L
+
+Course: CSE360-04
+Theory Initial: RDW
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09H-33C
+Lab Faculty: RDW,SMYA
+Lab Day: SUN
+Lab Time: 11:00 AM
+Lab Room: 12B-19L","The instructor who teaches the theory section of CSE360-05 is SRU. Unfortunately, I do not have information on their office room.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0264,0.0,5.9125,5.9389,2026-07-31T16:16:19.114529+00:00,100.0018,100.0167,0.26512298021756175,0.5263157894736842,0.5931267806267805,0.9045416712760925
+FR-39,adaptive_novel,Who teaches the theory section of CSE421-24 and what is their office room?,NIRJHOR DATTA (Lecturer) teaches the theory section of CSE421-24. Their office room is 4M132.,"Course: CSE421-24
+Theory Initial: NDT
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 09H-34C
+Lab Faculty: CPTH,NKMA
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: 12D-26L
+
+Course: CSE340-24
+Theory Initial: SMYA
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 10C-21C
+
+Initial: CPTH
+Name: Purba Tahia Hassan
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE421-21 (LAB) CPTH,NKMA 12D-26L,CSE421-24 (LAB) CPTH,NKMA 12D-26L; 12:30 PM - CSE421-21 (LAB) CPTH,NKMA 12D-26L,CSE421-24 (LAB) CPTH,NKMA 12D-26L; 2:00 PM - CSE461-08 (LAB) SMYA,CPTH 12B-18L; 3:30 PM - CSE461-08 (LAB) SMYA,CPTH 12B-18L
+
+Initial: NKMA
+Name: K. M. Azwad Hossain
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE421-21 (LAB) CPTH,NKMA 12D-26L,CSE421-24 (LAB) CPTH,NKMA 12D-26L; 12:30 PM - CSE421-21 (LAB) CPTH,NKMA 12D-26L,CSE421-24 (LAB) CPTH,NKMA 12D-26L; 2:00 PM - CSE421-03 09D-17C; 3:30 PM - Consultation
+
+Course: CSE420-24
+Theory Initial: AKHD
+Theory Day: SAT+THU
+Theory Time: 2:00 PM
+Theory Room: 09H-34C
+Lab Faculty: NLAM,SMDS
+Lab Day: MON
+Lab Time: 2:00 PM
+Lab Room: 12F-32L","The theory section of CSE421-24 is taught by both CPTH and NKMA, but their office rooms are not specified in the retrieved context.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0244,0.0,7.0891,7.1136,2026-07-31T16:16:26.228924+00:00,100.0015,100.0167,0.17268932789342512,0.4615384615384615,0.5405047067662527,0.8786279559135437

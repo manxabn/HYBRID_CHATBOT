@@ -52,6 +52,7 @@ from pipeline.abstention import ABSTENTION_MESSAGE, AbstentionGate
 from pipeline.hybrid_retriever import HybridRetriever
 from pipeline.ollama_client import normalize_entities, translate_to_english
 from pipeline.prerequisite_graph import PrerequisiteGraph
+from pipeline.faculty_room_lookup import FacultyRoomLookup
 from pipeline.reranker import Reranker
 
 # Cheap, distinctive Bengali-transliteration ("Banglish") function-word gate:
@@ -288,11 +289,23 @@ def _zigzag_by_confidence(scored_items: list[tuple[float, str]]) -> list[str]:
 class NovelPipeline:
     def __init__(self, retriever: HybridRetriever = None, reranker: Reranker = None,
                  prereq_graph: PrerequisiteGraph = None, abstention_gate: AbstentionGate = None,
+                 faculty_room_lookup: "FacultyRoomLookup" = None,
                  lambda_entity: float = 0.9, lambda_open: float = 0.5,
                  rerank_pool_size: int = 10, final_k: int = 5,
                  use_reranker: bool = False, use_graph: bool = True, use_abstention: bool = True,
                  use_query_translation: bool = False, use_entity_normalization: bool = True,
-                 use_conformal_backoff: bool = False, use_confidence_ordering: bool = True):
+                 use_conformal_backoff: bool = False, use_confidence_ordering: bool = True,
+                 use_faculty_room_lookup: bool = False):
+        # use_faculty_room_lookup defaults to False (2026-07-31, new
+        # component, not yet default per this project's standing practice
+        # of enabling a new mechanism by default only after its own isolated
+        # ablation confirms a real effect -- same discipline as use_reranker
+        # and use_query_translation above). The lookup itself is separately
+        # verified correct (100% on 540 real course->instructor->room
+        # facts, scripts/test_compound_queries_expanded.py's follow-up
+        # check) -- what's not yet measured is whether injecting it changes
+        # END-TO-END ANSWER QUALITY, which is what the isolated ablation
+        # below this __init__ is for.
         # use_query_translation defaults to False as of 2026-07-27: tested
         # directly on the Banglish eval set (isolated ablation, same
         # fine-tuned-embeddings + no-reranker setup either way) and found
@@ -320,6 +333,7 @@ class NovelPipeline:
         self.retriever = retriever or HybridRetriever()
         self.reranker = reranker or (Reranker() if use_reranker else None)
         self.prereq_graph = prereq_graph or (PrerequisiteGraph() if use_graph else None)
+        self.faculty_room_lookup = faculty_room_lookup or (FacultyRoomLookup() if use_faculty_room_lookup else None)
         if use_abstention and abstention_gate is None:
             abstention_gate = AbstentionGate()  # raises if not yet calibrated
         self.abstention_gate = abstention_gate
@@ -474,6 +488,7 @@ class NovelPipeline:
         t2 = time.perf_counter()
 
         graph_block = self.prereq_graph.context_block(query) if self.prereq_graph else None
+        faculty_room_block = self.faculty_room_lookup.context_block(query) if self.faculty_room_lookup else None
 
         # Sufficient-context signals (exact_match/question_match) are checked
         # over the WIDER pre-rerank pool (`results`, size=rerank_pool_size),
@@ -524,6 +539,8 @@ class NovelPipeline:
             scored_parts.append((float("inf"), AMBIGUOUS_ENTITY_NOTICE + conditioning_hint))
         if graph_block:
             scored_parts.append((float("inf"), graph_block))  # verified structural fact, not a probabilistic score
+        if faculty_room_block:
+            scored_parts.append((float("inf"), faculty_room_block))  # verified structural fact, not a probabilistic score
         for d in pool_matches:
             scored_parts.append((1e6, d["text"]))  # already-verified sufficiency match (exact_match or near-duplicate question), ranks above any ordinary retrieval score
         for d in final_results:
@@ -572,11 +589,12 @@ class NovelPipeline:
         context_checked = final_results + pool_matches
         exact_match_any = any(d.get("exact_match") for d in context_checked)
         has_graph = graph_block is not None
+        has_faculty_room = faculty_room_block is not None
         question_match_any = any(
             _question_match_ratio(query, d["text"]) >= QUESTION_MATCH_THRESHOLD
             for d in context_checked
         )
-        sufficient_context = exact_match_any or has_graph or question_match_any
+        sufficient_context = exact_match_any or has_graph or has_faculty_room or question_match_any
         abstain = raw_abstain and not sufficient_context
 
         meta = {
@@ -585,6 +603,7 @@ class NovelPipeline:
             "raw_abstain": raw_abstain,
             "sufficient_context_override": raw_abstain and sufficient_context,
             "graph_augmented": has_graph,
+            "faculty_room_augmented": has_faculty_room,
             "is_ambiguous_entity": is_ambiguous_entity,
             "n_ambiguous_candidates": len(exact_ids),
             "exact_match_any": exact_match_any,
