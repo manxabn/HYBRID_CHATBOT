@@ -1915,6 +1915,35 @@ contradicting) this session's broader finding that this corpus's fusion
 -weight ceiling is small because the fine-tuned embeddings and exact
 -match mechanism already capture nearly everything gettable. Not adopted.
 
+## 2026-08-01: checked a real theoretical concern (Chroma's default distance metric vs. the embedding model's training objective) -- verified no bug exists
+Motivated by the same rigor that found the exact-match bug: `scripts/
+build_chroma_index.py`/`stage_chroma_index_rebuild.py` create the Chroma
+collection via `get_or_create_collection` with no `metadata={"hnsw:
+space": ...}` argument, so it silently uses Chroma's default distance
+metric (L2/Euclidean). The embedding model is fine-tuned with
+`MultipleNegativesRankingLoss`, a cosine-similarity-based objective --
+L2 distance and cosine similarity are NOT equivalent for arbitrary
+vectors, only for unit-normalized ones, and `embeddings.py`'s `.encode()`
+call does not pass `normalize_embeddings=True`. This looked like a real,
+plausible, previously-unchecked mismatch worth verifying directly rather
+than trusting either "it's probably fine" or "this must be the bug."
+
+**Checked empirically rather than assumed**: encoded four real corpus/
+query strings and measured their L2 norm directly. All four came back at
+norm=1.0000 exactly -- this specific sentence-transformers model
+normalizes internally as part of its architecture, even without the
+`normalize_embeddings=True` flag being passed explicitly. For unit
+-normalized vectors, L2² = 2 - 2·cosine, a strictly monotonic
+relationship -- L2 distance and cosine similarity produce IDENTICAL
+rankings. **No bug exists here.** The theoretical concern was real and
+worth checking; the concrete answer is that it doesn't apply to this
+model in practice.
+
+Reported as a real, disclosed verification with a clean negative result,
+same standard as every other check this session -- not skipped because
+it might have been inconvenient, and not overclaimed as a finding because
+it wasn't one.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
