@@ -1842,16 +1842,28 @@ tuned by BM25's original authors for variable-length web documents; this
 corpus's chunks are fairly uniform (500-char windows), so less
 normalization fits better.
 
-**Not yet adopted into the deployed system.** This is a legitimate
-finding about BM25's OWN baseline quality -- disclosed for what it is,
-not "helping BM25" to sabotage the comparison, and not "helping hybrid"
-either, since it improves bm25_only's own recall directly. Adopting it
-would mean rebuilding `data/bm25_corpus.pkl` with the new parameters and
-re-running the full IR-metrics and generation-quality suites to see the
-real end-to-end effect (a bigger task than this quick isolation check) --
-flagged as a legitimate next step, not done yet, since the gain (+0.02
-recall@1) is modest enough that whether it changes any of this session's
-significance conclusions needs to be measured, not assumed.
+**RESOLVED, same day: verified end-to-end and adopted.** Built a staged
+tuned index (k1=1.5, b=0.4) using the real project tokenizer
+(`pipeline/tokenizer.py`, not the simplified regex the isolation test
+used), loaded via `HybridRetriever(bm25_path=...)` alongside the deployed
+index without touching it, and re-ran the full 200-query IR-metrics
+suite through both real configs (bm25_only, full_hybrid) with exact
+-match included this time. Result, smaller than the isolated test but
+still real and strictly non-negative: `bm25_only` recall@1 0.940 -> 0.945
+overall (entity-heavy byte-identical, 0.930 both -- exact-match already
+dominates there regardless of BM25 params; open-ended 0.950 -> 0.960).
+`full_hybrid` unaffected (already saturated). Checked every subset
+specifically for a hidden regression before adopting -- found none.
+
+Adopted: `scripts/build_bm25_index.py` now builds with `k1=1.5, b=0.4`;
+`data/bm25_corpus.pkl` rebuilt (old version backed up locally to
+`data/bm25_corpus_pre_k1b_tuning.pkl.bak`, not committed). All 24
+regression tests re-passed against the new deployed index, and the full
+`measure_ir_metrics.py` suite re-run and confirmed consistent with the
+staged test (`results/ir_metrics.csv`, `results/ir_metrics_bootstrap_
+significance.csv` updated). A small, honest, disclosed improvement to
+BM25's own baseline quality -- adopted because it was verified safe, not
+assumed safe.
 
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
