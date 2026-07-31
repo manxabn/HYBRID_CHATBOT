@@ -710,6 +710,37 @@ result.
    strengthens rather than weakens the finding's credibility. `results/
    adaptive_routing_isolated_significance.csv` now reflects this current
    run, not the 2026-07-28 one.
+
+   **Superseded again, same day, by a real measurement-bug fix**: found
+   and fixed a genuine ground-truth regex bug (`EMAIL_RE` in `scripts/
+   measure_ir_metrics.py` and two other scripts -- greedily matched a
+   sentence-ending period as part of the email domain, e.g. "...email is
+   x@bracu.ac.bd." extracted the dot too, so it never matched the
+   correctly-formatted candidate text even when retrieval was actually
+   right). Found by directly tracing one reported "miss" against a live
+   `retrieve_adaptive()` call that answered it correctly. Re-ran `measure_
+   ir_metrics.py` and `scripts/measure_prerank_pool_recall.py` with the
+   fix: overall recall@1 rose from 0.910 to **0.950**, MRR from 0.915 to
+   **0.955** -- a real, legitimate correction (nothing about retrieval
+   itself changed, only the accuracy of what was being checked against).
+   Entity-heavy misses in the pool-recall diagnostic dropped from 15/100
+   to 7/100; the remaining 7 are all "full prerequisite chain" queries,
+   which structurally cannot be answered by a single retrieved chunk
+   (they need `pipeline/prerequisite_graph.py`'s multi-hop traversal
+   injection, a different code path this retrieval-only diagnostic
+   doesn't exercise) -- not a retrieval gap at all.
+
+   Direct `full_hybrid` vs `bm25_only` comparison with the corrected data
+   (`results/ir_metrics.csv`, current): full_hybrid now numerically ahead
+   on recall@1/MRR, most visibly on open-ended queries (MRR 0.980 vs
+   0.968, recall@1 0.970 vs 0.950) -- but this does **not** clear
+   significance in the paired bootstrap test (CI still includes zero, a
+   known artifact when most queries tie exactly between two configs,
+   clustering the bootstrap distribution tightly around zero). Honest
+   framing: full_hybrid shows a small, consistent numerical edge over
+   bm25_only after the measurement fix -- a real, legitimate finding from
+   fixing a bug, not from changing the system -- but it is not yet a
+   statistically confirmed win and should not be reported as one.
 3. **RESOLVED/UPDATED 2026-07-31**: the finer lambda sweep (11 points,
    0.0-1.0, 60-query stratified subset) was stale (Jul 26, pre-Banglish
    -expanded model) -- archived that raw data (`archive/lambda_sweep_raw_
