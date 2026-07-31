@@ -2047,6 +2047,37 @@ and already-fixed fragmentation problem. No test was run against the
 retrieval pipeline for this reason specifically -- not skipped, ruled out
 by direct measurement of the thing the parameter controls.
 
+## 2026-08-01: confirmed the exact-match fix ALSO resolved the other compound-query type (prereq+coordinator), not just prereq+room
+Direct follow-up to "which questions actually prefer hybrid" -- the
+earliest compound-query type tested (prerequisite + theory coordinator,
+n=26) showed a clean 3-0 directional sweep favoring full_hybrid, real but
+underpowered (p=0.25). That test was never re-run after the exact-match
+fix (which was general -- it corrects the `codes_covered_by_full_match`
+exclusion whenever a query wants Prerequisites OR Coordinator info, not
+just Prerequisites) -- re-ran it now (`scripts/test_compound_queries.py`,
+`results/compound_query_mcnemar.csv`).
+
+**Result: also now perfect for all four configs.** `both_hit@3/5/10` =
+1.000 for `bm25_only`, `full_hybrid`, `vector_only`, AND `adaptive`,
+0 discordant pairs anywhere (p=1.0 across the board). The earlier 3-0
+edge favoring full_hybrid on this query type was the same exact-match
+bug's fingerprint as the prereq+room case, not a second, independent
+piece of evidence for a persistent hybrid advantage -- confirmed
+directly, not assumed by analogy.
+
+**This is good, clean confirmation that the exact-match fix was a
+larger, more broadly beneficial change than initially verified** -- it
+resolves compound queries across at least two different real-data table
+pairs (Prerequisites x CourseDetails, Prerequisites x Coordinator)
+through the same general mechanism, not two separate coincidences. Every
+compound-query type systematically tested this session (prereq+room,
+prereq+coordinator) is now fully solved for every retrieval
+configuration -- the only one that still shows a structural gap is
+faculty+room (instructor lookup), which needed the separate
+`faculty_room_lookup.py` cross-reference mechanism because it is a
+genuinely different problem shape (two sequential lookups across tables
+with no shared key), not an exact-match indexing bug.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

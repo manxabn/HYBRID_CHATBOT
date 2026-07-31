@@ -1,6 +1,6 @@
 comparison,metric,n,full_hybrid_only_correct,bm25_only_only_correct,n_discordant,mcnemar_p,significant_at_0.05,vector_only_only_correct
-full_hybrid_vs_bm25_only,both_hit@3,26,3,0.0,3,0.25,False,
-full_hybrid_vs_bm25_only,both_hit@5,26,1,0.0,1,1.0,False,
+full_hybrid_vs_bm25_only,both_hit@3,26,0,0.0,0,1.0,False,
+full_hybrid_vs_bm25_only,both_hit@5,26,0,0.0,0,1.0,False,
 full_hybrid_vs_bm25_only,both_hit@10,26,0,0.0,0,1.0,False,
 full_hybrid_vs_vector_only,both_hit@3,26,0,,0,1.0,False,0.0
 full_hybrid_vs_vector_only,both_hit@5,26,0,,0,1.0,False,0.0

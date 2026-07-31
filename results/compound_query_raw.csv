@@ -1,10 +1,10 @@
 query_id,config,prereq_hit@3,coord_hit@3,both_hit@3,prereq_hit@5,coord_hit@5,both_hit@5,prereq_hit@10,coord_hit@10,both_hit@10
 COMPOUND-CSE111,bm25_only,True,True,True,True,True,True,True,True,True
 COMPOUND-CSE220,bm25_only,True,True,True,True,True,True,True,True,True
-COMPOUND-CSE221,bm25_only,True,False,False,True,False,False,True,True,True
+COMPOUND-CSE221,bm25_only,True,True,True,True,True,True,True,True,True
 COMPOUND-CSE250,bm25_only,True,True,True,True,True,True,True,True,True
-COMPOUND-CSE251,bm25_only,True,False,False,True,True,True,True,True,True
-COMPOUND-CSE260,bm25_only,True,False,False,True,True,True,True,True,True
+COMPOUND-CSE251,bm25_only,True,True,True,True,True,True,True,True,True
+COMPOUND-CSE260,bm25_only,True,True,True,True,True,True,True,True,True
 COMPOUND-CSE310,bm25_only,True,True,True,True,True,True,True,True,True
 COMPOUND-CSE321,bm25_only,True,True,True,True,True,True,True,True,True
 COMPOUND-CSE330,bm25_only,True,True,True,True,True,True,True,True,True
