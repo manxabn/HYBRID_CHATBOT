@@ -1,0 +1,113 @@
+Open-ended queries: 100
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 6679.14it/s]
+  Q001: "I'm not aware of any information regarding the management of meal plan"
+  Q002: 'The reason for the late fee appearing on the pay slip of scholarship r'
+  Q003: 'The next intake for the undergraduate programs at BRAC University typi'
+  Q004: 'According to the BRAC University guidelines, the minimum number of gro'
+  Q005: 'Students who experience a scheduling conflict with their exams at BRAC'
+  Q006: 'The Electrical and Electronics Engineering (EEE) Department at BRAC Un'
+  Q007: 'The BRAC University Medical Center provides a range of medical and hea'
+  Q008: 'At BRAC University, students typically have a few days to confirm thei'
+  Q009: 'Students and visitors with vehicles can park in designated parking lot'
+  Q010: 'The Wishlist event at BRAC University is designed to provide students '
+  Q011: 'BRAC University issues both physical and digital student ID cards to i'
+  Q012: "I'm happy to help with your question, but I need to clarify that BRAC "
+  Q013: 'If you miss a midterm or final exam at BRAC University, you should imm'
+  Q014: "According to our university's policies, if your advising session is bl"
+  Q015: 'Students interested in Cybersecurity at BRAC University may consider t'
+  Q016: 'To contact the BRAC University Finance and Accounts Department, studen'
+  Q017: 'For further information regarding admission at BRAC University, you ca'
+  Q018: "BRAC University's official colors are blue and white. These colors are"
+  Q019: 'Students at BRAC University are typically informed about changes to th'
+  Q020: "At the Security Supervisor Office of BRAC University, students' ID car"
+  Q021: 'The Center for Entrepreneurship Development (CED) at BRAC University p'
+  Q022: 'To change your section in a course at BRAC University, students typica'
+  Q023: 'As an Electrical and Electronics Engineering (EEE) student with a decl'
+  Q024: 'At BRAC University, the majority of undergraduate programs do offer an'
+  Q025: 'The Bachelor of Science in Electrical and Electronic Engineering (BSEE'
+  Q026: "BRAC University's main campus is located in Dhaka, Bangladesh, and its"
+  Q027: "I'm happy to help with your question about BRAC University's academic "
+  Q028: "BRAC University's transportation services provide multiple routes conn"
+  Q029: 'The library at BRAC University provides a range of services to support'
+  Q030: "I'm happy to help with your question about BRAC University's transport"
+  Q031: "BRAC University's tuition fee structure consists of a combination of s"
+  Q032: 'The bus for off-campus transportation typically departs from the main '
+  Q033: 'The designated bus stops for Route-03 at BRAC University in Jigatola a'
+  Q034: 'At BRAC University, Freshman Enrollment and Class Sign refers to the p'
+  Q035: "The 5th floor of BRAC University's campus houses the university's libr"
+  Q036: 'Yes, students at BRAC University can reserve seats in advance for advi'
+  Q037: 'To stay updated on upcoming games and events at BRAC University, stude'
+  Q038: 'Yes, students can receive visitors on the BRAC University Savar campus'
+  Q039: 'At BRAC University, students are advised not to select unnecessary cou'
+  Q040: "According to our university's guidelines, students typically have a on"
+  Q041: 'MPH faculty members at the James P. Grant School of Public Health (JPG'
+  Q042: "The BRAC University Students' Transport Service is a convenient and sa"
+  Q043: "According to our records, Route-01 of the university's shuttle service"
+  Q044: "According to the university's policies and procedures, all new student"
+  Q045: 'If your advisor is not responding, you can try contacting the Academic'
+  Q046: 'BRAC University has a strong athletic program and fields teams in vari'
+  Q047: 'BRAC University offers various opportunities for students to engage in'
+  Q048: 'Yes, students at BRAC University have the right to appeal their grades'
+  Q049: 'For the Bachelor of Social Sciences (BSS) program at BRAC University, '
+  Q050: 'At BRAC University, students enrolled in lab-based and design-based pr'
+  Q051: "According to the university's examination policies, students are not a"
+  Q052: 'BRAC University typically operates on a trimester system, with three s'
+  Q053: 'BRAC University has a merit-based scholarship program that awards fina'
+  Q054: 'The Counseling and Wellness Centre at BRAC University offers a range o'
+  Q055: 'According to the BRAC University academic policies, students must have'
+  Q056: 'BRAC University was established in 2008 by the BRAC Education Trust, a'
+  Q057: 'All first-year students at BRAC University are required to participate'
+  Q058: 'At BRAC University, students who have completed a similar course at an'
+  Q059: 'To start a new club at BRAC University, students typically need to sub'
+  Q060: "BRAC University's debating team has indeed achieved significant succes"
+  Q061: 'To access the Multipurpose Hall at BRAC University, students can check'
+  Q062: "BRAC University calculates a student's cumulative Grade Point Average "
+  Q063: "According to our university's policies, students can pay their fees in"
+  Q064: 'The Office of the Proctor at BRAC University is responsible for overse'
+  Q065: 'Non-students can use the BRAC University transport service on a case-b'
+  Q066: 'To be eligible for admission into the Computer Science and Engineering'
+  Q067: "According to our university's policies and procedures, students can ty"
+  Q068: 'The Syndicate at BRAC University is a student-led governing body that '
+  Q069: 'At BRAC University, students who wish to receive financial aid must de'
+  Q070: 'According to the BRAC University academic policies, students are requi'
+  Q071: 'According to our understanding of the BRAC University scholarship poli'
+  Q072: 'The Joint PhD program between BRAC University and SOAS (School of Orie'
+  Q073: 'To be eligible for the Sibling Scholarship at BRAC University, your si'
+  Q074: "I'm happy to help with your question, but I need to clarify that I'm a"
+  Q075: 'To be eligible for an internship at BRAC University, students typicall'
+  Q076: 'The contact information for library staff at BRAC University can be fo'
+  Q077: 'If a student fails to confirm their advising during the Self-Registrat'
+  Q078: "According to the university's examination policies, students are requi"
+  Q079: 'To access the Prayer Room for females at BRAC University, students can'
+  Q080: 'The buX platform at BRAC University is built on the Moodle learning ma'
+  Q081: 'The BRAC Scholarship is a merit-based scholarship program offered by B'
+  Q082: "BRAC University's student information management system was previously"
+  Q083: 'The Early Childhood Development (ECD) program at BRAC University typic'
+  Q084: 'At BRAC University, all undergraduate students are required to complet'
+  Q085: 'BRAC University offers a range of short professional certificate cours'
+  Q086: 'The Office of Student Affairs at BRAC University is responsible for ha'
+  Q087: 'Violating TARC (Tertiary Admission and Registration Committee) rules a'
+  Q088: 'The official student payment manual for BRAC University can be found o'
+  Q089: "According to our records, Route-03 of the university's shuttle service"
+  Q090: 'According to the BRAC University policy for international students hol'
+  Q091: "Yes, students at BRAC University's library can indeed renew books they"
+  Q092: "According to the university's admissions policy, there is a non-refund"
+  Q093: "According to BRAC University's policies and procedures, if a student m"
+  Q094: 'The English Department at BRAC University offers minors in various fie'
+  Q095: "If you're unable to log in to a lab PC at BRAC University, please cont"
+  Q096: "BRAC University's library provides access to a wide range of academic "
+  Q097: 'At BRAC University, the important dates and deadlines for admission ty'
+  Q098: 'The Office of the Registrar at BRAC University is primarily responsibl'
+  Q099: 'BRAC University has a strict policy against sexual harassment, which i'
+  Q100: 'The BRAC University School of Law was established in 2003, and it offe'
+
+=== Recall by config (open-ended, n=100) ===
+                      recall@1  recall@3  recall@5     mrr  ndcg@5  ndcg@10
+config                                                                     
+bm25_only                 0.96      0.98      0.98  0.9711  0.9303   0.9567
+full_hybrid_baseline      0.97      0.99      0.99  0.9800  0.9539   0.9693
+full_hybrid_hyde          0.95      0.99      0.99  0.9683  0.9425   0.9632
+vector_only_baseline      0.99      1.00      1.00  0.9950  0.9810   0.9886
+vector_only_hyde          0.77      0.85      0.92  0.8263  0.8211   0.8596
+
+Wrote E:\RAG\updated_Rag\RAG-main\results\hyde_retrieval_raw.csv

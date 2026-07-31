@@ -1865,6 +1865,56 @@ significance.csv` updated). A small, honest, disclosed improvement to
 BM25's own baseline quality -- adopted because it was verified safe, not
 assumed safe.
 
+## 2026-08-01: HyDE tried on open-ended queries -- genuinely new lever, clearly negative, real mechanistic reason
+A genuinely different attempt from everything else tried this session:
+not a fusion weight, reranker, or BM25 parameter -- HyDE (Hypothetical
+Document Embeddings, Gao et al. 2022), which generates a short
+hypothetical answer via the LLM first, then embeds THAT for vector
+search instead of the bare query. Motivation: closing a possible
+query-answer semantic gap on open-ended queries specifically, the one
+subset where vector quality has the most theoretical room to matter
+(entity-heavy is already saturated by exact-match regardless of vector
+quality, established repeatedly this session).
+
+`scripts/test_hyde_retrieval.py`: 100 open-ended queries, one Ollama call
+each for the hypothetical answer (`results/hyde_hypothetical_answers.csv`,
+checkpointed), then real BM25+vector retrieval with the HyDE embedding
+substituted for the query embedding on the vector side only (BM25 side
+unchanged, matching the original HyDE paper's scope). Compared against
+the same real fusion logic (`_score_linear`) at lambda=0 (vector_only)
+and lambda=0.5 (full_hybrid).
+
+**Result: HyDE makes retrieval WORSE, not better, and clearly so
+(`results/hyde_retrieval_raw.csv`)**:
+
+| Config | Recall@1 |
+|---|---|
+| vector_only, normal query embedding | 0.99 |
+| vector_only, HyDE embedding | 0.77 (-0.22) |
+| full_hybrid, normal query embedding | 0.97 |
+| full_hybrid, HyDE embedding | 0.95 (-0.02) |
+| bm25_only (reference) | 0.96 |
+
+**Real, understandable mechanism, not just a negative number**:
+`vector_only` with the NORMAL query embedding is already at 0.99 recall@1
+on open-ended queries -- the domain-fine-tuned embedding model (trained
+specifically on this corpus's own question/answer pairs, Section on
+hard-negative mining) already closed the query-answer semantic gap HyDE
+exists to fix. Since the LLM generating the hypothetical answer does not
+actually know this corpus's real facts, some hypothetical answers are
+wrong or generic -- searching with a wrong hypothetical answer pulls
+retrieval away from the correct real answer instead of toward it. HyDE
+is designed for settings where the base embedding model has a real
+semantic gap to close; this project's domain fine-tuning already
+eliminated that gap, so HyDE has nothing to fix and actively introduces
+hallucination-based noise instead.
+
+**Conclusion**: a real, different lever, tested properly, negative for a
+clear and mechanistically satisfying reason -- consistent with (not
+contradicting) this session's broader finding that this corpus's fusion
+-weight ceiling is small because the fine-tuned embeddings and exact
+-match mechanism already capture nearly everything gettable. Not adopted.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
