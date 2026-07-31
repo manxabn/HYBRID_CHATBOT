@@ -838,14 +838,18 @@ result.
    confirmed in EnglishQA's count) and `scripts/build_bm25_index.py`
    (CPU-only, no conflict with the concurrently-running novel-pipeline
    regeneration job) to propagate the change to both retrieval streams'
-   source data. **Still pending**: the ChromaDB vector index itself still
-   needs a rebuild (`scripts/stage_chroma_index_rebuild.py` + `swap_chroma_
-   staging.py`, the safe staged workflow, not `build_chroma_index.py`
-   directly, since chroma_db/ is live) — deferred until the GPU-bound
-   novel-pipeline regeneration job (see below) finishes, per the standing
-   one-GPU-job-at-a-time rule. Until that rebuild runs, the new governance
-   rows exist in the DB/corpus/BM25 index but are not yet retrievable via
-   vector search.
+   source data. **RESOLVED same day**: ran the ChromaDB rebuild once the
+   GPU-bound novel-pipeline regeneration job finished (one-GPU-job-at-a-
+   time rule), via the safe staged workflow (`scripts/stage_chroma_index_
+   rebuild.py` -> `chroma_db_staging/`, all 7138 chunks embedded, then
+   `scripts/swap_chroma_staging.py` -> atomic rename into `chroma_db/`;
+   old index preserved, not deleted, at `chroma_db_old_pre_governance_
+   merge_2026-07-31/`). Verified live: a direct `retrieve()` call for one
+   of the new governance paraphrases ("What is the slogan or catchphrase
+   that BRAC University uses...") returns all three of its `GOV-AUG-008-*`
+   variants in the top 3 results. The new governance rows are now fully
+   retrievable end-to-end (DB, corpus, BM25, and vector index all
+   consistent).
 7. **Alias table population attempted, correctly blocked, not forced** —
    see the "Resolved/added since the last rewrite" section above; still
    genuinely blocked on new source data this repo doesn't have (no
