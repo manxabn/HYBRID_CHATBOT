@@ -728,9 +728,31 @@ result.
    and updating the earlier λ≈0.25 finding with fresh current-model
    evidence (`results/lambda_sweep_significance.csv`, 32/216 comparisons
    significant). The deployed λ=0.5 is still not the empirically best
-   fixed weight for open-ended queries -- still not deployed, still needs
-   a properly held-out re-tuning pass before changing the default
-   (selecting and evaluating on the same test set would be circular).
+   fixed weight for open-ended queries on the TUNING set -- but see the
+   held-out check immediately below, which does NOT confirm this as a
+   real, generalizable effect.
+
+   **Held-out validation (2026-07-31, `scripts/eval_lambda_held_out.py`,
+   `results/lambda_0.3_held_out_significance.csv`): λ=0.3 does NOT
+   replicate on genuinely unseen data.** The 60-query tuning subset above
+   was used ONLY to select λ=0.3; this check evaluated it on the
+   remaining 140 queries the selection process never touched (reusing
+   the existing full_hybrid/bm25_only/vector_only/no_retrieval
+   generations for those same 140 queries from the main ablation table,
+   generating only the new λ=0.3 arm). Result: on open-ended queries
+   (where the tuning set found a significant win), the held-out set
+   shows NO significant difference between λ=0.3 and bm25_only/
+   full_hybrid on any metric. On entity-heavy queries, λ=0.3 is
+   significantly WORSE than both bm25_only (bleu p=0.008, bertscore
+   p=0.021, meteor p<0.001) and full_hybrid (bleu p=0.010, meteor
+   p=0.002). **Conclusion: the tuning-set peak was very likely sample
+   -specific noise, not a real, generalizable effect. Do NOT change the
+   deployed λ=0.5 based on the tuning-set finding alone -- this is
+   precisely the overfitting risk the "needs a held-out pass" caveat
+   above was warning about, and the held-out check just caught it.**
+   This is now a closed, doubly-tested question: the tuning-set finding
+   is real (it happened, on that data), but it does not generalize, and
+   the deployed fixed weight should not be changed on its basis.
 4. **RESOLVED 2026-07-31**: the full 200-query, 4-config generation-quality
    ablation table has now been regenerated under the current (Banglish
    -expanded) embedding model -- `scripts/run_ablation.py`, made

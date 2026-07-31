@@ -42,7 +42,17 @@ sys.path.insert(0, str(ROOT))
 import pipeline.hybrid_retriever as hr
 from pipeline.hybrid_retriever import COURSE_CODE_RE, FACULTY_INITIAL_RE, _normalize_name
 
-EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
+EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+# 2026-07-31: the old pattern's domain segment ([\w.-]+) greedily swallowed
+# a trailing sentence-ending period as if it were part of the TLD -- e.g.
+# "...email is X@bracu.ac.bd." extracted "X@bracu.ac.bd." (WITH the dot),
+# which then never matched the correctly-formatted candidate text
+# ("X@bracu.ac.bd", no dot). This silently reported several genuinely
+# correct retrievals as complete misses (recall@1=0, recall@10=0) --
+# found by directly tracing a "miss" that a live retrieve_adaptive() call
+# actually answered correctly. Fixed by requiring each domain segment to
+# be its own \.[\w-]+ group (no embedded dot), so a trailing period with
+# nothing following it is correctly left unconsumed.
 QUERIES_PATH = ROOT / "data" / "test_queries.csv"
 OUT_PATH = ROOT / "results" / "ir_metrics.csv"
 OUT_BOOTSTRAP = ROOT / "results" / "ir_metrics_bootstrap_significance.csv"

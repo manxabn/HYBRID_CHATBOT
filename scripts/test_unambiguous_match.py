@@ -60,7 +60,10 @@ sys.path.insert(0, str(ROOT))
 import pipeline.hybrid_retriever as hr
 from pipeline.hybrid_retriever import COURSE_CODE_RE, FACULTY_INITIAL_RE, _normalize_name
 
-EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
+EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+# 2026-07-31: fixed the same greedy-trailing-period bug found and fixed in
+# scripts/measure_ir_metrics.py's identical pattern -- see that file's
+# comment for the full mechanism.
 
 
 def _is_correct(candidate, query: str, reference_answer: str) -> bool:

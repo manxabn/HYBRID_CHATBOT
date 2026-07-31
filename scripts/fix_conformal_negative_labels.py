@@ -60,7 +60,12 @@ from pipeline.patterns import COURSE_CODE_RE
 RAW_PATH = ROOT / "results" / "conformal_calibration_labels.csv"
 OUT_PATH = ROOT / "results" / "conformal_calibration_labels_fixed.csv"
 
-EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
+EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+# 2026-07-31: fixed the same greedy-trailing-period bug found and fixed
+# in scripts/measure_ir_metrics.py's identical pattern -- see that file's
+# comment for the full mechanism. Doesn't change this script's already
+# concluded finding (conformal calibration needs human labels), just
+# keeps the pattern consistent across the codebase.
 PHONE_RE = re.compile(r"(\+?\d{1,3}[-\s])?\d{3,5}[-\s]?\d{5,8}")
 URL_RE = re.compile(r"https?://\S+|www\.\S+|bracu\.ac\.bd\S*")
 SEMESTER_YEAR_RE = re.compile(r"(Spring|Summer|Fall)\s+\d{4}", re.IGNORECASE)

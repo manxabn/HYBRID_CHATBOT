@@ -1,0 +1,2 @@
+config,bleu,rougeL,bertscore,meteor,n
+lambda_0.3,0.6395,0.8302,0.9659,0.8332,140
