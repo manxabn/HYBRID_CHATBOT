@@ -1944,6 +1944,38 @@ same standard as every other check this session -- not skipped because
 it might have been inconvenient, and not overclaimed as a finding because
 it wasn't one.
 
+## 2026-08-01: custom-built "grounded PRF" retrieval variant -- safe (unlike HyDE) but no room left to help
+A new, purpose-built variant, not lifted unmodified from a single paper:
+after HyDE failed because it expands the query with an LLM-IMAGINED
+hypothetical answer (which can be flatly wrong), this expands the query
+instead with the REAL top-1 chunk from a first-pass retrieval -- grounded
+pseudo-relevance feedback using this project's own retriever, no LLM call
+involved. `scripts/test_grounded_prf.py`: blend
+`0.7*query_embedding + 0.3*top1_chunk_embedding`, renormalized, for a
+second-pass vector search. Open-ended queries only (n=100), same
+reasoning as the HyDE test.
+
+**Result: essentially no effect, in either direction**
+(`results/grounded_prf_raw.csv`). Recall@1/@5/MRR are IDENTICAL for
+100% of queries between baseline and grounded-PRF, for both vector_only
+and full_hybrid -- zero queries changed. A tiny nDCG@10 nudge on 7/100
+queries (+0.0017 average), not meaningfully different from noise.
+
+**Why, mechanistically**: baseline recall@1 on open-ended queries is
+already 0.97 (full_hybrid) / 0.99 (vector_only) -- there is essentially
+no room for ANY retrieval-side technique to improve on an already
+-near-perfect baseline, the same structural reason HyDE, the fusion
+-weight ceiling, and every reranker attempt all converge on. The one
+genuine difference from HyDE: grounding the expansion in real corpus
+content instead of LLM invention avoided HyDE's actual failure mode
+(searching with a confidently wrong hypothetical answer) -- this
+technique is safe, HyDE was not, even though neither helps here.
+
+Confirms (does not contradict) the broader finding: this corpus's
+retrieval ceiling is saturated from multiple independent angles now
+(oracle fusion-weight calculation, HyDE, and this), not just asserted.
+Not adopted -- no measured benefit to adopt.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
