@@ -1,0 +1,17 @@
+config,metric,n,mean_diff_new_minus_old,t_stat,p_value,significant_at_0.05
+bm25_only,bleu,200,-0.00156,-0.1323,0.89489,False
+bm25_only,rougeL,200,-0.00053,-0.0696,0.94455,False
+bm25_only,bertscore,200,-0.00086,-0.6485,0.51743,False
+bm25_only,meteor,200,-0.0054,-0.9173,0.36008,False
+full_hybrid,bleu,200,-0.00145,-0.1301,0.8966,False
+full_hybrid,rougeL,200,0.00024,0.0327,0.97394,False
+full_hybrid,bertscore,200,0.00035,0.2741,0.78429,False
+full_hybrid,meteor,200,-0.0002,-0.0266,0.97883,False
+no_retrieval,bleu,200,0.0,,,False
+no_retrieval,rougeL,200,0.0,,,False
+no_retrieval,bertscore,200,-0.0,-0.7738,0.43996,False
+no_retrieval,meteor,200,0.0,,,False
+vector_only,bleu,200,0.0,,,False
+vector_only,rougeL,200,0.0,,,False
+vector_only,bertscore,200,0.0,0.4648,0.6426,False
+vector_only,meteor,200,0.0,,,False

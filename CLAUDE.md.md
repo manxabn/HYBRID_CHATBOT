@@ -2078,6 +2078,78 @@ faculty+room (instructor lookup), which needed the separate
 genuinely different problem shape (two sequential lookups across tables
 with no shared key), not an exact-match indexing bug.
 
+## 2026-08-01 loop check: abstention threshold has no held-out validation (real methodological gap, not yet fixed)
+
+While the main post-BM25-tuning ablation regeneration ran in the
+background (GPU-bound, so no second GPU job was started concurrently —
+see the OOM incident earlier in this log for why that rule exists),
+re-read `scripts/calibrate_abstention.py` end to end to check the
+open_ended/entity_heavy per-route thresholds actually generalize.
+
+**Finding**: `sweep_signal()` picks the threshold that maximizes accuracy
+on the SAME set (`out_of_scope + answerable_sample + synthetic_entity_
+calibration`) that `results/abstention_threshold.json`'s precision/
+recall/f1/accuracy numbers are then computed from — there is no train/
+test split anywhere in this script. The reported entity_heavy accuracy
+(0.95, n=60) and open_ended accuracy (0.710, n=372) are therefore
+in-sample fit quality, not a held-out generalization estimate. A
+threshold swept over 372 points to maximize accuracy on those same 372
+points will typically read some amount high versus true generalization,
+especially for open_ended where the search is over a continuous score
+and n is only moderate.
+
+**Not a false claim in the paper**: checked `paper.tex` Section
+\ref{subsec:abstention} and Table \ref{tab:abstention-calib} — both
+describe this consistently as "calibration" throughout and never claim
+held-out/test-set evaluation, so this is not a correctness bug in the
+existing text the way the exact-match and BM25-staleness issues were.
+It is, however, an undisclosed methodological limitation worth being
+honest about, and a real, cheap thing to actually measure rather than
+just flag.
+
+**Queued, not yet run**: a proper fix is a stratified train/test split
+(e.g. 70/30, seed=42, same pattern as `finetune_embeddings.py`'s
+existing split) — fit the threshold on train only, report accuracy on
+test only, compare against the current in-sample number to see how much
+it was overfit. This needs `HybridRetriever` (embedding model on GPU) so
+it will run once the ablation regeneration job releases the GPU, not
+concurrently with it. Script not yet written as of this entry.
+
+## 2026-08-01 loop: main ablation table confirmed NOT stale after BM25 k1/b tuning
+
+Resolves the open question flagged when the BM25 k1/b tuning was adopted:
+it changed retrieval ranking for 109-110/200 queries under bm25_only/
+full_hybrid, so the existing `results/ablation_metrics_summary.csv`
+(BLEU/ROUGE-L/BERTScore/METEOR, scored before the tuning) might have gone
+stale for real, not just in theory.
+
+Re-ran the full 800-generation pipeline under the current tuned BM25 +
+exact-match-fixed retriever (`results/ablation_raw_outputs_post_bm25_
+tuning.csv`, `scripts/run_ablation.py`, 800/800 rows, no errors), scored
+it identically (`scripts/compute_metrics.py` ->
+`results/ablation_metrics_summary_post_bm25_tuning.csv`), then ran a
+matched-by-query_id paired t-test per (config, metric) against the
+original scored file (`scripts/verify_bm25_tuning_ablation_stability.py`
+-> `results/bm25_tuning_ablation_stability.csv`).
+
+**Result: no significant difference anywhere.** All 16 (config x metric)
+comparisons for bm25_only/full_hybrid: p in [0.36, 0.98], |mean_diff| <=
+0.0054 (meteor, bm25_only) with every other metric under 0.0016.
+vector_only and no_retrieval are byte-identical between the two runs, as
+expected (neither touches the BM25 index at all) -- a useful internal
+sanity check that the two pipeline runs really are comparable apples-to
+-apples.
+
+**Conclusion**: despite materially reordering candidates for roughly half
+the query set, the BM25 tuning's effect on end-to-end generation quality
+is indistinguishable from run-to-run noise on this corpus -- consistent
+with the earlier finding that recall@1 barely moved (only 1/200 top-1
+changed for full_hybrid). The existing `ablation_metrics_summary.csv` /
+`significance_tests.csv` remain valid as the paper's reported numbers;
+no `paper.tex` table update is required from this concern. Both raw
+result sets are kept (pre- and post-tuning) as the project's standing
+archive-don't-overwrite convention.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
