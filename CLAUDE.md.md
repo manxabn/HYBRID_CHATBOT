@@ -1976,6 +1976,47 @@ retrieval ceiling is saturated from multiple independent angles now
 (oracle fusion-weight calculation, HyDE, and this), not just asserted.
 Not adopted -- no measured benefit to adopt.
 
+## 2026-08-01: category-boost attempt -- another custom, corpus-specific mechanism, cleanly negative
+Directly motivated by "diagnose why BM25 does well, then build something
+targeting that diagnosis": EnglishQA's `Category` field (16 real
+categories -- Admission, Campus, Library, etc., ~150 rows each) is stored
+in corpus metadata but never used by ANY retrieval scoring in `pipeline/
+hybrid_retriever.py` -- BM25 and vector search both operate on chunk text
+only. This is real, unused structure, not a generic technique from a
+checklist.
+
+`scripts/test_category_boost.py`: built one "category centroid" embedding
+per category (mean embedding of up to 40 real train-split questions per
+category, using the existing embedding model -- no new training), then
+for each open-ended test query, found its nearest centroid (a free,
+zero-shot classification in the existing embedding space) and added an
+additive boost (+0.15, same order of magnitude as `EXACT_MATCH_BONUS`)
+to candidates whose own `Category` matched the prediction.
+
+**Result: negative, and meaningfully worse than baseline on nDCG**
+(`results/category_boost_raw.csv`): recall@1 roughly flat to slightly
+worse (vector_only 0.99->0.98), but nDCG@5 drops substantially --
+full_hybrid 0.9539->0.9383, vector_only 0.9810->0.9058.
+
+**Root cause, checked directly rather than left as "it just didn't
+work"**: the zero-shot nearest-centroid category classifier is only
+**66% accurate** (verified by cross-referencing each predicted category
+against the true category of each query's actual reference answer). Since
+the boost fires on the PREDICTED category, in the 34% of cases where the
+prediction is wrong, the boost actively promotes wrong-category
+candidates ahead of the correct (differently-categorized) one -- and
+since baseline recall is already 0.97-0.99, a correct prediction adds
+nothing (the right answer was already ranked first), while a wrong one
+directly causes harm. There is no favorable trade-off available this
+close to the ceiling: any auxiliary signal's own imperfection gets
+amplified into net harm rather than diluted into net benefit.
+
+**Conclusion**: this is the same structural story as HyDE and grounded
+PRF, from a third, genuinely different, corpus-specific angle (unused
+metadata, not a query-expansion technique) -- confirms the ceiling is
+real and general, not an artifact of the two previous methods tried. Not
+adopted.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
