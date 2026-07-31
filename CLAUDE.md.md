@@ -1361,13 +1361,22 @@ negatives_structured` (QA-pairs + structured, no Banglish expansion)
 already scored a perfect 1.0/1.0/1.0 in the same table -- there is real
 reason to expect the regression is already fixed in the model actually
 running in production, not merely disclosed as a known limitation.
-**Fixed the stale label and added the real deployed model to `scripts/
-eval_structured_embeddings.py`'s `MODELS` dict; re-running now is the
-direct next step (queued behind the reranker re-verification below,
-one-GPU-job-at-a-time).** If confirmed, this converts a disclosed
-weakness into either a non-issue or a much smaller one — a real result
-either way, to be reported honestly once measured, not assumed positive
-in advance.
+**RESOLVED 2026-07-31, confirmed by direct re-measurement**: fixed the
+stale label and added the real deployed model to `scripts/eval_structured_
+embeddings.py`'s `MODELS` dict, then re-ran it (`results/structured_
+embedding_held_out_eval.csv`, $n=328$). **The actually-deployed model
+(`finetuned_minilm_hard_negatives_structured_banglish_expanded`) scores a
+perfect Top-1/Top-5/MRR = 1.000/1.000/1.000 on structured-table chunks —
+identical to the structured-extended intermediate checkpoint, a full
+recovery from the superseded QA-pairs-only model's 0.466/0.585/0.524.**
+The regression described in this weakness never applied to the system
+currently in production; it applied to an earlier checkpoint that was
+already replaced before the Banglish-expansion retrain. This is not a
+"disclosed but unfixed" limitation — it does not exist in the deployed
+system, verified directly rather than assumed. Updated `paper/paper.tex`'s
+discussion of this finding (Section~\ref{subsec:hard-negatives}) to state
+this directly rather than leave the earlier, more alarming framing
+standing uncorrected; recompiled cleanly (26 pages, no errors).
 
 **3. RESOLVED 2026-07-31: reranker-on numbers re-verified under the
 current embedding model.** `scripts/run_novel_pipeline.py --use-reranker

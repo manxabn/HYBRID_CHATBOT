@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  31 JUL 2026 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  31 JUL 2026 22:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -765,19 +765,12 @@ Overfull \hbox (1.12054pt too wide) in paragraph at lines 330--331
 re-measured un-der the cur-rent em-bed-ding model (the reranker-
  []
 
-[14]
-<fig_lambda_sweep.png, id=461, 794.97pt x 578.16pt>
+[14] [15]
+<fig_lambda_sweep.png, id=467, 794.97pt x 578.16pt>
 File: fig_lambda_sweep.png Graphic file (type png)
 <use fig_lambda_sweep.png>
 Package pdftex.def Info: fig_lambda_sweep.png  used on input line 380.
 (pdftex.def)             Requested size: 227.62204pt x 165.54482pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[15]
-Underfull \vbox (badness 1043) has occurred while \output is active []
-
  [16 <./fig_lambda_sweep.png>] [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -818,11 +811,11 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  14129 strings out of 467871
  225074 string characters out of 5418376
- 657415 words of memory out of 5000000
+ 659610 words of memory out of 5000000
  42680 multiletter control sequences out of 15000+600000
  665418 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,5763b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,5763b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -833,7 +826,7 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (26 pages, 837916 bytes).
+Output written on paper.pdf (26 pages, 839009 bytes).
 PDF statistics:
  707 PDF objects out of 1000 (max. 8388607)
  138 named destinations out of 1000 (max. 500000)
