@@ -1,0 +1,26 @@
+query_id,query,reference_answer,is_entity_heavy,source
+Q138,What is the coordinator email for CSE437?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.,True,Coordinator
+Q127,What is the full prerequisite chain for CSE220?,The full prerequisite chain for CSE220 is CSE111-CSE230-CSE110.,True,Prerequisites
+Q179,Who teaches the lab section of CSE420-13?,"The lab section of CSE420-13 is taught by SUE,NFMK.",True,CourseDetails
+Q192,What is FYS's designation?,Dr. Farig Yousuf Sadeque (FYS) is a Associate Professor.,True,FacultyList
+Q150,What is the coordinator email for CSE430?,The coordinator email for CSE430 is ehtashamul.haque@bracu.ac.bd.,True,Coordinator
+Q116,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).,True,Prerequisites
+Q194,What is MVH's designation?,Mohammad Naveed Hossain (MVH) is a Lecturer.,True,FacultyList
+Q172,Who teaches the lab section of CSE350-06B?,"The lab section of CSE350-06B is taught by RAO,SHJR.",True,CourseDetails
+Q187,What is FEK's designation?,Farden Ehsan Khan (FEK) is a Lecturer.,True,FacultyList
+Q123,What are the prerequisites for CSE430?,The prerequisite for CSE430 is MAT120 (HP).,True,Prerequisites
+Q038,Can students receive visitors while at the Savar campus?,"Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.",False,EnglishQA
+Q027,What amenities and facilities are provided for students at TARC?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.",False,EnglishQA
+Q079,What steps do I need to follow to access the Prayer Room for females?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),False,EnglishQA
+Q092,"I wanted to ask, is there an application fee, How much is it?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]",False,EnglishQA
+Q050,Do lab-based or design-based programs pay an additional fee beyond regular tuition?,"Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.",False,EnglishQA
+Q016,How to contact with BRACU Finance and Accounts Department?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd",False,EnglishQA
+Q094,Does ENH offer a minor for students outside the department?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.",False,EnglishQA
+Q072,How is the Joint PhD program with SOAS structured over time?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.",False,EnglishQA
+Q087,Before I forget to ask — what are the consequences of violating TARC rules and regulations?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled",False,EnglishQA
+Q023,I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?,"Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.",False,EnglishQA

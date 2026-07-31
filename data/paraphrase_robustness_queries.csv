@@ -1,0 +1,76 @@
+query_id,base_query_id,variant,is_entity_heavy,query,reference_answer
+Q138-orig,Q138,original,True,What is the coordinator email for CSE437?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.
+Q138-p1,Q138,paraphrase1,True,Could you tell me the email address of CSE437's coordinator?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.
+Q138-p2,Q138,paraphrase2,True,I need to reach the CSE437 coordinator -- what's their email?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.
+Q127-orig,Q127,original,True,What is the full prerequisite chain for CSE220?,The full prerequisite chain for CSE220 is CSE111-CSE230-CSE110.
+Q127-p1,Q127,paraphrase1,True,Can you list out the entire prerequisite chain leading up to CSE220?,The full prerequisite chain for CSE220 is CSE111-CSE230-CSE110.
+Q127-p2,Q127,paraphrase2,True,What's the complete chain of prerequisites I'd need before taking CSE220?,The full prerequisite chain for CSE220 is CSE111-CSE230-CSE110.
+Q179-orig,Q179,original,True,Who teaches the lab section of CSE420-13?,"The lab section of CSE420-13 is taught by SUE,NFMK."
+Q179-p1,Q179,paraphrase1,True,Can you tell me who's in charge of the CSE420-13 lab section?,"The lab section of CSE420-13 is taught by SUE,NFMK."
+Q179-p2,Q179,paraphrase2,True,I want to know the instructor for CSE420-13's lab.,"The lab section of CSE420-13 is taught by SUE,NFMK."
+Q192-orig,Q192,original,True,What is FYS's designation?,Dr. Farig Yousuf Sadeque (FYS) is a Associate Professor.
+Q192-p1,Q192,paraphrase1,True,Could you tell me FYS's job title?,Dr. Farig Yousuf Sadeque (FYS) is a Associate Professor.
+Q192-p2,Q192,paraphrase2,True,What position does FYS hold?,Dr. Farig Yousuf Sadeque (FYS) is a Associate Professor.
+Q150-orig,Q150,original,True,What is the coordinator email for CSE430?,The coordinator email for CSE430 is ehtashamul.haque@bracu.ac.bd.
+Q150-p1,Q150,paraphrase1,True,What's the email of the person coordinating CSE430?,The coordinator email for CSE430 is ehtashamul.haque@bracu.ac.bd.
+Q150-p2,Q150,paraphrase2,True,How can I email the CSE430 coordinator?,The coordinator email for CSE430 is ehtashamul.haque@bracu.ac.bd.
+Q116-orig,Q116,original,True,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).
+Q116-p1,Q116,paraphrase1,True,What do I need to have completed before taking CSE360?,The prerequisite for CSE360 is CSE341 (HP).
+Q116-p2,Q116,paraphrase2,True,Which courses are required before enrolling in CSE360?,The prerequisite for CSE360 is CSE341 (HP).
+Q194-orig,Q194,original,True,What is MVH's designation?,Mohammad Naveed Hossain (MVH) is a Lecturer.
+Q194-p1,Q194,paraphrase1,True,What is MVH's title at the university?,Mohammad Naveed Hossain (MVH) is a Lecturer.
+Q194-p2,Q194,paraphrase2,True,Can you tell me MVH's designation?,Mohammad Naveed Hossain (MVH) is a Lecturer.
+Q172-orig,Q172,original,True,Who teaches the lab section of CSE350-06B?,"The lab section of CSE350-06B is taught by RAO,SHJR."
+Q172-p1,Q172,paraphrase1,True,Who's the instructor for the CSE350-06B lab?,"The lab section of CSE350-06B is taught by RAO,SHJR."
+Q172-p2,Q172,paraphrase2,True,I need to know who teaches CSE350-06B's lab section.,"The lab section of CSE350-06B is taught by RAO,SHJR."
+Q187-orig,Q187,original,True,What is FEK's designation?,Farden Ehsan Khan (FEK) is a Lecturer.
+Q187-p1,Q187,paraphrase1,True,What's FEK's official title?,Farden Ehsan Khan (FEK) is a Lecturer.
+Q187-p2,Q187,paraphrase2,True,Could you let me know FEK's designation?,Farden Ehsan Khan (FEK) is a Lecturer.
+Q123-orig,Q123,original,True,What are the prerequisites for CSE430?,The prerequisite for CSE430 is MAT120 (HP).
+Q123-p1,Q123,paraphrase1,True,Which courses must I take before CSE430?,The prerequisite for CSE430 is MAT120 (HP).
+Q123-p2,Q123,paraphrase2,True,What do I need to complete first before taking CSE430?,The prerequisite for CSE430 is MAT120 (HP).
+Q038-orig,Q038,original,False,Can students receive visitors while at the Savar campus?,"Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays."
+Q038-p1,Q038,paraphrase1,False,Is it allowed for visitors to come see students at the Savar campus?,"Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays."
+Q038-p2,Q038,paraphrase2,False,"If I'm staying at Savar, can I have guests visit me?","Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays."
+Q027-orig,Q027,original,False,What amenities and facilities are provided for students at TARC?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves."
+Q027-p1,Q027,paraphrase1,False,What kind of facilities does TARC offer to students?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves."
+Q027-p2,Q027,paraphrase2,False,Could you describe what amenities are available for students at TARC?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves."
+Q079-orig,Q079,original,False,What steps do I need to follow to access the Prayer Room for females?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
+Q079-p1,Q079,paraphrase1,False,How do I get access to the female Prayer Room?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
+Q079-p2,Q079,paraphrase2,False,What's the process for female students to use the Prayer Room?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
+Q092-orig,Q092,original,False,"I wanted to ask, is there an application fee, How much is it?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]"
+Q092-p1,Q092,paraphrase1,False,"Do I have to pay an application fee, and what's the amount?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]"
+Q092-p2,Q092,paraphrase2,False,"Is there a fee for applying, and how much does it cost?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]"
+Q050-orig,Q050,original,False,Do lab-based or design-based programs pay an additional fee beyond regular tuition?,"Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees."
+Q050-p1,Q050,paraphrase1,False,Are there extra charges for lab or design-based programs on top of tuition?,"Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees."
+Q050-p2,Q050,paraphrase2,False,"Besides regular tuition, do lab/design programs cost more?","Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees."
+Q016-orig,Q016,original,False,How to contact with BRACU Finance and Accounts Department?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd"
+Q016-p1,Q016,paraphrase1,False,What's the best way to get in touch with the Finance and Accounts Department at BRACU?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd"
+Q016-p2,Q016,paraphrase2,False,How can I reach BRACU's Finance and Accounts office?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd"
+Q094-orig,Q094,original,False,Does ENH offer a minor for students outside the department?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study."
+Q094-p1,Q094,paraphrase1,False,Can non-department students take a minor under ENH?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study."
+Q094-p2,Q094,paraphrase2,False,Is a minor with ENH available to students from other departments?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study."
+Q072-orig,Q072,original,False,How is the Joint PhD program with SOAS structured over time?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University."
+Q072-p1,Q072,paraphrase1,False,What does the timeline look like for the Joint PhD program with SOAS?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University."
+Q072-p2,Q072,paraphrase2,False,Can you explain how the SOAS Joint PhD program is organized across its duration?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University."
+Q087-orig,Q087,original,False,Before I forget to ask — what are the consequences of violating TARC rules and regulations?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled"
+Q087-p1,Q087,paraphrase1,False,What happens if someone breaks the TARC rules and regulations?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled"
+Q087-p2,Q087,paraphrase2,False,What penalties are there for violating TARC's rules?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled"
+Q023-orig,Q023,original,False,I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?,"Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently."
+Q023-p1,Q023,paraphrase1,False,"As an EEE student doing a Physics minor, do I still have to satisfy the Physics minor's own prerequisite requirements?","Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently."
+Q023-p2,Q023,paraphrase2,False,"If I'm majoring in EEE and minoring in Physics, are the Physics minor's prerequisites still required for me?","Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently."

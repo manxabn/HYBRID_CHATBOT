@@ -1412,6 +1412,65 @@ Not something further engineering fully closes -- reported as a genuine,
 disclosed limitation, not something to manufacture past what the corpus
 actually contains.
 
+## 2026-07-31: SERIOUS, NEW finding — the deployed chatbot is not robust to open-ended query paraphrasing
+Direct answer to a question raised repeatedly this session ("does the
+chatbot work when questions are asked in different ways?") -- never
+actually tested until now. Built `scripts/build_paraphrase_robustness_
+queries.py` (`data/paraphrase_robustness_queries.csv`): 20 real base
+queries (10 entity-heavy, 10 open-ended, seed=7 from `data/test_queries.
+csv`) + 2 hand-written natural paraphrases each, all three variants
+sharing the same verified `reference_answer` (paraphrasing the question
+doesn't change the correct answer). Ran the full deployed pipeline
+(`scripts/run_novel_pipeline.py`, reranker off, default config) on all 60
+via real Ollama generations (`results/paraphrase_robustness_raw.csv`).
+
+**Result: 0/20 originals abstained. 4/20 entity-heavy paraphrases
+abstained (20%). 20/20 open-ended paraphrases abstained -- every single
+one, 100%.** This is real, reproducible, and not a fluke of test
+construction -- traced to the exact mechanism, not just observed.
+
+**Mechanism, confirmed by direct inspection of the raw signals, not
+assumed**: `query_confidence` (`pipeline/hybrid_retriever.py:683`) is the
+margin between the top-1 and top-2 fused retrieval scores -- the module's
+own docstring already flags a known blind spot ("several near-duplicate
+paraphrase chunks all correctly match the query... margin is tiny despite
+retrieval being unambiguous and correct"). Checked `query_top1_score`
+(the retrieval quality signal without this blind spot) across original
+vs. paraphrased pairs: it stays comparably high (e.g. Q027: orig=1.048,
+p1=0.955, p2=1.002 -- all good retrieval), while the margin collapses
+(Q027: orig=0.0112 -> p1=0.0013, p2=0.0035) enough to cross the calibrated
+abstention threshold. Retrieval itself is NOT the problem -- the
+CONFIDENCE HEURISTIC built on top of it is fragile to paraphrasing on
+this corpus's paraphrase-dense open-ended content specifically.
+
+**The designed safety net for exactly this blind spot does not catch it,
+also confirmed by direct code inspection**: `_question_match_ratio`
+(`pipeline/novel_pipeline.py:260`) uses `difflib.SequenceMatcher` -- a
+character-level LEXICAL similarity, not semantic -- at a strict 0.90
+threshold (`QUESTION_MATCH_THRESHOLD`). A genuine paraphrase (different
+wording, same meaning) essentially cannot reach 0.90 character-sequence
+overlap by construction, so this override can only catch near-identical
+phrasing (typos, minor rewording), not real paraphrases -- exactly the
+case it's supposed to exist for.
+
+**This is a real, previously-undisclosed, serious weakness in the
+deployed system, found by actually testing rather than assuming
+robustness.** Not fixing it hastily: loosening the abstention threshold
+or the match-ratio threshold carelessly risks breaking the already
+-calibrated out-of-scope detection (a separately-validated, real
+mechanism) in the other direction -- more confidently-wrong answers on
+genuinely out-of-scope queries. The legitimate fix candidate is a
+SEMANTIC version of the question-match override (embedding cosine
+similarity between the query and the corpus's stored `Question` field,
+using the embedding model already resident in the pipeline, instead of
+character-level `SequenceMatcher`) -- this directly targets the
+mechanism (lexical-only matching) without touching the calibrated margin
+threshold itself. Next step: build this as a new, isolated, testable
+component (same discipline as `faculty_room_lookup.py`), verify it
+rescues these 20 paraphrase abstentions AND does not reduce the true
+-abstention rate on genuinely out-of-scope queries, before considering it
+for deployment.
+
 ## Infrastructure note: BERTScore (roberta-large) segfaults on GPU when Ollama is also resident
 `scripts/compute_metrics.py` reproducibly segfaulted (exit 139, twice in a
 row, same command) loading `roberta-large` on CUDA while Ollama's 8B model
