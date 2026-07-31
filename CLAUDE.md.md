@@ -2150,6 +2150,55 @@ no `paper.tex` table update is required from this concern. Both raw
 result sets are kept (pre- and post-tuning) as the project's standing
 archive-don't-overwrite convention.
 
+## 2026-08-01 loop: reranker-on ablation was genuinely stale -- re-verified, paper.tex corrected
+
+Following up the "check reranker-on staleness" item: `results/novel_
+pipeline_raw_outputs_roundN_reranker.csv` (the run paper.tex's Table
+tab:reranker-ablation currently cited) was generated 2026-07-31 22:54-
+23:57, which is BEFORE both the exact-match coverage fix (adf58f0,
+2026-08-01 00:18) and the BM25 $k_1$/$b$ retuning (e11f0ea, 2026-08-01
+01:29). Unlike the main 4-config ablation (verified stable above), the
+reranker-on run had never been re-measured under either fix.
+
+Re-ran it end to end: `python scripts/run_novel_pipeline.py --use
+-reranker --out results/novel_pipeline_raw_outputs_roundO_reranker.csv`
+(200 queries, 1 abstained, matches prior abstention rate), scored via
+`compute_metrics.py`, tested via `significance_tests_novel.py` against
+the (already-confirmed-stable) `results/ablation_metrics_per_query.csv`
+baseline -> `results/significance_tests_novel_roundO_reranker.csv`.
+
+**Real, meaningful change, not noise**: under the current retriever the
+reranker's negative effect shrank substantially.
+- vs. full_hybrid: ALL four metrics now non-significant ($p\geq0.221$),
+  down from BLEU $p=0.030$ and METEOR $p=0.027$ previously.
+- vs. bm25_only: only METEOR remains significant ($-0.023$, $p=0.035$/
+  $0.043$), down from BLEU/ROUGE-L/METEOR all significant previously
+  ($p=0.011$/$0.016$/$0.001$).
+- vs. vector_only: still non-significant both before and after (unchanged).
+
+**Not a reversal to positive** -- every point estimate is still
+directionally negative or flat, just smaller and mostly no longer
+significant. Practical conclusion is unchanged (reranker-off stays the
+deployed default, since there's no metric where reranker-on helps and at
+least one, METEOR vs. BM25-only, where it still measurably hurts), but
+the SPECIFIC numbers and significance claims in the previous paper.tex
+revision were false under the current system -- corrected `Table~\ref{tab:
+reranker-ablation}` and its surrounding discussion in Section~\ref{subsec:
+reranker-ablation} to the roundO numbers, recompiled cleanly (27 pages).
+
+**Also re-running the pool=5 restriction variant** (`results/novel_
+pipeline_raw_outputs_roundN_reranker_pool5.csv`, same staleness window,
+23:57 Jul 31, before both fixes) as `..._roundO_reranker_pool5.csv` --
+result not yet known as of this entry, will update the pool=5 paragraph
+once scored.
+
+**Not yet checked**: the reranker-OFF ("adaptive_novel") comparison row
+in the same table, and the RQ1/RQ2 discussion text quoting it, were last
+measured 2026-07-31 21:37 (commit 418e87d) -- also before the exact-match
+fix. Given the main 4-config ablation proved stable under both fixes
+(previous entry), this is likely similarly stable, but "likely" is not
+verified -- queued as a follow-up, not assumed.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
