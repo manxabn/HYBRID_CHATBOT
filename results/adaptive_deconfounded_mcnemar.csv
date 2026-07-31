@@ -1,0 +1,4 @@
+metric,n,adaptive_only_correct,full_hybrid_only_correct,n_discordant,mcnemar_p,significant_at_0.05
+recall@1,100,0,22,22,0.0,True
+recall@3,100,0,19,19,0.0,True
+recall@5,100,0,5,5,0.0625,False

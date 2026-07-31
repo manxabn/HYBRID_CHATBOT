@@ -925,6 +925,47 @@ measurement/documentation/research work only.
    explicitly authorized to edit the paper) to write the differentiation
    paragraph from.
 
+5. **Is adaptive routing's null result fixable? Tested directly, not just
+   re-measured — answer: no, and the mechanistic reason is stronger and
+   more specific than "null."** `scripts/isolate_adaptive_routing_
+   deconfounded.py` (`results/adaptive_deconfounded_raw.csv`, `results/
+   adaptive_deconfounded_mcnemar.csv`) isolates adaptive routing's actual
+   fusion-method choice (RRF, lambda=0.9) from `UNAMBIGUOUS_MATCH_SCORE=
+   100.0` — the score ceiling in `_score_linear`/`_score_rrf` that forces
+   any single confirmed exact-match candidate to rank 0 regardless of which
+   fusion method computed the underlying scores, and that this session's
+   McNemar test (point 1 above) already showed produces 0 discordant pairs
+   between full_hybrid and bm25_only on every entity-heavy metric under the
+   live configuration. With that ceiling patched to 0.0 for this diagnostic
+   only (`EXACT_MATCH_BONUS=0.3` still active; deployed behavior untouched,
+   patch reverted before the script exits) and re-measuring adaptive vs. a
+   fixed full_hybrid baseline on the 100 entity-heavy queries:
+
+   **adaptive routing (RRF@0.9) is significantly WORSE, not merely tied,
+   once the ceiling stops rescuing it**: recall@1 0.71 vs. 0.93 (22
+   discordant pairs, ALL favoring full_hybrid, p<0.0001), recall@3 0.74 vs.
+   0.93 (19 discordant, all favoring full_hybrid, p<0.0001), recall@5 0.88
+   vs. 0.93 (5 discordant, all favoring full_hybrid, p=0.0625). Zero
+   discordant pairs favor adaptive routing on any metric at any cutoff.
+
+   Conclusion, and why this closes the question rather than inviting
+   another retuning attempt: the deployed system's "adaptive routing is
+   null" finding is not neutral parity — it is a worse fusion choice
+   (RRF@0.9) being propped up to a tie by a completely separate, already
+   -independently-validated mechanism (exact-match forcing/`UNAMBIGUOUS_
+   MATCH_SCORE`). Weakening that ceiling to let adaptive routing's own
+   choice "compete honestly" would just make entity-heavy retrieval worse
+   in deployment — confirmed directly here, not assumed — so this is not a
+   tuning opportunity, it is the mechanistic explanation for why three
+   independent re-measurements all found the same null. Recommended paper
+   framing: report adaptive routing's own contribution as measured-negative
+   in isolation, with the observed deployment-level parity correctly
+   attributed to exact-match forcing (already an independently-earned,
+   positive result — see the unambiguous-match-score ablation) rather than
+   to adaptive routing itself. This is a more precise, more defensible
+   claim than "no measurable effect," and removes exactly the vulnerability
+   item 1's framing concern (above) was about.
+
 ## 2026-07-31: zig-zag confidence-ordering re-tested at double context size -- still null
 `scripts/ablate_confidence_ordering_larger_context.py` re-tested the zig-zag
 "sandwich" context ordering (pipeline/novel_pipeline.py's
