@@ -36,11 +36,21 @@ OUT_PATH = ROOT / "results" / "structured_embedding_held_out_eval.csv"
 
 MODELS = {
     "base_minilm_pretrained": "sentence-transformers/all-MiniLM-L6-v2",
-    "finetuned_minilm_hard_negatives (QA-pairs only, currently deployed)": str(ROOT / "models" / "finetuned_minilm_hard_negatives"),
+    "finetuned_minilm_hard_negatives (QA-pairs only, SUPERSEDED, no longer deployed)": str(ROOT / "models" / "finetuned_minilm_hard_negatives"),
     "finetuned_minilm_hard_negatives_structured (QA-pairs + structured)": str(ROOT / "models" / "finetuned_minilm_hard_negatives_structured"),
+    "finetuned_minilm_hard_negatives_structured_banglish_expanded (ACTUALLY CURRENTLY DEPLOYED, per pipeline/chroma_embedding.py DEFAULT_MODEL)": str(ROOT / "models" / "finetuned_minilm_hard_negatives_structured_banglish_expanded"),
     "base_e5small_pretrained": "intfloat/multilingual-e5-small",
     "finetuned_e5small_hard_negatives_structured (alt-backbone ablation)": str(ROOT / "models" / "finetuned_e5small_hard_negatives_structured"),
 }
+# 2026-07-31: the "currently deployed" label on finetuned_minilm_hard_
+# negatives was STALE -- found while investigating the ledger's "deployed
+# model regresses on structured chunks" weakness. pipeline/chroma_
+# embedding.py's actual DEFAULT_MODEL is finetuned_minilm_hard_negatives_
+# structured_banglish_expanded (the Banglish-expansion retrain, which
+# already trains on structured chunks per its name), not the QA-pairs-only
+# model this table's regression finding was about. Added the real deployed
+# model here to get the CURRENT, correct answer rather than continue
+# reporting a stale one.
 
 
 def load_val_pairs():

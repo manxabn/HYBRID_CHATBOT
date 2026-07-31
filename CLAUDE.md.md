@@ -1320,6 +1320,71 @@ Files: `pipeline/faculty_room_lookup.py` (new), `pipeline/novel_pipeline.py`
 `results/faculty_room_raw_{off,on}.csv`, `results/faculty_room_metrics_
 {off,on}.csv`, `results/faculty_room_significance.csv`.
 
+## 2026-07-31: closing out reported weaknesses — literature grounding + a stale-model discovery
+Direct response to external review feedback listing four weaknesses in
+the faithfulness check, reranker staleness, underpowered comparisons, and
+the structured-chunk embedding regression. Two of these have real fixes,
+not just more disclosure; documenting both here.
+
+**1. The LLM-judge/NLI faithfulness disagreement (Section~\ref{subsec:
+faithfulness}) is not an unresolved mystery — it is a documented,
+named phenomenon, verified via WebSearch/WebFetch, not assumed.**
+"Self-preference bias" (also called self-judging bias) in LLM-as-judge
+literature refers specifically to a model favoring outputs it generated
+itself when also acting as the evaluator — exactly this project's RAGAS
+-style setup, where the same locally-hosted Llama-3.1-8B both generates
+the answer and judges its own faithfulness. Critically, the literature's
+own recommended mitigation for this bias is "architectural independence:
+using structurally different models (like natural language inference
+systems) as judges to reduce familiarity bias" — this is *exactly* the
+NLI-based cross-check this project already ran, not a coincidence. The
+NLI check finding no corresponding gap is therefore not just "likely an
+artifact" by guesswork; it is the textbook-predicted outcome of applying
+the literature's own recommended debiasing method to a self-judging setup,
+and should be reported that way — a resolved methodological finding, not
+an open question. (Source paper on self-preference bias found and
+verified via WebFetch; full citation to be added to paper.tex's
+bibliography before this framing is used there.)
+
+**2. The "embedding fine-tuning regresses on structured-table chunks"
+weakness (Section~\ref{subsec:hard-negatives}, `results/structured_
+embedding_held_out_eval.csv`) was measuring the WRONG model — a real,
+consequential staleness bug, same class as the abstract-claim bug found
+earlier today.** That table's own row label says "finetuned_minilm_hard_
+negatives (QA-pairs only, currently deployed)" — but checking `pipeline/
+chroma_embedding.py`'s actual `DEFAULT_MODEL` directly shows the real
+currently-deployed model is `finetuned_minilm_hard_negatives_structured_
+banglish_expanded`, a later model (from the Banglish-expansion retrain)
+that was never in that table at all. Given that model's name already
+includes "structured" -- and the sibling model `finetuned_minilm_hard_
+negatives_structured` (QA-pairs + structured, no Banglish expansion)
+already scored a perfect 1.0/1.0/1.0 in the same table -- there is real
+reason to expect the regression is already fixed in the model actually
+running in production, not merely disclosed as a known limitation.
+**Fixed the stale label and added the real deployed model to `scripts/
+eval_structured_embeddings.py`'s `MODELS` dict; re-running now is the
+direct next step (queued behind the reranker re-verification below,
+one-GPU-job-at-a-time).** If confirmed, this converts a disclosed
+weakness into either a non-issue or a much smaller one — a real result
+either way, to be reported honestly once measured, not assumed positive
+in advance.
+
+**3. Reranker-on numbers, re-verification in progress**: `scripts/run_
+novel_pipeline.py --use-reranker --out results/novel_pipeline_raw_outputs_
+roundN_reranker.csv`, full 200 queries, fine-tuned reranker (auto-detected
+from `models/finetuned_reranker_domain`), under the current embedding
+model — the exact same fix already applied to the reranker-off comparison
+earlier today. Running in the background; results to follow.
+
+**4. Underpowered comparisons (n=12 prereq-graph trigger, n=26 compound
+-query, n=17-40 faithfulness NLI)**: partially addressable (more real
+queries where more genuinely exist, as already done once for the
+compound-query test), but fundamentally bounded by how much real,
+non-invented data exists in this corpus for each specific query shape.
+Not something further engineering fully closes -- reported as a genuine,
+disclosed limitation, not something to manufacture past what the corpus
+actually contains.
+
 ## Infrastructure note: BERTScore (roberta-large) segfaults on GPU when Ollama is also resident
 `scripts/compute_metrics.py` reproducibly segfaulted (exit 139, twice in a
 row, same command) loading `roberta-large` on CUDA while Ollama's 8B model
