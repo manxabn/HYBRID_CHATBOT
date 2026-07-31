@@ -54,15 +54,35 @@ def main():
     retriever = HybridRetriever()
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    # Resumable + flushed (2026-07-31, same fix applied to run_ablation.py
+    # the same day after a real incident: a headerless-file bug from
+    # write_header only checking existence, and unflushed progress prints
+    # making a genuinely-working long job look stalled in its log).
+    completed = set()
+    if OUT_PATH.exists() and OUT_PATH.stat().st_size > 0:
+        try:
+            prior = pd.read_csv(OUT_PATH)
+            if "query_id" not in prior.columns:
+                raise ValueError("headerless")
+        except (pd.errors.EmptyDataError, ValueError):
+            prior = pd.read_csv(OUT_PATH, header=None, names=FIELDNAMES)
+        completed = set(zip(prior["query_id"], prior["lambda"]))
+        print(f"Resuming: {len(completed)} (query_id, lambda) pairs already done in {OUT_PATH}", flush=True)
+    write_header = (not OUT_PATH.exists()) or OUT_PATH.stat().st_size == 0
+    mode = "w" if write_header else "a"
+
     start_time = datetime.now(timezone.utc).isoformat()
     n_rows = 0
 
-    with open(OUT_PATH, "w", newline="", encoding="utf-8") as f:
+    with open(OUT_PATH, mode, newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
-        writer.writeheader()
+        if write_header:
+            writer.writeheader()
 
         for lam in LAMBDAS:
             for _, row in subset.iterrows():
+                if (row["query_id"], lam) in completed:
+                    continue
                 query = row["query"]
                 ref = row["reference_answer"]
 
@@ -92,7 +112,7 @@ def main():
                 })
                 f.flush()
                 n_rows += 1
-                print(f"[lambda={lam}] {row['query_id']}: {generation_s:.2f}s gen")
+                print(f"[lambda={lam}] {row['query_id']}: {generation_s:.2f}s gen", flush=True)
 
     end_time = datetime.now(timezone.utc).isoformat()
     import json

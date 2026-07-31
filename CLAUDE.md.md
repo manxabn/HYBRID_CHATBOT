@@ -710,11 +710,27 @@ result.
    strengthens rather than weakens the finding's credibility. `results/
    adaptive_routing_isolated_significance.csv` now reflects this current
    run, not the 2026-07-28 one.
-3. **λ=0.25 (not the deployed 0.5) is the empirically best fixed fusion
-   weight for open-ended queries**, replicated across multiple embedding
-   models. Still not deployed — needs a properly held-out re-tuning pass
-   first (selecting and evaluating on the same test set would be
-   circular).
+3. **RESOLVED/UPDATED 2026-07-31**: the finer lambda sweep (11 points,
+   0.0-1.0, 60-query stratified subset) was stale (Jul 26, pre-Banglish
+   -expanded model) -- archived that raw data (`archive/lambda_sweep_raw_
+   outputs_pre_banglish.csv`) and regenerated it fresh under the current
+   model (`scripts/run_lambda_sweep.py`, made checkpointed/resumable and
+   flush-fixed first, same infra lessons as run_ablation.py the same day;
+   660/660 rows, `results/lambda_sweep_raw_outputs.csv`).
+
+   Real, current, significant confirmation of a genuine mid-blend peak
+   (NOT flat/monotonic between the two single-method endpoints): on
+   open-ended queries, **λ=0.3 significantly beats bm25_only on ALL four
+   metrics** (bleu diff=+0.105 p=0.008, rougeL diff=+0.076 p=0.010,
+   bertscore diff=+0.010 p=0.008, meteor diff=+0.056 p=0.013, n=30), while
+   λ=0.7-0.9 are significantly WORSE than vector_only on all four metrics
+   (p=0.03 each) -- a real peak around λ=0.2-0.3, not noise, replicating
+   and updating the earlier λ≈0.25 finding with fresh current-model
+   evidence (`results/lambda_sweep_significance.csv`, 32/216 comparisons
+   significant). The deployed λ=0.5 is still not the empirically best
+   fixed weight for open-ended queries -- still not deployed, still needs
+   a properly held-out re-tuning pass before changing the default
+   (selecting and evaluating on the same test set would be circular).
 4. **RESOLVED 2026-07-31**: the full 200-query, 4-config generation-quality
    ablation table has now been regenerated under the current (Banglish
    -expanded) embedding model -- `scripts/run_ablation.py`, made
