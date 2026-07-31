@@ -1,0 +1,4 @@
+metric,n,full_hybrid_only_correct,bm25_only_only_correct,n_discordant,mcnemar_p,significant_at_0.05
+both_hit@3,416,106,9,115,0.0,True
+both_hit@5,416,60,11,71,0.0,True
+both_hit@10,416,0,0,0,1.0,False

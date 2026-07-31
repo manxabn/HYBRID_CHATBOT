@@ -1544,6 +1544,54 @@ Updated `paper/paper.tex`'s pool=5 discussion with these current numbers;
 recompiles cleanly (27 pages). This closes out the last remaining
 stale-numbers item from the reviewer-flagged weaknesses list.
 
+## 2026-08-01: a real, large, statistically robust win for full_hybrid over bm25_only -- found by testing, not forced
+Third compound-query type: prerequisite + theory room, for the same
+course section (`Prerequisites.Course` + `CourseDetails.TheoryRoom`, real
+join, 416 available combinations -- `scripts/test_compound_prereq_room.py`,
+`results/compound_prereq_room_raw.csv`, `results/compound_prereq_room_
+mcnemar.csv`). Unlike the faculty+room type (0/540 for both configs, a
+structural retrieval-scope gap, separately fixed via `faculty_room_
+lookup.py`) and the prereq+coordinator type (n=26, real but underpowered,
+p=0.25), both facts here are plain single-hop retrieval targets --
+genuinely testing whether fusion method matters, and this time the answer
+is yes, decisively.
+
+**Result: full_hybrid both_hit@3 = 0.8005 (80.1%) vs. bm25_only = 0.5673
+(56.7%) -- a 23.3 percentage point gap. McNemar's exact test: 106
+discordant queries favor full_hybrid, 9 favor bm25_only, p<0.0001.**
+At top-5: 0.8798 vs. 0.7620, 60 vs. 11 discordant, still p<0.0001. Both
+converge to 1.0 at top-10 (ceiling effect once more candidates are
+returned) -- the effect is real specifically at tight cutoffs, which is
+exactly where retrieval quality matters most in a deployed system.
+
+**Verified this is real, not a script artifact, by manually inspecting a
+live example** ("What is the prerequisite for CSE111-04 and which room is
+its theory class held in?"): bm25\_only's top-3 includes the CourseDetails
+chunk (correct) but then the **CSE220** Prerequisites chunk instead of the
+CSE111 one -- because CSE220's own prerequisite text literally contains
+the token "CSE111" ("Prerequisite: CSE111 (HP),CSE230 (HP)"), and BM25's
+bag-of-words scoring cannot distinguish a chunk a course code is
+INCIDENTALLY MENTIONED IN from the chunk that course is actually ABOUT.
+full\_hybrid's vector-similarity component correctly disambiguates this and
+retrieves the actual CSE111 Prerequisites chunk instead. This is a
+structurally different, and structurally sound, explanation for a hybrid
+win than anything found earlier this session: it is not about combining
+weak signals for a marginal edge, it is BM25 being actively fooled by a
+real, naturally-occurring lexical-crosstalk pattern this specific corpus
+has (courses referencing each other by code inside their own prerequisite
+text), which dense retrieval alone does not fall for.
+
+**This is the first large, decisively significant, mechanistically-
+explained win for full_hybrid over bm25_only found this session** -- real,
+verified, reproducible, and not requiring any change to the deployed
+system to obtain (both configs were tested as-is). Recommended: report
+this in the paper as a genuine, specific case where hybrid retrieval's
+value proposition holds -- multi-entity cross-reference queries where a
+lexical match can be entity-confused by co-occurring codes -- rather than
+claim a general "hybrid beats BM25" result the main 200-query test set
+does not support. This is a real, narrower, honestly-scoped positive
+finding, not a contradiction of the earlier null.
+
 ## Infrastructure note: BERTScore (roberta-large) segfaults on GPU when Ollama is also resident
 `scripts/compute_metrics.py` reproducibly segfaulted (exit 139, twice in a
 row, same command) loading `roberta-large` on CUDA while Ollama's 8B model
