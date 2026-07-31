@@ -1429,19 +1429,29 @@ abstained (20%). 20/20 open-ended paraphrases abstained -- every single
 one, 100%.** This is real, reproducible, and not a fluke of test
 construction -- traced to the exact mechanism, not just observed.
 
-**Mechanism, confirmed by direct inspection of the raw signals, not
-assumed**: `query_confidence` (`pipeline/hybrid_retriever.py:683`) is the
-margin between the top-1 and top-2 fused retrieval scores -- the module's
-own docstring already flags a known blind spot ("several near-duplicate
-paraphrase chunks all correctly match the query... margin is tiny despite
-retrieval being unambiguous and correct"). Checked `query_top1_score`
-(the retrieval quality signal without this blind spot) across original
-vs. paraphrased pairs: it stays comparably high (e.g. Q027: orig=1.048,
-p1=0.955, p2=1.002 -- all good retrieval), while the margin collapses
-(Q027: orig=0.0112 -> p1=0.0013, p2=0.0035) enough to cross the calibrated
-abstention threshold. Retrieval itself is NOT the problem -- the
-CONFIDENCE HEURISTIC built on top of it is fragile to paraphrasing on
-this corpus's paraphrase-dense open-ended content specifically.
+**Mechanism, corrected after checking the ACTUAL deployed config rather
+than assuming which signal is used** (`results/abstention_threshold.json`):
+the open_ended route's calibrated signal is `query_top1_score`
+(threshold=1.0283), NOT `query_confidence`/margin as first hypothesized --
+`pipeline/abstention.py`'s `AbstentionGate` supports per-route signal
+choice, and margin is only what entity_heavy uses. Verified directly
+against every abstained case: `query_top1_score` crosses the 1.0283
+threshold with 100% consistency (Q027: orig=1.048 [above, answered],
+p1=0.955 [below, abstained], p2=1.002 [below, abstained]; same pattern on
+every other pair checked). The threshold is calibrated so tightly against
+this corpus's natural open-ended score range that it sits right at the
+boundary these queries fall in. `query_top1_score` is the composite fused
+score (`lambda*s_bm25 + (1-lambda)*s_vec + question_boost*s_question`),
+which is BM25-heavy by construction -- paraphrasing a question changes its
+exact wording and therefore its lexical (BM25) overlap with the corpus's
+stored phrasing, even when the semantic content and the correct retrieved
+chunk are identical (confirmed live: Q027's top-ranked chunk is the exact
+same text for the original and both paraphrases -- retrieval is not the
+problem). The vector-similarity component alone (`s_vec`) stays
+reasonably stable across paraphrases (Q027: 0.796 -> 0.650 -> 0.724, a
+much smaller relative drop than the composite score's fall below
+threshold), meaning the LEXICAL component specifically is what's driving
+paraphrased queries below the line, not a general quality drop.
 
 **The designed safety net for exactly this blind spot does not catch it,
 also confirmed by direct code inspection**: `_question_match_ratio`
@@ -1460,16 +1470,17 @@ or the match-ratio threshold carelessly risks breaking the already
 -calibrated out-of-scope detection (a separately-validated, real
 mechanism) in the other direction -- more confidently-wrong answers on
 genuinely out-of-scope queries. The legitimate fix candidate is a
-SEMANTIC version of the question-match override (embedding cosine
-similarity between the query and the corpus's stored `Question` field,
-using the embedding model already resident in the pipeline, instead of
-character-level `SequenceMatcher`) -- this directly targets the
-mechanism (lexical-only matching) without touching the calibrated margin
-threshold itself. Next step: build this as a new, isolated, testable
-component (same discipline as `faculty_room_lookup.py`), verify it
-rescues these 20 paraphrase abstentions AND does not reduce the true
--abstention rate on genuinely out-of-scope queries, before considering it
-for deployment.
+SEMANTIC version of the question-match override (use the vector-
+similarity component, `s_vec`, already computed during retrieval --
+confirmed to stay relatively stable across paraphrases above -- as an
+additional sufficiency signal, instead of relying only on the composite,
+BM25-weighted `query_top1_score`) -- this directly targets the mechanism
+(the lexical component specifically) without touching the calibrated
+`query_top1_score` threshold itself. Next step: build this as a new,
+isolated, testable component (same discipline as `faculty_room_lookup.
+py`), verify it rescues these 20 paraphrase abstentions AND does not
+reduce the true-abstention rate on genuinely out-of-scope queries, before
+considering it for deployment.
 
 ## Infrastructure note: BERTScore (roberta-large) segfaults on GPU when Ollama is also resident
 `scripts/compute_metrics.py` reproducibly segfaulted (exit 139, twice in a
