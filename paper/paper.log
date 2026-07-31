@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  31 JUL 2026 22:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  31 JUL 2026 23:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,54 +693,56 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 54.
 
 [3] [4]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 75.
+(hyperref)                removing `\uppercase' on input line 77.
 
-<fig_dataset_dist.png, id=283, 469.755pt x 289.08pt>
+<fig_dataset_dist.png, id=289, 469.755pt x 289.08pt>
 File: fig_dataset_dist.png Graphic file (type png)
 <use fig_dataset_dist.png>
-Package pdftex.def Info: fig_dataset_dist.png  used on input line 85.
+Package pdftex.def Info: fig_dataset_dist.png  used on input line 87.
 (pdftex.def)             Requested size: 204.85974pt x 126.06636pt.
-<fig_db_population.png, id=286, 126.4725pt x 268.1217pt>
+<fig_db_population.png, id=292, 126.4725pt x 268.1217pt>
 File: fig_db_population.png Graphic file (type png)
 <use fig_db_population.png>
-Package pdftex.def Info: fig_db_population.png  used on input line 97.
+Package pdftex.def Info: fig_db_population.png  used on input line 99.
 (pdftex.def)             Requested size: 199.16928pt x 422.24892pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<fig_hybrid_retriever.png, id=290, 232.7094pt x 555.7563pt>
+[5 <./fig_dataset_dist.png>]
+<fig_hybrid_retriever.png, id=304, 232.7094pt x 555.7563pt>
 File: fig_hybrid_retriever.png Graphic file (type png)
 <use fig_hybrid_retriever.png>
-Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 109.
+Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 111.
 (pdftex.def)             Requested size: 184.9429pt x 441.68848pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5 <./fig_dataset_dist.png>] [6 <./fig_db_population.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./fig_hybrid_retriever.png>] [8] [9]
-Overfull \hbox (86.60915pt too wide) in paragraph at lines 213--214
+[6 <./fig_db_population.png>] [7 <./fig_hybrid_retriever.png>] [8] [9] [10]
+Overfull \hbox (86.60915pt too wide) in paragraph at lines 215--216
 \OT1/ptm/m/n/10 maintained piece of code, and the two copies silently drifted a
 part. We ad-dressed the spe-cific in-stance -- \OT1/pcr/m/n/10 pipeline/prerequ
 isite[]graph.py
  []
 
-[10]
-<fig_response_gen.png, id=386, 3334.4575pt x 3519.1475pt>
+<fig_response_gen.png, id=392, 3334.4575pt x 3519.1475pt>
 File: fig_response_gen.png Graphic file (type png)
 <use fig_response_gen.png>
-Package pdftex.def Info: fig_response_gen.png  used on input line 232.
+Package pdftex.def Info: fig_response_gen.png  used on input line 234.
 (pdftex.def)             Requested size: 204.85974pt x 216.18733pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 237.
+(hyperref)                removing `\uppercase' on input line 239.
 
-[11 <./fig_response_gen.png>]
-Overfull \hbox (21.3709pt too wide) in paragraph at lines 261--262
+[11]
+Overfull \hbox (21.3709pt too wide) in paragraph at lines 263--264
 \OT1/ptm/m/n/10 Vector-only $\OT1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmcm/
 m/n/10 371\OML/ptmcm/m/it/10 =\OT1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmcm
 /m/n/10 501\OML/ptmcm/m/it/10 =\OT1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmc
@@ -754,49 +756,47 @@ m/it/10 :\OT1/ptmcm/m/n/10 256$ \OT1/ptm/m/n/10 (BLEU/ROUGE-L/BERTScore/METEOR)
  []
 
 
-Overfull \hbox (4.19865pt too wide) in paragraph at lines 266--267
+Overfull \hbox (4.19865pt too wide) in paragraph at lines 268--269
 \OT1/ptm/m/n/10 rel-e-vance is judged against the ref-er-ence an-swer's own cou
 rse-code/email/faculty-identity en-ti-ties (Sec-tion []4.5[]'s method-
  []
 
-[12] [13]
-Overfull \hbox (1.12054pt too wide) in paragraph at lines 330--331
+[12 <./fig_response_gen.png>] [13]
+Overfull \hbox (1.12054pt too wide) in paragraph at lines 332--333
 []\OT1/ptm/m/n/10 Table []7[] re-ports the fair, non-confounded com-par-i-son, 
 re-measured un-der the cur-rent em-bed-ding model (the reranker-
  []
 
 [14] [15]
-<fig_lambda_sweep.png, id=467, 794.97pt x 578.16pt>
+<fig_lambda_sweep.png, id=474, 794.97pt x 578.16pt>
 File: fig_lambda_sweep.png Graphic file (type png)
 <use fig_lambda_sweep.png>
-Package pdftex.def Info: fig_lambda_sweep.png  used on input line 380.
+Package pdftex.def Info: fig_lambda_sweep.png  used on input line 382.
 (pdftex.def)             Requested size: 227.62204pt x 165.54482pt.
  [16 <./fig_lambda_sweep.png>] [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 426.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 426.
 
-[18] [19] [20]
-Overfull \hbox (324.66574pt too wide) in paragraph at lines 561--579
+[18] [19] [20] [21]
+Overfull \hbox (324.66574pt too wide) in paragraph at lines 563--581
  [][] 
  []
 
-[21]
-<fig_ingestion_time.png, id=567, 504.80595pt x 342.19846pt>
+<fig_ingestion_time.png, id=573, 504.80595pt x 342.19846pt>
 File: fig_ingestion_time.png Graphic file (type png)
 <use fig_ingestion_time.png>
-Package pdftex.def Info: fig_ingestion_time.png  used on input line 590.
+Package pdftex.def Info: fig_ingestion_time.png  used on input line 592.
 (pdftex.def)             Requested size: 204.85974pt x 138.87157pt.
 
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 595.
+(hyperref)                removing `\uppercase' on input line 597.
 
-[22 <./fig_ingestion_time.png>] [23] [24] [25] [26] (paper.aux)
+[22 <./fig_ingestion_time.png>] [23] [24] [25] [26] [27] (paper.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -809,13 +809,13 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 6C9C1633A6A90F2206B866951285DD03;10759.
  ) 
 Here is how much of TeX's memory you used:
- 14129 strings out of 467871
- 225074 string characters out of 5418376
- 659610 words of memory out of 5000000
- 42680 multiletter control sequences out of 15000+600000
- 665418 words of font info for 116 fonts, out of 8000000 for 9000
+ 14160 strings out of 467871
+ 225445 string characters out of 5418376
+ 660610 words of memory out of 5000000
+ 42703 multiletter control sequences out of 15000+600000
+ 676122 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,5763b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,5763b,672s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -826,9 +826,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (26 pages, 839009 bytes).
+Output written on paper.pdf (27 pages, 842718 bytes).
 PDF statistics:
- 707 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
+ 719 PDF objects out of 1000 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 
