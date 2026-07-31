@@ -715,12 +715,31 @@ result.
    models. Still not deployed — needs a properly held-out re-tuning pass
    first (selecting and evaluating on the same test set would be
    circular).
-4. **The full 200-query, 4-config, generation-quality ablation table has
-   still not been regenerated** under either updated embedding model (now
-   updated twice since the table was last measured) — still a 5.5-10 hour
-   job. A stratified n=20 sample was checked after the FIRST update and
-   reproduced the same relative ordering; has not been re-checked after
-   the SECOND (structured-extension) update.
+4. **RESOLVED 2026-07-31**: the full 200-query, 4-config generation-quality
+   ablation table has now been regenerated under the current (Banglish
+   -expanded) embedding model -- `scripts/run_ablation.py`, made
+   checkpointed/resumable first (see infra notes above), 800/800 rows,
+   `results/ablation_raw_outputs.csv`. Metrics + significance recomputed
+   into the canonical files (`ablation_metrics_summary.csv`,
+   `ablation_metrics_per_query.csv`, `significance_tests.csv`), replacing
+   the stale versions.
+
+   Real result: full_hybrid=(bleu 0.6624, rougeL 0.8293, bertscore 0.9648,
+   meteor 0.8515), bm25_only=(0.6655, 0.8318, 0.9664, 0.8631),
+   vector_only=(0.6409, 0.8226, 0.9648, 0.8322), no_retrieval=(0.0460,
+   0.1907, 0.8648, 0.2898). Sanity check passes cleanly: full_hybrid vs
+   no_retrieval is hugely significant on every metric, both overall and
+   per-subset (p<0.0001). full_hybrid vs bm25_only: NOT significant
+   anywhere overall (all p>0.15) -- consistent with, and now doubly
+   corroborated by, the same-day adaptive-routing re-verification above
+   (item 2) that found the two ANSWER much the same on this corpus.
+   full_hybrid vs vector_only: not significant overall, but IS
+   significant on the entity-heavy subset specifically (bleu diff=+0.069,
+   p=0.011; meteor diff=+0.056, p=0.0024) -- the lexical/exact-match
+   signal full_hybrid adds over pure vector search earns its keep exactly
+   where expected (entity lookups), not on open-ended queries (all n.s.
+   there). This is now the real, current, citable table -- not a stale
+   one from an earlier embedding model.
 5. **RRF's `k` constant and adaptive routing's design still cannot be
    tested under genuinely ambiguous ENTITY-CODE resolution** (course codes
    shared across cross-listed sections) — the FACULTY-NAME version of this
@@ -846,6 +865,20 @@ made checkpointed/resumable (append-as-you-go CSV writes instead of
 one write at the end) specifically because of these failures --
 worth keeping as the pattern for any future long Ollama-dependent batch
 job on this machine.
+
+## Infrastructure note: BERTScore (roberta-large) segfaults on GPU when Ollama is also resident
+`scripts/compute_metrics.py` reproducibly segfaulted (exit 139, twice in a
+row, same command) loading `roberta-large` on CUDA while Ollama's 8B model
+was resident (2.3GB used, only ~1.6GB free on this 4GB card) -- likely a
+native OOM inside a C++ extension that segfaults the whole process instead
+of raising a catchable Python exception, rather than a bug in the script
+itself. Fix: temporarily unload Ollama's model first (`curl .../api/generate
+-d '{"model":"llama3.1:8b","prompt":"","keep_alive":0}'` -- frees the GPU
+immediately, `nvidia-smi` confirmed 0MiB used afterward), then re-run;
+succeeded immediately with ~4GB free. Ollama reloads automatically and
+transparently on its next real request (confirmed: no code or config
+change needed). Keep this in mind for any other GPU-heavy one-off script
+(BERTScore, a reranker, etc.) run while Ollama is loaded on this machine.
 
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
