@@ -820,6 +820,111 @@ result.
    proposed file, the latter needs genuinely new source data this repo
    doesn't have.
 
+## 2026-07-31 continuation: sharper full_hybrid/bm25_only test, RRF k grounding, BanglAssist differentiation
+
+Follow-up to item 2 (full_hybrid vs bm25_only edge, not yet significant) and
+item 5 (RRF k / course-code ambiguity) above, plus a literature-differentiation
+gap against a closely related paper. No system code changed — this is
+measurement/documentation/research work only.
+
+1. **Sharper test for full_hybrid vs bm25_only, not more data.** The paired
+   bootstrap in item 2 is a mean-difference test applied to mostly-tied binary
+   recall@k data — a mismatch between test and data shape, not a sample-size
+   problem. Switched to McNemar's exact test (`scripts/mcnemar_full_hybrid_
+   vs_bm25.py`, `results/mcnemar_full_hybrid_vs_bm25.csv`), the standard test
+   for paired binary classifier outcomes (Dietterich 1998's framework for
+   comparing classifiers): it looks only at discordant pairs (queries where
+   the two configs disagree) rather than a full mean-difference resample.
+
+   Result: **the two configs are not just "not significant" — they are
+   almost identical.** Overall (n=200): recall@1 has exactly 2 discordant
+   pairs (both favoring full_hybrid, p=0.500), recall@3 has 1 discordant pair
+   (p=1.0), recall@5 has 0 (p=1.0). On entity-heavy queries specifically
+   (n=100): **zero discordant pairs on every metric** — full_hybrid and
+   bm25_only make literally identical predictions, which is mechanistically
+   expected (`pipeline/hybrid_retriever.py`'s exact-match forcing overrides
+   fusion weight whenever a confirmed entity match exists, so the fusion
+   method used underneath the override can't matter). The entire numerical
+   "edge" reported in item 2 traces to exactly 2 queries out of 200. This is
+   not an underpowered test — with this few discordant pairs, no valid paired
+   test could reach significance; it's a correct description of near-total
+   agreement between the two configs on this corpus. Honest framing for the
+   paper: full_hybrid's advantage over bm25_only is real but very small and
+   currently statistically unconfirmed — do not round this up to a "win."
+
+2. **Course-code collision half of item 5, verified empirically.** Queried
+   `knowledge_base.db`'s `Prerequisites`/`CourseDetails` tables directly for
+   course codes with more than one distinct value in a discriminating field
+   (e.g. a code mapping to more than one `PreRequisite`): **0 collisions
+   found among 586 `CourseDetails` rows / 71 distinct base course codes.**
+   This confirms, rather than merely assumes, that this corpus genuinely has
+   no naturally-occurring course-code-level entity collision to test
+   entity-disambiguation against — the faculty-name version of this mechanism
+   (ambiguous-name notice + `conditioning_v2`) is real and tested; the
+   course-code version remains untestable until/unless a cross-listed-code
+   collision is added to the source data (a data-availability limit, not an
+   engineering gap).
+
+3. **RRF `k=60` (`pipeline/hybrid_retriever.py:158`), checked against the
+   literature it's from rather than left as an unexamined default.**
+   Verified via WebSearch + WebFetch (not from memory): `k=60` originates
+   directly from Cormack, Clarke & Büttcher, "Reciprocal Rank Fusion
+   outperforms Condorcet and Individual Rank Learning Methods" (SIGIR 2009)
+   — the paper that introduced RRF. The original authors tuned `k=60` on
+   TREC collections and reported that it generalized well across them; it is
+   not a per-dataset hyperparameter in standard practice, and this project's
+   use of the same unmodified default is consistent with how the constant is
+   normally deployed (fixed, not re-tuned per corpus) rather than an
+   untested/arbitrary choice. This closes the "RRF k constant... untested"
+   half of item 5 as "used as intended by its original source, not a novel
+   or unjustified choice" — the honest remaining gap is only the
+   course-code-collision test coverage in point 2 above, which is a data
+   limitation, not something more engineering can fix.
+
+4. **BanglAssist (CHI 2025, arXiv:2503.22283) differentiation, verified via
+   direct WebFetch of the paper (`ar5iv.labs.arxiv.org/html/2503.22283`,
+   the direct PDF fetch didn't extract readable text) rather than assumed
+   from the abstract/title alone.** Real, citable differences found:
+   - **Retrieval architecture**: BanglAssist is vector-only retrieval
+     (OpenAI `text-embedding-3-large`) + a generic reranker
+     (BAAI `bge-reranker-v2-m3`), with all queries translated to English
+     before retrieval. This project uses true hybrid BM25+vector fusion
+     with native Banglish handling (no translation step), and this
+     project's own reranker experiment (`pipeline/novel_pipeline.py:311-319`)
+     found a generic cross-encoder reranker *loses* to the hybrid fusion
+     once fine-tuned embeddings are in place — a directly relevant, tested
+     counter-data-point to BanglAssist's architecture choice.
+   - **Generation model**: GPT-4o (proprietary, cloud API) vs. this
+     project's local, open-weight Llama-3.1-8B.
+   - **Domain**: streaming-service customer-support FAQ vs. this project's
+     academic-advising domain (structured entities: course codes,
+     prerequisites, faculty).
+   - **Evaluation scale/rigor**: BanglAssist evaluates on 20 queries
+     (6 Bengali/9 Banglish/5 English) with Precision/Recall/MRR@{3,5} plus
+     qualitative scoring (0.81 accuracy), no paired significance testing
+     reported. This project uses a 200-query test set plus a 3044-row
+     Banglish training corpus, with paired bootstrap and McNemar significance
+     testing throughout (see point 1 above) — a real, citable rigor gap in
+     this project's favor.
+   - **The strongest point**: BanglAssist's paper contains **no entity
+     -disambiguation or confidence-based abstention mechanism at all** —
+     confirmed directly in the fetched text, not inferred. Its only
+     confidence-adjacent mechanism is a fixed 0.8 cosine-similarity threshold
+     gating direct FAQ-match responses; there is no discussion of ambiguous
+     -entity handling or calibrated abstention over generated answers. This
+     project's ambiguous-entity notice + `conditioning_v2` conditioning and
+     its confidence-gated abstention are the actual, defensible novelty gap
+     relative to this specific prior work — "bilingual Banglish RAG" is not
+     an unclaimed space, but "bilingual Banglish RAG with entity-collision
+     disambiguation and confidence-gated abstention, evaluated at 10x the
+     scale" is not covered by BanglAssist and should be argued as such in
+     the paper, not assumed as automatically novel.
+   This is documentation/research only — no paper.tex changes were made
+   under the standing "don't touch the paper" rule; this section is meant
+   to be the sourced, verified basis for the user (or a future session
+   explicitly authorized to edit the paper) to write the differentiation
+   paragraph from.
+
 ## 2026-07-31: zig-zag confidence-ordering re-tested at double context size -- still null
 `scripts/ablate_confidence_ordering_larger_context.py` re-tested the zig-zag
 "sandwich" context ordering (pipeline/novel_pipeline.py's

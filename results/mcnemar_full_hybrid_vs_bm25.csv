@@ -1,0 +1,10 @@
+subset,metric,n,full_hybrid_only_correct,bm25_only_only_correct,n_discordant,mcnemar_p,significant_at_0.05
+all,recall@1,200,2,0,2,0.5,False
+all,recall@3,200,1,0,1,1.0,False
+all,recall@5,200,0,0,0,1.0,False
+entity_heavy,recall@1,100,0,0,0,1.0,False
+entity_heavy,recall@3,100,0,0,0,1.0,False
+entity_heavy,recall@5,100,0,0,0,1.0,False
+open_ended,recall@1,100,2,0,2,0.5,False
+open_ended,recall@3,100,1,0,1,1.0,False
+open_ended,recall@5,100,0,0,0,1.0,False
