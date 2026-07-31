@@ -1521,6 +1521,29 @@ included as an explicit training signal, not a single new heuristic
 threshold -- a larger piece of work than remained time for this session,
 and reported as genuinely open rather than patched over.
 
+## 2026-07-31: reranker pool=5 restriction re-verified under the current model (last stale-numbers item resolved)
+`scripts/run_novel_pipeline.py --use-reranker --rerank-pool-size 5`, full
+200 queries (1 abstained). First attempt crashed with a genuine CUDA OOM
+(`RuntimeError: CUDA error: out of memory`) loading the reranker's
+CrossEncoder while Ollama's model was still GPU-resident -- same
+contention class as the documented BERTScore/Ollama segfault, just
+hitting a different model load. Fixed the same way: unloaded Ollama
+(`keep_alive:0`), confirmed GPU free via `nvidia-smi`, re-ran cleanly.
+
+**Result: same qualitative conclusion as pool=10 (reranker still doesn't
+help), but weaker/less significant margins than either the pre-retrain
+pool=5 measurement or the current pool=10 result.** vs. Full Hybrid: all
+four metrics directionally behind but none reach significance now
+($p\geq0.117$) -- previously "significantly behind on all four metrics
+($p\leq0.019$)" under the pre-retrain model. vs. BM25-only: BERTScore
+inconclusive (p=0.037 paired-t / 0.186 Wilcoxon), METEOR borderline
+(p=0.020 / 0.051), BLEU/ROUGE-L not significant. Consistent with BM25
+-only itself being a harder baseline under the current model (a
+merely-tied reranker no longer looks as clearly negative by comparison).
+Updated `paper/paper.tex`'s pool=5 discussion with these current numbers;
+recompiles cleanly (27 pages). This closes out the last remaining
+stale-numbers item from the reviewer-flagged weaknesses list.
+
 ## Infrastructure note: BERTScore (roberta-large) segfaults on GPU when Ollama is also resident
 `scripts/compute_metrics.py` reproducibly segfaulted (exit 139, twice in a
 row, same command) loading `roberta-large` on CUDA while Ollama's 8B model

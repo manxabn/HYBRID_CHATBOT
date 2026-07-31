@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  31 JUL 2026 23:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  31 JUL 2026 23:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -768,7 +768,7 @@ re-measured un-der the cur-rent em-bed-ding model (the reranker-
  []
 
 [14] [15]
-<fig_lambda_sweep.png, id=474, 794.97pt x 578.16pt>
+<fig_lambda_sweep.png, id=475, 794.97pt x 578.16pt>
 File: fig_lambda_sweep.png Graphic file (type png)
 <use fig_lambda_sweep.png>
 Package pdftex.def Info: fig_lambda_sweep.png  used on input line 382.
@@ -793,10 +793,19 @@ File: fig_ingestion_time.png Graphic file (type png)
 Package pdftex.def Info: fig_ingestion_time.png  used on input line 592.
 (pdftex.def)             Requested size: 204.85974pt x 138.87157pt.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 597.
 
-[22 <./fig_ingestion_time.png>] [23] [24] [25] [26] [27] (paper.aux)
+
+Underfull \vbox (badness 2626) has occurred while \output is active []
+
+ [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23 <./fig_ingestion_time.png>] [24] [25] [26] [27] (paper.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -811,11 +820,11 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  14160 strings out of 467871
  225445 string characters out of 5418376
- 660610 words of memory out of 5000000
+ 660611 words of memory out of 5000000
  42703 multiletter control sequences out of 15000+600000
  676122 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,5763b,672s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,5763b,660s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -826,9 +835,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (27 pages, 842718 bytes).
+Output written on paper.pdf (27 pages, 843628 bytes).
 PDF statistics:
- 719 PDF objects out of 1000 (max. 8388607)
+ 720 PDF objects out of 1000 (max. 8388607)
  140 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 
