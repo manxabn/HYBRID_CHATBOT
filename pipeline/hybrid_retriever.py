@@ -564,6 +564,65 @@ class HybridRetriever:
         return any(len(token) >= 4 and token in self.faculty_name_token_index
                    for token in norm_query.split())
 
+    # Signal-type count for entity_signal_strength -- course code, alias,
+    # faculty initial, faculty name/token are 4 structurally distinct
+    # recognition mechanisms; a query naming more of them independently
+    # (rare, e.g. a course code AND a faculty member in one query) reflects
+    # more entity-grounded content, not more OCCURRENCES of any one signal
+    # (that's what len(exact_match_ids) already measures -- see its
+    # docstring above -- and conflating "more signal types" with "more
+    # documents from one signal type" would make an ambiguous 16-way surname
+    # collision score as maximally entity-heavy for the wrong reason).
+    _N_ENTITY_SIGNAL_TYPES = 4
+
+    def entity_signal_strength(self, query: str) -> float:
+        """Continuous alternative to is_entity_heavy()'s binary output,
+        inspired by (NOT a reproduction of) DAT -- Dynamic Alpha Tuning
+        (Hsu & Tzeng, 2025, arXiv:2503.23013) -- which replaces a fixed/
+        bucketed hybrid-fusion weight with a continuous per-query one.
+        DAT's own mechanism derives that continuous weight from an LLM-
+        scored comparison of BM25's vs. the dense retriever's top-1 result
+        plausibility; adapted here to use the COUNT of independent
+        structural entity-recognition signals instead, for a concrete,
+        measured reason: a direct check on this corpus's own test set
+        (2026-07-29) found BM25's raw top-1 score is actually LOWER, on
+        average, for entity_heavy queries (mean=17.8) than open_ended ones
+        (mean=33.0) -- the OPPOSITE of what a raw-score-dominance signal
+        would need to indicate "this is an entity query." The confound:
+        short course-code/faculty queries simply have fewer terms for
+        BM25's score to sum over than a longer natural-language question,
+        regardless of how strong the actual match is. DAT's own driving
+        signal doesn't transfer to this corpus without correcting for that
+        confound, which the already-proven structural checks (course-code
+        regex, alias table, faculty initial/name index -- the same ones
+        _exact_match_ids and is_entity_heavy already rely on) sidestep
+        entirely, since they are discrete structural hits, not magnitude
+        comparisons.
+
+        Returns a float in [0, 1]: (number of distinct signal TYPES that
+        fire) / 4. EXPERIMENTAL: implemented and unit-tested for sane,
+        monotonic behavior (tests/test_patterns.py) but NOT YET empirically
+        compared against retrieve_adaptive's existing binary routing on
+        this corpus's actual retrieval metrics -- see scripts/ablate_
+        dynamic_alpha.py, written but blocked on GPU availability. Do not
+        treat this as validated or as a replacement for retrieve_adaptive
+        until that comparison actually runs."""
+        signals_fired = 0
+        if COURSE_CODE_RE.search(query):
+            signals_fired += 1
+        query_lower = query.lower()
+        if any(alias in query_lower for alias, _ in self.aliases):
+            signals_fired += 1
+        if any(m.group(0) in self.faculty_initial_index for m in FACULTY_INITIAL_RE.finditer(query.upper())):
+            signals_fired += 1
+        norm_query = _normalize_name(query)
+        if norm_query and (
+            any(norm_name in norm_query for norm_name, _ in self.faculty_name_index)
+            or any(len(token) >= 4 and token in self.faculty_name_token_index for token in norm_query.split())
+        ):
+            signals_fired += 1
+        return signals_fired / self._N_ENTITY_SIGNAL_TYPES
+
     def retrieve(self, query: str, lambda_: float, fusion: str = None, top_n: int = None):
         """fusion/top_n override the instance defaults (self.fusion,
         self.final_k) for this call only -- added so retrieve_adaptive (below)
@@ -656,6 +715,38 @@ class HybridRetriever:
         else:
             results = self.retrieve(query, lambda_open, fusion="linear", top_n=top_n)
             meta = {"route": "open_ended", "fusion": "linear", "lambda": lambda_open}
+        return results, meta
+
+    def retrieve_dynamic_alpha(self, query: str, lambda_entity: float = 0.9,
+                                 lambda_open: float = 0.5, top_n: int = None):
+        """EXPERIMENTAL alternative to retrieve_adaptive -- see
+        entity_signal_strength's docstring for the DAT-inspired motivation
+        and the concrete reason its own raw-score-dominance mechanism was
+        adapted rather than ported as-is. Instead of routing a query into
+        exactly one of two fixed (fusion, lambda) configurations, this
+        computes a continuous lambda by interpolating between lambda_open
+        and lambda_entity according to entity_signal_strength(query) in
+        [0, 1], then always uses LINEAR fusion at that interpolated lambda
+        -- RRF has no natural analogue for an intermediate lambda (its
+        forced-rank-0 exact-match mechanism is inherently a binary on/off,
+        unlike linear fusion's continuous score blend), so this mode always
+        uses linear fusion, unlike retrieve_adaptive's entity_heavy branch.
+
+        NOT YET VALIDATED: this is a new, additive method -- it does not
+        change retrieve_adaptive's behavior or any existing caller, and is
+        not used by novel_pipeline.py or any other production path. Kept
+        here, disabled-by-default-in-the-sense-of-unused, until scripts/
+        ablate_dynamic_alpha.py (written, not yet run -- blocked on GPU
+        availability, same reason as the confidence-ordering and ambiguous-
+        entity-notice ablations) actually measures whether it beats
+        retrieve_adaptive on this corpus's own IR metrics. Do not treat this
+        as a replacement for retrieve_adaptive or cite it as an improvement
+        until that comparison exists."""
+        strength = self.entity_signal_strength(query)
+        lambda_ = lambda_open + (lambda_entity - lambda_open) * strength
+        results = self.retrieve(query, lambda_, fusion="linear", top_n=top_n)
+        meta = {"route": "dynamic_alpha", "fusion": "linear", "lambda": lambda_,
+                "entity_signal_strength": strength}
         return results, meta
 
     def _score_linear(self, bm25_cand, vec_cand_dist, exact_match_ids, lambda_, question_scores=None):

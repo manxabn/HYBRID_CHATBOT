@@ -1,0 +1,254 @@
+query_id,condition,query,answer,avoids_false_confidence,asks_for_clarification,offers_disambiguator
+AMB002,no_notice,What is Abdullah's office room?,Abdullah Khondoker's office room is 4F.,0,0,0
+AMB002,flat_notice,What is Abdullah's office room?,"There are multiple individuals with the name ""Abdullah"" in the knowledge base. To provide a specific answer, could you please clarify which Abdullah you are referring to?",1,1,0
+AMB002,conditioning,What is Abdullah's office room?,"There are multiple individuals with the name ""Abdullah"" in the knowledge base. To provide a specific answer, could you please clarify which Abdullah you are referring to (e.g., Abdullah Khondoker, Abdullah Nayem Wasi Emran, Mirza Abdullah Al Noman, or Dr. Matin Saad Abdullah)?",1,1,1
+AMB004,no_notice,What is Abid's office room?,There is no information in the retrieved context about Abid's office room.,1,0,0
+AMB004,flat_notice,What is Abid's office room?,I don't have enough information in the retrieved context to answer this question.,0,0,0
+AMB004,conditioning,What is Abid's office room?,I'm unable to answer that question as there is no information in the retrieved context about a person named Abid or their office room.,0,0,0
+AMB013,no_notice,What is Ahmed's office room?,"The office room for individuals with the surname ""Ahmed"" varies, but some of them can be found in rooms 4P197, 4K72, 4M107, 4K77, 4M130, 4P174, 4L93, and 4L87.",1,0,1
+AMB013,flat_notice,What is Ahmed's office room?,"There are multiple individuals with the name ""Ahmed"" in the database, and without knowing which specific person you are referring to, I cannot provide a definitive answer. However, here are the office rooms listed for each of the matching names:
+
+* Sadif Ahmed: 4P197
+* Anika Ahmed: 4K72
+* Md. Sabbir Ahmed: 4M107
+* Sheikh Iftekhar Ahmed: 4P (note that this is a room number without a specific building or floor designation)
+* Ateya Ahmed Subarna: 4K77
+* Bijoy Ahmed Saiem: 4M130
+* Nazmus Sakib Ahmed: 4P174
+* Mr. Ahmed Mahir Ruhan: 4L93
+* Ahmed Mayeesha Reza Agomoni: 4L87
+* Saadat Rafid Ahmed: 4J51
+* Mr. Rubayat Ahmed Khan: 4G12
+
+Please let me know which specific person you are referring to so I can provide a more accurate answer.",1,1,1
+AMB013,conditioning,What is Ahmed's office room?,"There are multiple individuals with the name ""Ahmed"" in the database, and I need to know which specific person you are referring to in order to provide an accurate answer. Please let me know if you would like me to list all of the matching names explicitly so that you can specify which one you mean.",1,1,0
+AMB020,no_notice,What is Alam's office room?,"Alam's, whose name is Dr. Md. Ashraful Alam, office room is 4G24.",0,0,0
+AMB020,flat_notice,What is Alam's office room?,"I found multiple individuals with the last name ""Alam"". To provide an accurate answer, could you please specify which of the following individuals you are referring to:
+
+1. Dr. Md. Ashraful Alam (Associate Professor)
+2. Dr. Md. Shafiul Alam Shuvo (Contractual Professor)
+3. Dr. Md. Golam Rabiul Alam (Professor)
+
+Please let me know, and I will be happy to provide the office room number for the specified individual.",1,1,1
+AMB020,conditioning,What is Alam's office room?,"I found multiple individuals with the last name ""Alam"". To provide a specific answer, could you please clarify which of the following individuals you are referring to:
+
+1. Dr. Md. Ashraful Alam (Associate Professor)
+2. Dr. Md. Shafiul Alam Shuvo (C. Professor)
+3. Dr. Md. Golam Rabiul Alam (Professor)
+
+Please let me know, and I will be happy to provide the office room number for the specified individual.",1,1,1
+AMB029,no_notice,What is Anika's office room?,"Anika Islam's office room is 4F, and Anika Tasnim's office room is also 4F. Additionally, Anika Afrin's office room is 4F as well. However, Anika Ahmed's office room is located in a different room number, which is 4K72.",0,0,1
+AMB029,flat_notice,What is Anika's office room?,"There are multiple individuals named Anika in the knowledge base, and without further clarification, it is unclear which specific person you are referring to. The matching names are:
+
+1. Anika Islam (Room: 4F)
+2. Anika Tasnim (Room: 4F)
+3. Anika Afrin (Room: 4F)
+4. Anika Ahmed (Room: 4K72)
+
+Please specify which Anika you would like to know the office room for.",1,1,0
+AMB029,conditioning,What is Anika's office room?,"Anika Islam, Anika Tasnim, and Anika Afrin all have their offices in Room 4F, but we cannot determine the office room for Anika Ahmed without further information.",1,0,1
+AMB032,no_notice,What is Anjum's office room?,Anjum's office room is 4N161.,0,0,0
+AMB032,flat_notice,What is Anjum's office room?,Anjum's office room is 4N161.,0,0,0
+AMB032,conditioning,What is Anjum's office room?,Anjum's office room is 4N161.,0,0,0
+AMB041,no_notice,What is Arif's office room?,I don't have enough information in the retrieved context to answer what Arif's office room is.,1,0,0
+AMB041,flat_notice,What is Arif's office room?,I'm unable to answer this question as there is no information in the retrieved context about a person named Arif or their office room.,0,0,0
+AMB041,conditioning,What is Arif's office room?,I'm unable to answer this question as there is no information in the retrieved context about a person named Arif or their office room.,0,0,0
+AMB049,no_notice,What is Ashikur's office room?,"Ashikur's office room is 4P, as indicated in the context for Md Ashikur Rahman Any.",0,0,0
+AMB049,flat_notice,What is Ashikur's office room?,"There are multiple individuals with the name ""Ashikur Rahman"" in the knowledge base, specifically Md Ashikur Rahman Any and Quazi Ashikur Rahman. To provide an accurate answer, could you please specify which person you mean by ""Ashikur""?",1,1,0
+AMB049,conditioning,What is Ashikur's office room?,"There are multiple individuals with the name ""Ashikur Rahman"" in the knowledge base, including Md Ashikur Rahman Any (C. Lecturer) and Quazi Ashikur Rahman (Lecturer). To provide a specific answer, could you please clarify which person's office room you would like to know about?",1,1,0
+AMB052,no_notice,What is Ashraful's office room?,Ashraful Islam Shanto Sikder's office room is 4P173.,0,0,0
+AMB052,flat_notice,What is Ashraful's office room?,"I found multiple individuals with the name ""Ashraful"" in our records. To provide an accurate answer, could you please specify which Ashraful you are referring to: Dr. Md. Ashraful Alam or Ashraful Islam Shanto Sikder?",1,1,0
+AMB052,conditioning,What is Ashraful's office room?,"Ashraful Alam, the Associate Professor, has an office in room 4G24, while Ashraful Islam Shanto Sikder, the Lecturer, has an office in room 4P173. Which specific person are you referring to?",0,1,1
+AMB053,no_notice,What is Asif's office room?,Asif Shahriar's office room is 4M124.,0,0,0
+AMB053,flat_notice,What is Asif's office room?,"There are multiple individuals named ""Asif"" in the knowledge base. To provide a specific answer, could you please clarify which Asif you are referring to (e.g., MD ASIF, Asif Shahriar, or Asif Hasan Chowdhury)?",1,1,0
+AMB053,conditioning,What is Asif's office room?,"There are multiple individuals with the name ""Asif"" in the knowledge base. To provide a specific answer, could you please clarify which Asif you are referring to (e.g., MD ASIF, Asif Shahriar, or Asif Hasan Chowdhury)?",1,1,0
+AMB067,no_notice,What is Azwad's office room?,There is no information in the retrieved context about Azwad's office room.,0,0,0
+AMB067,flat_notice,What is Azwad's office room?,I don't have enough information in the retrieved context to answer the question about Azwad's office room.,1,0,0
+AMB067,conditioning,What is Azwad's office room?,I'm unable to answer that question as there is no information in the retrieved context about a person named Azwad or their office room.,0,0,0
+AMB081,no_notice,What is Chowdhury's office room?,"Dr. Chowdhury Mofizur Rahman, whose designation is Professor, has his office in room 4G18.",0,0,0
+AMB081,flat_notice,What is Chowdhury's office room?,"There are multiple individuals with the surname ""Chowdhury"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMB081,conditioning,What is Chowdhury's office room?,"There are multiple individuals with the surname ""Chowdhury"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMB099,no_notice,What is Fardin's office room?,Fardin's office room is 4N155.,0,0,0
+AMB099,flat_notice,What is Fardin's office room?,"Unfortunately, the context does not contain enough information to answer this question directly for both matching individuals (Kh.Fardin Zubair Nafis and Fardin Zaman). However, it can be stated that there are two distinct records of individuals named ""Fardin"" with different designations and room numbers. To provide a specific answer, please clarify which Fardin you are referring to.",1,1,0
+AMB099,conditioning,What is Fardin's office room?,"Unfortunately, the retrieved context does not contain enough information to answer this question directly and confidently, as there are two individuals with the name ""Fardin"" in the records. However, I can list their names explicitly for clarification: Kh.Fardin Zubair Nafis (Lecturer) and Fardin Zaman (C. Lecturer). Could you please specify which Fardin you are referring to?",1,1,1
+AMB101,no_notice,What is Farhan's office room?,Farhan Faruk's office room is 4M100.,0,0,0
+AMB101,flat_notice,What is Farhan's office room?,"Farhan Faruk's office room is 4M100, while Niloy Farhan's office room is 4M123. Which specific person are you referring to?",0,1,0
+AMB101,conditioning,What is Farhan's office room?,Farhan Faruk's office room is 4M100.,0,0,0
+AMB112,no_notice,What is Ferdous's office room?,Dr. Md Sadek Ferdous's office room is 4G10.,0,0,0
+AMB112,flat_notice,What is Ferdous's office room?,"I found multiple individuals with the last name ""Ferdous"". To provide an accurate answer, could you please specify which person you are referring to: Ms. Tasnim Ferdous or Dr. Md Sadek Ferdous?",1,1,0
+AMB112,conditioning,What is Ferdous's office room?,"The matching names are Ms. Tasnim Ferdous and Dr. Md Sadek Ferdous, who differ by Designation (Senior Lecturer and Professor respectively). Which specific person do you mean?",1,1,0
+AMB117,no_notice,What is Habib's office room?,There is no information in the retrieved context about Habib's office room.,0,0,0
+AMB117,flat_notice,What is Habib's office room?,I don't have enough information in the retrieved context to answer this question.,1,0,0
+AMB117,conditioning,What is Habib's office room?,I'm unable to answer that question as there is no information in the retrieved context about a person named Habib or their office room.,0,0,0
+AMB122,no_notice,What is Haque's office room?,Haque's office room is 4N168.,0,0,0
+AMB122,flat_notice,What is Haque's office room?,"I found multiple individuals with the last name ""Haque"". To provide an accurate answer, could you please specify which Haque you are referring to? The options are:
+
+1. Ehtashamul Haque (Room: 4N168)
+2. Dr. Taiabul Haque (Room: 4G01)
+3. Mohammed Ashfaqul Haque (Room: 4N137)
+4. Moinul Haque (Room: 4F)
+
+Please let me know which one you mean, and I'll be happy to provide the answer.",1,1,1
+AMB122,conditioning,What is Haque's office room?,"I need more information to provide a specific answer, as there are multiple individuals with the last name ""Haque"" in the retrieved context. Can you please specify which Haque you are referring to (e.g., Ehtashamul Haque, Dr. Taiabul Haque, Mohammed Ashfaqul Haque, or Moinul Haque)?",1,1,0
+AMB123,no_notice,What is Hasan's office room?,"The office room for individuals with the surname ""Hasan"" is not specified in the provided context, as there are multiple individuals with that surname listed. However, I can provide information on specific individuals if you would like to narrow down the search by first name or designation.",1,0,1
+AMB123,flat_notice,What is Hasan's office room?,"There are multiple individuals with the last name ""Hasan"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMB123,conditioning,What is Hasan's office room?,"There are multiple individuals with the last name ""Hasan"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMB127,no_notice,What is Hossain's office room?,"Hossain's office room is not specified in the provided context, as there are multiple individuals with the last name ""Hossain"" and only their rooms are listed.",1,0,0
+AMB127,flat_notice,What is Hossain's office room?,"There are multiple individuals with the last name ""Hossain"" in the knowledge base. To provide a specific answer, could you please specify which person you are referring to?",1,1,0
+AMB127,conditioning,What is Hossain's office room?,"There are multiple individuals with the last name ""Hossain"" in the database. To provide a specific answer, could you please specify which Hossain you are referring to?",1,1,0
+AMB138,no_notice,What is Iqbal's office room?,Dr. Muhammad Iqbal Hossain's office room is 4G22.,0,0,0
+AMB138,flat_notice,What is Iqbal's office room?,"I cannot determine which person you are referring to as there are multiple individuals with the name ""Iqbal"" in the retrieved context. Can you please specify which Iqbal you mean, Dr. Muhammad Iqbal Hossain or Ms. Khondoker Nazia Iqbal?",1,1,0
+AMB138,conditioning,What is Iqbal's office room?,"I cannot determine which person you are referring to as there are multiple individuals with the name ""Iqbal"" in the context. Can you please specify which one of Dr. Muhammad Iqbal Hossain, Ms. Khondoker Nazia Iqbal, or Zahin Iqbal Zeal you mean?",1,1,0
+AMB143,no_notice,What is Islam's office room?,Islam's office room is 4F.,0,0,0
+AMB143,flat_notice,What is Islam's office room?,"There are multiple individuals with the last name ""Islam"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to? The following individuals have an office room listed:
+
+* Anika Islam has a room number of 4F.
+* Aabrar Islam has a room number of 4F.
+* Sazzadul Islam has a room number of 4N165.
+* Namirul Islam has a room number of 4N163.
+* Nazmul Islam has a room number of 4M121.
+* Ashraful Islam Shanto Sikder has a room number of 4P173.
+* Riazul Islam Rifat has a room number of 4P190.
+
+Please let me know which person's office room you would like to know about.",0,1,1
+AMB143,conditioning,What is Islam's office room?,"There are multiple individuals with the last name ""Islam"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMB146,no_notice,What is Jahan's office room?,Jahan's office room is 4K71.,0,0,0
+AMB146,flat_notice,What is Jahan's office room?,Majisha Jahan Disha's office room is 4K71.,0,0,0
+AMB146,conditioning,What is Jahan's office room?,Majisha Jahan Disha's office room is 4K71.,0,0,0
+AMB155,no_notice,What is Kazi's office room?,Kazi Kamruzzaman Rabbi's office room is 4N135.,0,0,0
+AMB155,flat_notice,What is Kazi's office room?,Kazi Kamruzzaman Rabbi's office room is 4N135.,0,0,0
+AMB155,conditioning,What is Kazi's office room?,Kazi Kamruzzaman Rabbi's office room is 4N135.,0,0,0
+AMB159,no_notice,What is Khan's office room?,Khan's office room is 4F.,0,0,0
+AMB159,flat_notice,What is Khan's office room?,"There are multiple individuals with the last name ""Khan"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMB159,conditioning,What is Khan's office room?,"There are multiple individuals with the last name ""Khan"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMB161,no_notice,What is Khondoker's office room?,Ms. Khondoker Nazia Iqbal's office room is 4K86.,0,0,0
+AMB161,flat_notice,What is Khondoker's office room?,"I found multiple individuals with the name ""Khondoker"" in the knowledge base. To provide an accurate answer, could you please specify which Khondoker you are referring to: Abdullah Khondoker or Ms. Khondoker Nazia Iqbal?",1,1,0
+AMB161,conditioning,What is Khondoker's office room?,"There are multiple individuals with the name ""Khondoker"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean: Abdullah Khondoker (C. Lecturer) or Ms. Khondoker Nazia Iqbal (Lecturer)?",0,1,1
+AMB176,no_notice,What is Mahir's office room?,Mahir's office room is 4L93.,0,0,0
+AMB176,flat_notice,What is Mahir's office room?,Mahir's office room is 4L93.,0,0,0
+AMB176,conditioning,What is Mahir's office room?,Mahir's office room is 4L93.,0,0,0
+AMB178,no_notice,What is Mahmud's office room?,Mahmud's office room is 4M99.,0,0,0
+AMB178,flat_notice,What is Mahmud's office room?,"There are multiple individuals with the last name ""Mahmud"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean by ""Mahmud""? The options are MD. MUHTASIM MAHMUD (room 4M99), Aliva Sadnim Mahmud (room 4P), or Mr. Tamkin Mahmud Tan (room 4J62).",0,1,1
+AMB178,conditioning,What is Mahmud's office room?,"I found multiple individuals with the last name ""Mahmud"". To provide a specific answer, could you please clarify which Mahmud you are referring to? Do you mean MD. Muhtasim Mahmud (Lecturer), Aliva Sadnim Mahmud (C. Lecturer), or Mr. Tamkin Mahmud Tan (Lecturer)?",0,1,1
+AMB187,no_notice,What is Mehnaz's office room?,Mehnaz Ara Fazal's office room is 4F.,0,0,0
+AMB187,flat_notice,What is Mehnaz's office room?,"Mehnaz Seraj's office room is 4G21, and Mehnaz Ara Fazal's office room is 4F. Which specific person are you referring to?",0,1,0
+AMB187,conditioning,What is Mehnaz's office room?,"Mehnaz Seraj, the Senior Lecturer, has her office in room 4G21, while Mehnaz Ara Fazal, the C. Lecturer, has her office in room 4F. Which one of these individuals are you referring to?",0,1,1
+AMB188,no_notice,What is Mirza's office room?,Mirza Azwad Wakil's office room is 4F.,0,0,0
+AMB188,flat_notice,What is Mirza's office room?,"There are multiple individuals with the name ""Mirza"" in the knowledge base. To provide a specific answer, could you please clarify which Mirza you are referring to (e.g., Azwad Wakil, Md. Tanjim Shorif Mugdho, or Abdullah Al Noman)?",1,1,0
+AMB188,conditioning,What is Mirza's office room?,"There are multiple individuals with the name ""Mirza"" in the knowledge base. To provide a specific answer, could you please clarify which Mirza you are referring to (e.g., Azwad Wakil, Md. Tanjim Shorif Mugdho, or Abdullah Al Noman)?",1,1,0
+AMB191,no_notice,What is Mohammad's office room?,"The office room for Mohammad Kaykobad, Dr. Mohammad Khan, Nur Mohammad Shaon, Mohammad Fahim, Mohammad Rakibul Hasan Mahin, and Mohammad Badrul Hossain is not specified in the context, but the office rooms for Mohammad Naveed Hossain and Mohammad are 4M113 and 4J52 respectively.",0,0,1
+AMB191,flat_notice,What is Mohammad's office room?,"There are multiple individuals with the name ""Mohammad"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMB191,conditioning,What is Mohammad's office room?,"There are multiple individuals with the name ""Mohammad"" in the database. To provide a specific answer, could you please clarify which Mohammad you are referring to (e.g., Dr. Kaykobad, Mr. Zaber Mohammad, etc.)?",1,1,0
+AMB192,no_notice,What is Mohammed's office room?,Mohammed's office room is 4P.,0,0,0
+AMB192,flat_notice,What is Mohammed's office room?,Mohammed Radoan's office room is 4P.,0,0,0
+AMB192,conditioning,What is Mohammed's office room?,Mohammed Radoan's office room is Room 4P.,0,0,0
+AMB201,no_notice,What is Muhammad's office room?,There is no information in the retrieved context about Muhammad's office room.,0,0,0
+AMB201,flat_notice,What is Muhammad's office room?,I don't have enough information in the retrieved context to answer this question.,0,0,0
+AMB201,conditioning,What is Muhammad's office room?,I'm not able to answer that question as there is no information in the retrieved context about a person named Muhammad or their office room.,0,0,0
+AMB211,no_notice,What is Nafis's office room?,There is no information in the retrieved context about Nafis's office room.,1,0,0
+AMB211,flat_notice,What is Nafis's office room?,I don't have enough information in the retrieved context to answer the question about Nafis's office room.,1,0,0
+AMB211,conditioning,What is Nafis's office room?,I'm unable to answer that question as there is not enough information in the retrieved context about Nafis's office room.,0,0,0
+AMB213,no_notice,What is Nafiz's office room?,Nafiz's office room is Room 4F.,0,0,0
+AMB213,flat_notice,What is Nafiz's office room?,Nafiz's office room is Room 4F.,0,0,0
+AMB213,conditioning,What is Nafiz's office room?,Nafiz's office room is Room 4F.,0,0,0
+AMB219,no_notice,What is Nasim's office room?,Nasim's office room is 4P177.,0,0,0
+AMB219,flat_notice,What is Nasim's office room?,Nasim's office room is 4P177.,0,0,0
+AMB219,conditioning,What is Nasim's office room?,Nasim's office room is 4P177.,0,0,0
+AMB225,no_notice,What is Nazmus's office room?,Nazmus's office room is 4P195.,0,0,0
+AMB225,flat_notice,What is Nazmus's office room?,Nazmus's office room is 4P195.,0,0,0
+AMB225,conditioning,What is Nazmus's office room?,Nazmus Sakib Touhid's office room is 4P195.,0,0,0
+AMB255,no_notice,What is Rafid's office room?,I do not have enough information in the retrieved context to answer the question about Rafid's office room.,1,0,0
+AMB255,flat_notice,What is Rafid's office room?,I don't have enough information in the retrieved context to answer this question.,0,0,0
+AMB255,conditioning,What is Rafid's office room?,I'm not able to answer that question as there is no information in the retrieved context about a person named Rafid or their office room.,0,0,0
+AMB258,no_notice,What is Rahman's office room?,"Rahman's office room is not specified in the provided context, as there are multiple individuals with the last name ""Rahman"" and their rooms are listed separately.",1,0,0
+AMB258,flat_notice,What is Rahman's office room?,"I've found multiple individuals with the last name ""Rahman"". To provide an accurate answer, could you please specify which person you are referring to? The matching names are:
+
+1. Sayeedur Rahman (Room: 4F)
+2. Shehran Rahman (Room: 4F)
+3. Md Fardin Rahman Ami (Room: 4F)
+4. A B M Muntasir Rahman (Room: 4L95)
+5. Md Nafiu Rahman (Room: 4N138)
+6. Tanveer Rahman (Room: 4M112)
+7. Mr. Md. Abdur Rahman (Room: 4F)
+8. Samiur Rahman (Room: 4J55)
+9. Dr. Md. Khalilur Rahman (Room: 4G08)
+10. Md. Rifat Rahman (Room: 4N164)
+11. MD MIZANUR RAHMAN MUSTAKIM (Room: 4P171)
+12. Mr. Rafeed Rahman (Room: 4J64)
+13. Quazi Ashikur Rahman (Room: 4M120)
+14. Md Ashikur Rahman Any (Room: 4P)
+15. Dr. Chowdhury Mofizur Rahman (Room: 4G18)
+16. Mr. Shahriar Rahman Rana (Room: 4M105)
+
+Please let me know which person you are referring to, and I'll be happy to provide the answer.",0,1,1
+AMB258,conditioning,What is Rahman's office room?,"There are multiple individuals with the last name ""Rahman"" in the database, and without knowing which specific person you are referring to, I cannot provide a definitive answer. However, if you could specify which one of the following individuals you mean:
+
+* Sayeedur Rahman (C. Lecturer)
+* Shehran Rahman (C. Lecturer)
+* Md Fardin Rahman Ami (C. Lecturer)
+* A B M Muntasir Rahman (Lecturer)
+* Md Nafiu Rahman (Lecturer)
+* Tanveer Rahman (Lecturer)
+* Mr. Md. Abdur Rahman (C. Senior Lecturer)
+* Samiur Rahman (Lecturer)
+* Dr. Md. Khalilur Rahman (Professor)
+* Md. Rifat Rahman (Lecturer)
+* MD MIZANUR RAHMAN MUSTAKIM (Lecturer)
+* Mr. Rafeed Rahman (Senior Lecturer)
+* Quazi Ashikur Rahman (Lecturer)
+* Md Ashikur Rahman Any (C. Lecturer)
+* Dr. Chowdhury Mofizur Rahman (Professor)
+* Mr. Shahriar Rahman Rana (Lecturer)
+
+Please let me know which one you are referring to, and I will be happy to provide the office room number for that individual.",1,1,1
+AMB266,no_notice,What is Rasel's office room?,Rasel's office room is 4N149.,0,0,0
+AMB266,flat_notice,What is Rasel's office room?,Rasel's office room is 4N149.,0,0,0
+AMB266,conditioning,What is Rasel's office room?,Rasel's office room is 4N149.,0,0,0
+AMB271,no_notice,What is Reza's office room?,Mr. Md. Tanzim Reza's office room is 4G05.,0,0,0
+AMB271,flat_notice,What is Reza's office room?,"I couldn't determine which specific person you are referring to, as there are multiple individuals with the name ""Reza"" in the retrieved context. Could you please specify which Reza you mean (Tanjim Reza, Ahmed Mayeesha Reza Agomoni, or Mr. Md. Tanzim Reza)?",1,1,0
+AMB271,conditioning,What is Reza's office room?,"I found multiple individuals with the name ""Reza"" in the knowledge base. To provide a specific answer, could you please clarify which Reza you are referring to? Do you mean Tanjim Reza (C. Lecturer), Ahmed Mayeesha Reza Agomoni (Lecturer), or Mr. Md. Tanzim Reza (Senior Lecturer)?",0,1,1
+AMB274,no_notice,What is Rifat's office room?,There is not enough information in the retrieved context to answer the question about Rifat's office room.,1,0,0
+AMB274,flat_notice,What is Rifat's office room?,I don't have enough information in the retrieved context to answer this question.,1,0,0
+AMB274,conditioning,What is Rifat's office room?,I'm not able to answer that question as there is no information in the retrieved context about a person named Rifat or their office room.,0,0,0
+AMB277,no_notice,What is Ruhan's office room?,Ruhan's office room is 4P191.,0,0,0
+AMB277,flat_notice,What is Ruhan's office room?,Ruhan Habib's office room is 4P191.,0,0,0
+AMB277,conditioning,What is Ruhan's office room?,Ruhan Habib's office room is 4P191.,0,0,0
+AMB280,no_notice,What is Sabbir's office room?,Sabbir Hossain's office room is 4J54.,0,0,0
+AMB280,flat_notice,What is Sabbir's office room?,"I found multiple individuals with the name ""Sabbir"" in the knowledge base. To provide an accurate answer, could you please specify which Sabbir you are referring to: Md. Sabbir Ahmed or Mr. Md Sabbir Hossain?",1,1,0
+AMB280,conditioning,What is Sabbir's office room?,"There are multiple individuals with the name ""Sabbir"" in the knowledge base. To provide a specific answer, could you please clarify which Sabbir you are referring to (e.g., Md. Sabbir Ahmed or Mr. Md Sabbir Hossain)?",1,1,0
+AMB290,no_notice,What is Saha's office room?,There is no information in the retrieved context about Saha's office room.,0,0,0
+AMB290,flat_notice,What is Saha's office room?,I'm unable to answer that question as there is no information in the retrieved context about a person named Saha or their office room.,0,0,0
+AMB290,conditioning,What is Saha's office room?,I'm unable to answer that question as there is no information in the retrieved context about a person named Saha or their office room.,0,0,0
+AMB296,no_notice,What is Sakib's office room?,Sakib's office room is 4P195.,0,0,0
+AMB296,flat_notice,What is Sakib's office room?,"There are multiple individuals with the name ""Sakib"" in the knowledge base. To provide an accurate answer, could you please specify which Sakib you are referring to (Nazmus Sakib Touhid, Nazmus Sakib Ahmed, or Sadman Sakib Alif)?",1,1,0
+AMB296,conditioning,What is Sakib's office room?,"There are multiple individuals with the name ""Sakib"" in the knowledge base. To provide a specific answer, could you please clarify which Sakib you are referring to (e.g., Nazmus Sakib Touhid, Sadman Sakib Alif, or Nazmus Sakib Ahmed)?",1,1,0
+AMB313,no_notice,What is Shahriar's office room?,"The office room for individuals with the surname ""Shahriar"" varies, but Asif Shahriar's office room is 4M124.",0,0,0
+AMB313,flat_notice,What is Shahriar's office room?,"There are multiple individuals with the name ""Shahriar"" in the knowledge base. To provide a specific answer, could you please clarify which Shahriar you are referring to (e.g., Asif Shahriar, Mr. Shadman Shahriar, Mr. Shahriar Rahman Rana, or Ahmad Farhan Shahriar Chowdhury)?",1,1,0
+AMB313,conditioning,What is Shahriar's office room?,"There are multiple individuals with the name ""Shahriar"" in the knowledge base. To provide a specific answer, could you please clarify which Shahriar you are referring to (e.g., Asif Shahriar, Mr. Shadman Shahriar, Mr. Shahriar Rahman Rana, or Ahmad Farhan Shahriar Chowdhury)?",1,1,0
+AMB324,no_notice,What is Sheikh's office room?,Sheikh Iftekhar Ahmed's office room is Room 4P.,0,0,0
+AMB324,flat_notice,What is Sheikh's office room?,"Sheikh Iftekhar Ahmed's room is listed as Room 4P, and Sheikh Araf Noshin's room is listed as Room 4N144. Which specific person are you referring to?",0,1,1
+AMB324,conditioning,What is Sheikh's office room?,"Sheikh Iftekhar Ahmed, a C. Lecturer, has Room 4P, while Sheikh Araf Noshin, a Lecturer, has Room 4N144. Which specific person are you referring to?",0,1,1
+AMB329,no_notice,What is Shuvo's office room?,I don't have enough information in the retrieved context to answer that question.,1,0,0
+AMB329,flat_notice,What is Shuvo's office room?,I'm unable to answer that question as there is no information in the retrieved context about a person named Shuvo or their office room.,0,0,0
+AMB329,conditioning,What is Shuvo's office room?,I'm not able to answer that question as there is no information in the retrieved context about a person named Shuvo or their office room.,0,0,0
+AMB347,no_notice,What is Tabassum's office room?,Tabassum's office room is Room 4F.,0,0,0
+AMB347,flat_notice,What is Tabassum's office room?,Tabassum's office room is Room 4F.,0,0,0
+AMB347,conditioning,What is Tabassum's office room?,Tabassum's office room is Room 4F.,0,0,0
+AMB349,no_notice,What is Tahsin's office room?,Tahsin's office room is Room 4F.,0,0,0
+AMB349,flat_notice,What is Tahsin's office room?,Tahsin's office room is Room 4F.,0,0,0
+AMB349,conditioning,What is Tahsin's office room?,Tahsin's office room is Room 4F.,0,0,0
+AMB354,no_notice,What is Tanjim's office room?,Tanjim's office room is Room 4F.,0,0,0
+AMB354,flat_notice,What is Tanjim's office room?,Tanjim's office room is Room 4F.,0,0,0
+AMB354,conditioning,What is Tanjim's office room?,Tanjim's office room is Room 4F.,0,0,0
+AMB364,no_notice,What is Tasnim's office room?,Tasnim Sobhan Upoma's office room is 4N141.,0,0,0
+AMB364,flat_notice,What is Tasnim's office room?,"There are multiple individuals with the name ""Tasnim"" in the knowledge base. To provide a specific answer, could you please clarify which Tasnim you are referring to?",1,1,0
+AMB364,conditioning,What is Tasnim's office room?,"There are multiple individuals with the name ""Tasnim"" in the knowledge base. To provide a specific answer, could you please clarify which Tasnim you are referring to?",1,1,0
+AMB372,no_notice,What is Upoma's office room?,Upoma's office room is 4N141.,0,0,0
+AMB372,flat_notice,What is Upoma's office room?,"I found multiple individuals with the name ""Upoma"", and I need to clarify which one you are referring to. The two matching names are Ms. Ipshita Bonhi Upoma (with a room number of 4K78) and Tasnim Sobhan Upoma (with a room number of 4N141). Please let me know which specific person's office room you would like to know about.",1,1,0
+AMB372,conditioning,What is Upoma's office room?,Upoma's office rooms are listed as 4N141 (for Tasnim Sobhan Upoma) and 4K78 (for Ms. Ipshita Bonhi Upoma). Which specific person do you mean?,0,1,1
+AMB385,no_notice,What is Zaman's office room?,Zaman's office room is Room 4F.,0,0,0
+AMB385,flat_notice,What is Zaman's office room?,Zaman's office room is Room 4F.,0,0,0
+AMB385,conditioning,What is Zaman's office room?,Zaman's office room is Room 4F.,0,0,0
+AMB387,no_notice,What is Zayed's office room?,Zayed's office room is 4N147.,0,0,0
+AMB387,flat_notice,What is Zayed's office room?,"I found multiple individuals with the name ""Zayed"". To provide an accurate answer, could you please specify which Zayed you are referring to: Md Zayed Bin Zahir Arju or Zayed Humayun?",1,1,0
+AMB387,conditioning,What is Zayed's office room?,"I found multiple individuals with the name ""Zayed"" in the knowledge base. To provide an accurate answer, could you please specify which Zayed you are referring to (e.g., Md Zayed Bin Zahir Arju or Zayed Humayun)?",1,1,0

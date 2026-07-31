@@ -1,0 +1,916 @@
+query_id,condition,query,field_asked,answer,avoids_false_confidence,asks_for_clarification,offers_disambiguator
+AMBX001,no_notice,What is Abdullah's office room?,office_room,Abdullah Khondoker's office room is 4F.,0,0,0
+AMBX001,flat_notice,What is Abdullah's office room?,office_room,"There are multiple individuals with the name ""Abdullah"" in the knowledge base. To provide a specific answer, could you please clarify which Abdullah you are referring to?",1,1,0
+AMBX001,conditioning,What is Abdullah's office room?,office_room,"There are multiple individuals with the name ""Abdullah"" in the knowledge base. To provide a specific answer, could you please clarify which Abdullah you are referring to (e.g., Abdullah Khondoker, Abdullah Nayem Wasi Emran, Mirza Abdullah Al Noman, or Dr. Matin Saad Abdullah)?",1,1,1
+AMBX002,no_notice,What is Abdullah's email address?,email,Abdullah's email address is ext.abdullah@bracu.ac.bd.,0,0,0
+AMBX002,flat_notice,What is Abdullah's email address?,email,"There are multiple individuals with the name ""Abdullah"" in the knowledge base. To provide a specific answer, could you please clarify which Abdullah you are referring to?",1,1,0
+AMBX002,conditioning,What is Abdullah's email address?,email,"There are multiple individuals with the name ""Abdullah"" in the knowledge base. To provide a specific answer, could you please clarify which Abdullah you are referring to (e.g., Abdullah Khondoker, Dr. Matin Saad Abdullah, Abdullah Nayem Wasi Emran, or Mirza Abdullah Al Noman)?",1,1,1
+AMBX003,no_notice,What is Abdullah's designation?,designation,"Abdullah Khondoker's designation is C. Lecturer, and Abdullah Nayem Wasi Emran's designation is also Lecturer, while Mirza Abdullah Al Noman's designation is Lecturer as well, but Dr. Matin Saad Abdullah's designation is Professor.",0,0,1
+AMBX003,flat_notice,What is Abdullah's designation?,designation,"There are multiple individuals with the name ""Abdullah"" in the knowledge base. To provide a specific answer, could you please clarify which Abdullah you are referring to?",1,1,0
+AMBX003,conditioning,What is Abdullah's designation?,designation,"There are multiple individuals with the name ""Abdullah"" in the knowledge base. To provide a specific answer, could you please clarify which Abdullah you are referring to (e.g., Abdullah Khondoker, Mirza Abdullah Al Noman, Dr. Matin Saad Abdullah, or Abdullah Nayem Wasi Emran)?",1,1,1
+AMBX004,no_notice,What is Abdullah's employment status?,status,Abdullah Khondoker's employment status is Contractual.,0,0,0
+AMBX004,flat_notice,What is Abdullah's employment status?,status,"Abdullah Khondoker's employment status is Contractual, while Mirza Abdullah Al Noman and Abdullah Nayem Wasi Emran are both Full Time. Which specific Abdullah would you like to know more about?",0,1,1
+AMBX004,conditioning,What is Abdullah's employment status?,status,"Abdullah Khondoker's employment status is Contractual, while Mirza Abdullah Al Noman and Abdullah Nayem Wasi Emran are both Full Time. Please specify which Abdullah you would like more information about.",0,1,1
+AMBX005,no_notice,What is Abid's office room?,office_room,There is no information in the retrieved context about Abid's office room.,1,0,0
+AMBX005,flat_notice,What is Abid's office room?,office_room,I don't have enough information in the retrieved context to answer this question.,0,0,0
+AMBX005,conditioning,What is Abid's office room?,office_room,I'm unable to answer that question as there is no information in the retrieved context about a person named Abid or their office room.,0,0,0
+AMBX006,no_notice,What is Abid's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX006,flat_notice,What is Abid's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX006,conditioning,What is Abid's email address?,email,"I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Abid, and only provides contact information for Office of Co-curricular Activities (OCA).",1,0,0
+AMBX007,no_notice,What is Abid's designation?,designation,"Abid Hossain Ashik's designation is C. Lecturer, and Mr. Abid Jahan Apon's designation is Lecturer.",0,0,1
+AMBX007,flat_notice,What is Abid's designation?,designation,"Abid Jahan Apon's designation is a Lecturer, and Abid Hossain Ashik's designation is a C. Lecturer; please specify which Abid you are referring to in order to provide a more accurate answer.",0,1,1
+AMBX007,conditioning,What is Abid's designation?,designation,"Abid Jahan Apon is a Lecturer, and Abid Hossain Ashik is a C. Lecturer; could you please clarify which specific person you are referring to?",0,1,1
+AMBX008,no_notice,What is Abid's employment status?,status,Abid's employment status is contractual.,0,0,0
+AMBX008,flat_notice,What is Abid's employment status?,status,Abid Hossain Ashik's employment status is contractual.,0,0,0
+AMBX008,conditioning,What is Abid's employment status?,status,Abid Hossain Ashik's employment status is contractual.,0,0,0
+AMBX009,no_notice,What is Ahmed's office room?,office_room,"The office room for individuals with the surname ""Ahmed"" varies, but some of them have been assigned rooms as follows: Sadif Ahmed has room 4P197, Anika Ahmed has room 4K72, Md. Sabbir Ahmed has room 4M107, Sheikh Iftekhar Ahmed has room 4P, Ateya Ahmed Subarna has room 4K77, Bijoy Ahmed Saiem has room 4M130, Nazmus Sakib Ahmed has room 4P174, Mr. Ahmed Mahir Ruhan has room 4L93, and Ahmed Mayeesha Reza Agomoni has room 4L87.",0,0,1
+AMBX009,flat_notice,What is Ahmed's office room?,office_room,"There are multiple individuals with the name ""Ahmed"" in the database, and without knowing which specific person you are referring to, I cannot provide a definitive answer. However, here are the office rooms listed for each of the matching names:
+
+* Sadif Ahmed: 4P197
+* Anika Ahmed: 4K72
+* Md. Sabbir Ahmed: 4M107
+* Sheikh Iftekhar Ahmed: 4P (note that this is a room number without a specific building or floor designation)
+* Ateya Ahmed Subarna: 4K77
+* Bijoy Ahmed Saiem: 4M130
+* Nazmus Sakib Ahmed: 4P174
+* Mr. Ahmed Mahir Ruhan: 4L93
+* Ahmed Mayeesha Reza Agomoni: 4L87
+* Saadat Rafid Ahmed: 4J51
+* Mr. Rubayat Ahmed Khan: 4G12
+
+Please let me know which specific person you are referring to so I can provide a more accurate answer.",1,1,1
+AMBX009,conditioning,What is Ahmed's office room?,office_room,"There are multiple individuals with the name ""Ahmed"" in the database, and I need to know which specific person you are referring to in order to provide an accurate answer. Can you please specify which Ahmed you would like me to look up?",1,1,0
+AMBX010,no_notice,What is Ahmed's email address?,email,"The email addresses of the individuals with the surname ""Ahmed"" are anika.ahmed@bracu.ac.bd, sabbir.ahmed@bracu.ac.bd, sadif.ahmed@bracu.ac.bd, ateya.ahmed@bracu.ac.bd, bijoy.saiem@bracu.ac.bd, ext.sheikh.ahmed@bracu.ac.bd, nazmus.sakib@bracu.ac.bd, ahmed.ruhan@bracu.ac.bd, ahmed.mayeesha@bracu.ac.bd, rubayat.ahmed@bracu.ac.bd, and saadat.ahmed@bracu.ac.bd.",0,0,1
+AMBX010,flat_notice,What is Ahmed's email address?,email,"There are multiple individuals with the name ""Ahmed"" in the database, and I need to know which specific person you are referring to in order to provide their email address. Please specify one of the following individuals:
+
+1. Anika Ahmed
+2. Md. Sabbir Ahmed
+3. Sadif Ahmed
+4. Ateya Ahmed Subarna
+5. Bijoy Ahmed Saiem
+6. Sheikh Iftekhar Ahmed
+7. Nazmus Sakib Ahmed
+8. Mr. Ahmed Mahir Ruhan
+9. Ahmed Mayeesha Reza Agomoni
+10. Mr. Rubayat Ahmed Khan
+11. Saadat Rafid Ahmed
+
+Once you specify the correct individual, I can provide their email address.",1,1,1
+AMBX010,conditioning,What is Ahmed's email address?,email,"There are multiple individuals with the name ""Ahmed"" in the database, and I need to know which specific person you are referring to in order to provide their email address. Please specify one of the following individuals:
+
+1. Anika Ahmed (Lecturer)
+2. Md. Sabbir Ahmed (Senior Lecturer)
+3. Sadif Ahmed (Lecturer)
+4. Ateya Ahmed Subarna (Lecturer)
+5. Bijoy Ahmed Saiem (Lecturer)
+6. Sheikh Iftekhar Ahmed (C. Lecturer)
+7. Nazmus Sakib Ahmed (Lecturer)
+8. Mr. Ahmed Mahir Ruhan (Lecturer)
+9. Ahmed Mayeesha Reza Agomoni (Lecturer)
+10. Mr. Rubayat Ahmed Khan (Senior Lecturer)
+11. Saadat Rafid Ahmed (Lecturer)
+
+Once you specify the correct individual, I can provide their email address.",0,1,1
+AMBX011,no_notice,What is Ahmed's designation?,designation,Ahmed Mahir Ruhan's designation is a Lecturer.,0,0,0
+AMBX011,flat_notice,What is Ahmed's designation?,designation,"There are multiple individuals with the name ""Ahmed"" in the database. To provide a specific answer, could you please clarify which Ahmed you are referring to?",1,1,0
+AMBX011,conditioning,What is Ahmed's designation?,designation,"There are multiple individuals with the name ""Ahmed"" in the database. To provide a specific answer, could you please clarify which Ahmed you are referring to?",1,1,0
+AMBX012,no_notice,What is Ahmed's employment status?,status,"Ahmed Mayeesha Reza Agomoni, whose initial is MZG, is a Lecturer with a Full Time status.",0,0,0
+AMBX012,flat_notice,What is Ahmed's employment status?,status,"There are multiple individuals with the name ""Ahmed"" in the database, and without specifying which one you mean, I cannot provide a definitive answer to your question about their employment status. However, here are the distinct records that match the query:
+
+1. Sadif Ahmed - Full Time
+2. Anika Ahmed - Full Time
+3. Ateya Ahmed Subarna - Full Time
+4. Bijoy Ahmed Saiem - Full Time
+5. Md. Sabbir Ahmed - Senior Lecturer (Full Time)
+6. Sheikh Iftekhar Ahmed - Contractual
+7. Nazmus Sakib Ahmed - Full Time
+8. Ahmed Mayeesha Reza Agomoni - Full Time
+9. Mr. Ahmed Mahir Ruhan - Full Time
+10. Saadat Rafid Ahmed - Full Time
+11. Mr. Rubayat Ahmed Khan - Senior Lecturer (Full Time)
+
+Please specify which individual you are referring to in order for me to provide a more accurate answer.",0,1,1
+AMBX012,conditioning,What is Ahmed's employment status?,status,"Ahmed Mayeesha Reza Agomoni, Mr. Ahmed Mahir Ruhan, Sheikh Iftekhar Ahmed, and Rubayat Ahmed Khan have different employment statuses: Contractual for Sheikh Iftekhar Ahmed, Full Time for the others. Which specific person's employment status would you like to know about?",0,1,1
+AMBX013,no_notice,What is Alam's office room?,office_room,Alam's office room is 4G24.,0,0,0
+AMBX013,flat_notice,What is Alam's office room?,office_room,"I found multiple individuals with the last name ""Alam"". To provide an accurate answer, could you please specify which of the following individuals you are referring to:
+
+1. Dr. Md. Ashraful Alam (Associate Professor)
+2. Dr. Md. Shafiul Alam Shuvo (Contractual Professor)
+3. Dr. Md. Golam Rabiul Alam (Professor)
+
+Please let me know, and I will be happy to provide the office room number for the specified individual.",1,1,1
+AMBX013,conditioning,What is Alam's office room?,office_room,"I found multiple individuals with the last name ""Alam"". To provide an accurate answer, could you please specify which of the following individuals you are referring to:
+
+1. Dr. Md. Ashraful Alam (Associate Professor)
+2. Dr. Md. Shafiul Alam Shuvo (C. Professor)
+3. Dr. Md. Golam Rabiul Alam (Professor)
+
+Please let me know which one, and I will be happy to provide the office room number for that individual.",1,1,1
+AMBX014,no_notice,What is Alam's email address?,email,Alam's email address is ashraful.alam@bracu.ac.bd.,0,0,0
+AMBX014,flat_notice,What is Alam's email address?,email,"There are multiple individuals with the name ""Alam"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to: Dr. Md. Ashraful Alam or Dr. Md. Shafiul Alam Shuvo? 
+
+If you meant Dr. Md. Ashraful Alam, his email address is ashraful.alam@bracu.ac.bd.
+
+If you meant Dr. Md. Shafiul Alam Shuvo, his email address is ext.shafiul.shuvo@bracu.ac.bd.",0,1,1
+AMBX014,conditioning,What is Alam's email address?,email,"There are multiple individuals with the name ""Alam"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to: Dr. Md. Ashraful Alam or Dr. Md. Shafiul Alam Shuvo?",0,1,1
+AMBX015,no_notice,What is Alam's designation?,designation,Alam's designation is Associate Professor.,0,0,0
+AMBX015,flat_notice,What is Alam's designation?,designation,"There are multiple individuals with the last name ""Alam"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean by ""Alam""? Do you mean Dr. Md. Ashraful Alam (Associate Professor), Dr. Md. Shafiul Alam Shuvo (C. Professor), or Dr. Md. Golam Rabiul Alam (Professor)?",0,1,1
+AMBX015,conditioning,What is Alam's designation?,designation,"There are multiple individuals with the last name ""Alam"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean by ""Alam""? Do you mean Dr. Md. Ashraful Alam (Associate Professor), Dr. Md. Shafiul Alam Shuvo (C. Professor), or Dr. Md. Golam Rabiul Alam (Professor)?",0,1,1
+AMBX016,no_notice,What is Alam's employment status?,status,Dr. Md. Ashraful Alam's employment status is Full Time.,0,0,0
+AMBX016,flat_notice,What is Alam's employment status?,status,"I found multiple individuals with the last name ""Alam"". To provide an accurate answer, could you please specify which person you are referring to? Do you mean Dr. Md. Ashraful Alam (Associate Professor), Dr. Md. Shafiul Alam Shuvo (Contractual Professor), or Dr. Md. Golam Rabiul Alam (Full Time Professor)?",0,1,1
+AMBX016,conditioning,What is Alam's employment status?,status,"I need more information to provide a specific answer, as there are multiple individuals with the last name ""Alam"" in the retrieved context. Can you please specify which Dr. Md. Alam you are referring to (e.g., Ashraful, Shafiul, or Golam)?",1,1,0
+AMBX017,no_notice,What is Anika's office room?,office_room,Anika's office room is 4F.,0,0,0
+AMBX017,flat_notice,What is Anika's office room?,office_room,"There are multiple individuals named Anika in the knowledge base, and without further clarification, it is unclear which specific person you are referring to. The matching names are:
+
+1. Anika Islam (Room: 4F)
+2. Anika Tasnim (Room: 4F)
+3. Anika Afrin (Room: 4F)
+4. Anika Ahmed (Room: 4K72)
+
+Please specify which Anika you would like to know the office room for.",1,1,0
+AMBX017,conditioning,What is Anika's office room?,office_room,"Anika Islam, Anika Tasnim, and Anika Afrin all have their offices in Room 4F, but we cannot determine the office room for Anika Ahmed without further information.",1,0,1
+AMBX018,no_notice,What is Anika's email address?,email,"Anika's email address is ext.anika.islam@bracu.ac.bd, but since there are two individuals with the name Anika, it would be helpful to clarify which one you are referring to.",0,1,0
+AMBX018,flat_notice,What is Anika's email address?,email,"There are multiple individuals named ""Anika"" in the knowledge base, specifically Anika Islam and Anika Tasnim. To provide a specific answer, could you please clarify which Anika you are referring to?",1,1,0
+AMBX018,conditioning,What is Anika's email address?,email,"There are multiple individuals named ""Anika"" in the knowledge base, specifically Anika Islam and Anika Tasnim. To provide a specific answer, could you please clarify which Anika you are referring to?",1,1,0
+AMBX019,no_notice,What is Anika's designation?,designation,"Anika's designations are C. Lecturer, as seen in multiple entries for individuals with the name ""Anika"" and different initials.",1,0,1
+AMBX019,flat_notice,What is Anika's designation?,designation,"There are multiple individuals with the name ""Anika"" in the knowledge base, and I need to know which specific person you mean. The options are:
+
+1. Anika Islam (Designation: C. Lecturer)
+2. Anika Tasnim (Designation: C. Lecturer)
+3. Anika Afrin (Designation: C. Lecturer)
+4. Anika Ahmed (Designation: Lecturer)
+
+Please let me know which one you are referring to in order to provide a specific answer.",0,1,1
+AMBX019,conditioning,What is Anika's designation?,designation,"There are multiple individuals with the name ""Anika"" in the knowledge base, and their designations differ as follows:
+
+1. Anika Islam - C. Lecturer
+2. Anika Tasnim - C. Lecturer
+3. Anika Afrin - C. Lecturer
+4. Anika Ahmed - Lecturer
+
+Please specify which Anika you are referring to in order for me to provide a more accurate answer.",0,1,1
+AMBX020,no_notice,What is Anika's employment status?,status,"Anika's employment status varies depending on the individual, but for Anika Islam (CAKM), Anika Tasnim (ANT), and Anika Afrin (AAF) it is Contractual, whereas for Anika Ahmed (ANKH) it is Full Time.",0,0,1
+AMBX020,flat_notice,What is Anika's employment status?,status,"There are multiple individuals with the name ""Anika"" in the knowledge base, and without further specification, it is unclear which one you are referring to. The options include:
+
+1. Anika Islam - Contractual
+2. Anika Tasnim - Contractual
+3. Anika Afrin - Contractual
+4. Anika Ahmed - Full Time
+
+Please specify which Anika's employment status you would like to know about.",1,1,1
+AMBX020,conditioning,What is Anika's employment status?,status,"Anika Islam, Anika Tasnim, and Anika Afrin are all Contractual employees, while Anika Ahmed is a Full Time employee. Which specific person do you mean by ""Anika""?",0,1,1
+AMBX021,no_notice,What is Anjum's office room?,office_room,Anjum's office room is 4N161.,0,0,0
+AMBX021,flat_notice,What is Anjum's office room?,office_room,Anjum's office room is 4N161.,0,0,0
+AMBX021,conditioning,What is Anjum's office room?,office_room,Anjum's office room is 4N161.,0,0,0
+AMBX022,no_notice,What is Anjum's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX022,flat_notice,What is Anjum's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX022,conditioning,What is Anjum's email address?,email,"I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Anjum, and only lists contact information for Office of Co-curricular Activities (OCA).",1,0,0
+AMBX023,no_notice,What is Anjum's designation?,designation,Anjum's designation is Lecturer.,0,0,0
+AMBX023,flat_notice,What is Anjum's designation?,designation,"There are multiple individuals with the last name ""Anjum"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean: Akib Anjum or Tarvir Anjum Aditto?",0,1,1
+AMBX023,conditioning,What is Anjum's designation?,designation,"There are multiple individuals with the last name ""Anjum"" in the knowledge base, specifically Akib Anjum and Tarvir Anjum Aditto. To provide a specific answer to your question, could you please clarify which Anjum you are referring to?",0,1,1
+AMBX024,no_notice,What is Anjum's employment status?,status,Anjum's employment status is Full Time.,0,0,0
+AMBX024,flat_notice,What is Anjum's employment status?,status,Akib Anjum's employment status is Full Time.,0,0,0
+AMBX024,conditioning,What is Anjum's employment status?,status,Akib Anjum's employment status is Full Time.,0,0,0
+AMBX025,no_notice,What is Arif's office room?,office_room,I don't have enough information in the retrieved context to answer what Arif's office room is.,1,0,0
+AMBX025,flat_notice,What is Arif's office room?,office_room,I'm unable to answer this question as there is no information in the retrieved context about a person named Arif or their office room.,0,0,0
+AMBX025,conditioning,What is Arif's office room?,office_room,I'm unable to answer this question as there is no information in the retrieved context about a person named Arif or their office room.,0,0,0
+AMBX026,no_notice,What is Arif's email address?,email,Arif's email address is arif.hasan@bracu.ac.bd.,0,0,0
+AMBX026,flat_notice,What is Arif's email address?,email,Arif's email address is arif.hasan@bracu.ac.bd.,0,0,0
+AMBX026,conditioning,What is Arif's email address?,email,Arif's email address is arif.hasan@bracu.ac.bd.,0,0,0
+AMBX027,no_notice,What is Arif's designation?,designation,Mr. Arif Shakil's designation is Senior Lecturer.,0,0,0
+AMBX027,flat_notice,What is Arif's designation?,designation,"There are multiple individuals with the name ""Arif"" in the knowledge base. To provide an accurate answer, could you please specify which Arif you are referring to: Md Arif Hasan or Mr. Arif Shakil?",0,1,1
+AMBX027,conditioning,What is Arif's designation?,designation,"There are multiple individuals with the name ""Arif"" in the knowledge base. To provide a specific answer, could you please clarify which Arif you are referring to? Do you mean Md Arif Hasan (Lecturer) or Mr. Arif Shakil (Senior Lecturer)?",0,1,1
+AMBX028,no_notice,What is Arif's employment status?,status,I don't have enough information to answer that question.,1,0,0
+AMBX028,flat_notice,What is Arif's employment status?,status,I don't have enough information to answer your question about Arif's employment status.,1,0,0
+AMBX028,conditioning,What is Arif's employment status?,status,I'm unable to answer this question as there is no information in the retrieved context about a person named Arif.,0,0,0
+AMBX029,no_notice,What is Ashikur's office room?,office_room,"Ashikur's office room is 4P, as indicated in the context for Md Ashikur Rahman Any.",0,0,0
+AMBX029,flat_notice,What is Ashikur's office room?,office_room,"There are multiple individuals with the name ""Ashikur Rahman"" in the knowledge base, specifically Md Ashikur Rahman Any and Quazi Ashikur Rahman. To provide an accurate answer, could you please specify which person you mean by ""Ashikur""?",1,1,0
+AMBX029,conditioning,What is Ashikur's office room?,office_room,"There are multiple individuals with the name ""Ashikur Rahman"" in the knowledge base, including Md Ashikur Rahman Any (C. Lecturer) and Quazi Ashikur Rahman (Lecturer). To provide a specific answer, could you please clarify which person's office room you would like to know about?",1,1,0
+AMBX030,no_notice,What is Ashikur's email address?,email,Ashikur's email address is ext.rahman.ashikur@bracu.ac.bd.,0,0,0
+AMBX030,flat_notice,What is Ashikur's email address?,email,"There are multiple individuals with the name ""Ashikur Rahman"" in the knowledge base, specifically Md Ashikur Rahman Any and Quazi Ashikur Rahman. To provide an accurate answer, could you please specify which person you mean by ""Ashikur""?",1,1,0
+AMBX030,conditioning,What is Ashikur's email address?,email,"There are two individuals with the name ""Ashikur Rahman"": Md Ashikur Rahman Any, a C. Lecturer, and Quazi Ashikur Rahman, a Lecturer. Could you please specify which one you are referring to?",1,1,0
+AMBX031,no_notice,What is Ashikur's designation?,designation,"Ashikur's designations are C. Lecturer and Lecturer, as he has two different entries in the context with these respective designations.",0,0,0
+AMBX031,flat_notice,What is Ashikur's designation?,designation,"There are multiple individuals with the name ""Ashikur Rahman"" in the knowledge base, including Md Ashikur Rahman Any (C. Lecturer) and Quazi Ashikur Rahman (Lecturer). Could you please specify which person you mean by ""Ashikur""?",0,1,1
+AMBX031,conditioning,What is Ashikur's designation?,designation,"There are multiple individuals with the name ""Ashikur Rahman"". To provide a specific answer, could you please clarify which one of the following individuals you are referring to: Md Ashikur Rahman Any (C. Lecturer) or Quazi Ashikur Rahman (Lecturer)?",1,1,1
+AMBX032,no_notice,What is Ashikur's employment status?,status,I do not have enough information to answer the question about Ashikur's employment status.,1,0,0
+AMBX032,flat_notice,What is Ashikur's employment status?,status,I cannot determine Ashikur's employment status as there is no information in the retrieved context about a person named Ashikur.,1,0,0
+AMBX032,conditioning,What is Ashikur's employment status?,status,I'm not able to determine Ashikur's employment status as there is no information about a person named Ashikur in the retrieved context.,1,0,0
+AMBX033,no_notice,What is Ashraful's office room?,office_room,Ashraful Islam Shanto Sikder's office room is 4P173.,0,0,0
+AMBX033,flat_notice,What is Ashraful's office room?,office_room,"I found multiple individuals with the name ""Ashraful"" in our records. To provide an accurate answer, could you please specify which Ashraful you are referring to: Dr. Md. Ashraful Alam or Ashraful Islam Shanto Sikder?",1,1,0
+AMBX033,conditioning,What is Ashraful's office room?,office_room,"Ashraful Alam, the Associate Professor, has an office in room 4G24, while Ashraful Islam Shanto Sikder, the Lecturer, has an office in room 4P173. Which specific person are you referring to?",0,1,1
+AMBX034,no_notice,What is Ashraful's email address?,email,Ashraful's email address is ashraful.alam@bracu.ac.bd.,0,0,0
+AMBX034,flat_notice,What is Ashraful's email address?,email,Dr. Md. Ashraful Alam's email address is ashraful.alam@bracu.ac.bd.,0,0,0
+AMBX034,conditioning,What is Ashraful's email address?,email,Ashraful's email address is ashraful.alam@bracu.ac.bd.,0,0,0
+AMBX035,no_notice,What is Ashraful's designation?,designation,Ashraful Islam Shanto Sikder's designation is a Lecturer.,0,0,0
+AMBX035,flat_notice,What is Ashraful's designation?,designation,"There are multiple individuals with the name ""Ashraful"" in the knowledge base. To provide an accurate answer, could you please specify which Ashraful you are referring to: Dr. Md. Ashraful Alam or Ashraful Islam Shanto Sikder?",0,1,1
+AMBX035,conditioning,What is Ashraful's designation?,designation,"There are multiple individuals with the name ""Ashraful"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean: Dr. Md. Ashraful Alam (Associate Professor) or Ashraful Islam Shanto Sikder (Lecturer)?",0,1,1
+AMBX036,no_notice,What is Ashraful's employment status?,status,I do not have enough information to answer the question about Ashraful's employment status.,1,0,0
+AMBX036,flat_notice,What is Ashraful's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about an individual named Ashraful.,1,0,0
+AMBX036,conditioning,What is Ashraful's employment status?,status,I'm not able to determine Ashraful's employment status as there is no information in the retrieved context about a person named Ashraful.,0,0,0
+AMBX037,no_notice,What is Asif's office room?,office_room,Asif Shahriar's office room is 4M124.,0,0,0
+AMBX037,flat_notice,What is Asif's office room?,office_room,"There are multiple individuals named ""Asif"" in the knowledge base. To provide a specific answer, could you please clarify which Asif you are referring to (e.g., MD ASIF, Asif Shahriar, or Asif Hasan Chowdhury)?",1,1,0
+AMBX037,conditioning,What is Asif's office room?,office_room,"There are multiple individuals with the name ""Asif"" in the knowledge base. To provide a specific answer, could you please clarify which Asif you are referring to (e.g., MD ASIF or one of the other two individuals)?",1,1,0
+AMBX038,no_notice,What is Asif's email address?,email,There is no information in the retrieved context about Asif's email address.,1,0,0
+AMBX038,flat_notice,What is Asif's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX038,conditioning,What is Asif's email address?,email,I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Asif or their email address.,1,0,0
+AMBX039,no_notice,What is Asif's designation?,designation,Asif Shahriar's designation is Lecturer.,0,0,0
+AMBX039,flat_notice,What is Asif's designation?,designation,"There are multiple individuals with the name ""Asif"" in the knowledge base. To provide an accurate answer, could you please specify which Asif you are referring to (e.g., MD ASIF, Asif Shahriar, or Asif Hasan Chowdhury)?",0,1,1
+AMBX039,conditioning,What is Asif's designation?,designation,"There are multiple individuals with the name ""Asif"" in the knowledge base. To provide a specific answer, could you please clarify which Asif you are referring to?",1,1,0
+AMBX040,no_notice,What is Asif's employment status?,status,Asif Shahriar and Asif Hasan Chowdhury are both full-time lecturers.,0,0,1
+AMBX040,flat_notice,What is Asif's employment status?,status,"Asif's employment status can be one of three different statuses, depending on which specific person you are referring to. The options are: Contractual (MD ASIF), Full Time (Asif Shahriar), or Full Time (Asif Hasan Chowdhury). Please clarify which Asif you mean for a more specific answer.",1,1,0
+AMBX040,conditioning,What is Asif's employment status?,status,"Asif Shahriar and Asif Hasan Chowdhury are both listed with a designation of Lecturer, but their statuses differ. To provide an accurate answer, could you please clarify which specific person you mean by ""Asif""?",0,1,1
+AMBX041,no_notice,What is Azwad's office room?,office_room,There is no information in the retrieved context about Azwad's office room.,0,0,0
+AMBX041,flat_notice,What is Azwad's office room?,office_room,I don't have enough information in the retrieved context to answer the question about Azwad's office room.,1,0,0
+AMBX041,conditioning,What is Azwad's office room?,office_room,I'm unable to answer that question as there is no information in the retrieved context about a person named Azwad or their office room.,0,0,0
+AMBX042,no_notice,What is Azwad's email address?,email,Azwad's email address is azwad.hossain@bracu.ac.bd.,0,0,0
+AMBX042,flat_notice,What is Azwad's email address?,email,Azwad's email address is azwad.hossain@bracu.ac.bd.,0,0,0
+AMBX042,conditioning,What is Azwad's email address?,email,Azwad's email address is azwad.hossain@bracu.ac.bd.,0,0,0
+AMBX043,no_notice,What is Azwad's designation?,designation,"Azwad Hossain's designation is a Lecturer, and Mirza Azwad Wakil's designation is a C. Lecturer.",0,0,1
+AMBX043,flat_notice,What is Azwad's designation?,designation,"Azwad Hossain has a designation of Lecturer, and Mirza Azwad Wakil has a designation of C. Lecturer. Which specific person are you referring to?",0,1,1
+AMBX043,conditioning,What is Azwad's designation?,designation,"Azwad Hossain has a designation of Lecturer, while Mirza Azwad Wakil has a designation of C. Lecturer. Which specific person are you referring to?",0,1,1
+AMBX044,no_notice,What is Azwad's employment status?,status,I don't have enough information to answer the question about Azwad's employment status.,1,0,0
+AMBX044,flat_notice,What is Azwad's employment status?,status,"I don't have enough information to answer the question. The context only mentions a query about Azwad, but it does not provide any details about Azwad's employment status.",0,0,0
+AMBX044,conditioning,What is Azwad's employment status?,status,I'm not able to answer that question as the context does not contain enough information about an individual named Azwad.,0,1,0
+AMBX045,no_notice,What is Chowdhury's office room?,office_room,"Dr. Chowdhury Mofizur Rahman, whose designation is Professor, has his office in room 4G18.",0,0,0
+AMBX045,flat_notice,What is Chowdhury's office room?,office_room,"There are multiple individuals with the surname ""Chowdhury"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX045,conditioning,What is Chowdhury's office room?,office_room,"There are multiple individuals with the surname ""Chowdhury"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX046,no_notice,What is Chowdhury's email address?,email,"The email addresses for individuals with the surname ""Chowdhury"" are farida.chowdhury@bracu.ac.bd, ittehad.chowdhury@bracu.ac.bd, rahman.mofizur@bracu.ac.bd, fatiha.ishrar@bracu.ac.bd, asif.hasan@bracu.ac.bd, atonuroy.chowdhury@bracu.ac.bd, and farhan.shahriar@bracu.ac.bd.",0,0,1
+AMBX046,flat_notice,What is Chowdhury's email address?,email,"There are multiple individuals with the surname ""Chowdhury"" in the knowledge base. To provide a specific answer, could you please clarify which person's email address you would like to know? The matching names are Dr. Farida Chowdhury, Ittehad Saleh Chowdhury, Dr. Chowdhury Mofizur Rahman, Fatiha Ishrar Chowdhury, Asif Hasan Chowdhury, Atonu Roy Chowdhury, and Ahmad Farhan Shahriar Chowdhury.",1,1,1
+AMBX046,conditioning,What is Chowdhury's email address?,email,"There are multiple individuals with the last name ""Chowdhury"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to? The matching names are Dr. Farida Chowdhury, Ittehad Saleh Chowdhury, Dr. Chowdhury Mofizur Rahman, Fatiha Ishrar Chowdhury, Asif Hasan Chowdhury, Atonu Roy Chowdhury, and Ahmad Farhan Shahriar Chowdhury.",1,1,1
+AMBX047,no_notice,What is Chowdhury's designation?,designation,"Chowdhury Mofizur Rahman, also known as CMR, is a Professor.",0,0,0
+AMBX047,flat_notice,What is Chowdhury's designation?,designation,"There are multiple individuals with the surname ""Chowdhury"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX047,conditioning,What is Chowdhury's designation?,designation,"There are multiple individuals with the last name ""Chowdhury"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX048,no_notice,What is Chowdhury's employment status?,status,Chowdhury's employment status is Full Time.,0,0,0
+AMBX048,flat_notice,What is Chowdhury's employment status?,status,"Chowdhury can refer to multiple individuals. To provide a specific answer, could you please clarify which Chowdhury you are referring to (e.g., Ittehad Saleh Chowdhury, Asif Hasan Chowdhury, Dr. Chowdhury Mofizur Rahman, etc.)?",1,1,0
+AMBX048,conditioning,What is Chowdhury's employment status?,status,"Chowdhury can refer to multiple individuals. Please specify which one you are referring to, as there are several people with the last name Chowdhury listed here.",0,1,0
+AMBX049,no_notice,What is Fardin's office room?,office_room,Fardin's office room is 4N155.,0,0,0
+AMBX049,flat_notice,What is Fardin's office room?,office_room,"Unfortunately, the context does not contain enough information to answer this question directly for both matching individuals (Kh.Fardin Zubair Nafis and Fardin Zaman). However, it can be stated that there are two distinct records of individuals named ""Fardin"" with different designations and room numbers. To provide a specific answer, please clarify which Fardin you are referring to.",1,1,0
+AMBX049,conditioning,What is Fardin's office room?,office_room,"Unfortunately, the context does not contain enough information to answer this question directly for both candidates, as there are two individuals with the name ""Fardin"" and different designations. However, I can list their names explicitly: Kh.Fardin Zubair Nafis (Lecturer) and Fardin Zaman (C. Lecturer). Could you please specify which Fardin you mean?",1,1,1
+AMBX050,no_notice,What is Fardin's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX050,flat_notice,What is Fardin's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX050,conditioning,What is Fardin's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX051,no_notice,What is Fardin's designation?,designation,"Fardin's designations are Lecturer and C. Lecturer, as he appears in the context under both initials (FZN) with a designation of Lecturer and (FDZ) with a designation of C. Lecturer.",1,0,1
+AMBX051,flat_notice,What is Fardin's designation?,designation,"There are multiple individuals with the name ""Fardin"" in the knowledge base, and without further specification, it is unclear which one you are referring to. The options are:
+
+1. Kh.Fardin Zubair Nafis - Lecturer
+2. Fardin Zaman - C. Lecturer
+3. Md Fardin Rahman Ami - C. Lecturer
+
+Please specify which Fardin you would like me to answer about.",1,1,1
+AMBX051,conditioning,What is Fardin's designation?,designation,"There are multiple individuals with the name ""Fardin"" in the knowledge base, and without further specification, it is unclear which one you are referring to. The candidates are:
+
+1. Kh.Fardin Zubair Nafis, a Lecturer
+2. Fardin Zaman, a C. Lecturer
+3. Md Fardin Rahman Ami, a C. Lecturer
+
+Please clarify which specific person you mean by ""Fardin"".",1,1,1
+AMBX052,no_notice,What is Fardin's employment status?,status,"Fardin's employment status is Full Time, as indicated by his designation as a Lecturer with the status of Full Time.",0,0,0
+AMBX052,flat_notice,What is Fardin's employment status?,status,"There are multiple individuals with the name ""Fardin"" in the knowledge base, specifically Kh.Fardin Zubair Nafis and Fardin Zaman. To provide an accurate answer, could you please specify which Fardin you are referring to?",0,1,1
+AMBX052,conditioning,What is Fardin's employment status?,status,"There are multiple individuals with the name ""Fardin"" in the knowledge base, and their designations differ. To provide a specific answer, could you please clarify which Fardin you are referring to (e.g., Kh.Fardin Zubair Nafis or Fardin Zaman)?",0,1,1
+AMBX053,no_notice,What is Farhan's office room?,office_room,Farhan Faruk's office room is 4M100.,0,0,0
+AMBX053,flat_notice,What is Farhan's office room?,office_room,"Farhan Faruk's office room is 4M100, while Niloy Farhan's office room is 4M123. Which specific person are you referring to?",0,1,0
+AMBX053,conditioning,What is Farhan's office room?,office_room,Farhan Faruk's office room is 4M100.,0,0,0
+AMBX054,no_notice,What is Farhan's email address?,email,Farhan's email address is farhan.faruk@bracu.ac.bd.,0,0,0
+AMBX054,flat_notice,What is Farhan's email address?,email,Farhan's email address is farhan.faruk@bracu.ac.bd.,0,0,0
+AMBX054,conditioning,What is Farhan's email address?,email,Farhan's email address is farhan.faruk@bracu.ac.bd.,0,0,0
+AMBX055,no_notice,What is Farhan's designation?,designation,Farhan's designation is Lecturer.,0,0,0
+AMBX055,flat_notice,What is Farhan's designation?,designation,"There are multiple individuals with the name ""Farhan"" in the knowledge base. To provide an accurate answer, could you please specify which Farhan you are referring to (e.g., Farhan Faruk, Niloy Farhan, or Ahmad Farhan Shahriar Chowdhury)?",1,1,0
+AMBX055,conditioning,What is Farhan's designation?,designation,"I found multiple individuals with the name ""Farhan"" in our records. To provide an accurate answer, could you please specify which Farhan you are referring to (e.g., Farhan Faruk, Niloy Farhan, or Ahmad Farhan Shahriar Chowdhury)?",1,1,0
+AMBX056,no_notice,What is Farhan's employment status?,status,Farhan's employment status is Full Time.,0,0,0
+AMBX056,flat_notice,What is Farhan's employment status?,status,"Farhan Faruk's employment status is Full Time, and Niloy Farhan's employment status is also Full Time. Could you please clarify which specific Farhan you are referring to?",0,1,0
+AMBX056,conditioning,What is Farhan's employment status?,status,"Farhan Faruk and Niloy Farhan are both listed as having a full-time employment status. Could you please clarify which specific person, Farhan Faruk or Niloy Farhan, you would like to know more about?",0,1,1
+AMBX057,no_notice,What is Ferdous's office room?,office_room,Dr. Md Sadek Ferdous's office room is 4G10.,0,0,0
+AMBX057,flat_notice,What is Ferdous's office room?,office_room,"I found multiple individuals with the last name ""Ferdous"". To provide an accurate answer, could you please specify which person you are referring to: Ms. Tasnim Ferdous or Dr. Md Sadek Ferdous?",1,1,0
+AMBX057,conditioning,What is Ferdous's office room?,office_room,"The matching names are Ms. Tasnim Ferdous and Dr. Md Sadek Ferdous, who differ by Designation (Senior Lecturer and Professor respectively). Which specific person do you mean?",1,1,0
+AMBX058,no_notice,What is Ferdous's email address?,email,I do not have enough information to answer the question.,0,0,0
+AMBX058,flat_notice,What is Ferdous's email address?,email,I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Ferdous or their email address.,1,0,0
+AMBX058,conditioning,What is Ferdous's email address?,email,"I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named ""Ferdous"".",1,0,0
+AMBX059,no_notice,What is Ferdous's designation?,designation,Dr. Md Sadek Ferdous is a Professor.,0,0,0
+AMBX059,flat_notice,What is Ferdous's designation?,designation,"There are multiple individuals with the last name ""Ferdous"" in the knowledge base, specifically Ms. Tasnim Ferdous and Dr. Md Sadek Ferdous. To provide an accurate answer, could you please specify which person you mean by ""Ferdous""?",0,1,1
+AMBX059,conditioning,What is Ferdous's designation?,designation,"There are two individuals with the last name ""Ferdous"" in the knowledge base, Ms. Tasnim Ferdous (Senior Lecturer) and Dr. Md Sadek Ferdous (Professor). Could you please specify which person you mean by ""Ferdous""?",0,1,1
+AMBX060,no_notice,What is Ferdous's employment status?,status,Ms. Tasnim Ferdous's employment status is Full Time.,0,0,0
+AMBX060,flat_notice,What is Ferdous's employment status?,status,Ms. Tasnim Ferdous's employment status is Full Time.,0,0,0
+AMBX060,conditioning,What is Ferdous's employment status?,status,Ms. Tasnim Ferdous's employment status is Full Time.,0,0,0
+AMBX061,no_notice,What is Habib's office room?,office_room,There is no information in the retrieved context about Habib's office room.,0,0,0
+AMBX061,flat_notice,What is Habib's office room?,office_room,I don't have enough information in the retrieved context to answer this question.,1,0,0
+AMBX061,conditioning,What is Habib's office room?,office_room,I'm unable to answer that question as there is no information in the retrieved context about a person named Habib or their office room.,0,0,0
+AMBX062,no_notice,What is Habib's email address?,email,Ruhan Habib's email address is ruhan.habib@bracu.ac.bd.,0,0,0
+AMBX062,flat_notice,What is Habib's email address?,email,"There are multiple individuals with the last name ""Habib"" in the knowledge base, specifically Ruhan Habib and Waleed Bin Habib Khan. Could you please specify which person you would like to know the email address for?",0,1,1
+AMBX062,conditioning,What is Habib's email address?,email,"There are multiple individuals with the last name ""Habib"" in the knowledge base, specifically Ruhan Habib and Waleed Bin Habib Khan. To provide a specific answer to your question, could you please clarify which person you mean by ""Habib""?",1,1,0
+AMBX063,no_notice,What is Habib's designation?,designation,"Ruhan Habib's designation is a Lecturer, and Waleed Bin Habib Khan's designation is a C. Lecturer.",0,0,1
+AMBX063,flat_notice,What is Habib's designation?,designation,"I found multiple individuals with the name ""Habib"" in the knowledge base, specifically Ruhan Habib and Waleed Bin Habib Khan. Could you please specify which person you are referring to so I can provide an accurate answer?",0,1,1
+AMBX063,conditioning,What is Habib's designation?,designation,"There are multiple individuals with the name ""Habib"" in the knowledge base, specifically Ruhan Habib and Waleed Bin Habib Khan. To provide a specific answer to your question, could you please clarify which person you mean by ""Habib""?",0,1,1
+AMBX064,no_notice,What is Habib's employment status?,status,I don't have enough information to answer your question about Habib's employment status.,1,0,0
+AMBX064,flat_notice,What is Habib's employment status?,status,I'm unable to answer that question as there is no information in the retrieved context about a person named Habib.,0,0,0
+AMBX064,conditioning,What is Habib's employment status?,status,I'm unable to answer this question as there is no information in the retrieved context about a person named Habib.,0,0,0
+AMBX065,no_notice,What is Haque's office room?,office_room,Haque's office room is 4N168.,0,0,0
+AMBX065,flat_notice,What is Haque's office room?,office_room,"I found multiple individuals with the last name ""Haque"". To provide an accurate answer, could you please specify which Haque you are referring to? The options are:
+
+1. Ehtashamul Haque (Room: 4N168)
+2. Dr. Taiabul Haque (Room: 4G01)
+3. Mohammed Ashfaqul Haque (Room: 4N137)
+4. Moinul Haque (Room: 4F)
+
+Please let me know which one you mean, and I'll be happy to provide the answer.",1,1,1
+AMBX065,conditioning,What is Haque's office room?,office_room,"There are multiple individuals with the last name ""Haque"" in the knowledge base, and without further specification, it is unclear which one you are referring to. However, if you meant Dr. Taiabul Haque or Mohammed Ashfaqul Haque, their office rooms are 4G01 and 4N137 respectively. If you meant Ehtashamul Haque, his office room is 4N168.",0,1,1
+AMBX066,no_notice,What is Haque's email address?,email,"There are multiple individuals with the last name ""Haque"" in the context, but without specifying which one you are referring to, I cannot provide a specific answer. However, if you meant Dr. Taiabul Haque or Mohammed Ashfaqul Haque, their email addresses are taiabul.haque@bracu.ac.bd and ashfaqul.haque@bracu.ac.bd respectively.",1,0,1
+AMBX066,flat_notice,What is Haque's email address?,email,"There are multiple individuals with the last name ""Haque"" in the knowledge base. To provide a specific answer, could you please clarify which Haque you are referring to? 
+
+However, if you meant one of them specifically:
+
+* Ehtashamul Haque's email address is ehtashamul.haque@bracu.ac.bd.
+* Dr. Taiabul Haque's email address is taiabul.haque@bracu.ac.bd.
+* Mohammed Ashfaqul Haque's email address is ashfaqul.haque@bracu.ac.bd.
+
+Please let me know which one you are looking for, and I will provide the correct answer.",0,1,1
+AMBX066,conditioning,What is Haque's email address?,email,"There are multiple individuals with the last name ""Haque"" in the knowledge base. To provide a specific answer, could you please clarify which Haque you are referring to (e.g., Ehtashamul Haque, Dr. Taiabul Haque, or Mohammed Ashfaqul Haque)?",1,1,0
+AMBX067,no_notice,What is Haque's designation?,designation,Haque's designation is Professor.,0,0,0
+AMBX067,flat_notice,What is Haque's designation?,designation,"There are multiple individuals with the last name ""Haque"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean by ""Haque""? The options include Ehtashamul Haque (Lecturer), Dr. Taiabul Haque (Professor), Moinul Haque (C. Lecturer), and Mohammed Ashfaqul Haque (Lecturer).",1,1,1
+AMBX067,conditioning,What is Haque's designation?,designation,"There are multiple individuals with the last name ""Haque"" in the knowledge base. To provide a specific answer, could you please clarify which Haque you are referring to?",1,1,0
+AMBX068,no_notice,What is Haque's employment status?,status,"Haque, whose first initial is AFQ, is a Full Time Lecturer.",0,0,0
+AMBX068,flat_notice,What is Haque's employment status?,status,"I found multiple individuals with the last name ""Haque"". To provide an accurate answer, could you please specify which Haque you are referring to? The options are:
+
+1. Ehtashamul Haque (Lecturer)
+2. Dr. Taiabul Haque (Professor)
+3. Moinul Haque (C. Lecturer)
+4. Mohammed Ashfaqul Haque (Lecturer)
+
+Please let me know which one you mean, and I'll be happy to provide the answer.",0,1,1
+AMBX068,conditioning,What is Haque's employment status?,status,"Haque can refer to multiple individuals. To provide a specific answer, could you please clarify which Haque you are referring to (e.g., Ehtashamul Haque, Dr. Taiabul Haque, Moinul Haque, or Mohammed Ashfaqul Haque)?",0,1,1
+AMBX069,no_notice,What is Hasan's office room?,office_room,"The office room for individuals with the surname ""Hasan"" is not specified in the provided context, as there are multiple individuals with that surname listed. However, I can provide information on specific individuals if you would like to narrow down the search by first name or designation.",1,0,1
+AMBX069,flat_notice,What is Hasan's office room?,office_room,"There are multiple individuals with the name ""Hasan"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to? The matching names are Md Arif Hasan (room 4P176), Mehedi Hasan Emo (room 4M134), Zobayer Hasan (room 4F), Labib Hasan Khan (room 4N136), Mohammad Rakibul Hasan Mahin (room 4M128), Mr. Syed Zamil Hasan Shoumo (room 4J68), and Asif Hasan Chowdhury (room 4L92).",0,1,1
+AMBX069,conditioning,What is Hasan's office room?,office_room,"There are multiple individuals with the last name ""Hasan"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX070,no_notice,What is Hasan's email address?,email,"There are multiple individuals with the last name ""Hasan"" in the retrieved context. To provide a specific answer, could you please specify which one of them you would like to know the email address for?",1,1,0
+AMBX070,flat_notice,What is Hasan's email address?,email,"There are multiple individuals with the name ""Hasan"" in the retrieved context. To provide a specific answer, could you please clarify which person's email address you are looking for (e.g., Md Arif Hasan, Mehedi Hasan Emo, Zobayer Hasan, Labib Hasan Khan, Mr. Syed Zamil Hasan Shoumo, or Asif Hasan Chowdhury)?",1,1,1
+AMBX070,conditioning,What is Hasan's email address?,email,"There are multiple individuals with the name ""Hasan"" in the retrieved context. Could you please specify which one you are referring to, such as Mr., Md., Mehedi, Zobayer, Labib, or Syed Zamil?",1,1,0
+AMBX071,no_notice,What is Hasan's designation?,designation,"There is not enough information to answer this question. The context only lists individuals with the surname ""Hasan"", but does not provide their first names or designations in a way that can be linked to specific individuals.",1,0,0
+AMBX071,flat_notice,What is Hasan's designation?,designation,"There are multiple individuals named ""Hasan"" in the retrieved context. Could you please specify which person you are referring to, as there are several individuals with this name?",1,1,0
+AMBX071,conditioning,What is Hasan's designation?,designation,"There are multiple individuals named ""Hasan"" in the knowledge base. Could you please specify which one you are referring to, as there are Lecturers, a C. Lecturer, and no information about their founding role?",1,1,0
+AMBX072,no_notice,What is Hasan's employment status?,status,"Asif Hasan Chowdhury and Mr. Syed Zamil Hasan Shoumo are both Full Time employees, while Zobayer Hasan has a Contractual status.",0,0,0
+AMBX072,flat_notice,What is Hasan's employment status?,status,"I don't have enough information to answer the question. The context lists multiple individuals with the name ""Hasan"", but it does not specify which one the user is referring to, and there are no details about their employment status in general.",1,0,0
+AMBX072,conditioning,What is Hasan's employment status?,status,"I cannot determine the specific person referred to by ""Hasan"" in this context, as there are multiple individuals with that name. Can you please specify which Hasan you are referring to?",1,1,0
+AMBX073,no_notice,What is Hossain's office room?,office_room,"Hossain's office room is not specified in the provided context, as there are multiple individuals with the last name ""Hossain"" and only some of their rooms are listed.",1,0,0
+AMBX073,flat_notice,What is Hossain's office room?,office_room,"There are multiple individuals with the last name ""Hossain"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX073,conditioning,What is Hossain's office room?,office_room,"There are multiple individuals with the last name ""Hossain"" in the database. To provide a specific answer, could you please specify which person you are referring to?",1,1,0
+AMBX074,no_notice,What is Hossain's email address?,email,Hossain's email address is ext.irtiza.hossain@bracu.ac.bd.,0,0,0
+AMBX074,flat_notice,What is Hossain's email address?,email,"There are multiple individuals with the last name ""Hossain"" in the retrieved context. To provide a specific answer, could you please specify which person's email address you would like to know?",1,1,0
+AMBX074,conditioning,What is Hossain's email address?,email,"There are multiple individuals with the last name ""Hossain"" in the database. To provide a specific answer, could you please specify which one of the following individuals you are referring to:
+
+1. Md. Irtiza Hossain (C. Lecturer)
+2. Ariyan Hossain (Lecturer)
+3. Dr. Md. Sakir Hossain (Associate Professor)
+4. Abid Hossain Ashik (C. Lecturer)
+5. Mohammad Naveed Hossain (Lecturer)
+6. Dr. Muhammad Iqbal Hossain (Associate Professor)
+7. Mr. Md Sabbir Hossain (Lecturer)
+8. K. M. Azwad Hossain (Lecturer)
+9. Mr. Mohammad Badrul Hossain (Lecturer)
+
+Please let me know which one you would like the email address for, and I will be happy to assist you.",1,1,1
+AMBX075,no_notice,What is Hossain's designation?,designation,Ariyan Hossain's designation is Lecturer.,0,0,0
+AMBX075,flat_notice,What is Hossain's designation?,designation,"There are multiple individuals with the last name ""Hossain"" in the retrieved context. To provide a specific answer, could you please clarify which person you are referring to? The matching names are Md. Irtiza Hossain (C. Lecturer), Ariyan Hossain (Lecturer), Dr. Md. Sakir Hossain (Associate Professor), Abid Hossain Ashik (C. Lecturer), Mohammad Naveed Hossain (Lecturer), Mr. Md Sabbir Hossain (Lecturer), Dr. Muhammad Iqbal Hossain (Associate Professor), K. M. Azwad Hossain (Lecturer), and Mr. Mohammad Badrul Hossain (Lecturer).",0,1,1
+AMBX075,conditioning,What is Hossain's designation?,designation,"There are multiple individuals with the last name ""Hossain"" in the database. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX076,no_notice,What is Hossain's employment status?,status,"Hossain's employment status varies, with some individuals being Contractual (e.g. Md. Irtiza Hossain and Abid Hossain Ashik) while others are Full Time (e.g. Ariyan Hossain, Dr. Md. Sakir Hossain, Mohammad Naveed Hossain, K. M. Azwad Hossain, Mr. Md Sabbir Hossain, and Mr. Mohammad Badrul Hossain).",0,0,1
+AMBX076,flat_notice,What is Hossain's employment status?,status,"There are multiple individuals with the last name ""Hossain"" in the retrieved context. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX076,conditioning,What is Hossain's employment status?,status,"Hossain's employment status can be one of several, as there are multiple individuals with the last name ""Hossain"" in the database. The possible statuses include Contractual (held by Md. Irtiza Hossain and Abid Hossain Ashik), Full Time (held by Ariyan Hossain, Dr. Md. Sakir Hossain, Mohammad Naveed Hossain, K. M. Azwad Hossain, Mr. Md Sabbir Hossain, and Mr. Mohammad Badrul Hossain).",0,0,1
+AMBX077,no_notice,What is Iqbal's office room?,office_room,Dr. Muhammad Iqbal Hossain's office room is 4G22.,0,0,0
+AMBX077,flat_notice,What is Iqbal's office room?,office_room,"I cannot determine which person you are referring to as there are multiple individuals with the name ""Iqbal"" in the retrieved context. Can you please specify which Iqbal you mean, Dr. Muhammad Iqbal Hossain or Ms. Khondoker Nazia Iqbal?",1,1,0
+AMBX077,conditioning,What is Iqbal's office room?,office_room,"I cannot determine which person you are referring to as there are multiple individuals with the name ""Iqbal"" in the context. Can you please specify which one of Dr. Muhammad Iqbal Hossain, Ms. Khondoker Nazia Iqbal, or Zahin Iqbal Zeal you mean?",1,1,0
+AMBX078,no_notice,What is Iqbal's email address?,email,Iqbal's email address is iqbal.hossain@bracu.ac.bd.,0,0,0
+AMBX078,flat_notice,What is Iqbal's email address?,email,"There are multiple individuals with the name ""Iqbal"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean by ""Iqbal""? The options are Dr. Muhammad Iqbal Hossain (iqbal.hossain@bracu.ac.bd), Zahin Iqbal Zeal (ext.zahin.ikbal@bracu.ac.bd), or Ms. Khondoker Nazia Iqbal (nazia.iqbal@bracu.ac.bd)?",0,1,1
+AMBX078,conditioning,What is Iqbal's email address?,email,"There are multiple individuals with the name ""Iqbal"" in the knowledge base. To provide a specific answer, could you please clarify which one of the following individuals you are referring to:
+
+1. Dr. Muhammad Iqbal Hossain (Associate Professor)
+2. Zahin Iqbal Zeal (C. Lecturer)
+3. Ms. Khondoker Nazia Iqbal (Lecturer)
+
+Once we determine which person you mean, we can provide their email address.",1,1,1
+AMBX079,no_notice,What is Iqbal's designation?,designation,Dr. Muhammad Iqbal Hossain's designation is Associate Professor.,0,0,0
+AMBX079,flat_notice,What is Iqbal's designation?,designation,"There are multiple individuals with the name ""Iqbal"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean by ""Iqbal"", as there are three distinct records for individuals with this name: Dr. Muhammad Iqbal Hossain (Associate Professor), Zahin Iqbal Zeal (C. Lecturer), and Ms. Khondoker Nazia Iqbal (Lecturer)?",0,1,1
+AMBX079,conditioning,What is Iqbal's designation?,designation,"There are multiple individuals with the name ""Iqbal"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean by ""Iqbal"", as there are three distinct records for individuals with this name?",1,1,0
+AMBX080,no_notice,What is Iqbal's employment status?,status,Dr. Muhammad Iqbal Hossain's employment status is Full Time.,0,0,0
+AMBX080,flat_notice,What is Iqbal's employment status?,status,"Dr. Muhammad Iqbal Hossain and Ms. Khondoker Nazia Iqbal are both listed as having a Full Time status, but to provide an accurate answer, could you please clarify which specific person you mean by ""Iqbal""?",0,1,1
+AMBX080,conditioning,What is Iqbal's employment status?,status,"I cannot determine Dr. Muhammad Iqbal Hossain's employment status from the provided context, which only lists his designation as Associate Professor and status as Full Time.",1,0,0
+AMBX081,no_notice,What is Islam's office room?,office_room,Islam's office room is 4F.,0,0,0
+AMBX081,flat_notice,What is Islam's office room?,office_room,"I found multiple individuals with the last name ""Islam"". To provide an accurate answer, could you please specify which person you are referring to? The options are Anika Islam (CAKM), Aabrar Islam (CABS), Sazzadul Islam (SZZ), Namirul Islam (NLAM), Nazmul Islam (NZU), Riazul Islam Rifat (NRZR), or Ashraful Islam Shanto Sikder (ASRF).",0,1,1
+AMBX081,conditioning,What is Islam's office room?,office_room,"There are multiple individuals with the name ""Islam"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX082,no_notice,What is Islam's email address?,email,"The email addresses for individuals with the surname ""Islam"" are ext.anika.islam@bracu.ac.bd, ext.aabrar.islam@bracu.ac.bd, sazzadul.islam@bracu.ac.bd, namirul.islam@bracu.ac.bd, nazmul.islam1@bracu.ac.bd, and riazul.islam@bracu.ac.bd.",0,0,1
+AMBX082,flat_notice,What is Islam's email address?,email,"There are multiple individuals with the last name ""Islam"" in the retrieved context. To provide a specific answer, could you please clarify which person you would like to know the email address for? The options are Anika Islam (CAKM), Aabrar Islam (CABS), Sazzadul Islam (SZZ), Namirul Islam (NLAM), Nazmul Islam (NZU), or Riazul Islam Rifat (NRZR).",1,1,1
+AMBX082,conditioning,What is Islam's email address?,email,"There are multiple individuals with the last name ""Islam"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX083,no_notice,What is Islam's designation?,designation,"Islam's designation is C. Lecturer, as seen in multiple entries for individuals with the name ""Islam"".",0,0,0
+AMBX083,flat_notice,What is Islam's designation?,designation,"There are multiple individuals with the last name ""Islam"" in the retrieved context. To provide a specific answer, could you please clarify which person you are referring to? The matching names are Anika Islam (C. Lecturer), Aabrar Islam (C. Lecturer), Namirul Islam (Lecturer), Sazzadul Islam (Lecturer), Riazul Islam Rifat (Lecturer), Nazmul Islam (Lecturer), and Ashraful Islam Shanto Sikder (Lecturer).",0,1,1
+AMBX083,conditioning,What is Islam's designation?,designation,"There are multiple individuals with the name ""Islam"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to? The matching names are Anika Islam (C. Lecturer), Aabrar Islam (C. Lecturer), Namirul Islam (Lecturer), Sazzadul Islam (Lecturer), Riazul Islam Rifat (Lecturer), Nazmul Islam (Lecturer), and Ashraful Islam Shanto Sikder (Lecturer).",0,1,1
+AMBX084,no_notice,What is Islam's employment status?,status,Islam's employment status is Contractual.,0,0,0
+AMBX084,flat_notice,What is Islam's employment status?,status,"There are multiple individuals with the last name ""Islam"" in the retrieved context. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX084,conditioning,What is Islam's employment status?,status,"There are multiple individuals with the last name ""Islam"" in the knowledge base, and their employment statuses differ. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX085,no_notice,What is Jahan's office room?,office_room,Jahan's office room is 4K71.,0,0,0
+AMBX085,flat_notice,What is Jahan's office room?,office_room,Majisha Jahan Disha's office room is 4K71.,0,0,0
+AMBX085,conditioning,What is Jahan's office room?,office_room,Majisha Jahan Disha's office room is 4K71.,0,0,0
+AMBX086,no_notice,What is Jahan's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX086,flat_notice,What is Jahan's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX086,conditioning,What is Jahan's email address?,email,"I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Jahan, and only lists contact information for Office of Co-curricular Activities (OCA).",1,0,0
+AMBX087,no_notice,What is Jahan's designation?,designation,Jahan's designation is Lecturer.,0,0,0
+AMBX087,flat_notice,What is Jahan's designation?,designation,"I found multiple individuals with the name ""Jahan"". Could you please specify which one you are referring to, Majisha Jahan Disha or Mr. Abid Jahan Apon?",0,1,1
+AMBX087,conditioning,What is Jahan's designation?,designation,"I found multiple individuals with the name ""Jahan"" in the knowledge base. To provide an accurate answer, could you please specify which person you are referring to: Majisha Jahan Disha or Mr. Abid Jahan Apon?",0,1,1
+AMBX088,no_notice,What is Jahan's employment status?,status,I do not have enough information in the retrieved context to answer your question about Jahan's employment status.,1,0,0
+AMBX088,flat_notice,What is Jahan's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about a person named Jahan.,0,0,0
+AMBX088,conditioning,What is Jahan's employment status?,status,I'm not able to determine Jahan's employment status as there is no information about a person named Jahan in the retrieved context.,0,0,0
+AMBX089,no_notice,What is Kazi's office room?,office_room,Kazi Kamruzzaman Rabbi's office room is 4N135.,0,0,0
+AMBX089,flat_notice,What is Kazi's office room?,office_room,Kazi Kamruzzaman Rabbi's office room is 4N135.,0,0,0
+AMBX089,conditioning,What is Kazi's office room?,office_room,Kazi Kamruzzaman Rabbi's office room is 4N135.,0,0,0
+AMBX090,no_notice,What is Kazi's email address?,email,Kazi Kamruzzaman Rabbi's email address is kazi.kamruzzaman@bracu.ac.bd.,0,0,0
+AMBX090,flat_notice,What is Kazi's email address?,email,"There are multiple individuals with the name ""Kazi"" in the knowledge base. To provide an accurate answer, could you please specify which Kazi you are referring to: Dr. Sadia Hamid Kazi or Kazi Kamruzzaman Rabbi?",1,1,0
+AMBX090,conditioning,What is Kazi's email address?,email,"There are multiple individuals with the name ""Kazi"" in the knowledge base. To provide a specific answer, could you please clarify which Kazi you are referring to: Dr. Sadia Hamid Kazi or Kazi Kamruzzaman Rabbi?",1,1,0
+AMBX091,no_notice,What is Kazi's designation?,designation,Kazi Kamruzzaman Rabbi's designation is Lecturer.,0,0,0
+AMBX091,flat_notice,What is Kazi's designation?,designation,"There are multiple individuals with the name ""Kazi"" in the knowledge base. To provide an accurate answer, could you please specify which Kazi you are referring to?",1,1,0
+AMBX091,conditioning,What is Kazi's designation?,designation,"There are multiple individuals with the name ""Kazi"" in the knowledge base. To provide an accurate answer, could you please specify which Kazi you are referring to? Do you mean Dr. Sadia Hamid Kazi (Associate Professor & Chairperson) or Kazi Kamruzzaman Rabbi (Lecturer)?",0,1,1
+AMBX092,no_notice,What is Kazi's employment status?,status,Kazi's employment status is that he is a full-time lecturer.,0,0,0
+AMBX092,flat_notice,What is Kazi's employment status?,status,Kazi Kamruzzaman Rabbi's employment status is full-time.,0,0,0
+AMBX092,conditioning,What is Kazi's employment status?,status,Kazi Kamruzzaman Rabbi's employment status is Full Time.,0,0,0
+AMBX093,no_notice,What is Khan's office room?,office_room,Khan's office room is 4F.,0,0,0
+AMBX093,flat_notice,What is Khan's office room?,office_room,"There are multiple individuals with the last name ""Khan"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX093,conditioning,What is Khan's office room?,office_room,"There are multiple individuals with the last name ""Khan"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX094,no_notice,What is Khan's email address?,email,Khan's email address is ext.nasim.khan@bracu.ac.bd.,0,0,0
+AMBX094,flat_notice,What is Khan's email address?,email,"There are multiple individuals with the last name ""Khan"" in the knowledge base. To provide a specific answer, could you please clarify which person's email address you would like to know?",1,1,0
+AMBX094,conditioning,What is Khan's email address?,email,"There are multiple individuals with the last name ""Khan"" in the database. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX095,no_notice,What is Khan's designation?,designation,"Khan's designation varies depending on the individual. For example, A S M Nasim Khan is a C. Lecturer, while Dr. Abu Mohammad Khan is an Associate Professor, and Mr. Rubayat Ahmed Khan is a Senior Lecturer.",1,0,1
+AMBX095,flat_notice,What is Khan's designation?,designation,"There are multiple individuals with the last name ""Khan"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX095,conditioning,What is Khan's designation?,designation,"There are multiple individuals with the last name ""Khan"" in the database. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX096,no_notice,What is Khan's employment status?,status,"Khan's employment status varies depending on the individual, but based on the retrieved context, it can be stated that some individuals with the name ""Khan"" are Contractual (e.g. ASMN and WBH), while others are Full Time (e.g. LBBH, NZRF, AMK, FEK, and RAK).",1,0,1
+AMBX096,flat_notice,What is Khan's employment status?,status,"Khan's employment status can be one of several options, as there are multiple individuals with the name ""Khan"" in the database. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX096,conditioning,What is Khan's employment status?,status,"Khan's employment status can be one of the following, and I need to know which specific person you are referring to in order to provide a more accurate answer. The options are:
+
+* Contractual (A S M Nasim Khan, Waleed Bin Habib Khan)
+* Full Time (Labib Hasan Khan, Niaz Ashraf Khan, Dr. Abu Mohammad Khan, Farden Ehsan Khan, Mr. Rubayat Ahmed Khan, Md. Khaliduzzaman Khan Samrat)",0,1,1
+AMBX097,no_notice,What is Khondoker's office room?,office_room,Ms. Khondoker Nazia Iqbal's office room is 4K86.,0,0,0
+AMBX097,flat_notice,What is Khondoker's office room?,office_room,"I found multiple individuals with the name ""Khondoker"" in the knowledge base. To provide an accurate answer, could you please specify which Khondoker you are referring to: Abdullah Khondoker or Ms. Khondoker Nazia Iqbal?",1,1,0
+AMBX097,conditioning,What is Khondoker's office room?,office_room,"There are multiple individuals with the name ""Khondoker"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean: Abdullah Khondoker (C. Lecturer) or Ms. Khondoker Nazia Iqbal (Lecturer)?",0,1,1
+AMBX098,no_notice,What is Khondoker's email address?,email,Khondoker's email address is ext.abdullah@bracu.ac.bd.,0,0,0
+AMBX098,flat_notice,What is Khondoker's email address?,email,Abdullah Khondoker's email address is ext.abdullah@bracu.ac.bd.,0,0,0
+AMBX098,conditioning,What is Khondoker's email address?,email,Abdullah Khondoker's email address is ext.abdullah@bracu.ac.bd.,0,0,0
+AMBX099,no_notice,What is Khondoker's designation?,designation,Khondoker Nazia Iqbal's designation is Lecturer.,0,0,0
+AMBX099,flat_notice,What is Khondoker's designation?,designation,"I found multiple individuals with the name ""Khondoker"" in the knowledge base. To provide an accurate answer, could you please specify which individual you are referring to: Abdullah Khondoker or Ms. Khondoker Nazia Iqbal?",1,1,0
+AMBX099,conditioning,What is Khondoker's designation?,designation,"There are multiple individuals with the name ""Khondoker"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean: Abdullah Khondoker (C. Lecturer) or Ms. Khondoker Nazia Iqbal (Lecturer)?",0,1,1
+AMBX100,no_notice,What is Khondoker's employment status?,status,Khondoker's employment status is contractual.,0,0,0
+AMBX100,flat_notice,What is Khondoker's employment status?,status,Abdullah Khondoker's employment status is contractual.,0,0,0
+AMBX100,conditioning,What is Khondoker's employment status?,status,Abdullah Khondoker's employment status is contractual.,0,0,0
+AMBX101,no_notice,What is Mahir's office room?,office_room,Mahir's office room is 4L93.,0,0,0
+AMBX101,flat_notice,What is Mahir's office room?,office_room,Mahir's office room is 4L93.,0,0,0
+AMBX101,conditioning,What is Mahir's office room?,office_room,Mahir's office room is 4L93.,0,0,0
+AMBX102,no_notice,What is Mahir's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX102,flat_notice,What is Mahir's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX102,conditioning,What is Mahir's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX103,no_notice,What is Mahir's designation?,designation,"Sajid Imam Mahir's designation is C. Lecturer, and Ahmed Mahir Ruhan's designation is Lecturer.",0,0,1
+AMBX103,flat_notice,What is Mahir's designation?,designation,"There are multiple individuals with the name ""Mahir"" in the knowledge base, specifically Mr. Ahmed Mahir Ruhan and Sajid Imam Mahir. To provide an accurate answer, could you please specify which person you mean by ""Mahir""?",0,1,1
+AMBX103,conditioning,What is Mahir's designation?,designation,"There are multiple individuals with the name ""Mahir"" in the knowledge base, specifically Mr. Ahmed Mahir Ruhan and Sajid Imam Mahir. To provide a specific answer to your question, could you please clarify which Mahir you are referring to?",0,1,1
+AMBX104,no_notice,What is Mahir's employment status?,status,There is not enough information in the retrieved context to answer the question about Mahir's employment status.,0,0,0
+AMBX104,flat_notice,What is Mahir's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about a person named Mahir.,0,0,0
+AMBX104,conditioning,What is Mahir's employment status?,status,I'm not able to determine Mahir's employment status as there is no information in the retrieved context about a person named Mahir.,0,0,0
+AMBX105,no_notice,What is Mahmud's office room?,office_room,Mahmud's office room is 4M99.,0,0,0
+AMBX105,flat_notice,What is Mahmud's office room?,office_room,"There are multiple individuals with the last name ""Mahmud"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean by ""Mahmud""? The options are MD. MUHTASIM MAHMUD (room 4M99), Aliva Sadnim Mahmud (room 4P), or Mr. Tamkin Mahmud Tan (room 4J62).",0,1,1
+AMBX105,conditioning,What is Mahmud's office room?,office_room,"I found multiple individuals with the last name ""Mahmud"". To provide a specific answer, could you please clarify which Mahmud you are referring to? Do you mean MD. Muhtasim Mahmud (Lecturer), Aliva Sadnim Mahmud (C. Lecturer), or Mr. Tamkin Mahmud Tan (Lecturer)?",0,1,1
+AMBX106,no_notice,What is Mahmud's email address?,email,Aliva Sadnim Mahmud's email address is ext.aliva.sadnim@bracu.ac.bd.,0,0,0
+AMBX106,flat_notice,What is Mahmud's email address?,email,"There are multiple individuals with the last name ""Mahmud"" in the retrieved context, specifically MD. MUHTASIM MAHMUD and Aliva Sadnim Mahmud. Could you please specify which Mahmud you are referring to so I can provide their correct email address?",0,1,1
+AMBX106,conditioning,What is Mahmud's email address?,email,"There are multiple individuals with the last name ""Mahmud"" in the knowledge base, specifically MD. MUHTASIM MAHMUD and Aliva Sadnim Mahmud. Could you please specify which person you would like to know the email address for?",1,1,0
+AMBX107,no_notice,What is Mahmud's designation?,designation,Mahmud's designation is Lecturer.,0,0,0
+AMBX107,flat_notice,What is Mahmud's designation?,designation,"There are multiple individuals with the last name ""Mahmud"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean by ""Mahmud""? The options are:
+
+1. MD. MUHTASIM MAHMUD (Lecturer)
+2. Aliva Sadnim Mahmud (C. Lecturer)
+3. Mr. Tamkin Mahmud Tan (Lecturer)
+
+Please let me know which one you would like to refer to, and I will be happy to provide the answer.",0,1,1
+AMBX107,conditioning,What is Mahmud's designation?,designation,"There are multiple individuals with the name ""Mahmud"" in the knowledge base. To provide a specific answer, could you please clarify which Mahmud you are referring to?",1,1,0
+AMBX108,no_notice,What is Mahmud's employment status?,status,Mahmud's employment status is Full Time.,0,0,0
+AMBX108,flat_notice,What is Mahmud's employment status?,status,"I found multiple individuals with the last name ""Mahmud"". To provide an accurate answer, could you please specify which person you are referring to: MD. MUHTASIM MAHMUD, Aliva Sadnim Mahmud, or Mr. Tamkin Mahmud Tan?",0,1,1
+AMBX108,conditioning,What is Mahmud's employment status?,status,"I found multiple individuals with the last name ""Mahmud"". To provide an accurate answer, could you please specify which person you are referring to? The options are:
+
+1. MD. MUHTASIM MAHMUD (Designation: Lecturer)
+2. Aliva Sadnim Mahmud (Designation: C. Lecturer)
+3. Mr. Tamkin Mahmud Tan (Designation: Lecturer)
+
+Please let me know which one you mean, and I'll be happy to provide the answer to your question about their employment status.",0,1,1
+AMBX109,no_notice,What is Mehnaz's office room?,office_room,Mehnaz Ara Fazal's office room is 4F.,0,0,0
+AMBX109,flat_notice,What is Mehnaz's office room?,office_room,"Mehnaz Seraj's office room is 4G21, and Mehnaz Ara Fazal's office room is 4F. Which specific person are you referring to?",0,1,0
+AMBX109,conditioning,What is Mehnaz's office room?,office_room,"Mehnaz Seraj, the Senior Lecturer, has her office in room 4G21, while Mehnaz Ara Fazal, the C. Lecturer, has her office in room 4F. Which one of these individuals are you referring to?",0,1,1
+AMBX110,no_notice,What is Mehnaz's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX110,flat_notice,What is Mehnaz's email address?,email,I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Mehnaz or their contact information.,1,0,0
+AMBX110,conditioning,What is Mehnaz's email address?,email,"I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Mehnaz, so I cannot provide their email address.",1,0,0
+AMBX111,no_notice,What is Mehnaz's designation?,designation,Mehnaz Ara Fazal's designation is C. Lecturer.,0,0,0
+AMBX111,flat_notice,What is Mehnaz's designation?,designation,"Mehnaz Seraj has a designation of Senior Lecturer, and Mehnaz Ara Fazal has a designation of C. Lecturer. Which specific person are you referring to?",0,1,1
+AMBX111,conditioning,What is Mehnaz's designation?,designation,"Mehnaz Seraj has a designation of Senior Lecturer, while Mehnaz Ara Fazal has a designation of C. Lecturer - could you please clarify which specific person you are referring to?",0,1,1
+AMBX112,no_notice,What is Mehnaz's employment status?,status,Mehnaz Ara Fazal's employment status is contractual.,0,0,0
+AMBX112,flat_notice,What is Mehnaz's employment status?,status,"Mehnaz Seraj's employment status is Full Time, while Mehnaz Ara Fazal's employment status is Contractual. Which specific person are you referring to?",0,1,0
+AMBX112,conditioning,What is Mehnaz's employment status?,status,"Mehnaz Seraj is a Full Time employee, while Mehnaz Ara Fazal is a Contractual employee. Which one of these individuals are you referring to?",0,1,1
+AMBX113,no_notice,What is Mirza's office room?,office_room,Mirza Azwad Wakil's office room is 4F.,0,0,0
+AMBX113,flat_notice,What is Mirza's office room?,office_room,"There are multiple individuals with the name ""Mirza"" in the knowledge base. To provide a specific answer, could you please clarify which Mirza you are referring to (e.g., Azwad Wakil, Md. Tanjim Shorif Mugdho, or Abdullah Al Noman)?",1,1,0
+AMBX113,conditioning,What is Mirza's office room?,office_room,"There are multiple individuals with the name ""Mirza"" in the knowledge base. To provide a specific answer, could you please clarify which Mirza you are referring to (e.g., Azwad Wakil, Md. Tanjim Shorif Mugdho, or Abdullah Al Noman)?",1,1,0
+AMBX114,no_notice,What is Mirza's email address?,email,Mirza's email address is mirza.mugdho@bracu.ac.bd.,0,0,0
+AMBX114,flat_notice,What is Mirza's email address?,email,Mirza's email address is mirza.mugdho@bracu.ac.bd.,0,0,0
+AMBX114,conditioning,What is Mirza's email address?,email,Mirza's email address is mirza.mugdho@bracu.ac.bd.,0,0,0
+AMBX115,no_notice,What is Mirza's designation?,designation,"Mirza Azwad Wakil's designation is C. Lecturer, and Mr. Mirza Md. Tanjim Shorif Mugdho's designation is also Lecturer, while Mirza Abdullah Al Noman's designation is also Lecturer.",0,0,1
+AMBX115,flat_notice,What is Mirza's designation?,designation,"There are multiple individuals with the name ""Mirza"" in the knowledge base. To provide an accurate answer, could you please specify which Mirza you are referring to (e.g., Azwad Wakil, Md. Tanjim Shorif Mugdho, or Abdullah Al Noman)?",1,1,0
+AMBX115,conditioning,What is Mirza's designation?,designation,"There are multiple individuals with the name ""Mirza"" in the knowledge base. To provide a specific answer, could you please clarify which Mirza you are referring to?",1,1,0
+AMBX116,no_notice,What is Mirza's employment status?,status,Mirza Azwad Wakil's employment status is Contractual.,0,0,0
+AMBX116,flat_notice,What is Mirza's employment status?,status,"Mirza Azwad Wakil's employment status is Contractual, Mr. Mirza Md. Tanjim Shorif Mugdho's employment status is Full Time, and Mirza Abdullah Al Noman's employment status is also Full Time. Which specific person are you referring to?",0,1,1
+AMBX116,conditioning,What is Mirza's employment status?,status,"Mirza Azwad Wakil's employment status is Contractual, while Mr. Mirza Md. Tanjim Shorif Mugdho and Mirza Abdullah Al Noman are both Full Time employees. Which specific person you mean by ""Mirza"" would help me provide a more precise answer.",0,1,1
+AMBX117,no_notice,What is Mohammad's office room?,office_room,"The office room for Mohammad Kaykobad, Dr. Mohammad Khan, Nur Mohammad Shaon, Mohammad Fahim, Mohammad Rakibul Hasan Mahin, and Mohammad Badrul Hossain is not specified in the context, but the office rooms for Mohammad Naveed Hossain and Mohammad are 4M113 and 4J52 respectively.",0,0,1
+AMBX117,flat_notice,What is Mohammad's office room?,office_room,"There are multiple individuals with the name ""Mohammad"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX117,conditioning,What is Mohammad's office room?,office_room,"There are multiple individuals with the name ""Mohammad"" in the database. To provide a specific answer, could you please clarify which Mohammad you are referring to (e.g., Dr. Kaykobad, Mr. Zaber Mohammad, etc.)?",1,1,0
+AMBX118,no_notice,What is Mohammad's email address?,email,"The email addresses for individuals with the name ""Mohammad"" are zaber.mohammad@bracu.ac.bd, kaykobad@bracu.ac.bd, abu.khan@bracu.ac.bd, mohammad.naveed@bracu.ac.bd, mohammad.rakibul@bracu.ac.bd, badrul.hossain@bracu.ac.bd.",0,0,1
+AMBX118,flat_notice,What is Mohammad's email address?,email,"There are multiple individuals with the name ""Mohammad"" in the retrieved context. To provide a specific answer, could you please clarify which person's email address you would like to know?",1,1,0
+AMBX118,conditioning,What is Mohammad's email address?,email,"There are multiple individuals with the name ""Mohammad"" in the database. Could you please specify which one of the following individuals you are referring to:
+
+1. Mr. Zaber Mohammad (Lecturer)
+2. Dr. Mohammad Kaykobad (Professor)
+3. Mr. Mohammad Fahim (Lecturer)
+4. Nur Mohammad Shaon (Lecturer)
+5. Mohammad Naveed Hossain (Lecturer)
+6. Mohammad Rakibul Hasan Mahin (Lecturer)
+7. Mr. Mohammad Badrul Hossain (Lecturer)
+
+Please let me know which one you would like to know the email address for, and I will provide it.",1,1,1
+AMBX119,no_notice,What is Mohammad's designation?,designation,Mohammad Rakibul Hasan Mahin's designation is Lecturer.,0,0,0
+AMBX119,flat_notice,What is Mohammad's designation?,designation,"There are multiple individuals with the name ""Mohammad"" in the knowledge base. To provide a specific answer, could you please clarify which person you are referring to?",1,1,0
+AMBX119,conditioning,What is Mohammad's designation?,designation,"There are multiple individuals with the name ""Mohammad"" in the knowledge base. Could you please specify which one you are referring to, as there are several individuals with this name and different designations?",0,1,0
+AMBX120,no_notice,What is Mohammad's employment status?,status,"Mohammad Rakibul Hasan Mahin, Mohammad Naveed Hossain, Dr. Abu Mohammad Khan, Mr. Mohammad Badrul Hossain, and Mr. Mohammad Fahim are all Full Time employees.",0,0,1
+AMBX120,flat_notice,What is Mohammad's employment status?,status,"Mohammad has multiple records in the knowledge base, and I need to know which specific person you are referring to. Please specify whether you mean Dr. Mohammad Kaykobad (Full Time Professor), Nur Mohammad Shaon (Full Time Lecturer), Zaber Mohammad (Full Time Lecturer), Mohammad Rakibul Hasan Mahin (Full Time Lecturer), Mohammad Naveed Hossain (Full Time Lecturer), Abu Mohammad Khan (Full Time Associate Professor), or Mohammad Badrul Hossain (Full Time Lecturer) or Mohammad Fahim (Full Time Lecturer).",0,1,1
+AMBX120,conditioning,What is Mohammad's employment status?,status,"Mohammad has multiple records in the knowledge base, and I need to know which specific person you are referring to. However, if you meant Dr. Mohammad Kaykobad, he is a Full Time Professor. If you meant Nur Mohammad Shaon, he is also a Full Time Lecturer.",0,1,1
+AMBX121,no_notice,What is Mohammed's office room?,office_room,Mohammed's office room is 4P.,0,0,0
+AMBX121,flat_notice,What is Mohammed's office room?,office_room,Mohammed Radoan's office room is 4P.,0,0,0
+AMBX121,conditioning,What is Mohammed's office room?,office_room,Mohammed Radoan's office room is Room 4P.,0,0,0
+AMBX122,no_notice,What is Mohammed's email address?,email,Mohammed Radoan's email address is ext.mohammed.radoan@bracu.ac.bd.,0,0,0
+AMBX122,flat_notice,What is Mohammed's email address?,email,"There are multiple individuals with the name ""Mohammed"" in the knowledge base. To provide a specific answer, could you please clarify which Mohammed you are referring to: Mohammed Radoan or Mohammed Ashfaqul Haque?",1,1,0
+AMBX122,conditioning,What is Mohammed's email address?,email,"There are multiple individuals with the name ""Mohammed"" in the knowledge base. To provide a specific answer, could you please clarify which Mohammed you are referring to? Do you mean Mohammed Radoan or Mohammed Ashfaqul Haque?",0,1,1
+AMBX123,no_notice,What is Mohammed's designation?,designation,"Mohammed Radoan's designation is C. Lecturer, and Mohammed Ashfaqul Haque's designation is Lecturer.",0,0,1
+AMBX123,flat_notice,What is Mohammed's designation?,designation,"There are multiple individuals with the name ""Mohammed"" in the knowledge base. To provide an accurate answer, could you please specify which Mohammed you are referring to: Mohammed Radoan or Mohammed Ashfaqul Haque?",0,1,1
+AMBX123,conditioning,What is Mohammed's designation?,designation,"There are multiple individuals with the name ""Mohammed"" in the knowledge base. To provide a specific answer, could you please clarify which Mohammed you are referring to? Do you mean Mohammed Radoan (C. Lecturer) or Mohammed Ashfaqul Haque (Lecturer)?",0,1,1
+AMBX124,no_notice,What is Mohammed's employment status?,status,Mohammed's employment status is contractual.,0,0,0
+AMBX124,flat_notice,What is Mohammed's employment status?,status,Mohammed Radoan's employment status is contractual.,0,0,0
+AMBX124,conditioning,What is Mohammed's employment status?,status,Mohammed's employment status is contractual.,0,0,0
+AMBX125,no_notice,What is Muhammad's office room?,office_room,There is no information in the retrieved context about Muhammad's office room.,0,0,0
+AMBX125,flat_notice,What is Muhammad's office room?,office_room,I don't have enough information in the retrieved context to answer this question.,0,0,0
+AMBX125,conditioning,What is Muhammad's office room?,office_room,I'm not able to answer that question as there is no information in the retrieved context about a person named Muhammad or their office room.,0,0,0
+AMBX126,no_notice,What is Muhammad's email address?,email,Muhammad's email address is nur.yanhaona@bracu.ac.bd.,0,0,0
+AMBX126,flat_notice,What is Muhammad's email address?,email,Muhammad Nur Yanhaona's email address is nur.yanhaona@bracu.ac.bd.,0,0,0
+AMBX126,conditioning,What is Muhammad's email address?,email,Muhammad Nur Yanhaona's email address is nur.yanhaona@bracu.ac.bd.,0,0,0
+AMBX127,no_notice,What is Muhammad's designation?,designation,Muhammad's designation is Associate Professor.,0,0,0
+AMBX127,flat_notice,What is Muhammad's designation?,designation,"There are multiple individuals with the name ""Muhammad"" in the knowledge base. To provide an accurate answer, could you please specify which Muhammad you are referring to: Dr. Muhammad Nur Yanhaona or Dr. Muhammad Iqbal Hossain?",0,1,1
+AMBX127,conditioning,What is Muhammad's designation?,designation,Muhammad Nur Yanhaona and Muhammad Iqbal Hossain both have the designation of Associate Professor. Which specific person are you referring to?,0,1,1
+AMBX128,no_notice,What is Muhammad's employment status?,status,Muhammad's employment status is Full Time.,0,0,0
+AMBX128,flat_notice,What is Muhammad's employment status?,status,Muhammad's employment status is Full Time.,0,0,0
+AMBX128,conditioning,What is Muhammad's employment status?,status,Muhammad's employment status is Full Time.,0,0,0
+AMBX129,no_notice,What is Nafis's office room?,office_room,There is no information in the retrieved context about Nafis's office room.,1,0,0
+AMBX129,flat_notice,What is Nafis's office room?,office_room,I don't have enough information in the retrieved context to answer the question about Nafis's office room.,1,0,0
+AMBX129,conditioning,What is Nafis's office room?,office_room,I'm unable to answer that question as there is not enough information in the retrieved context about Nafis's office room.,0,0,0
+AMBX130,no_notice,What is Nafis's email address?,email,Nafis Faisal's email address is nafis.faisal@bracu.ac.bd.,0,0,0
+AMBX130,flat_notice,What is Nafis's email address?,email,Nafis Faisal's email address is nafis.faisal@bracu.ac.bd.,0,0,0
+AMBX130,conditioning,What is Nafis's email address?,email,Nafis Faisal's email address is nafis.faisal@bracu.ac.bd.,0,0,0
+AMBX131,no_notice,What is Nafis's designation?,designation,Nafis Faisal's designation is a Lecturer.,0,0,0
+AMBX131,flat_notice,What is Nafis's designation?,designation,"There are multiple individuals with the name ""Nafis"" in the knowledge base. To provide an accurate answer, could you please specify which Nafis you are referring to: Nafis Faisal or Kh.Fardin Zubair Nafis?",0,1,1
+AMBX131,conditioning,What is Nafis's designation?,designation,"There are two individuals with the name ""Nafis"" in the knowledge base, one being Nafis Faisal and the other Kh.Fardin Zubair Nafis. To provide an accurate answer to your question, could you please specify which Nafis you are referring to?",0,1,1
+AMBX132,no_notice,What is Nafis's employment status?,status,There is not enough information in the retrieved context to answer the question about Nafis's employment status.,1,0,0
+AMBX132,flat_notice,What is Nafis's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about a person named Nafis or their employment status.,1,0,0
+AMBX132,conditioning,What is Nafis's employment status?,status,"I'm unable to answer the question as there is no information in the retrieved context about a person named Nafis, including their employment status.",1,0,0
+AMBX133,no_notice,What is Nafiz's office room?,office_room,Nafiz's office room is Room 4F.,0,0,0
+AMBX133,flat_notice,What is Nafiz's office room?,office_room,Nafiz's office room is Room 4F.,0,0,0
+AMBX133,conditioning,What is Nafiz's office room?,office_room,Nafiz's office room is Room 4F.,0,0,0
+AMBX134,no_notice,What is Nafiz's email address?,email,Nafiz's email address is ext.nafiz.ishtiaque@bracu.ac.bd.,0,0,0
+AMBX134,flat_notice,What is Nafiz's email address?,email,"There are multiple individuals with the name ""Nafiz"" in the knowledge base, specifically Md Nafiz Ishtiaque Mahee and Nafiz Imtiaz Rafin. To provide an accurate answer, could you please specify which Nafiz you are referring to?",1,1,0
+AMBX134,conditioning,What is Nafiz's email address?,email,"There are two individuals with the name ""Nafiz"" in the knowledge base, one being Md Nafiz Ishtiaque Mahee and the other being Nafiz Imtiaz Rafin. To provide a specific answer to your question, could you please clarify which Nafiz you are referring to?",1,1,0
+AMBX135,no_notice,What is Nafiz's designation?,designation,Nafiz's designation is C. Lecturer.,0,0,0
+AMBX135,flat_notice,What is Nafiz's designation?,designation,"Nafiz Imtiaz Rafin and Md Nafiz Ishtiaque Mahee are both designated as C. Lecturer, but I need to know which specific person you mean in order to provide a more accurate answer.",0,1,1
+AMBX135,conditioning,What is Nafiz's designation?,designation,"Nafiz Imtiaz Rafin and Md Nafiz Ishtiaque Mahee are both C. Lecturers, but I need to know which specific person you mean in order to provide a more accurate answer.",0,1,1
+AMBX136,no_notice,What is Nafiz's employment status?,status,Nafiz's employment status is contractual.,0,0,0
+AMBX136,flat_notice,What is Nafiz's employment status?,status,Nafiz's employment status is contractual.,0,0,0
+AMBX136,conditioning,What is Nafiz's employment status?,status,"Nafiz's employment status is contractual, as indicated by his designation of C. Lecturer with a contractual status.",0,0,0
+AMBX137,no_notice,What is Nasim's office room?,office_room,Nasim's office room is 4P177.,0,0,0
+AMBX137,flat_notice,What is Nasim's office room?,office_room,Nasim's office room is 4P177.,0,0,0
+AMBX137,conditioning,What is Nasim's office room?,office_room,Nasim's office room is 4P177.,0,0,0
+AMBX138,no_notice,What is Nasim's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX138,flat_notice,What is Nasim's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX138,conditioning,What is Nasim's email address?,email,"I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Nasim, so I cannot provide their email address.",1,0,0
+AMBX139,no_notice,What is Nasim's designation?,designation,"Nasim's designation is C. Lecturer, as he is listed under the initial ""ASMN"" with that designation.",0,0,0
+AMBX139,flat_notice,What is Nasim's designation?,designation,"There are multiple individuals with the name ""Nasim"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean: A S M Nasim Khan or Hamim Ibne Nasim?",0,1,1
+AMBX139,conditioning,What is Nasim's designation?,designation,"There are multiple individuals with the name ""Nasim"" in the knowledge base. To provide a specific answer, could you please clarify which Nasim you are referring to?",1,1,0
+AMBX140,no_notice,What is Nasim's employment status?,status,I do not have enough information to answer the question about Nasim's employment status.,1,0,0
+AMBX140,flat_notice,What is Nasim's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about a person named Nasim.,0,0,0
+AMBX140,conditioning,What is Nasim's employment status?,status,"I'm not able to determine Nasim's employment status as there are multiple individuals with the name ""Nasim"" in the knowledge base, and I don't have enough information to narrow down which one you're referring to.",1,0,0
+AMBX141,no_notice,What is Nazmus's office room?,office_room,Nazmus's office room is 4P195.,0,0,0
+AMBX141,flat_notice,What is Nazmus's office room?,office_room,Nazmus's office room is 4P195.,0,0,0
+AMBX141,conditioning,What is Nazmus's office room?,office_room,Nazmus Sakib Touhid's office room is 4P195.,0,0,0
+AMBX142,no_notice,What is Nazmus's email address?,email,Nazmus Sakib Touhid's email address is nazmus.touhid@bracu.ac.bd.,0,0,0
+AMBX142,flat_notice,What is Nazmus's email address?,email,Nazmus Sakib Touhid's email address is nazmus.touhid@bracu.ac.bd.,0,0,0
+AMBX142,conditioning,What is Nazmus's email address?,email,Nazmus Sakib Touhid's email address is nazmus.touhid@bracu.ac.bd.,0,0,0
+AMBX143,no_notice,What is Nazmus's designation?,designation,Nazmus's designation is Lecturer.,0,0,0
+AMBX143,flat_notice,What is Nazmus's designation?,designation,"Nazmus Sakib Touhid's designation is a Lecturer, and Nazmus Sakib Ahmed's designation is also a Lecturer. Could you please clarify which specific person you are referring to?",0,1,1
+AMBX143,conditioning,What is Nazmus's designation?,designation,"Nazmus Sakib Touhid and Nazmus Sakib Ahmed are both lecturers, but I need to know which specific person you mean in order to provide a more accurate answer. Can you please clarify whether you are referring to Nazmus Sakib Touhid or Nazmus Sakib Ahmed?",0,1,1
+AMBX144,no_notice,What is Nazmus's employment status?,status,Nazmus Sakib Touhid's employment status is Full Time.,0,0,0
+AMBX144,flat_notice,What is Nazmus's employment status?,status,Nazmus Sakib Touhid's employment status is Full Time.,0,0,0
+AMBX144,conditioning,What is Nazmus's employment status?,status,Nazmus Sakib Touhid is a Full-Time Lecturer.,0,0,0
+AMBX145,no_notice,What is Rafid's office room?,office_room,I do not have enough information in the retrieved context to answer the question about Rafid's office room.,1,0,0
+AMBX145,flat_notice,What is Rafid's office room?,office_room,I don't have enough information in the retrieved context to answer this question.,0,0,0
+AMBX145,conditioning,What is Rafid's office room?,office_room,I'm not able to answer that question as there is no information in the retrieved context about a person named Rafid or their office room.,0,0,0
+AMBX146,no_notice,What is Rafid's email address?,email,Rafid's email address is rafid.ahnaf@bracu.ac.bd.,0,0,0
+AMBX146,flat_notice,What is Rafid's email address?,email,Rafid Ahnaf's email address is rafid.ahnaf@bracu.ac.bd.,0,0,0
+AMBX146,conditioning,What is Rafid's email address?,email,Rafid Ahnaf's email address is rafid.ahnaf@bracu.ac.bd.,0,0,0
+AMBX147,no_notice,What is Rafid's designation?,designation,Rafid Ahnaf's designation is a Lecturer.,0,0,0
+AMBX147,flat_notice,What is Rafid's designation?,designation,"There are multiple individuals with the name ""Rafid"" in the knowledge base, specifically Rafid Ahnaf and Saadat Rafid Ahmed. Could you please clarify which specific person you mean by ""Rafid""?",0,1,1
+AMBX147,conditioning,What is Rafid's designation?,designation,"There are two individuals with the name ""Rafid"" in the knowledge base, one with Initial RFF and one with Initial SADF. Could you please specify which Rafid you are referring to?",0,1,1
+AMBX148,no_notice,What is Rafid's employment status?,status,Rafid's employment status is that he is a full-time employee of the university.,0,0,0
+AMBX148,flat_notice,What is Rafid's employment status?,status,Rafid Ahnaf's employment status is Full Time.,0,0,0
+AMBX148,conditioning,What is Rafid's employment status?,status,Rafid Ahnaf's employment status is Full Time.,0,0,0
+AMBX149,no_notice,What is Rahman's office room?,office_room,"The office rooms for individuals with the surname ""Rahman"" are varied, but some of them can be identified as follows: Sayeedur Rahman has a room in 4F, Shehran Rahman also has a room in 4F, Md Fardin Rahman Ami's room is in 4F, and so on. However, without more specific information about which ""Rahman"" you are referring to, it is not possible to provide a single answer to this question.",1,0,1
+AMBX149,flat_notice,What is Rahman's office room?,office_room,"There are multiple individuals with the last name ""Rahman"" in the database. To provide a specific answer, could you please specify which person you are referring to? The following individuals have an office room listed:
+
+* Sayeedur Rahman (Room: 4F)
+* Shehran Rahman (Room: 4F)
+* Md Fardin Rahman Ami (Room: 4F)
+* A B M Muntasir Rahman (Room: 4L95)
+* Md Nafiu Rahman (Room: 4N138)
+* Tanveer Rahman (Room: 4M112)
+* Mr. Md. Abdur Rahman (Room: 4F)
+* Samiur Rahman (Room: 4J55)
+* Dr. Md. Khalilur Rahman (Room: 4G08)
+* Md. Rifat Rahman (Room: 4N164)
+* Shahriar Rahman Rana (Room: 4M105)
+* Mr. Rafeed Rahman (Room: 4J64)
+* Quazi Ashikur Rahman (Room: 4M120)
+* Md Ashikur Rahman Any (Room: 4P)
+* MD MIZANUR RAHMAN MUSTAKIM (Room: 4P171)
+* Dr. Chowdhury Mofizur Rahman (Room: 4G18)
+
+Please let me know which person you are asking about, and I will provide the specific office room number.",0,1,1
+AMBX149,conditioning,What is Rahman's office room?,office_room,"There are multiple individuals with the last name ""Rahman"" in the database. To provide a specific answer, could you please specify which person you are referring to? For example, do you mean Sayeedur Rahman (CSYR), Shehran Rahman (CSHR), or one of the other Rahmans listed?",1,1,1
+AMBX150,no_notice,What is Rahman's email address?,email,"The email addresses of the individuals with the surname ""Rahman"" are ext.shehran.rahman@bracu.ac.bd, ext.fardin.rahman@bracu.ac.bd, nafiu.rahman@bracu.ac.bd, rahman.samiur@bracu.ac.bd, abm.muntasir@bracu.ac.bd, ext.sayeedur.rahman@bracu.ac.bd, rifat.rahman@bracu.ac.bd, khalilur@bracu.ac.bd, tanveer.rahman@bracu.ac.bd, abdur.rahman@bracu.ac.bd, shahriar.rahman@bracu.ac.bd, rahman.rafeed@bracu.ac.bd, quazi.ashikur@bracu.ac.bd, ext.rahman.ashikur@bracu.ac.bd, and mizanur.mustakim@bracu.ac.bd.",0,0,1
+AMBX150,flat_notice,What is Rahman's email address?,email,"There are multiple individuals with the last name ""Rahman"" in the retrieved context, including Md Fardin Rahman Ami, Md Nafiu Rahman, Samiur Rahman, A B M Muntasir Rahman, Sayeedur Rahman, Md. Rifat Rahman, Dr. Md. Khalilur Rahman, Tanveer Rahman, Mr. Md. Abdur Rahman, Shahriar Rahman Rana, Mr. Rafeed Rahman, Quazi Ashikur Rahman, and Md Ashikur Rahman Any.
+
+To provide a specific answer, could you please clarify which individual's email address you are referring to?",0,1,1
+AMBX150,conditioning,What is Rahman's email address?,email,"There are multiple individuals with the last name ""Rahman"" in the knowledge base, and I need to know which specific person you are referring to in order to provide their email address. Can you please specify which one of the following individuals you would like to know the email address for:
+
+1. Shehran Rahman (Designation: C. Lecturer)
+2. Md Fardin Rahman Ami (Designation: C. Lecturer)
+3. Md Nafiu Rahman (Designation: Lecturer)
+4. Samiur Rahman (Designation: Lecturer)
+5. A B M Muntasir Rahman (Designation: Lecturer)
+6. Sayeedur Rahman (Designation: C. Lecturer)
+7. Md. Rifat Rahman (Designation: Lecturer)
+8. Dr. Md. Khalilur Rahman (Designation: Professor)
+9. Tanveer Rahman (Designation: Lecturer)
+10. Mr. Md. Abdur Rahman (Designation: C. Senior Lecturer)
+11. Mr. Shahriar Rahman Rana (Designation: Lecturer)
+12. Mr. Rafeed Rahman (Designation: Senior Lecturer)
+13. Quazi Ashikur Rahman (Designation: Lecturer)
+14. Md Ashikur Rahman Any (Designation: C. Lecturer)
+15. MD MIZANUR RAHMAN MUSTAKIM (Designation: Lecturer)
+
+Please respond with the number of the individual you would like to know the email address for, and I will provide it.",1,1,1
+AMBX151,no_notice,What is Rahman's designation?,designation,"The context does not specify a single individual named ""Rahman"", but rather lists multiple individuals with the surname ""Rahman"" and various designations.",1,0,1
+AMBX151,flat_notice,What is Rahman's designation?,designation,"There are multiple individuals with the last name ""Rahman"" in the retrieved context. To provide a specific answer, could you please specify which person you are referring to?",1,1,0
+AMBX151,conditioning,What is Rahman's designation?,designation,"There are multiple individuals with the last name ""Rahman"" in the knowledge base. To provide a specific answer, could you please specify which person you are referring to? The matching names and their designations are:
+
+* Sayeedur Rahman - C. Lecturer
+* Shehran Rahman - C. Lecturer
+* A B M Muntasir Rahman - Lecturer
+* Tanveer Rahman - Lecturer
+* Samiur Rahman - Lecturer
+* Md Nafiu Rahman - Lecturer
+* Md Fardin Rahman Ami - C. Lecturer
+* Md. Rifat Rahman - Lecturer
+* Dr. Md. Khalilur Rahman - Professor
+* Mr. Md. Abdur Rahman - C. Senior Lecturer
+* Mr. Shahriar Rahman Rana - Lecturer
+* Mr. Rafeed Rahman - Senior Lecturer
+* Quazi Ashikur Rahman - Lecturer
+* Md Ashikur Rahman Any - C. Lecturer
+* MD MIZANUR RAHMAN MUSTAKIM - Lecturer
+* Dr. Chowdhury Mofizur Rahman - Professor",0,1,1
+AMBX152,no_notice,What is Rahman's employment status?,status,"The employment status of the individuals listed is a mix, with some being Contractual (C. Lecturer) and others being Full Time or Senior Lecturers.",1,0,0
+AMBX152,flat_notice,What is Rahman's employment status?,status,"There are multiple individuals with the last name ""Rahman"" in the knowledge base. To provide a specific answer, could you please specify which person you are referring to?",1,1,0
+AMBX152,conditioning,What is Rahman's employment status?,status,"There are multiple individuals with the last name ""Rahman"" in the knowledge base. To provide a specific answer, could you please specify which person you are referring to? For example, do you mean Sayeedur Rahman (C. Lecturer), Shehran Rahman (C. Lecturer), Tanveer Rahman (Lecturer), or one of the other individuals with the last name ""Rahman""?",1,1,1
+AMBX153,no_notice,What is Rasel's office room?,office_room,Rasel's office room is 4N149.,0,0,0
+AMBX153,flat_notice,What is Rasel's office room?,office_room,Rasel's office room is 4N149.,0,0,0
+AMBX153,conditioning,What is Rasel's office room?,office_room,Rasel's office room is 4N149.,0,0,0
+AMBX154,no_notice,What is Rasel's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX154,flat_notice,What is Rasel's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX154,conditioning,What is Rasel's email address?,email,I'm unable to answer the question as there is no information in the retrieved context about a person named Rasel.,0,0,0
+AMBX155,no_notice,What is Rasel's designation?,designation,Rasel's designation is Senior Lecturer.,0,0,0
+AMBX155,flat_notice,What is Rasel's designation?,designation,"There are multiple individuals with the name ""Rasel"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean: Md. Rasel Mia or Mr. Annajiat Alim Rasel?",0,1,1
+AMBX155,conditioning,What is Rasel's designation?,designation,"There are two individuals with the name ""Rasel"" in the knowledge base. One is Md. Rasel Mia, a Lecturer, and the other is Mr. Annajiat Alim Rasel, a Senior Lecturer. Could you please specify which person you mean by ""Rasel""?",0,1,1
+AMBX156,no_notice,What is Rasel's employment status?,status,Rasel's employment status is that he is a full-time employee.,0,0,0
+AMBX156,flat_notice,What is Rasel's employment status?,status,Rasel's employment status is Full Time.,0,0,0
+AMBX156,conditioning,What is Rasel's employment status?,status,Rasel's employment status is Full Time.,0,0,0
+AMBX157,no_notice,What is Reza's office room?,office_room,Mr. Md. Tanzim Reza's office room is 4G05.,0,0,0
+AMBX157,flat_notice,What is Reza's office room?,office_room,"I couldn't determine which specific person you are referring to, as there are multiple individuals with the name ""Reza"" in the retrieved context. Could you please specify which Reza you mean (Tanjim Reza, Ahmed Mayeesha Reza Agomoni, or Mr. Md. Tanzim Reza)?",1,1,0
+AMBX157,conditioning,What is Reza's office room?,office_room,"I found multiple individuals with the name ""Reza"" in the knowledge base. To provide a specific answer, could you please clarify which Reza you are referring to? Do you mean Tanjim Reza (C. Lecturer), Ahmed Mayeesha Reza Agomoni (Lecturer), or Mr. Md. Tanzim Reza (Senior Lecturer)?",0,1,1
+AMBX158,no_notice,What is Reza's email address?,email,Reza's email address is ext.tanjim.reza@bracu.ac.bd.,0,0,0
+AMBX158,flat_notice,What is Reza's email address?,email,"There are multiple individuals with the name ""Reza"" in the knowledge base. To provide a specific answer, could you please clarify which Reza you are referring to (Tanjim Reza, Ahmed Mayeesha Reza Agomoni, or Mr. Md. Tanzim Reza)?",1,1,0
+AMBX158,conditioning,What is Reza's email address?,email,"There are multiple individuals with the name ""Reza"" in the knowledge base. To provide a specific answer, could you please clarify which Reza you are referring to? The options are Tanjim Reza (C. Lecturer), Mr. Md. Tanzim Reza (Senior Lecturer), or Ahmed Mayeesha Reza Agomoni (Lecturer).",0,1,1
+AMBX159,no_notice,What is Reza's designation?,designation,"Reza's designation is C. Lecturer, as he is listed under the initial ""TRZA"" with a designation of C. Lecturer.",0,0,0
+AMBX159,flat_notice,What is Reza's designation?,designation,"I found multiple individuals with the name ""Reza"" in the knowledge base. To provide an accurate answer, could you please specify which Reza you are referring to? The options are:
+
+1. Tanjim Reza (C. Lecturer)
+2. Mr. Md. Tanzim Reza (Senior Lecturer)
+
+Please let me know which one you mean so I can give a precise answer.",1,1,1
+AMBX159,conditioning,What is Reza's designation?,designation,"There are multiple individuals with the name ""Reza"" in the knowledge base. To provide a specific answer, could you please clarify which Reza you are referring to?",1,1,0
+AMBX160,no_notice,What is Reza's employment status?,status,"Reza's employment status is Full Time, as indicated by the ""Full Time"" designation in his record.",0,0,0
+AMBX160,flat_notice,What is Reza's employment status?,status,"I couldn't determine the specific person you are referring to, as there are multiple individuals with the name ""Reza"" in the retrieved context. Could you please specify which Reza you mean (Tanjim Reza, Ahmed Mayeesha Reza Agomoni, or Mr. Md. Tanzim Reza)?",0,1,1
+AMBX160,conditioning,What is Reza's employment status?,status,"Reza can refer to multiple individuals, including Tanjim Reza (C. Lecturer), Mr. Md. Tanzim Reza (Senior Lecturer), and Ahmed Mayeesha Reza Agomoni (Lecturer). To provide a specific answer, could you please clarify which Reza you are referring to?",0,1,1
+AMBX161,no_notice,What is Rifat's office room?,office_room,There is not enough information in the retrieved context to answer the question about Rifat's office room.,1,0,0
+AMBX161,flat_notice,What is Rifat's office room?,office_room,I don't have enough information in the retrieved context to answer this question.,1,0,0
+AMBX161,conditioning,What is Rifat's office room?,office_room,I'm not able to answer that question as there is no information in the retrieved context about a person named Rifat or their office room.,0,0,0
+AMBX162,no_notice,What is Rifat's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX162,flat_notice,What is Rifat's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX162,conditioning,What is Rifat's email address?,email,"I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Rifat, and only lists contact information for Office of Co-curricular Activities (OCA).",1,0,0
+AMBX163,no_notice,What is Rifat's designation?,designation,Rifat's designation is Lecturer.,0,0,0
+AMBX163,flat_notice,What is Rifat's designation?,designation,"There are multiple individuals with the name ""Rifat"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean: Md. Rifat Rahman or Riazul Islam Rifat?",0,1,1
+AMBX163,conditioning,What is Rifat's designation?,designation,"Rifat's designation could be either a Lecturer, as both Md. Rifat Rahman and Riazul Islam Rifat have the same designation in the knowledge base. To provide an accurate answer, I need to know which specific person you are referring to, as they differ by Initial (RFR vs NRZR).",1,1,0
+AMBX164,no_notice,What is Rifat's employment status?,status,Rifat's employment status is that he is a full-time lecturer.,0,0,0
+AMBX164,flat_notice,What is Rifat's employment status?,status,Rifat's employment status is full-time.,0,0,0
+AMBX164,conditioning,What is Rifat's employment status?,status,Md. Rifat Rahman's employment status is Full Time.,0,0,0
+AMBX165,no_notice,What is Ruhan's office room?,office_room,Ruhan's office room is 4P191.,0,0,0
+AMBX165,flat_notice,What is Ruhan's office room?,office_room,Ruhan Habib's office room is 4P191.,0,0,0
+AMBX165,conditioning,What is Ruhan's office room?,office_room,Ruhan Habib's office room is 4P191.,0,0,0
+AMBX166,no_notice,What is Ruhan's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX166,flat_notice,What is Ruhan's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX166,conditioning,What is Ruhan's email address?,email,There is not enough information in the retrieved context to answer this question.,1,0,0
+AMBX167,no_notice,What is Ruhan's designation?,designation,Ruhan Habib's designation is a Lecturer.,0,0,0
+AMBX167,flat_notice,What is Ruhan's designation?,designation,"Ruhan Habib and Mr. Ahmed Mahir Ruhan both have the designation of Lecturer, but I need to know which specific person you are referring to in order to provide a more accurate answer.",0,1,0
+AMBX167,conditioning,What is Ruhan's designation?,designation,"Ruhan Habib and Mr. Ahmed Mahir Ruhan both have the designation of Lecturer, but I need to know which specific person you are referring to in order to provide a more accurate answer.",0,1,0
+AMBX168,no_notice,What is Ruhan's employment status?,status,There is not enough information in the retrieved context to answer the question about Ruhan's employment status.,1,0,0
+AMBX168,flat_notice,What is Ruhan's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about a person named Ruhan.,0,0,0
+AMBX168,conditioning,What is Ruhan's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about a person named Ruhan.,0,0,0
+AMBX169,no_notice,What is Sabbir's office room?,office_room,Sabbir Hossain's office room is 4J54.,0,0,0
+AMBX169,flat_notice,What is Sabbir's office room?,office_room,"I found multiple individuals with the name ""Sabbir"" in the knowledge base. To provide an accurate answer, could you please specify which Sabbir you are referring to: Md. Sabbir Ahmed or Mr. Md Sabbir Hossain?",1,1,0
+AMBX169,conditioning,What is Sabbir's office room?,office_room,"There are multiple individuals with the name ""Sabbir"" in the knowledge base. To provide a specific answer, could you please clarify which Sabbir you are referring to (e.g., Md. Sabbir Ahmed or Mr. Md Sabbir Hossain)?",1,1,0
+AMBX170,no_notice,What is Sabbir's email address?,email,Sabbir's email address is sabbir.ahmed@bracu.ac.bd.,0,0,0
+AMBX170,flat_notice,What is Sabbir's email address?,email,Sabbir's email address is sabbir.ahmed@bracu.ac.bd.,0,0,0
+AMBX170,conditioning,What is Sabbir's email address?,email,Sabbir's email address is sabbir.ahmed@bracu.ac.bd.,0,0,0
+AMBX171,no_notice,What is Sabbir's designation?,designation,Sabbir Hossain's designation is Lecturer.,0,0,0
+AMBX171,flat_notice,What is Sabbir's designation?,designation,"There are multiple individuals with the name ""Sabbir"" in the knowledge base. To provide an accurate answer, could you please specify which Sabbir you are referring to: Md. Sabbir Ahmed or Mr. Md Sabbir Hossain?",0,1,1
+AMBX171,conditioning,What is Sabbir's designation?,designation,"There are multiple individuals with the name ""Sabbir"" in the knowledge base. To provide a specific answer, could you please clarify which Sabbir you are referring to? Do you mean Md. Sabbir Ahmed or Mr. Md Sabbir Hossain?",0,1,1
+AMBX172,no_notice,What is Sabbir's employment status?,status,Sabbir's employment status is Full Time.,0,0,0
+AMBX172,flat_notice,What is Sabbir's employment status?,status,"Sabbir Ahmed, a Senior Lecturer, and Sabbir Hossain, a Lecturer, are both Full Time employees. Which one of these individuals would you like to know more about?",0,1,1
+AMBX172,conditioning,What is Sabbir's employment status?,status,"Sabbir Ahmed and Sabbir Hossain both have a full-time employment status. 
+
+Please clarify which specific person you are referring to, as they share the same first name but differ in their last name and designation.",0,0,0
+AMBX173,no_notice,What is Saha's office room?,office_room,There is no information in the retrieved context about Saha's office room.,0,0,0
+AMBX173,flat_notice,What is Saha's office room?,office_room,I'm unable to answer that question as there is no information in the retrieved context about a person named Saha or their office room.,0,0,0
+AMBX173,conditioning,What is Saha's office room?,office_room,I'm unable to answer that question as there is no information in the retrieved context about a person named Saha or their office room.,0,0,0
+AMBX174,no_notice,What is Saha's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX174,flat_notice,What is Saha's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX174,conditioning,What is Saha's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX175,no_notice,What is Saha's designation?,designation,Suprava Saha Dibya's designation is C. Lecturer.,0,0,0
+AMBX175,flat_notice,What is Saha's designation?,designation,"I found multiple individuals with the surname ""Saha"". To provide an accurate answer, could you please specify which person you are referring to: Arnob Saha Ankon or Suprava Saha Dibya?",1,1,0
+AMBX175,conditioning,What is Saha's designation?,designation,"There are multiple individuals with the last name ""Saha"". To provide a specific answer, could you please clarify which person you mean, Arnob Saha Ankon or Suprava Saha Dibya?",0,1,1
+AMBX176,no_notice,What is Saha's employment status?,status,I do not have enough information to answer the question about Saha's employment status.,1,0,0
+AMBX176,flat_notice,What is Saha's employment status?,status,"I'm unable to answer the question as there is no information in the retrieved context about a person named Saha, including their employment status.",1,0,0
+AMBX176,conditioning,What is Saha's employment status?,status,I'm not able to determine Saha's employment status as there is no information about a person named Saha in the retrieved context.,0,0,0
+AMBX177,no_notice,What is Sakib's office room?,office_room,Sakib's office room is 4P195.,0,0,0
+AMBX177,flat_notice,What is Sakib's office room?,office_room,"There are multiple individuals with the name ""Sakib"" in the knowledge base. To provide an accurate answer, could you please specify which Sakib you are referring to (Nazmus Sakib Touhid, Nazmus Sakib Ahmed, or Sadman Sakib Alif)?",1,1,0
+AMBX177,conditioning,What is Sakib's office room?,office_room,"There are multiple individuals with the name ""Sakib"" in the knowledge base. To provide a specific answer, could you please clarify which Sakib you are referring to (e.g., Nazmus Sakib Touhid, Sadman Sakib Alif, or Nazmus Sakib Ahmed)?",1,1,0
+AMBX178,no_notice,What is Sakib's email address?,email,There is no information in the retrieved context about Sakib or their email address.,1,0,0
+AMBX178,flat_notice,What is Sakib's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX178,conditioning,What is Sakib's email address?,email,I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named Sakib or their email address.,1,0,0
+AMBX179,no_notice,What is Sakib's designation?,designation,Sakib's designation is Lecturer.,0,0,0
+AMBX179,flat_notice,What is Sakib's designation?,designation,"There are multiple individuals with the name ""Sakib"" in the knowledge base. To provide an accurate answer, could you please specify which Sakib you are referring to: Nazmus Sakib Touhid (Lecturer), Nazmus Sakib Ahmed (Lecturer), or Sadman Sakib Alif (C. Lecturer)?",0,1,1
+AMBX179,conditioning,What is Sakib's designation?,designation,"There are multiple individuals with the name ""Sakib"" in the knowledge base. To provide a specific answer, could you please clarify which Sakib you are referring to (e.g., Nazmus Sakib Touhid, Sadman Sakib Alif, or Nazmus Sakib Ahmed)?",1,1,0
+AMBX180,no_notice,What is Sakib's employment status?,status,Sakib's employment status is Full Time.,0,0,0
+AMBX180,flat_notice,What is Sakib's employment status?,status,"There are multiple individuals with the name ""Sakib"" in the knowledge base. To provide an accurate answer, could you please specify which Sakib you are referring to (Nazmus Sakib Touhid, Nazmus Sakib Ahmed, or Sadman Sakib Alif)?",0,1,1
+AMBX180,conditioning,What is Sakib's employment status?,status,"There are multiple individuals with the name ""Sakib"" in the knowledge base. To provide a specific answer, could you please clarify which Sakib you are referring to (e.g., Nazmus Sakib Touhid, Sadman Sakib Alif, or Nazmus Sakib Ahmed)?",1,1,0
+AMBX181,no_notice,What is Shahriar's office room?,office_room,"The office room for individuals with the surname ""Shahriar"" varies, but Asif Shahriar's office room is 4M124.",0,0,0
+AMBX181,flat_notice,What is Shahriar's office room?,office_room,"There are multiple individuals with the name ""Shahriar"" in the knowledge base. To provide a specific answer, could you please clarify which Shahriar you are referring to (e.g., Asif Shahriar, Mr. Shadman Shahriar, Mr. Shahriar Rahman Rana, or Ahmad Farhan Shahriar Chowdhury)?",1,1,0
+AMBX181,conditioning,What is Shahriar's office room?,office_room,"There are multiple individuals with the name ""Shahriar"" in the knowledge base. To provide a specific answer, could you please clarify which Shahriar you are referring to (e.g., Asif Shahriar, Mr. Shadman Shahriar, Mr. Shahriar Rahman Rana, or Ahmad Farhan Shahriar Chowdhury)?",1,1,0
+AMBX182,no_notice,What is Shahriar's email address?,email,Shahriar's email address is asif.shahriar@bracu.ac.bd.,0,0,0
+AMBX182,flat_notice,What is Shahriar's email address?,email,"There are multiple individuals with the name ""Shahriar"" in the knowledge base, specifically Asif Shahriar and Mr. Shahriar Rahman Rana. Could you please specify which Shahriar you would like to know the email address for?",0,1,1
+AMBX182,conditioning,What is Shahriar's email address?,email,"There are multiple individuals with the name ""Shahriar"" in the knowledge base, specifically Asif Shahriar (asif.shahriar@bracu.ac.bd), Ahmad Farhan Shahriar Chowdhury (farhan.shahriar@bracu.ac.bd), and Mr. Shahriar Rahman Rana (shahriar.rahman@bracu.ac.bd). Could you please specify which Shahriar's email address you are looking for?",0,1,1
+AMBX183,no_notice,What is Shahriar's designation?,designation,"Shahriar's designations are Lecturer, as indicated for multiple individuals with the name Shahriar.",1,0,0
+AMBX183,flat_notice,What is Shahriar's designation?,designation,"There are multiple individuals with the name ""Shahriar"" in the knowledge base. To provide a specific answer, could you please clarify which Shahriar you are referring to (e.g., Asif Shahriar, Mr. Shahriar Rahman Rana, Ahmad Farhan Shahriar Chowdhury, or Mr. Shadman Shahriar)?",1,1,0
+AMBX183,conditioning,What is Shahriar's designation?,designation,"There are multiple individuals with the name ""Shahriar"" in the knowledge base, and their designations differ. The candidates are Asif Shahriar (Lecturer), Mr. Shahriar Rahman Rana (Lecturer), Ahmad Farhan Shahriar Chowdhury (Lecturer), and Mr. Shadman Shahriar (Lecturer). Please specify which specific person you mean by ""Shahriar"".",0,1,1
+AMBX184,no_notice,What is Shahriar's employment status?,status,Shahriar's employment status is Full Time.,0,0,0
+AMBX184,flat_notice,What is Shahriar's employment status?,status,"Shahriar's employment status matches multiple distinct records in the knowledge base, and I need to know which specific person you are referring to. The matching names are Asif Shahriar (Full Time), Mr. Shadman Shahriar (Full Time), Mr. Shahriar Rahman Rana (Full Time), and Ahmad Farhan Shahriar Chowdhury (Full Time). Please specify which one of these individuals you would like me to answer about.",0,1,1
+AMBX184,conditioning,What is Shahriar's employment status?,status,"Shahriar's employment status varies among the matching candidates, but all of them are listed as having a Full Time designation. To provide a more specific answer, could you please clarify which Shahriar you are referring to (e.g., Asif Shahriar, Mr. Shadman Shahriar, Mr. Shahriar Rahman Rana, or Ahmad Farhan Shahriar Chowdhury)?",1,1,0
+AMBX185,no_notice,What is Sheikh's office room?,office_room,Sheikh Iftekhar Ahmed's office room is Room 4P.,0,0,0
+AMBX185,flat_notice,What is Sheikh's office room?,office_room,"Sheikh Iftekhar Ahmed's room is listed as Room 4P, and Sheikh Araf Noshin's room is listed as Room 4N144. Which specific person are you referring to?",0,1,1
+AMBX185,conditioning,What is Sheikh's office room?,office_room,"Sheikh Iftekhar Ahmed, a C. Lecturer, has Room 4P, while Sheikh Araf Noshin, a Lecturer, has Room 4N144. Which specific person are you referring to?",0,1,1
+AMBX186,no_notice,What is Sheikh's email address?,email,"Sheikh Iftekhar Ahmed's email address is ext.sheikh.ahmed@bracu.ac.bd, and Sheikh Araf Noshin's email address is araf.noshin@bracu.ac.bd.",0,0,1
+AMBX186,flat_notice,What is Sheikh's email address?,email,"Sheikh Iftekhar Ahmed's email address is ext.sheikh.ahmed@bracu.ac.bd, and Sheikh Araf Noshin's email address is araf.noshin@bracu.ac.bd. Which specific Sheikh do you mean?",0,1,1
+AMBX186,conditioning,What is Sheikh's email address?,email,"Sheikh Iftekhar Ahmed and Sheikh Araf Noshin are both listed as having the last name ""Sheikh"", but they have different first names. To provide a specific answer, could you please clarify which Sheikh you are referring to?",1,1,0
+AMBX187,no_notice,What is Sheikh's designation?,designation,"Sheikh Iftekhar Ahmed's designation is C. Lecturer, and Sheikh Araf Noshin's designation is Lecturer.",0,0,1
+AMBX187,flat_notice,What is Sheikh's designation?,designation,"Sheikh Iftekhar Ahmed's designation is C. Lecturer, and Sheikh Araf Noshin's designation is also Lecturer, while Sheikh Samiul Kadir's designation is also C. Lecturer. Which specific person are you referring to?",0,1,1
+AMBX187,conditioning,What is Sheikh's designation?,designation,"Sheikh Iftekhar Ahmed is a C. Lecturer, and Sheikh Araf Noshin is also a Lecturer, while Sheikh Samiul Kadir is a C. Lecturer as well. Which specific Sheikh do you mean?",0,1,1
+AMBX188,no_notice,What is Sheikh's employment status?,status,Sheikh Iftekhar Ahmed's employment status is Contractual.,0,0,0
+AMBX188,flat_notice,What is Sheikh's employment status?,status,"Sheikh Iftekhar Ahmed's employment status is Contractual, and Sheikh Araf Noshin's employment status is Full Time. Which specific Sheikh do you mean?",0,1,1
+AMBX188,conditioning,What is Sheikh's employment status?,status,"Sheikh Iftekhar Ahmed's employment status is Contractual, and Sheikh Araf Noshin's employment status is Full Time. Please let me know which specific Sheikh you are referring to so I can provide more information.",0,1,1
+AMBX189,no_notice,What is Shuvo's office room?,office_room,I don't have enough information in the retrieved context to answer that question.,1,0,0
+AMBX189,flat_notice,What is Shuvo's office room?,office_room,I'm unable to answer that question as there is no information in the retrieved context about a person named Shuvo or their office room.,0,0,0
+AMBX189,conditioning,What is Shuvo's office room?,office_room,I'm not able to answer that question as there is no information in the retrieved context about a person named Shuvo or their office room.,0,0,0
+AMBX190,no_notice,What is Shuvo's email address?,email,Shuvo's email address is ext.anonto.shuvo@bracu.ac.bd.,0,0,0
+AMBX190,flat_notice,What is Shuvo's email address?,email,Shuvo's email address is ext.anonto.shuvo@bracu.ac.bd.,0,0,0
+AMBX190,conditioning,What is Shuvo's email address?,email,Shuvo's email address is ext.anonto.shuvo@bracu.ac.bd.,0,0,0
+AMBX191,no_notice,What is Shuvo's designation?,designation,Dr. Md. Shafiul Alam Shuvo is a C. Professor.,0,0,1
+AMBX191,flat_notice,What is Shuvo's designation?,designation,"I found multiple individuals with the name ""Shuvo"". To provide an accurate answer, could you please specify which person you are referring to: Md. Anonto Shuvo or Dr. Md. Shafiul Alam Shuvo?",0,1,1
+AMBX191,conditioning,What is Shuvo's designation?,designation,"There are two individuals with the name ""Shuvo"" in the knowledge base, and their designations differ. Dr. Md. Shafiul Alam Shuvo is a C. Professor, while Md. Anonto Shuvo is a C. Lecturer. Could you please specify which person's designation you would like to know?",0,1,1
+AMBX192,no_notice,What is Shuvo's employment status?,status,There is not enough information in the retrieved context to answer the question about Shuvo's employment status.,1,0,0
+AMBX192,flat_notice,What is Shuvo's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about a person named Shuvo.,0,0,0
+AMBX192,conditioning,What is Shuvo's employment status?,status,I'm not able to determine Shuvo's employment status as there is no information in the retrieved context about a person named Shuvo.,0,0,0
+AMBX193,no_notice,What is Tabassum's office room?,office_room,Tabassum's office room is Room 4F.,0,0,0
+AMBX193,flat_notice,What is Tabassum's office room?,office_room,Tabassum's office room is Room 4F.,0,0,0
+AMBX193,conditioning,What is Tabassum's office room?,office_room,Tabassum's office room is Room 4F.,0,0,0
+AMBX194,no_notice,What is Tabassum's email address?,email,Nowshin Tabassum's email address is ext.nowshin.tabassum@bracu.ac.bd.,0,0,0
+AMBX194,flat_notice,What is Tabassum's email address?,email,"There are multiple individuals with the name ""Tabassum"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean: Aniqa Tabassum or Nowshin Tabassum?",0,1,1
+AMBX194,conditioning,What is Tabassum's email address?,email,"There are multiple individuals with the name ""Tabassum"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean, Aniqa Tabassum (Lecturer) or Nowshin Tabassum (C. Lecturer)?",0,1,1
+AMBX195,no_notice,What is Tabassum's designation?,designation,Aniqa Tabassum's designation is Lecturer.,0,0,0
+AMBX195,flat_notice,What is Tabassum's designation?,designation,"There are multiple individuals with the name ""Tabassum"" in the knowledge base. To provide an accurate answer, could you please specify which person you mean: Nowshin Tabassum or Aniqa Tabassum?",0,1,1
+AMBX195,conditioning,What is Tabassum's designation?,designation,"There are multiple individuals with the name ""Tabassum"" in the knowledge base. To provide a specific answer, could you please clarify which person you mean, Nowshin Tabassum (C. Lecturer) or Aniqa Tabassum (Lecturer)?",0,1,1
+AMBX196,no_notice,What is Tabassum's employment status?,status,There is not enough information in the retrieved context to answer the question about Tabassum's employment status.,1,0,0
+AMBX196,flat_notice,What is Tabassum's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about a person named Tabassum.,0,0,0
+AMBX196,conditioning,What is Tabassum's employment status?,status,"We have multiple records for individuals with the name ""Tabassum"", and they differ by Designation (C. Lecturer, Lecturer). Could you please specify which Tabassum you are referring to?",1,1,0
+AMBX197,no_notice,What is Tahsin's office room?,office_room,Tahsin's office room is Room 4F.,0,0,0
+AMBX197,flat_notice,What is Tahsin's office room?,office_room,Tahsin's office room is Room 4F.,0,0,0
+AMBX197,conditioning,What is Tahsin's office room?,office_room,Tahsin's office room is Room 4F.,0,0,0
+AMBX198,no_notice,What is Tahsin's email address?,email,Tahsin's email address is ext.tahsin.ramisha@bracu.ac.bd.,0,0,0
+AMBX198,flat_notice,What is Tahsin's email address?,email,Tahsin's email address is ext.tahsin.ramisha@bracu.ac.bd.,0,0,0
+AMBX198,conditioning,What is Tahsin's email address?,email,Tahsin's email address is ext.tahsin.ramisha@bracu.ac.bd.,0,0,0
+AMBX199,no_notice,What is Tahsin's designation?,designation,Tahsin Tanim Ramisha's designation is C. Lecturer.,0,0,0
+AMBX199,flat_notice,What is Tahsin's designation?,designation,"I found multiple individuals with the name ""Tahsin"" in the knowledge base. To provide an accurate answer, could you please specify which Tahsin you are referring to: Tahsin Tanim Ramisha or Naima Tahsin Nodi?",0,1,1
+AMBX199,conditioning,What is Tahsin's designation?,designation,"There are two individuals with the name ""Tahsin"" in the knowledge base. One is Tahsin Tanim Ramisha, a C. Lecturer, and the other is Naima Tahsin Nodi, a Lecturer. Could you please clarify which specific person you mean by ""Tahsin""?",0,1,1
+AMBX200,no_notice,What is Tahsin's employment status?,status,Tahsin's employment status is contractual.,0,0,0
+AMBX200,flat_notice,What is Tahsin's employment status?,status,Tahsin's employment status is contractual.,0,0,0
+AMBX200,conditioning,What is Tahsin's employment status?,status,Tahsin's employment status is contractual.,0,0,0
+AMBX201,no_notice,What is Tanjim's office room?,office_room,Tanjim's office room is Room 4F.,0,0,0
+AMBX201,flat_notice,What is Tanjim's office room?,office_room,Tanjim's office room is Room 4F.,0,0,0
+AMBX201,conditioning,What is Tanjim's office room?,office_room,Tanjim's office room is Room 4F.,0,0,0
+AMBX202,no_notice,What is Tanjim's email address?,email,Tanjim's email address is ext.tanjim.reza@bracu.ac.bd.,0,0,0
+AMBX202,flat_notice,What is Tanjim's email address?,email,Tanjim Reza's email address is ext.tanjim.reza@bracu.ac.bd.,0,0,0
+AMBX202,conditioning,What is Tanjim's email address?,email,Tanjim Reza's email address is ext.tanjim.reza@bracu.ac.bd.,0,0,0
+AMBX203,no_notice,What is Tanjim's designation?,designation,"Tanjim Reza's designation is C. Lecturer, and Mr. Mirza Md. Tanjim Shorif Mugdho's designation is Lecturer.",0,0,1
+AMBX203,flat_notice,What is Tanjim's designation?,designation,"Tanjim Reza has a designation of C. Lecturer, and Mr. Mirza Md. Tanjim Shorif Mugdho also goes by the name Tanjim and has a designation of Lecturer. Which specific person are you referring to?",0,1,1
+AMBX203,conditioning,What is Tanjim's designation?,designation,"Tanjim Reza has the designation of C. Lecturer, and Mr. Mirza Md. Tanjim Shorif Mugdho has the designation of Lecturer. Which specific person are you referring to?",0,1,1
+AMBX204,no_notice,What is Tanjim's employment status?,status,Tanjim's employment status is contractual.,0,0,0
+AMBX204,flat_notice,What is Tanjim's employment status?,status,Tanjim's employment status is contractual.,0,0,0
+AMBX204,conditioning,What is Tanjim's employment status?,status,Tanjim's employment status is contractual.,0,0,0
+AMBX205,no_notice,What is Tasnim's office room?,office_room,Tasnim Sobhan Upoma's office room is 4N141.,0,0,0
+AMBX205,flat_notice,What is Tasnim's office room?,office_room,"There are multiple individuals with the name ""Tasnim"" in the knowledge base. To provide a specific answer, could you please clarify which Tasnim you are referring to?",1,1,0
+AMBX205,conditioning,What is Tasnim's office room?,office_room,"There are multiple individuals with the name ""Tasnim"" in the knowledge base. To provide a specific answer, could you please clarify which Tasnim you are referring to?",1,1,0
+AMBX206,no_notice,What is Tasnim's email address?,email,"Tasnim's email address is tasnim.ahsan@bracu.ac.bd, as she is a Lecturer with the initial ""TAP"".",0,0,0
+AMBX206,flat_notice,What is Tasnim's email address?,email,"There are multiple individuals with the name ""Tasnim"" in the knowledge base, specifically Anika Tasnim and Ms. Tasnim Ahsan Prome and Ms. Tasnim Ferdous. To provide a specific answer, could you please clarify which Tasnim you are referring to?",0,1,1
+AMBX206,conditioning,What is Tasnim's email address?,email,"There are multiple individuals with the name ""Tasnim"" in the knowledge base, including Ms. Anika Tasnim (C. Lecturer), Ms. Tasnim Ahsan Prome (Lecturer), and Ms. Tasnim Ferdous (Senior Lecturer). Please specify which Tasnim you would like to know the email address for.",0,1,1
+AMBX207,no_notice,What is Tasnim's designation?,designation,Tasnim Sobhan Upoma's designation is Lecturer.,0,0,0
+AMBX207,flat_notice,What is Tasnim's designation?,designation,"There are multiple individuals with the name ""Tasnim"" in the knowledge base. To provide an accurate answer, could you please specify which Tasnim you are referring to?",1,1,0
+AMBX207,conditioning,What is Tasnim's designation?,designation,"There are multiple individuals with the name ""Tasnim"" in the knowledge base. To provide a specific answer, could you please clarify which Tasnim you are referring to?",1,1,0
+AMBX208,no_notice,What is Tasnim's employment status?,status,Tasnim Sobhan Upoma's employment status is Full Time.,0,0,0
+AMBX208,flat_notice,What is Tasnim's employment status?,status,"Tasnim's employment status varies among the individuals with the name ""Tasnim"". There are multiple records matching this query, and I need to know which specific person you mean. The options are:
+
+1. Anika Tasnim - Contractual
+2. Ms. Tasnim Ahsan Prome - Full Time
+3. Ms. Tasnim Ferdous - Full Time
+4. Tasnim Sobhan Upoma - Full Time
+5. Sanjida Tasnim - Full Time
+
+Please let me know which one you are referring to, and I will provide the answer accordingly.",0,1,1
+AMBX208,conditioning,What is Tasnim's employment status?,status,"Tasnim's employment status varies among the individuals with that name. There are four distinct records for people named Tasnim, and their statuses are as follows:
+
+* Anika Tasnim is a Contractual C. Lecturer.
+* Ms. Tasnim Ahsan Prome is a Full Time Lecturer.
+* Ms. Tasnim Ferdous is a Full Time Senior Lecturer.
+* Tasnim Sobhan Upoma is a Full Time Lecturer.
+
+Please specify which specific person you are referring to in order for me to provide a more accurate answer.",0,1,1
+AMBX209,no_notice,What is Upoma's office room?,office_room,Upoma's office room is 4N141.,0,0,0
+AMBX209,flat_notice,What is Upoma's office room?,office_room,"I found multiple individuals with the name ""Upoma"", and I need to clarify which one you are referring to. The two matching names are Ms. Ipshita Bonhi Upoma (with a room number of 4K78) and Tasnim Sobhan Upoma (with a room number of 4N141). Please let me know which specific person's office room you would like to know about.",1,1,0
+AMBX209,conditioning,What is Upoma's office room?,office_room,Upoma's office rooms are listed as 4N141 (for Tasnim Sobhan Upoma) and 4K78 (for Ms. Ipshita Bonhi Upoma). Which specific person do you mean?,0,1,1
+AMBX210,no_notice,What is Upoma's email address?,email,I do not have enough information to answer the question.,1,0,0
+AMBX210,flat_notice,What is Upoma's email address?,email,I don't have enough information to answer the question.,1,0,0
+AMBX210,conditioning,What is Upoma's email address?,email,"I don't have enough information to answer the question. The retrieved context does not contain any mention of a person named ""Upoma"".",1,0,0
+AMBX211,no_notice,What is Upoma's designation?,designation,Upoma's designation is Lecturer.,0,0,0
+AMBX211,flat_notice,What is Upoma's designation?,designation,"There are multiple individuals with the name ""Upoma"" in the knowledge base, including Tasnim Sobhan Upoma (Designation: Lecturer) and Ms. Ipshita Bonhi Upoma (Designation: Lecturer). Could you please specify which person you mean by ""Upoma""?",0,1,1
+AMBX211,conditioning,What is Upoma's designation?,designation,"Upoma can refer to either Tasnim Sobhan Upoma, who is a Lecturer, or Ms. Ipshita Bonhi Upoma, who is also a Lecturer. Could you please clarify which specific person you are referring to?",0,1,1
+AMBX212,no_notice,What is Upoma's employment status?,status,I do not have enough information to answer the question about Upoma's employment status.,1,0,0
+AMBX212,flat_notice,What is Upoma's employment status?,status,I'm unable to answer the question as there is no information in the retrieved context about a person named Upoma or their employment status.,1,0,0
+AMBX212,conditioning,What is Upoma's employment status?,status,I'm not able to determine Upoma's employment status from the retrieved context.,1,0,0
+AMBX213,no_notice,What is Zaman's office room?,office_room,Zaman's office room is Room 4F.,0,0,0
+AMBX213,flat_notice,What is Zaman's office room?,office_room,Zaman's office room is Room 4F.,0,0,0
+AMBX213,conditioning,What is Zaman's office room?,office_room,Zaman's office room is Room 4F.,0,0,0
+AMBX214,no_notice,What is Zaman's email address?,email,"The email addresses for individuals with the surname ""Zaman"" are ext.tasfia.zaman@bracu.ac.bd and ext.fardin.zaman@bracu.ac.bd.",0,0,1
+AMBX214,flat_notice,What is Zaman's email address?,email,"There are multiple individuals with the last name ""Zaman"" in the context, specifically Tasfia Zaman and Fardin Zaman. To provide a specific answer, could you please clarify which person's email address you would like to know?",1,1,0
+AMBX214,conditioning,What is Zaman's email address?,email,"There are multiple individuals with the last name ""Zaman"" in the knowledge base, specifically Fardin Zaman and Tasfia Zaman. To provide a specific answer, could you please clarify which one of these individuals you are referring to?",1,1,0
+AMBX215,no_notice,What is Zaman's designation?,designation,Zaman's designation is C. Lecturer.,0,0,0
+AMBX215,flat_notice,What is Zaman's designation?,designation,"There are multiple individuals with the last name ""Zaman"" in the knowledge base, specifically Tasfia Zaman, Fardin Zaman, and Nusrat Zaman Raya. Could you please specify which specific person you mean by ""Zaman""?",0,1,1
+AMBX215,conditioning,What is Zaman's designation?,designation,"There are multiple individuals with the last name ""Zaman"" in the knowledge base, and their designations differ by Initial. The candidates are CTFZ (Tasfia Zaman), FDZ (Fardin Zaman), and NRT (Nusrat Zaman Raya). Could you please specify which specific person's designation you would like to know?",0,1,1
+AMBX216,no_notice,What is Zaman's employment status?,status,Zaman's employment status is contractual.,0,0,0
+AMBX216,flat_notice,What is Zaman's employment status?,status,Tasfia Zaman's employment status is contractual.,0,0,0
+AMBX216,conditioning,What is Zaman's employment status?,status,Tasfia Zaman's employment status is contractual.,0,0,0
+AMBX217,no_notice,What is Zayed's office room?,office_room,Zayed's office room is 4N147.,0,0,0
+AMBX217,flat_notice,What is Zayed's office room?,office_room,"I found multiple individuals with the name ""Zayed"". To provide an accurate answer, could you please specify which Zayed you are referring to: Md Zayed Bin Zahir Arju or Zayed Humayun?",1,1,0
+AMBX217,conditioning,What is Zayed's office room?,office_room,"I found multiple individuals with the name ""Zayed"" in the knowledge base. To provide an accurate answer, could you please specify which Zayed you are referring to (e.g., Md Zayed Bin Zahir Arju or Zayed Humayun)?",1,1,0
+AMBX218,no_notice,What is Zayed's email address?,email,Zayed's email address is zayed.zahir@bracu.ac.bd.,0,0,0
+AMBX218,flat_notice,What is Zayed's email address?,email,Zayed's email address is zayed.zahir@bracu.ac.bd.,0,0,0
+AMBX218,conditioning,What is Zayed's email address?,email,Zayed's email address is zayed.zahir@bracu.ac.bd.,0,0,0
+AMBX219,no_notice,What is Zayed's designation?,designation,Zayed's designation is a Lecturer.,0,0,0
+AMBX219,flat_notice,What is Zayed's designation?,designation,"Zayed has two designations, which are Lecturer for both Md Zayed Bin Zahir Arju and Zayed Humayun. Could you please specify which Zayed you mean?",0,1,1
+AMBX219,conditioning,What is Zayed's designation?,designation,Zayed Bin Zahir Arju and Zayed Humayun are both designated as Lecturers. Which one of these individuals do you mean?,0,1,1
+AMBX220,no_notice,What is Zayed's employment status?,status,Zayed's employment status is Full Time.,0,0,0
+AMBX220,flat_notice,What is Zayed's employment status?,status,Zayed's employment status is full-time.,0,0,0
+AMBX220,conditioning,What is Zayed's employment status?,status,Md Zayed Bin Zahir Arju's employment status is Full Time.,0,0,0

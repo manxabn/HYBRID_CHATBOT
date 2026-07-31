@@ -1,0 +1,7 @@
+comparison,metric,mean_diff,ci95_lo,ci95_hi,p_approx,significant
+dynamic_alpha_vs_adaptive,recall@1,0.0,0.0,0.0,0.0,False
+dynamic_alpha_vs_adaptive,recall@3,0.0,0.0,0.0,0.0,False
+dynamic_alpha_vs_adaptive,recall@5,0.0,0.0,0.0,0.0,False
+dynamic_alpha_vs_adaptive,mrr,0.0,0.0,0.0,0.0,False
+dynamic_alpha_vs_adaptive,ndcg@5,0.0046,-0.0014,0.0131,0.18,False
+dynamic_alpha_vs_adaptive,ndcg@10,0.0022,0.0001,0.0051,0.045,True

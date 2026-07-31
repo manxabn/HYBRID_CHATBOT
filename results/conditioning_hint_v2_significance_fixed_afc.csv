@@ -1,0 +1,4 @@
+comparison,diff,ci_lo,ci_hi,p,significant
+conditioning_v2_vs_no_notice,0.3762,0.3091,0.4409,0.0,True
+conditioning_v2_vs_flat_notice,0.0589,0.0273,0.0955,0.0,True
+conditioning_v2_vs_conditioning,0.0453,0.0182,0.0818,0.0,True

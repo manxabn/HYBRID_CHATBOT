@@ -131,12 +131,19 @@ def looks_like_unrecognized_name(query: str, retriever) -> bool:
     if not candidates:
         return False
     known_tokens = retriever.faculty_name_token_index
-    known_full_names = " ".join(n for n, _ in retriever.faculty_name_index)
+    # 2026-07-31 fix: previously checked `token in " ".join(all names)`, a
+    # single concatenated blob -- a substring match could in principle span
+    # the boundary between two unrelated names (e.g. "...khan anika...")
+    # and wrongly count as "already known," silently skipping the
+    # correction gate for a genuinely unrecognized name. Checking against
+    # each full name individually removes that cross-boundary risk
+    # entirely.
+    known_full_names = [n for n, _ in retriever.faculty_name_index]
     for candidate in candidates:
         token = candidate.lower()
         if token in known_tokens:
             continue  # already resolvable via the token index -- not this gate's job
-        if token in known_full_names:
+        if any(token in full_name for full_name in known_full_names):
             continue  # short fragment of some full name string -- let the substring match handle it
         return True
     return False
@@ -210,6 +217,40 @@ AMBIGUOUS_ENTITY_NOTICE = (
     "one candidate exists."
 )
 
+# Conditioning-attribute extension (2026-07-28): an engineering extension
+# of the ambiguity notice above, not a new mechanism -- the general
+# "surface an attribute that would resolve the ambiguity" idea follows the
+# same spirit as clarifying-question work in open-domain search (e.g.
+# Aliannejadi et al., SIGIR 2019), not yet cited anywhere in this project's
+# paper since paper.tex hasn't been touched during this code-fixing phase;
+# adding that citation, if wanted, is a paper-writing task for later, not
+# implied here. A flat name list makes the user re-type a full name to
+# disambiguate; if the candidates already differ on some OTHER field this
+# corpus stores (Designation, Initial), surfacing that field lets the user
+# answer with a much shorter, easier disambiguator instead ("the professor"
+# rather than re-typing "Dr. Mohammad Kaykobad").
+_CONDITIONING_FIELDS = ["Designation", "Initial", "Status"]
+
+
+def build_conditioning_hint(retriever, doc_ids) -> str:
+    """Given the doc_ids of an ambiguous entity match, checks whether the
+    candidates differ on any of _CONDITIONING_FIELDS (in priority order)
+    and returns a short hint naming the first such field and its distinct
+    values, or "" if no candidate metadata is available or every checked
+    field happens to be identical across all candidates (in which case the
+    plain name-list notice is all there is to offer)."""
+    records = [retriever.corpus.get(doc_id, {}).get("metadata", {}) for doc_id in doc_ids]
+    records = [r for r in records if r]
+    if len(records) < 2:
+        return ""
+    for field in _CONDITIONING_FIELDS:
+        values = {r.get(field) for r in records if r.get(field)}
+        if len(values) > 1:
+            return (f" These candidates differ by {field} ({', '.join(sorted(values))}) -- "
+                     f"if the user's phrasing already narrows it down by {field}, use that "
+                     f"instead of asking them to repeat the full name.")
+    return ""
+
 
 def _normalize(text: str) -> str:
     return re.sub(r"[^a-z0-9 ]", "", text.lower()).strip()
@@ -250,7 +291,8 @@ class NovelPipeline:
                  lambda_entity: float = 0.9, lambda_open: float = 0.5,
                  rerank_pool_size: int = 10, final_k: int = 5,
                  use_reranker: bool = False, use_graph: bool = True, use_abstention: bool = True,
-                 use_query_translation: bool = False, use_entity_normalization: bool = True):
+                 use_query_translation: bool = False, use_entity_normalization: bool = True,
+                 use_conformal_backoff: bool = False, use_confidence_ordering: bool = True):
         # use_query_translation defaults to False as of 2026-07-27: tested
         # directly on the Banglish eval set (isolated ablation, same
         # fine-tuned-embeddings + no-reranker setup either way) and found
@@ -298,6 +340,24 @@ class NovelPipeline:
         # that function's docstring for why -- despite this feature's own
         # motivation explicitly citing misspelled names as a target case.
         self.use_entity_normalization = use_entity_normalization
+        # use_conformal_backoff defaults to False: implemented (pipeline/
+        # conformal_abstention.py, structurally following Mohri & Hashimoto,
+        # ICML 2024 -- independently verified before use) but its threshold
+        # is explicitly disclosed as provisional/heuristic, not yet
+        # calibrated against human-labeled claim-correctness data, since
+        # that calibration set does not exist yet (same standing gap as
+        # "no human hallucination annotation"). Same honest gating pattern
+        # as query_translation/entity_normalization before their own
+        # validation: available, not the default, until real calibration
+        # exists.
+        self.use_conformal_backoff = use_conformal_backoff
+        # use_confidence_ordering defaults to True (current, deployed
+        # behavior) -- added 2026-07-29 so its own effect can finally be
+        # isolated (scripts/ablate_confidence_ordering.py), a real gap this
+        # project's own pipeline-stage summary table had flagged: the
+        # feature was implemented and deployed but never independently
+        # ablated, unlike every other major component.
+        self.use_confidence_ordering = use_confidence_ordering
 
     def build_context(self, query: str) -> tuple[str | None, dict]:
         """Returns (context_string_or_None, meta). meta always has: route
@@ -343,8 +403,14 @@ class NovelPipeline:
         if self.use_query_translation and is_likely_banglish(query):
             try:
                 translated_query = translate_to_english(query)
-            except Exception:
-                translated_query = None  # translation failure -> fall back silently to original-only
+            except Exception as e:
+                # Falls back to original-only retrieval (safe -- this path
+                # only ever ADDS candidates, see above), but log so a
+                # persistent failure here (e.g. Ollama down, not just one
+                # slow request) is visible rather than silently degrading
+                # every Banglish query's retrieval quality unnoticed.
+                print(f"[novel_pipeline] query translation failed, falling back to original-only: {e}")
+                translated_query = None
             if translated_query and translated_query.strip().lower() != query.strip().lower():
                 translated_results, _ = self.retriever.retrieve_adaptive(
                     translated_query, self.lambda_entity, self.lambda_open, top_n=pool_size)
@@ -372,12 +438,14 @@ class NovelPipeline:
             if normalized_query is None:
                 try:
                     normalized_query = normalize_entities(query)
-                except Exception:
+                except Exception as e:
+                    print(f"[novel_pipeline] entity normalization failed, falling back to original-only: {e}")
                     normalized_query = None
         elif self.use_entity_normalization and looks_like_unrecognized_entity(query, self.retriever):
             try:
                 normalized_query = normalize_entities(query)
-            except Exception:
+            except Exception as e:
+                print(f"[novel_pipeline] entity normalization failed, falling back to original-only: {e}")
                 normalized_query = None
 
         # Shared re-retrieval + union step for whichever branch above set
@@ -452,14 +520,37 @@ class NovelPipeline:
             # matters: the notice is only useful if the model reads it
             # before committing to an answer, so it must reliably win that
             # slot whenever ambiguity fires.
-            scored_parts.append((float("inf"), AMBIGUOUS_ENTITY_NOTICE))
+            conditioning_hint = build_conditioning_hint(self.retriever, exact_ids)
+            scored_parts.append((float("inf"), AMBIGUOUS_ENTITY_NOTICE + conditioning_hint))
         if graph_block:
             scored_parts.append((float("inf"), graph_block))  # verified structural fact, not a probabilistic score
         for d in pool_matches:
             scored_parts.append((1e6, d["text"]))  # already-verified sufficiency match (exact_match or near-duplicate question), ranks above any ordinary retrieval score
         for d in final_results:
             scored_parts.append((d["score"], d["text"]))
-        context_parts = _zigzag_by_confidence(scored_parts)
+        # use_confidence_ordering toggle (2026-07-29): added specifically to
+        # isolate this component's own effect, which -- despite being
+        # implemented and deployed -- had never been independently ablated
+        # (flagged in this project's own pipeline-stage summary table).
+        # Motivated by finding (via literature research, WebFetch-verified)
+        # that Jin, Yoon, Han & Arık (ICLR 2025, arXiv:2410.05983) test the
+        # SAME zig-zag/sandwich reordering mechanism directly, reporting it
+        # helps more as retrieved-passage count grows -- the direct
+        # precedent this project's own ablation should be measured against.
+        # When False, falls back to the ordering used before this feature
+        # existed: graph_block, then ambiguity notice, then pool_matches,
+        # then final_results, in that fixed sequence (still confidence
+        # -ranked WITHIN final_results via their own retrieval scores, just
+        # not zig-zag-interleaved across the whole assembled context).
+        if self.use_confidence_ordering:
+            context_parts = _zigzag_by_confidence(scored_parts)
+        else:
+            # Fixed insertion order, no reordering at all -- this IS the
+            # pre-existing order scored_parts was already built in (notice,
+            # graph_block, pool_matches, final_results, appended in that
+            # sequence above), matching this project's own pre-zig-zag
+            # behavior exactly, not a third, newly-invented ordering.
+            context_parts = [text for _, text in scored_parts]
         context = "\n\n".join(context_parts) if context_parts else None
 
         confidence = final_results[0]["query_confidence"] if final_results else 0.0
@@ -535,4 +626,24 @@ class NovelPipeline:
         generation_query = meta.get("normalized_query") or query
         answer = generate_fn(generation_query, context)
         t1 = time.perf_counter()
+
+        if self.use_conformal_backoff and context:
+            from pipeline.conformal_abstention import backoff_filter
+            result = backoff_filter(answer, context, route=meta.get("route", "open_ended"),
+                                     exact_match_any=meta.get("exact_match_any", False))
+            meta["conformal_retained_fraction"] = result["retained_fraction"]
+            meta["conformal_dropped_claims"] = result["dropped_claims"]
+            meta["conformal_note"] = result["note"]
+            # If most of the answer got backed off (or, for entity_heavy,
+            # no exact-match grounding was found at all), too little of it
+            # is actually grounded to show as a partial answer -- treat
+            # this the same way the confidence gate treats "not enough
+            # support," rather than silently returning a half-sentence
+            # fragment or an empty string.
+            if result["retained_fraction"] < 0.5:
+                meta["abstain"] = True
+                meta["conformal_triggered_abstain"] = True
+                return ABSTENTION_MESSAGE, meta, context, t1 - t0
+            answer = result["filtered_answer"] or answer
+
         return answer, meta, context, t1 - t0

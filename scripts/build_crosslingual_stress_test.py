@@ -35,7 +35,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from pipeline.ollama_client import MODEL, OLLAMA_URL
+from pipeline.ollama_client import MODEL, OLLAMA_URL, post_with_retry
 import requests
 
 DB_PATH = ROOT / "knowledge_base.db"
@@ -52,17 +52,16 @@ BANGLISH_REPHRASE_PROMPT = (
 
 
 def rephrase_to_banglish(question: str) -> str:
-    resp = requests.post(
+    resp = post_with_retry(
         OLLAMA_URL,
-        json={
+        {
             "model": MODEL,
             "prompt": BANGLISH_REPHRASE_PROMPT.format(question=question),
             "stream": False,
             "options": {"temperature": 0.0, "seed": 42, "num_ctx": 512},
         },
-        timeout=300,
+        timeout=900,
     )
-    resp.raise_for_status()
     return resp.json()["response"].strip().strip('"')
 
 

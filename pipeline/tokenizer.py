@@ -31,9 +31,16 @@ STOPWORDS = set(stopwords.words("english")) | BANGLISH_STOPWORDS
 
 def tokenize(text: str):
     # Banglish variant normalization (see banglish_normalize.py) applied
-    # before stopword filtering, so e.g. "korte"/"korbo" both collapse to
-    # "kor" and then survive filtering as the same, more-discriminative
-    # token -- same intent as English stopword removal, just for spelling
-    # variants rather than function words.
+    # before stopword filtering, so all spelling variants of one root
+    # collapse to a single canonical token first. What happens next depends
+    # on the root: some canonical forms (e.g. "dorkar", "gula") are
+    # genuinely discriminative and survive filtering as one consistent
+    # token instead of several diluted variants; others (e.g. "kor",
+    # "ache", "hobe" -- added to BANGLISH_STOPWORDS 2026-07-31, since
+    # collapsing every inflection of "to do"/"to be"/"will be" into one
+    # token makes it extremely frequent and low-content) are then removed
+    # entirely by the stopword filter below, same as any other function
+    # word. Either way, normalizing first prevents the variants from being
+    # treated as several unrelated rare tokens.
     tokens = (normalize_banglish_token(t) for t in TOKEN_RE.findall(text.lower()))
     return [t for t in tokens if t not in STOPWORDS]

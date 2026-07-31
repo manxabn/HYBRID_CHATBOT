@@ -37,7 +37,7 @@ import requests
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from pipeline.ollama_client import MODEL, OLLAMA_URL
+from pipeline.ollama_client import MODEL, OLLAMA_URL, post_with_retry
 
 IN_PATH = ROOT / "data" / "test_queries_crosslingual_stress.csv"
 OUT_PATH = ROOT / "data" / "test_queries_crosslingual_stress_expanded.csv"
@@ -56,9 +56,9 @@ BANGLISH_REPHRASE_PROMPT = (
 
 
 def rephrase_to_banglish_diverse(question: str, seed: int) -> str:
-    resp = requests.post(
+    resp = post_with_retry(
         OLLAMA_URL,
-        json={
+        {
             "model": MODEL,
             "prompt": BANGLISH_REPHRASE_PROMPT.format(question=question),
             "stream": False,
@@ -68,9 +68,8 @@ def rephrase_to_banglish_diverse(question: str, seed: int) -> str:
             # the opposite of what expanding phrasing diversity requires.
             "options": {"temperature": 0.7, "seed": seed, "num_ctx": 512},
         },
-        timeout=300,
+        timeout=900,
     )
-    resp.raise_for_status()
     return resp.json()["response"].strip().strip('"')
 
 

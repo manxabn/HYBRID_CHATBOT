@@ -45,7 +45,8 @@ def retrieve_with_translation(retriever, query):
     results, _ = retriever.retrieve_adaptive(query, top_n=POOL_SIZE)
     try:
         translated = translate_to_english(query)
-    except Exception:
+    except Exception as e:
+        print(f"  [warning] translation failed for {query!r}, skipping translated arm: {e}")
         translated = None
     if translated and translated.strip().lower() != query.strip().lower():
         translated_results, _ = retriever.retrieve_adaptive(translated, top_n=POOL_SIZE)

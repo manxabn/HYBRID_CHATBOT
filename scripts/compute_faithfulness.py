@@ -32,7 +32,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from pipeline.ollama_client import MODEL, OLLAMA_URL
+from pipeline.ollama_client import MODEL, OLLAMA_URL, post_with_retry
 import requests
 
 FAITHFULNESS_PROMPT = (
@@ -53,15 +53,14 @@ SCORE_RE = re.compile(r"SCORE:\s*([0-9.]+)")
 
 def judge_faithfulness(context: str, answer: str, timeout: int = 300) -> tuple[float | None, str]:
     prompt = FAITHFULNESS_PROMPT.format(context=context, answer=answer)
-    resp = requests.post(
+    resp = post_with_retry(
         OLLAMA_URL,
-        json={
+        {
             "model": MODEL, "prompt": prompt, "stream": False,
             "options": {"temperature": 0.0, "seed": 42, "num_ctx": 2048},
         },
         timeout=timeout,
     )
-    resp.raise_for_status()
     text = resp.json()["response"].strip()
     m = SCORE_RE.search(text)
     score = float(m.group(1)) if m else None

@@ -60,6 +60,24 @@ def test_spaced_and_dashed_course_codes_now_match():
             f"expected canonicalized 'CSE220' from {query!r}, got {canonicalize_course_code(matches[0])!r}"
 
 
+def test_course_code_re_does_not_false_positive_on_dates_or_mid_word():
+    # 2026-07-29 fix: found via code-review audit against the actual
+    # test-query CSVs, not a hypothetical -- these exact rows exist in
+    # test_queries.csv/roundA/roundB/roundC and were silently mis-flagged
+    # as entity_heavy (routed through the heavily lexical-weighted RRF
+    # branch) purely because a 4+-digit year's first 3 digits, or a
+    # non-course word's trailing 2-4 letters, happened to look like a bare
+    # course code.
+    no_match_queries = [
+        "Reason for late fee appearing on pay slip of scholarship recipients after 29 June 2025?",
+        "Purpose of the Wishlist event for Summer 2025?",
+        "The lab has 30 seats and floor 220 hallway access.",
+    ]
+    for query in no_match_queries:
+        assert not COURSE_CODE_RE.search(query), \
+            f"expected no course-code match in {query!r}, got {COURSE_CODE_RE.search(query).group(0)!r}"
+
+
 def test_hybrid_retriever_and_prerequisite_graph_share_the_same_pattern_object():
     # The strongest possible regression guard: not just equal behavior, but
     # literally the same compiled regex object in memory, so it is
@@ -74,5 +92,6 @@ if __name__ == "__main__":
     test_letter_suffixed_course_codes_distinguished_in_context()
     test_full_course_id_re_captures_section_suffix()
     test_spaced_and_dashed_course_codes_now_match()
+    test_course_code_re_does_not_false_positive_on_dates_or_mid_word()
     test_hybrid_retriever_and_prerequisite_graph_share_the_same_pattern_object()
     print("OK: all pattern regression tests passed")

@@ -108,13 +108,62 @@ def load_pairs(split: str, include_structured: bool = True):
     return pairs
 
 
-def mine_hard_negatives(pairs, base_model_name=BASE_MODEL, batch_size=128):
-    base_model = SentenceTransformer(base_model_name)
+def _encode_defragmented(model, texts, batch_size, empty_cache_every=10):
+    # Manually chunks encode() and forces torch.cuda.empty_cache() every
+    # `empty_cache_every` chunks, instead of relying on sentence-transformers'
+    # own internal batching loop (a black box that only returns control once
+    # ALL chunks are done) plus a single cache-clear at the very end. Found
+    # necessary (2026-07-29) after a second genuine CUDA OOM on E5-small hit
+    # 50 minutes and 204/408 steps into mining, reporting "10.44 GiB
+    # allocated by PyTorch" against this 4.00 GiB card alongside a degraded
+    # 17.18s/it rate -- both point at CUDA allocator fragmentation building
+    # up unchecked across hundreds of small variable-length-sequence batches
+    # (E5-small's larger hidden size means more, larger cached blocks than
+    # MiniLM ever produced), not a single allocation that's simply too big
+    # for one batch_size choice to dodge. Releasing the cache periodically,
+    # mid-loop, directly targets that buildup instead of hoping it never
+    # accumulates. Harmless for the already-validated MiniLM path (that
+    # model never came close to fragmenting this GPU's 4GB budget, so this
+    # is just a few extra no-op empty_cache() calls there).
+    try:
+        import torch
+        cuda_ok = torch.cuda.is_available()
+    except ImportError:
+        cuda_ok = False
+    chunks = []
+    n_batches = (len(texts) + batch_size - 1) // batch_size
+    for i in range(0, len(texts), batch_size):
+        batch = texts[i:i + batch_size]
+        chunks.append(model.encode(batch, normalize_embeddings=True, show_progress_bar=False, batch_size=batch_size))
+        batch_i = i // batch_size
+        if batch_i % empty_cache_every == 0:
+            print(f"    encoded {min(i + batch_size, len(texts))}/{len(texts)}", flush=True)
+            if cuda_ok:
+                torch.cuda.empty_cache()
+    if cuda_ok:
+        torch.cuda.empty_cache()
+    return np.concatenate(chunks, axis=0)
+
+
+def mine_hard_negatives(pairs, base_model_name=BASE_MODEL, batch_size=128, device=None):
+    # device=None preserves the exact prior behavior (SentenceTransformer's
+    # own auto-detection) for the already-validated MiniLM path.
+    #
+    # PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True (set by the caller,
+    # e.g. scripts/finetune_alt_backbone.py, before this module's imports
+    # trigger any CUDA init) is the fix PyTorch's own OOM error message
+    # recommends for exactly the "large allocated total but 0 bytes free"
+    # fragmentation symptom seen on E5-small's second crash -- it changes
+    # the CUDA caching allocator to manage memory in resizable virtual
+    # segments instead of fixed-size cached blocks, so fragmented holes from
+    # many variable-length batches can actually be reused instead of forcing
+    # a new, larger reservation each time.
+    base_model = SentenceTransformer(base_model_name, device=device)
     questions = [q for q, _ in pairs]
     answers = [a for _, a in pairs]
 
-    q_emb = base_model.encode(questions, normalize_embeddings=True, show_progress_bar=True, batch_size=batch_size)
-    a_emb = base_model.encode(answers, normalize_embeddings=True, show_progress_bar=True, batch_size=batch_size)
+    q_emb = _encode_defragmented(base_model, questions, batch_size)
+    a_emb = _encode_defragmented(base_model, answers, batch_size)
     sims = q_emb @ a_emb.T  # [n, n]
 
     # Some answers are near-duplicates of each other (paraphrase rows) --
@@ -135,13 +184,57 @@ def mine_hard_negatives(pairs, base_model_name=BASE_MODEL, batch_size=128):
     return hard_negatives
 
 
-def main(base_model=BASE_MODEL, out_dir=OUT_DIR, batch_size=32):
+def _make_cache_clear_callback(every_n_steps: int):
+    # A THIRD genuine CUDA OOM (2026-07-29): mining now completes cleanly
+    # (see _encode_defragmented above), but training itself crashed at 50%
+    # (204/408 steps) on E5-small, same "10.44 GiB allocated by PyTorch"
+    # fragmentation signature as the earlier mining crashes -- confirming
+    # this isn't a mining-specific issue but the CUDA allocator fragmenting
+    # across hundreds of steps generally, and HuggingFace's Trainer has no
+    # built-in periodic cache-clearing of its own. Subclasses the real
+    # transformers.TrainerCallback (imported lazily so this module has no
+    # hard transformers-internals dependency at load time for callers that
+    # never use this) and overrides only on_step_end -- the same mid-loop
+    # -defragmentation idea as _encode_defragmented, applied to the
+    # training loop instead of the encode loop. Opt-in (only constructed
+    # when train_empty_cache_every > 0) so the already-validated MiniLM
+    # path is completely unaffected.
+    from transformers import TrainerCallback
+
+    class PeriodicCacheClearCallback(TrainerCallback):
+        def on_step_end(self, args, state, control, **kwargs):
+            if state.global_step % every_n_steps == 0:
+                try:
+                    import torch
+                    if torch.cuda.is_available():
+                        torch.cuda.empty_cache()
+                except ImportError:
+                    pass
+            return control
+
+    return PeriodicCacheClearCallback()
+
+
+def main(base_model=BASE_MODEL, out_dir=OUT_DIR, batch_size=32, mine_batch_size=128, mine_device=None,
+         train_empty_cache_every=0, gradient_checkpointing=False):
+    # mine_batch_size defaults to 128 (mine_hard_negatives' own prior
+    # default) so the already-validated MiniLM path's behavior is completely
+    # unchanged -- added 2026-07-29 specifically for scripts/finetune_alt_
+    # backbone.py's alternative-backbone ablation, which hit a real CUDA OOM
+    # at batch_size=128 on this 4GB-VRAM GPU: E5-small is ~118M params vs
+    # MiniLM's ~22M, and this encoding step's peak memory scales with both
+    # model size and batch_size, so MiniLM's default was never a problem but
+    # a ~5x larger model at the same batch size was. Passing a smaller
+    # mine_batch_size for a larger base model is the safe fix -- this
+    # parameter is opt-in (must be explicitly passed) precisely so it can't
+    # silently change anything for existing callers.
     train_pairs = load_pairs("train")
     n_structured = len(pd.read_csv(STRUCTURED_PAIRS_PATH).query("split == 'train'")) if STRUCTURED_PAIRS_PATH.exists() else 0
     print(f"Train pairs total: {len(train_pairs)} "
           f"(EnglishQA+BanglishQA + {n_structured} synthetic structured-table pairs, Split=train only)")
-    print("Mining hard negatives with the base (pre-fine-tune) model...")
-    hard_negatives = mine_hard_negatives(train_pairs, base_model)
+    print(f"Mining hard negatives with the base (pre-fine-tune) model "
+          f"(encode batch_size={mine_batch_size}, device={mine_device or 'auto'})...")
+    hard_negatives = mine_hard_negatives(train_pairs, base_model, batch_size=mine_batch_size, device=mine_device)
 
     train_dataset = Dataset.from_dict({
         "anchor": [q for q, a in train_pairs],
@@ -152,6 +245,13 @@ def main(base_model=BASE_MODEL, out_dir=OUT_DIR, batch_size=32):
     model = SentenceTransformer(base_model)
     loss = MultipleNegativesRankingLoss(model)
 
+    # gradient_checkpointing=True (opt-in, default False preserves the
+    # already-validated MiniLM path exactly): trades recomputing forward
+    # activations during the backward pass for not storing them, directly
+    # reducing the peak memory the backward pass needs -- the exact phase
+    # that crashed (see _make_cache_clear_callback docstring). Slower per
+    # step, but this is a one-time fine-tuning job, not a latency-sensitive
+    # path.
     args = SentenceTransformerTrainingArguments(
         output_dir=str(out_dir),
         num_train_epochs=3,
@@ -159,13 +259,16 @@ def main(base_model=BASE_MODEL, out_dir=OUT_DIR, batch_size=32):
         warmup_steps=0.1,
         save_strategy="no",
         logging_steps=20,
+        gradient_checkpointing=gradient_checkpointing,
     )
 
+    callbacks = [_make_cache_clear_callback(train_empty_cache_every)] if train_empty_cache_every > 0 else None
     trainer = SentenceTransformerTrainer(
         model=model,
         args=args,
         train_dataset=train_dataset,
         loss=loss,
+        callbacks=callbacks,
     )
     trainer.train()
 

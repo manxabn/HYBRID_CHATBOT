@@ -1,0 +1,5 @@
+metric,n,mean_diff,paired_t_p,wilcoxon_p,significant_at_0.05
+bleu,98,0.0151,0.5186,0.7005,False
+rougeL,98,0.0093,0.6314,0.9387,False
+bertscore,98,0.0028,0.4022,0.9551,False
+meteor,98,0.007,0.703,0.9579,False

@@ -31,7 +31,25 @@ import re
 # now-brittle entity-heavy abstention threshold, cause the system to
 # always decline a perfectly answerable query solely because of how the
 # student happened to space the course code.
-COURSE_CODE_RE = re.compile(r"[A-Za-z]{2,4}[\s-]?\d{3}[A-Za-z]?")
+# \b...(?!\d) added 2026-07-29 after a code-review audit found two live
+# false-positive classes on the actual test-query CSVs: (1) no leading
+# word-boundary meant a 4-6 letter word could match from a MID-word
+# position immediately preceding a digit run -- "Summer 2025" matched
+# "mmer 202" (the last 4 letters of "Summer"), "floor 220" matched "loor
+# 220" -- neither is an intended course-code mention; (2) no restriction on
+# what follows the 3 digits meant any 4+-digit number (most commonly a
+# year) had its first 3 digits alone extracted as a fake code -- "June
+# 2025"/"Summer 2025" both produced a spurious "course code" ("JUNE202"/
+# "MMER202") purely because a real course code happens to also be exactly
+# 3 digits. Confirmed this fired on real rows in test_queries.csv/roundA/B/C
+# (the "late fee ... 29 June 2025" and "Wishlist event for Summer 2025"
+# rows), each wrongly flagged by is_entity_heavy() and routed through the
+# heavily lexical-weighted entity_heavy branch (RRF, lambda=0.9) despite
+# being ordinary date-mentioning, non-entity queries. Verified this exact
+# pattern (\b...(?!\d)) still matches every legitimate spaced/dashed/
+# letter-suffixed/section-prefixed course-code shape already covered by
+# tests/test_patterns.py before landing this change.
+COURSE_CODE_RE = re.compile(r"\b[A-Za-z]{2,4}[\s-]?\d{3}(?!\d)[A-Za-z]?")
 
 # Section-specific identifier, e.g. "CSE111-07" or "CSE260-05A" -- captures
 # the full identifier (base code, optional trailing letter on the code

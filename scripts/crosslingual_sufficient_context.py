@@ -67,7 +67,8 @@ def main():
         query = r["query"]
         try:
             translated = translate_to_english(query)
-        except Exception:
+        except Exception as e:
+            print(f"  [warning] translation failed for {r.get('query_id', query)!r}, skipping translated arm: {e}")
             translated = None
 
         context_original = context_for(retriever, query)

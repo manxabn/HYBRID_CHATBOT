@@ -1,0 +1,37 @@
+Re-scoring avoids_false_confidence for all 880 responses with the validated decomposed judge (kappa=0.7471)...
+  50/880 rescored
+  100/880 rescored
+  150/880 rescored
+  200/880 rescored
+  250/880 rescored
+  300/880 rescored
+  350/880 rescored
+  400/880 rescored
+  450/880 rescored
+  500/880 rescored
+  550/880 rescored
+  600/880 rescored
+  650/880 rescored
+  700/880 rescored
+  750/880 rescored
+  800/880 rescored
+  850/880 rescored
+
+0/880 rows FAILED TO PARSE even after retries -- EXCLUDED from the summary/significance below, not defaulted.
+
+Verdict changed on 43.3% of clean responses vs the old holistic judge
+
+=== avoids_false_confidence, FIXED judge, n=880 clean responses ===
+condition
+conditioning       0.818182
+conditioning_v2    0.863636
+flat_notice        0.804545
+no_notice          0.486364
+Name: avoids_false_confidence, dtype: float64
+
+=== Paired bootstrap significance, FIXED avoids_false_confidence (n=220 query_ids complete across all 4 conditions) ===
+avoids_false_confidence: conditioning_v2 vs no_notice: diff=0.376 CI=[0.309,0.441] p=0.0000 significant=True
+avoids_false_confidence: conditioning_v2 vs flat_notice: diff=0.059 CI=[0.027,0.095] p=0.0000 significant=True
+avoids_false_confidence: conditioning_v2 vs conditioning: diff=0.045 CI=[0.018,0.082] p=0.0000 significant=True
+
+Wrote E:\RAG\updated_Rag\RAG-main\results\conditioning_hint_v2_raw_fixed_afc.csv, E:\RAG\updated_Rag\RAG-main\results\conditioning_hint_v2_summary_fixed_afc.csv, E:\RAG\updated_Rag\RAG-main\results\conditioning_hint_v2_significance_fixed_afc.csv

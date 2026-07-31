@@ -1,0 +1,3 @@
+model,top1_accuracy,top5_accuracy,mrr,n
+base_minilm_pretrained,0.6782334384858044,0.8958990536277602,0.7739372576822606,317
+finetuned_minilm_hard_negatives_structured (currently deployed),0.8201892744479495,0.9621451104100947,0.8817789099416794,317

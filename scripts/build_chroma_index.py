@@ -6,6 +6,20 @@ a different machine, contains orphaned collection dirs, and chromadb isn't
 even installed anywhere that currently runs) so it is deleted and rebuilt
 from the same corpus.jsonl that scripts/build_bm25_index.py indexes, keeping
 both retrieval streams over identical (doc_id, text) pairs.
+
+WARNING (2026-07-31): this script unconditionally shutil.rmtree()s
+chroma_db/ before rebuilding -- safe for the very first build (or any time
+chroma_db/ is known to be unused), but NOT safe to re-run against a LIVE,
+in-use index: another process (a running retriever, an evaluation job)
+holding it open could hit a PermissionError mid-delete, or worse, be left
+querying a collection whose files are being removed out from under it.
+scripts/stage_chroma_index_rebuild.py + scripts/swap_chroma_staging.py exist
+specifically to avoid this risk (build into a separate chroma_db_staging/
+directory, then atomically rename into place, failing cleanly rather than
+partially deleting anything if the live directory is still locked) -- use
+that pair instead of this script for any rebuild after the corpus already
+has a live index in production use (e.g. after the 2026-07-31 Banglish
+dataset expansion, which used the staged workflow for exactly this reason).
 """
 
 import json

@@ -1,0 +1,205 @@
+Testing decomposed avoids_false_confidence judge on n=150 (subsample, not the full 660 -- validation pass first)
+  [1/150] AMBX219 old=0 new_A=0 new_B=1
+  [2/150] AMBX039 old=0 new_A=0 new_B=1
+  [3/150] AMBX009 old=1 new_A=1 new_B=1
+  [4/150] AMBX094 old=1 new_A=1 new_B=1
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nislam')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nislam')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nislam')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [5/150] AMBX084: PARSE FAILED, excluded from kappa calc
+  [6/150] AMBX077 old=0 new_A=0 new_B=0
+  [7/150] AMBX048 old=1 new_A=1 new_B=1
+  [8/150] AMBX035 old=0 new_A=1 new_B=1
+  [9/150] AMBX187 old=0 new_A=1 new_B=1
+  [10/150] AMBX030 old=1 new_A=1 new_B=1
+  [11/150] AMBX202 old=0 new_A=0 new_B=0
+  [12/150] AMBX145 old=1 new_A=1 new_B=1
+  [13/150] AMBX011 old=1 new_A=1 new_B=1
+  [14/150] AMBX011 old=0 new_A=0 new_B=1
+  [15/150] AMBX032 old=1 new_A=1 new_B=1
+  [16/150] AMBX075 old=0 new_A=1 new_B=1
+  [17/150] AMBX080 old=0 new_A=1 new_B=1
+  [18/150] AMBX173 old=0 new_A=1 new_B=1
+  [19/150] AMBX206 old=0 new_A=1 new_B=1
+  [20/150] AMBX010 old=0 new_A=1 new_B=1
+  [21/150] AMBX192 old=0 new_A=1 new_B=1
+  [22/150] AMBX068 old=0 new_A=1 new_B=1
+  [23/150] AMBX218 old=0 new_A=0 new_B=0
+  [24/150] AMBX144 old=0 new_A=0 new_B=1
+  [25/150] AMBX076 old=0 new_A=1 new_B=1
+  [26/150] AMBX154 old=1 new_A=1 new_B=1
+  [27/150] AMBX202 old=0 new_A=0 new_B=0
+  [28/150] AMBX095 old=1 new_A=1 new_B=1
+  [29/150] AMBX003 old=0 new_A=1 new_B=1
+  [30/150] AMBX055 old=1 new_A=1 new_B=1
+  [31/150] AMBX217 old=0 new_A=0 new_B=0
+  [32/150] AMBX117 old=0 new_A=1 new_B=1
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nupoma')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nupoma')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nupoma')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [33/150] AMBX211: PARSE FAILED, excluded from kappa calc
+  [34/150] AMBX054 old=0 new_A=0 new_B=0
+  [35/150] AMBX074 old=1 new_A=1 new_B=1
+  [36/150] AMBX115 old=1 new_A=1 new_B=1
+  [37/150] AMBX218 old=0 new_A=0 new_B=0
+  [38/150] AMBX032 old=1 new_A=1 new_B=1
+  [39/150] AMBX130 old=0 new_A=0 new_B=0
+  [40/150] AMBX034 old=0 new_A=0 new_B=0
+  [41/150] AMBX123 old=0 new_A=1 new_B=1
+  [42/150] AMBX118 old=1 new_A=1 new_B=1
+  [43/150] AMBX091 old=0 new_A=0 new_B=0
+  [44/150] AMBX015 old=0 new_A=1 new_B=1
+  [45/150] AMBX157 old=0 new_A=1 new_B=1
+  [46/150] AMBX184 old=0 new_A=0 new_B=0
+  [47/150] AMBX043 old=0 new_A=1 new_B=1
+  [48/150] AMBX130 old=0 new_A=0 new_B=0
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd arif hasan (lecturer), mr. arif shakil (senior lecturer)')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd arif hasan (lecturer), mr. arif shakil (senior lecturer)')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd arif hasan (lecturer), mr. arif shakil (senior lecturer)')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [49/150] AMBX027: PARSE FAILED, excluded from kappa calc
+  [50/150] AMBX189 old=0 new_A=1 new_B=1
+  [51/150] AMBX101 old=0 new_A=0 new_B=0
+  [52/150] AMBX124 old=0 new_A=0 new_B=1
+  [53/150] AMBX198 old=0 new_A=0 new_B=0
+  [54/150] AMBX066 old=0 new_A=1 new_B=1
+  [55/150] AMBX024 old=0 new_A=0 new_B=0
+  [56/150] AMBX016 old=0 new_A=1 new_B=1
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\niqbal')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\niqbal')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\niqbal')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [57/150] AMBX078: PARSE FAILED, excluded from kappa calc
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nabdullah khondoker, ms. khondoker nazia iqbal')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nabdullah khondoker, ms. khondoker nazia iqbal')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nabdullah khondoker, ms. khondoker nazia iqbal')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [58/150] AMBX099: PARSE FAILED, excluded from kappa calc
+  [59/150] AMBX028 old=1 new_A=1 new_B=1
+  [60/150] AMBX215 old=0 new_A=1 new_B=1
+  [61/150] AMBX035 old=0 new_A=1 new_B=1
+  [62/150] AMBX208 old=0 new_A=0 new_B=1
+  [63/150] AMBX210 old=1 new_A=1 new_B=1
+  [64/150] AMBX155 old=0 new_A=1 new_B=1
+  [65/150] AMBX125 old=0 new_A=1 new_B=1
+  [66/150] AMBX056 old=0 new_A=1 new_B=1
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\ndr. muhammad nur yanhaona, dr. muhammad iqbal hossain')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\ndr. muhammad nur yanhaona, dr. muhammad iqbal hossain')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\ndr. muhammad nur yanhaona, dr. muhammad iqbal hossain')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [67/150] AMBX127: PARSE FAILED, excluded from kappa calc
+  [68/150] AMBX122 old=0 new_A=0 new_B=1
+  [69/150] AMBX072 old=1 new_A=1 new_B=1
+  [70/150] AMBX092 old=0 new_A=1 new_B=0
+  [71/150] AMBX025 old=0 new_A=1 new_B=1
+  [72/150] AMBX059 old=0 new_A=1 new_B=1
+  [73/150] AMBX183 old=1 new_A=1 new_B=1
+  [74/150] AMBX219 old=0 new_A=1 new_B=1
+  [75/150] AMBX056 old=0 new_A=1 new_B=1
+  [76/150] AMBX158 old=0 new_A=1 new_B=1
+  [77/150] AMBX130 old=0 new_A=0 new_B=0
+  [78/150] AMBX093 old=0 new_A=1 new_B=0
+  [79/150] AMBX191 old=0 new_A=0 new_B=0
+  [80/150] AMBX075 old=1 new_A=1 new_B=1
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmehnaz seraj, mehnaz ara fazal')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmehnaz seraj, mehnaz ara fazal')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmehnaz seraj, mehnaz ara fazal')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [81/150] AMBX111: PARSE FAILED, excluded from kappa calc
+  [82/150] AMBX020 old=0 new_A=1 new_B=1
+  [83/150] AMBX079 old=0 new_A=0 new_B=0
+  [84/150] AMBX216 old=0 new_A=0 new_B=1
+  [85/150] AMBX108 old=0 new_A=1 new_B=1
+  [86/150] AMBX137 old=0 new_A=0 new_B=0
+  [87/150] AMBX092 old=0 new_A=0 new_B=0
+  [88/150] AMBX023 old=0 new_A=1 new_B=1
+  [89/150] AMBX073 old=1 new_A=1 new_B=1
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd. muhtasim mahmud, aliva sadnim mahmud, mr. tamkin mahmud tan')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd. muhtasim mahmud, aliva sadnim mahmud, mr. tamkin mahmud tan')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd. muhtasim mahmud, aliva sadnim mahmud, mr. tamkin mahmud tan')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [90/150] AMBX108: PARSE FAILED, excluded from kappa calc
+  [91/150] AMBX073 old=1 new_A=1 new_B=1
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd. sabbir ahmed, mr. md sabbir hossain')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd. sabbir ahmed, mr. md sabbir hossain')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd. sabbir ahmed, mr. md sabbir hossain')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [92/150] AMBX171: PARSE FAILED, excluded from kappa calc
+  [93/150] AMBX136 old=0 new_A=1 new_B=1
+  [94/150] AMBX157 old=1 new_A=1 new_B=1
+  [95/150] AMBX049 old=1 new_A=1 new_B=1
+  [96/150] AMBX091 old=1 new_A=1 new_B=1
+  [97/150] AMBX218 old=0 new_A=0 new_B=0
+  [98/150] AMBX085 old=0 new_A=0 new_B=0
+  [99/150] AMBX184 old=1 new_A=1 new_B=1
+  [100/150] AMBX090 old=1 new_A=1 new_B=1
+  [101/150] AMBX147 old=0 new_A=0 new_B=0
+  [102/150] AMBX137 old=0 new_A=0 new_B=0
+  [103/150] AMBX203 old=0 new_A=1 new_B=1
+  [104/150] AMBX194 old=0 new_A=1 new_B=1
+  [105/150] AMBX048 old=0 new_A=0 new_B=0
+  [106/150] AMBX174 old=1 new_A=1 new_B=1
+  [107/150] AMBX169 old=1 new_A=1 new_B=1
+  [108/150] AMBX032 old=1 new_A=1 new_B=1
+  [109/150] AMBX017 old=0 new_A=0 new_B=0
+  [110/150] AMBX038 old=1 new_A=1 new_B=1
+  [111/150] AMBX053 old=0 new_A=0 new_B=1
+  [112/150] AMBX211 old=0 new_A=0 new_B=0
+  [113/150] AMBX210 old=1 new_A=1 new_B=1
+  [114/150] AMBX022 old=1 new_A=1 new_B=1
+  [115/150] AMBX132 old=1 new_A=1 new_B=1
+  [116/150] AMBX131 old=0 new_A=0 new_B=1
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\ntanjim reza, mr. md. tanzim reza, ahmed mayeesha reza agomoni')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\ntanjim reza, mr. md. tanzim reza, ahmed mayeesha reza agomoni')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\ntanjim reza, mr. md. tanzim reza, ahmed mayeesha reza agomoni')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [117/150] AMBX160: PARSE FAILED, excluded from kappa calc
+  [118/150] AMBX181 old=1 new_A=1 new_B=1
+  [119/150] AMBX086 old=1 new_A=1 new_B=1
+  [120/150] AMBX004 old=0 new_A=1 new_B=1
+  [121/150] AMBX040 old=0 new_A=1 new_B=1
+  [122/150] AMBX197 old=0 new_A=0 new_B=0
+  [123/150] AMBX210 old=1 new_A=1 new_B=1
+  [124/150] AMBX220 old=0 new_A=0 new_B=0
+  [125/150] AMBX204 old=0 new_A=1 new_B=1
+  [126/150] AMBX149 old=0 new_A=1 new_B=1
+  [127/150] AMBX054 old=0 new_A=0 new_B=0
+  [128/150] AMBX199 old=0 new_A=1 new_B=1
+  [129/150] AMBX002 old=0 new_A=0 new_B=0
+  [130/150] AMBX187 old=0 new_A=1 new_B=1
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmd. sabbir ahmed, mr. md sabbir hossain')
+  [131/150] AMBX171 old=0 new_A=1 new_B=1
+  [132/150] AMBX061 old=0 new_A=1 new_B=1
+  [133/150] AMBX174 old=1 new_A=1 new_B=1
+  [134/150] AMBX037 old=0 new_A=0 new_B=0
+  [135/150] AMBX102 old=1 new_A=1 new_B=1
+  [136/150] AMBX176 old=0 new_A=1 new_B=1
+  [137/150] AMBX213 old=0 new_A=1 new_B=0
+  [138/150] AMBX205 old=1 new_A=1 new_B=1
+  [139/150] AMBX128 old=0 new_A=0 new_B=1
+  [140/150] AMBX056 old=0 new_A=0 new_B=0
+  [141/150] AMBX001 old=0 new_A=0 new_B=0
+    [parse retry 1/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmehnaz seraj, mehnaz ara fazal')
+    [parse retry 2/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmehnaz seraj, mehnaz ara fazal')
+    [parse retry 3/3] could not find expected fields in judge response (names_line='', ack_line='') (raw='yes\nmehnaz seraj, mehnaz ara fazal')
+    [PARSE FAILURE, giving up after 3 attempts] could not find expected fields in judge response (names_line='', ack_line='')
+  [142/150] AMBX111: PARSE FAILED, excluded from kappa calc
+  [143/150] AMBX167 old=0 new_A=1 new_B=1
+  [144/150] AMBX007 old=0 new_A=1 new_B=1
+  [145/150] AMBX179 old=1 new_A=1 new_B=1
+  [146/150] AMBX124 old=0 new_A=0 new_B=1
+  [147/150] AMBX105 old=0 new_A=1 new_B=1
+  [148/150] AMBX082 old=1 new_A=1 new_B=1
+  [149/150] AMBX020 old=0 new_A=1 new_B=1
+  [150/150] AMBX042 old=0 new_A=0 new_B=0
+
+11/150 rows FAILED TO PARSE even after retries -- EXCLUDED from the kappa calculation below, not defaulted to any score.
+
+=== Decomposed judge reliability (prompt A vs B), n=139 (clean, parse failures excluded) ===
+raw_agreement=0.8921 cohens_kappa=0.7471 (old holistic judge was kappa=0.114 on the same kind of check)
+
+For reference, new_judge_A agrees with the OLD holistic judge 0.6331 of the time (shows how much the verdict shifted, not a reliability number itself)
+
+Wrote E:\RAG\updated_Rag\RAG-main\results\improved_afc_judge_check.csv and E:\RAG\updated_Rag\RAG-main\results\improved_afc_judge_summary.csv

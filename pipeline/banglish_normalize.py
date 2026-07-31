@@ -30,9 +30,17 @@ at this scale, since it can incorrectly merge genuinely distinct words.
 import re
 
 # Variant -> canonical root. Grouped by semantic root for readability.
+#
+# "kore" added to the "kor" group 2026-07-31: found via a corpus-specific
+# TF-IDF stopword derivation (scripts/derive_corpus_specific_banglish_
+# stopwords.py, run against the tripled BanglishQA train set, 2414
+# questions) that "kore" -- a common conjunctive-participle form of "to
+# do" ("having done"/"by doing") -- appears in 13.6% of Banglish questions
+# but was never collapsing into "kor" alongside every OTHER inflection of
+# the same verb, a real gap in this dictionary, not a new word class.
 _VARIANT_GROUPS = {
     "kor": ["korte", "korar", "koro", "korbo", "kora", "korchi", "korlam",
-            "korish", "korlo", "korish", "korbe", "korle", "koris"],
+            "korish", "korlo", "korish", "korbe", "korle", "koris", "kore"],
     "ache": ["ache", "achi", "achen", "asche"],
     "hobe": ["hobe", "hoise", "hoyeche", "hoye", "hoyese"],
     "gula": ["gula", "guli", "gulo"],
@@ -52,10 +60,26 @@ BANGLISH_NORMALIZE_MAP = {
 # discriminative weight for BM25 -- the direct Banglish analogue of English
 # stopword removal (tokenizer.py), for the same documented reason: without
 # removing them, they dilute the rare, high-IDF token that actually matters.
+#
+# Second block added 2026-07-31 via the same corpus-specific TF-IDF
+# derivation noted above: each of these crossed a >=3% document-frequency
+# threshold across 2414 real Banglish questions and was manually confirmed
+# to be a genuine grammatical/auxiliary word (question word, case-marker
+# suffix, modal auxiliary, pronoun), NOT a real content word -- e.g. "kor"/
+# "ache"/"hobe" are the CANONICAL TARGETS of the verb-variant groups above
+# ("to do"/"to be"/"will be"), which is exactly why they become extremely
+# frequent and low-content once every spelling variant collapses into them.
+# Candidates that turned out to be genuine domain content words (e.g.
+# "brac", "student", "course", "semester", "library") were deliberately
+# EXCLUDED, not added, despite also crossing the frequency threshold --
+# this project's own banglish_normalize.py docstring already warns that a
+# wrong/over-eager addition is worse than no addition at this scale.
 BANGLISH_STOPWORDS = {
     "ki", "ta", "er", "ar", "na", "ei", "oi", "o", "ba", "je", "eta", "ota",
     "amar", "tumi", "apni", "kintu", "ebong", "naki", "abar", "niye", "diye",
     "theke", "jonno",
+    "kor", "ache", "hobe", "hoy", "jay", "koto", "kothay", "kivabe", "der",
+    "te", "ke", "ami", "kon", "pabo", "pare",
 }
 
 

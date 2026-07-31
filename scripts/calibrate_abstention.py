@@ -52,6 +52,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from pipeline.hybrid_retriever import HybridRetriever
+from pipeline.patterns import COURSE_CODE_RE, canonicalize_course_code
 
 
 def clopper_pearson_ci(successes: int, n: int, confidence: float = 0.95) -> tuple[float, float]:
@@ -108,9 +109,18 @@ def build_synthetic_entity_calibration_set():
     all_codes = set()
     for (c,) in cur.fetchall():
         if c:
-            m = re.search(r"[A-Za-z]{2,4}\d{3}[A-Za-z]?", c.upper())
+            # Uses the shared COURSE_CODE_RE (pipeline/patterns.py) rather
+            # than a locally re-defined copy -- this file previously had its
+            # own inline regex here, exactly the "duplicated pattern silently
+            # drifts out of sync" bug class patterns.py's own docstring
+            # already names as having happened once before (prerequisite_
+            # graph.py's old local copy). Found via a full-codebase audit,
+            # 2026-07-29; canonicalize_course_code is a no-op here since
+            # CourseDetails' own Course field is already glued, but applying
+            # it keeps this code path consistent with every other caller.
+            m = COURSE_CODE_RE.search(c.upper())
             if m:
-                all_codes.add(m.group(0))
+                all_codes.add(canonicalize_course_code(m.group(0)))
     cur.execute("SELECT DISTINCT Course FROM Prerequisites WHERE PreRequisite IS NOT NULL")
     codes_with_prereq = {c.strip().upper() for (c,) in cur.fetchall() if c}
     cur.execute("SELECT DISTINCT Initial FROM FacultyList WHERE Initial IS NOT NULL")

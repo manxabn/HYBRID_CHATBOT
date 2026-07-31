@@ -78,7 +78,36 @@ def run(smoke: bool, fusion: str, out_path: Path, sample_size: int = None, queri
     retriever = HybridRetriever(fusion=fusion)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    write_header = not out_path.exists() or smoke
+    # Resumable (added 2026-07-31, after this exact class of long Ollama
+    # -dependent job repeatedly lost hours of progress to real infra
+    # failures elsewhere in this project the same day -- session
+    # interruption, a transient Ollama 500, a RAM/pagefile crisis): if
+    # out_path already has rows from a prior partial run, skip any
+    # (query_id, config) pair already completed instead of blindly
+    # re-running (which would just append duplicate rows on top, since the
+    # existing append-mode write never checked for this). Not used for
+    # --smoke (always a fresh 5-query check).
+    completed = set()
+    # 2026-07-31: out_path.exists() alone is not "has a header" -- a real
+    # run hit this exactly: a stale 0-byte file from an old smoke test made
+    # write_header=False on every subsequent run against this path (below),
+    # so real data accumulated with NO header row at all. Reading that
+    # back with a bare pd.read_csv() silently treated the first DATA row
+    # as column names (KeyError: 'query_id'), crashing the resume path
+    # entirely. Detect and recover from a headerless file explicitly
+    # instead of assuming a header exists just because the file does.
+    if out_path.exists() and out_path.stat().st_size > 0 and not smoke:
+        try:
+            prior = pd.read_csv(out_path)
+            if "query_id" not in prior.columns:
+                raise ValueError("headerless")
+        except (pd.errors.EmptyDataError, ValueError):
+            prior = pd.read_csv(out_path, header=None, names=FIELDNAMES)
+            print(f"  (recovered {len(prior)} rows from a headerless {out_path} -- "
+                  f"prepend a real header to this file to fix it permanently)")
+        completed = set(zip(prior["query_id"], prior["config"]))
+        print(f"Resuming: {len(completed)} (query_id, config) pairs already done in {out_path}")
+    write_header = (not out_path.exists()) or out_path.stat().st_size == 0 or smoke
     mode = "w" if write_header else "a"
 
     start_time = datetime.now(timezone.utc).isoformat()
@@ -91,6 +120,8 @@ def run(smoke: bool, fusion: str, out_path: Path, sample_size: int = None, queri
 
         for config_name, lam in CONFIGS:
             for _, row in df.iterrows():
+                if (row["query_id"], config_name) in completed:
+                    continue
                 query = row["query"]
                 ref = row["reference_answer"]
 
@@ -127,8 +158,16 @@ def run(smoke: bool, fusion: str, out_path: Path, sample_size: int = None, queri
                 })
                 f.flush()
                 n_rows += 1
+                # flush=True (2026-07-31): without it, this print sits in
+                # Python's stdout buffer when redirected to a log file --
+                # a real run looked completely stalled in the log (and its
+                # CPU briefly read as idle mid-generation-wait, a false
+                # "hung" signal) while it was actually writing genuine
+                # progress to out_path the whole time (which DOES flush,
+                # see above) -- misleading enough to cause a real,
+                # unnecessary kill of a healthy process.
                 print(f"[{config_name}] {row['query_id']}: {generation_s:.2f}s gen, "
-                      f"{retrieval_s:.3f}s retrieval")
+                      f"{retrieval_s:.3f}s retrieval", flush=True)
 
     end_time = datetime.now(timezone.utc).isoformat()
 

@@ -1,0 +1,3 @@
+comparison,n,n_parse_failed,raw_agreement,cohens_kappa
+new_decomposed_judge: prompt A vs prompt B (reliability of the FIX),139,11,0.8921,0.7471
+new_judge_A vs OLD holistic judge (how much the verdict actually changed),139,11,0.6331,

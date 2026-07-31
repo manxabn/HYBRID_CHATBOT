@@ -38,6 +38,8 @@ MODELS = {
     "base_minilm_pretrained": "sentence-transformers/all-MiniLM-L6-v2",
     "finetuned_minilm_hard_negatives (QA-pairs only, currently deployed)": str(ROOT / "models" / "finetuned_minilm_hard_negatives"),
     "finetuned_minilm_hard_negatives_structured (QA-pairs + structured)": str(ROOT / "models" / "finetuned_minilm_hard_negatives_structured"),
+    "base_e5small_pretrained": "intfloat/multilingual-e5-small",
+    "finetuned_e5small_hard_negatives_structured (alt-backbone ablation)": str(ROOT / "models" / "finetuned_e5small_hard_negatives_structured"),
 }
 
 

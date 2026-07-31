@@ -1,0 +1,3 @@
+claim,context,is_correct,source,anchor_query,category
+"The university library provides access to journals, magazines, and reference books for in-library use.","Question: This might be a silly question, but are journals, magazines and reference books available for borrowing?
+Answer: No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",False,adversarial_context_swap,"This might be a silly question, but what services do library provide?",Library

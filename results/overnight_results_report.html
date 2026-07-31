@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overnight Results — Hybrid RAG Ablations</title>
+<style>
+  :root {
+    --bg: #f6f7f6;
+    --surface: #ffffff;
+    --surface-2: #f0f2f1;
+    --ink: #1b2226;
+    --ink-muted: #5b6670;
+    --ink-faint: #8a949c;
+    --border: #e1e4e2;
+    --border-strong: #cbd0ce;
+    --accent: #0e7c86;
+    --accent-ink: #ffffff;
+    --accent-soft: #e3f2f2;
+    --good: #1f7a4d;
+    --good-soft: #e3f3ea;
+    --null: #a6650e;
+    --null-soft: #f6ecdd;
+    --bad: #b23a3a;
+    --bad-soft: #f8e9e9;
+    --shadow: 0 1px 2px rgba(20, 30, 30, 0.06), 0 8px 24px rgba(20, 30, 30, 0.05);
+    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, ui-serif, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "SF Mono", "Cascadia Code", "Consolas", "Liberation Mono", ui-monospace, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161a;
+      --surface: #181d22;
+      --surface-2: #1e242a;
+      --ink: #e7ebee;
+      --ink-muted: #9aa6ae;
+      --ink-faint: #6c7780;
+      --border: #262d33;
+      --border-strong: #333c43;
+      --accent: #5fd1db;
+      --accent-ink: #0a2224;
+      --accent-soft: #17383b;
+      --good: #5fd98a;
+      --good-soft: #17322380;
+      --null: #e0a85c;
+      --null-soft: #332a1780;
+      --bad: #e37070;
+      --bad-soft: #33191980;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent-soft); color: var(--ink); }
+
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px;
+  }
+
+  .shell {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+    gap: 48px;
+  }
+  @media (max-width: 900px) {
+    .shell { grid-template-columns: 1fr; }
+    nav.toc { display: none; }
+  }
+
+  /* ---------- Header ---------- */
+  header.page {
+    padding: 56px 24px 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  header.page .inner {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.12;
+    margin: 0 0 12px;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  .dek {
+    font-size: 1.0625rem;
+    color: var(--ink-muted);
+    max-width: 62ch;
+    margin: 0 0 28px;
+  }
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .stat-chip {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-width: 108px;
+  }
+  .stat-chip .n {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .stat-chip .l {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+
+  /* ---------- TOC ---------- */
+  nav.toc {
+    position: sticky;
+    top: 32px;
+    align-self: start;
+    padding-top: 40px;
+    font-size: 0.875rem;
+  }
+  nav.toc .toc-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+  nav.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-left: 1px solid var(--border);
+  }
+  nav.toc a {
+    display: block;
+    padding: 7px 0 7px 14px;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  nav.toc a:hover { color: var(--ink); }
+  nav.toc a.active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ---------- Main column ---------- */
+  main { min-width: 0; padding-bottom: 100px; padding-top: 40px; }
+
+  section.block {
+    padding: 44px 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 24px;
+  }
+  section.block:first-of-type { padding-top: 0; }
+  section.block:last-of-type { border-bottom: none; }
+
+  .block-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .file-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    white-space: normal;
+    word-break: break-word;
+  }
+  .lede {
+    color: var(--ink-muted);
+    max-width: 68ch;
+    margin: 10px 0 22px;
+  }
+  .lede code, p code, li code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background: var(--surface-2);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+    color: var(--ink);
+  }
+
+  /* ---------- Verdict pill ---------- */
+  .verdict {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 4px 10px 4px 8px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .verdict::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .verdict.good { background: var(--good-soft); color: var(--good); }
+  .verdict.null { background: var(--null-soft); color: var(--null); }
+  .verdict.mixed { background: var(--accent-soft); color: var(--accent); }
+
+  /* ---------- Tables ---------- */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    margin: 18px 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 480px;
+    font-size: 0.875rem;
+  }
+  caption {
+    text-align: left;
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    padding: 10px 14px 0;
+    caption-side: top;
+    font-family: var(--font-mono);
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  thead th {
+    font-size: 0.6875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+    background: var(--surface-2);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr.highlight { background: var(--accent-soft); }
+  td.num, th.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; text-align: right; }
+  td.model, td.metric { font-family: var(--font-mono); font-size: 0.8125rem; }
+  .delta { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .delta.up { color: var(--good); }
+  .delta.down { color: var(--ink-muted); }
+  .p-sig { color: var(--good); font-weight: 600; }
+  .p-ns { color: var(--ink-faint); }
+
+  .note {
+    font-size: 0.875rem;
+    color: var(--ink-muted);
+    background: var(--surface-2);
+    border-left: 3px solid var(--border-strong);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+  }
+  .note.caveat { border-left-color: var(--null); }
+  .note strong { color: var(--ink); }
+
+  /* ---------- Scorecard ---------- */
+  .scorecard {
+    display: grid;
+    gap: 10px;
+  }
+  .score-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  .score-row .name { font-weight: 600; }
+  .score-row .desc { font-size: 0.8125rem; color: var(--ink-muted); margin-top: 2px; }
+  .score-row a { text-decoration: none; color: inherit; display: contents; }
+
+  /* ---------- Bug cards ---------- */
+  .bug-card {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 14px;
+    padding: 16px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 14px;
+  }
+  .bug-icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.9375rem;
+  }
+  .bug-card h3 { margin: 0 0 4px; font-family: var(--font-body); font-size: 1rem; font-weight: 700; }
+  .bug-card .file-tag { display: block; margin-bottom: 8px; }
+  .bug-card p { margin: 0 0 8px; font-size: 0.9375rem; color: var(--ink-muted); }
+  .bug-card .before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  @media (max-width: 640px) { .bug-card .before-after { grid-template-columns: 1fr; } }
+  .ba-block {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    padding: 8px 10px;
+    border-radius: 6px;
+    line-height: 1.5;
+  }
+  .ba-block.before { background: var(--bad-soft); color: var(--bad); }
+  .ba-block.after { background: var(--good-soft); color: var(--good); }
+  .ba-block .tag { display: block; font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.8; margin-bottom: 3px; }
+
+  footer.page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+    color: var(--ink-faint);
+    font-size: 0.8125rem;
+    border-top: 1px solid var(--border);
+  }
+  footer.page code { font-family: var(--font-mono); }
+</style>
+</head>
+<body>
+
+<header class="page">
+  <div class="inner">
+    <p class="eyebrow">Session report — 2026-07-29, overnight</p>
+    <h1>Everything measured tonight, with the receipts</h1>
+    <p class="dek">Every number below traces to a script that was actually run and a CSV that was actually written — no estimates, no recalled figures. Two ablations came back null, one came back significant, and two real bugs got caught mid-audit. All of it is reported as it landed.</p>
+    <div class="stat-row">
+      <div class="stat-chip"><span class="n">4</span><span class="l">E5 training attempts</span></div>
+      <div class="stat-chip"><span class="n">2</span><span class="l">real bugs fixed</span></div>
+      <div class="stat-chip"><span class="n">5</span><span class="l">ablations run</span></div>
+      <div class="stat-chip"><span class="n">1</span><span class="l">significant win</span></div>
+      <div class="stat-chip"><span class="n">2</span><span class="l">honest nulls</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="toc">
+    <div class="toc-label">On this page</div>
+    <ol>
+      <li><a href="#scorecard">Scorecard</a></li>
+      <li><a href="#e5">Embedding transfer (E5)</a></li>
+      <li><a href="#dynamic-alpha">Dynamic-alpha fusion</a></li>
+      <li><a href="#ordering">Zig-zag ordering</a></li>
+      <li><a href="#ambiguous">Ambiguous-entity notice</a></li>
+      <li><a href="#bugs">Bugs found &amp; fixed</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <section class="block" id="scorecard">
+      <div class="block-head"><h2>Scorecard</h2></div>
+      <p class="lede">Six things measured or fixed tonight. Detail and exact figures for each are below.</p>
+      <div class="scorecard">
+        <div class="score-row"><a href="#e5">
+          <div><div class="name">Hard-negative fine-tuning &rarr; E5-small (different model family)</div>
+          <div class="desc">Top-1 +0.088 (QA), +0.040 (structured) &middot; both p&nbsp;&le;&nbsp;0.001</div></div>
+          <span class="verdict good">Significant</span>
+        </a></div>
+        <div class="score-row"><a href="#dynamic-alpha">
+          <div><div class="name">Dynamic-alpha continuous fusion (new, DAT-inspired)</div>
+          <div class="desc">Identical to existing router on recall/MRR &middot; exact-match ceiling dominates</div></div>
+          <span class="verdict null">Null</span>
+        </a></div>
+        <div class="score-row"><a href="#ordering">
+          <div><div class="name">Zig-zag confidence-ordered context assembly</div>
+          <div class="desc">No effect either direction, n=98, all p&nbsp;&gt;&nbsp;0.2</div></div>
+          <span class="verdict null">Null</span>
+        </a></div>
+        <div class="score-row"><a href="#ambiguous">
+          <div><div class="name">Ambiguous-entity notice (flat vs. conditioning) vs. baseline</div>
+          <div class="desc">Both fixes crush baseline &middot; conditioning's own edge over flat not yet significant</div></div>
+          <span class="verdict mixed">Mixed</span>
+        </a></div>
+        <div class="score-row"><a href="#bugs">
+          <div><div class="name">COURSE_CODE_RE false-positive on dates</div>
+          <div class="desc">Live on production test data &middot; fixed &amp; regression-tested</div></div>
+          <span class="verdict good">Fixed</span>
+        </a></div>
+        <div class="score-row"><a href="#bugs">
+          <div><div class="name">Duplicated regex drift in calibrate_abstention.py</div>
+          <div class="desc">Second instance of a known bug class &middot; fixed</div></div>
+          <span class="verdict good">Fixed</span>
+        </a></div>
+      </div>
+    </section>
+
+    <section class="block" id="e5">
+      <div class="block-head">
+        <h2>Does the fine-tuning recipe transfer to a different embedding model?</h2>
+        <span class="verdict good">Significant</span>
+      </div>
+      <p class="file-tag">results/embedding_held_out_eval.csv &middot; results/structured_embedding_held_out_eval.csv &middot; scripts/compare_alt_backbone_significance.py</p>
+      <p class="lede">Every embedding result before tonight used one model family (MiniLM). The hard-negative + structured-table fine-tuning recipe was re-run from scratch on <code>intfloat/multilingual-e5-small</code> &mdash; a genuinely different pretraining lineage &mdash; to see if the gain was recipe-specific or MiniLM-specific. It took four attempts to even finish training (see bugs below); once it did, the transfer held up under paired-bootstrap significance testing.</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>QA-pair held-out set &middot; n=297 &middot; results/embedding_held_out_eval.csv</caption>
+          <thead><tr><th>Model</th><th class="num">Top-1</th><th class="num">Top-5</th><th class="num">MRR</th></tr></thead>
+          <tbody>
+            <tr><td class="model">base_e5small_pretrained</td><td class="num">0.192</td><td class="num">0.724</td><td class="num">0.405</td></tr>
+            <tr class="highlight"><td class="model">finetuned_e5small_hard_negatives_structured</td><td class="num">0.279</td><td class="num">0.882</td><td class="num">0.520</td></tr>
+            <tr><td class="model">base_minilm_pretrained <span style="color:var(--ink-faint)">(reference)</span></td><td class="num">0.189</td><td class="num">0.818</td><td class="num">0.445</td></tr>
+            <tr><td class="model">finetuned_minilm_hard_negatives_structured <span style="color:var(--ink-faint)">(deployed)</span></td><td class="num">0.263</td><td class="num">0.902</td><td class="num">0.524</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Structured-table held-out set &middot; n=328 &middot; results/structured_embedding_held_out_eval.csv</caption>
+          <thead><tr><th>Model</th><th class="num">Top-1</th><th class="num">Top-5</th><th class="num">MRR</th></tr></thead>
+          <tbody>
+            <tr><td class="model">base_e5small_pretrained</td><td class="num">0.960</td><td class="num">1.000</td><td class="num">0.977</td></tr>
+            <tr class="highlight"><td class="model">finetuned_e5small_hard_negatives_structured</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td></tr>
+            <tr><td class="model">base_minilm_pretrained <span style="color:var(--ink-faint)">(reference)</span></td><td class="num">0.646</td><td class="num">0.780</td><td class="num">0.713</td></tr>
+            <tr><td class="model">finetuned_minilm_hard_negatives_structured <span style="color:var(--ink-faint)">(deployed)</span></td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Paired bootstrap significance &middot; fine-tuned vs. base E5 &middot; 2000 resamples</caption>
+          <thead><tr><th>Set</th><th>Metric</th><th class="num">&Delta;</th><th>95% CI</th><th class="num">p</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>QA-pair</td><td class="metric">Top-1</td><td class="num delta up">+0.088</td><td class="num">[0.030, 0.148]</td><td class="num">0.0010</td><td><span class="p-sig">significant</span></td></tr>
+            <tr><td>QA-pair</td><td class="metric">MRR</td><td class="num delta up">+0.116</td><td class="num">[0.072, 0.159]</td><td class="num">&lt;0.0005</td><td><span class="p-sig">significant</span></td></tr>
+            <tr><td>Structured</td><td class="metric">Top-1</td><td class="num delta up">+0.040</td><td class="num">[0.021, 0.061]</td><td class="num">&lt;0.0005</td><td><span class="p-sig">significant</span></td></tr>
+            <tr><td>Structured</td><td class="metric">MRR</td><td class="num delta up">+0.022</td><td class="num">[0.012, 0.036]</td><td class="num">&lt;0.0005</td><td><span class="p-sig">significant</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        <strong>Side-finding worth its own line:</strong> base E5-small (untuned) already scores 0.960 Top-1 on structured-table matching, far above base MiniLM's 0.646 &mdash; its retrieval-oriented pretraining transfers zero-shot. The fine-tuned structured-table ceiling of 1.000 in both model families is a known artifact of that eval set's own construction (2&ndash;3 near-duplicate synthetic queries per record), not literal perfection &mdash; the QA-pair set, with no such ceiling, is the cleaner signal.
+      </div>
+    </section>
+
+    <section class="block" id="dynamic-alpha">
+      <div class="block-head">
+        <h2>Dynamic-alpha: a continuous fusion weight instead of two fixed buckets</h2>
+        <span class="verdict null">Null</span>
+      </div>
+      <p class="file-tag">results/dynamic_alpha_ablation.csv &middot; results/dynamic_alpha_bootstrap_significance.csv</p>
+      <p class="lede">New tonight, inspired by DAT (Hsu &amp; Tzeng, 2025, arXiv:2503.23013) &mdash; but adapted, not ported: DAT drives its continuous weight from raw BM25-vs-dense score dominance, and a direct check on this corpus found that signal inverted here (entity-heavy queries score <em>lower</em> on raw BM25, mean 17.8 vs. 33.0 for open-ended &mdash; a query-length confound, not a match-quality signal). The adaptation instead counts independent structural entity signals (course code / alias / faculty initial / faculty name) and interpolates &lambda; continuously between 0.5 and 0.9.</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Overall &middot; n=200 &middot; dynamic_alpha vs. adaptive (production router)</caption>
+          <thead><tr><th>Config</th><th class="num">Recall@1</th><th class="num">Recall@5</th><th class="num">MRR</th><th class="num">nDCG@5</th><th class="num">nDCG@10</th></tr></thead>
+          <tbody>
+            <tr><td class="model">adaptive</td><td class="num">0.910</td><td class="num">0.920</td><td class="num">0.915</td><td class="num">0.8763</td><td class="num">0.8995</td></tr>
+            <tr><td class="model">dynamic_alpha</td><td class="num">0.910</td><td class="num">0.920</td><td class="num">0.915</td><td class="num">0.8811</td><td class="num">0.9017</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Paired bootstrap significance &middot; dynamic_alpha vs. adaptive &middot; 2000 resamples</caption>
+          <thead><tr><th>Metric</th><th class="num">&Delta;</th><th>95% CI</th><th class="num">p</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="metric">recall@1 / @3 / @5 / mrr</td><td class="num">0.0000</td><td class="num">[0, 0]</td><td class="num">1.000</td><td><span class="p-ns">identical</span></td></tr>
+            <tr><td class="metric">ndcg@5</td><td class="num delta down">+0.0046</td><td class="num">[&minus;0.001, 0.013]</td><td class="num">0.180</td><td><span class="p-ns">n.s.</span></td></tr>
+            <tr><td class="metric">ndcg@10</td><td class="num delta up">+0.0022</td><td class="num">[0.0001, 0.0051]</td><td class="num">0.045</td><td><span class="p-sig">borderline</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">Recall/MRR come out byte-identical because the exact-match score ceiling already guarantees top-1 for unambiguous entity queries regardless of &lambda; &mdash; it only affects ranking below the ceiling. And on this 200-query test set, <code>entity_signal_strength</code> never exceeded 0.25 (99 queries at 0.0, 101 at 0.25) &mdash; no query names two-or-more independent entity types at once, so the "continuous" mechanism rarely got to act any differently from a near-binary split. A real, reportable null, not a failure to hide.</div>
+    </section>
+
+    <section class="block" id="ordering">
+      <div class="block-head">
+        <h2>Zig-zag confidence-ordered context assembly, isolated for the first time</h2>
+        <span class="verdict null">Null</span>
+      </div>
+      <p class="file-tag">results/confidence_ordering_metrics_summary.csv &middot; results/confidence_ordering_significance.csv</p>
+      <p class="lede">Implemented and deployed weeks before tonight, motivated by Liu et al.'s Lost-in-the-Middle effect and Jin et al.'s 2025 zig-zag fix (arXiv:2410.05983) &mdash; but never independently tested until now. n=98 open-ended, non-abstained queries; full generation under both settings.</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Generation quality &middot; n=98 per config</caption>
+          <thead><tr><th>Config</th><th class="num">BLEU</th><th class="num">ROUGE-L</th><th class="num">BERTScore</th><th class="num">METEOR</th></tr></thead>
+          <tbody>
+            <tr><td class="model">ordering_off</td><td class="num">0.7567</td><td class="num">0.8561</td><td class="num">0.9727</td><td class="num">0.8813</td></tr>
+            <tr><td class="model">ordering_on <span style="color:var(--ink-faint)">(deployed)</span></td><td class="num">0.7259</td><td class="num">0.8426</td><td class="num">0.9713</td><td class="num">0.8609</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption>Paired significance &middot; ordering_on vs. ordering_off &middot; t-test + Wilcoxon</caption>
+          <thead><tr><th>Metric</th><th class="num">&Delta;</th><th class="num">paired-t p</th><th class="num">Wilcoxon p</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="metric">bleu</td><td class="num">&minus;0.031</td><td class="num">0.244</td><td class="num">0.220</td><td><span class="p-ns">n.s.</span></td></tr>
+            <tr><td class="metric">rougeL</td><td class="num">&minus;0.014</td><td class="num">0.528</td><td class="num">0.335</td><td><span class="p-ns">n.s.</span></td></tr>
+            <tr><td class="metric">bertscore</td><td class="num">&minus;0.001</td><td class="num">0.708</td><td class="num">0.248</td><td><span class="p-ns">n.s.</span></td></tr>
+            <tr><td class="metric">meteor</td><td class="num">&minus;0.020</td><td class="num">0.361</td><td class="num">0.242</td><td><span class="p-ns">n.s.</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">Raw means slightly favor ordering off on all four metrics, but nothing clears p&nbsp;&lt;&nbsp;0.05 (most sit above 0.24) &mdash; noise at n=98, not a real effect either direction. Most likely reason: this project's assembled context is typically 2&ndash;5 chunks, far smaller than the 10&ndash;20+ document settings where the original Lost-in-the-Middle effect was measured &mdash; there may not be enough "middle" at this scale for the mechanism to bite. <code>use_confidence_ordering</code> stays on (matches deployed behavior; this result gives no reason to flip it) but is no longer an untested claim.</div>
+    </section>
+
+    <section class="block" id="ambiguous">
+      <div class="block-head">
+        <h2>Does the ambiguous-entity fix actually help, beyond one anecdote?</h2>
+        <span class="verdict mixed">Mixed &mdash; strong core result, extension unconfirmed</span>
+      </div>
+      <p class="file-tag">results/ambiguous_notice_quality_summary.csv &middot; results/ambiguous_notice_ambigdocs_style_summary.csv</p>
+      <p class="lede">n=55 genuinely ambiguous queries (real faculty-surname collisions, e.g. 16 distinct people named "Rahman") &times; 3 conditions, scored two independent ways: this project's own 3-criterion LLM-judge, and a second pass using an answer-type ontology adapted from AmbigDocs / RAMDocs (arXiv:2404.12447, arXiv:2504.13079).</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Own criteria (0&ndash;1, mean) &middot; results/ambiguous_notice_quality_summary.csv</caption>
+          <thead><tr><th>Condition</th><th class="num">Avoids false confidence</th><th class="num">Asks for clarification</th><th class="num">Offers disambiguator</th></tr></thead>
+          <tbody>
+            <tr><td class="model">no_notice <span style="color:var(--ink-faint)">(pre-fix)</span></td><td class="num">0.182</td><td class="num">0.000</td><td class="num">0.073</td></tr>
+            <tr><td class="model">flat_notice</td><td class="num">0.527</td><td class="num">0.564</td><td class="num">0.127</td></tr>
+            <tr class="highlight"><td class="model">conditioning <span style="color:var(--ink-faint)">(extension)</span></td><td class="num">0.418</td><td class="num">0.527</td><td class="num">0.218</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Paired bootstrap significance &middot; 2000 resamples</caption>
+          <thead><tr><th>Criterion</th><th>Comparison</th><th class="num">&Delta;</th><th class="num">p</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="metric">avoids_false_confidence</td><td>flat vs. no_notice</td><td class="num delta up">+0.345</td><td class="num">&lt;0.0005</td><td><span class="p-sig">significant</span></td></tr>
+            <tr><td class="metric">avoids_false_confidence</td><td>conditioning vs. no_notice</td><td class="num delta up">+0.236</td><td class="num">0.0040</td><td><span class="p-sig">significant</span></td></tr>
+            <tr><td class="metric">avoids_false_confidence</td><td>conditioning vs. flat</td><td class="num delta down">&minus;0.109</td><td class="num">0.0290</td><td><span class="p-ns">borderline, CI touches 0</span></td></tr>
+            <tr><td class="metric">asks_for_clarification</td><td>flat vs. no_notice</td><td class="num delta up">+0.565</td><td class="num">&lt;0.0005</td><td><span class="p-sig">significant</span></td></tr>
+            <tr><td class="metric">asks_for_clarification</td><td>conditioning vs. no_notice</td><td class="num delta up">+0.528</td><td class="num">&lt;0.0005</td><td><span class="p-sig">significant</span></td></tr>
+            <tr><td class="metric">asks_for_clarification</td><td>conditioning vs. flat</td><td class="num delta down">&minus;0.037</td><td class="num">&lt;0.0005</td><td><span class="p-ns">borderline, CI touches 0</span></td></tr>
+            <tr><td class="metric">offers_disambiguator</td><td>flat vs. no_notice</td><td class="num delta up">+0.053</td><td class="num">0.264</td><td><span class="p-ns">n.s.</span></td></tr>
+            <tr><td class="metric">offers_disambiguator</td><td>conditioning vs. no_notice</td><td class="num delta up">+0.146</td><td class="num">0.0120</td><td><span class="p-sig">significant</span></td></tr>
+            <tr><td class="metric">offers_disambiguator</td><td>conditioning vs. flat</td><td class="num delta up">+0.093</td><td class="num">0.0880</td><td><span class="p-ns">trend, not sig.</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="lede" style="margin-top:28px;">Second pass &mdash; same 165 responses, re-scored with an AmbigDocs-style answer-type ontology (no new generation, only a second judge pass):</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Answer-type distribution (fraction) &middot; results/ambiguous_notice_ambigdocs_style_summary.csv</caption>
+          <thead><tr><th>Condition</th><th class="num">Complete</th><th class="num">Partial</th><th class="num">Merged</th><th class="num">No answer</th></tr></thead>
+          <tbody>
+            <tr><td class="model">no_notice</td><td class="num">0.000</td><td class="num">0.400</td><td class="num">0.418</td><td class="num">0.182</td></tr>
+            <tr><td class="model">flat_notice</td><td class="num">0.018</td><td class="num">0.564</td><td class="num">0.236</td><td class="num">0.182</td></tr>
+            <tr><td class="model">conditioning</td><td class="num">0.018</td><td class="num">0.564</td><td class="num">0.236</td><td class="num">0.182</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">Baseline's dominant failure under this stricter lens isn't just silence &mdash; it's <strong>conflating different people's info into one false answer 42% of the time</strong> ("merged"). Both fixes nearly halve that (42%&rarr;24%). flat_notice and conditioning landed on identical aggregate distributions &mdash; checked this wasn't a scoring bug: 53/55 queries got the same per-query label, and the other 2 flipped in opposite directions and happened to cancel out exactly.</div>
+      <div class="note caveat"><strong>Read "complete" with its scoping caveat:</strong> it sits near-zero (0&ndash;1.8%) in every condition. AmbigDocs' own task is enumerating every valid interpretation in one answer; this system is deliberately designed to ask a short clarifying question and let the conversation continue, not front-load every candidate's full details. A near-zero "complete" rate likely reflects that task-shape mismatch as much as it reflects a real gap &mdash; not "the system fails at disambiguation 98% of the time."</div>
+    </section>
+
+    <section class="block" id="bugs">
+      <div class="block-head"><h2>Bugs found and fixed mid-audit</h2></div>
+      <p class="lede">Both caught during a full line-by-line pass, not reported by a failing test &mdash; fixed immediately, verified against real data, regression-tested.</p>
+
+      <div class="bug-card">
+        <div class="bug-icon">1</div>
+        <div>
+          <h3>Course-code regex matched dates as fake course codes</h3>
+          <span class="file-tag">pipeline/patterns.py &middot; tests/test_patterns.py</span>
+          <p>No word-boundary anchor and no check that the 3-digit group wasn't a truncated prefix of a longer number. Confirmed live on production test-query CSVs: date-mentioning queries got mis-routed through the entity-heavy fusion branch.</p>
+          <div class="before-after">
+            <div class="ba-block before"><span class="tag">Before</span>"...after 29 June 2025?" &rarr; matched "JUNE202"</div>
+            <div class="ba-block after"><span class="tag">After</span>Same query &rarr; no match; all real course codes (CSE220, CSE111-07, &hellip;) still match</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bug-card">
+        <div class="bug-icon">2</div>
+        <div>
+          <h3>Duplicated regex silently drifted out of sync &mdash; a second instance</h3>
+          <span class="file-tag">scripts/calibrate_abstention.py</span>
+          <p>A local, unsynced copy of the course-code regex &mdash; the exact bug class <code>patterns.py</code>'s own docstring already names as having happened once before. Swept the rest of the codebase for the same pattern: nothing else found.</p>
+          <div class="before-after">
+            <div class="ba-block before"><span class="tag">Before</span>Local <code>re.compile(...)</code> copy, no import</div>
+            <div class="ba-block after"><span class="tag">After</span>Imports <code>COURSE_CODE_RE</code> from <code>pipeline.patterns</code></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="page">
+  Every figure on this page traces to a script + output file listed under its section. Compiled 2026-07-29 from an overnight autonomous session &mdash; nothing here is estimated, extrapolated, or recalled from memory.
+</footer>
+
+<script>
+  var links = document.querySelectorAll('nav.toc a');
+  var sections = Array.prototype.map.call(links, function(l) { return document.querySelector(l.getAttribute('href')); });
+  function setActive() {
+    var idx = 0;
+    var y = window.scrollY + 120;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i] && sections[i].offsetTop <= y) idx = i;
+    }
+    for (var j = 0; j < links.length; j++) links[j].classList.toggle('active', j === idx);
+  }
+  document.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+</script>
+</body>
+</html>

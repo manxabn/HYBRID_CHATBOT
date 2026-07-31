@@ -1,0 +1,4 @@
+criterion,n,percent_agreement,cohens_kappa
+avoids_false_confidence,660,0.4409,0.1137
+asks_for_clarification,660,0.9924,0.9843
+offers_disambiguator,660,0.8682,0.6562

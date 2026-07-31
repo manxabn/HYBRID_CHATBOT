@@ -39,11 +39,27 @@ from embeddings import ChromaEmbeddingFunction
 # reduces to preserving an exact proper-noun/course-code string overlap
 # between query and chunk -- the real, generalizable finding is the
 # DIRECTION and significance of the fix, not the literal ceiling value.
+# Re-trained 2026-07-31 (scripts/finetune_embeddings_banglish_expanded.py)
+# after BanglishQA nearly tripled (1053->3044 rows, scripts/ingest_new_
+# banglish_dataset.py: 2050 real Bangla-English code-switched questions
+# collected from 160 bracu.ac.bd pages, not synthetic). Same recipe,
+# unchanged -- load_pairs() already queries BanglishQA WHERE Split='train'
+# directly, so simply re-running on the expanded table was sufficient.
+# Validated via scripts/compare_banglish_expanded_significance.py before
+# deploying, not assumed to help just because the training set grew (a
+# comparable published system, InfoTextCM/FIRE 2024, found fine-tuning on
+# code-mixed data can DEGRADE performance depending on base model -- this
+# project checked, rather than assumed the opposite): Banglish-only
+# held-out set (n=317, the direct question) Top-1 0.823->0.858 (+0.035,
+# p=0.031), MRR 0.883->0.909 (+0.026, p=0.023), both significant. QA-pair
+# pooled set (n=520) and structured-table set (n=328) both show NO
+# significant regression (p=0.117-0.155, structured-table unchanged at its
+# existing 1.000 ceiling) -- a clean win with no measured downside.
 # Falls back to the generic base model automatically if the fine-tuned
 # directory doesn't exist (e.g. a fresh clone that hasn't run the fine-
 # tuning script yet).
 _ROOT = Path(__file__).resolve().parent.parent
-_FINETUNED_PATH = _ROOT / "models" / "finetuned_minilm_hard_negatives_structured"
+_FINETUNED_PATH = _ROOT / "models" / "finetuned_minilm_hard_negatives_structured_banglish_expanded"
 DEFAULT_MODEL = str(_FINETUNED_PATH) if _FINETUNED_PATH.exists() else "sentence-transformers/all-MiniLM-L6-v2"
 
 

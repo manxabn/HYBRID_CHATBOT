@@ -5,10 +5,88 @@ avoid Groq's rate limits (see plan discussion / methodology-text correction
 still pending in paper.tex).
 """
 
+import time
+
 import requests
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "llama3.1:8b"
+
+
+class JudgeParseError(Exception):
+    """Raised when a judge/extraction prompt's response doesn't contain the
+    expected field markers -- added 2026-07-31 after a real, serious bug was
+    found: several judge-scoring functions across this project silently
+    defaulted to a SPECIFIC score (e.g. 0/"no") whenever their expected
+    output format wasn't found in the model's response, rather than
+    distinguishing "the model genuinely judged no" from "the response was
+    malformed/empty and we couldn't tell." Under heavy concurrent Ollama
+    load (this project's own overnight parallel-ablation pattern), a
+    request can return a degraded/incomplete completion WITHOUT raising any
+    HTTP error at all (post_with_retry only catches timeouts/connection
+    errors, not malformed-but-200-OK responses) -- so this silent-default
+    behavior was a real, undetected data-corruption risk, not a
+    hypothetical one: a stored validation result (kappa=0.7548) had to be
+    treated as unverified once this was found, since raw response text
+    wasn't being logged to check retroactively. Callers must catch this,
+    record the row as an explicit failure (not a fabricated score), and
+    re-score only the failed rows afterward -- never silently substitute a
+    default."""
+    def __init__(self, message, raw_response=None):
+        super().__init__(message)
+        self.raw_response = raw_response
+
+
+def post_with_retry(url, json_payload, timeout, max_retries=5, backoff_base=10, max_backoff=120):
+    """Shared retry-with-backoff wrapper for Ollama HTTP calls -- added
+    2026-07-31 after a real, diagnosed failure: running several Ollama
+    -dependent evaluation scripts concurrently (this project's own overnight
+    parallel-ablation pattern) caused a genuine request queueing pileup, and
+    one request exceeded its 300s read timeout and crashed the whole script
+    with zero progress saved (no checkpointing existed). This is NOT masking
+    a broken Ollama instance -- it still raises after max_retries genuinely
+    fail, so a truly down/hung Ollama service is still reported as an error,
+    not silently retried forever. It specifically targets the TRANSIENT
+    -contention case (the request would have succeeded fine on its own, it
+    just got stuck behind other requests in Ollama's queue) with exponential
+    backoff (10s/20s/40s/80s/120s-capped by default) giving the queue time
+    to drain.
+
+    Also retries on HTTP 5xx (added 2026-07-31, same day, after a real
+    `500 Internal Server Error` crashed a clean single-job run outright --
+    the original version only caught connection-level exceptions
+    (ReadTimeout/ConnectionError), not an HTTP error response, even though
+    a 500 from a locally-hosted model server under momentary load/reload
+    pressure (confirmed via /api/ps showing the model NOT staying resident
+    between calls -- a real ~10s reload cost on every request on this
+    machine) is plausibly just as transient as a timeout. Does NOT retry
+    4xx (a malformed request or genuinely missing model won't fix itself
+    by waiting -- see the "model not found" env-var bug elsewhere in this
+    file's history, which needed a real fix, not a retry)."""
+    last_exc = None
+    for attempt in range(max_retries):
+        try:
+            resp = requests.post(url, json=json_payload, timeout=timeout)
+            resp.raise_for_status()
+            return resp
+        except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectionError) as e:
+            last_exc = e
+        except requests.exceptions.HTTPError as e:
+            # 500/502/503/504 specifically: overload, bad-gateway, service
+            # -unavailable (queue full), gateway-timeout -- all plausibly
+            # transient under load/reload pressure. NOT a blanket 5xx: 501
+            # (Not Implemented) and 505 (HTTP Version Not Supported) are
+            # genuine protocol errors that retrying cannot fix.
+            if e.response is not None and e.response.status_code in (500, 502, 503, 504):
+                last_exc = e
+            else:
+                raise  # 4xx or non-transient 5xx: don't mask a real error
+        if attempt < max_retries - 1:
+            wait = min(backoff_base * (2 ** attempt), max_backoff)
+            print(f"  [ollama_client] request failed (attempt {attempt+1}/{max_retries}), "
+                  f"retrying in {wait}s: {last_exc}", flush=True)
+            time.sleep(wait)
+    raise last_exc
 
 SYSTEM_PROMPT_WITH_CONTEXT = (
     "You are a helpful academic advising assistant for a university. "
@@ -82,15 +160,14 @@ def translate_to_english(query: str, model: str = MODEL, timeout: int = 300) -> 
     decoding as generate() -- this is a retrieval-time utility call, not a
     user-facing answer, but should still be reproducible."""
     prompt = TRANSLATE_PROMPT.format(query=query)
-    resp = requests.post(
+    resp = post_with_retry(
         OLLAMA_URL,
-        json={
+        {
             "model": model, "prompt": prompt, "stream": False,
             "options": {"temperature": 0.0, "seed": 42, "num_ctx": 512},
         },
         timeout=timeout,
     )
-    resp.raise_for_status()
     return resp.json()["response"].strip()
 
 
@@ -108,15 +185,14 @@ def normalize_entities(query: str, model: str = MODEL, timeout: int = 300) -> st
     retrieval-time utility call, not a user-facing answer, but should still
     be reproducible."""
     prompt = NORMALIZE_ENTITIES_PROMPT.format(query=query)
-    resp = requests.post(
+    resp = post_with_retry(
         OLLAMA_URL,
-        json={
+        {
             "model": model, "prompt": prompt, "stream": False,
             "options": {"temperature": 0.0, "seed": 42, "num_ctx": 512},
         },
         timeout=timeout,
     )
-    resp.raise_for_status()
     return resp.json()["response"].strip()
 
 
@@ -144,15 +220,14 @@ def judge_sufficient_context(query: str, context: str, model: str = MODEL, timeo
     querying, not explored (as far as this project's literature review
     found) in the existing sufficient-context or code-mixed-RAG literature."""
     prompt = SUFFICIENT_CONTEXT_PROMPT.format(context=context, query=query)
-    resp = requests.post(
+    resp = post_with_retry(
         OLLAMA_URL,
-        json={
+        {
             "model": model, "prompt": prompt, "stream": False,
             "options": {"temperature": 0.0, "seed": 42, "num_ctx": 2048},
         },
         timeout=timeout,
     )
-    resp.raise_for_status()
     text = resp.json()["response"].strip().upper()
     return text.startswith("YES")
 
@@ -162,9 +237,9 @@ def generate(query: str, context: str | None, model: str = MODEL, timeout: int =
     # answers and 300s+ for detailed multi-paragraph ones (no GPU available
     # -- see CLAUDE.md.md). 900s is a safety ceiling, not an expectation.
     prompt = build_prompt(query, context)
-    resp = requests.post(
+    resp = post_with_retry(
         OLLAMA_URL,
-        json={
+        {
             "model": model, "prompt": prompt, "stream": False,
             # Deterministic (greedy) decoding: standard practice for
             # reproducible RAG evaluation. Without this, two calls with
@@ -204,5 +279,4 @@ def generate(query: str, context: str | None, model: str = MODEL, timeout: int =
         },
         timeout=timeout,
     )
-    resp.raise_for_status()
     return resp.json()["response"].strip()

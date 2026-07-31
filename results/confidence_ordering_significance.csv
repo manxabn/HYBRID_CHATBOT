@@ -1,0 +1,5 @@
+comparison,metric,n,mean_diff,paired_t_p,wilcoxon_p,significant_at_0.05
+ordering_on_vs_ordering_off,bleu,98,-0.0309,0.2437,0.2204,False
+ordering_on_vs_ordering_off,rougeL,98,-0.0136,0.528,0.3348,False
+ordering_on_vs_ordering_off,bertscore,98,-0.0014,0.7084,0.248,False
+ordering_on_vs_ordering_off,meteor,98,-0.0204,0.3612,0.2423,False
