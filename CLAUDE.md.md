@@ -815,10 +815,42 @@ result.
    gap (item 6, previous version of this file) is now closed by this
    round's ambiguous-entity work; the course-code version is not, since
    this corpus has no cross-listed-code collisions to test against.
-6. **Governance-category augmentation and alias-table population both
-   need the user's decision/input** — the former has a ready-to-review
-   proposed file, the latter needs genuinely new source data this repo
-   doesn't have.
+6. **RESOLVED 2026-07-31: governance-category augmentation merged, user
+   -reviewed and approved.** User reviewed a sample of the 88 proposed rows
+   directly (diverse facts across categories, e.g. Academic Council,
+   BRAC Onnesha, university colors/motto, the Syndicate) and approved the
+   merge. Pre-merge verification (not just re-trusting the original
+   proposal): all 22 source facts matched an existing `EnglishQA` row by
+   exact `Question` text (0 unmatched), and every proposed row's answer was
+   byte-identical to its matched source fact's `Answer` (0/22 drift) --
+   confirms the augmentation only adds new phrasings, never new factual
+   content. `knowledge_base.db` backed up to `knowledge_base.db.bak_pre_
+   governance_merge_2026-07-31` (local only, not committed) before writing.
+   `scripts/merge_governance_augmentation.py` inserted all 88 rows,
+   inheriting Type/Register/SourceReliability/TimeSensitive from each row's
+   matched source fact (paraphrasing doesn't change the underlying fact's
+   provenance), with `Register` prefixed to disclose LLM-paraphrase origin
+   and `SourceNotes` back-referencing the source fact's own `SourceId` for
+   traceability. Governance category: 66 -> 154 rows (test 10->29, train
+   54->103, val 2->20, i.e. now 22/22 facts represented in every split,
+   closing the original val/test-coverage gap this augmentation was built
+   to fix). Re-ran `scripts/build_corpus.py` (7050 -> 7138 chunks, +88
+   confirmed in EnglishQA's count) and `scripts/build_bm25_index.py`
+   (CPU-only, no conflict with the concurrently-running novel-pipeline
+   regeneration job) to propagate the change to both retrieval streams'
+   source data. **Still pending**: the ChromaDB vector index itself still
+   needs a rebuild (`scripts/stage_chroma_index_rebuild.py` + `swap_chroma_
+   staging.py`, the safe staged workflow, not `build_chroma_index.py`
+   directly, since chroma_db/ is live) — deferred until the GPU-bound
+   novel-pipeline regeneration job (see below) finishes, per the standing
+   one-GPU-job-at-a-time rule. Until that rebuild runs, the new governance
+   rows exist in the DB/corpus/BM25 index but are not yet retrievable via
+   vector search.
+7. **Alias table population attempted, correctly blocked, not forced** —
+   see the "Resolved/added since the last rewrite" section above; still
+   genuinely blocked on new source data this repo doesn't have (no
+   informal course-title text or an official course-title catalog exists
+   anywhere in this corpus).
 
 ## 2026-07-31 continuation: sharper full_hybrid/bm25_only test, RRF k grounding, BanglAssist differentiation
 
