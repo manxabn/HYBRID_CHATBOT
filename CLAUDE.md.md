@@ -1709,6 +1709,54 @@ abstention_threshold_paraphrase_aware.json`, `results/paraphrase_
 recalibration_heldout_check.csv`. Deployed `abstention_threshold.json`
 is untouched -- this was a standalone experiment, not integrated.
 
+## 2026-08-01: third, most rigorous paraphrase-robustness fix attempt -- confirms the problem is in the signals themselves, not the threshold
+Third attempt, after two independent single-signal fixes failed (semantic
+override, then recalibration with paraphrase-augmented data). This time:
+does ANY combination of the signals this system already computes separate
+"answerable, just reworded" from "genuinely out of scope," properly
+tested rather than tried one threshold at a time?
+
+Gathered all three available confidence signals (`query_top1_score`,
+`max(s_vec)` across the retrieved pool, and `query_confidence`/margin)
+for the same query, for (a) 20 real open-ended paraphrases that should be
+answered and (b) a fresh 60-query sample of real out-of-scope questions
+(`results/combined_signal_check.csv`). First surprising finding just from
+the descriptive stats: **all three signals trend in the WRONG direction on
+average** -- out-of-scope queries score HIGHER than the paraphrases on
+top1_score (0.980 vs 0.908), max_s_vec (0.679 vs 0.624), AND margin (0.147
+vs 0.059). This corpus's out-of-scope questions apparently retrieve
+deceptively confident-looking (but wrong) candidates often enough that
+none of the individual signals discriminate the intended direction.
+
+Given that, tested whether a proper multi-signal model -- not a single
+threshold, an actual 3-feature logistic regression over all three signals
+together, 5-fold cross-validated (`sklearn.linear_model.LogisticRegression`,
+`class_weight='balanced'`) -- finds a combination that works even though
+the individual signals don't. **Result: mean CV accuracy 0.747, barely
+above the trivial majority-class baseline of 0.733** (out-of-scope is the
+majority class in this sample). A full linear combination of every signal
+this system currently computes provides essentially no real
+discriminative power for this specific distinction.
+
+**This is a more informative negative result than either previous
+attempt: it rules out the entire class of "combine or re-threshold the
+existing signals" fixes at once**, rather than one candidate at a time.
+The conclusion is not "we haven't found the right threshold yet" -- it is
+that `query_top1_score`, `s_vec`, and `query_confidence` as currently
+computed do not carry the information needed to make this distinction,
+regardless of how they are combined. A real fix would need a
+structurally different kind of signal -- most plausibly a post-generation
+groundedness check (verify the generated answer is actually supported by
+the retrieved context, the same principle this project's own faithfulness
+check already uses, rather than a pre-generation retrieval-confidence
+heuristic) -- which is a materially larger architectural change than a
+threshold or calibration adjustment, and out of scope to build and
+validate properly in the time remaining this session.
+
+Files: `results/combined_signal_check.csv`. No change to the deployed
+abstention gate -- three independent, honestly-tested attempts to fix
+this have now been tried and reported exactly as they turned out.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
