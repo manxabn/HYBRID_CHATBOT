@@ -2508,6 +2508,40 @@ set (crosslingual, n=9-27, already reported as suggestive-only, low
 likelihood of a qualitative flip). Flagging rather than silently
 skipping; can be revisited if time allows.
 
+## 2026-08-01 loop: conditioning_v2 was validated but never actually deployed -- fixed
+
+While drafting the paper subsection this footnote promised ("the
+ambiguous-entity notice and `conditioning_v2` conditioning are validated
+components of the deployed system... not yet written up as their own
+subsection"), checked the claim directly against the code rather than
+just writing the paragraph. **The footnote's "deployed" half was false**:
+`build_conditioning_hint_v2` (the phrasing found significantly better
+than both `flat_notice` and the original `conditioning` on all three
+judged criteria, all $p<0.0001$, n=220 -- see the "conditioning_v2"
+entries above) existed only in `scripts/eval_conditioning_hint_v2.py`,
+never imported into or called from `pipeline/novel_pipeline.py`'s actual
+`answer()` path. The deployed pipeline was still calling the OLDER,
+already-shown-not-significantly-better `build_conditioning_hint` (v1).
+
+**Fixed** (a code fix, not new paper content -- squarely in scope):
+copied `build_conditioning_hint_v2` into `pipeline/novel_pipeline.py`
+(kept the original `build_conditioning_hint` intact too, unused at the
+call site now but still imported by both eval scripts for reproducing
+the original comparison), and switched the one call site in `answer()`
+to use `_v2`. Verified live: `NovelPipeline().answer("What is Rahman's
+office room?", generate)` runs cleanly, no crash, produces the expected
+ambiguous-entity clarifying question. No formal pytest regression suite
+covers this path (checked `tests/` -- only `test_patterns.py`, `test_
+dynamic_alpha.py`, `test_conformal_abstention.py` exist, none touch
+this), so this is a real, live smoke-test verification, not a claimed
+one.
+
+This means: once the paper subsection is actually written (drafted next,
+held for user review before touching paper.tex per the standing "focus
+on coding" instruction), the footnote's "validated components of the
+deployed system" claim will be true for the first time, rather than
+describing an aspiration.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

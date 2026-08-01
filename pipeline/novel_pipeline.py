@@ -239,7 +239,15 @@ def build_conditioning_hint(retriever, doc_ids) -> str:
     and returns a short hint naming the first such field and its distinct
     values, or "" if no candidate metadata is available or every checked
     field happens to be identical across all candidates (in which case the
-    plain name-list notice is all there is to offer)."""
+    plain name-list notice is all there is to offer).
+
+    ORIGINAL phrasing (2026-07-28), kept for reproducibility of the
+    conditioning-vs-conditioning_v2 comparison (see build_conditioning_
+    hint_v2 below and CLAUDE.md.md's "conditioning_v2" entries) -- this
+    version's own expanded-set test (n=220) found it was NOT significantly
+    better than the simpler flat_notice, superseded by build_conditioning_
+    hint_v2 at the call site in answer() below. Not deleted so the
+    original ablation stays exactly reproducible."""
     records = [retriever.corpus.get(doc_id, {}).get("metadata", {}) for doc_id in doc_ids]
     records = [r for r in records if r]
     if len(records) < 2:
@@ -250,6 +258,34 @@ def build_conditioning_hint(retriever, doc_ids) -> str:
             return (f" These candidates differ by {field} ({', '.join(sorted(values))}) -- "
                      f"if the user's phrasing already narrows it down by {field}, use that "
                      f"instead of asking them to repeat the full name.")
+    return ""
+
+
+def build_conditioning_hint_v2(retriever, doc_ids) -> str:
+    """Improved conditioning-hint phrasing (2026-07-31): gives the model a
+    concrete question template using the actual distinguishing values,
+    rather than a conditional instruction to check the user's own phrasing
+    first (build_conditioning_hint above). Validated on the n=220 expanded
+    ambiguous-entity set: significantly better than both flat_notice and
+    the original conditioning hint on all three judged criteria (avoids_
+    false_confidence, asks_for_clarification, offers_disambiguator), all
+    p<0.0001 -- see CLAUDE.md.md's "conditioning_v2" entries and results/
+    conditioning_hint_v2_summary_fixed_afc.csv. Deployed as of this
+    revision (previously only tested in scripts/eval_conditioning_hint_v2.py,
+    never wired into the actual answer path -- fixed as a real gap, not a
+    new mechanism)."""
+    records = [retriever.corpus.get(doc_id, {}).get("metadata", {}) for doc_id in doc_ids]
+    records = [r for r in records if r]
+    if len(records) < 2:
+        return ""
+    for field in _CONDITIONING_FIELDS:
+        values = {r.get(field) for r in records if r.get(field)}
+        if len(values) > 1:
+            values_sorted = sorted(values)
+            values_str = " or ".join(values_sorted) if len(values_sorted) <= 3 else ", ".join(values_sorted)
+            return (f" These candidates have different {field} values: {', '.join(values_sorted)}. "
+                     f"Use this directly in your clarifying question -- for example, ask "
+                     f"\"Which one do you mean: {values_str}?\" instead of only asking for a name.")
     return ""
 
 
@@ -535,7 +571,7 @@ class NovelPipeline:
             # matters: the notice is only useful if the model reads it
             # before committing to an answer, so it must reliably win that
             # slot whenever ambiguity fires.
-            conditioning_hint = build_conditioning_hint(self.retriever, exact_ids)
+            conditioning_hint = build_conditioning_hint_v2(self.retriever, exact_ids)
             scored_parts.append((float("inf"), AMBIGUOUS_ENTITY_NOTICE + conditioning_hint))
         if graph_block:
             scored_parts.append((float("inf"), graph_block))  # verified structural fact, not a probabilistic score
