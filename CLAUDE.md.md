@@ -2990,6 +2990,32 @@ Limitations "Fourth" bullet, the abstract, RQ3 discussion, and
 conclusion (four places cited the old $n=9$ figures, now consistent at
 $n=13$). Recompiles cleanly (31 pages, 0 undefined refs).
 
+## 2026-08-01: sharpened contribution framing honestly -- named what's real, kept the disclaimer where it's accurate
+
+Legitimate framing work, not fabrication: `conditioning_v2` (n=220,
+p<0.0001 on all 3 criteria, one of the cleanest results in the whole
+paper) was not listed as a top-level contribution anywhere in the
+introduction's bullet list -- a real, honest gap, not an overclaim to
+add it. Added it as its own bullet, at the same level of specificity as
+the other four.
+
+Also refined the abstract's closing self-assessment. It previously said
+only "a validated engineering integration... not a novel retrieval
+algorithm" -- true, but flat, and slightly undersold what's actually
+methodologically new versus what's genuinely just integration. Rewrote
+to say plainly what's NOT novel (the fusion mathematics itself, BM25/
+dense linear blend and RRF are both standard) and name specifically
+what IS new at the mechanism/methodology level: the ambiguous-entity
+disambiguation hint's field-aware clarifying-question construction, the
+deconfounding-diagnostic method (used to find and fix the real RRF
+regression this same session), and the bilingual sufficient-context
+diagnostic (already disclosed elsewhere as "not reported elsewhere in
+the literature surveyed"). This is a precision edit, not a novelty
+inflation -- every claim in the new sentence is backed by an already
+-verified result elsewhere in the paper.
+
+Recompiles cleanly (31 pages, 0 undefined refs).
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
