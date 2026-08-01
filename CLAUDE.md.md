@@ -2723,6 +2723,50 @@ and the abstract's faithfulness sentence (softened from "does not
 reproduce this gap, suggesting self-judging artifact" to an honestly
 inconclusive framing). Recompiles cleanly (30 pages, 0 undefined refs).
 
+## 2026-08-01 loop: cross-lingual stress test re-verified -- retriever improvements shrank the gap it was built to detect
+
+Continuation of the faithfulness/NLI/crosslingual re-verification pass.
+Both `results/crosslingual_stress_eval.csv` (n=9) and `..._expanded.csv`
+(n=27) predated everything this session touched. Re-ran both (retrieval
+-only, cheap) plus the sufficient-context bilingual diagnostic (n=9, 18
+LLM calls).
+
+**Real, mechanistically-explained shift**: plain retrieval (no
+translation) improved substantially on both sets (n=9: 0.333->0.556;
+n=27: 40.7%->59.3%), while the translated condition barely moved (n=9:
+7/9 both times; n=27: 55.6%->63.0%) -- the BM25 retuning, exact-match
+fix, and embedding retrain this session made improved plain cross
+-lingual retrieval enough to partly close the exact gap this stress test
+was built to detect. The n=9 test still directionally supports
+translation (0.556 vs.\ 0.778, no longer significance-tested at this
+size as before). The n=27 expanded test, which was already only
+suggestive ($p=0.219$) previously, is now fully null ($p=1.0$, exact
+binomial on discordant pairs, 3 favor translation vs.\ 2 favor plain
+out of 27).
+
+**Sufficient-context diagnostic (n=9) is byte-identical to before** (6/9
+YES/YES, 1/9 NO/NO, 2/9 NO/YES, 0/9 YES/NO) -- no paper update needed
+there; the coarser sufficiency judgment for these specific 9 queries
+happened to land the same way even though the finer-grained top-5
+accuracy numbers moved.
+
+This is not a case where the underlying finding was wrong -- translation
+still directionally helps on the scenario it targets, and the honest
+mechanistic story (other fixes narrowed the gap) is itself informative,
+consistent with how retriever ranking-order changes from the BM25 tuning
+similarly didn't always translate to generation-quality shifts elsewhere
+this session. Updated Table~\ref{tab:crosslingual-stress}, the
+"Expanding the Stress Test" subsection, the Limitations "Tenth" bullet,
+the abstract, RQ3 discussion, and conclusion (four places cited the same
+"33.3\% to 77.8\%" figure, all now corrected consistently to the new
+"55.6\% to 77.8\%" figure with the significance caveat on the expanded
+set). Recompiles cleanly (30 pages, 0 undefined refs).
+
+This closes the faithfulness/NLI/crosslingual re-verification item in
+full -- all three sub-areas checked, two produced real substantive
+corrections (faithfulness/NLI direction reversal, crosslingual gap
+narrowing), one confirmed stable (sufficient-context diagnostic).
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

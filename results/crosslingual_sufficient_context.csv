@@ -1,5 +1,5 @@
 query_id,query,translated_query,sufficient_original_retrieval,sufficient_translated_retrieval,outcome
-XL001,kemon achi? cse course er prerequisite kivabe?,How is it? How do I fulfill the prerequisites for the CSE course?,True,True,YES/YES
+XL001,kemon achi? cse course er prerequisite kivabe?,How is it? How does one fulfill the prerequisites for the CSE course?,True,True,YES/YES
 XL002,Kemon kichu student grade apeal korar pora? Amra janiy na ki amader course-er grade mistake holo kisu kichu.,How do students appeal against their grades? We don't know if there was a mistake in our course grades.,False,True,NO/YES
 XL003,"Kemon ase, amar kotha dekhle ei course e food arrangement er process ki kivabe hobe?","How is it, after listening to my story, this course will arrange the food process?",False,True,NO/YES
 XL004,Kemon kichu kore amar upobadhit game & event er update ache?,How can I get updates on my required games and events?,True,True,YES/YES

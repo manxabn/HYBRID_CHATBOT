@@ -1,0 +1,36 @@
+query_id,query,translated_query,plain_top5_hit,translated_top5_hit
+XL001-v1,kemon kemon? cse course-er prerequisite kei ki kotha bolen?,How is it going? The CSE course says that this is a prerequisite for something.,False,False
+XL001-v2,Kemon kichu khaso lagbe CSE course er jore?,What are some specializations offered in the CSE course?,False,False
+XL001-v3,"kemon kemon apa bhai, amar cse course e prerequisite ami ki janiye???","How are you brother, I want to know what prerequisites I need for my CSE course?",False,True
+XL002-v1,koto student er grade niye appeal korte pabo ki na? amar classnote te 2202A এর note dekhle ei jnnoi ta ache.,How many students can appeal their grades? I have checked the notes for course 2202A and this information is available.,True,True
+XL002-v2,Appy korte pere students ektu grade Appeal korar kichhu chance ache ki not?,Do students have a little chance of getting their grades appealed?,True,True
+XL002-v3,"Kotha o bhaabe, ami grade appeal korar permission ache kina? Ami amar CGPA 3.5 theke down gache pore kono problem hobe ki na?",What are the rules and regulations regarding grade appeals? Do I have any permission to file a grade appeal if my CGPA falls below 3.5?,False,False
+XL003-v1,"Amarader kotha bolte pachi, ekta course-এ kiyo ki event er food ar refreshment arrange korar process kivabe holo? 
+
+(Note: BRAC University students often mix Bengali and English in their writing style. I have attempted to replicate this style in the above response.)","After hearing from my friends, I want to know how the arrangement of food and refreshments for events is done in a course.",True,True
+XL003-v2,"Kemon kisu e event er khadya bhojan ar refreshment arrange korar por process ta?
+
+(Note: I'll refrain from providing an English translation to maintain the integrity of the Banglish output)",How is the food and refreshments arrangement for this event organized?,True,True
+XL003-v3,kemon kemon? ekta event er jonno food ar refreshment arrange korar procedure ta kivabe korchhe?,How are you? What is the procedure for arranging food and refreshments for an event?,True,True
+XL004-v1,Ei kemon holo amar current game & event schedule update korte pari ???,How is my current game and event schedule updated ???,True,False
+XL004-v2,Gorar kemon kisu upaban game & event gulo track korte parche?,How to track urban games and events on the Upaban app?,False,True
+XL004-v3,kemon bhaii ekhane upcoming game & event khub update holo kivabe???,How do you get updates about upcoming games and events here?,True,True
+XL005-v1,"ami BRAC scholarship er foreign student, cgpa 3.1, kintu amar ek course fail holo, ki re take er pori fee scholarship a thakbe?",Will the entire fee of my scholarship remain intact even though I have failed one course?,True,True
+XL005-v2,"kemon? brac university te ami internationl student amar brac scholarship achi chilo otai CGPA 3 point eki, kintu ami ekta course retake korbo ki na, brac scholarship ta amar retake fee cover korbe ki na?","How is it? I'm an international student at Brac University. My Brac scholarship was good up to a CGPA of 3 points, but will the scholarship also cover my retake fees if I decide to re-take a course?",True,True
+XL005-v3,"ami BRAC scholarship e ki ek internatiol studee ami 3.1 cgpa ache, kintu ami 1 ta course miss korlam, oita retake korte hobe, ki scholarship a amar retake fee cover kora paiybe?",Will the BRAC scholarship cover my retake fees if I have an international CGPA of 3.1 but missed one course and need to retake it?,True,True
+XL006-v1,"Kemon kichu BRAC scholarship? Ta ki ekta scholarship program, jeta amra university te apnar course ar tuition fees cover korar por theke. Ami BRAC U student, amar course code BD101, 3rd sem er. Kintu kemon kichu BRAC Scholarship ta, ami jani nai...","What is the BRAC scholarship? Is there a scholarship program that covers our university tuition fees from the start of our course? I am a BRAC U student with course code BD101 in my 3rd semester. But how does the BRAC Scholarship work, I don't know...",False,False
+XL006-v2,Kemon holo BRAC scholarship er details ta bolen nai?,What are the details of the BRAC scholarship?,False,False
+XL006-v3,kemon kotha BRAC scholarship?,How to get a BRAC scholarship?,True,False
+XL007-v1,"Ei ki brac university te amader tuition fees profile koto bolle, plz share details.",What is the total amount of our tuition fee structure at Brac University? Please share the details.,False,True
+XL007-v2,Brac Uni ke tuition fee structure e ki detail dile aro ki poreni?,What is the detailed tuition fee structure of Brac University and what are the additional costs?,True,True
+XL007-v3,Apnader koto takay tuition fees amra BRAC Unibasshe kemon ki structure korey thake?,How much of your tuition fees have we paid at BRAC University through our Unibassh system?,False,False
+XL008-v1,AmiEEE course e ki class giechi Physics minor er prerequisite shudhhu korte pare? Amake physics major na holo ekhon amar physics minor er prerequisite thik hobe kina?,What classes in the EEE course can I take to fulfill the prerequisites for a Physics minor? Will my non-Physics major status affect whether my prerequisites are considered valid for the Physics minor?,True,True
+XL008-v2,"Arre kemon? EEE er course e amar majer physics minor holo. Ami physics majer nai, ta ki physics minor er prerequisite separate meeting korbo lagbe?","What are the requirements? In this EEE course, I have a major in Physics. I'm not a physics major, so will I need to attend a separate meeting for the prerequisites of the physics minor?",True,True
+XL008-v3,I m an EEE student physics minor course le ketei amar. Ami physics majore na but ami physics minor course join korlei physics minor er prerequisite separate meeting korte hobe ki?,"As an EEE student with a physics minor, I have taken the physics minor course. If I were to major in physics instead, would I still need to attend a separate meeting for the physics minor prerequisites?",True,True
+XL009-v1,Lab pc e log kortei parche amar niye ki kora hoi...,What lab PC is being used for logging purposes and how was it allocated to me...,False,False
+XL009-v2,Lab pc login prob thik ache kina?,Is there a problem with logging into the lab PC?,False,False
+XL009-v3,"kintu urgent e boro, ami lab pc er login korte pai ni, tai ki karbo?","However, this is not a question that needs to be translated from another language. It appears to be written in English already. 
+
+Here's the translation of the text into clear and standard English:
+
+But it's urgent, I'm unable to log in to my lab PC, so what should I do?",True,True
