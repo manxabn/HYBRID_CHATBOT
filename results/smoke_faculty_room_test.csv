@@ -1,0 +1,189 @@
+query_id,config,query,reference_answer,retrieved_context,generated_answer,route,fusion,lambda,abstained,raw_abstain,sufficient_context_override,graph_augmented,faculty_room_augmented,exact_match_any,question_match_any,translated_query,normalized_query,retrieval_s,rerank_s,generation_s,total_s,timestamp,query_confidence,query_top1_score
+FR-00,adaptive_novel,Who teaches the theory section of CSE251-03B and what is their office room?,Md. Fatin Ishraq Faruqui (Lecturer) teaches the theory section of CSE251-03B. Their office room is 4N169.,"Verified instructor information for CSE251-03B (from the CourseDetails and FacultyList knowledge base): theory section taught by Md. Fatin Ishraq Faruqui (Lecturer), office room 4N169, email md.fatin@bracu.ac.bd.
+
+Initial: NFS
+Name: Nafis Faisal
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE251-05B (LAB) SDQ,NFS 12B-20L; 12:30 PM - CSE251-05B (LAB) SDQ,NFS 12B-20L; 2:00 PM - CSE251-03B (LAB) NFS,SZZ 12B-20L; 3:30 PM - CSE251-03B (LAB) NFS,SZZ 12B-20L
+
+Course: CSE250-03B
+Theory Initial: SEF
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 07H-26C
+Lab Faculty: AKDB,ALSM
+Lab Day: SAT
+Lab Time: 2:00 PM
+Lab Room: 12B-20L
+
+Course: CSE260-03B
+Theory Initial: DZK
+Theory Day: SUN+TUE
+Theory Time: 12:30 PM
+Theory Room: 09E-20T
+Lab Faculty: MZW,ADD
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: FT10-04L
+
+Course: CSE350-03B
+Theory Initial: ZBH
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09A-07C
+Lab Faculty: NUR,AKDB
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Course: CSE251-03B
+Theory Initial: FFR
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 07H-27C
+Lab Faculty: NFS,SZZ
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12B-20L","The theory section of CSE251-03B is taught by Md. Fatin Ishraq Faruqui, and his office room is 4N169.",entity_heavy,rrf,0.9,False,False,False,False,True,True,False,,,0.0574,0.0000,15.6372,15.6954,2026-07-31T16:10:55.491263+00:00,100.0019,100.0166
+FR-01,adaptive_novel,Who teaches the theory section of CSE110-19 and what is their office room?,Tahsin Tanim Ramisha (C. Lecturer) teaches the theory section of CSE110-19. Their office room is 4F.,"Verified instructor information for CSE110-19 (from the CourseDetails and FacultyList knowledge base): theory section taught by Tahsin Tanim Ramisha (C. Lecturer), office room 4F, email ext.tahsin.ramisha@bracu.ac.bd.
+
+Course: CSE340-19
+Theory Initial: SADA
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 10B-16C
+
+Course: STA201-19
+Theory Initial: TBS
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09H-35C
+
+Initial: FZN
+Name: Kh.Fardin Zubair Nafis
+Day: Wednesday
+Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 9:30 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE110-19 (LAB) PRC,FZN 12F-30L; 3:30 PM - CSE110-19 (LAB) PRC,FZN 12F-30L
+
+Course: CSE470-19
+Theory Initial: SKIB
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09D-17C
+
+Course: CSE110-19
+Theory Initial: THR
+Theory Day: SUN+TUE
+Theory Time: 8:00 AM
+Theory Room: 10B-16C
+Lab Faculty: PRC,FZN
+Lab Day: WED
+Lab Time: 2:00 PM
+Lab Room: 12F-30L","The theory section of CSE110-19 is taught by Tahsin Tanim Ramisha, who can be found in office room 4F.",entity_heavy,rrf,0.9,False,False,False,False,True,True,False,,,0.0272,0.0000,6.0356,6.0652,2026-07-31T16:11:01.556843+00:00,100.0019,100.0167
+FR-02,adaptive_novel,Who teaches the theory section of CSE350-02B and what is their office room?,Nur Mohammad Shaon (Lecturer) teaches the theory section of CSE350-02B. Their office room is 4N170.,"Verified instructor information for CSE350-02B (from the CourseDetails and FacultyList knowledge base): theory section taught by Nur Mohammad Shaon (Lecturer), office room 4N170, email nur.shaon@bracu.ac.bd.
+
+Course: CSE350-01A
+Theory Initial: NUR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09A-07C
+Lab Faculty: ARA,SHJR
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: FT10-01L
+
+Initial: NUR
+Name: Nur Mohammad Shaon
+Day: Saturday
+Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE350-01A 09A-07C,CSE350-01B 09A-07C; 12:30 PM - CSE350-02A 09A-07C,CSE350-02B 09A-07C
+
+Course: CSE350-03B
+Theory Initial: ZBH
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09A-07C
+Lab Faculty: NUR,AKDB
+Lab Day: MON
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Course: CSE350-01B
+Theory Initial: NUR
+Theory Day: SAT+THU
+Theory Time: 9:30 AM
+Theory Room: 09A-07C
+Lab Faculty: SDU,RFQ
+Lab Day: SAT
+Lab Time: 11:00 AM
+Lab Room: FT10-02L
+
+Course: CSE350-02B
+Theory Initial: NUR
+Theory Day: SAT+THU
+Theory Time: 12:30 PM
+Theory Room: 09A-07C
+Lab Faculty: RAO,AKJ
+Lab Day: WED
+Lab Time: 8:00 AM
+Lab Room: FT10-02L","The theory section of CSE350-02B is taught by Nur Mohammad Shaon, who can be found in office room 4N170.",entity_heavy,rrf,0.9,False,False,False,False,True,True,False,,,0.0255,0.0000,6.1691,6.1954,2026-07-31T16:11:07.753006+00:00,100.0013,100.0167
+FR-03,adaptive_novel,Who teaches the theory section of CSE340-09 and what is their office room?,Mohammed Ashfaqul Haque (Lecturer) teaches the theory section of CSE340-09. Their office room is 4N137.,"Verified instructor information for CSE340-09 (from the CourseDetails and FacultyList knowledge base): theory section taught by Mohammed Ashfaqul Haque (Lecturer), office room 4N137, email ashfaqul.haque@bracu.ac.bd.
+
+Course: CSE340-01
+Theory Initial: ACH
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T
+
+Course: CSE340-05
+Theory Initial: TNMF
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09C-16T
+
+Course: CSE340-07
+Theory Initial: TNMF
+Theory Day: MON+WED
+Theory Time: 11:00 AM
+Theory Room: 09C-16T
+
+Course: CSE340-04
+Theory Initial: MTSM
+Theory Day: SUN+TUE
+Theory Time: 9:30 AM
+Theory Room: 09E-20T
+
+Course: CSE340-09
+Theory Initial: AFQ
+Theory Day: SAT+THU
+Theory Time: 8:00 AM
+Theory Room: 09C-16T","The theory section of CSE340-09 is taught by Mohammed Ashfaqul Haque, who can be found in his office at room 4N137.",entity_heavy,rrf,0.9,False,False,False,False,True,True,False,,,0.0308,0.0000,6.2550,6.2867,2026-07-31T16:11:14.040090+00:00,100.0004,100.0166
+FR-04,adaptive_novel,Who teaches the theory section of CSE331-03 and what is their office room?,Dr. Badhan Das (Assistant Professor) teaches the theory section of CSE331-03. Their office room is 4G19.,"Verified instructor information for CSE331-03 (from the CourseDetails and FacultyList knowledge base): theory section taught by Dr. Badhan Das (Assistant Professor), office room 4G19, email badhan.das@bracu.ac.bd.
+
+Course: CSE331-01
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T
+
+Course: CSE331-06
+Theory Initial: RSS
+Theory Day: MON+WED
+Theory Time: 9:30 AM
+Theory Room: 09A-04C
+
+Course: CSE331-07
+Theory Initial: ZYH
+Theory Day: SAT+THU
+Theory Time: 11:00 AM
+Theory Room: 09A-05C
+
+Course: CSE331-02
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T
+
+Course: CSE331-03
+Theory Initial: NBD
+Theory Day: SUN+TUE
+Theory Time: 11:00 AM
+Theory Room: 09G-31T","The theory section of CSE331-03 is taught by Dr. Badhan Das, and his office room is 4G19.",entity_heavy,rrf,0.9,False,False,False,False,True,True,False,,,0.0232,0.0000,5.6345,5.6587,2026-07-31T16:11:19.699553+00:00,100.0003,100.0166

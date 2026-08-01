@@ -14,3 +14,7 @@ chroma_db/
 .mpl_cache/
 .tmp/
 .torch_home/
+*_pre_governance_merge_*/
+*_pre_governance_merge_*
+*_pre_k1b_tuning.pkl.bak
+*.bak
