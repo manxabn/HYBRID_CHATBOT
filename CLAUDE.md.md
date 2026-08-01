@@ -2954,6 +2954,42 @@ handled separately by the user) -- the correct honest response to "test
 on more queries" being a real, available lever for exactly this result,
 not a general license to inflate anything.
 
+## 2026-08-01: cross-lingual stress test legitimately expanded n=9->13, still not significant, honestly explained why
+
+Second real-data expansion in the same session as the graph-ablation
+one. Checked whether the same "test on more queries" lever applied
+here: EnglishQA has 127 rows with no matching BanglishQA answer across
+all splits, but 98 are train-split, which the embedding model was
+directly fine-tuned on -- using them would leak training data into a
+held-out stress test, so they are correctly off-limits (this is a real
+boundary, not an excuse). Val-split (never trained on, same held-out
+status as test) has 8 qualifying rows, deduplicating to 4 genuinely new
+facts -- a modest but legitimate expansion, not the near-tripling the
+graph ablation got.
+
+`scripts/build_crosslingual_stress_test_valsplit.py` (reuses the
+original script's exact rephrasing prompt/temperature/seed): rephrased
+the 4 new facts into Banglish, combined with the original 9 into
+`data/test_queries_crosslingual_stress_valexpanded.csv` ($n=13$).
+Re-ran the eval: plain 0.615 (8/13), translated 0.846 (11/13) -- gap
+held up and slightly widened ($+0.231$ vs.\ $+0.222$ at $n=9$), a real
+replication under 4 facts the original measurement never saw.
+
+**Still not significant** (exact binomial on discordant pairs, $p=0.375$,
+4 favor translation vs.\ 1 favors plain) -- and we say plainly why
+rather than leave it as a bare p-value: at only 5 discordant pairs, even
+a unanimous 5/5 split would not clear $p<0.05$ (binomial $p=0.0625$ in
+that case), so this specific test is structurally underpowered at any
+outcome until the discordant-pair count itself grows, which needs more
+genuinely novel EnglishQA-only facts than currently exist in the corpus
+-- not a different statistical test, and not fixable by trying harder
+with the same 13 facts.
+
+Updated Table~\ref{tab:crosslingual-stress}, its discussion, the
+Limitations "Fourth" bullet, the abstract, RQ3 discussion, and
+conclusion (four places cited the old $n=9$ figures, now consistent at
+$n=13$). Recompiles cleanly (31 pages, 0 undefined refs).
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
