@@ -2281,6 +2281,53 @@ negative (METEOR vs.\ BM25-only) -- that remains the informative
 comparison. Updated the pool=5 paragraph in Section~\ref{subsec:reranker
 -ablation} accordingly; recompiled cleanly (27 pages).
 
+## 2026-08-01 loop: the paper's central RQ1 claim was stale -- adaptive pipeline no longer confirmed behind BM25-only on anything
+
+The most consequential staleness fix in this loop. `results/novel_
+pipeline_raw_outputs_roundN_noreranker.csv` (the deployed reranker-off
+adaptive_novel configuration -- the one every headline claim in this
+paper is actually about) was measured 2026-07-31 21:37 (commit
+418e87d), before both the exact-match coverage fix and the BM25 $k_1$/
+$b$ retuning. This is the SAME configuration Table~\ref{tab:novel-sig},
+the abstract, RQ1 discussion, and the conclusion all cite -- the paper's
+central empirical claim rests on this exact number.
+
+Re-ran it (`python scripts/run_novel_pipeline.py --out results/novel_
+pipeline_raw_outputs_roundO_noreranker.csv`, 200 queries, 1 abstained),
+scored, tested against the same stable baseline
+(`results/significance_tests_novel_roundO_noreranker.csv`).
+
+**Result: the confirmed METEOR loss vs.\ BM25-only is gone.** Previously:
+METEOR significant under BOTH paired-$t$ ($p=0.009$) and Wilcoxon
+($p=0.024$); BERTScore significant under paired-$t$ only ($p=0.040$,
+explicitly flagged "inconclusive" in the paper's own text). Now: METEOR
+is barely significant under paired-$t$ alone ($p=0.041$) but Wilcoxon
+disagrees ($p=0.306$) -- by the paper's own established convention for
+disagreeing tests (used for BERTScore in the prior measurement), this
+should be treated as inconclusive, not confirmed. BERTScore itself is no
+longer significant under either test ($p=0.097$/$0.808$). **Under the
+current system, the deployed adaptive pipeline is in full statistical
+parity with BM25-only on all four metrics, not just BLEU/ROUGE-L.**
+
+This does NOT mean the pipeline now beats BM25-only, and the paper is
+careful not to claim that -- parity is not an advantage, and the
+deconfounding diagnostic (adaptive routing's own fusion choice is
+negative in isolation) still stands unchanged: the parity is still
+"borrowed" from the exact-match mechanism, not evidence routing itself
+works. But the specific, repeated claim "significantly behind BM25-only
+on METEOR" was false under the current codebase and appeared in SIX
+places: the abstract, Table~\ref{tab:novel-sig} + its discussion
+paragraph, the "Off" row of Table~\ref{tab:reranker-ablation} + its
+discussion, the RQ1 sentence in Section~\ref{sec:discussion}, and the
+conclusion. Updated all six consistently, recompiled cleanly (27 pages).
+
+**Process note**: this was found by working through the "reranker-off
+row also predates the exact-match fix, not yet checked" item flagged as
+a known gap two entries ago -- not a fluke discovery. The lesson holds:
+when a real upstream fix lands, EVERY downstream measurement that used
+the old retriever is a candidate for staleness, not just the one most
+directly related to the fix.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

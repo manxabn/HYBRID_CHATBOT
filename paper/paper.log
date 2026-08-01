@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  1 AUG 2026 10:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  1 AUG 2026 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -761,8 +761,8 @@ Overfull \hbox (4.19865pt too wide) in paragraph at lines 268--269
 rse-code/email/faculty-identity en-ti-ties (Sec-tion []4.5[]'s method-
  []
 
-[12 <./fig_response_gen.png>] [13]
-Overfull \hbox (9.89005pt too wide) in paragraph at lines 328--329
+[12 <./fig_response_gen.png>] [13] [14]
+Overfull \hbox (9.89005pt too wide) in paragraph at lines 327--328
 \OT1/ptm/m/n/10 dated 2026-08-01: the ver-sion re-ported in an ear-lier re-vi-s
 ion of this pa-per (mean diffs of $\OMS/pzccm/m/n/10 ^^@\OT1/ptmcm/m/n/10 0\OML
 /ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 040$\OT1/ptm/m/n/10 /$\OMS/pzccm/m/n/10 ^^@\O
@@ -770,64 +770,56 @@ T1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 030$ \OT1/ptm/m/n/10 BLE
 U/METEOR
  []
 
-[14] [15]
-<fig_lambda_sweep.png, id=479, 794.97pt x 578.16pt>
+[15]
+<fig_lambda_sweep.png, id=482, 794.97pt x 578.16pt>
 File: fig_lambda_sweep.png Graphic file (type png)
 <use fig_lambda_sweep.png>
-Package pdftex.def Info: fig_lambda_sweep.png  used on input line 378.
+Package pdftex.def Info: fig_lambda_sweep.png  used on input line 377.
 (pdftex.def)             Requested size: 227.62204pt x 165.54482pt.
- [16 <./fig_lambda_sweep.png>] [17]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 422.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 422.
-
-[18] [19] [20] [21]
-Overfull \hbox (324.66574pt too wide) in paragraph at lines 559--577
- [][] 
- []
-
-<fig_ingestion_time.png, id=577, 504.80595pt x 342.19846pt>
-File: fig_ingestion_time.png Graphic file (type png)
-<use fig_ingestion_time.png>
-Package pdftex.def Info: fig_ingestion_time.png  used on input line 588.
-(pdftex.def)             Requested size: 204.85974pt x 138.87157pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[16] [17 <./fig_lambda_sweep.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 593.
+(hyperref)                removing `math shift' on input line 421.
 
 
-Underfull \vbox (badness 2626) has occurred while \output is active []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 421.
 
- [22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[18] [19] [20] [21]
+Overfull \hbox (324.66574pt too wide) in paragraph at lines 558--576
+ [][] 
+ []
 
- [23 <./fig_ingestion_time.png>] [24] [25] [26] [27] (paper.aux)
+<fig_ingestion_time.png, id=579, 504.80595pt x 342.19846pt>
+File: fig_ingestion_time.png Graphic file (type png)
+<use fig_ingestion_time.png>
+Package pdftex.def Info: fig_ingestion_time.png  used on input line 587.
+(pdftex.def)             Requested size: 204.85974pt x 138.87157pt.
+[22]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 592.
+
+[23 <./fig_ingestion_time.png>] [24] [25] [26] [27] (paper.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 6C9C1633A6A90F2206B866951285DD03;10759.
  ) 
 Here is how much of TeX's memory you used:
  14160 strings out of 467871
  225445 string characters out of 5418376
- 660727 words of memory out of 5000000
+ 661736 words of memory out of 5000000
  42703 multiletter control sequences out of 15000+600000
  676122 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,5763b,660s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,5763b,658s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -838,9 +830,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (27 pages, 844253 bytes).
+Output written on paper.pdf (27 pages, 846509 bytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
+ 727 PDF objects out of 1000 (max. 8388607)
  140 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 
