@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  1 AUG 2026 11:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  1 AUG 2026 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,29 +722,34 @@ Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 111.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./fig_db_population.png>] [7 <./fig_hybrid_retriever.png>] [8] [9] [10]
-Overfull \hbox (86.60915pt too wide) in paragraph at lines 215--216
+[6 <./fig_db_population.png>] [7 <./fig_hybrid_retriever.png>]
+Overfull \hbox (6.26099pt too wide) in paragraph at lines 129--141
+ [][] 
+ []
+
+[8] [9] [10]
+Overfull \hbox (86.60915pt too wide) in paragraph at lines 218--219
 \OT1/ptm/m/n/10 maintained piece of code, and the two copies silently drifted a
 part. We ad-dressed the spe-cific in-stance -- \OT1/pcr/m/n/10 pipeline/prerequ
 isite[]graph.py
  []
 
 
-Underfull \vbox (badness 1107) has occurred while \output is active []
+Underfull \vbox (badness 1259) has occurred while \output is active []
 
  [11]
-<fig_response_gen.png, id=398, 3334.4575pt x 3519.1475pt>
+<fig_response_gen.png, id=400, 3334.4575pt x 3519.1475pt>
 File: fig_response_gen.png Graphic file (type png)
 <use fig_response_gen.png>
-Package pdftex.def Info: fig_response_gen.png  used on input line 234.
+Package pdftex.def Info: fig_response_gen.png  used on input line 237.
 (pdftex.def)             Requested size: 204.85974pt x 216.18733pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 239.
+(hyperref)                removing `\uppercase' on input line 242.
 
-
-Overfull \hbox (21.3709pt too wide) in paragraph at lines 263--264
+[12 <./fig_response_gen.png>]
+Overfull \hbox (21.3709pt too wide) in paragraph at lines 266--267
 \OT1/ptm/m/n/10 Vector-only $\OT1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmcm/
 m/n/10 371\OML/ptmcm/m/it/10 =\OT1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmcm
 /m/n/10 501\OML/ptmcm/m/it/10 =\OT1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmc
@@ -757,14 +762,14 @@ m/it/10 :\OT1/ptmcm/m/n/10 256$ \OT1/ptm/m/n/10 (BLEU/ROUGE-L/BERTScore/METEOR)
 .
  []
 
-[12 <./fig_response_gen.png>]
-Overfull \hbox (4.19865pt too wide) in paragraph at lines 268--269
+
+Overfull \hbox (4.19865pt too wide) in paragraph at lines 271--272
 \OT1/ptm/m/n/10 rel-e-vance is judged against the ref-er-ence an-swer's own cou
 rse-code/email/faculty-identity en-ti-ties (Sec-tion []4.5[]'s method-
  []
 
 [13] [14]
-Overfull \hbox (9.89005pt too wide) in paragraph at lines 327--328
+Overfull \hbox (9.89005pt too wide) in paragraph at lines 330--331
 \OT1/ptm/m/n/10 dated 2026-08-01: the ver-sion re-ported in an ear-lier re-vi-s
 ion of this pa-per (mean diffs of $\OMS/pzccm/m/n/10 ^^@\OT1/ptmcm/m/n/10 0\OML
 /ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 040$\OT1/ptm/m/n/10 /$\OMS/pzccm/m/n/10 ^^@\O
@@ -772,45 +777,43 @@ T1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 030$ \OT1/ptm/m/n/10 BLE
 U/METEOR
  []
 
-[15]
-<fig_lambda_sweep.png, id=481, 794.97pt x 578.16pt>
+[15] [16]
+<fig_lambda_sweep.png, id=488, 794.97pt x 578.16pt>
 File: fig_lambda_sweep.png Graphic file (type png)
 <use fig_lambda_sweep.png>
-Package pdftex.def Info: fig_lambda_sweep.png  used on input line 377.
+Package pdftex.def Info: fig_lambda_sweep.png  used on input line 380.
 (pdftex.def)             Requested size: 227.62204pt x 165.54482pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[16]
-Underfull \vbox (badness 3396) has occurred while \output is active []
-
  [17 <./fig_lambda_sweep.png>] [18]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 421.
+(hyperref)                removing `math shift' on input line 424.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 421.
+(hyperref)                removing `math shift' on input line 424.
 
-[19] [20] [21]
-Overfull \hbox (324.66574pt too wide) in paragraph at lines 560--578
+[19] [20] [21] [22]
+Overfull \hbox (324.66574pt too wide) in paragraph at lines 563--581
  [][] 
  []
 
-[22]
-<fig_ingestion_time.png, id=588, 504.80595pt x 342.19846pt>
+<fig_ingestion_time.png, id=587, 504.80595pt x 342.19846pt>
 File: fig_ingestion_time.png Graphic file (type png)
 <use fig_ingestion_time.png>
-Package pdftex.def Info: fig_ingestion_time.png  used on input line 589.
+Package pdftex.def Info: fig_ingestion_time.png  used on input line 592.
 (pdftex.def)             Requested size: 204.85974pt x 138.87157pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 594.
+(hyperref)                removing `\uppercase' on input line 597.
 
-[23 <./fig_ingestion_time.png>] [24] [25] [26] [27] [28] (paper.aux)
+
+Underfull \vbox (badness 2626) has occurred while \output is active []
+
+ [23]
+[24 <./fig_ingestion_time.png>] [25] [26] [27] [28] (paper.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -821,11 +824,11 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  14161 strings out of 467871
  225452 string characters out of 5418376
- 657230 words of memory out of 5000000
+ 658302 words of memory out of 5000000
  42703 multiletter control sequences out of 15000+600000
  676122 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,5763b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,5763b,658s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -836,9 +839,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (28 pages, 849929 bytes).
+Output written on paper.pdf (28 pages, 852551 bytes).
 PDF statistics:
- 732 PDF objects out of 1000 (max. 8388607)
+ 734 PDF objects out of 1000 (max. 8388607)
  141 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

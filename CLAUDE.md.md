@@ -2414,6 +2414,54 @@ Table~\ref{tab:graph-ablation} and its discussion in Section~\ref
 {subsec:graph}; recompiled cleanly (28 pages, grew by one from the
 expanded discussion).
 
+## 2026-08-01 loop: embedding held-out eval table was also stale, plus a real un-run validation script surfaced
+
+Sixth finding this loop, during the systematic staleness sweep. Two
+separate issues in `scripts/eval_embeddings_held_out.py` / Table~\ref
+{tab:embedding-eval}:
+
+1. **Same missing-model-row class of bug already found and fixed for
+   structured embeddings** (Section entry "RESOLVED 2026-07-31"): the
+   `MODELS` dict never had `finetuned_minilm_hard_negatives_structured_
+   banglish_expanded` (the actually-deployed checkpoint) added to it.
+   Fixed by adding it.
+2. **The validation set itself grew** (BanglishQA nearly tripled,
+   1,053->3,044 rows, in a data-ingestion pass): re-running now gives
+   n=540 val pairs (223 English + 317 Banglish), not the paper's stated
+   n=297 -- confirmed genuine by checking `Split` counts directly against
+   `knowledge_base.db`, not a bug in the re-run. Even the un-fine-tuned
+   base model's numbers moved substantially (Top-1 0.189->0.446) purely
+   because the evaluation set changed composition, which is expected and
+   correctly attributed to the data, not the model.
+
+**A related script, `scripts/compare_banglish_expanded_significance.py`,
+existed but had apparently never actually been run** (no output file,
+no CLAUDE.md record of a result despite the script being fully written
+and directly answering "did the Banglish-expansion retrain actually
+help, on the exact set it targets, without regressing elsewhere?"). Ran
+it: **significantly better on the Banglish-only held-out set** (MRR
+$+0.026$, $p=0.023$; Top-1 $+0.035$, $p=0.031$, $n=317$) **with zero
+regression** on the pooled QA-pair set ($p=0.568$/$0.819$) or the
+structured-table set (both checkpoints perfect 1.000/1.000). A clean,
+real, targeted win with no measured cost -- exactly the outcome hoped
+for but not assumed.
+
+**One process note**: drafted a sentence citing `\citet{khan2024
+infotextcm}` for the general "fine-tuning on more code-mixed data isn't
+always a win" motivation, based on the script's own docstring claiming
+this was "verified via literature search, 2026-07-31" -- but found no
+persisted record of that verification (author/year/venue) anywhere in
+this file, so citing it now would have been citing an unverified
+reference, against the standing rule. Removed the citation and kept the
+sentence as a general, uncited motivating statement instead; the actual
+empirical claim doesn't depend on it. If that citation really was
+verified in an earlier session, it should be re-added properly with a
+real \bibitem, not reconstructed from memory.
+
+Updated Table~\ref{tab:embedding-eval}, its surrounding discussion, and
+Section~\ref{subsec:hard-negatives} with both fixes; recompiled cleanly
+(28 pages).
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

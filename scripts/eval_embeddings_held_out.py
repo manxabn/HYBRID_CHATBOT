@@ -38,6 +38,7 @@ MODELS = {
     "finetuned_minilm_domain": str(ROOT / "models" / "finetuned_minilm_domain"),
     "finetuned_minilm_hard_negatives": str(ROOT / "models" / "finetuned_minilm_hard_negatives"),
     "finetuned_minilm_hard_negatives_structured": str(ROOT / "models" / "finetuned_minilm_hard_negatives_structured"),
+    "finetuned_minilm_hard_negatives_structured_banglish_expanded": str(ROOT / "models" / "finetuned_minilm_hard_negatives_structured_banglish_expanded"),
     "finetuned_banglishbert_domain": str(ROOT / "models" / "finetuned_banglishbert_domain"),
     "finetuned_multilingual_minilm_domain": str(ROOT / "models" / "finetuned_multilingual_minilm_domain"),
     "base_e5small_pretrained": "intfloat/multilingual-e5-small",

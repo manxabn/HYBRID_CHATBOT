@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7552.15it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7476.09it/s]
+
+=== Banglish-ONLY held-out set (the direct question) (n=317) ===
+MRR: banglish_expanded=0.9090 deployed=0.8834 diff=0.0257 CI=[0.0027,0.0493] p=0.0230 significant=True
+Top-1: banglish_expanded=0.8580 deployed=0.8233 diff=0.0348 CI=[0.0032,0.0694] p=0.0310 significant=True
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7712.46it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7475.18it/s]
+
+=== QA-pair pooled held-out set (regression check) (n=540) ===
+MRR: banglish_expanded=0.6889 deployed=0.6816 diff=0.0071 CI=[-0.0178,0.0308] p=0.5680 significant=False
+Top-1: banglish_expanded=0.5204 deployed=0.5241 diff=-0.0036 CI=[-0.0407,0.0315] p=0.8190 significant=False
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 8105.01it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 6987.79it/s]
+
+=== Structured-table held-out set (regression check) (n=328) ===
+MRR: banglish_expanded=1.0000 deployed=1.0000 diff=0.0000 CI=[0.0000,0.0000] p=0.0000 significant=False
+Top-1: banglish_expanded=1.0000 deployed=1.0000 diff=0.0000 CI=[0.0000,0.0000] p=0.0000 significant=False
