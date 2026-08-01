@@ -2664,6 +2664,65 @@ threshold's generalization gap, it doesn't produce a new, properly
 "a concrete next step this revision identifies but does not itself
 complete," an honest scope boundary rather than a silently-dropped task.
 
+## 2026-08-01 loop: faithfulness + NLI cross-check re-verified -- a substantive correction, not just numbers
+
+Re-verified per the user's "retry all the work again" request (interpreted
+as: pick up the disclosed-but-incomplete follow-ups from the completed
+staleness sweep, not literally re-run identical scripts -- confirmed with
+the user, they did not object). `results/faithfulness_sample_baselines.
+csv` / `_novel.csv` (2026-07-28) were the most stale files sitting in the
+repo, predating every fix this session touched.
+
+Regenerated on the EXACT SAME 40/50 query_ids (extracted from the
+original files, not a new random sample) via `run_ablation.py`/`run_
+novel_pipeline.py --queries <subset>`, re-scored with the unmodified
+`compute_faithfulness.py` LLM judge, re-ran the paired bootstrap
+significance test and the NLI cross-check (both via small wrapper
+scripts that import the original modules and override paths/globals,
+not reimplementations).
+
+**New LLM-judge means**: Full Hybrid 0.923, BM25-only 0.916, Vector-only
+0.858 (up from 0.761 -- consistent with the already-confirmed embedding
+-retrain win), Adaptive 0.810 (down from 0.856), No-retrieval 0.595.
+
+**New matched-subset (n=17) significance -- a real, substantive change,
+not just numbers**: previously ALL FOUR baseline comparisons were
+non-significant ($p\geq0.14$), including vs.\ vector_only and vs.\
+no_retrieval, which was itself a bit of an odd result (you'd expect
+adaptive to clearly beat those). Now: adaptive is significantly
+\emph{higher} than vector_only ($p<0.001$) and no_retrieval ($p=0.003$)
+-- a sanity check that now actually passes -- while remaining tied with
+bm25_only ($p=0.26$) and only borderline against full_hybrid (mean diff
+now \emph{positive}, $+0.058$, 95\% CI $[0.000, 0.147]$, touching zero
+at the boundary; was $-0.041$, negative, before). The point estimate
+against full_hybrid flipped sign.
+
+**New NLI cross-check -- this changes the paper's actual argument, not
+just its numbers**: previously the independent NLI check showed adaptive
+(0.547) essentially tied with BM25-only (0.549) and slightly \emph{ahead}
+of full_hybrid (0.532), used as corroborating evidence for a "claim
+-decomposition judge artifact" hypothesis explaining the LLM-judge gap.
+Now: adaptive (0.519) is still tied with BM25-only (0.516, this part
+replicates) but is now descriptively \emph{behind} full_hybrid (0.562,
+a $-0.043$ gap) -- the opposite of what the hypothesis predicted. Row
+-level agreement between the two judges also weakened further, from
+already-weak ($r=0.089$) to indistinguishable from chance ($r=-0.063$,
+binary agreement $49.4\%$). **We no longer treat the NLI check as
+corroborating evidence in either direction** -- not that it now confirms
+the gap either, but that it's too noisy at this sample size to settle
+anything, which is itself a more honest position than the previous
+revision's claim.
+
+Updated: Table~\ref{tab:faithfulness}, Table~\ref{tab:nli-faithfulness},
+both discussion paragraphs, the "Fifth" and "Seventh" Limitations
+bullets, the by-pipeline-stage summary table (which also had two other
+stale entries -- the unambiguous-match ceiling's old $+34$pp figure and
+the graph-ablation's old $p=0.10$, both already fixed earlier this loop
+but not yet propagated to this summary table), the Future Work paragraph,
+and the abstract's faithfulness sentence (softened from "does not
+reproduce this gap, suggesting self-judging artifact" to an honestly
+inconclusive framing). Recompiles cleanly (30 pages, 0 undefined refs).
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

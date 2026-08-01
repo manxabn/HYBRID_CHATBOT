@@ -1,0 +1,11 @@
+comparison,n,mean_diff,ci95_lo,ci95_hi,p_approx,significant
+bm25_only_vs_full_hybrid,40,-0.0062,-0.0475,0.0325,0.7264,False
+bm25_only_vs_no_retrieval,40,0.3203,0.1775,0.4675,0.0,True
+bm25_only_vs_vector_only,40,0.0594,-0.0162,0.1425,0.1168,False
+full_hybrid_vs_no_retrieval,40,0.3265,0.175,0.4775,0.0,True
+full_hybrid_vs_vector_only,40,0.0656,0.005,0.14,0.0332,True
+no_retrieval_vs_vector_only,40,-0.2609,-0.425,-0.0999,0.002,True
+adaptive_novel_vs_bm25_only,17,0.0554,-0.0471,0.1588,0.2628,False
+adaptive_novel_vs_full_hybrid,17,0.0585,0.0,0.1471,0.0,False
+adaptive_novel_vs_no_retrieval,17,0.2985,0.0824,0.5235,0.0032,True
+adaptive_novel_vs_vector_only,17,0.1123,0.0294,0.2118,0.0,True

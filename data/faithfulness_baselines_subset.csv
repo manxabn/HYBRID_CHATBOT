@@ -1,0 +1,53 @@
+query_id,query,reference_answer,is_entity_heavy,source
+Q010,Purpose of the Wishlist event for Summer 2025?,To help plan course offerings based on student demand,False,EnglishQA
+Q016,How to contact with BRACU Finance and Accounts Department?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd",False,EnglishQA
+Q017,"Hey, for further information regarding Admission who should I contact?","For more queries, please contact the Inquiry, Registration & Admissions Office, BRACU (Phone: +88 09638464646, Call Center Ext: 1001. You can also send e-mail at admissions@bracu.ac.bd.",False,EnglishQA
+Q019,How are students informed about changes to the transport service?,Students are informed through official BRAC University notices and announcements.,False,EnglishQA
+Q031,"New student here, could you please provide details about the tuition fee structure at BRAC University?","For students enrolled in the Computer Science and Engineering (CSE) program at BRAC University, the tuition fee structure includes a one-time, non-refundable admission fee of BDT 30,800. Each course within the CSE program costs BDT 22,500. Additionally, students are required to pay a semester fee of BDT 11,500, which covers various facilities such as IT services and library access. There is also a one-time library membership fee of BDT 2,500. This fee structure is designed to support the comprehensive education provided in the CSE program, ensuring access to advanced resources and facilities?",False,EnglishQA
+Q046,What sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",False,EnglishQA
+Q056,"New student here, when was BRAC University established and who founded it?","BRAC University was established in 2001, founded by Sir Fazle Hasan Abed, and is affiliated with the University Grants Commission (UGC) of Bangladesh.",False,EnglishQA
+Q057,Who must participate in the Wishlist event?,"All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students",False,EnglishQA
+Q061,How do I access the Multipurpose Hall?,"Ground Floor, Find the lift lobby(2nd escalator); go straight to the West Side, where you will find some seats next to the Multipurpose Hall.",False,EnglishQA
+Q066,Can you tell me what the prerequisites for the Cse program are?,"Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics",False,EnglishQA
+Q067,I looked around the site but couldn't find it — how to submit report after a club event?,"After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.",False,EnglishQA
+Q068,Can you tell me what the Syndicate at BRAC University is?,"The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.",False,EnglishQA
+Q069,Can you tell me what the eligibility criteria for receiving financial aid are?,"BRAC University offers financial aid to students based on demonstrated financial need. Financial aid eligibility is reassessed regularly, and students may need to maintain satisfactory academic performance. Special consideration may be given to students from disadvantaged backgrounds or those facing extraordinary circumstances. The Financial Aid Office can provide more detailed information on the application process.",False,EnglishQA
+Q070,For a friend who's asking — do I need to pay any fee to collect my degree certificate at Convocation?,"No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.",False,EnglishQA
+Q076,Provide me the contact information of library staffs.,"You can contact Librarian at: librarian@bracu.ac.bd, hasina@bracu.ac.bd
+Deputy Librarian: nasiruddin@bracu.ac.bd, murtoza@bracu.ac.bd",False,EnglishQA
+Q077,Consequence of not confirming advising during the Self-Registration period?,All selected courses will be automatically cancelled,False,EnglishQA
+Q079,What steps do I need to follow to access the Prayer Room for females?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),False,EnglishQA
+Q083,How long does the Early Childhood Development (ECD) program take to complete?,"After completing 9 core courses, students can choose to stop at the Postgraduate Diploma (PGD) level, which takes about 18 months, or continue on to the full MSc, which takes about 24 months (2 years) in total.",False,EnglishQA
+Q085,Does BRAC University offer any short professional certificate courses outside its degree programs?,"Yes. For example, BRAC University partnered with Swisscontact Bangladesh to launch a Professional Certificate Course on Environmental, Social and Governance (ESG), aimed at industry professionals - its first batch began in February 2026, aimed particularly at export-oriented sectors like ready-made garments.",False,EnglishQA
+Q094,Does ENH offer a minor for students outside the department?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.",False,EnglishQA
+Q096,"Are journals, magazines and reference books available for borrowing?","No. Journals, magazines, newspapers, and items in the reference collection are for in-library use only and cannot be checked out.",False,EnglishQA
+Q105,What is the full prerequisite chain for PHY112?,The full prerequisite chain for PHY112 is PHY111.,True,Prerequisites
+Q116,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).,True,Prerequisites
+Q125,What are the prerequisites for CSE422?,The prerequisite for CSE422 is CSE221 (HP).,True,Prerequisites
+Q126,What are the prerequisites for CSE111?,The prerequisite for CSE111 is CSE110 (HP).,True,Prerequisites
+Q129,What is the full prerequisite chain for CSE421?,The full prerequisite chain for CSE421 is CSE320.,True,Prerequisites
+Q133,Who is the theory coordinator for CSE370?,The theory coordinator for CSE370 is FEK.,True,Coordinator
+Q136,Who is the theory coordinator for CSE447?,The theory coordinator for CSE447 is MIH.,True,Coordinator
+Q138,What is the coordinator email for CSE437?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.,True,Coordinator
+Q149,What is the coordinator email for CSE443?,The coordinator email for CSE443 is swakkhar.shatabda@bracu.ac.bd.,True,Coordinator
+Q151,What day and time is the theory class for CSE260-04A?,The theory class for CSE260-04A is on SUN+TUE at 11:00 AM in room 09A-03C.,True,CourseDetails
+Q153,What day and time is the theory class for CSE460-03?,The theory class for CSE460-03 is on SAT+THU at 12:30 PM in room 07H-26C.,True,CourseDetails
+Q159,What day and time is the theory class for CSE250-06A?,The theory class for CSE250-06A is on SUN+TUE at 2:00 PM in room 07H-27C.,True,CourseDetails
+Q165,What day and time is the theory class for CSE260-04B?,The theory class for CSE260-04B is on SUN+TUE at 11:00 AM in room 09A-03C.,True,CourseDetails
+Q166,Who teaches the lab section of CSE321-18?,"The lab section of CSE321-18 is taught by TNF,SVKG.",True,CourseDetails
+Q171,Who teaches the lab section of CSE221-19?,"The lab section of CSE221-19 is taught by ARD,ANV.",True,CourseDetails
+Q175,Who teaches the lab section of CSE260-19B?,"The lab section of CSE260-19B is taught by CMHQ,CABS.",True,CourseDetails
+Q178,Who teaches the lab section of CSE423-05?,"The lab section of CSE423-05 is taught by MAHS,ZLNM.",True,CourseDetails
+Q183,Which room is Mr. Md. Tawhid Anwar in?,Mr. Md. Tawhid Anwar is in room 4G03.,True,FacultyList
+Q187,What is FEK's designation?,Farden Ehsan Khan (FEK) is a Lecturer.,True,FacultyList

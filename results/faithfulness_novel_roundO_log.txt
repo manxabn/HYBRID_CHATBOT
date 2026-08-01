@@ -1,0 +1,53 @@
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 5905.45it/s]
+[open_ended/linear] Q003: 19.41s gen, 0.075s retrieval, 0.000s rerank
+[open_ended/linear] Q010: 4.82s gen, 0.020s retrieval, 0.000s rerank
+[open_ended/linear] Q013: 6.14s gen, 0.023s retrieval, 0.000s rerank
+[open_ended/linear] Q016: 11.32s gen, 0.018s retrieval, 0.000s rerank
+[open_ended/linear] Q017: 7.78s gen, 0.026s retrieval, 0.000s rerank
+[open_ended/linear] Q019: 3.96s gen, 0.018s retrieval, 0.000s rerank
+[open_ended/linear] Q020: 3.54s gen, 0.018s retrieval, 0.000s rerank
+[open_ended/linear] Q025: 8.58s gen, 0.021s retrieval, 0.000s rerank
+[open_ended/linear] Q030: 4.58s gen, 0.020s retrieval, 0.000s rerank
+[open_ended/linear] Q031: 17.26s gen, 0.030s retrieval, 0.000s rerank
+[open_ended/linear] Q032: 3.91s gen, 0.018s retrieval, 0.000s rerank
+[open_ended/linear] Q039: 4.98s gen, 0.020s retrieval, 0.000s rerank
+[open_ended/linear] Q042: 4.58s gen, 0.021s retrieval, 0.000s rerank
+[open_ended/linear] Q043: 5.92s gen, 0.022s retrieval, 0.000s rerank
+[open_ended/linear] Q046: 5.79s gen, 0.019s retrieval, 0.000s rerank
+[open_ended/linear] Q052: 5.10s gen, 0.023s retrieval, 0.000s rerank
+[open_ended/linear] Q057: 4.62s gen, 0.017s retrieval, 0.000s rerank
+[open_ended/linear] Q066: 8.28s gen, 0.022s retrieval, 0.000s rerank
+[open_ended/linear] Q067: 14.06s gen, 0.025s retrieval, 0.000s rerank
+[open_ended/linear] Q068: 5.53s gen, 0.021s retrieval, 0.000s rerank
+[open_ended/linear] Q069: 6.22s gen, 0.019s retrieval, 0.000s rerank
+[open_ended/linear] Q070: 6.00s gen, 0.026s retrieval, 0.000s rerank
+[open_ended/linear] Q077: 3.49s gen, 0.023s retrieval, 0.000s rerank
+[open_ended/linear] Q079: 5.73s gen, 0.024s retrieval, 0.000s rerank
+[open_ended/linear] Q084: 7.53s gen, 0.032s retrieval, 0.000s rerank
+[open_ended/linear] Q087: 8.40s gen, 0.020s retrieval, 0.000s rerank
+[open_ended/linear] Q092: 5.92s gen, 0.026s retrieval, 0.000s rerank
+[open_ended/linear] Q095: 5.02s gen, 0.019s retrieval, 0.000s rerank
+[open_ended/linear] Q097: 8.47s gen, 0.021s retrieval, 0.000s rerank
+[open_ended/linear] Q100: 6.75s gen, 0.026s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q102: 4.93s gen, 0.017s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q113: 3.75s gen, 0.019s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q115: 4.48s gen, 0.018s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q116: 4.82s gen, 0.017s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q117: 5.96s gen, 0.017s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q120: 4.48s gen, 0.016s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q121: 5.16s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q124: 6.86s gen, 0.017s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q125: 5.14s gen, 0.017s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q134: 4.11s gen, 0.015s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q141: 4.14s gen, 0.016s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q143: 4.87s gen, 0.015s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q144: 7.48s gen, 0.019s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q146: 4.16s gen, 0.017s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q149: 4.82s gen, 0.016s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q154: 4.96s gen, 0.020s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q157: 5.53s gen, 0.025s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q160: 5.04s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q167: 5.08s gen, 0.021s retrieval, 0.000s rerank
+[entity_heavy/rrf] Q170: 6.74s gen, 0.023s retrieval, 0.000s rerank
+Wrote metadata to results\faithfulness_sample_novel_roundO_metadata.json
+Wrote 50 rows to results\faithfulness_sample_novel_roundO.csv (0 abstained)

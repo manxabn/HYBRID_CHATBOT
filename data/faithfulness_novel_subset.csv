@@ -1,0 +1,63 @@
+query_id,query,reference_answer,is_entity_heavy,source
+Q003,When is the next intake for the undergraduate program?,"BRAC University admits new undergraduates three times a year - Spring (classes start January), Summer (May), and Fall (September). The exact application deadline and admission test date for the next intake are published on the Admissions page (bracu.ac.bd/admissions) closer to that semester.",False,EnglishQA
+Q010,Purpose of the Wishlist event for Summer 2025?,To help plan course offerings based on student demand,False,EnglishQA
+Q013,"Random question, what should I do if I miss my mid/final?","You should inform your course instructor as soon as possible with a valid reason (such as medical emergencies). In some cases, you may need to provide documentation like medical certificates to appeal.",False,EnglishQA
+Q016,How to contact with BRACU Finance and Accounts Department?,"BRAC University
+Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
+Dhaka 1212, Bangladesh
+Phone: +88 09638464646 Ext: 1220, 1221
+
+Email: queries-accounts@bracu.ac.bd",False,EnglishQA
+Q017,"Hey, for further information regarding Admission who should I contact?","For more queries, please contact the Inquiry, Registration & Admissions Office, BRACU (Phone: +88 09638464646, Call Center Ext: 1001. You can also send e-mail at admissions@bracu.ac.bd.",False,EnglishQA
+Q019,How are students informed about changes to the transport service?,Students are informed through official BRAC University notices and announcements.,False,EnglishQA
+Q020,What is checked at the Security Supervisor Office?,"Student ID Check, All workers In out",False,EnglishQA
+Q025,Can you tell me what the difference in focus between the BSEEE and BSECE programs is?,"BSEEE (Electrical and Electronic Engineering) has a broader focus spanning power, electronics and general EEE topics, while BSECE (Electronic and Communication Engineering) concentrates more specifically on communication-related topics such as signal processing, telecommunications, microwave engineering, and data/optical/satellite communications.",False,EnglishQA
+Q030,What is the second outbound timing for Route-04 (Azimpur)?,Route-04 (Azimpur): Second trip departs at 5:10 PM.,False,EnglishQA
+Q031,"New student here, could you please provide details about the tuition fee structure at BRAC University?","For students enrolled in the Computer Science and Engineering (CSE) program at BRAC University, the tuition fee structure includes a one-time, non-refundable admission fee of BDT 30,800. Each course within the CSE program costs BDT 22,500. Additionally, students are required to pay a semester fee of BDT 11,500, which covers various facilities such as IT services and library access. There is also a one-time library membership fee of BDT 2,500. This fee structure is designed to support the comprehensive education provided in the CSE program, ensuring access to advanced resources and facilities?",False,EnglishQA
+Q032,From where does the bus leave on campus?,The bus leave campus from the Basement-1,False,EnglishQA
+Q039,Why is it advised not to select unnecessary courses in the Wishlist?,"Course demand influences planning, and unnecessary selections may misrepresent actual needs",False,EnglishQA
+Q042,What is the BRAC University Students' Transport Service?,"BRAC University provides an affordable, safe, and comfortable transport service with air-conditioned buses covering nine routes across Dhaka city.",False,EnglishQA
+Q043,What are the pickup times for Route-01 (Abdullahpur)?,"1st Trip: 6:40 AM, 2nd Trip: 8:50 AM.",False,EnglishQA
+Q046,What sports teams does the university have?,"BRAC University Football Club, BRAC University Chess Club, BRAC University Cricket Club, and BRAC University Indoor Games Club.",False,EnglishQA
+Q052,"How many semesters does BRAC University run per year, and when do they start?","BRAC University runs three semesters a year - Spring, Summer and Fall - starting in January, May and September respectively. Pharmacy admits in Spring or Summer, and LLB admits in Spring or Fall.",False,EnglishQA
+Q057,Who must participate in the Wishlist event?,"All undergraduate students attending upcoming, excluding RS-eligible students and LLB, PHR students",False,EnglishQA
+Q066,Can you tell me what the prerequisites for the Cse program are?,"Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics",False,EnglishQA
+Q067,I looked around the site but couldn't find it — how to submit report after a club event?,"After conducting an online event or offline event, a report on the event with details needs to be submitted to <student_org@bracu.ac.bd> within 7 working days. Without the report, future proposals will not be accepted and approved.
+
+• The report must contain a minimum of 500 words to a maximum of 1000 words with detailed activities, discussion, social impact, and outcome. If you get any media, coverage please provide the link.
+
+• The social media data must be included in the report such as the number of attendees, likes, shares, views, and comments. For the best accuracy please collect this information immediately after the event is completed.
+
+• After receiving and reviewing the appropriate report, we will complete the event or online program. Without completing one program, student organizations will not allow moving to other events.",False,EnglishQA
+Q068,Can you tell me what the Syndicate at BRAC University is?,"The Syndicate, chaired by the Vice-Chancellor, supervises the university's academic and administrative functions.",False,EnglishQA
+Q069,Can you tell me what the eligibility criteria for receiving financial aid are?,"BRAC University offers financial aid to students based on demonstrated financial need. Financial aid eligibility is reassessed regularly, and students may need to maintain satisfactory academic performance. Special consideration may be given to students from disadvantaged backgrounds or those facing extraordinary circumstances. The Financial Aid Office can provide more detailed information on the application process.",False,EnglishQA
+Q070,For a friend who's asking — do I need to pay any fee to collect my degree certificate at Convocation?,"No, based on published notices, there is no fee to collect your certificate at the time of Convocation itself; fees apply if you request documents outside of that window.",False,EnglishQA
+Q077,Consequence of not confirming advising during the Self-Registration period?,All selected courses will be automatically cancelled,False,EnglishQA
+Q079,What steps do I need to follow to access the Prayer Room for females?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),False,EnglishQA
+Q084,"Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?","Here is the list of all gen ed courses you can take to complete your credit:
+https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.",False,EnglishQA
+Q087,Before I forget to ask — what are the consequences of violating TARC rules and regulations?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled",False,EnglishQA
+Q092,"I wanted to ask, is there an application fee, How much is it?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]",False,EnglishQA
+Q095,"Kind of urgent, but what should I do if I can’t log in to a lab PC?","If you've changed your password and can’t remember it, contact IT support at itsupport@bracu.ac.bd.",False,EnglishQA
+Q097,Can you tell me what the important dates and deadlines for admission are?,"The exact admission test date, application deadline, and academic-session start date change every semester, so BRAC University publishes them on its Admissions page (bracu.ac.bd/admissions) ahead of each intake rather than fixing them year-round - check that page for the current cycle's dates.",False,EnglishQA
+Q100,"When was the BRAC University School of Law established, and what degree does it offer?","The School of Law was founded in 2004 and offers a four-year undergraduate Bachelor of Laws (LL.B. Hons.) program, along with a postgraduate LL.M. program.",False,EnglishQA
+Q102,What are the prerequisites for CSE251?,The prerequisite for CSE251 is CSE250 (HP).,True,Prerequisites
+Q113,What is the full prerequisite chain for ENG102?,The full prerequisite chain for ENG102 is ENG101.,True,Prerequisites
+Q115,What are the prerequisites for ENG103?,The prerequisite for ENG103 is ENG102 (HP).,True,Prerequisites
+Q116,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).,True,Prerequisites
+Q117,What are the prerequisites for CSE489?,The prerequisite for CSE489 is CSE370 (HP).,True,Prerequisites
+Q120,What is the full prerequisite chain for CSE340?,The full prerequisite chain for CSE340 is CSE260-CSE251-CSE250-PHY112-PHY111.,True,Prerequisites
+Q121,What is the full prerequisite chain for CSE471?,The full prerequisite chain for CSE471 is CSE370-CSE221-CSE220-CSE111-CSE230-CSE110.,True,Prerequisites
+Q124,What is the full prerequisite chain for CSE341?,The full prerequisite chain for CSE341 is CSE340-CSE321-CSE260-CSE221-CSE251-CSE220-CSE250-CSE111-CSE230-PHY112-CSE110-PHY111.,True,Prerequisites
+Q125,What are the prerequisites for CSE422?,The prerequisite for CSE422 is CSE221 (HP).,True,Prerequisites
+Q134,Who is the theory coordinator for CSE426?,The theory coordinator for CSE426 is TSM.,True,Coordinator
+Q141,Who is the theory coordinator for CSE490B?,The theory coordinator for CSE490B is TLQ.,True,Coordinator
+Q143,What is the coordinator email for CSE220?,The coordinator email for CSE220 is abu.ibrahim@bracu.ac.bd.,True,Coordinator
+Q144,What is the coordinator email for CSE460?,The coordinator email for CSE460 is arpa.roy@bracu.ac.bd.,True,Coordinator
+Q146,Who is the theory coordinator for CSE461?,The theory coordinator for CSE461 is KHR.,True,Coordinator
+Q149,What is the coordinator email for CSE443?,The coordinator email for CSE443 is swakkhar.shatabda@bracu.ac.bd.,True,Coordinator
+Q154,What day and time is the theory class for CSE370-16?,The theory class for CSE370-16 is on SAT+THU at 9:30 AM in room 10B-17C.,True,CourseDetails
+Q157,What day and time is the theory class for CSE460-04?,The theory class for CSE460-04 is on SAT+THU at 2:00 PM in room 09A-07C.,True,CourseDetails
+Q160,What day and time is the theory class for CSE221-14?,The theory class for CSE221-14 is on MON+WED at 9:30 AM in room 07D-19C.,True,CourseDetails
+Q167,Who teaches the lab section of CSE111-07?,"The lab section of CSE111-07 is taught by AFA,ZMD.",True,CourseDetails
+Q170,Who teaches the lab section of CSE260-15A?,"The lab section of CSE260-15A is taught by MDF,NQM.",True,CourseDetails
