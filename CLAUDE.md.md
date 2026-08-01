@@ -2767,6 +2767,45 @@ full -- all three sub-areas checked, two produced real substantive
 corrections (faithfulness/NLI direction reversal, crosslingual gap
 narrowing), one confirmed stable (sufficient-context diagnostic).
 
+## 2026-08-01 loop: TRF's retrieval-level nDCG win -- downstream generation quality is directionally positive but not significant
+
+Follow-up to the TRF/MaxSim re-ranking experiment (real, significant
+retrieval-level nDCG win, recall@1/MRR barely moved). Tested whether
+this translates to actual generation quality rather than assuming either
+way, given this project's own BM25-tuning experience already showed
+ranking-order changes don't always move generation quality.
+
+`scripts/test_trf_generation_quality.py`: same 100 open-ended queries,
+context built from the top `final_k=5` candidates under each ordering
+(baseline full_hybrid vs.\ MaxSim-reordered), real Ollama generation for
+both (200 generations total, checkpointed), scored with the standard
+BLEU/ROUGE-L/BERTScore/METEOR pipeline.
+
+**Result: directionally positive on all four metrics, none significant.**
+BLEU $+0.026$ ($p=0.152$/$0.140$), ROUGE-L $+0.020$ ($p=0.146$/$0.102$),
+BERTScore $+0.003$ ($p=0.155$/$0.102$), METEOR $+0.018$ ($p=0.238$/$0.249$)
+-- paired $t$-test/Wilcoxon respectively, $n=100$. This is consistent
+with, not contradicting, the retrieval-level finding: a real but modest
+reordering effect (nDCG moved, recall@1 barely did) produces a real but
+modest downstream signal that this sample size can detect the direction
+of but not confirm the magnitude of.
+
+**Honest bottom line**: TRF/MaxSim re-ranking is a genuinely promising
+lead -- positive at the retrieval level (confirmed) and positive at the
+generation level (trend, not confirmed) -- but still not a validated win
+by this project's own standard (paired significance at $n=100$-200 is
+the bar every deployed component cleared). Remains not deployed. A
+larger sample (the full 200-query set including entity-heavy, or a
+repeated run for more statistical power) is the natural next step if
+this is worth pursuing further, not something this loop had remaining
+budget to also complete. Latency cost (token-level encoding overhead)
+also remains unmeasured.
+
+This closes the TRF follow-up item from the "retry all the work again"
+request: retrieval-level tested and confirmed positive, generation-level
+tested and found directionally positive but not confirmed -- both
+honestly reported, neither deployed.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

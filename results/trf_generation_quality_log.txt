@@ -1,0 +1,15 @@
+Open-ended queries: 100
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 6576.25it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 5608.67it/s]
+  10/100 done
+  20/100 done
+  30/100 done
+  40/100 done
+  50/100 done
+  60/100 done
+  70/100 done
+  80/100 done
+  90/100 done
+  100/100 done
+
+Wrote E:\RAG\updated_Rag\RAG-main\results\trf_generation_quality_raw.csv
