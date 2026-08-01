@@ -2237,6 +2237,50 @@ their own wording, not Python's "MemoryError" or CUDA's "out of memory"
 -- any future GPU/model-loading job's failure-watch pattern should
 include this phrasing too.
 
+## 2026-08-01 loop: reranker pool=5 ablation also stale -- re-verified, paper.tex corrected
+
+Follow-up to the reranker-on staleness fix above: `results/novel_
+pipeline_raw_outputs_roundN_reranker_pool5.csv` (23:57 Jul 31, before
+both the exact-match fix and BM25 retuning) had the same staleness
+problem as roundN_reranker. Re-ran it (`--use-reranker --rerank-pool
+-size 5`) three times before it actually completed -- two real infra
+crashes in a row, both fixed rather than worked around:
+
+1. First attempt died instantly (397 bytes output) with a garbled
+   `memory allocation ... failed` / a nonsense huge byte count --
+   checked RAM/GPU/disk were actually healthy first, diagnosed as an
+   OpenBLAS thread-pool race between the two models loading concurrently
+   (embedding model + reranker), fixed with `OPENBLAS_NUM_THREADS=4
+   OMP_NUM_THREADS=4 MKL_NUM_THREADS=4` (see the dedicated entry above).
+2. Second attempt reached Q64/200 then hit a real, fatal `requests.
+   exceptions.ConnectionError` -- Ollama's own serve process was gone
+   entirely, `curl .../api/tags` refused the connection. `ps` found only
+   an orphaned `llama-server.exe` child with no parent `ollama.exe`/
+   `ollama app.exe`. Killed the orphan, relaunched `ollama serve` from a
+   shell confirmed to have `OLLAMA_MODELS=E:\ollama_models` set -- but
+   the very next attempt got a 404 on `/api/generate` because a stray
+   `ollama app.exe` tray process had auto-relaunched itself in the
+   background WITHOUT that env var (`/api/tags` returned `{"models":[]}`
+   -- the exact incident pattern from earlier this session, recurring).
+   Killed both stray processes again, relaunched once more, and this
+   time verified with a real `/api/generate` call (not just `/api/tags`)
+   before retrying the job.
+3. Third attempt completed cleanly: 200/200 rows, 1 abstained.
+
+**Result, scored and tested against the same stable baseline**: the
+pool=5 reranker's two remaining significant losses from the stale
+measurement (BERTScore $p=0.037$, METEOR $p=0.020$, both vs.\ BM25-only)
+are GONE under the current system -- all 16 (comparison x metric)
+combinations are now non-significant ($p\geq0.073$), including vs.\
+vector_only. Point estimates are small and mixed in sign (BLEU is now
+directionally +0.008/+0.005 ahead of full_hybrid/bm25_only, not behind).
+**Not a positive finding** -- this is the pool=5 effect shrinking into
+pure noise, not a reversal to an advantage. The wider pool-of-10
+reranker-on result (previous entry) still shows one real, smaller
+negative (METEOR vs.\ BM25-only) -- that remains the informative
+comparison. Updated the pool=5 paragraph in Section~\ref{subsec:reranker
+-ablation} accordingly; recompiled cleanly (27 pages).
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
