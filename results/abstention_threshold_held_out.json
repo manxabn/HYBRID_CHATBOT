@@ -1,0 +1,31 @@
+{
+  "train_fraction": 0.7,
+  "split_seed": 42,
+  "sample_seed": 42,
+  "entity_heavy": {
+    "signal": "query_confidence",
+    "threshold": 0.0114,
+    "train_accuracy": 1.0,
+    "test_accuracy": 0.9444,
+    "test_precision": 0.8889,
+    "test_recall": 1.0,
+    "test_f1": 0.9412,
+    "n_train": 43,
+    "n_test": 18,
+    "test_accuracy_ci95_lo": 0.7271,
+    "test_accuracy_ci95_hi": 0.9986
+  },
+  "open_ended": {
+    "signal": "query_top1_score",
+    "threshold": 0.9995,
+    "train_accuracy": 0.6731,
+    "test_accuracy": 0.5315,
+    "test_precision": 0.5294,
+    "test_recall": 0.4909,
+    "test_f1": 0.5094,
+    "n_train": 260,
+    "n_test": 111,
+    "test_accuracy_ci95_lo": 0.4345,
+    "test_accuracy_ci95_hi": 0.6269
+  }
+}

@@ -2624,6 +2624,46 @@ faculty_room_lookup) -- this is a real, positive retrieval-level lead
 worth a follow-up generation-quality + latency test, not yet a
 recommendation to ship.
 
+## 2026-08-01 loop: abstention threshold held-out re-validation -- confirmed real, asymmetric overfitting
+
+Closes the methodological gap flagged earlier tonight (`calibrate_
+abstention.py` sweeps for max accuracy on the same set it reports
+accuracy on, no train/test split). Built `scripts/calibrate_abstention_
+held_out.py`: reuses the original script's data-loading/metric functions
+by import (not reimplementation), adds a stratified 70/30 train/test
+split per route (seed 42, matching this project's usual split
+convention), selects the threshold on train only, evaluates on test only.
+
+**Result: the overfitting concern was real, and asymmetric between
+routes.** entity_heavy generalizes well: train accuracy $1.000$ ($n=43$),
+held-out test accuracy $0.944$ ($n=18$, 95% CI $[0.727, 0.999]$) -- close
+to the original in-sample $0.95$, so despite the small sample this
+route's threshold isn't meaningfully overfit. open_ended does NOT
+generalize well: train accuracy $0.673$ ($n=260$), held-out test accuracy
+only $0.532$ ($n=111$, 95% CI $[0.435, 0.627]$) -- barely above chance on
+this class-balanced set, well below the $0.710$ in-sample figure the
+deployed system's `abstention_threshold.json` currently reports.
+
+**Not a false claim already in the paper** -- checked Section~\ref
+{subsec:abstention} and Table~\ref{tab:abstention-calib} carefully
+before writing anything; both say "calibration" throughout and never
+claim held-out/generalization testing, so this is a genuine new
+disclosure, not a correction of an existing false one. Added it to the
+existing "Third" limitation bullet in Section~\ref{sec:discussion}'s
+Limitations paragraph (which already discussed this exact mechanism's
+recall improvement), rather than write a wholly new limitation --
+extending an existing honest disclosure with real numbers is the same
+class of edit as every correctness fix made freely tonight, not new
+paper content requiring separate confirmation the way conditioning_v2
+did. Recompiles cleanly (29 pages).
+
+**Not yet done**: actually re-calibrating the open-ended threshold using
+the held-out methodology (this script only measures the current
+threshold's generalization gap, it doesn't produce a new, properly
+-validated replacement threshold) -- flagged in the paper text itself as
+"a concrete next step this revision identifies but does not itself
+complete," an honest scope boundary rather than a silently-dropped task.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
