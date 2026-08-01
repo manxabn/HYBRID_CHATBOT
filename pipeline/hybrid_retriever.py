@@ -719,22 +719,35 @@ class HybridRetriever:
         retrieval should always win -- so route on the same is_entity_heavy
         signal the sweep itself was stratified by:
 
-          - entity-heavy (course-code / alias match): RRF fusion at
-            lambda_entity=0.9, i.e. heavily lexical-weighted rank fusion.
-            RRF (fusion="rrf") was implemented in this file but never
-            evaluated before this pipeline (see module docstring) -- this is
-            the first time it's actually exercised on real queries.
-          - open-ended: linear fusion at lambda_open=0.5, i.e. the existing,
+          - entity-heavy (course-code / alias match): linear fusion at
+            lambda_entity=0.9, heavily lexical-weighted.
+          - open-ended: linear fusion at lambda_open=0.5, the existing,
             already-validated deployed default (Table 1 / Section 4.2)
             unchanged.
+
+        2026-08-01: entity-heavy previously routed through RRF fusion
+        instead of linear. A deconfounding diagnostic (Section 4.3, RRF
+        k-sweep + isolation test) found RRF's own fusion choice is
+        significantly NEGATIVE once isolated from the unambiguous-match
+        score ceiling (p<0.0001 on Recall@1/3) -- but in every real,
+        non-isolated test on this corpus, the ceiling fires on all 100/100
+        entity-heavy test queries, making RRF and linear fusion produce
+        byte-identical top-1 results regardless (0 discordant recall@1
+        pairs, verified directly against the live retriever before this
+        change, not assumed from the isolation test alone -- results/
+        entity_heavy_rrf_vs_linear_check.csv). Switching to linear removes
+        a component with a measured negative effect and zero measured
+        upside, changing no observed behavior on the current test set.
+        RRF fusion (fusion="rrf") remains implemented and available for
+        future use; this call site simply no longer selects it by default.
 
         Returns (results, meta) where meta records which branch fired, so
         downstream evaluation can break results down by routing decision
         the same way Section 4.3 breaks down by entity_heavy/open_ended."""
         entity_heavy = self.is_entity_heavy(query)
         if entity_heavy:
-            results = self.retrieve(query, lambda_entity, fusion="rrf", top_n=top_n)
-            meta = {"route": "entity_heavy", "fusion": "rrf", "lambda": lambda_entity}
+            results = self.retrieve(query, lambda_entity, fusion="linear", top_n=top_n)
+            meta = {"route": "entity_heavy", "fusion": "linear", "lambda": lambda_entity}
         else:
             results = self.retrieve(query, lambda_open, fusion="linear", top_n=top_n)
             meta = {"route": "open_ended", "fusion": "linear", "lambda": lambda_open}

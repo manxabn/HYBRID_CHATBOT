@@ -2866,6 +2866,56 @@ generation-quality tested (promising, not yet significant), abstention
 threshold actually re-calibrated (one real deployment, one correctly
 declined).
 
+## 2026-08-01: fixed the adaptive-routing weakness instead of only disclosing it -- verified real improvement
+
+User pushback on a published weaknesses list, correctly distinguishing
+"genuine limitations to disclose" from "things I could actually go fix."
+One item was clearly the latter: the deconfounding diagnostic (this
+file, multiple earlier entries) had proven `retrieve_adaptive`'s
+entity-heavy branch (RRF fusion at $\lambda=0.9$) was significantly
+NEGATIVE once isolated from the exact-match ceiling, with zero measured
+benefit in any real (non-isolated) test -- 100/100 ties with linear
+fusion on every entity-heavy test query, because the ceiling determines
+the outcome regardless of fusion method. There was no case where keeping
+RRF was better than removing it.
+
+**Verified before changing anything**: ran a live, current-system
+comparison (`results/entity_heavy_rrf_vs_linear_check.csv`) -- 0
+discordant recall@1 pairs between RRF and linear@0.9 across all 100
+entity-heavy queries, confirming the isolation test's implication holds
+under the live retriever, not just the patched diagnostic build.
+
+**Changed `pipeline/hybrid_retriever.py`'s `retrieve_adaptive`**:
+entity-heavy branch now calls `fusion="linear"` instead of `fusion="rrf"`
+at the same $\lambda=0.9$. `fusion="rrf"` remains implemented and
+callable, just no longer selected by this call site. Verified live
+through `NovelPipeline.answer()` on a real query (correct answer,
+`route=entity_heavy fusion=linear`), then all 24 pytest regression tests
+pass.
+
+**Re-measured everything downstream** (not just accepted the theory that
+it wouldn't matter): `measure_ir_metrics.py`, `isolate_adaptive_routing.
+py`. Result -- a real, measured improvement, not merely a removed
+caveat: Recall@1/3/5/MRR ties preserved EXACTLY (0 regression, as the
+zero-discordant-pairs check predicted); the nDCG@5 gap vs.\ BM25-only
+roughly HALVED ($-0.0217\to-0.0087$, still significant, $p<0.001$); the
+nDCG@5 gap vs.\ full hybrid COLLAPSED to essentially zero ($-0.0136\to
+-0.0006$, $p=0.947$, no longer even borderline). A component with a
+proven negative effect and zero offsetting benefit is gone; the system
+measurably improved as a direct result.
+
+**Updated every place in paper.tex that described the old mechanism**
+(nine locations: abstract twice, Section~\ref{subsec:routing},
+Table~\ref{tab:adaptive-isolated} + its two surrounding paragraphs, the
+RRF $k$-sweep section, the by-pipeline-stage summary table, RQ2
+discussion, conclusion) to describe the fix and the new numbers, not the
+old weakness as if it were still open. Recompiles cleanly (31 pages, 0
+undefined refs).
+
+**What did NOT change**: the small residual nDCG disadvantage vs.\
+BM25-only ($-0.0087$, still significant) is disclosed plainly as not yet
+fully explained, not smoothed over now that the bigger issue is fixed.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
