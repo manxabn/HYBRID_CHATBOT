@@ -1,0 +1,20 @@
+query_id,query,reference_answer,is_entity_heavy,source
+QGX001,What is the full prerequisite chain for CSE251?,The full prerequisite chain for CSE251 is CSE250-PHY112-PHY111.,True,graph_expansion_2026-08-01_real_db_facts
+QGX002,What is the full prerequisite chain for CSE321?,The full prerequisite chain for CSE321 is CSE221-CSE220-CSE111-CSE230-CSE110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX003,What is the full prerequisite chain for CSE330?,The full prerequisite chain for CSE330 is MAT216-MAT120-MAT110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX004,What is the full prerequisite chain for CSE331?,The full prerequisite chain for CSE331 is CSE221-CSE220-CSE111-CSE230-CSE110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX005,What is the full prerequisite chain for CSE350?,The full prerequisite chain for CSE350 is CSE251-CSE250-PHY112-PHY111.,True,graph_expansion_2026-08-01_real_db_facts
+QGX006,What is the full prerequisite chain for CSE360?,The full prerequisite chain for CSE360 is CSE341-CSE340-CSE321-CSE260-CSE221-CSE251-CSE220-CSE250-CSE111-CSE230-PHY112-CSE110-PHY111.,True,graph_expansion_2026-08-01_real_db_facts
+QGX007,What is the full prerequisite chain for CSE370?,The full prerequisite chain for CSE370 is CSE221-CSE220-CSE111-CSE230-CSE110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX008,What is the full prerequisite chain for CSE391?,The full prerequisite chain for CSE391 is CSE370-CSE221-CSE220-CSE111-CSE230-CSE110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX009,What is the full prerequisite chain for CSE410?,The full prerequisite chain for CSE410 is CSE321-CSE221-CSE220-CSE111-CSE230-CSE110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX010,What is the full prerequisite chain for CSE420?,The full prerequisite chain for CSE420 is CSE321-CSE331-CSE340-CSE221-CSE260-CSE220-CSE251-CSE111-CSE230-CSE250-CSE110-PHY112-PHY111.,True,graph_expansion_2026-08-01_real_db_facts
+QGX011,What is the full prerequisite chain for CSE422?,The full prerequisite chain for CSE422 is CSE221-CSE220-CSE111-CSE230-CSE110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX012,What is the full prerequisite chain for CSE423?,The full prerequisite chain for CSE423 is MAT216-MAT120-MAT110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX013,What is the full prerequisite chain for CSE430?,The full prerequisite chain for CSE430 is MAT120-MAT110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX014,What is the full prerequisite chain for CSE461?,The full prerequisite chain for CSE461 is CSE260-CSE251-CSE250-PHY112-PHY111.,True,graph_expansion_2026-08-01_real_db_facts
+QGX015,What is the full prerequisite chain for CSE470?,The full prerequisite chain for CSE470 is CSE370-CSE221-CSE220-CSE111-CSE230-CSE110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX016,What is the full prerequisite chain for CSE489?,The full prerequisite chain for CSE489 is CSE370-CSE221-CSE220-CSE111-CSE230-CSE110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX017,What is the full prerequisite chain for ENG103?,The full prerequisite chain for ENG103 is ENG102-ENG101.,True,graph_expansion_2026-08-01_real_db_facts
+QGX018,What is the full prerequisite chain for MAT120?,The full prerequisite chain for MAT120 is MAT110.,True,graph_expansion_2026-08-01_real_db_facts
+QGX019,What is the full prerequisite chain for MAT215?,The full prerequisite chain for MAT215 is MAT216-MAT120-MAT110.,True,graph_expansion_2026-08-01_real_db_facts

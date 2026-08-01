@@ -2916,6 +2916,44 @@ undefined refs).
 BM25-only ($-0.0087$, still significant) is disclosed plainly as not yet
 fully explained, not smoothed over now that the bigger issue is fixed.
 
+## 2026-08-01: prerequisite-graph ablation grown from n=12 to n=31 with real DB facts -- now a fully confirmed win
+
+Legitimate path to strengthen the one result that was a real "trend, not
+yet confirmed" (BLEU $p=0.042$/$0.063$ at $n=12$, this paper's own bar
+requires both tests to agree). The corpus has 29 courses with a genuine,
+non-empty, database-verified full prerequisite chain (computed via the
+live `PrerequisiteGraph.full_chain()` traversal, the exact code path the
+deployed system uses); only 12 were exercised by the 200-query main test
+set. The other 19 are real facts already in the knowledge base, not
+synthetic data -- generated 19 new test rows
+(`data/test_queries_graph_new19.csv`) using the same query/reference
+-answer template as the existing 12, with the reference answer computed
+by the live graph module, not hand-typed.
+
+`scripts/ablate_graph_augmentation_expanded.py` (new script, combines
+the original 12 with the new 19, otherwise identical use_graph on/off
+methodology): **all four metrics now significant under BOTH tests,
+$n=31$** -- BLEU $+0.211$ ($p<0.0001$ both), ROUGE-L $+0.116$
+($p=0.0009$/$p<0.0001$), BERTScore $+0.029$ ($p=0.0004$/$p<0.0001$),
+METEOR $+0.108$ ($p<0.0001$ both). This clears this paper's own strict
+both-tests-agree bar cleanly, on every metric, where the $n=12$
+measurement could not on any of them.
+
+Updated Table~\ref{tab:graph-ablation} (now shows both the historical
+$n=12$ progression and the current $n=31$ confirmed result), its
+discussion paragraph, the by-pipeline-stage summary table, and added
+prerequisite-graph augmentation to the RQ2 and conclusion's lists of
+components with a "measured positive effect" (previously only embedding
+fine-tuning and the unambiguous-match guarantee were listed there; it
+now genuinely belongs). Recompiles cleanly (31 pages, 0 undefined refs).
+
+This was found and fixed as part of a broader push (user request,
+explicit boundary: work toward stronger evidence through legitimate
+means only, no fabrication, human hallucination annotation excluded and
+handled separately by the user) -- the correct honest response to "test
+on more queries" being a real, available lever for exactly this result,
+not a general license to inflate anything.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

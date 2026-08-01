@@ -1,0 +1,66 @@
+Chain-triggering queries: 31 (12 original + 19 newly added real facts)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<?, ?it/s]
+  [graph_on] Q105: abstained=False graph_augmented=True
+  [graph_on] Q107: abstained=False graph_augmented=True
+  [graph_on] Q109: abstained=False graph_augmented=True
+  [graph_on] Q110: abstained=False graph_augmented=True
+  [graph_on] Q113: abstained=False graph_augmented=True
+  [graph_on] Q120: abstained=False graph_augmented=True
+  [graph_on] Q121: abstained=False graph_augmented=True
+  [graph_on] Q122: abstained=False graph_augmented=True
+  [graph_on] Q124: abstained=False graph_augmented=True
+  [graph_on] Q127: abstained=False graph_augmented=True
+  [graph_on] Q129: abstained=False graph_augmented=True
+  [graph_on] Q130: abstained=False graph_augmented=True
+  [graph_on] QGX001: abstained=False graph_augmented=True
+  [graph_on] QGX002: abstained=False graph_augmented=True
+  [graph_on] QGX003: abstained=False graph_augmented=True
+  [graph_on] QGX004: abstained=False graph_augmented=True
+  [graph_on] QGX005: abstained=False graph_augmented=True
+  [graph_on] QGX006: abstained=False graph_augmented=True
+  [graph_on] QGX007: abstained=False graph_augmented=True
+  [graph_on] QGX008: abstained=False graph_augmented=True
+  [graph_on] QGX009: abstained=False graph_augmented=True
+  [graph_on] QGX010: abstained=False graph_augmented=True
+  [graph_on] QGX011: abstained=False graph_augmented=True
+  [graph_on] QGX012: abstained=False graph_augmented=True
+  [graph_on] QGX013: abstained=False graph_augmented=True
+  [graph_on] QGX014: abstained=False graph_augmented=True
+  [graph_on] QGX015: abstained=False graph_augmented=True
+  [graph_on] QGX016: abstained=False graph_augmented=True
+  [graph_on] QGX017: abstained=False graph_augmented=True
+  [graph_on] QGX018: abstained=False graph_augmented=True
+  [graph_on] QGX019: abstained=False graph_augmented=True
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 5248.80it/s]
+  [graph_off] Q105: abstained=False graph_augmented=False
+  [graph_off] Q107: abstained=False graph_augmented=False
+  [graph_off] Q109: abstained=False graph_augmented=False
+  [graph_off] Q110: abstained=False graph_augmented=False
+  [graph_off] Q113: abstained=False graph_augmented=False
+  [graph_off] Q120: abstained=False graph_augmented=False
+  [graph_off] Q121: abstained=False graph_augmented=False
+  [graph_off] Q122: abstained=False graph_augmented=False
+  [graph_off] Q124: abstained=False graph_augmented=False
+  [graph_off] Q127: abstained=False graph_augmented=False
+  [graph_off] Q129: abstained=False graph_augmented=False
+  [graph_off] Q130: abstained=False graph_augmented=False
+  [graph_off] QGX001: abstained=False graph_augmented=False
+  [graph_off] QGX002: abstained=False graph_augmented=False
+  [graph_off] QGX003: abstained=False graph_augmented=False
+  [graph_off] QGX004: abstained=False graph_augmented=False
+  [graph_off] QGX005: abstained=False graph_augmented=False
+  [graph_off] QGX006: abstained=False graph_augmented=False
+  [graph_off] QGX007: abstained=False graph_augmented=False
+  [graph_off] QGX008: abstained=False graph_augmented=False
+  [graph_off] QGX009: abstained=False graph_augmented=False
+  [graph_off] QGX010: abstained=False graph_augmented=False
+  [graph_off] QGX011: abstained=False graph_augmented=False
+  [graph_off] QGX012: abstained=False graph_augmented=False
+  [graph_off] QGX013: abstained=False graph_augmented=False
+  [graph_off] QGX014: abstained=False graph_augmented=False
+  [graph_off] QGX015: abstained=False graph_augmented=False
+  [graph_off] QGX016: abstained=False graph_augmented=False
+  [graph_off] QGX017: abstained=False graph_augmented=False
+  [graph_off] QGX018: abstained=False graph_augmented=False
+  [graph_off] QGX019: abstained=False graph_augmented=False
+Wrote E:\RAG\updated_Rag\RAG-main\results\graph_ablation_expanded_raw.csv
