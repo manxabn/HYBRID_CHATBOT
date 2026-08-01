@@ -140,46 +140,46 @@
 \newlabel{subsec:nli-faithfulness}{{4.8.1}{19}{An Architecturally Independent Cross-Check}{subsubsection.4.8.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score.}}{20}{table.caption.17}\protected@file@percent }
 \newlabel{tab:nli-faithfulness}{{12}{20}{Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score}{table.caption.17}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Banglish retrieval ablation and adaptive pipeline, after the exact-match coverage fix ($n=100$).}}{20}{table.caption.18}\protected@file@percent }
-\newlabel{tab:banglish-ablation}{{13}{20}{Banglish retrieval ablation and adaptive pipeline, after the exact-match coverage fix ($n=100$)}{table.caption.18}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Banglish retrieval ablation and adaptive pipeline, re-measured 2026-08-01 under the deployed embedding model (\texttt  {finetuned\_minilm\_hard\_negatives\_structured\_banglish\_expanded}) and the current retriever ($n=100$). The previous measurement (2026-07-28) predated this embedding model's own training run (2026-07-31) as well as the exact-match and BM25 fixes, and was found stale on re-verification -- see discussion below.}}{20}{table.caption.18}\protected@file@percent }
+\newlabel{tab:banglish-ablation}{{13}{20}{Banglish retrieval ablation and adaptive pipeline, re-measured 2026-08-01 under the deployed embedding model (\texttt {finetuned\_minilm\_hard\_negatives\_structured\_banglish\_expanded}) and the current retriever ($n=100$). The previous measurement (2026-07-28) predated this embedding model's own training run (2026-07-31) as well as the exact-match and BM25 fixes, and was found stale on re-verification -- see discussion below}{table.caption.18}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Banglish Evaluation}{20}{subsection.4.9}\protected@file@percent }
 \newlabel{subsec:banglish}{{4.9}{20}{Banglish Evaluation}{subsection.4.9}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.1}Query Translation (Null Result)}{20}{subsubsection.4.9.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.2}BM25 Code-Mixed Normalization (Null Result)}{20}{subsubsection.4.9.2}\protected@file@percent }
 \citation{joren2024}
-\citation{dogruoz2023representativeness}
 \@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Cross-lingual stress test: top-5 retrieval accuracy, query translation on vs.\ off ($n=9$, EnglishQA-only content, Banglish-phrased queries).}}{21}{table.caption.19}\protected@file@percent }
 \newlabel{tab:crosslingual-stress}{{14}{21}{Cross-lingual stress test: top-5 retrieval accuracy, query translation on vs.\ off ($n=9$, EnglishQA-only content, Banglish-phrased queries)}{table.caption.19}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Cross-lingual sufficient-context outcomes ($n=9$, same stress-test queries as Table~\ref {tab:crosslingual-stress}).}}{21}{table.caption.20}\protected@file@percent }
-\newlabel{tab:sufficient-context-bilingual}{{15}{21}{Cross-lingual sufficient-context outcomes ($n=9$, same stress-test queries as Table~\ref {tab:crosslingual-stress})}{table.caption.20}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.1}Query Translation (Null Result)}{21}{subsubsection.4.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.2}BM25 Code-Mixed Normalization (Null Result)}{21}{subsubsection.4.9.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.3}Why the Two Banglish-Specific Ablations Show Null Effects}{21}{subsubsection.4.9.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.4}Cross-Lingual Stress Test: Query Translation, Validated}{21}{subsubsection.4.9.4}\protected@file@percent }
 \newlabel{subsec:crosslingual-stress}{{4.9.4}{21}{Cross-Lingual Stress Test: Query Translation, Validated}{subsubsection.4.9.4}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.5}Cross-Lingual Sufficient-Context Gating: A Mechanistic Diagnostic}{21}{subsubsection.4.9.5}\protected@file@percent }
 \newlabel{subsec:crosslingual-sufficient-context}{{4.9.5}{21}{Cross-Lingual Sufficient-Context Gating: A Mechanistic Diagnostic}{subsubsection.4.9.5}{}}
+\citation{dogruoz2023representativeness}
 \citation{huang2026survey}
 \citation{huang2026survey}
 \citation{huang2026survey}
-\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces This paper's ablations regrouped by RAG pipeline stage \citep  {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies).}}{22}{table.caption.21}\protected@file@percent }
-\newlabel{tab:by-stage}{{16}{22}{This paper's ablations regrouped by RAG pipeline stage \citep {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies)}{table.caption.21}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Cross-lingual sufficient-context outcomes ($n=9$, same stress-test queries as Table~\ref {tab:crosslingual-stress}).}}{22}{table.caption.20}\protected@file@percent }
+\newlabel{tab:sufficient-context-bilingual}{{15}{22}{Cross-lingual sufficient-context outcomes ($n=9$, same stress-test queries as Table~\ref {tab:crosslingual-stress})}{table.caption.20}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.6}Expanding the Stress Test: A More Cautious Picture at Larger \emph  {n}}{22}{subsubsection.4.9.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Results Organized by Pipeline Stage}{22}{subsection.4.10}\protected@file@percent }
 \newlabel{subsec:by-stage}{{4.10}{22}{Results Organized by Pipeline Stage}{subsection.4.10}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.11}Pipeline Efficiency}{22}{subsection.4.11}\protected@file@percent }
 \newlabel{subsec:efficiency}{{4.11}{22}{Pipeline Efficiency}{subsection.4.11}{}}
-\citation{cormack2009}
-\citation{henderson2017mnr}
-\citation{joren2024}
-\citation{liu2024lost,jin2024longcontext}
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces This paper's ablations regrouped by RAG pipeline stage \citep  {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies).}}{23}{table.caption.21}\protected@file@percent }
+\newlabel{tab:by-stage}{{16}{23}{This paper's ablations regrouped by RAG pipeline stage \citep {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies)}{table.caption.21}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Comparison of data ingestion time across cold-start, incremental-update, and no-change scenarios.}}{23}{figure.caption.22}\protected@file@percent }
 \newlabel{fig:ingestion-time}{{6}{23}{Comparison of data ingestion time across cold-start, incremental-update, and no-change scenarios}{figure.caption.22}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}\uppercase {Discussion}}{23}{section.5}\protected@file@percent }
 \newlabel{sec:discussion}{{5}{23}{\uppercase {Discussion}}{section.5}{}}
+\citation{cormack2009}
+\citation{henderson2017mnr}
+\citation{joren2024}
+\citation{liu2024lost,jin2024longcontext}
 \citation{dror2018hitchhiker}
 \citation{dogruoz2023representativeness}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Limitations}{24}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Future Work}{24}{subsection.5.2}\protected@file@percent }
 \bibcite{adamopoulou2021}{{1}{2021}{{Adamopoulou and Moussiades}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Future Work}{25}{subsection.5.2}\protected@file@percent }
 \bibcite{banerjee2005}{{2}{2005}{{Banerjee and Lavie}}{{}}}
 \bibcite{brandtzaeg2017}{{3}{2017}{{Brandtzaeg and F{\o }lstad}}{{}}}
 \bibcite{cormack2009}{{4}{2009}{{Cormack et~al.}}{{}}}

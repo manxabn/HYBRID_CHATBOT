@@ -2328,6 +2328,53 @@ when a real upstream fix lands, EVERY downstream measurement that used
 the old retriever is a candidate for staleness, not just the one most
 directly related to the fix.
 
+## 2026-08-01 loop: Banglish ablation table also stale -- but from a different root cause than every other fix tonight
+
+Fourth staleness finding this loop, and a genuinely new failure mode:
+`results/ablation_metrics_summary_roundL_banglish.csv` and `novel_
+pipeline_metrics_summary_roundL_banglish.csv` (2026-07-28) predate
+`models/finetuned_minilm_hard_negatives_structured_banglish_expanded`
+(trained 2026-07-31) -- the embedding model actually deployed today.
+Unlike every other fix tonight (exact-match, BM25 retuning), which only
+affects $\lambda>0$ configs, this affects Vector-only specifically,
+since it's the one configuration that is purely a function of embedding
+quality.
+
+Re-ran the full Banglish ablation (`scripts/run_ablation.py --queries
+data/test_queries_banglish.csv`, 400 gens) and the adaptive/novel pass
+(100 gens) under the current retriever. **Real, large, statistically
+confirmed change**: Vector-only improved significantly on all four
+metrics (BLEU $+0.057$, ROUGE-L $+0.045$, BERTScore $+0.008$, METEOR
+$+0.039$, all $p<0.05$ paired-$t$, $n=100$, via a new one-off comparison
+script against the old per-query file). BM25-only and Full Hybrid show
+no significant change (consistent with the English-side finding that
+these fixes barely move generation quality), confirming the driver
+really is the embedding retrain, not the exact-match/BM25 fixes bleeding
+into this table too.
+
+**This is a genuinely positive finding, not another "was significant,
+now isn't" correction** -- the Banglish-expanded hard-negative retrain
+was real and simply never got re-measured against the full ablation
+table after landing. The adaptive pipeline's own comparison to the
+baselines is qualitatively unchanged (still a clean tie on all four
+metrics vs.\ all three baselines) but the previous measurement's one
+borderline exception (BERTScore vs.\ BM25-only, $p=0.046$/$0.116$) is now
+fully non-significant ($p=0.955$/$0.548$). Abstention rate on this test
+set moved from 1/100 to 2/100 -- too small an n to test, reported as a
+raw fact only.
+
+Updated Table~\ref{tab:banglish-ablation} and its discussion in
+Section~\ref{subsec:banglish} with the new numbers and this different
+root-cause explanation; recompiled cleanly (27 pages).
+
+**Not yet checked**: the query-translation-ablation sub-comparison in
+the same section (BLEU 0.810 vs.\ 0.819, null result) uses the same
+embedding model per this table's own staleness, but since both arms of
+that comparison share one embedding model within a single run, a stale
+embedding model would shift both arms together and is unlikely to flip
+the null-effect conclusion -- deprioritized rather than re-run, flagged
+here in case it's worth closing later for completeness.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.

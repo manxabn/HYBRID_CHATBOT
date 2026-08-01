@@ -1,0 +1,2 @@
+config,bleu,rougeL,bertscore,meteor,n
+adaptive_novel,0.7951,0.8825,0.9767,0.8847,100

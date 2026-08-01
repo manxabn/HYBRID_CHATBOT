@@ -474,21 +474,23 @@ The two methods' absolute scales are not comparable -- NLI entailment is a stric
 \label{subsec:banglish}
 
 \begin{table}[t]
-\caption{Banglish retrieval ablation and adaptive pipeline, after the exact-match coverage fix ($n=100$).}\label{tab:banglish-ablation} \centering
+\caption{Banglish retrieval ablation and adaptive pipeline, re-measured 2026-08-01 under the deployed embedding model (\texttt{finetuned\_minilm\_hard\_negatives\_structured\_banglish\_expanded}) and the current retriever ($n=100$). The previous measurement (2026-07-28) predated this embedding model's own training run (2026-07-31) as well as the exact-match and BM25 fixes, and was found stale on re-verification -- see discussion below.}\label{tab:banglish-ablation} \centering
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 Variant & BLEU & ROUGE-L & BERTSc. & METEOR \\
 \hline
-Full Hybrid & 0.821 & 0.903 & 0.979 & 0.912 \\
-Adaptive pipeline & 0.827 & 0.906 & 0.980 & 0.914 \\
-BM25-only & 0.789 & 0.871 & 0.974 & 0.875 \\
-Vector-only & 0.773 & 0.862 & 0.973 & 0.861 \\
+Full Hybrid & 0.822 & 0.900 & 0.979 & 0.900 \\
+Adaptive pipeline & 0.811 & 0.899 & 0.980 & 0.902 \\
+BM25-only & 0.825 & 0.888 & 0.978 & 0.891 \\
+Vector-only & 0.830 & 0.907 & 0.981 & 0.900 \\
 No-retrieval & 0.015 & 0.134 & 0.832 & 0.184 \\
 \hline
 \end{tabular}
 \end{table}
 
-On Banglish (Table~\ref{tab:banglish-ablation}), matched paired testing ($n=99/100$, one query abstained on) finds the adaptive pipeline statistically indistinguishable from full hybrid, BM25-only, and vector-only on all four metrics ($p\geq0.08$ throughout, with one borderline exception: BERTScore vs.\ BM25-only reaches significance under the paired $t$-test, $p=0.046$, but not under the matched Wilcoxon test, $p=0.116$, so we treat this as inconclusive rather than a confirmed effect), and significantly ahead of no-retrieval ($p<0.001$). This remains a cleaner tie than the English result: on this test set, retrieval method essentially does not matter for Banglish queries as long as some form of retrieval is used at all, which we discuss further in Section~\ref{sec:discussion} together with a structural reason to treat this test set's ability to discriminate between retrieval methods with some caution.
+Table~\ref{tab:banglish-ablation} has itself been re-measured since the previous revision, and the reason turned out to be different from every other staleness fix in this paper: unlike the exact-match and BM25 fixes, which only affect configurations with $\lambda>0$, the previous Banglish measurement (2026-07-28) predated the Banglish-expanded hard-negative retrain (2026-07-31) that is the embedding model actually deployed today (Section~\ref{subsec:hard-negatives}) -- a staleness source specific to this table, since Vector-only ($\lambda=0$) is the one configuration purely dependent on embedding quality and cannot be affected by either the exact-match or BM25 fixes at all. Re-scoring against the previous measurement confirms this directly: Vector-only improved significantly on all four metrics (BLEU $+0.057$, ROUGE-L $+0.045$, BERTScore $+0.008$, METEOR $+0.039$, all $p<0.05$, paired $t$-test, $n=100$), while BM25-only and Full Hybrid show no significant change (BM25-only BLEU $p=0.058$, borderline but not significant; all other comparisons $p\geq0.13$), consistent with those two configurations depending on the lexical stream and the exact-match mechanism far more than on embedding quality specifically. This is a genuine, previously-undiscovered staleness gap we are glad to close, and a real positive result for the Banglish-expanded retrain: it was simply never re-measured against the full ablation table after that retrain landed.
+
+With the current embedding model in place, matched paired testing ($n=98/100$, two queries abstained on, up from one in the previous measurement) finds the adaptive pipeline statistically indistinguishable from full hybrid, BM25-only, and vector-only on all four metrics ($p\geq0.31$ throughout under both tests) -- notably cleaner than the previous measurement's one borderline exception (BERTScore vs.\ BM25-only, then $p=0.046$/$0.116$, now $p=0.955$/$0.548$, no longer close to significance under either test) -- and significantly ahead of no-retrieval ($p<0.001$). This remains a cleaner tie than the English result: on this test set, retrieval method essentially does not matter for Banglish queries as long as some form of retrieval is used at all, which we discuss further in Section~\ref{sec:discussion} together with a structural reason to treat this test set's ability to discriminate between retrieval methods with some caution.
 
 \subsubsection{Query Translation (Null Result)}
 

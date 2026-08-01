@@ -1,0 +1,12 @@
+{
+  "model": "llama3.1:8b",
+  "config_name": "adaptive_novel",
+  "n_queries": 100,
+  "n_rows_written": 100,
+  "n_abstained": 2,
+  "is_full_run": true,
+  "sample_size_requested": null,
+  "sample_seed": null,
+  "start_time_utc": "2026-08-01T05:32:23.737787+00:00",
+  "end_time_utc": "2026-08-01T05:45:19.966808+00:00"
+}
