@@ -2542,6 +2542,36 @@ on coding" instruction), the footnote's "validated components of the
 deployed system" claim will be true for the first time, rather than
 describing an aspiration.
 
+## 2026-08-01 loop: conditioning_v2 subsection written and inserted (user-approved)
+
+Drafted the paper subsection the BanglAssist footnote had been
+disclaiming as missing, presented it to the user for review (per the
+standing "focus on coding rather than paper" instruction -- this is new
+content, unlike the correctness fixes made freely all loop), and the
+user approved inserting it. New Section~\ref{subsec:conditioning}
+("Ambiguous-Entity Disambiguation") added after Section~\ref{subsec:
+abstention} and before Section~\ref{subsec:confidence-ordering},
+covering: the collision-free-course-codes-vs.-collision-prone-faculty
+-names motivation; the two-block mechanism (flat notice + conditioning
+hint); the honest research arc (v1 conditioning tested NOT significantly
+better than flat_notice at both n=55 and n=220, motivating the v2
+redesign); the judge-reliability catch (first v2 significance pass used
+an already-known-unreliable judge, produced a suspicious result,
+corrected by re-scoring with the validated decomposed judge, changing
+43.3% of verdicts and reversing the apparent regression); the final
+verified result (v2 beats both flat_notice and v1 on all three criteria,
+$p<0.0001$, $n=220$); and two disclosed limitations (faculty-name-only
+collision coverage, and the judge-reliability issue as a broader
+methodology caveat). Removed the now-inaccurate footnote disclaiming the
+subsection didn't exist, pointed the BanglAssist differentiation
+paragraph at the real section instead. Recompiles cleanly (29 pages, no
+undefined references).
+
+Numbers double-checked against `results/conditioning_hint_v2_summary.csv`
+(asks_for_clarification, offers_disambiguator) and `..._summary_fixed_
+afc.csv` (avoids_false_confidence, the corrected judge) directly before
+writing the table, not from memory of the earlier CLAUDE.md entries.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
