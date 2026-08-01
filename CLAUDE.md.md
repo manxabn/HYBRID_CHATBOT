@@ -2806,6 +2806,66 @@ request: retrieval-level tested and confirmed positive, generation-level
 tested and found directionally positive but not confirmed -- both
 honestly reported, neither deployed.
 
+## 2026-08-01 loop: abstention threshold actually re-calibrated (5-fold CV) -- one deployed, one deliberately not
+
+Closes the last item from the "retry all the work again" request.
+Reasoned through what "actually re-calibrate" can honestly mean first:
+the deployed threshold is already fit on 100% of available data, so
+refitting the SAME max-accuracy-sweep method on the same data would just
+reproduce the same in-sample-overfit number -- more data doesn't fix a
+biased selection procedure, and a genuinely new signal was already tried
+and ruled out earlier this project (3-signal logistic regression, 74.7%
+CV vs.\ 73.3% majority baseline). The real methodological improvement
+available: 5-fold cross-validation instead of a single 70/30 split,
+which is more robust to which points happen to land in test.
+
+Built `scripts/calibrate_abstention_kfold.py` (imports the original
+calibration functions, doesn't reimplement). Results, genuinely
+different for the two routes:
+
+**open_ended**: CV mean accuracy $0.612$ (std $0.017$, tight across
+folds) -- notably higher and more reliable than the single-split
+estimate ($0.532$) from earlier tonight, showing that split was
+pessimistic. Still meaningfully below the original in-sample $0.710$.
+Final threshold ($0.9916$, median of winning folds) is close to but
+lower than the deployed $1.0283$ -- a real, modest, principled
+refinement. **Deployed it**: backed up the live `abstention_threshold.
+json` first (`..._pre_kfold_recalibration.json.bak`), verified the
+`AbstentionGate` loader handles the updated file, sanity-checked
+behavior (low top1_score abstains, high doesn't), then ran 10 real
+queries through the live `NovelPipeline` end to end (0/10 abstained,
+matches expected behavior for well-covered test queries) before treating
+it as safe.
+
+**entity_heavy**: caught a real degeneracy before deploying anything.
+Cross-validation picked a wildly different-looking threshold ($0.0114$
+vs.\ the deployed $99.9881$) with even higher full-data accuracy
+($0.984$). Checked the raw signal distribution directly rather than
+trust the number: `query_confidence` for this route is perfectly
+bimodal, every value in $[0, 0.011]$ or $[99.98, 100.0]$, nothing between
+-- a direct, mechanistic consequence of the unambiguous-match ceiling
+(either it fires, forcing the margin near 100, or it doesn't, leaving a
+near-zero margin from ordinary scoring). Any threshold in that huge gap
+scores identically on the calibration data; CV's specific pick was an
+artifact of the gap, not a real signal. **Did NOT deploy it**: the
+existing near-ceiling threshold is the safer, more conservative choice
+for a genuinely novel intermediate-confidence query this calibration set
+has never seen (it would abstain; the near-zero threshold would almost
+never abstain, since ordinary margins routinely exceed $0.0114$) --
+correctly declining to swap a working, semantically-sound value for a
+data-tied-but-riskier one, based on understanding the mechanism, not
+just the number.
+
+Updated the paper's Limitations "Third" bullet with both findings
+(deployed CV result for open_ended, the entity_heavy degeneracy analysis
+and why it was correctly not deployed); recompiles cleanly (30 pages).
+
+This closes all three items from the "retry all the work again" restart
+-- faithfulness/NLI/crosslingual re-verified (two real corrections), TRF
+generation-quality tested (promising, not yet significant), abstention
+threshold actually re-calibrated (one real deployment, one correctly
+declined).
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
