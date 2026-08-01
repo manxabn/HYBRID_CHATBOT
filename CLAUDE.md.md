@@ -2199,6 +2199,44 @@ fix. Given the main 4-config ablation proved stable under both fixes
 (previous entry), this is likely similarly stable, but "likely" is not
 verified -- queued as a follow-up, not assumed.
 
+## 2026-08-01 loop: transient OpenBLAS crash on the pool=5 reranker retry, mitigated
+
+The roundO reranker pool=5 re-verification run crashed almost
+immediately (397 bytes of output, died right after both the embedding
+and reranker models finished loading, before any query processed):
+`memory allocation of 192 bytes failed` / `283211041024 bytes failed`
+(the second number is garbage, not a real request size -- a symptom of
+a corrupted/racing allocation, not a deliberate huge allocation).
+
+**Checked it was NOT the earlier pagefile crisis recurring** before
+retrying blind: `Get-CimInstance Win32_OperatingSystem` showed 7.5GB RAM
+free, `Win32_LogicalDisk` showed C: at 3.1GB free (matches the already
+-fixed baseline from the earlier pagefile incident, not degraded
+further), `nvidia-smi` showed 0MB GPU used. Resources were healthy --
+this was a transient OpenBLAS multi-threaded allocation race triggered
+by two models (the retriever's embedding model and the reranker
+cross-encoder) finishing their weight loads within the same moment and
+briefly over-spawning competing BLAS thread pools, not a real shortage.
+
+**Fix**: retried with `OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4
+MKL_NUM_THREADS=4` set before launch -- capping BLAS thread count is the
+standard mitigation for this exact crash class. The retry passed the
+exact point the first attempt died at and ran cleanly. **Worth setting
+these three env vars proactively for any future script that loads two+
+models concurrently** (embedding model + reranker, or embedding model +
+a second embedding model for comparison) -- cheap insurance, no measured
+downside.
+
+**Also caught a monitoring gap**: the Monitor armed for this job used a
+failure-pattern grep (`Traceback|Error|CUDA|out of memory`) that did NOT
+match this crash's actual text (`memory allocation ... failed`), so it
+sat silently watching a dead process/log instead of firing. Widened the
+pattern for the retry (`allocation.*failed|bytes failed` added) and
+generally: OpenBLAS/numpy allocation failures on this Windows setup use
+their own wording, not Python's "MemoryError" or CUDA's "out of memory"
+-- any future GPU/model-loading job's failure-watch pattern should
+include this phrasing too.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
