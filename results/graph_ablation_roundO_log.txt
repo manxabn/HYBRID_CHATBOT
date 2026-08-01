@@ -1,0 +1,29 @@
+Chain-triggering queries: 12/200
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 6963.91it/s]
+  [graph_on] Q105: abstained=False graph_augmented=True
+  [graph_on] Q107: abstained=False graph_augmented=True
+  [graph_on] Q109: abstained=False graph_augmented=True
+  [graph_on] Q110: abstained=False graph_augmented=True
+  [graph_on] Q113: abstained=False graph_augmented=True
+  [graph_on] Q120: abstained=False graph_augmented=True
+  [graph_on] Q121: abstained=False graph_augmented=True
+  [graph_on] Q122: abstained=False graph_augmented=True
+  [graph_on] Q124: abstained=False graph_augmented=True
+  [graph_on] Q127: abstained=False graph_augmented=True
+  [graph_on] Q129: abstained=False graph_augmented=True
+  [graph_on] Q130: abstained=False graph_augmented=True
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7632.34it/s]
+  [graph_off] Q105: abstained=False graph_augmented=False
+  [graph_off] Q107: abstained=False graph_augmented=False
+  [graph_off] Q109: abstained=False graph_augmented=False
+  [graph_off] Q110: abstained=False graph_augmented=False
+  [graph_off] Q113: abstained=False graph_augmented=False
+  [graph_off] Q120: abstained=False graph_augmented=False
+  [graph_off] Q121: abstained=False graph_augmented=False
+  [graph_off] Q122: abstained=False graph_augmented=False
+  [graph_off] Q124: abstained=False graph_augmented=False
+  [graph_off] Q127: abstained=False graph_augmented=False
+  [graph_off] Q129: abstained=False graph_augmented=False
+  [graph_off] Q130: abstained=False graph_augmented=False
+
+Wrote E:\RAG\updated_Rag\RAG-main\results\graph_ablation_raw.csv

@@ -2375,6 +2375,45 @@ embedding model would shift both arms together and is unlikely to flip
 the null-effect conclusion -- deprioritized rather than re-run, flagged
 here in case it's worth closing later for completeness.
 
+## 2026-08-01 loop: prerequisite-graph ablation re-verified -- trend strengthened, still not a clean confirmation
+
+Fifth staleness check this loop. `results/graph_ablation_raw.csv`
+(2026-07-28 18:47) predated the exact-match fix, BM25 retuning, AND both
+embedding retrains (structured hard-negatives, Jul 28 22:05; Banglish
+-expanded, Jul 31 01:22) -- the most stale file checked so far. Skipped
+re-verifying `faculty_room_lookup` by contrast: its effect size (BLEU
+$+0.213$, $p<0.000001$) is roughly 40-100x larger than anything the
+recent fixes have moved on this corpus, so re-running it would almost
+certainly just reconfirm the same conclusion -- a reasoned skip, not a
+silent one, given GPU time is finite.
+
+Re-ran `scripts/ablate_graph_augmentation.py` (12 chain-triggering
+queries x 2 conditions = 24 generations). **Caught a real process
+issue**: this script hardcodes its output path
+(`results/graph_ablation_raw.csv`) rather than accepting `--out` like
+every other script used tonight, so re-running it silently overwrote the
+original file instead of writing a new `roundO`-suffixed one. The old
+version is still recoverable via git history (committed 2026-07-28), so
+nothing is lost, but this breaks the project's own "archive superseded
+results, don't overwrite" convention -- flagging here rather than
+pretending it did not happen. Worth adding a `--out` flag to this script
+if it's re-run again.
+
+**Result: the trend strengthened, not weakened, but still isn't a clean
+both-tests-agree confirmation.** Old: graph_on 0.896/0.938/0.984/0.950,
+graph_off 0.776/0.881/0.972/0.887 (BLEU $p=0.10$, others $p=0.16$-$0.28$,
+all non-significant). New: graph_on 0.917/0.961/0.992/0.960, graph_off
+0.755/0.869/0.968/0.877 -- the gap widened on every metric. Formally:
+BLEU now significant under paired-$t$ ($p=0.042$) but not Wilcoxon
+($p=0.063$); BERTScore is the reverse, significant under Wilcoxon
+($p=0.031$) but not paired-$t$ ($p=0.078$); ROUGE-L and METEOR remain
+non-significant under both. By this paper's own standard (require both
+tests to agree), this is still not a confirmed win, but it moved from
+uniformly non-significant to a genuinely closer, mixed picture. Updated
+Table~\ref{tab:graph-ablation} and its discussion in Section~\ref
+{subsec:graph}; recompiled cleanly (28 pages, grew by one from the
+expanded discussion).
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
