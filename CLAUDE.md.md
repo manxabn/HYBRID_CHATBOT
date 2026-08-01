@@ -2462,6 +2462,52 @@ Updated Table~\ref{tab:embedding-eval}, its surrounding discussion, and
 Section~\ref{subsec:hard-negatives} with both fixes; recompiled cleanly
 (28 pages).
 
+## 2026-08-01 loop: two more exact-match-mechanism tables were stale, one already-sitting-unsynced
+
+Seventh and eighth findings this loop, both directly downstream of
+today's compound-query exact-match fix.
+
+**tab:unambiguous** (`results/unambiguous_match_test.csv`, 2026-07-28,
+predates everything): re-ran `scripts/test_unambiguous_match.py`
+(retrieval-only, fast). Both conditions improved (ceiling-on
+$0.850\to0.930$, ceiling-off $0.510\to0.710$), narrowing the gap the
+ceiling itself contributes ($+0.34\to+0.22$ Top-1) -- expected direction,
+since the later fix raised the floor `ceiling off` measures against
+without changing what the ceiling does. Qualitative conclusion
+unchanged (still a large, real gain).
+
+**tab:adaptive-isolated**: a different, sharper case --
+`results/adaptive_routing_isolated_significance.csv` was already sitting
+on disk dated 2026-07-31 20:40 with CURRENT-looking numbers (0.930 tied
+Recall/MRR) that paper.tex had simply never been synced to (paper still
+said 0.850) -- a plain "computed but not written up" gap, not a fresh
+staleness issue by itself. But that Jul-31 file itself still predated
+today's exact-match and BM25 fixes, so re-ran `scripts/isolate_adaptive_
+routing.py` anyway rather than trust the coincidence (it reuses the
+already-current `results/ir_metrics.csv`, so this was fast, no
+retrieval needed). **Result changed further and non-trivially**: vs.\
+BM25-only, nDCG@5 flipped from non-significant ($p=0.095$/$0.26$ across
+the two prior measurements) to significant ($p=0.030$); nDCG@10 was
+already significant and got more strongly so ($p<0.001$). Vs.\ full
+hybrid both remain non-significant but closer to threshold ($p=0.060$,
+$p=0.099$, down from $p=0.24$/$0.18$). The 100/100 Recall/MRR tie
+structure is unchanged. This is a small but real additional data point
+consistent with the paper's own broader deconfounding finding (Section
+subsec:dat-ceiling) that adaptive routing's fusion choice tends negative
+once anything is actually left for it to decide.
+
+Updated Table~\ref{tab:unambiguous}, Table~\ref{tab:adaptive-isolated},
+and their surrounding discussion; recompiled cleanly (28 pages).
+
+**Sweep status**: checked `tab:faithfulness`, `tab:nli-faithfulness`,
+`tab:crosslingual-stress` (all dated 2026-07-28, also stale by file
+date) but deprioritized re-running them -- they require either LLM-judge
+calls (faithfulness, expensive, and the paper already treats this
+result with heavy caveats about self-judging bias) or a small stress-test
+set (crosslingual, n=9-27, already reported as suggestive-only, low
+likelihood of a qualitative flip). Flagging rather than silently
+skipping; can be revisited if time allows.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
