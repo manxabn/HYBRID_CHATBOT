@@ -1,0 +1,7 @@
+metric,mean_diff,n_changed,paired_t_p,wilcoxon_p,significant
+recall@1,0.02,2,0.1583,0.1573,False
+recall@3,0.0,0,,,False
+recall@5,0.0,0,,,False
+mrr,0.01,2,0.1583,0.1573,False
+ndcg@5,0.024,15,0.0063,0.0058,True
+ndcg@10,0.0128,18,0.0103,0.013,True

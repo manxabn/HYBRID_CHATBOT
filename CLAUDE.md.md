@@ -2572,6 +2572,58 @@ Numbers double-checked against `results/conditioning_hint_v2_summary.csv`
 afc.csv` (avoids_false_confidence, the corrected judge) directly before
 writing the table, not from memory of the earlier CLAUDE.md entries.
 
+## 2026-08-01 loop: TRF (MaxSim re-ranking) -- a genuine, narrow positive result, retrieval-level only
+
+Attempted the literature lead flagged earlier as "not yet attempted":
+TRF (Tensor-based Re-ranking Fusion, Wang et al., arXiv:2508.01405,
+verified via WebFetch of the actual HTML before implementing anything,
+not from the one-line paraphrase that flagged it).
+
+**Real scope correction found before writing code**: TRF is not a
+fusion-formula alternative to RRF/linear blending. It's a second-stage
+re-ranker built on the MaxSim operator from late-interaction ("tensor
+search") models like ColBERT -- `sim(Q,D) = sum_i max_j(q_i . d_j)` over
+PER-TOKEN embeddings, not pooled sentence vectors. The paper's own +8.1%
+nDCG@10 result was measured against a purpose-built multi-vector
+retrieval model. This project has none, and training one is out of
+scope for a single experiment. Disclosed this gap explicitly rather than
+silently implement something else and call it TRF.
+
+**What was actually tested, honestly scoped**: whether MaxSim re-ranking
+helps AT ALL using the already-deployed sentence-embedding model's own
+raw per-token hidden states (`sentence-transformers`' `output_value=
+"token_embeddings"`, no new model needed) -- the same "adapted to this
+project's own retriever, not the paper's exact recipe" pattern already
+used for grounded-PRF. `scripts/test_trf_maxsim_rerank.py`: for each of
+100 open-ended queries, re-rank the full_hybrid top-10 pool by MaxSim
+between query and candidate token embeddings (L2-normalized per token,
+ColBERT convention).
+
+**Result: a genuine, narrow, statistically confirmed positive** -- rare
+among tonight's new-lever experiments (HyDE, grounded-PRF, category
+-boost were all negative/null). nDCG@5 improved significantly (mean diff
++0.024, $p=0.006$ paired-$t$, $p=0.006$ Wilcoxon, both agree, 15/100
+queries reordered) and nDCG@10 similarly (+0.013, $p=0.010$/$0.013$,
+18/100 reordered). Recall@1 and MRR barely moved (only 2/100 queries
+changed) and are NOT significant ($p=0.158$) -- expected, since the
+baseline was already near-ceiling (0.97-0.99) on this near-saturated
+open-ended subset; MaxSim re-ranking improves ORDERING among already
+-mostly-correct candidates, not what gets found at all.
+
+**Not yet known, disclosed rather than assumed**: whether this
+retrieval-ordering improvement translates to any downstream generation
+-quality gain (BLEU/ROUGE/BERTScore/METEOR) -- this project's own BM25
+-tuning experience earlier tonight showed ranking-order changes often do
+NOT move generation quality once the right chunk is present at all
+either way. Also not measured: the real per-query latency cost of
+token-level encoding (~0.1-0.15s/query for the pool in this smoke test,
+non-trivial next to the sub-20ms base retrieval it would sit on top of).
+Not deployed -- follows the project's own "default-off until validated
+end-to-end" pattern for every other new component (reranker,
+faculty_room_lookup) -- this is a real, positive retrieval-level lead
+worth a follow-up generation-quality + latency test, not yet a
+recommendation to ship.
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
