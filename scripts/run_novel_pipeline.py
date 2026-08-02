@@ -45,7 +45,8 @@ SAMPLE_SEED = 42
 
 def run(smoke: bool, out_path: Path, sample_size: int = None, queries_path: Path = None,
         use_reranker: bool = False, use_query_translation: bool = False, rerank_pool_size: int = 10,
-        use_entity_normalization: bool = False, use_faculty_room_lookup: bool = False):
+        use_entity_normalization: bool = False, use_faculty_room_lookup: bool = False,
+        rerank_route: str = "all"):
     df = pd.read_csv(queries_path or QUERIES_PATH)
     if smoke:
         df = df.head(5)
@@ -60,7 +61,7 @@ def run(smoke: bool, out_path: Path, sample_size: int = None, queries_path: Path
 
     pipeline = NovelPipeline(use_reranker=use_reranker, use_query_translation=use_query_translation,
                               rerank_pool_size=rerank_pool_size, use_entity_normalization=use_entity_normalization,
-                              use_faculty_room_lookup=use_faculty_room_lookup)
+                              use_faculty_room_lookup=use_faculty_room_lookup, rerank_route=rerank_route)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     start_time = datetime.now(timezone.utc).isoformat()
@@ -168,6 +169,13 @@ if __name__ == "__main__":
                          help="Enable the course->instructor->office-room cross-reference lookup "
                               "(OFF by default as of 2026-07-31 -- new component, not yet default "
                               "pending its own isolated ablation, same practice as --use-reranker).")
+    parser.add_argument("--rerank-route", choices=["all", "open_ended"], default="all",
+                         help="Which route(s) --use-reranker applies to (default: all, existing "
+                              "behavior). 'open_ended' restricts reranking to non-entity-heavy "
+                              "queries, motivated by the existing reranker-on run's own per-route "
+                              "breakdown showing real damage concentrated in entity-heavy queries "
+                              "(where reranking fights the exact-match ceiling) vs. near-zero, "
+                              "mixed-sign effect on open-ended queries -- see pipeline/novel_pipeline.py.")
     parser.add_argument("--entity-normalization", action="store_true",
                          help="Enable the entity-normalization retrieval fallback (fuzzy/LLM "
                               "correction of malformed course codes and misspelled names). NOTE: "
@@ -183,6 +191,7 @@ if __name__ == "__main__":
         suffix = f"_n{args.sample_size}" if args.sample_size is not None else ""
         suffix += "_reranker" if args.use_reranker else ""
         suffix += f"_pool{args.rerank_pool_size}" if args.use_reranker and args.rerank_pool_size != 10 else ""
+        suffix += "_rerankopenended" if args.use_reranker and args.rerank_route == "open_ended" else ""
         suffix += "_translation" if args.query_translation else ""
         suffix += "_entitynorm" if args.entity_normalization else ""
         out_path = ROOT / "results" / f"novel_pipeline_raw_outputs{suffix}.csv"
@@ -190,4 +199,4 @@ if __name__ == "__main__":
     run(smoke=args.smoke, out_path=out_path, sample_size=args.sample_size, queries_path=args.queries,
         use_reranker=args.use_reranker, use_query_translation=args.query_translation,
         rerank_pool_size=args.rerank_pool_size, use_entity_normalization=args.entity_normalization,
-        use_faculty_room_lookup=args.use_faculty_room_lookup)
+        use_faculty_room_lookup=args.use_faculty_room_lookup, rerank_route=args.rerank_route)

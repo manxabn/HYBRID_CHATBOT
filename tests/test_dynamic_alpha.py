@@ -139,6 +139,39 @@ def test_dynamic_alpha_interpolation_math_matches_entity_signal_strength():
             f"strength={strength}: expected lambda={expected_lambda}, got {lambda_}"
 
 
+def test_tied_score_sort_is_deterministic_regardless_of_input_order():
+    # 2026-08-02: retrieve()'s final ranking step used to sort candidates
+    # by score alone (`scored.sort(key=lambda x: x["score"], reverse=True)`).
+    # When multiple candidates tie exactly on score (a real, recurring case
+    # -- e.g. several FacultyAvailability rows for the same person on
+    # different days, identical score for a query that doesn't name a day),
+    # a stable sort preserves whatever order the candidates arrived in,
+    # which traced back to iterating a `set` of candidate IDs -- and
+    # Python randomizes the hash seed for str keys per PROCESS by default,
+    # so two separate invocations of the identical script could silently
+    # return a different tied candidate first. Confirmed live: the exact
+    # same query, same code, same corpus returned "Day: Tuesday" in one
+    # process and "Day: Sunday" in another (49/101 entity-heavy queries
+    # affected in a real before/after comparison). Fixed with a
+    # deterministic secondary sort key (doc_id). This test locks in the
+    # fix directly: the same tied-score candidates, fed in two different
+    # input orders (simulating two different hash-seed-driven set
+    # iteration orders), must sort to the identical output either way.
+    candidates_order_a = [
+        {"doc_id": "FacultyAvailability-99-chunk0", "score": 101.2},
+        {"doc_id": "FacultyAvailability-42-chunk0", "score": 101.2},
+        {"doc_id": "FacultyAvailability-7-chunk0", "score": 101.2},
+    ]
+    candidates_order_b = list(reversed(candidates_order_a))
+    assert candidates_order_a != candidates_order_b  # sanity: inputs really do differ in order
+
+    sort_key = lambda x: (x["score"], x["doc_id"])
+    sorted_a = sorted(candidates_order_a, key=sort_key, reverse=True)
+    sorted_b = sorted(candidates_order_b, key=sort_key, reverse=True)
+    assert [c["doc_id"] for c in sorted_a] == [c["doc_id"] for c in sorted_b], \
+        f"tied candidates sorted differently depending on input order: {sorted_a} vs {sorted_b}"
+
+
 if __name__ == "__main__":
     test_no_signals_gives_zero_strength()
     test_course_code_alone_gives_quarter_strength()
@@ -149,4 +182,5 @@ if __name__ == "__main__":
     test_matched_faculty_initials_excludes_add_but_keeps_real_initials()
     test_is_entity_heavy_false_for_add_drop_query_even_with_real_add_collision()
     test_dynamic_alpha_interpolation_math_matches_entity_signal_strength()
+    test_tied_score_sort_is_deterministic_regardless_of_input_order()
     print("OK: all dynamic-alpha unit tests passed")

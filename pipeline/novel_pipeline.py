@@ -337,7 +337,7 @@ class NovelPipeline:
                  use_reranker: bool = False, use_graph: bool = True, use_abstention: bool = True,
                  use_query_translation: bool = False, use_entity_normalization: bool = True,
                  use_conformal_backoff: bool = False, use_confidence_ordering: bool = True,
-                 use_faculty_room_lookup: bool = False):
+                 use_faculty_room_lookup: bool = False, rerank_route: str = "all"):
         # use_faculty_room_lookup defaults to False (2026-07-31, new
         # component, not yet default per this project's standing practice
         # of enabling a new mechanism by default only after its own isolated
@@ -414,6 +414,26 @@ class NovelPipeline:
         # feature was implemented and deployed but never independently
         # ablated, unlike every other major component.
         self.use_confidence_ordering = use_confidence_ordering
+        # rerank_route (2026-08-02): the existing reranker-on ablation
+        # applies reranking uniformly across both routes, and was found
+        # significantly negative -- but pooled across routes, not isolated
+        # per route the way this paper's other components are (Section
+        # subsec:adaptive-isolated's whole methodology is "pool across
+        # routes hides where an effect actually lives"). Checking the same
+        # full 200-query reranker-on run's own per-route breakdown
+        # (novel_pipeline_metrics_per_query_roundO_reranker.csv) directly
+        # confirms real route asymmetry: entity-heavy BLEU -0.055/METEOR
+        # -0.034 (substantial, real damage -- the reranker actively fights
+        # the exact-match ceiling, Section~\ref{subsec:unambiguous}, which
+        # already guarantees the correct top-1 candidate independent of
+        # any reranker score), vs. open-ended BLEU -0.006/METEOR +0.001
+        # (near-zero, mixed-sign noise -- no such conflicting mechanism
+        # exists on this route). "all" (default) preserves the exact
+        # existing behavior; "open_ended" restricts reranking to the route
+        # where it isn't fighting a separate, already-validated mechanism.
+        if rerank_route not in ("all", "open_ended"):
+            raise ValueError(f"rerank_route must be 'all' or 'open_ended', got {rerank_route!r}")
+        self.rerank_route = rerank_route
 
     def build_context(self, query: str) -> tuple[str | None, dict]:
         """Returns (context_string_or_None, meta). meta always has: route
@@ -523,7 +543,8 @@ class NovelPipeline:
             results = sorted(by_doc_id.values(), key=lambda d: d["score"], reverse=True)[:pool_size]
         t1 = time.perf_counter()
 
-        if self.reranker and results:
+        rerank_gated_for_route = self.rerank_route == "open_ended" and route_meta["route"] != "open_ended"
+        if self.reranker and results and not rerank_gated_for_route:
             final_results = self.reranker.rerank(query, results, top_k=final_k_for_query)
         else:
             final_results = results[:final_k_for_query]

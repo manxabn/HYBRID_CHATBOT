@@ -911,7 +911,25 @@ class HybridRetriever:
         else:
             scored = self._score_linear(bm25_cand, vec_cand_dist, exact_match_ids, lambda_, question_scores)
 
-        scored.sort(key=lambda x: x["score"], reverse=True)
+        # 2026-08-02: sort key was score alone -- when multiple candidates
+        # tie exactly (e.g., several FacultyAvailability rows for the same
+        # person on different days, all scoring identically for a query
+        # that doesn't specify a day), Python's stable sort then preserves
+        # whichever order they happened to arrive in `scored`, which traces
+        # back to iterating the `candidate_ids` *set* built upstream
+        # (`_score_linear`/`_score_rrf`) -- and Python's hash seed for str
+        # keys is randomized per PROCESS by default, so two separate
+        # invocations of the same script on the same query, same corpus,
+        # same model, can return a different tied candidate first. Caught
+        # live: comparing two separately-run pipeline evaluations found 49
+        # of 101 "should be identical" entity-heavy queries actually
+        # differed, traced to exactly this (e.g. one run's context said
+        # "Day: Tuesday", the other "Day: Sunday" for the same query).
+        # Adding doc_id as a secondary key makes tie-breaking a pure
+        # function of the candidates themselves, identical across every
+        # process and every run, with no effect whatsoever when there is
+        # no tie (the common case).
+        scored.sort(key=lambda x: (x["score"], x["doc_id"]), reverse=True)
         results = scored[:top_n]
 
         # Query-level confidence: margin between the top-1 and top-2 fused
