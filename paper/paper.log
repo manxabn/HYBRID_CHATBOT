@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  2 AUG 2026 12:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  2 AUG 2026 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -623,128 +623,134 @@ Package hyperref Info: Link coloring OFF on input line 19.
 \openout3 = `paper.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
- 30.
+ 34.
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line
- 30.
+ 34.
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+psycm on input line
- 30.
+ 34.
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
 
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
 
 
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
 
 [1
 
 {C:/Users/manxa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/manx
-a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 34.
+(hyperref)                removing `\uppercase' on input line 38.
 
 
-Overfull \hbox (3.95915pt too wide) in paragraph at lines 41--42
+Overfull \hbox (3.95915pt too wide) in paragraph at lines 45--46
 []\OT1/ptm/m/n/10 This pa-per sub-stan-tially ex-tends our own ear-lier sys-tem
 , []Rah-man et al.[] ([]2025[]), a hy-brid BM25/ChromaDB academic-
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-4.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
+0.
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-[2
+[3
 
-] [3]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 55.
-
-[4]
+] [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 78.
+(hyperref)                removing `\uppercase' on input line 62.
 
-<fig_dataset_dist.png, id=302, 578.16pt x 361.35pt>
+[5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 94.
+
+[6]
+<fig_dataset_dist.png, id=321, 578.16pt x 361.35pt>
 File: fig_dataset_dist.png Graphic file (type png)
 <use fig_dataset_dist.png>
-Package pdftex.def Info: fig_dataset_dist.png  used on input line 88.
+Package pdftex.def Info: fig_dataset_dist.png  used on input line 104.
 (pdftex.def)             Requested size: 204.85974pt x 128.03477pt.
-[5 <./fig_dataset_dist.png>]
-<fig_db_population.png, id=313, 126.4725pt x 268.1217pt>
+<fig_db_population.png, id=324, 126.4725pt x 268.1217pt>
 File: fig_db_population.png Graphic file (type png)
 <use fig_db_population.png>
-Package pdftex.def Info: fig_db_population.png  used on input line 100.
+Package pdftex.def Info: fig_db_population.png  used on input line 116.
 (pdftex.def)             Requested size: 199.16928pt x 422.24892pt.
-<fig_hybrid_retriever.png, id=317, 232.7094pt x 555.7563pt>
-File: fig_hybrid_retriever.png Graphic file (type png)
-<use fig_hybrid_retriever.png>
-Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 112.
-(pdftex.def)             Requested size: 184.9429pt x 441.68848pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./fig_db_population.png>] [7 <./fig_hybrid_retriever.png>]
-Overfull \hbox (6.26099pt too wide) in paragraph at lines 130--142
+<fig_hybrid_retriever.png, id=328, 232.7094pt x 555.7563pt>
+File: fig_hybrid_retriever.png Graphic file (type png)
+<use fig_hybrid_retriever.png>
+Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 128.
+(pdftex.def)             Requested size: 184.9429pt x 441.68848pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./fig_dataset_dist.png>]
+Underfull \vbox (badness 1087) has occurred while \output is active []
+
+ [8 <./fig_db_population.png>]
+Overfull \hbox (6.26099pt too wide) in paragraph at lines 146--158
  [][] 
  []
 
-[8] [9] [10] [11]
-Overfull \hbox (86.60915pt too wide) in paragraph at lines 254--255
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./fig_hybrid_retriever.png>] [10] [11] [12] [13]
+Overfull \hbox (86.60915pt too wide) in paragraph at lines 270--271
 \OT1/ptm/m/n/10 maintained piece of code, and the two copies silently drifted a
 part. We ad-dressed the spe-cific in-stance -- \OT1/pcr/m/n/10 pipeline/prerequ
 isite[]graph.py
  []
 
-[12]
-<fig_response_gen.png, id=426, 3334.4575pt x 3519.1475pt>
+[14]
+<fig_response_gen.png, id=444, 3334.4575pt x 3519.1475pt>
 File: fig_response_gen.png Graphic file (type png)
 <use fig_response_gen.png>
-Package pdftex.def Info: fig_response_gen.png  used on input line 273.
+Package pdftex.def Info: fig_response_gen.png  used on input line 289.
 (pdftex.def)             Requested size: 204.85974pt x 216.18733pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 278.
+(hyperref)                removing `\uppercase' on input line 294.
 
-[13]
-Overfull \hbox (21.3709pt too wide) in paragraph at lines 302--303
+
+Overfull \hbox (21.3709pt too wide) in paragraph at lines 318--319
 \OT1/ptm/m/n/10 Vector-only $\OT1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmcm/
 m/n/10 371\OML/ptmcm/m/it/10 =\OT1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmcm
 /m/n/10 501\OML/ptmcm/m/it/10 =\OT1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmc
@@ -757,21 +763,21 @@ m/it/10 :\OT1/ptmcm/m/n/10 256$ \OT1/ptm/m/n/10 (BLEU/ROUGE-L/BERTScore/METEOR)
 .
  []
 
-
-Overfull \hbox (4.19865pt too wide) in paragraph at lines 307--308
+[15 <./fig_response_gen.png>]
+Overfull \hbox (4.19865pt too wide) in paragraph at lines 323--324
 \OT1/ptm/m/n/10 rel-e-vance is judged against the ref-er-ence an-swer's own cou
 rse-code/email/faculty-identity en-ti-ties (Sec-tion []4.7[]'s method-
  []
 
-[14 <./fig_response_gen.png>]
-Overfull \hbox (120.68971pt too wide) in paragraph at lines 327--328
+[16]
+Overfull \hbox (120.68971pt too wide) in paragraph at lines 343--344
 \OT1/ptm/m/n/10 negative min-ing to structured-table pairs, then fur-ther to th
 e Banglish-expanded cor-pus (\OT1/pcr/m/n/10 scripts/finetune[]embeddings[]bang
 lish[]expanded.py\OT1/ptm/m/n/10 );
  []
 
 
-Overfull \hbox (12.01054pt too wide) in paragraph at lines 327--328
+Overfull \hbox (12.01054pt too wide) in paragraph at lines 343--344
 \OT1/ptm/m/n/10 shows Top-1/Top-5/MRR of $\OT1/ptmcm/m/n/10 1\OML/ptmcm/m/it/10
  :\OT1/ptmcm/m/n/10 000\OML/ptmcm/m/it/10 =\OT1/ptmcm/m/n/10 1\OML/ptmcm/m/it/1
 0 :\OT1/ptmcm/m/n/10 000\OML/ptmcm/m/it/10 =\OT1/ptmcm/m/n/10 1\OML/ptmcm/m/it/
@@ -783,27 +789,20 @@ Overfull \hbox (12.01054pt too wide) in paragraph at lines 327--328
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-Overfull \hbox (4.48134pt too wide) in paragraph at lines 334--335
+Overfull \hbox (4.48134pt too wide) in paragraph at lines 350--351
 \OT1/ptm/m/n/10 groups rows by (Cat-e-gory, An-swer); of its 1,069 such groups,
  689 con-tain a gen-uine \OT1/pcr/m/n/10 Type=Original\OT1/ptm/m/n/10 /\OT1/pcr
 /m/n/10 Type=Paraphrase
  []
 
-
-Underfull \vbox (badness 2119) has occurred while \output is active []
-
- [16]
-[17] [18] [19]
-Overfull \hbox (0.90073pt too wide) in paragraph at lines 446--447
+[17] [18] [19] [20]
+Overfull \hbox (0.90073pt too wide) in paragraph at lines 462--463
 []\OT1/ptm/m/n/10 Table []11[] re-ports the fair, non-confounded com-par-i-son.
  The reranker-on row shown here is a sec-ond re-measurement,
  []
 
 
-Overfull \hbox (9.89005pt too wide) in paragraph at lines 446--447
+Overfull \hbox (9.89005pt too wide) in paragraph at lines 462--463
 \OT1/ptm/m/n/10 dated 2026-08-01: the ver-sion re-ported in an ear-lier re-vi-s
 ion of this pa-per (mean diffs of $\OMS/pzccm/m/n/10 ^^@\OT1/ptmcm/m/n/10 0\OML
 /ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 040$\OT1/ptm/m/n/10 /$\OMS/pzccm/m/n/10 ^^@\O
@@ -811,79 +810,79 @@ T1/ptmcm/m/n/10 0\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 030$ \OT1/ptm/m/n/10 BLE
 U/METEOR
  []
 
-[20]
-Overfull \hbox (98.71918pt too wide) in paragraph at lines 469--470
+[21]
+Overfull \hbox (98.71918pt too wide) in paragraph at lines 485--486
 \OT1/ptm/m/n/10 database, in-de-pen-dently con-firmed by cross-referencing the 
 same courses' ref-er-ence an-swers (built from \OT1/pcr/m/n/10 PrerequisiteGrap
 h.full[]chain()\OT1/ptm/m/n/10 's
  []
 
-[21]
-<fig_lambda_sweep.png, id=585, 794.97pt x 578.16pt>
+[22]
+<fig_lambda_sweep.png, id=597, 794.97pt x 578.16pt>
 File: fig_lambda_sweep.png Graphic file (type png)
 <use fig_lambda_sweep.png>
-Package pdftex.def Info: fig_lambda_sweep.png  used on input line 496.
+Package pdftex.def Info: fig_lambda_sweep.png  used on input line 512.
 (pdftex.def)             Requested size: 227.62204pt x 165.54482pt.
- [22 <./fig_lambda_sweep.png>]
-Overfull \hbox (4.62889pt too wide) in paragraph at lines 519--520
+ [23 <./fig_lambda_sweep.png>]
+Overfull \hbox (4.62889pt too wide) in paragraph at lines 535--536
 []\OT1/ptm/m/n/10 This ta-ble has been re-measured three times since the ver-si
 on re-ported in an ear-lier re-vi-sion. The first re-measurement
  []
 
-[23]
+[24] [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 544.
+(hyperref)                removing `math shift' on input line 560.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 544.
+(hyperref)                removing `math shift' on input line 560.
 
-[24] [25] [26] [27] [28]
-Overfull \hbox (460.20596pt too wide) in paragraph at lines 683--701
+[26] [27] [28] [29]
+Overfull \hbox (460.20596pt too wide) in paragraph at lines 699--717
  [][] 
  []
 
-[29]
-<fig_ingestion_time.png, id=717, 504.80595pt x 342.19846pt>
+[30]
+<fig_ingestion_time.png, id=730, 504.80595pt x 342.19846pt>
 File: fig_ingestion_time.png Graphic file (type png)
 <use fig_ingestion_time.png>
-Package pdftex.def Info: fig_ingestion_time.png  used on input line 712.
+Package pdftex.def Info: fig_ingestion_time.png  used on input line 728.
 (pdftex.def)             Requested size: 204.85974pt x 138.87157pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 717.
+(hyperref)                removing `\uppercase' on input line 733.
 
-[30 <./fig_ingestion_time.png>] [31]
+[31 <./fig_ingestion_time.png>] [32]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32]
-[33] [34]
+ [33]
+[34] [35] [36]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 837.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 853.
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--838
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 []\OT1/ptm/m/n/9 Chaffin, A. (2025). GTE-ModernColBERT. Model re-lease, LightOn
  AI. []$\OT1/pcr/m/n/9 https : / / huggingface . co / lightonai /
  []
 
-[35] (paper.aux)
+[37] (paper.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 02BF0909BC22A526CBADEC989A485F5F;11516.
+(rerunfilecheck)             Checksum: C860D58701475281D96381E5BADBC19B;11892.
  ) 
 Here is how much of TeX's memory you used:
- 14183 strings out of 467871
- 225978 string characters out of 5418376
- 665587 words of memory out of 5000000
- 42711 multiletter control sequences out of 15000+600000
+ 14188 strings out of 467871
+ 226058 string characters out of 5418376
+ 668681 words of memory out of 5000000
+ 42713 multiletter control sequences out of 15000+600000
  670377 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,11181b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,11181b,672s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -894,9 +893,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (35 pages, 906150 bytes).
+Output written on paper.pdf (37 pages, 912044 bytes).
 PDF statistics:
- 873 PDF objects out of 1000 (max. 8388607)
- 157 named destinations out of 1000 (max. 500000)
- 415 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 893 PDF objects out of 1000 (max. 8388607)
+ 160 named destinations out of 1000 (max. 500000)
+ 423 words of extra memory for PDF output out of 10000 (max. 10000000)
 
