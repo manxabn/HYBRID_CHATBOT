@@ -4221,3 +4221,19 @@ Following the instruction to keep finding genuine, safe, non-human-dependent fix
 **Paper propagation**: extended Limitations item "Third" (Section~sec:discussion) with the full finding -- the ruled-out 3-signal attempt for contrast, the two new signals and why they're structurally different, the 5-seed robustness result, and the safety-verification summary. Recompiles cleanly, 40 pages, 0 undefined refs.
 
 Files: `scripts/calibrate_abstention_newsignals.py`, `results/abstention_threshold_newsignals.json`, `tests/test_abstention.py`. Deployed: `pipeline/hybrid_retriever.py`, `pipeline/abstention.py`, `pipeline/novel_pipeline.py`.
+
+## 2026-08-03: NLI faithfulness cross-check -- a real improvement from a stronger model, honestly still not a rescue
+
+The other genuinely untried angle identified alongside the abstention-gate fix above: every prior re-measurement of the independent NLI faithfulness cross-check (r=0.089 -> -0.063 -> -0.300 across three rounds) kept the same small NLI model (`cross-encoder/nli-MiniLM2-L6-H768`, ~66M params, chosen originally for RAM reasons during a concurrent Ollama job) and only re-ran it against fresh data. Never actually asked whether the MODEL was the bottleneck.
+
+Checked first that this was actually safe to try now: `tasklist` confirmed `ollama.exe` idle with no `llama-server.exe` child (no concurrent generation load), and ~7.7GB free of ~16GB total -- comfortably enough for a bigger model on CPU. Downloaded and verified `cross-encoder/nli-deberta-v3-base` (~370M params, ~5.5x larger) has the same confirmed label ordering (contradiction/entailment/neutral) before using it.
+
+Re-ran the EXACT same SummaC-ZS methodology (imported `measure_nli_faithfulness.py`, only overrode `NLI_MODEL`, same as the existing roundP override pattern) against the identical 169-row roundP sample already used for the deployed r=-0.300 measurement -- an apples-to-apples swap, nothing else changed. Real result: **Pearson r improved from -0.300 to -0.076, binary agreement improved from 0.556 (barely above chance) to 0.822.**
+
+**Honest framing, not oversold**: this is a genuine, substantial improvement, but the correlation is still not positive -- we still do NOT treat this cross-check as corroborating evidence for the LLM judge. What it does change: the earlier "chance-level or worse" characterization was itself partly an artifact of the smaller model's limited capacity, not proof the two instruments are fundamentally incompatible. A more encouraging, though still not decisive, starting point for the human-validation pass this limitation item already calls for.
+
+**Deliberately not touched**: `pipeline/conformal_abstention.py`'s production NLI model (still MiniLM) -- this was a pure evaluation-instrument experiment (re-scoring already-generated answers after the fact), and the conformal calibration mechanism was already found structurally non-viable for an unrelated reason (NLI measures faithfulness-to-context, not correctness-to-query, which diverge in the unanswerable-query regime, see the 2026-08-01/02 conformal calibration entry above) -- a better NLI model doesn't fix that mismatch, so there was no reason to touch production behavior here.
+
+**Paper propagation**: extended Limitations item "Seventh" (Section~sec:discussion) with the full finding. Recompiles cleanly, 40 pages, 0 undefined refs.
+
+Files: `scripts/measure_nli_faithfulness_deberta_roundP.py`, `results/nli_faithfulness_per_query_roundP_deberta.csv`, `results/nli_faithfulness_summary_roundP_deberta.csv`, `results/nli_vs_llmjudge_agreement_roundP_deberta.csv`. No pipeline code touched.
