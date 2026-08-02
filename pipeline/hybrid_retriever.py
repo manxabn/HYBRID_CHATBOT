@@ -1019,39 +1019,33 @@ class HybridRetriever:
         vec_top1 = min(vec_cand_dist, key=vec_cand_dist.get) if vec_cand_dist else None  # distance: lower is better
         bm25_vector_agreement = 1.0 if (bm25_top1 is not None and bm25_top1 == vec_top1) else 0.0
 
-        # score_entropy (2026-08-03, experimental -- computed for
-        # measurement, not yet used by any deployed decision): normalized
-        # Shannon entropy of the softmax over the FULL scored candidate
-        # pool (before top_n truncation, same pool query_confidence's
-        # margin is computed from). A structurally different construct
-        # from margin (top1-top2 difference only) and top1_score (a single
-        # magnitude): entropy summarizes the shape of the WHOLE score
-        # distribution, so it can distinguish "one clear winner among many
-        # weak candidates" from "several candidates all moderately
-        # plausible" from "everything roughly tied," three situations
-        # margin/top1_score alone cannot always tell apart. Standard
-        # selective-prediction construct (e.g. softmax-entropy confidence,
-        # Hendrycks & Gimpel 2017; used explicitly for QA abstention by
-        # Kamath, Jia & Liang 2020, "Selective Question Answering under
-        # Domain Shift"). Normalized to [0, 1] by dividing by log(N) so it
-        # is comparable across queries with different candidate-pool
-        # sizes: 0 = fully concentrated on one candidate (confident), 1 =
-        # uniform over all candidates (no discrimination at all).
-        if len(scored) >= 2:
-            _s = np.array([c["score"] for c in scored], dtype=float)
-            _s = _s - _s.max()
-            _exp = np.exp(_s)
-            _p = _exp / _exp.sum()
-            _max_ent = np.log(len(_s))
-            score_entropy = float(-np.sum(_p * np.log(_p + 1e-12)) / _max_ent) if _max_ent > 0 else 0.0
-        else:
-            score_entropy = 0.0
-
+        # score_entropy / score_entropy_zscore (tried 2026-08-03, removed):
+        # normalized Shannon entropy of the softmax over the full scored
+        # candidate pool, and a z-scored variant fixing the plain version's
+        # diagnosed scale-saturation problem (this corpus's open-ended
+        # scores sit in a narrow absolute band, so raw softmax over them
+        # always looks near-uniform regardless of true relative spread).
+        # Both were tested as a 5th abstention-gate signal with the same
+        # 5-seed x 5-fold protocol used to validate the deployed 4-signal
+        # classifier (scripts/calibrate_abstention_entropy_signal.py,
+        # scripts/calibrate_abstention_entropy_zscore_signal.py): the plain
+        # version was indistinguishable from noise (3/5 seeds, delta
+        # +0.0011); the z-scored fix was directionally consistent and
+        # closer (4/5 seeds, delta +0.0102) but did not clear this
+        # project's own bar for deployment -- a paired t-test and Wilcoxon
+        # signed-rank test on the 25 matched (seed, fold) accuracy pairs
+        # must BOTH agree a result is significant (the same convention
+        # used for every other paired comparison in this project), and
+        # here they did not (p=0.147, p=0.052 -- the second is suggestive
+        # but the first is not, and one test alone is not enough). Removed
+        # rather than left as permanently-unused dead weight in a
+        # per-query hot path; both experiment scripts and their results/
+        # JSON outputs remain as the honest record of what was tried and
+        # why it fell short, not deleted.
         for r in results:
             r["query_confidence"] = margin
             r["query_top1_score"] = top1_score
             r["bm25_vector_agreement"] = bm25_vector_agreement
-            r["score_entropy"] = score_entropy
 
         return results
 

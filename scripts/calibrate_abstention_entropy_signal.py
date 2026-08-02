@@ -36,7 +36,16 @@ OFFLINE MEASUREMENT ONLY. Does not touch results/abstention_threshold_
 newsignals.json (the deployed classifier) unless the result is a clear,
 seed-robust improvement, matching this project's standing discipline.
 
-Usage: python scripts/calibrate_abstention_entropy_signal.py
+HISTORICAL RECORD, NOT RE-RUNNABLE AS-IS (2026-08-03): score_entropy was
+removed from hybrid_retriever.py's retrieve() after this experiment (and
+its z-scored follow-up, calibrate_abstention_entropy_zscore_signal.py)
+both failed to clear this project's deployment bar -- see that file's
+retrieve() docstring for the full removal rationale. Re-running this
+script today will KeyError on results[0]["score_entropy"]; the results/
+abstention_threshold_entropy_signal.json this script already produced is
+the permanent record of what was measured.
+
+Usage (historical): python scripts/calibrate_abstention_entropy_signal.py
 """
 
 import json
