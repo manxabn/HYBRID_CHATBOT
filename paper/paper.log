@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  2 AUG 2026 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  2 AUG 2026 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -829,37 +829,46 @@ on re-ported in an ear-lier re-vi-sion. The first re-measurement
 [26]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 571.
+(hyperref)                removing `math shift' on input line 573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 571.
+(hyperref)                removing `math shift' on input line 573.
 
-[27] [28] [29] [30] [31]
-Overfull \hbox (460.20596pt too wide) in paragraph at lines 721--739
+[27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+[29]
+Underfull \vbox (badness 5460) has occurred while \output is active []
+
+ [30]
+[31] [32]
+Overfull \hbox (460.20596pt too wide) in paragraph at lines 723--741
  [][] 
  []
 
-[32]
-<fig_ingestion_time.png, id=757, 504.80595pt x 342.19846pt>
+<fig_ingestion_time.png, id=758, 504.80595pt x 342.19846pt>
 File: fig_ingestion_time.png Graphic file (type png)
 <use fig_ingestion_time.png>
-Package pdftex.def Info: fig_ingestion_time.png  used on input line 750.
+Package pdftex.def Info: fig_ingestion_time.png  used on input line 752.
 (pdftex.def)             Requested size: 204.85974pt x 138.87157pt.
 
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 755.
+(hyperref)                removing `\uppercase' on input line 757.
 
-[33 <./fig_ingestion_time.png>] [34]
+[33 <./fig_ingestion_time.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+Underfull \vbox (badness 5217) has occurred while \output is active []
 
  [35]
 [36] [37] [38]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 877.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 879.
 
-Underfull \hbox (badness 10000) in paragraph at lines 877--878
+Underfull \hbox (badness 10000) in paragraph at lines 879--880
 []\OT1/ptm/m/n/9 Chaffin, A. (2025). GTE-ModernColBERT. Model re-lease, LightOn
  AI. []$\OT1/pcr/m/n/9 https : / / huggingface . co / lightonai /
  []
@@ -875,11 +884,11 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  14200 strings out of 467871
  226320 string characters out of 5418376
- 665240 words of memory out of 5000000
+ 671140 words of memory out of 5000000
  42720 multiletter control sequences out of 15000+600000
  670377 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,12578b,668s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,12578b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -890,9 +899,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (39 pages, 928760 bytes).
+Output written on paper.pdf (39 pages, 931119 bytes).
 PDF statistics:
- 921 PDF objects out of 1000 (max. 8388607)
+ 925 PDF objects out of 1000 (max. 8388607)
  165 named destinations out of 1000 (max. 500000)
  439 words of extra memory for PDF output out of 10000 (max. 10000000)
 

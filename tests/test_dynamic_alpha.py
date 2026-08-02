@@ -25,7 +25,7 @@ from types import SimpleNamespace
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from pipeline.hybrid_retriever import HybridRetriever, _matched_faculty_initials
+from pipeline.hybrid_retriever import HybridRetriever, _matched_faculty_initials, _apply_same_entity_bonus, SAME_ENTITY_BONUS
 
 
 def _fake_retriever(aliases=None, faculty_initials=None, faculty_names=None, faculty_tokens=None):
@@ -137,6 +137,58 @@ def test_dynamic_alpha_interpolation_math_matches_entity_signal_strength():
         lambda_ = lambda_open + (lambda_entity - lambda_open) * strength
         assert abs(lambda_ - expected_lambda) < 1e-9, \
             f"strength={strength}: expected lambda={expected_lambda}, got {lambda_}"
+
+
+def test_same_entity_bonus_boosts_same_person_not_similar_name():
+    # 2026-08-02: root-caused via a direct query investigation ("Which room
+    # is Anika Tasnim in?", the single largest nDCG loss vs. BM25-only in
+    # the entity-heavy set) that three different real faculty members share
+    # a first name (Anika Tasnim, Anika Islam, Anika Afrin) -- confirmed
+    # against actual corpus metadata. Once the exact-match ceiling has
+    # resolved rank-1 to the correct person, her OWN other records should
+    # outrank a DIFFERENT person's merely name-similar record. This test
+    # locks in that exact distinction: same person -> bonus; different
+    # person (even with lexical/embedding similarity) -> no bonus; the
+    # ceiling-holder itself -> untouched (its dominant score already wins
+    # rank-1 regardless).
+    scored = [
+        {"doc_id": "FacultyList-171", "score": 101.265, "exact_match": True,
+         "metadata": {"Name": "Anika Tasnim"}},
+        {"doc_id": "FacultyAvailability-443", "score": 0.523, "exact_match": False,
+         "metadata": {"Name": "Anika Tasnim"}},  # same person -> should get bonus
+        {"doc_id": "FacultyList-178", "score": 0.552, "exact_match": False,
+         "metadata": {"Name": "Anika Islam"}},  # different person -> no bonus
+        {"doc_id": "FacultyList-163", "score": 0.550, "exact_match": False,
+         "metadata": {"Name": "Anika Afrin"}},  # different person -> no bonus
+    ]
+    exact_match_ids = {"FacultyList-171"}
+    corpus = {"FacultyList-171": {"metadata": {"Name": "Anika Tasnim"}}}
+
+    _apply_same_entity_bonus(scored, exact_match_ids, corpus)
+
+    by_id = {c["doc_id"]: c["score"] for c in scored}
+    assert by_id["FacultyList-171"] == 101.265, "ceiling-holder's own score must be untouched"
+    assert by_id["FacultyAvailability-443"] == 0.523 + SAME_ENTITY_BONUS, \
+        "same person's other record should receive the bonus"
+    assert by_id["FacultyList-178"] == 0.552, "a different person must not receive the bonus"
+    assert by_id["FacultyList-163"] == 0.550, "a different person must not receive the bonus"
+    # With the bonus, Tasnim's own record now correctly outranks the other Anikas
+    assert by_id["FacultyAvailability-443"] > by_id["FacultyList-178"]
+    assert by_id["FacultyAvailability-443"] > by_id["FacultyList-163"]
+
+
+def test_same_entity_bonus_noop_when_no_unambiguous_match():
+    # Ambiguous (2+ exact matches) or zero exact matches: nothing to anchor
+    # a "same entity" comparison to, so the function must do nothing.
+    scored = [{"doc_id": "A", "score": 1.0, "exact_match": True, "metadata": {"Name": "X"}},
+              {"doc_id": "B", "score": 0.5, "exact_match": False, "metadata": {"Name": "X"}}]
+    corpus = {"A": {"metadata": {"Name": "X"}}, "C": {"metadata": {"Name": "X"}}}
+
+    _apply_same_entity_bonus(scored, {"A", "C"}, corpus)  # 2 exact matches: ambiguous
+    assert scored[1]["score"] == 0.5, "must not apply any bonus when the match is ambiguous"
+
+    _apply_same_entity_bonus(scored, set(), corpus)  # 0 exact matches
+    assert scored[1]["score"] == 0.5, "must not apply any bonus when there is no exact match"
 
 
 def test_tied_score_sort_is_deterministic_regardless_of_input_order():

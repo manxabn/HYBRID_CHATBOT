@@ -252,6 +252,25 @@ UNAMBIGUOUS_MATCH_SCORE = 100.0
 # them.
 EXACT_MATCH_BONUS = 0.3
 
+# Same-entity secondary bonus (2026-08-02): root-caused via a direct query
+# investigation ("Which room is Anika Tasnim in?", the single largest nDCG
+# loss vs. BM25-only in the entity-heavy set) that three different real
+# faculty members share a first name (Anika Tasnim, Anika Islam, Anika
+# Afrin) -- confirmed against actual corpus metadata, not inferred. Once
+# UNAMBIGUOUS_MATCH_SCORE has already resolved rank-1 to the correct
+# person, this system's own OTHER records for that SAME person (e.g. her
+# other FacultyAvailability rows) are genuinely relevant and should
+# outrank a different person's merely name-similar record -- but nothing
+# previously encoded that distinction, so adaptive's residual vector
+# weight could and did rank a different "Anika" above Tasnim's own
+# remaining rows. Deliberately conservative: a third of EXACT_MATCH_BONUS,
+# so a same-entity secondary record can win a close tie against an
+# unrelated similar-name record (the observed ~0.03 gap) without ever
+# approaching EXACT_MATCH_BONUS itself or the UNAMBIGUOUS_MATCH_SCORE
+# ceiling -- it can only affect ordering AMONG non-exact-match candidates,
+# never who wins rank-1, which the ceiling already guarantees on its own.
+SAME_ENTITY_BONUS = 0.1
+
 
 TITLE_RE = re.compile(r"\b(dr|mr|mrs|ms|prof)\.?\b", re.IGNORECASE)
 POSSESSIVE_RE = re.compile(r"'s\b", re.IGNORECASE)
@@ -283,6 +302,30 @@ def _normalize_name(s: str) -> str:
     s = POSSESSIVE_RE.sub("", s)
     s = NON_ALNUM_RE.sub(" ", s.lower())
     return " ".join(s.split())
+
+
+def _apply_same_entity_bonus(scored: list, exact_match_ids: set, corpus: dict) -> None:
+    """Mutates `scored` in place. See SAME_ENTITY_BONUS's module-level
+    docstring for the root cause this targets (a genuine near-duplicate
+    -name confusion, e.g. three different real faculty members all named
+    "Anika"). Only applies once exact_match_ids has resolved to exactly
+    one candidate (the UNAMBIGUOUS_MATCH_SCORE ceiling holder); every
+    OTHER candidate sharing that same resolved entity's stored Name field
+    (genuinely the same real-world person's other records, not merely a
+    similar one) gets a small secondary bonus, reordering candidates
+    below the ceiling-holder without ever touching who wins rank-1."""
+    if len(exact_match_ids) != 1:
+        return
+    ceiling_doc_id = next(iter(exact_match_ids))
+    ceiling_name = corpus.get(ceiling_doc_id, {}).get("metadata", {}).get("Name")
+    if not ceiling_name:
+        return
+    norm_ceiling_name = _normalize_name(ceiling_name)
+    for c in scored:
+        if c["doc_id"] != ceiling_doc_id and not c["exact_match"]:
+            cand_name = c["metadata"].get("Name")
+            if cand_name and _normalize_name(cand_name) == norm_ceiling_name:
+                c["score"] += SAME_ENTITY_BONUS
 
 
 # Conversational filler-prefix stripping (2026-08-01): found via a direct
@@ -910,6 +953,8 @@ class HybridRetriever:
             scored = self._score_rrf(bm25_cand, vec_cand_dist, exact_match_ids, lambda_, question_scores)
         else:
             scored = self._score_linear(bm25_cand, vec_cand_dist, exact_match_ids, lambda_, question_scores)
+
+        _apply_same_entity_bonus(scored, exact_match_ids, self.corpus)
 
         # 2026-08-02: sort key was score alone -- when multiple candidates
         # tie exactly (e.g., several FacultyAvailability rows for the same
