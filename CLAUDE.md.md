@@ -4062,3 +4062,86 @@ injection via `build_prompt`'s `str.format()` (confirmed no re-parsing of
 substituted values, so no format-string injection — the residual risk is
 the generic, architecture-inherent LLM prompt-injection surface every RAG
 system has, not a code defect specific to this one).
+
+## 2026-08-02: conformal claim-level backoff calibrated for the first time — a diagnosed, precisely-explained negative result, not fabricated novelty
+
+After the paper's abstract/intro restructuring (previous entries), the
+user pushed directly: "why do not you try bringing some [novelty]" and
+"try something new... make a new algorithm." Explicit standing rule
+restated to self and honored: will not fabricate a positive result or
+force a target no matter the pressure, including social pressure to
+"find novelty." What follows is real, newly-executed work with a real
+(negative) outcome, not an invented one.
+
+`pipeline/conformal_abstention.py` was fully implemented in an earlier
+session but explicitly disclosed as never calibrated or enabled
+(`use_conformal_backoff` defaults `False`, `OPEN_ENDED_THRESHOLD=0.35` is
+a documented provisional heuristic) — a complete mechanism sitting
+invisible, never mentioned anywhere in paper.tex despite real calibration
+-label data (`results/conformal_calibration_labels.csv`, 442 claims)
+already existing from prior work. This is exactly the kind of gap worth
+closing for real rather than reframing: activate it, calibrate it
+against real data, and report whatever the real result is.
+
+**Naive in-sample calibration** (`scripts/run_conformal_calibration.py`,
+pre-existing) found threshold=0.9943, achieved_risk=0.0 — promising
+-looking, and exactly the kind of number this project's own established
+discipline says not to trust without a held-out check (the open-ended
+abstention gate's own in-sample-vs-held-out gap is already documented in
+paper.tex's Limitations). Wrote a new, permanent, reproducible script,
+`scripts/calibrate_conformal_heldout.py` (70/30 split, seed 42, reuses
+cached NLI scores rather than re-scoring), to check it properly.
+
+**Held-out result: degenerate.** Train-calibrated threshold = **1.0000**
+(the mathematical maximum an NLI score can take); retains **0 of 133**
+held-out claims. Not a marginal or small-sample problem — a threshold
+this extreme would empty-filter every open-ended answer the pipeline
+ever produces if enabled.
+
+**Root-caused, not just reported.** Scored all 442 calibration claims
+once (`results/conformal_calibration_labels_scored.csv`) and found the
+underlying signal is not merely weak (as the existing whole-answer NLI
+cross-check already showed, r=-0.063) but mildly *inverted* at the claim
+level: negative (should-be-incorrect) claims score *higher* on average
+(mean 0.902) than positive (should-be-correct) claims (mean 0.781).
+Investigated why rather than stopping at the number: direct inspection
+of negative-labeled claims found 269/305 (88%), and 269/274 (98%) among
+those scoring >0.9, are near-verbatim substrings of their own retrieved
+context — verified by pulling and reading real examples, not assumed
+from the aggregate stat alone. Mechanism: an Out-of-Scope query still
+returns *some* retrieved context (often the corpus's own near-identical
+Out-of-Scope row), and the generator, conditioned on that context,
+reproduces it almost verbatim; NLI correctly scores this as faithful to
+*the context it was given*, which is exactly what NLI measures — but
+faithfulness-to-given-context and correctness-to-the-true-query diverge
+precisely in this regime, since the given context isn't a correct source
+for an unanswerable question. A structural mismatch no recalibration can
+fix, not a data-quantity problem.
+
+**Decision: do not enable.** `use_conformal_backoff` stays `False`. Did
+NOT delete `conformal_abstention.py` despite the user's "delete something
+that failed" framing — the *code* is correct, complete, and exactly
+matches its own documented design (Mohri & Hashimoto, ICML 2024,
+independently re-verified via WebFetch before citing); the *calibration
+outcome* under this specific confidence signal is what failed, which is
+a real, disclosable finding, not a code defect to delete. Explained this
+distinction back to the user rather than silently removing working
+infrastructure.
+
+**Verified before citing**: fetched proceedings.mlr.press/v235/mohri24a.html
+directly to confirm the Mohri & Hashimoto paper's exact title/authors/
+venue myself, independent of the module docstring's own prior claim to
+have already done so — this project's citations get verified by whoever
+is about to use them, not inherited on trust.
+
+**Paper propagation**: new subsubsection (`subsec:conformal-calibration`,
+placed directly after the existing NLI cross-check section since it's
+the same underlying limitation from a second angle), abstract, and
+intro's contribution list all updated with the real numbers. Recompiles
+cleanly, 38 pages, 0 undefined refs. 28/28 tests still pass (no pipeline/
+code changed this round, only new scripts + paper.tex).
+
+Also corrected the user directly on an inflated framing ("you've read
+200+ papers") — 6 were actually verified this session. Precision here
+matters more than a flattering-sounding number, especially in a
+conversation about not fabricating results.

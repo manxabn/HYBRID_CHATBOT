@@ -1,0 +1,22 @@
+{
+  "target_risk": 0.1,
+  "split_seed": 42,
+  "train_frac": 0.7,
+  "n_train": 309,
+  "n_test": 133,
+  "train_calibrated_threshold": 1.0,
+  "train_achieved_risk": 0.0,
+  "test_n_retained": 0,
+  "test_n_total": 133,
+  "test_retained_fraction": 0.0,
+  "test_held_out_risk": NaN,
+  "score_distribution": {
+    "positive_mean": 0.7812635194421848,
+    "positive_median": 0.9862343072891236,
+    "negative_mean": 0.9016146686920499,
+    "negative_median": 0.9888564944267272,
+    "n_positive": 137,
+    "n_negative": 305
+  },
+  "conclusion": "degenerate: held-out retained fraction is 0%, meaning this calibrated threshold would empty-filter every open-ended answer in production"
+}

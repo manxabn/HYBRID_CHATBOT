@@ -1,0 +1,10 @@
+{
+  "threshold": 0.9943,
+  "achieved_risk": 0.0,
+  "n": 442,
+  "n_positive": 137,
+  "n_negative": 305,
+  "target_risk": 0.1,
+  "label_source": "structural (Out-of-Scope negatives + verified-retrieval positives), NOT human-annotated",
+  "not_covered": "results/human_annotation_sample.csv's 50 disagreement-prioritized cases remain unlabeled and are NOT represented in this calibration set -- those were specifically selected as genuinely hard/ambiguous cases this structural approach cannot resolve; this threshold has NOT been validated against them."
+}
