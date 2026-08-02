@@ -1,0 +1,5 @@
+config,mean,count
+bm25_only,0.8525,40
+full_hybrid,0.8474999999999999,40
+no_retrieval,0.6125,40
+vector_only,0.825,40

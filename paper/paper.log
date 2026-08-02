@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  2 AUG 2026 21:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  2 AUG 2026 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -728,23 +728,14 @@ Overfull \hbox (6.26099pt too wide) in paragraph at lines 147--159
 
 Underfull \vbox (badness 3884) has occurred while \output is active []
 
- [9 <./fig_hybrid_retriever.png>] [10] [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 1931) has occurred while \output is active []
-
- [13]
+ [9 <./fig_hybrid_retriever.png>] [10] [11] [12] [13]
 Overfull \hbox (86.60915pt too wide) in paragraph at lines 271--272
 \OT1/ptm/m/n/10 maintained piece of code, and the two copies silently drifted a
 part. We ad-dressed the spe-cific in-stance -- \OT1/pcr/m/n/10 pipeline/prerequ
 isite[]graph.py
  []
 
-
-Underfull \vbox (badness 2735) has occurred while \output is active []
-
- [14]
+[14]
 <fig_response_gen.png, id=458, 3334.4575pt x 3519.1475pt>
 File: fig_response_gen.png Graphic file (type png)
 <use fig_response_gen.png>
@@ -850,7 +841,7 @@ Overfull \hbox (460.20596pt too wide) in paragraph at lines 721--739
  []
 
 [32]
-<fig_ingestion_time.png, id=762, 504.80595pt x 342.19846pt>
+<fig_ingestion_time.png, id=757, 504.80595pt x 342.19846pt>
 File: fig_ingestion_time.png Graphic file (type png)
 <use fig_ingestion_time.png>
 Package pdftex.def Info: fig_ingestion_time.png  used on input line 750.
@@ -884,11 +875,11 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  14200 strings out of 467871
  226320 string characters out of 5418376
- 667158 words of memory out of 5000000
+ 665240 words of memory out of 5000000
  42720 multiletter control sequences out of 15000+600000
  670377 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,11181b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,12578b,668s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -899,9 +890,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (39 pages, 927922 bytes).
+Output written on paper.pdf (39 pages, 928760 bytes).
 PDF statistics:
- 926 PDF objects out of 1000 (max. 8388607)
+ 921 PDF objects out of 1000 (max. 8388607)
  165 named destinations out of 1000 (max. 500000)
  439 words of extra memory for PDF output out of 10000 (max. 10000000)
 

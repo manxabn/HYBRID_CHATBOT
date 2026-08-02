@@ -74,11 +74,11 @@
 \newlabel{tab:abstention-calib}{{3}{12}{Calibrated per-route abstention thresholds (against labeled Out-of-Scope vs.\ answerable examples, seed=42; entity-heavy augmented with 52 database-verified synthetic examples, see text)}{table.caption.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Confidence-Gated Abstention with Sufficient-Context Override}{12}{subsection.3.7}\protected@file@percent }
 \newlabel{subsec:abstention}{{3.7}{12}{Confidence-Gated Abstention with Sufficient-Context Override}{subsection.3.7}{}}
-\citation{liu2024lost}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Ambiguous-entity notice quality, LLM-judge criteria (0--1, higher is better), $n=220$ expanded faculty-name-collision test set, paired bootstrap significance.}}{13}{table.caption.7}\protected@file@percent }
 \newlabel{tab:conditioning-v2}{{4}{13}{Ambiguous-entity notice quality, LLM-judge criteria (0--1, higher is better), $n=220$ expanded faculty-name-collision test set, paired bootstrap significance}{table.caption.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Ambiguous-Entity Disambiguation}{13}{subsection.3.8}\protected@file@percent }
 \newlabel{subsec:conditioning}{{3.8}{13}{Ambiguous-Entity Disambiguation}{subsection.3.8}{}}
+\citation{liu2024lost}
 \citation{jin2024longcontext}
 \citation{exit2025}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Confidence-Ordered Context Assembly}{14}{subsection.3.9}\protected@file@percent }
@@ -152,20 +152,20 @@
 \@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Adaptive routing, isolated to the 100 entity-heavy test queries where it actually diverges from a fixed-$\lambda $ baseline (paired bootstrap, 2000 resamples). Re-measured a third time (2026-08-02) after the prerequisite-chain corpus fix and Chroma vector-index rebuild (Section~\ref {subsec:ir-metrics}), following the previous, second re-measurement (2026-08-01) taken after switching the entity-heavy route from RRF to linear fusion at the same $\lambda =0.9$; the RRF-era numbers are reported in text, not repeated here.}}{26}{table.caption.19}\protected@file@percent }
 \newlabel{tab:adaptive-isolated}{{14}{26}{Adaptive routing, isolated to the 100 entity-heavy test queries where it actually diverges from a fixed-$\lambda $ baseline (paired bootstrap, 2000 resamples). Re-measured a third time (2026-08-02) after the prerequisite-chain corpus fix and Chroma vector-index rebuild (Section~\ref {subsec:ir-metrics}), following the previous, second re-measurement (2026-08-01) taken after switching the entity-heavy route from RRF to linear fusion at the same $\lambda =0.9$; the RRF-era numbers are reported in text, not repeated here}{table.caption.19}{}}
 \citation{cormack2009}
-\citation{es2023ragas}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.3}RRF $k$ Sweep: Confirming, Not Assuming, the Same Explanation}{27}{subsubsection.4.9.3}\protected@file@percent }
 \newlabel{subsec:rrf-k-sweep}{{4.9.3}{27}{RRF $k$ Sweep: Confirming, Not Assuming, the Same Explanation}{subsubsection.4.9.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Faithfulness (Automated LLM-Judge)}{27}{subsection.4.10}\protected@file@percent }
-\newlabel{subsec:faithfulness}{{4.10}{27}{Faithfulness (Automated LLM-Judge)}{subsection.4.10}{}}
+\citation{es2023ragas}
 \citation{halt2025}
 \citation{summac2022}
-\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Automated faithfulness score (LLM-judge, 0--1), English sample, re-measured 2026-08-01 on the identical query\_ids under the current retriever.}}{28}{table.caption.20}\protected@file@percent }
-\newlabel{tab:faithfulness}{{15}{28}{Automated faithfulness score (LLM-judge, 0--1), English sample, re-measured 2026-08-01 on the identical query\_ids under the current retriever}{table.caption.20}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Automated faithfulness score (LLM-judge, 0--1), English sample, re-measured 2026-08-02 after the prerequisite-chain corpus fix and Chroma rebuild; supersedes the 2026-08-01 measurement.}}{28}{table.caption.20}\protected@file@percent }
+\newlabel{tab:faithfulness}{{15}{28}{Automated faithfulness score (LLM-judge, 0--1), English sample, re-measured 2026-08-02 after the prerequisite-chain corpus fix and Chroma rebuild; supersedes the 2026-08-01 measurement}{table.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Faithfulness (Automated LLM-Judge)}{28}{subsection.4.10}\protected@file@percent }
+\newlabel{subsec:faithfulness}{{4.10}{28}{Faithfulness (Automated LLM-Judge)}{subsection.4.10}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.10.1}An Architecturally Independent Cross-Check}{28}{subsubsection.4.10.1}\protected@file@percent }
 \newlabel{subsec:nli-faithfulness}{{4.10.1}{28}{An Architecturally Independent Cross-Check}{subsubsection.4.10.1}{}}
 \citation{mohri2024conformal}
-\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score, re-measured 2026-08-01 on the same regenerated sample as Table~\ref {tab:faithfulness}.}}{29}{table.caption.21}\protected@file@percent }
-\newlabel{tab:nli-faithfulness}{{16}{29}{Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score, re-measured 2026-08-01 on the same regenerated sample as Table~\ref {tab:faithfulness}}{table.caption.21}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score, re-measured 2026-08-02 on the same regenerated sample as Table~\ref {tab:faithfulness}; supersedes the 2026-08-01 measurement.}}{29}{table.caption.21}\protected@file@percent }
+\newlabel{tab:nli-faithfulness}{{16}{29}{Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score, re-measured 2026-08-02 on the same regenerated sample as Table~\ref {tab:faithfulness}; supersedes the 2026-08-01 measurement}{table.caption.21}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.10.2}Attempting to Calibrate Conformal Claim-Level Backoff: A Diagnosed Negative Result}{29}{subsubsection.4.10.2}\protected@file@percent }
 \newlabel{subsec:conformal-calibration}{{4.10.2}{29}{Attempting to Calibrate Conformal Claim-Level Backoff: A Diagnosed Negative Result}{subsubsection.4.10.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Banglish retrieval ablation and adaptive pipeline, re-measured 2026-08-01 under the deployed embedding model (\texttt  {finetuned\_minilm\_hard\_negatives\_structured\_banglish\_expanded}) and the current retriever. Baseline rows (Full Hybrid/BM25-only/Vector-only/No-retrieval) never abstain and are reported at $n=100$; the Adaptive pipeline row is matched pairs only ($n=98/100$; 2 excluded where the pipeline abstained), same convention as Table~\ref {tab:novel-sig}'s English comparison. The previous measurement (2026-07-28) predated this embedding model's own training run (2026-07-31) as well as the exact-match and BM25 fixes, and was found stale on re-verification -- see discussion below.}}{30}{table.caption.22}\protected@file@percent }
