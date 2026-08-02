@@ -39,6 +39,9 @@ ABSTENTION_MESSAGE = (
 )
 
 
+CLASSIFIER_THRESHOLD_PATH = ROOT / "results" / "abstention_threshold_newsignals.json"
+
+
 class AbstentionGate:
     def __init__(self, config: dict = None):
         """config: {"entity_heavy": {"signal": str, "threshold": float}, "open_ended": {...}}.
@@ -48,36 +51,72 @@ class AbstentionGate:
         (query_top1_score) are both real, independently-evaluated
         candidates -- see calibrate_abstention.py, which picks whichever
         empirically classifies Out-of-Scope-vs-answerable better per route,
-        rather than assuming one is universally correct."""
+        rather than assuming one is universally correct.
+
+        open_ended route (2026-08-02): now a small 4-feature logistic
+        regression (query_confidence, query_top1_score, question_match_any,
+        bm25_vector_agreement) rather than a single-signal threshold --
+        see scripts/calibrate_abstention_newsignals.py for why: the two new
+        signals are structurally different from the two score-magnitude
+        signals (a lexical near-match check and a cross-retrieval-stream
+        agreement check), and combining all four via 5-fold cross-validated
+        logistic regression measured a consistent +5.2pp mean accuracy
+        improvement over the single-threshold gate (5/5 independent fold
+        -assignment seeds won, not a lucky split -- see that script's
+        robustness sweep). entity_heavy is untouched: its single-threshold
+        gate already generalizes at 96.7% CV accuracy (results/abstention_
+        threshold_kfold.json), nothing to fix there."""
         if config is None:
             config = self._load_calibrated_config()
         self.config = config
 
     @staticmethod
     def _load_calibrated_config() -> dict:
-        if THRESHOLD_PATH.exists():
-            with open(THRESHOLD_PATH, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            if "entity_heavy" in data and "open_ended" in data:
-                return {route: {"signal": data[route].get("signal", "query_confidence"),
-                                "threshold": data[route]["threshold"]}
-                        for route in ("entity_heavy", "open_ended")}
+        if not THRESHOLD_PATH.exists():
+            raise FileNotFoundError(
+                f"{THRESHOLD_PATH} not found. Run "
+                "`python scripts/calibrate_abstention.py` first, or pass an "
+                "explicit config=... to AbstentionGate()."
+            )
+        with open(THRESHOLD_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if "entity_heavy" not in data or "open_ended" not in data:
             # Backward-compat with the earliest single-threshold calibration
             # file, in case this is run before recalibrating.
             return {"entity_heavy": {"signal": "query_confidence", "threshold": data["threshold"]},
                     "open_ended": {"signal": "query_confidence", "threshold": data["threshold"]}}
-        raise FileNotFoundError(
-            f"{THRESHOLD_PATH} not found. Run "
-            "`python scripts/calibrate_abstention.py` first, or pass an "
-            "explicit config=... to AbstentionGate()."
-        )
+
+        config = {"entity_heavy": {"signal": data["entity_heavy"].get("signal", "query_confidence"),
+                                    "threshold": data["entity_heavy"]["threshold"]}}
+
+        if CLASSIFIER_THRESHOLD_PATH.exists():
+            with open(CLASSIFIER_THRESHOLD_PATH, "r", encoding="utf-8") as f:
+                clf_data = json.load(f)
+            config["open_ended"] = {
+                "model": "logistic_regression",
+                "features": clf_data["features"],
+                "coefficients": clf_data["full_data_coefficients"],
+                "intercept": clf_data["full_data_intercept"],
+            }
+        else:
+            config["open_ended"] = {"signal": data["open_ended"].get("signal", "query_confidence"),
+                                     "threshold": data["open_ended"]["threshold"]}
+        return config
 
     def should_abstain(self, signals: dict, route: str) -> bool:
-        """signals: {"query_confidence": float, "query_top1_score": float}
-        (both fields hybrid_retriever.py's retrieve()/retrieve_adaptive()
-        results now carry)."""
+        """signals: dict carrying at least "query_confidence" and
+        "query_top1_score" (both fields hybrid_retriever.py's retrieve()/
+        retrieve_adaptive() results now carry); the open_ended classifier
+        additionally needs "question_match_any" and "bm25_vector_agreement"
+        (see novel_pipeline.py's build_context, which computes both before
+        calling this)."""
         route_config = self.config.get(route)
         if route_config is None:
             raise ValueError(f"No calibrated config for route={route!r}")
+        if route_config.get("model") == "logistic_regression":
+            z = route_config["intercept"] + sum(
+                route_config["coefficients"][f] * signals[f] for f in route_config["features"]
+            )
+            return z >= 0.0  # matches sklearn LogisticRegression.predict(): class 1 (should-abstain) iff decision_function >= 0
         value = signals[route_config["signal"]]
         return value < route_config["threshold"]

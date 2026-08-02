@@ -999,9 +999,30 @@ class HybridRetriever:
         else:
             margin = 0.0
         top1_score = scored[0]["score"] if scored else 0.0
+
+        # bm25_vector_agreement (2026-08-02): whether the two retrieval
+        # streams' OWN top-1 candidates -- before fusion -- are the same
+        # document. A structurally different signal from query_confidence/
+        # query_top1_score (both fused-score magnitudes): two independent
+        # retrievers agreeing on which single doc is best is information a
+        # fused score can hide (a high fused top1_score can still come from
+        # one stream dominating while the other stream's own top pick
+        # disagrees entirely). Computed here from bm25_cand/vec_cand_dist,
+        # already built above for this same query -- no extra retrieval
+        # work. See scripts/calibrate_abstention_newsignals.py, which found
+        # this signal (combined with question_match_any, see novel_pipeline
+        # .py) measurably improves the open-ended abstention gate's
+        # cross-validated generalization accuracy (+5.2pp mean across 5
+        # independent fold-assignment seeds, 5/5 seeds won) over the
+        # deployed single-signal threshold gate.
+        bm25_top1 = max(bm25_cand, key=bm25_cand.get) if bm25_cand else None
+        vec_top1 = min(vec_cand_dist, key=vec_cand_dist.get) if vec_cand_dist else None  # distance: lower is better
+        bm25_vector_agreement = 1.0 if (bm25_top1 is not None and bm25_top1 == vec_top1) else 0.0
+
         for r in results:
             r["query_confidence"] = margin
             r["query_top1_score"] = top1_score
+            r["bm25_vector_agreement"] = bm25_vector_agreement
 
         return results
 

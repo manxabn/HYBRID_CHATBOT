@@ -635,9 +635,7 @@ class NovelPipeline:
 
         confidence = final_results[0]["query_confidence"] if final_results else 0.0
         top1_score = final_results[0]["query_top1_score"] if final_results else 0.0
-        signals = {"query_confidence": confidence, "query_top1_score": top1_score}
-        raw_abstain = (self.abstention_gate.should_abstain(signals, route_meta["route"])
-                       if self.abstention_gate else False)
+        bm25_vector_agreement = final_results[0]["bm25_vector_agreement"] if final_results else 0.0
 
         # Sufficient-context override (see module docstring): direct
         # structural evidence the corpus has this entity beats a confidence
@@ -649,6 +647,12 @@ class NovelPipeline:
         # ADR) at rank 2, behind CSE350's entry at rank 1, so exact_match on
         # rank-1 alone was False even though the context the model actually
         # receives does contain a genuine exact match.
+        #
+        # question_match_any is computed here (moved above the abstention
+        # check, 2026-08-02) because it now doubles as one of the
+        # open-ended abstention gate's own classifier features -- see
+        # AbstentionGate.should_abstain and scripts/calibrate_abstention_
+        # newsignals.py -- not just a post-hoc override anymore.
         context_checked = final_results + pool_matches
         exact_match_any = any(d.get("exact_match") for d in context_checked)
         has_graph = graph_block is not None
@@ -658,6 +662,12 @@ class NovelPipeline:
             for d in context_checked
         )
         sufficient_context = exact_match_any or has_graph or has_faculty_room or question_match_any
+
+        signals = {"query_confidence": confidence, "query_top1_score": top1_score,
+                   "question_match_any": 1.0 if question_match_any else 0.0,
+                   "bm25_vector_agreement": bm25_vector_agreement}
+        raw_abstain = (self.abstention_gate.should_abstain(signals, route_meta["route"])
+                       if self.abstention_gate else False)
         abstain = raw_abstain and not sufficient_context
 
         meta = {
