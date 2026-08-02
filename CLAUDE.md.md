@@ -4237,3 +4237,15 @@ Re-ran the EXACT same SummaC-ZS methodology (imported `measure_nli_faithfulness.
 **Paper propagation**: extended Limitations item "Seventh" (Section~sec:discussion) with the full finding. Recompiles cleanly, 40 pages, 0 undefined refs.
 
 Files: `scripts/measure_nli_faithfulness_deberta_roundP.py`, `results/nli_faithfulness_per_query_roundP_deberta.csv`, `results/nli_faithfulness_summary_roundP_deberta.csv`, `results/nli_vs_llmjudge_agreement_roundP_deberta.csv`. No pipeline code touched.
+
+## 2026-08-03: a fifth abstention signal (score_entropy) -- tried, measured, honestly not deployed
+
+User pushed to keep going on the two remaining non-human-dependent items (abstention gate, NLI cross-check) specifically: "solve them without harming anything or make a result that is not a weakness... atleast do something with them." Two more real, literature-grounded attempts, both actually executed, not just proposed.
+
+**score_entropy (abstention gate)**: normalized Shannon entropy of the softmax over the full scored candidate pool -- a standard selective-prediction construct (Hendrycks & Gimpel 2017's softmax-confidence baseline; Kamath, Jia & Liang 2020 use exactly this family of signal for QA abstention under domain shift, ACL 2020 -- both independently verified via WebSearch/WebFetch before citing, not taken from memory). Structurally different from every signal already in the deployed classifier: margin/top1_score are single numbers or a top-2 gap; question_match_any/bm25_vector_agreement are binary structural checks; entropy summarizes the WHOLE score distribution's shape.
+
+Added as an experimental field in `hybrid_retriever.py`'s `retrieve()` (same purely-additive pattern as `bm25_vector_agreement`, computed after sort/truncation -- re-verified test suite green and ranking byte-identical before doing anything else). Built `scripts/calibrate_abstention_entropy_signal.py`, testing a 5-signal classifier (deployed 4 + entropy) against the currently-deployed 4-signal one, same 5-seed x 5-fold robustness protocol already used to validate the 4-signal deployment.
+
+**Honest result: does not help.** 5-signal beat the deployed 4-signal in only 3/5 seeds, mean delta +0.0011 -- indistinguishable from noise. Root cause visible in the data itself: `score_entropy` has almost no variance on this calibration set (mean 0.988, std 0.005, range [0.968, 0.999]) -- the open-ended route's candidate pools are structurally similar enough in shape (linear fusion, similar pool sizes) that this particular signal barely discriminates anything here. **Not deployed.** The field stays in `retrieve()`'s output (harmless, negligible cost) but `AbstentionGate` does not use it. Documented in paper.tex as a disclosed negative result alongside the deployed win, not silently dropped.
+
+Files: `scripts/calibrate_abstention_entropy_signal.py`, `results/abstention_threshold_entropy_signal.json`. Pipeline change: `pipeline/hybrid_retriever.py` (new unused-by-production field only).

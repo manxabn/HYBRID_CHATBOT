@@ -1,0 +1,60 @@
+{
+  "n": 371,
+  "n_folds": 5,
+  "robustness_seeds": [
+    42,
+    1,
+    7,
+    123,
+    2026
+  ],
+  "sample_seed": 42,
+  "features": [
+    "query_confidence",
+    "query_top1_score",
+    "question_match_any",
+    "bm25_vector_agreement",
+    "score_entropy"
+  ],
+  "per_seed": [
+    {
+      "seed": 42,
+      "5signal_cv_accuracy": 0.6604,
+      "4signal_cv_accuracy": 0.6577
+    },
+    {
+      "seed": 1,
+      "5signal_cv_accuracy": 0.6387,
+      "4signal_cv_accuracy": 0.6386
+    },
+    {
+      "seed": 7,
+      "5signal_cv_accuracy": 0.6659,
+      "4signal_cv_accuracy": 0.6659
+    },
+    {
+      "seed": 123,
+      "5signal_cv_accuracy": 0.6282,
+      "4signal_cv_accuracy": 0.6255
+    },
+    {
+      "seed": 2026,
+      "5signal_cv_accuracy": 0.6305,
+      "4signal_cv_accuracy": 0.6305
+    }
+  ],
+  "5signal_cv_mean_accuracy": 0.6447,
+  "5signal_cv_std_accuracy": 0.0577,
+  "4signal_deployed_cv_mean_accuracy": 0.6436,
+  "4signal_deployed_cv_std_accuracy": 0.059,
+  "seeds_where_5signal_beat_4signal": "3/5",
+  "improvement_over_deployed_4signal": 0.0011,
+  "full_data_coefficients": {
+    "query_confidence": -1.8140384039023087,
+    "query_top1_score": -3.1105439517234235,
+    "question_match_any": -0.3735813593829257,
+    "bm25_vector_agreement": -0.24226779568343432,
+    "score_entropy": 0.014375606383871411
+  },
+  "full_data_intercept": 3.892832613173409
+}
