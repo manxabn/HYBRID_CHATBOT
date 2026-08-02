@@ -25,7 +25,7 @@ from types import SimpleNamespace
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from pipeline.hybrid_retriever import HybridRetriever
+from pipeline.hybrid_retriever import HybridRetriever, _matched_faculty_initials
 
 
 def _fake_retriever(aliases=None, faculty_initials=None, faculty_names=None, faculty_tokens=None):
@@ -96,6 +96,37 @@ def test_strength_is_monotonic_with_signal_count():
     assert s0 < s1 < s2
 
 
+def test_matched_faculty_initials_excludes_add_but_keeps_real_initials():
+    # 2026-08-02: FACULTY_INITIAL_RE's original-casing fix (2026-08-01)
+    # closed the lowercase-word collision class ("add a course" no longer
+    # false-matches ADD) but not a second one -- "ADD" typed in full caps,
+    # as in the standard registrar term "ADD/DROP", still matched, since
+    # the match itself is already all-caps as written. Confirmed live:
+    # "When is the ADD/DROP deadline?" force-ranked an unrelated faculty
+    # member (initial ADD) to the exact-match ceiling. This test locks in
+    # the fix: ADD is excluded, but an unrelated real initial (AAR) in the
+    # same query is still recognized normally.
+    matched = _matched_faculty_initials("When is the ADD/DROP deadline, and is AAR the coordinator?")
+    assert "ADD" not in matched, f"ADD should be excluded as a known false-positive, got {matched}"
+    assert "AAR" in matched, f"AAR is a real, unexcluded initial and should still match, got {matched}"
+
+
+def test_is_entity_heavy_false_for_add_drop_query_even_with_real_add_collision():
+    # Simulates the real corpus fact that ADD genuinely is a FacultyList
+    # initial (Ayesha Siddika) -- without the fix, is_entity_heavy would
+    # return True here purely because of that collision, misrouting an
+    # ordinary add/drop-period question into the entity_heavy/exact-match
+    # branch and force-ranking her unrelated record to the top.
+    fake = _fake_retriever(faculty_initials={"ADD": "faculty_doc_ayesha"})
+    assert HybridRetriever.is_entity_heavy(fake, "When is the ADD/DROP deadline?") is False
+    assert HybridRetriever.is_entity_heavy(fake, "What is the ADD/DROP period for this semester?") is False
+    # Sanity: a genuinely different real initial in the same fake index is
+    # still recognized as entity-heavy (the exclusion is scoped to ADD
+    # only, not a blanket disabling of faculty-initial matching).
+    fake2 = _fake_retriever(faculty_initials={"AAR": "faculty_doc_kaykobad"})
+    assert HybridRetriever.is_entity_heavy(fake2, "What is AAR's designation?") is True
+
+
 def test_dynamic_alpha_interpolation_math_matches_entity_signal_strength():
     # Confirms retrieve_dynamic_alpha's lambda interpolation formula itself
     # (lambda_open + (lambda_entity - lambda_open) * strength) without
@@ -115,5 +146,7 @@ if __name__ == "__main__":
     test_all_four_signal_types_gives_full_strength()
     test_token_fallback_alone_counts_as_one_signal_not_two()
     test_strength_is_monotonic_with_signal_count()
+    test_matched_faculty_initials_excludes_add_but_keeps_real_initials()
+    test_is_entity_heavy_false_for_add_drop_query_even_with_real_add_collision()
     test_dynamic_alpha_interpolation_math_matches_entity_signal_strength()
     print("OK: all dynamic-alpha unit tests passed")

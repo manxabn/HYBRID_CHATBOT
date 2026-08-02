@@ -46,7 +46,6 @@ to misfire on this corpus's duplicate-paraphrase structure.
 import difflib
 import re
 import time
-from pathlib import Path
 
 from pipeline.abstention import ABSTENTION_MESSAGE, AbstentionGate
 from pipeline.hybrid_retriever import HybridRetriever
@@ -209,6 +208,13 @@ QUESTION_MATCH_THRESHOLD = 0.90
 # hedges. AMBIGUOUS_ENTITY_MAX bounds how many candidates get pulled into
 # context when this fires, so a pathological case (nothing this corpus
 # currently has, but not provably impossible) can't blow up the prompt.
+GENERATION_FAILURE_MESSAGE = (
+    "Something went wrong while generating a response (the generation "
+    "service may be temporarily unavailable). This is a technical failure, "
+    "not a judgment about whether your question is answerable -- please "
+    "try again shortly."
+)
+
 AMBIGUOUS_ENTITY_MAX = 20
 AMBIGUOUS_ENTITY_NOTICE = (
     "NOTE: This query's named person/entity matches MULTIPLE distinct "
@@ -679,7 +685,25 @@ class NovelPipeline:
         # translation, see build_context) since that changes language, not
         # just spelling, and no evidence supports doing the same swap there.
         generation_query = meta.get("normalized_query") or query
-        answer = generate_fn(generation_query, context)
+        # 2026-08-01: this call was the one Ollama-dependent path in this
+        # file with no try/except, unlike translate_to_english/
+        # normalize_entities above -- a genuinely-down or hung Ollama
+        # instance (post_with_retry re-raises after exhausting retries,
+        # see ollama_client.py) propagated uncaught out of answer(),
+        # crashing the whole request instead of degrading gracefully.
+        # Deliberately NOT reusing ABSTENTION_MESSAGE/meta["abstain"] here:
+        # that mechanism means "retrieved evidence was insufficient" and
+        # is a calibrated, measured signal this project reports precisely
+        # (Section~\ref{subsec:abstention} of the paper) -- an infra
+        # failure is a different failure mode and must not silently
+        # inflate the abstention rate those numbers depend on.
+        try:
+            answer = generate_fn(generation_query, context)
+        except Exception as e:
+            print(f"[novel_pipeline] generation failed: {e}")
+            meta["generation_failed"] = True
+            t1 = time.perf_counter()
+            return GENERATION_FAILURE_MESSAGE, meta, context, t1 - t0
         t1 = time.perf_counter()
 
         if self.use_conformal_backoff and context:

@@ -67,28 +67,42 @@ def main(raw_path: Path, per_query_out: Path, summary_out: Path):
 
     print(f"Scoring {len(df)} rows from {raw_path}...")
 
+    # BLEU/ROUGE-L/METEOR computed from the ORIGINAL generated_answer values
+    # (see below) -- a genuinely empty generated_answer must score exactly
+    # 0.0 on all four metrics, not get silently rewarded for reference text
+    # that happens to share a word with "[empty response]".
+    df["bleu"] = [bleu(r, h) for r, h in zip(df["reference_answer"], df["generated_answer"])]
+    df["rougeL"] = [rouge_l(r, h) for r, h in zip(df["reference_answer"], df["generated_answer"])]
+    df["meteor"] = [meteor(r, h) for r, h in zip(df["reference_answer"], df["generated_answer"])]
+
     # A genuinely empty generated_answer (LLM returned "" without abstaining --
     # confirmed real, rare case, 2026-07-27, query Q071 in a reranker-ablation
     # run) crashes bert_score's tokenizer (RobertaTokenizer.
     # build_inputs_with_special_tokens([]) on a zero-token input), taking down
     # the whole batch rather than just that row. BLEU/METEOR already handle
-    # this gracefully (return 0.0 for empty hyp_tokens); substituting a
-    # single-space placeholder here does the same for BERTScore -- it still
-    # scores near-zero against any real reference, it just doesn't crash.
-    n_empty = (df["generated_answer"].str.strip() == "").sum()
+    # this gracefully (return 0.0 for empty hyp_tokens, already scored above);
+    # substituting a placeholder for BERTScore specifically avoids the crash
+    # without touching the other three metrics' inputs. 2026-08-01 fix: this
+    # substitution previously mutated the shared generated_answer column
+    # BEFORE bleu/rougeL/meteor were computed from it, so those three were
+    # silently scored against "[empty response]" instead of the true empty
+    # string whenever the substitution fired -- inflating them away from the
+    # correct 0.0 on any reference sharing a word with the placeholder text.
+    # A local copy for BERTScore only, computed AFTER the three metrics
+    # above already used the real (possibly empty) generated_answer values,
+    # closes this.
+    bertscore_input = df["generated_answer"].copy()
+    n_empty = (bertscore_input.str.strip() == "").sum()
     if n_empty:
         print(f"WARNING: {n_empty} row(s) have an empty generated_answer -- "
-              f"substituting a placeholder so BERTScore doesn't crash on them.")
-        df.loc[df["generated_answer"].str.strip() == "", "generated_answer"] = "[empty response]"
-
-    df["bleu"] = [bleu(r, h) for r, h in zip(df["reference_answer"], df["generated_answer"])]
-    df["rougeL"] = [rouge_l(r, h) for r, h in zip(df["reference_answer"], df["generated_answer"])]
-    df["meteor"] = [meteor(r, h) for r, h in zip(df["reference_answer"], df["generated_answer"])]
+              f"substituting a placeholder (BERTScore input only, not BLEU/ROUGE-L/METEOR) "
+              f"so BERTScore doesn't crash on them.")
+        bertscore_input.loc[bertscore_input.str.strip() == ""] = "[empty response]"
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Running BERTScore on {device} (downloads roberta-large on first call)...")
     P, R, F1 = bert_score_fn(
-        df["generated_answer"].tolist(),
+        bertscore_input.tolist(),
         df["reference_answer"].tolist(),
         lang="en",
         device=device,

@@ -9,9 +9,19 @@ runs the full pipeline (generation included) on exactly those 12 queries,
 with use_graph=True vs. False, everything else held fixed (reranker off,
 same retriever, same abstention gate).
 
-Usage: python scripts/ablate_graph_augmentation.py
+This n=12 result is historical -- superseded by the n=31 expansion in
+scripts/ablate_graph_augmentation_expanded.py, which is what paper.tex's
+Table~\ref{tab:graph-ablation} now reports as the confirmed result. Kept
+runnable for reference; --out now required to default-protect the
+original n=12 output from being silently overwritten by a re-run (2026-
+08-01 fix: this script previously hardcoded its output path, unlike every
+other ablation script in this project, which follows run_ablation.py's
+convention of an --out flag precisely to prevent this).
+
+Usage: python scripts/ablate_graph_augmentation.py [--out PATH]
 """
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -25,10 +35,10 @@ from pipeline.ollama_client import generate
 from pipeline.prerequisite_graph import PrerequisiteGraph
 
 QUERIES_PATH = ROOT / "data" / "test_queries.csv"
-OUT_PATH = ROOT / "results" / "graph_ablation_raw.csv"
+DEFAULT_OUT_PATH = ROOT / "results" / "graph_ablation_raw.csv"
 
 
-def main():
+def main(out_path: Path):
     df = pd.read_csv(QUERIES_PATH)
     pg = PrerequisiteGraph()
     chain_queries = df[df["query"].apply(lambda q: bool(pg.context_block(q)))].reset_index(drop=True)
@@ -48,9 +58,14 @@ def main():
             print(f"  [{label}] {r['query_id']}: abstained={meta['abstain']} graph_augmented={meta['graph_augmented']}", flush=True)
 
     out = pd.DataFrame(rows)
-    out.to_csv(OUT_PATH, index=False)
-    print(f"\nWrote {OUT_PATH}")
+    out.to_csv(out_path, index=False)
+    print(f"\nWrote {out_path}")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--out", type=Path, default=DEFAULT_OUT_PATH,
+                         help=f"Output CSV path (default: {DEFAULT_OUT_PATH}, the original n=12 "
+                              "historical result -- pass a different path to avoid overwriting it)")
+    args = parser.parse_args()
+    main(args.out)

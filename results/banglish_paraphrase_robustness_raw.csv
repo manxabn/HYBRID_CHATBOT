@@ -1,0 +1,85 @@
+id,category,orig_question,para_question,found_original_chunk_top5,found_any_correct_answer_top5
+2374,Admission,BRAC e course drop korle tuition fee refund percentage drop korar week-er upor depend kore?,BRAC e course drop korar por tuition fee refund percentage kemon ase?,True,True
+1195,General / Web FAQ,BRAC e campus security ke maintain kore?,BRAC er campus security system ta ki kivabe maintain kora jay?,True,True
+2612,TARC/RS (Residential Semester),BRAC Savar Residential Campus-e Student Dining Feedback Committee monthly menu review kore?,Savar Residential Campus-er BRAC student dining feedback committee ekhon monthy menu review korche?,True,True
+1039,University Facts & Governance,BRAC University er alumni community kon office manage kore?,BRAC University-er alumni community ki office koto din aro kaj korchey?,True,True
+2604,General / Web FAQ,BRAC e Connect portal active session inactivity-r karone koto minute por auto logout hoy?,BRAC e Connect portal-te inactive session er por koto minute aar keno auto logout hobe.,True,True
+2419,Library,BRAC Badda campus Ayesha Abed Library-te individual quiet study carrels / study pods reserve korar system ki?,BRAC Badda campus-er Ayesha Abed Library te kichu ekta solo study room reserve kora jay na?,True,True
+2890,General / Web FAQ,BRAC e Connect portal-e advisor 1-on-1 meeting booking calendar integrated?,BRAC e Connect portal-te amader kichu advisor 1-on-1 meeting booking calendar ekhon integrated achi?,True,True
+381,Extracurricular Activities,Club event er por report kivabe submit korbo?,Club event er report submit korte ghumon kotha bolo.,True,True
+2559,General / Web FAQ,2021 shale QS ranking-e BRAC University soho Bangladesh theke total koyta institution ranked hoyechilo?,BRAC University-er 2021 shal QS ranking-e Bangladesh theke koto institution ranked hochilo?,True,True
+705,Programs & Departments,BRAC University te Bachelor of Science in Computer Science and Engineering (CSE) er detailed course sequence ta ki?,"BRAC University-er Bachelor of Science in Computer Science and Engineering (CSE) course-er detailed sequence koto din aar kemon holo, bhalo lagey?",True,True
+1341,Admission,BRAC e admission defer kora jay?,BRAC er admission process te ki der lagbe?,False,False
+165,Advising,Self-Registration period e advising confirm na korle ki consequence hoy?,Self-Registration period e amar email a confirmation mail pabo kina?,True,True
+261,Campus,EEE Department kothay?,EEE department কোথায় আছে?,True,True
+442,Library,Ayesha Abed Library er Digital Scholarship Lab ta ki?,Ayesha Abed Library te Digital Scholarship Lab kisom kichhu?,True,True
+2033,Exams and Grading,BRAC e academic transcript-e official seal ar registrar signature thake?,"Academic transcript-er BRAC e official seal o registrar signature thakle kemon?
+
+(Note: I've tried to preserve the original meaning and entities while rephrasing the sentence in a different way, but please let me know if you'd like me to make any adjustments.)",True,True
+377,Extracurricular Activities,BRAC University te notun club shuru korte basic requirement ar application process ta ki?,BRAC University er new club start korar basic condition o application process kemon holo?,True,True
+5,Admission,Admission niye aro information er jonno kake contact korbo?,Amarader admission related information dekhate hobe ki kemon?,False,False
+2301,General / Web FAQ,BRAC e Center for Gender and Social Transformation (CGST) research publish kore?,BRAC e Center for Gender and Social Transformation (CGST) er research publication koto din aro publish hoi?,True,True
+918,Transportation and Bus Services,BRAC University ki bus gula own kore?,BRAC University er bus gulo amar own kore?,True,True
+2925,Admission,BRAC e sibling discount tuition fee concession second sibling-er tuition fee-te apply hoy?,BRAC er second sibling-er tuition fee-te kichu concession diye jabe ki na?,True,True
+644,Policies and Procedures,Gown collection ba refund er jonno lagbe emon original payment receipt hariye gele ki korbo?,"Refund er jonno gown collection ba koto din lagbe, original payment receipt hariye gele amar kaj korte hobe.",True,True
+713,Programs & Departments,Cybersecurity te interested student der jonno ki ki elective course recommend kora hoy?,Cybersecurity course eke studentder jonno ki ekta best elective course kotha hoy?,True,True
+230,Campus,BRAC University te ki smoke-free campus policy ache?,"BRAC University-er campus er kichu dhoomnirbhar kaj kora jay na, amar kotha sunte parchi?",False,False
+3019,General / Web FAQ,BRAC e Fab Lab 3D printers PLA and ABS filament material choice support kore?,Fab Lab e BRAC te 3D printer use korar PLA and ABS filament material er chayan support koto kora jay?,True,True
+2294,Programs & Departments,BRAC e Department of Pharmacy Animal House testing facility maintains safety protocols?,BRAC er Department of Pharmacy te Animal House testing facility e safety protokol maintain kora jay na ki na?,True,True
+532,"Payment, Financial Aid and Scholarship","Ami je payment method e use kori na keno, admission application fee ki shoman thake?","Payment method ami je use korlam na keno, admission application fee shomoye thakle ki?",True,True
+773,TARC/RS (Residential Semester),Savar campus e dormitory room ar roommate kivabe assign kora hoy?,"Savar campus er dormitory room te amra ki korte chai, roommate assign korar process ta kemon hoi.",True,True
+2798,Advising,BRAC e student ID smart card demagnetized or damaged hole re-issuance processing time koto?,BRAC e campus er student ID smart card hole re-issue korar processer koto samay lagte pare?,True,True
+3004,Admission,BRAC e mandatory semester activity fee library & IT charges invoice ledger-e itemized dekha jay?,BRAC er mandatory semester activity fee library & IT charges-er invoice kono ledger-e itemized dekhate parchi ase ki na?,True,True
+1973,Extracurricular Activities,BRAC e Sports Club er under e kon kon outdoor tournament host kora hoy?,BRAC e Sports Club-er kon kon outdoor tournament gulo host kore ase?,True,True
+793,TARC/RS (Residential Semester),TARC e thakar shomoy student der kon rules follow korte hoy?,TARC er shomoy te ki studentder kon rules follow korar porikolpona ase.,True,True
+1329,Advising,BRAC e graduation application alada kore dite hoy?,BRAC er graduation course te apply korar process ki kichu janiye?,True,True
+1264,Admission,BRAC e scholarship ar financial aid er moddhe difference ki?,BRAC e scholarship ta ke financial aid er upor koto prabhabe asbe?,True,True
+1416,Library,BRAC e library te group study korar jonno alada jayga ache?,"BRAC er library te amra group study korte parle, kintu ekta jayga khub ache hobe.",True,True
+649,Policies and Procedures,Installment e fee pay korar procedure ta ki?,Installment e fee payment kemon hobe?,True,True
+1609,Advising,BRAC e date of birth correction kora jay?,BRAC er online portal te date of birth correction korte parben?,True,True
+2191,Library,BRAC e Ayesha Abed Library-te inter-library book request placement online portal-e hoy?,Ayesha Abed Library-er BRAC e inter-library book request placement online portal koto din por online asey?,True,True
+2962,TARC/RS (Residential Semester),BRAC Savar Residential Campus weekend outing parent phone verification process warden complete kore?,Weekend outing er parent phone verification process BRAC Savar Residential Campus te ki kotha? Warden e amra complete korsi kina?,True,True
+1545,Advising,BRAC e convocation er jonno alada registration korte hoy?,BRAC-er convocation er jonno online registration kora jabe ki na?,True,True
+1551,Advising,BRAC e convocation er photo official vabe pawa jay?,BRAC-er convocation photo ta official website e koto din pore view korar modde pawa jay?,True,True
+1760,Campus,BRAC e laptop charge korar jonno charging station ache?,BRAC er laptop charge kora jayate ki kothaitei charging station ase.,True,True
+198,Campus,5th Floor e ki ki facility available?,Ami 5th floor te kichu facility ache kina?,True,True
+428,International Student,International student der jonno ki kono scholarship scheme ache?,"Kintu amar ekta friend international student holo ota scholarship dekhate der khub beshi problem hochche. Ami jani kisu scholarship scheme ache kisu na, kintu ami apni friend er kotha shunechi ki International student der jonno ki kono scholarship scheme ache?",True,True
+1654,Policies and Procedures,BRAC e academic standing ki?,Academic standing BRAC e kotha keno?,True,True
+2052,General / Web FAQ,BRAC e student email ID graduation er por active thake?,BRAC university te course code 101-102 e class note download kora jabe ki na?,False,False
+1021,Transportation and Bus Services,Student ra transport service e problem hole kivabe report korbe?,Transport service te student ra problem hole ki kotha report kora jay na?,True,True
+2287,General / Web FAQ,BRAC e institutional email alias request / update process for official clubs management ki?,BRAC er official club management kemon a BRAC e institutional email alias request / update korar process?,True,True
+2680,Campus,BRAC campus green initiative paperless administrative documentation promote kore?,Campus green initiative-er BRAC-e BRAC campus-te paperless administrative documentation promote korsi?,True,True
+383,Extracurricular Activities,Club Executive Committee member der jonno ki CGPA ar credit requirement lage?,Club Executive Committee member-er jonno CGPA ar credit requirement koto lagbe?,True,True
+1719,Policies and Procedures,BRAC e onno student er assignment copy kora academic offense?,BRAC e onno student er assignment copy korar kshetra te ki o academic offense holo?,True,True
+860,Thesis and Internship,Final defense er age thesis title change korar deadline ta kobe?,Thesis title change korar final defense er deadline ta ki date?,True,True
+1403,Library,BRAC e library er subscribed database er list kothay pabo?,"BRAC e-library te ki database subscribe achi, sei list ei website e dekhete pari.",True,True
+49,Admission,"BSS in Anthropology, BA in English, ar LLB admission er jonno kon kon subject test hoy?","Anthropology course-er BSS, English course-er BA, ar LLB admission korte parbe ar jonno ki subject test hobe?",True,True
+1305,Advising,BRAC e course add korar last date kothay dekhbo?,BRAC e course add korar deadline ki koto din aagey?,True,True
+2268,Programs & Departments,BRAC e Biotechnology program-e wet lab research facility ache ki?,BRAC er biotechnology course-er wet lab research facility koto boro?,True,True
+853,Thesis and Internship,Direction niye member der modhye disagreement hole thesis er majhpothe group ki split hote pare?,"Thesis er majhpothe group ki split hote pare, direction niye member der modhye disagreement hole kotha keno holo?",True,True
+658,Policies and Procedures,Section change korte hole thik kon niyom follow korte hobe?,Section change korar por section change rule niyom follow korte hobe ki kichu special condition aste pare?,True,True
+2201,Extracurricular Activities,BRAC e CSE program-e competitive programming (ICPC / NCPC) workshop organize kora hoy?,BRAC er CSE program-er competitive programming workshop ICPC/NCPC te participate korte parey?,True,True
+1024,Transportation and Bus Services,Transport service e change hole student der kivabe janano hoy?,"Transport service er pore hole student ki kichu problem hochhe, kintu amar course code 205-206 er student der kivabe janano hoy?",True,True
+163,Advising,Scholarship pawa student der pay slip e 29 June 2025 er por late fee keno ashe?,Scholarship pawa student-er pay slip dekhle 29 June 2025 er por late fee kotha keno ache?,True,True
+2727,Advising,BRAC e Leave of Absence apply korar maximum continuous allowed limit koto semester?,BRAC er Leave of Absence apply korar maximum continuous dinmukh oitiyad limit koto semester?,True,True
+2368,General / Web FAQ,BRAC e Medical Center-e seasonal illness or Dengue rapid diagnostic test facility available?,BRAC e Medical Center-er kono seasonal illness er dengue rapid diagnostic test facility ki available kemon?,True,True
+1675,General / Web FAQ,BRAC e tuition fee installment e deya jay?,BRAC er tuition fee installment koto takar beshi deya jay?,True,True
+205,Campus,BRAC Bank ar ATM gula kothay?,BRAC Bank-er ATM gulo ki kotoi?,True,True
+2749,Admission,BRAC e student ID replacement RFID re-issuance fee Accounts Desk-e pay kora lage?,BRAC university te amader student ID replacement RFID re-issue korar shomoye fees ki koto takay?,True,True
+1331,Advising,BRAC e degree verification online kora jay?,BRAC er online degree verification system ase ki kichu information dekhate parchi?,True,True
+265,Campus,Female der Prayer Room ami kivabe access korbo?,"Prayer room er female section e ki protisad ekta gate ase, ami koto din por access korbo?",True,True
+1980,General / Web FAQ,BRAC e automated vending machine er water & snack service ache ki?,BRAC-er automated vending machine te water & snack service kemon asechhe?,True,True
+2580,Transportation and Bus Services,AACSB accreditation-er dike egiye thaka BBS chara r kon Bangladeshi business school ache?,BBS course-er ACCSAB accredition korte parbe na? Kintu Bangladesheri business school-er ACCSAB accredition ache ki na.,True,True
+1932,General / Web FAQ,BRAC e entrepreneurship skill training dey?,BRAC er course e entrepreneurship skill training kemon?,True,True
+755,Programs & Departments,Protita student ke General Education (GenEd) course er koto credit-hour complete korte hoy?,Protita student GenEd course-er total credit-hour ki kotha bolen?,True,True
+118,Advising,Connect er madhome student ra ki ki course-related schedule access korte pare?,"Madhome student-er course-related schedule access korte pare ki protishad kotha ei?
+
+(Note: I've tried to rephrase the sentence while keeping it in Banglish, but please let me know if you'd like any further adjustments)",True,True
+407,Extracurricular Activities,University te ki ki sports team ache?,University er sports team kemon?,True,True
+1787,General / Web FAQ,BRAC e event er presentation slide share kora hoy?,BRAC e event er presentation slide share korar process kemon holo?,True,True
+1044,University Facts & Governance,BRAC University er official colour gula ki?,BRAC University tei official colour ta kotha kivabe boli hoyeche?,True,True
+2857,Programs & Departments,BRAC e Architecture Studio drafting tables work session end-e clean eknong clear rakha compulsory?,Architecture studio-er BRAC e table-er cleaning session koto din aar kotha hobe?,True,True
+2341,Advising,BRAC e semester deferral or leave of absence maximum consecutive koto term newa jay?,BRAC e semester er deferral or leave of absence maximum consecutive koto term aar kotha jay?,True,True
+347,Exams and Grading,Retake ba repeat kora course amar final transcript e dekhabe?,Amar final transcript e retake ba repeat kora course dekhabe ki kotha?,True,True
+1786,General / Web FAQ,BRAC e event miss korle recording pawa jay?,Event er recording kotha BRAC e ki korte hobe?,True,True
+2910,Policies and Procedures,BRAC e academic probation stage 2 student maximum 12 credit hours load register korte pare?,BRAC er academic probation stage 2 student-er maximum 12 credit hour load register korar poroborton koto?,True,True

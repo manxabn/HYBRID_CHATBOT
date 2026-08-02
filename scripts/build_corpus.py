@@ -28,11 +28,15 @@ rather than asking the LLM to guess field identity from position.
 
 import json
 import sqlite3
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 DB_PATH = ROOT / "knowledge_base.db"
 OUT_PATH = ROOT / "data" / "corpus.jsonl"
+
+from pipeline.prerequisite_graph import PrerequisiteGraph
 
 INGESTION_PLAN = {
     "EnglishQA": {
@@ -118,9 +122,36 @@ def main():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
 
+    # 2026-08-01: the Prerequisites table's own stored FullChainPreRequisite
+    # field is a data-quality bug, not a display-formatting one -- verified
+    # directly against the DB: CSE220's own row lists CSE230 as a direct
+    # prerequisite (PreRequisite='CSE111 (HP),CSE230 (HP)'), but CSE221's
+    # stored "full chain" (which starts at CSE220) is 'CSE220-CSE111-CSE110'
+    # -- CSE230 silently dropped one hop in, even though it's right there in
+    # CSE220's own row. This propagates to everything downstream of CSE221
+    # (CSE310, CSE471) and similarly drops PHY111/PHY112 from CSE260's chain
+    # (and everything downstream: CSE340, CSE460); CSE341's stored field is
+    # simply NULL. Confirmed via a full audit (2026-08-01): 7 of the 12
+    # "full prerequisite chain" test queries have a reference_answer (built
+    # from PrerequisiteGraph.full_chain()'s real BFS, in scripts/build_test_
+    # queries.py) that requires a course code absent from this stale stored
+    # field -- meaning the retrievable corpus chunk could NEVER satisfy
+    # those queries' own ground truth, deflating every IR metric (recall/
+    # MRR/nDCG) uniformly across every retrieval config by the same fixed,
+    # avoidable amount. Fixed by overriding FullChainPreRequisite with the
+    # SAME graph BFS already used to generate those reference answers, so
+    # corpus content and ground truth are computed from the same source of
+    # truth (the Prerequisites table's PreRequisite field via PrerequisiteGraph),
+    # not two independently-drifted copies of the same fact. Deliberately
+    # fixed only in the generated corpus, not by UPDATE-ing knowledge_base.db's
+    # own stored field -- lower blast radius, and this is the only place
+    # that field's value is actually read (grep-confirmed).
+    prereq_graph = PrerequisiteGraph(db_path=DB_PATH)
+
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     n_records = 0
     n_chunks = 0
+    n_prereq_chains_fixed = 0
     per_table_chunks = {}
 
     with open(OUT_PATH, "w", encoding="utf-8") as out:
@@ -137,8 +168,17 @@ def main():
             n_text = len(text_fields)
             for row in rows:
                 row_id = row[0]
-                text_values = row[1:1 + n_text]
+                text_values = list(row[1:1 + n_text])
                 meta_extra_values = row[1 + n_text:]
+
+                if table_name == "Prerequisites":
+                    chain_field_idx = text_fields.index("FullChainPreRequisite")
+                    course_code = text_values[text_fields.index("Course")]
+                    computed_chain = prereq_graph.full_chain(course_code)
+                    computed_chain_str = "-".join(computed_chain) if computed_chain else None
+                    if computed_chain_str != text_values[chain_field_idx]:
+                        n_prereq_chains_fixed += 1
+                    text_values[chain_field_idx] = computed_chain_str
 
                 combined_text = "\n".join(
                     f"{label}: {value}" for label, value in zip(labels, text_values) if value
@@ -171,6 +211,8 @@ def main():
     print(f"Wrote {n_chunks} chunks to {OUT_PATH}")
     for table_name, count in per_table_chunks.items():
         print(f"  {table_name}: {count} chunks")
+    print(f"Prerequisites: {n_prereq_chains_fixed} FullChainPreRequisite values differed from the "
+          f"DB's stale stored field and were overridden with the graph-computed BFS chain")
 
 
 if __name__ == "__main__":

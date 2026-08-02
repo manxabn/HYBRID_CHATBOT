@@ -1,0 +1,7 @@
+comparison,metric,adaptive_mean,gte_moderncolbert_mean,mean_diff,ci95_lo,ci95_hi,p_approx,significant
+adaptive_vs_gte_moderncolbert,recall@1,0.985,1.0,-0.0148,-0.03,0.0,0.0,False
+adaptive_vs_gte_moderncolbert,recall@3,0.995,1.0,-0.0051,-0.015,0.0,0.0,False
+adaptive_vs_gte_moderncolbert,recall@5,0.995,1.0,-0.0051,-0.015,0.0,0.0,False
+adaptive_vs_gte_moderncolbert,mrr,0.99,1.0,-0.01,-0.0225,0.0,0.0,False
+adaptive_vs_gte_moderncolbert,ndcg@5,0.9589,0.981,-0.0222,-0.0423,-0.0035,0.019,True
+adaptive_vs_gte_moderncolbert,ndcg@10,0.9773,0.9906,-0.0133,-0.0265,-0.0029,0.007,True

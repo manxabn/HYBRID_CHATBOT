@@ -51,9 +51,14 @@ def test_entity_heavy_route_without_exact_match_retains_nothing():
 # backoff_filter: open_ended route, no context to check against
 # ---------------------------------------------------------------------------
 
-def test_open_ended_route_with_empty_context_is_not_filtered():
+def test_open_ended_route_with_empty_context_is_treated_as_fully_unverified():
+    # 2026-08-02: with no context to check any claim against, there is
+    # nothing to verify the answer with, so it is treated the same as a
+    # fully-unsupported answer (filtered_answer empty), consistent with
+    # retained_fraction=0.0 -- previously filtered_answer returned the
+    # unfiltered answer here, contradicting retained_fraction's signal.
     result = ca.backoff_filter("Some answer.", context="", route="open_ended")
-    assert result["filtered_answer"] == "Some answer."
+    assert result["filtered_answer"] == ""
     assert result["retained_fraction"] == 0.0
     assert result["claim_scores"] == []
 

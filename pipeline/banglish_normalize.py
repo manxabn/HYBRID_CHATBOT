@@ -27,8 +27,6 @@ coverage -- a wrong/over-eager normalization is worse than no normalization
 at this scale, since it can incorrectly merge genuinely distinct words.
 """
 
-import re
-
 # Variant -> canonical root. Grouped by semantic root for readability.
 #
 # "kore" added to the "kor" group 2026-07-31: found via a corpus-specific
@@ -40,7 +38,7 @@ import re
 # the same verb, a real gap in this dictionary, not a new word class.
 _VARIANT_GROUPS = {
     "kor": ["korte", "korar", "koro", "korbo", "kora", "korchi", "korlam",
-            "korish", "korlo", "korish", "korbe", "korle", "koris", "kore"],
+            "korish", "korlo", "korbe", "korle", "koris", "kore"],
     "ache": ["ache", "achi", "achen", "asche"],
     "hobe": ["hobe", "hoise", "hoyeche", "hoye", "hoyese"],
     "gula": ["gula", "guli", "gulo"],

@@ -78,6 +78,31 @@ def test_course_code_re_does_not_false_positive_on_dates_or_mid_word():
             f"expected no course-code match in {query!r}, got {COURSE_CODE_RE.search(query).group(0)!r}"
 
 
+def test_strip_filler_prefix_removes_conversational_prefixes():
+    # 2026-08-01 feature (see FILLER_PREFIX_RE's docstring); regression test
+    # added when the pattern's trailing empty alternative was removed --
+    # behavior verified identical before/after on all of these cases.
+    cases = [
+        ("Hi, what are the prerequisites for CSE220?", "what are the prerequisites for CSE220?"),
+        ("Hey hello, quick question, where is the library?", "where is the library?"),
+        ("Sorry if this was already answered, but what is AAR's room?", "what is AAR's room?"),
+        ("just curious, just wondering, kind of urgent, but who teaches CSE111-07?",
+         "who teaches CSE111-07?"),
+    ]
+    for raw, expected in cases:
+        got = hybrid_retriever.strip_filler_prefix(raw)
+        assert got == expected, f"{raw!r}: expected {expected!r}, got {got!r}"
+
+
+def test_strip_filler_prefix_leaves_ordinary_queries_untouched_and_never_returns_empty():
+    for query in ["What are the prerequisites for CSE220?", "hi", "Hi, ", "quick question"]:
+        got = hybrid_retriever.strip_filler_prefix(query)
+        # A query that is NOTHING BUT filler (or has no filler at all) must
+        # come back unchanged -- never empty (the documented guarantee).
+        assert got == query, f"{query!r}: expected unchanged, got {got!r}"
+        assert got, "strip_filler_prefix must never return an empty string"
+
+
 def test_hybrid_retriever_and_prerequisite_graph_share_the_same_pattern_object():
     # The strongest possible regression guard: not just equal behavior, but
     # literally the same compiled regex object in memory, so it is
@@ -93,5 +118,7 @@ if __name__ == "__main__":
     test_full_course_id_re_captures_section_suffix()
     test_spaced_and_dashed_course_codes_now_match()
     test_course_code_re_does_not_false_positive_on_dates_or_mid_word()
+    test_strip_filler_prefix_removes_conversational_prefixes()
+    test_strip_filler_prefix_leaves_ordinary_queries_untouched_and_never_returns_empty()
     test_hybrid_retriever_and_prerequisite_graph_share_the_same_pattern_object()
     print("OK: all pattern regression tests passed")

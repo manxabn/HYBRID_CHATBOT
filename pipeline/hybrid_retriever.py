@@ -86,6 +86,7 @@ alias hits are forced to rank 0 in the BM25 stream, same intent as
 s_bm25=1.0 in linear mode.
 """
 
+import hashlib
 import json
 import pickle
 import re
@@ -99,7 +100,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 import chromadb
-from pipeline.chroma_embedding import Chroma1xEmbeddingFunction
+from pipeline.chroma_embedding import Chroma1xEmbeddingFunction, DEFAULT_MODEL
 from pipeline.tokenizer import tokenize
 # Shared with pipeline/prerequisite_graph.py -- see patterns.py module
 # docstring for why these must not be redefined locally (a duplicated copy
@@ -109,7 +110,59 @@ from pipeline.patterns import COURSE_CODE_RE, FULL_COURSE_ID_RE, canonicalize_co
 # Faculty initial: 2-5 uppercase letters, no digits -- distinct by
 # construction from COURSE_CODE_RE (which always requires 3 digits), so
 # there is no collision risk between the two token classes.
+#
+# MUST be matched against the query's ORIGINAL casing, never against
+# query.upper() -- 22 of this corpus's 223 real faculty initials (e.g.
+# ADD, ART, ANT, RAS, TAP, SUE, MAO...) are also ordinary English words,
+# so uppercasing the whole query first turns "add a course", "an art
+# elective", "any of the courses" into false exact-match hits on Ayesha
+# Siddika/Atanu Roy/Anika Tasnim's FacultyList rows respectively (found
+# 2026-08-01: "How do I add a course during the add/drop period?" was
+# confirmed live to exact-match ADD and get misrouted entity_heavy=True).
+# Every real faculty-initial query in this project's own test set
+# (Q186/187/191/192/194/197, e.g. "What is BIJS's designation?") is
+# already typed in caps by the user, since that is how an initial is
+# conventionally written -- matching only already-uppercase tokens in the
+# untouched query preserves every one of those while eliminating the
+# lowercase-word collision class entirely, with no blocklist needed.
 FACULTY_INITIAL_RE = re.compile(r"\b[A-Z]{2,5}\b")
+
+# 2026-08-02: the original-casing fix above closed the LOWERCASE-typed
+# collision class but not a second, still-live one -- some of the same 22
+# colliding words are also standard ALL-CAPS academic terms in their own
+# right, not just words that happen to get capitalized by .upper(). "ADD/
+# DROP" is the confirmed case: BRAC's own registrar language and this
+# corpus's own EnglishQA content both use "Add/Drop" as a set compound term
+# (data/corpus.jsonl has 18 occurrences), and a real user typing it in full
+# caps -- "When is the ADD/DROP deadline?", "What is the ADD/DROP period
+# for this semester?", both realistic, unremarkable phrasings, neither
+# containing a lowercase "add" anywhere -- still matched FACULTY_INITIAL_RE
+# on "ADD" even after the original-casing fix, since the match itself is
+# already all-caps in the query as typed. Confirmed live: both queries
+# force-ranked Ayesha Siddika's (initial ADD) FacultyList row to the
+# UNAMBIGUOUS_MATCH_SCORE ceiling (score=101.2), completely unrelated to
+# the add/drop period the question actually asks about -- the exact
+# silent-wrong-answer failure mode the original fix targeted, just for a
+# phrasing the project's own 200/100-query regression check (all lowercase
+# "add"/"drop" mentions, e.g. Q052) never happened to cover. Unlike the
+# original fix, this one genuinely does need a small exclusion: "ADD" is
+# both a real faculty initial and a standard all-caps academic term, so no
+# casing rule alone can distinguish the two. Kept deliberately small and
+# evidence-based (same discipline as PREPROCESS_BANGLISH_CONTENT_WORDS/
+# FILLER_PREFIX_RE) -- only excludes the one collision concretely
+# reproduced with a realistic query, not a speculative blocklist of all 22.
+FACULTY_INITIAL_FALSE_POSITIVE_EXCLUSIONS = {"ADD"}
+
+
+def _matched_faculty_initials(query: str) -> set:
+    """Shared helper for the 3 call sites that need FACULTY_INITIAL_RE
+    matches (_exact_match_ids, is_entity_heavy, entity_signal_strength) --
+    factored out so the exclusion list above only has to be applied in one
+    place, not re-added independently at each site (the same "duplicated
+    logic silently drifts" bug class patterns.py's own docstring warns
+    about, which this project has already hit more than once)."""
+    return {m.group(0) for m in FACULTY_INITIAL_RE.finditer(query)
+            if m.group(0) not in FACULTY_INITIAL_FALSE_POSITIVE_EXCLUSIONS}
 
 # Table-type disambiguation keywords (2026-07-28): a query naming a bare
 # course code AND one of these keywords is asking about ONE specific table
@@ -232,6 +285,62 @@ def _normalize_name(s: str) -> str:
     return " ".join(s.split())
 
 
+# Conversational filler-prefix stripping (2026-08-01): found via a direct
+# paraphrase-robustness check (scripts/eval_paraphrase_robustness.py) on
+# 286 real, held-out EnglishQA (Original, Paraphrase) pairs -- 13 of 44
+# retrieval failures were cases where the paraphrase's actual QUESTION
+# CONTENT was nearly word-for-word identical to the original, just
+# prefixed with a conversational throat-clearer real users commonly type
+# ("Hi, ...", "Kind of urgent, but ...", "Sorry if this was already
+# answered, but ...", "Can someone help — ..."). These prefixes add
+# BM25 term-frequency noise and shift the vector embedding away from the
+# terse original question's embedding, for zero informational gain.
+# Stripped before both streams see the query (retrieve()) and before
+# entity-heavy classification (retrieve_adaptive()), so every downstream
+# signal benefits uniformly. Deliberately anchored to the START of the
+# query only (not a general substring match anywhere), and limited to
+# patterns actually observed in this failure analysis -- same "small,
+# defensible set built from direct evidence" discipline as banglish_
+# normalize.py, to avoid stripping something that is actually part of a
+# genuine question.
+FILLER_PREFIX_RE = re.compile(
+    r"^(?:"
+    r"hi,?\s+|hey,?\s+|hello,?\s+|"
+    r"kind of urgent,?\s*but\s+|"
+    r"not sure if this (?:was|is) (?:already )?(?:covered|answered)(?: elsewhere)?,?\s*but\s+|"
+    r"sorry if this (?:was|is) already answered,?\s*but\s+|"
+    r"can someone help\s*[—\-]?\s*|"
+    r"for a friend who'?s asking\s*[—\-]?\s*|"
+    r"this might be a silly question,?\s*but\s+|"
+    r"before i forget to ask,?\s*[—\-]?\s*|"
+    r"i looked around the site but couldn'?t find it\s*[—\-]?\s*|"
+    r"quick question,?\s+|just curious,?\s+|"
+    r"just wondering,?\s+"
+    r")+",
+    re.IGNORECASE,
+)
+
+
+def strip_filler_prefix(query: str) -> str:
+    stripped = FILLER_PREFIX_RE.sub("", query).strip()
+    return stripped if stripped else query  # never return an empty query
+
+
+def _question_embeddings_fingerprint(model_name: str, doc_ids: list, texts: list) -> str:
+    """Must match scripts/build_question_embeddings_cache.py's own
+    compute_fingerprint() byte-for-byte, or a genuinely current cache would
+    never validate. Kept as a separate function (not shared/imported)
+    deliberately -- the build script intentionally has no import-time
+    dependency on the retriever module, matching build_bm25_index.py's
+    same standalone-script convention."""
+    h = hashlib.sha256()
+    h.update(model_name.encode("utf-8"))
+    for doc_id, text in zip(doc_ids, texts):
+        h.update(doc_id.encode("utf-8"))
+        h.update(text.encode("utf-8"))
+    return h.hexdigest()
+
+
 def _cosine(a, b) -> float:
     a, b = np.asarray(a), np.asarray(b)
     na, nb = np.linalg.norm(a), np.linalg.norm(b)
@@ -253,6 +362,10 @@ class HybridRetriever:
             raise ValueError(f"fusion must be 'linear' or 'rrf', got {fusion!r}")
         self.fusion = fusion
         self.stream_k = stream_k
+        self._bm25_cache_key = None  # see _bm25_candidates' single-slot memoization
+        self._bm25_cache_value = None
+        self._embed_cache_key = None  # see _cached_embed_query's single-slot memoization
+        self._embed_cache_value = None
         self.final_k = final_k
 
         with open(bm25_path, "rb") as f:
@@ -371,18 +484,112 @@ class HybridRetriever:
             if q_text:
                 question_doc_ids.append(doc_id)
                 question_texts.append(q_text)
-        if question_texts:
-            # Chroma1xEmbeddingFunction exposes __call__ (batch) and
-            # embed_query (single), not embed_documents -- use __call__.
-            question_vecs = self.embedding_function(question_texts)
-            self.question_embeddings = dict(zip(question_doc_ids, question_vecs))
-        else:
-            self.question_embeddings = {}
+
+        # Load from a precomputed cache when available (2026-08-01: this
+        # used to re-embed all ~5,400 question texts from scratch on
+        # every single process start -- real, measured, avoidable startup
+        # cost, unlike the main Chroma index and the BM25 index, both
+        # already persisted -- see scripts/build_question_embeddings_
+        # cache.py). Fingerprint-checked against the CURRENT corpus/model
+        # so a stale cache (corpus edited, or the deployed embedding
+        # model changed, without rebuilding the cache) is detected and
+        # falls back to live computation rather than silently serving
+        # wrong vectors.
+        self.question_embeddings = self._load_or_compute_question_embeddings(
+            question_doc_ids, question_texts
+        )
+
+    def _load_or_compute_question_embeddings(self, question_doc_ids, question_texts):
+        if not question_texts:
+            return {}
+        cache_path = ROOT / "data" / "question_embeddings_cache.pkl"
+        if cache_path.exists():
+            try:
+                with open(cache_path, "rb") as f:
+                    cache = pickle.load(f)
+            except Exception as e:
+                # A truncated/corrupted cache file (e.g. an interrupted
+                # build_question_embeddings_cache.py run) must degrade to
+                # the same live-computation fallback a stale fingerprint
+                # already does -- not crash every HybridRetriever() init
+                # until someone deletes the file by hand.
+                print(f"[hybrid_retriever] question-embeddings cache at {cache_path} is "
+                      f"unreadable ({e}) -- recomputing live this run; re-run "
+                      f"scripts/build_question_embeddings_cache.py to rebuild it.", flush=True)
+                cache = None
+            if cache is not None:
+                # Fingerprint against the CURRENTLY deployed model (not the
+                # cache's own self-reported name) -- if the deployed model was
+                # swapped without rebuilding this cache, DEFAULT_MODEL here
+                # differs from what the cache was built under, so the
+                # fingerprint correctly fails to match.
+                expected_fingerprint = _question_embeddings_fingerprint(
+                    DEFAULT_MODEL, question_doc_ids, question_texts
+                )
+                if cache.get("fingerprint") == expected_fingerprint:
+                    return dict(zip(cache["doc_ids"], cache["vectors"]))
+                print(f"[hybrid_retriever] question-embeddings cache at {cache_path} is stale "
+                      f"(corpus or embedding model changed since it was built) -- recomputing "
+                      f"live this run; re-run scripts/build_question_embeddings_cache.py to "
+                      f"persist the fix for future starts.", flush=True)
+        # Chroma1xEmbeddingFunction exposes __call__ (batch) and embed_query
+        # (single), not embed_documents -- use __call__.
+        question_vecs = self.embedding_function(question_texts)
+        return dict(zip(question_doc_ids, question_vecs))
+
+    def _cached_embed_query(self, query: str):
+        # Single-slot memoization (2026-08-02), same pattern/rationale as
+        # _bm25_candidates below: the ambiguous-entity widening path
+        # (novel_pipeline.py's build_context) calls retrieve_adaptive twice
+        # for the IDENTICAL query string, and each retrieve() call
+        # unconditionally re-embeds the query from scratch via a
+        # SentenceTransformer forward pass -- the BM25 rescan this same
+        # widening call site used to also repeat was already fixed
+        # (2026-08-01), but the embedding call was not, and it turns out to
+        # be the more expensive of the two: measured live, a single
+        # embed_query call costs ~5.7ms vs. retrieve()'s own ~8-9ms total,
+        # i.e. it's the dominant cost, not a minor one. Direct before/after
+        # measurement of the exact widening double-call pattern: ~15.6ms/pair
+        # before this fix vs. a single retrieve_adaptive call's own ~8.0ms --
+        # confirming the second call was costing nearly as much as the
+        # first, almost entirely eliminable since nothing about the query
+        # text changes between the two calls in this scenario. Safe for the
+        # same reason as _bm25_candidates' cache: the result depends only on
+        # `query` and the embedding model (fixed after __init__), so a
+        # different query on the next call is simply a cache miss, byte
+        # -identical to no caching at all.
+        if self._embed_cache_key == query:
+            return self._embed_cache_value
+        embedding = self.embedding_function.embed_query(query)
+        self._embed_cache_key = query
+        self._embed_cache_value = embedding
+        return embedding
 
     def _bm25_candidates(self, query: str):
+        # Single-slot memoization (2026-08-01): the ambiguous-entity
+        # widening path (novel_pipeline.py's build_context) calls
+        # retrieve_adaptive twice for the IDENTICAL query string when an
+        # entity-heavy query resolves to more exact matches than the
+        # current pool holds -- top_n differs between the two calls, but
+        # top_n only truncates the final sorted/fused result, not this
+        # method's own output (already capped at self.stream_k regardless
+        # of top_n), so the second call's BM25 scan over the full corpus
+        # (self.bm25.get_scores, an O(corpus) operation) was pure, exactly
+        # -repeated waste. Measured live: ambiguous-entity queries cost
+        # ~31ms vs. ~18ms for a non-ambiguous entity query before this fix
+        # (the widening path's second full retrieve_adaptive call). A
+        # single-entry cache is safe here specifically because the result
+        # depends only on (query, self.stream_k), both unchanged between
+        # the two calls in this scenario -- a different query on the next
+        # call is simply a cache miss, byte-identical to no caching at all.
+        if self._bm25_cache_key == (query, self.stream_k):
+            return self._bm25_cache_value
         scores = self.bm25.get_scores(tokenize(query))
         ranked = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[: self.stream_k]
-        return {self.bm25_doc_ids[i]: float(scores[i]) for i in ranked}
+        result = {self.bm25_doc_ids[i]: float(scores[i]) for i in ranked}
+        self._bm25_cache_key = (query, self.stream_k)
+        self._bm25_cache_value = result
+        return result
 
     def _exact_match_ids(self, query: str):
         # Section-specific identifier match (see FULL_COURSE_ID_RE docstring
@@ -486,10 +693,16 @@ class HybridRetriever:
         day_match = DAY_RE.search(query_upper)
         day = day_match.group(0) if day_match else None
 
-        matched_initials = {m.group(0) for m in FACULTY_INITIAL_RE.finditer(query_upper)}
+        matched_initials = _matched_faculty_initials(query)
         norm_query = _normalize_name(query)
-        matched_names = [norm_name for norm_name, _ in self.faculty_name_index
-                         if norm_name and norm_name in norm_query] if norm_query else []
+        # Keep the doc_id alongside each matched name here (2026-08-01: was
+        # previously discarded, forcing a second O(matches x len(index))
+        # rescan of faculty_name_index below just to recover it) -- the
+        # availability-index lookup further down only needs the name
+        # strings, so matched_names stays a plain list for that use.
+        matched_names_with_ids = [(norm_name, doc_id) for norm_name, doc_id in self.faculty_name_index
+                                   if norm_name and norm_name in norm_query] if norm_query else []
+        matched_names = [norm_name for norm_name, _ in matched_names_with_ids]
         # Token-level fallback (see faculty_name_token_index docstring above):
         # fires only when the full-name substring check finds nothing, so a
         # query that already names someone's full stored name keeps using
@@ -511,6 +724,28 @@ class HybridRetriever:
                 doc_id = self.faculty_availability_name_index.get((norm_name, day))
                 if doc_id:
                     availability_ids.add(doc_id)
+            # Token-level fallback (2026-08-01, found via direct testing:
+            # "What is Kaykobad's schedule on Monday?" -- a real, common
+            # phrasing per the token-index docstring's own claim that "real
+            # users overwhelmingly refer to faculty by a single name" --
+            # returned the wrong table (FacultyList, no schedule data) with
+            # false high confidence, because this day-availability check
+            # only ever consulted matched_initials/matched_names, never
+            # token_match_ids, unlike the else-branch below which already
+            # does. token_match_ids holds FacultyList doc_ids (from a
+            # token -> doc_id index), not names, so each match's own stored
+            # Name is looked up and normalized before checking the
+            # availability-name index, which IS keyed by full name.
+            if not availability_ids:
+                for doc_id in token_match_ids:
+                    person_name = self.corpus.get(doc_id, {}).get("metadata", {}).get("Name")
+                    if not person_name:
+                        continue
+                    availability_doc_id = self.faculty_availability_name_index.get(
+                        (_normalize_name(person_name), day)
+                    )
+                    if availability_doc_id:
+                        availability_ids.add(availability_doc_id)
 
         if availability_ids:
             # A specific day-schedule row was found -- this is what the
@@ -525,10 +760,8 @@ class HybridRetriever:
                 doc_id = self.faculty_initial_index.get(initial)
                 if doc_id:
                     ids.add(doc_id)
-            for norm_name in matched_names:
-                for other_norm_name, doc_id in self.faculty_name_index:
-                    if other_norm_name == norm_name:
-                        ids.add(doc_id)
+            for _, doc_id in matched_names_with_ids:
+                ids.add(doc_id)
             ids.update(token_match_ids)
 
         return ids
@@ -570,7 +803,7 @@ class HybridRetriever:
         query_lower = query.lower()
         if any(alias in query_lower for alias, _ in self.aliases):
             return True
-        if any(m.group(0) in self.faculty_initial_index for m in FACULTY_INITIAL_RE.finditer(query.upper())):
+        if any(initial in self.faculty_initial_index for initial in _matched_faculty_initials(query)):
             return True
         norm_query = _normalize_name(query)
         if not norm_query:
@@ -636,7 +869,7 @@ class HybridRetriever:
         query_lower = query.lower()
         if any(alias in query_lower for alias, _ in self.aliases):
             signals_fired += 1
-        if any(m.group(0) in self.faculty_initial_index for m in FACULTY_INITIAL_RE.finditer(query.upper())):
+        if any(initial in self.faculty_initial_index for initial in _matched_faculty_initials(query)):
             signals_fired += 1
         norm_query = _normalize_name(query)
         if norm_query and (
@@ -656,8 +889,9 @@ class HybridRetriever:
         before."""
         fusion = fusion or self.fusion
         top_n = top_n or self.final_k
+        query = strip_filler_prefix(query)
 
-        query_embedding = self.embedding_function.embed_query(query)
+        query_embedding = self._cached_embed_query(query)
         bm25_cand = self._bm25_candidates(query)  # doc_id -> raw bm25 score
         exact_match_ids = self._exact_match_ids(query) if lambda_ > 0 else set()
         vec_cand_dist = self._vector_candidates(query, query_embedding=query_embedding)  # doc_id -> distance
@@ -744,6 +978,7 @@ class HybridRetriever:
         Returns (results, meta) where meta records which branch fired, so
         downstream evaluation can break results down by routing decision
         the same way Section 4.3 breaks down by entity_heavy/open_ended."""
+        query = strip_filler_prefix(query)
         entity_heavy = self.is_entity_heavy(query)
         if entity_heavy:
             results = self.retrieve(query, lambda_entity, fusion="linear", top_n=top_n)

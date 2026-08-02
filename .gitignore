@@ -1,10 +1,14 @@
 archive/
 venv/
 .venv/
+.venv_colbert/
+.pip_tmp/
 __pycache__/
 *.pyc
 models/
 chroma_db/
+chroma_db_old_*/
+data/corpus.jsonl.bak_*
 *.zip
 .claude/
 .hf_cache/
@@ -14,6 +18,7 @@ chroma_db/
 .mpl_cache/
 .tmp/
 .torch_home/
+.pytest_cache/
 *_pre_governance_merge_*/
 *_pre_governance_merge_*
 *_pre_k1b_tuning.pkl.bak

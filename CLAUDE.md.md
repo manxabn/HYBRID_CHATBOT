@@ -3016,6 +3016,705 @@ inflation -- every claim in the new sentence is backed by an already
 
 Recompiles cleanly (31 pages, 0 undefined refs).
 
+## 2026-08-01: real external SOTA baseline (NohTow/colbertv2.0 via PyLate) -- closes a gap flagged as "out of scope" earlier tonight
+
+The TRF/MaxSim experiment above explicitly disclosed a gap: "This project
+has none [a purpose-built multi-vector retrieval model], and training one
+is out of scope for a single experiment." User explicitly authorized
+downloading and running the real external model this required (a prior
+attempt at the same download had been rejected via tool-use denial and
+required separate, renewed consent before retrying -- given this session).
+
+**What was run**: `NohTow/colbertv2.0`, loaded via the PyLate library (the
+maintained sentence-transformers-native ColBERT implementation this
+checkpoint targets), evaluated with exhaustive (non-approximate) MaxSim
+scoring against the full 7138-doc corpus on the same 200-query test set,
+same relevance judgments, and same Recall@k/MRR/nDCG metrics as
+`measure_ir_metrics.py` (`scripts/eval_colbert_baseline.py`, imports the
+scoring functions directly rather than reimplementing them). Paired
+bootstrap (2000 resamples) + McNemar's exact test on the binary recall
+metrics, per this project's own "both tests must agree" convention
+(`scripts/mcnemar_adaptive_vs_colbert.py`).
+
+**Real dependency-conflict incident, caught and fixed, not glossed over**:
+`pip install pylate` in the main project `.venv` silently downgraded
+`torch` from the pinned `2.5.1+cu121` (CUDA) to a PyPI-default CPU-only
+`2.11.0`, and downgraded `transformers`/`sentence-transformers` from the
+pinned `5.14.1`/`5.6.1` to `5.3.0` -- because pylate hard-pins
+`sentence-transformers==5.3.0` and `transformers<=5.3.0`, incompatible
+with this project's existing pins used for embedding fine-tuning/
+reranking. Caught immediately (`torch.cuda.is_available()` was checked
+before any real work started on top of it), fixed by reinstalling the
+exact pinned versions in the main `.venv`, and permanently prevented by
+moving pylate into its own isolated `.venv_colbert/` (gitignored) so the
+main project environment can never be touched by this dependency again.
+Separately, the C: system drive was at 98% free space (2.2GB) mid-install,
+which independently broke a download ("No space left on device") -- fixed
+by purging pip's 3.4GB cache and redirecting `TEMP`/`TMP`/`PIP_CACHE_DIR`
+to the E: drive (151GB free) for all pip operations touching either venv.
+Neither issue was caused by or reflects on the project's own code; both
+are recorded here because they're exactly the kind of "harm" that
+"do anything but do not harm anything" is meant to catch early.
+
+**Result, reported as-is regardless of which system won**: the deployed
+adaptive hybrid pipeline significantly beats the real ColBERT-v2 baseline
+on recall@1 (0.950 vs 0.835, paired bootstrap $p<0.001$, McNemar
+$p<0.0001$, both agree), MRR (0.955 vs 0.891, $p<0.001$), nDCG@5 (0.924 vs
+0.870, $p=0.002$), and nDCG@10 (0.942 vs 0.895, $p<0.001$); recall@3
+(0.960 vs 0.945) and recall@5 (0.960 vs 0.960) are not significantly
+different (bootstrap $p=0.083$/$0.683$; McNemar $p=0.375$/$1.0$).
+Breaking recall@1 down by query type (McNemar, `mcnemar_adaptive_vs_
+colbert.py`) shows the win is concentrated entirely in entity-heavy
+queries (adaptive correct-only on 26/200 discordant pairs, ColBERT
+correct-only on 0, $p<0.0001$) -- open-ended queries show a small,
+non-significant edge the OTHER way (ColBERT correct-only on 3/200,
+adaptive on 0, $p=0.25$). This is the expected, explainable shape of the
+result: `colbertv2.0` is a generic MS MARCO-trained checkpoint with zero
+exposure to this domain, while the deployed retriever has hand-built
+exact-match indices for course codes, faculty names/initials, and emails
+that a generic dense/late-interaction model has no equivalent for. This
+is a genuine head-to-head against a real published-model checkpoint, not
+a synthetic or self-graded comparison -- exactly the kind of external
+baseline this paper lacked before tonight.
+
+Results: `results/colbert_external_baseline_raw.csv`, `results/colbert_
+external_baseline_vs_adaptive_significance.csv`, `results/mcnemar_
+adaptive_vs_colbert_external.csv` (renamed from the original `colbert_
+baseline_*`/`mcnemar_adaptive_vs_colbert.csv` when the eval scripts were
+parameterized over `--label` to support additional baselines below).
+
+## 2026-08-01: found and fixed a stale table in paper.tex while sourcing data for the ColBERT baseline -- Table~\ref{tab:ir-metrics} no longer matched its own committed data file
+
+Discovered as a side effect of pulling `results/ir_metrics.csv` to use as
+the "adaptive" reference row for the ColBERT comparison above, not by
+deliberately auditing the table. The committed `results/ir_metrics.csv`
+(dated today, no working-tree diff -- i.e. genuinely the current, correct,
+already-regenerated file) showed Adaptive Recall@1 $=0.950$ and
+Vector-only Recall@1 $=0.935$; paper.tex's Table~\ref{tab:ir-metrics} still
+said $0.910$ and $0.560$ respectively -- a stale table left over from an
+intermediate embedding checkpoint, never regenerated after the final
+Banglish-expanded hard-negative model was deployed (Section~\ref{subsec:
+hard-negatives} already narrates that later retrain and its held-out
+recovery check, but the full-pipeline retrieval table itself was never
+re-run against it).
+
+This is a real, substantive narrowing, not just a number update: the
+paper's original motivating illustration ("vector-only's entity-heavy
+Recall@1 is 0.17 versus 0.85--0.97 for every other configuration") is no
+longer true of the deployed system -- current entity-heavy numbers are
+0.87 (vector-only) vs 0.93 (adaptive), and vector-only actually reaches
+ceiling (1.000) on open-ended queries, fractionally ahead of every hybrid
+configuration there. The embedding improvements substantively closed the
+gap the paper used to justify hybrid retrieval, though a real, bootstrap
+-confirmed nDCG advantage for hybrid/adaptive over vector-only alone
+remains (nDCG@5 $p=0.001$, nDCG@10 $p=0.004$; Recall/MRR differences are
+no longer significant, $p\geq0.054$). Rewrote Table~\ref{tab:ir-metrics}
+and its two surrounding discussion paragraphs with the exact current
+numbers from `results/ir_metrics.csv` and `results/ir_metrics_bootstrap_
+significance.csv`, disclosed the narrowing plainly rather than quietly
+keep the more dramatic, stale contrast, and confirmed no other location
+in the paper echoed the old $0.17$/$0.560$ figures (grepped the whole
+file). Recompiles cleanly (32 pages, 0 undefined refs/citations).
+
+This is the exact failure mode the project's own "every number must come
+from a script that actually ran" rule exists to catch -- a script's output
+changing after the paper text was written, silently leaving the paper
+citing a number nothing on disk still produces. Worth periodically
+re-verifying committed result files against what the paper actually
+states, not just when adding new content.
+
+## 2026-08-01: second external baseline (GTE-ModernColBERT-v1, 2025) -- honestly tied, not a repeat win
+
+User asked to also try "the latest" external retrievers, not just
+`colbertv2.0` (2022), plus the ColBERT-as-retriever generation-quality
+test flagged as legitimate-but-not-necessary earlier. Both done.
+
+Added `lightonai/GTE-ModernColBERT-v1` (Chaffin, 2025, LightOn -- PyLate
+-native, ModernBERT-based, reported by its authors as first to beat
+ColBERT-small on BEIR; verified via WebFetch of the vendor's own
+announcement, not taken on faith) via the same exhaustive-MaxSim
+methodology as the `colbertv2.0` run. Parameterized `scripts/eval_colbert
+_baseline.py` and `scripts/mcnemar_adaptive_vs_colbert.py` over
+`--model`/`--label` rather than duplicating them; renamed the original
+`colbertv2.0` run's output files to the `colbert_external_*` convention
+this introduced (they were untracked, so a plain rename was safe -- no
+git history to preserve).
+
+**Real bug found and fixed while adding the second model**: GTE-
+ModernColBERT-v1 does not pad queries to a fixed length the way
+`colbertv2.0`'s classic query-augmentation convention does (variable
+per-query token counts), so `torch.stack` on the raw query embeddings
+crashed. Fixed by pad+mask on queries the same way documents were already
+handled, passing `queries_mask` to `colbert_scores` -- confirmed against
+pylate's own docstring example that this is the correct call shape. This
+then surfaced a second, real issue: passing `queries_mask` measurably
+increased peak GPU memory (a `torch.OutOfMemoryError` on a 200-query,
+512-doc batch that the `documents_mask`-only path had handled fine),
+fixed by lowering `DOC_BATCH` from 512 to 64 -- a real hardware-driven
+constraint on this 4GB card, not a bug in the scoring math itself.
+
+**Result, reported as measured**: unlike the significant `colbertv2.0`
+result, the deployed adaptive pipeline is statistically **tied** with
+GTE-ModernColBERT-v1 on every metric, both tests (bootstrap CI and
+McNemar) agreeing there is no significant difference in either direction
+($p\geq0.165$ throughout; several point estimates even favor
+GTE-ModernColBERT fractionally, e.g.\ Recall@1 0.955 vs.\ 0.950, nDCG@5
+0.939 vs.\ 0.924). This is the honest, expected shape of a real
+comparison: a specific, real advantage over one still-widely-used 2022
+checkpoint does not imply superiority over late-interaction retrieval as
+a category, and a stronger 2025 model narrows the same kind of gap the
+deployed system's own embedding improvements already narrowed internally
+(Section~\ref{subsec:ir-metrics}'s vector-only fix, same session). Both
+comparisons are now in `paper.tex` side by side, not just the more
+flattering one.
+
+## 2026-08-01: ColBERT-as-retriever generation-quality test -- the retrieval-level gap mostly does not survive to the generated answer
+
+Ran the previously-scoped-but-deferred experiment: same generator
+(`pipeline/ollama_client.generate`), same BLEU/ROUGE-L/BERTScore/METEOR
+scoring pipeline (`scripts/compute_metrics.py`, completely unmodified)
+used for every other row of the existing ablation Table~\ref{tab:ablation},
+but fed `colbertv2.0`'s own top-5 retrieved context instead of the
+deployed retriever's. Two new scripts, split by venv requirement:
+`scripts/colbert_retrieve_context.py` (isolated `.venv_colbert`, pylate)
+writes retrieved context per query; `scripts/colbert_generate_and_score.py`
+(main venv, Ollama HTTP client) generates answers from it in the same raw
+-outputs shape `compute_metrics.py` already expects.
+
+**Two real infra issues hit and fixed, not routed around**:
+1. Scoring crashed with a CUDA OOM the first time -- Ollama's own model
+   was still resident in GPU memory from the generation step, leaving too
+   little for BERTScore's roberta-large. Not the pylate/torch conflict
+   from earlier tonight; a separate, ordinary GPU-memory-contention issue.
+2. Retrying with `CUDA_VISIBLE_DEVICES=""` (forcing CPU) segfaulted
+   instead (exit 139) -- this matched, symptom-for-symptom, the transient
+   OpenBLAS multi-threaded allocation race already documented and fixed
+   earlier the same day (see "transient OpenBLAS crash on the pool=5
+   reranker retry" above): two model-loading paths racing on BLAS thread
+   pools. Applied the same documented fix (`OPENBLAS_NUM_THREADS=4
+   OMP_NUM_THREADS=4 MKL_NUM_THREADS=4`) and it passed cleanly -- by then
+   Ollama had also freed its GPU memory, so the run actually completed on
+   CUDA anyway once the thread-race was gone.
+
+**Result, reported as measured, significance tested exactly like every
+other generation-quality comparison in this paper** (paired $t$-test +
+Wilcoxon, both required to agree; `scripts/significance_adaptive_vs_
+colbert_generation.py`, reusing `significance_tests_novel.py`'s
+`paired_test()` verbatim): adaptive $0.656$/$0.815$/$0.964$/$0.842$ vs.\
+ColBERT-v2-context $0.614$/$0.809$/$0.964$/$0.828$ on BLEU/ROUGE-L/
+BERTScore/METEOR ($n=199$, 1 abstention excluded). Only BLEU is confirmed
+significant by both tests ($p=0.026$/$0.007$); ROUGE-L and BERTScore are
+ties; METEOR is a test-disagreement case (Wilcoxon significant alone),
+treated as inconclusive per this paper's standing convention for such
+disagreements. **The retrieval-level Recall@1 gap (11.5 points) mostly
+does not survive to the generated answer** -- the top-5 context window
+absorbs most of it, replicating this paper's own repeatedly-observed
+retrieval/generation decoupling (Section~\ref{subsec:ir-metrics}), now
+against an external baseline. Reported in full in `paper.tex`
+(Table~\ref{tab:colbert-generation}) rather than leading only with the
+more dramatic retrieval-only numbers -- the user explicitly asked whether
+a bigger real margin existed, and the honest answer is: not much of one,
+at the generation level specifically, and that is itself the finding.
+
+Recompiles cleanly (33 pages, 0 undefined refs/citations).
+
+## 2026-08-01: full A-to-Z audit (user request) -- 3 parallel investigation agents, real findings, real fixes, all regression-tested
+
+User asked for a whole-system pass: code efficiency/reliability, paper-
+vs-data consistency, repo hygiene. Ran three read-only Explore agents in
+parallel to survey before touching anything, then personally verified
+every finding against live code/data before fixing -- no finding was
+acted on from agent report text alone.
+
+**Real, serious production bug found and fixed**: `FACULTY_INITIAL_RE =
+re.compile(r"\b[A-Z]{2,5}\b")` was matched against `query.upper()`
+everywhere it was used (`hybrid_retriever.py`, 3 call sites). 22 of this
+corpus's 223 real faculty initials (`ADD`, `ART`, `ANT`, `RAS`, `TAP`,
+`SUE`, `MAO`, ...) are also ordinary English words, so uppercasing the
+whole query swept up plain lowercase words as false exact-match hits.
+**Confirmed live**: "How do I add a course during the add/drop period?"
+exact-matched Ayesha Siddika's (initial `ADD`) FacultyList row and forced
+`is_entity_heavy=True` -- a genuine silent-wrong-answer risk in a live
+academic-advising bot. Fix: match `FACULTY_INITIAL_RE` against the
+query's original, untouched casing, not `.upper()`'d -- every real
+faculty-initial query in this project's own test set (`Q186`/`187`/`191`/
+`192`/`194`/`197`, e.g. "What is BIJS's designation?") is already typed
+in caps by the user, since that's how an initial is conventionally
+written, so this fix eliminates the false-positive class with zero
+blocklist and zero loss of real matches. **Verified zero regression**:
+checked every query across `data/test_queries*.csv` (all variants) for a
+behavior change -- 0/200 main English, 0/100 Banglish; 3 queries changed
+in smaller auxiliary test sets (`test_queries_ambiguous_entity.csv`,
+`test_queries_faculty.csv`), all 3 confirmed still resolve correctly via
+the independent full-name-matching path (the initial match was
+coincidentally the same, already-findable person in all 3 cases). No
+number anywhere in the paper needed re-measurement because of this fix.
+Live end-to-end re-test after the fix: the add/drop query now correctly
+abstains instead of confidently answering with an unrelated faculty
+member's contact info.
+
+**Second real bug**: `novel_pipeline.py`'s `answer()` had no exception
+handling around the final `generate_fn()` call, unlike its sibling Ollama
+-dependent paths (`translate_to_english`, `normalize_entities`), both of
+which already degrade gracefully. A genuinely-down Ollama instance
+propagated an uncaught exception out of the whole request. Fixed with a
+try/except returning a new `GENERATION_FAILURE_MESSAGE` -- deliberately
+NOT reusing `ABSTENTION_MESSAGE`/`meta["abstain"]`, since that mechanism
+means "insufficient retrieved evidence" and is a calibrated, precisely
+-measured signal this paper reports (Section~\ref{subsec:abstention});
+conflating an infra failure with it would have silently corrupted the
+abstention-rate statistics the paper depends on. Verified with a mock
+failing `generate_fn`: degrades cleanly, `meta["abstain"]` stays `False`,
+`meta["generation_failed"]` is set.
+
+**Minor code-quality fixes, all verified**: removed 3 confirmed-unused
+imports (`Path` in `novel_pipeline.py`, `numpy` in `conformal_
+abstention.py`, `re` in `banglish_normalize.py`); removed a redundant
+O(matches × 223) rescan of `faculty_name_index` in `_exact_match_ids`
+that recomputed doc_ids already available from the first pass (captured
+`(norm_name, doc_id)` pairs directly instead) -- confirmed mathematically
+equivalent by construction and live-tested against real queries.
+
+**A second, independently-discovered stale-paper issue** (found while
+regression-testing the faculty-initial fix, not by the consistency-audit
+agent): `scripts/test_unambiguous_match.py`'s ceiling-on-vs-off ablation
+now produces `0.930`/`0.930` for BOTH conditions (delta $=0.000$) --
+paper.tex's Table~\ref{tab:unambiguous} still claimed `0.930` vs `0.710`.
+Verified via `git stash` that this predates and is independent of today's
+other pipeline fixes (identical result against pristine `HEAD` code): the
+accumulated effect of this paper's own earlier exact-match coverage fixes
+plus the BM25 retuning made `EXACT_MATCH_BONUS` (+0.3, always active)
+alone sufficient for top-1 on every one of the 100 entity-heavy test
+queries, so `UNAMBIGUOUS_MATCH_SCORE` (+100.0, the ceiling this ablation
+isolates) has no query left to make a difference on. Not harmful --
+ceiling-on never scores worse -- but no longer independently
+demonstrable on this test set. Fixed the table and all 3 places in the
+paper that described this as a current "positive effect" (Section~\ref{
+subsec:unambiguous}'s own table+discussion, the RQ2 discussion, the
+conclusion) to state this precisely rather than let a stale, more
+flattering contrast stand.
+
+**Paper-vs-data consistency agent found 4 more confirmed, verified
+mismatches** (all independently re-verified against the underlying CSV/DB
+before fixing, not taken on the agent's word):
+1. Abstract claimed "abstaining on only 0.5--1.0% of queries" -- actual
+   current rates are 0.5% English (1/199) and 2.0% Banglish (2/100,
+   `results/significance_tests_novel_roundO_banglish.csv`), not capped at
+   1.0%. Fixed to state both rates explicitly.
+2. Dataset-description section (Section~\ref{subsec:dataset}) stated
+   5,059 total records / 2,297 EnglishQA / 1,053 BanglishQA -- the actual
+   live `knowledge_base.db` has 7,138 / 2,385 / 3,044 (verified directly
+   via SQL COUNT), matching the paper's OWN later "7,138-chunk corpus"
+   statement elsewhere -- an internal self-contradiction. The 1,053-row
+   BanglishQA figure was pre-expansion; the paper narrates the expansion
+   elsewhere (Section~\ref{subsec:finetune}) but never propagated it back
+   to the dataset-description section. Fixed the text AND regenerated
+   `fig_dataset_dist.png` (a static image, title literally said "n=5059")
+   from the live DB in the same style.
+3. Table~\ref{tab:banglish-ablation}'s "Adaptive pipeline" row silently
+   used the n=98 matched-pairs (non-abstained) subset mean while the
+   table caption said $n=100$ for every row -- the baseline rows genuinely
+   are n=100 (never abstain), only the adaptive row wasn't. Fixed the
+   caption to disclose this explicitly, same convention already used by
+   Table~\ref{tab:novel-sig} for the equivalent English case, rather than
+   change the numbers (which are correct for what they actually measure).
+4. A prose p-value floor ("$p\geq0.31$") for the Banglish parity claim was
+   wrong -- the actual minimum across the 12 relevant comparisons is
+   $0.217$ (verified directly from `results/significance_tests_novel_
+   roundO_banglish.csv`). Fixed the number; the qualitative conclusion
+   (nothing significant) was already correct and unchanged.
+
+**Repo hygiene**: added `.pytest_cache/` to `.gitignore` (was slipping
+through uncaught); added `requirements_colbert.txt` documenting the
+isolated `.venv_colbert` environment's exact pins and the two-step torch
+-reinstall build order (previously only recorded in docstrings/this log,
+not reproducible from a requirements file); added `--out` to `scripts/
+ablate_graph_augmentation.py`, which was the one ablation script in the
+project hardcoding its output path instead of following `run_ablation.py`
+'s established `--out` convention (already flagged once before as a
+near-miss in this project's own history). Confirmed no secrets/
+credentials anywhere in the repo. Left as explicitly-not-done, lower
+priority / higher risk-reward ratio: persisting the ~5,429 question-only
+embeddings currently recomputed at every process start (real but modest
+startup-latency cost, would need real persistence+invalidation logic);
+restructuring the ambiguous-entity-widening code path to avoid re-running
+full retrieval on the same query; CPU-only conformal-backoff NLI model
+(masked by `use_conformal_backoff` defaulting to `False`). New ColBERT
+-baseline scripts/results from this session remain uncommitted -- did not
+auto-commit per this project's own "only commit when explicitly asked"
+norm.
+
+**Full regression suite after all fixes**: `scripts/test_unambiguous_
+match.py` reproduces the corrected 0.930/0.930 exactly; live end-to-end
+smoke test on 3 real queries (a prerequisite lookup, the add/drop false
+-positive case, a real faculty lookup) all behave correctly, including
+the add/drop query now correctly abstaining instead of confidently
+answering wrong. Paper recompiles cleanly (33 pages, 0 undefined refs/
+citations) after every fix in this entry.
+
+One process note worth recording: `git stash` followed immediately by
+running a script that writes to a tracked results file, then `git stash
+pop`, can silently fail (conflict on that one file) while reporting
+success-looking output and keeping the stash undropped -- caught by
+`git status`/`git diff --stat` showing zero tracked changes right after a
+"successful"-looking pop. Fix: discard/checkout the conflicting file
+first, then pop again. No work was lost (the stash preserved everything),
+but this is worth remembering before using `git stash` as a quick
+isolation technique on a working tree with any script that writes to
+tracked output files.
+
+## 2026-08-01 /loop: paraphrase robustness (English + Banglish) -- real fixes, real propagation, one reverted attempt
+
+User pushed back hard on prior work being course-code/entity-heavy-skewed
+and demanded real paraphrase robustness, not more measurement for its own
+sake ("rather than making testing verifying... you are not predicting
+anything here"). Response: measured fast, then fixed what was real,
+reverted what caused harm, and fully propagated every downstream number
+the fixes touched -- not just the headline claim.
+
+**English, real held-out data, no synthetic generation needed**:
+`scripts/eval_paraphrase_robustness.py` uses EnglishQA's own 1,069
+(Category, Answer) Original/Paraphrase groups, restricted to Paraphrase
+rows with `Split` in (val, test) to avoid any fine-tuning leakage --
+286 real pairs. Checks whether the retriever finds the ORIGINAL row's
+own chunk (not just any chunk with the right answer, since the
+paraphrase row is separately ingested and would trivially self-match).
+Baseline: 242/286 (84.6%). Diagnosed two distinct failure modes in the
+44 failures, not one diffuse weakness: 13/44 pure conversational-filler
+dilution ("Kind of urgent, but...", content otherwise identical); 31/44
+genuine deep vocabulary rephrasing ("Board of Trustees" -> "the people
+in charge") no lexical dictionary can bridge.
+
+Fixed the filler case: `strip_filler_prefix` (`pipeline/hybrid_
+retriever.py`), a deterministic, evidence-derived, start-anchored regex
+applied in both `retrieve()` and `retrieve_adaptive()`. Result: 254/286
+(88.8%), +12 of 13 filler cases recovered. Tested the vocabulary-
+rephrasing case for a cheap fix (vector-only alone, in case BM25
+dilution was the cause) before accepting it as unfixed -- only 6/32
+recoverable that way, confirming it's a genuine embedding-generalization
+limit, not a fixable dilution bug. Disclosed as such in paper.tex rather
+than force a marginal, risky fix (e.g. a second shared-prompt rewrite)
+for a small remaining gain.
+
+**Banglish, real methodology adapted since no Original/Paraphrase
+labels exist**: BanglishQA has only 15 natural duplicate-answer groups
+(all Split=train, unusable). Built `scripts/eval_banglish_paraphrase_
+robustness.py`, reusing this project's own already-disclosed LLM
+-rephrase pattern (same temp=0/seed=42 decoding as the cross-lingual
+stress test) adapted to rephrase Banglish->Banglish instead of
+English->Banglish, on an 80-query sample (seed 42) of 630 held-out
+rows. Result: 76/80 (95.0%) -- stronger than English, plausibly the
+Banglish-specific hard-negative mining paying off. All 4 failures
+traced to the rephrasing LLM itself drifting off-topic (e.g. producing
+a totally different question about downloading course notes), not a
+retrieval weakness -- disclosed as the same LLM-generated-stress-test
+-quality caveat already applied to the cross-lingual stress test.
+
+**Live-reported bug, fixed at zero regression risk after a first
+attempt caused real harm**: user's own test query "Brac er chad koyta
+theke koyta obdi khola thake?" (rooftop hours) was mistranslated by
+`translate_to_english` to a question about Brac Bank branch hours --
+confirmed live, and confirmed the corpus genuinely has the relevant
+rooftop content, just unreached. First fix attempt (explicit Banglish
+glossary + "don't guess a different question" added to the shared
+`TRANSLATE_PROMPT`) DID fix this case, but re-measuring the already
+-published cross-lingual stress test (required before accepting any
+shared-prompt change, given this project's history of exactly this
+failure mode) found it regressed 2/13 queries (translated accuracy
+84.6%->69.2%) -- reverted rather than accept a measured loss against an
+already-verified result for an unmeasured, unrequested gain elsewhere.
+Deployed a zero-risk alternative instead: `PREPROCESS_BANGLISH_CONTENT_
+WORDS` (`pipeline/ollama_client.py`), a small deterministic word
+-substitution dict applied before translation, mechanically incapable
+of affecting any query that doesn't contain one of its explicit entries
+(currently just chad/chhad -> rooftop). Re-verified: cross-lingual
+stress test now reproduces 11/13 (84.6%) byte-identical to pre-fix, and
+the live-reported query now correctly retrieves the rooftop content.
+Generalizable lesson, written into the paper directly: before accepting
+a shared-prompt/model-component fix, re-measure every already-published
+result it touches, not just the case that motivated the change.
+
+**Full downstream propagation, not just the headline number**. The
+filler fix changes retrieved context for ~16/200 main English test
+queries (only 2 flip a retrieval-outcome metric, both explained --
+`results/ir_metrics.csv`'s bm25_only-only regression on Q095 traced to
+losing a "trivial self-duplicate corpus match," not a real capability
+loss; Q029/Q095 nDCG genuinely improved for the deployed full_hybrid/
+adaptive config). Given retrieval context changed, re-ran the FULL
+200-query generation pipeline (`scripts/run_novel_pipeline.py`, reranker
+off, ~20min) rather than assume generation-quality numbers were
+unaffected -- they were not: all four metrics improved (BLEU
+0.653->0.669, ROUGE-L 0.812->0.826, BERTScore 0.963->0.964, METEOR
+0.838->0.851). Re-ran significance testing against this new data
+(`scripts/significance_tests_novel.py`) and found a genuine qualitative
+shift: the previous revision's one borderline case (METEOR vs.
+BM25-only, test-disagreeing p=0.041/0.306) resolved to a clean tie
+(p=0.581/0.991); a new test-disagreement appeared in its place (BLEU
+vs. vector-only, p=0.108/0.038). Promoted the rechecked files over the
+canonical `*_roundO_noreranker*` filenames (other scripts, e.g. the
+ColBERT generation-quality comparison, reference them directly) --
+which in turn required re-running `scripts/significance_adaptive_vs_
+colbert_generation.py` too, since its adaptive-side input had just
+changed: METEOR flipped from a test-disagreement (inconclusive) to
+confirmed-significant both tests (p=0.050/0.002); ROUGE-L gained a new
+test-disagreement; BLEU stayed significant and widened. Updated every
+one of these in paper.tex (abstract, Table~\ref{tab:novel-sig} +
+discussion, Table~\ref{tab:colbert-generation} + discussion, Table~
+\ref{tab:reranker-ablation}'s Off row + discussion, RQ1 discussion,
+conclusion) -- six separate locations, all with the precise new
+numbers, not just the two most-visible ones. Explicitly disclosed one
+scope boundary rather than implicitly claim full coverage: the
+reranker-ON generation-quality row was NOT re-verified in this same
+pass (not the deployed config, and re-running it costs meaningfully
+more given reranking overhead) -- flagged in the paper text itself.
+
+**Process note, repeated from earlier the same day**: `git stash`
+followed by a script that writes to a tracked results file, then `git
+stash pop`, can silently fail (conflict on that one file) while still
+printing output that looks like success and leaving the stash
+undropped. Caught again this round via `git status`/`git diff --stat`
+showing zero tracked changes right after a pop that looked clean.
+
+Full regression suite after every fix: all modules import cleanly;
+`scripts/test_unambiguous_match.py` unaffected (0.930/0.930 both);
+live end-to-end smoke test (the add/drop false-positive query, the
+lab-PC filler query, a real prerequisite query, a real faculty query)
+all behave correctly. Paper recompiles cleanly (34 pages, 0 undefined
+refs/citations) after every edit in this entry.
+
+## 2026-08-01: second full A-to-Z audit (user request: "go deep, destroy real weaknesses") -- real bugs found via 3 parallel agents, all personally re-verified, most fixed; one step genuinely blocked by machine resources
+
+User asked for another full-codebase pass specifically targeting real,
+fixable weaknesses, not more measurement for its own sake. Fixed 6
+deferred efficiency items from the earlier audit first (see below), then
+launched 3 parallel Explore agents (pipeline files not yet deeply
+covered; a fresh full paper.tex-vs-data consistency re-check; a
+scripts/ correctness audit focused on measurement code specifically) --
+every finding from all 3 was personally re-verified against live code/
+real data before any fix, per this project's standing discipline.
+
+**Deferred efficiency fixes, implemented and verified this round**:
+1. Question-embeddings (~5,429 texts) were re-embedded from scratch at
+   every `HybridRetriever()` init -- now cached to `data/question_
+   embeddings_cache.pkl` (`scripts/build_question_embeddings_cache.py`,
+   same precompute-once pattern as `data/bm25_corpus.pkl`), fingerprint
+   -checked against the current model+corpus so a stale cache falls back
+   to live computation with a printed warning rather than silently
+   serving wrong vectors. Verified: cached vs. live-recomputed vectors
+   match to float32 precision (max abs diff 6e-8); staleness-fallback
+   path directly tested by corrupting a copy of the cache's fingerprint.
+2. Ambiguous-entity widening (e.g. "What is Rahman's office room?", 16
+   real matches) re-ran the full retrieval pipeline twice per query,
+   including a full-corpus BM25 `get_scores()` scan both times even
+   though `_bm25_candidates`'s own output is already capped at
+   `self.stream_k` regardless of the wider `top_n` passed in the second
+   call. Added a single-slot memoization keyed on `(query, stream_k)` in
+   `_bm25_candidates` -- 3800x speedup on the repeated call, proven
+   byte-identical output before/after. Measured real-world cost before
+   fixing (not assumed): 18ms non-ambiguous vs.\ 31ms ambiguous query,
+   confirming this was real but small in absolute terms next to
+   multi-second LLM generation -- fixed anyway since the memoization was
+   low-risk and mechanically provably correct.
+3. `FacultyRoomLookup` opened a fresh `sqlite3.connect()` on every
+   `context_block()` call; now loads both small tables (CourseDetails
+   ~586 rows, FacultyList ~223) into memory once at `__init__`, same
+   load-once pattern `PrerequisiteGraph` already uses. Verified the new
+   in-memory exact-match and prefix-match (`LIKE 'CODE-%'`) logic against
+   direct SQL ground truth for multiple real course codes, including a
+   zero-result case (MAT216) -- all matched.
+4. `conformal_abstention.py`'s NLI cross-encoder defaulted to CPU
+   everywhere (`device: str = "cpu"` in 4 function signatures) unlike its
+   sibling `reranker.py`, which already auto-detects CUDA. Added a
+   module-level `DEFAULT_DEVICE` constant, same pattern as reranker.py.
+   Currently masked by `use_conformal_backoff` defaulting to `False`, but
+   real once enabled -- verified the fixed default actually resolves to
+   `"cuda"` on this machine and a real NLI scoring call succeeds on GPU.
+
+**Real bug #1, high severity, confirmed live**: faculty schedule/day
+queries phrased with a single name fragment instead of the full stored
+name ("What is Kaykobad's schedule on Monday?" vs. "...Dr. Mohammad
+Kaykobad's schedule...") silently returned the WRONG table (FacultyList
+-- room/email/designation only, no schedule data) with false high
+confidence (the exact-match ceiling still fires), instead of the correct
+FacultyAvailability row -- the identical failure mode the day-schedule
+routing feature was built to fix, just for the token-level name-fragment
+path the same file's own docstring says is the common real-user
+phrasing. Root cause: the day-availability check only ever consulted
+`matched_initials`/`matched_names` (full-name substring matches), never
+`token_match_ids` (the fragment-level fallback used everywhere else).
+Fixed by looking up each token-matched FacultyList doc's own stored Name
+and checking the availability-name index with it. Verified live (both
+phrasings now correctly return the FacultyAvailability row with real
+schedule data); zero regression on `test_unambiguous_match.py` or the
+full pytest suite.
+
+**Real bug #2, CRITICAL, confirmed live -- a genuine ground-truth/corpus
+mismatch deflating every retrieval metric in this paper**: the
+Prerequisites table's own stored `FullChainPreRequisite` field (read
+verbatim into the corpus by `build_corpus.py`) silently drops transitive
+prerequisites for 27 of 34 courses -- e.g. CSE221's stored chain reads
+`CSE220-CSE111-CSE110`, omitting `CSE230` even though CSE220's own row
+lists it as a direct prerequisite (`PreRequisite='CSE111 (HP),CSE230
+(HP)'`). This is a data-quality bug in the source database, not a
+formatting issue: `PrerequisiteGraph.full_chain()`'s own BFS (already
+used to generate this paper's "full prerequisite chain" test queries'
+reference answers) computes the CORRECT chain, so those reference
+answers and the retrievable corpus text had silently diverged. Verified
+directly: 7 of the 12 "full prerequisite chain" test queries had a
+reference answer requiring a course code (CSE230, PHY111, or PHY112)
+absent from the only corpus chunk that could ever answer them --
+structurally unscoreable regardless of retrieval quality, confirmed by
+`results/ir_metrics.csv` showing exactly `0.0` on every metric for all
+four configs on all 7 queries, a pattern only possible if no retrieval
+outcome could satisfy the check.
+
+**Fix**: `scripts/build_corpus.py` now computes each Prerequisites row's
+stored chain via `PrerequisiteGraph.full_chain()` (the same BFS already
+used for the reference answers) instead of reading the DB's stale field
+verbatim -- corpus content and ground truth now come from the same
+source of truth. Deliberately left `knowledge_base.db`'s own stored field
+untouched (lower blast radius; grep-confirmed it's the only place that
+field is read). Backed up the pre-fix corpus
+(`data/corpus.jsonl.bak_pre_prereq_fix_2026-08-01`) before regenerating;
+all 7 previously-broken courses' regenerated chains now match their
+reference answers exactly (byte-for-byte); 27/34 Prerequisites rows
+changed overall (more widespread than just the 7 flagged test queries).
+Rebuilt `data/bm25_corpus.pkl` from the corrected corpus (succeeded on
+retry after one transient system-memory-pressure failure). Re-running
+`scripts/test_unambiguous_match.py` (which reads corpus text directly
+for its correctness check, independent of any index) confirms a further,
+genuine improvement: 0.930/0.930 -> a clean 1.000/1.000 on both ceiling
+-on and ceiling-off, reproduced twice. `Table~\ref{tab:unambiguous}` and
+its discussion updated in paper.tex accordingly.
+
+**BLOCKED, not silently skipped**: the Chroma vector index still needs
+rebuilding to match the corrected corpus (27 chunks' text changed; the
+live index's embeddings still reflect the old, wrong chain text). Three
+rebuild attempts failed, each for a genuine, diagnosed reason, not a
+code bug:
+1. First attempt: `MemoryError` inside a `regex` module import, root
+   cause a Windows pagefile/virtual-memory issue -- confirmed via
+   `Get-CimInstance Win32_LogicalDisk`: **C: drive was at 100% full,
+   0.25GB free out of 98.82GB total**.
+2. Investigated before touching anything: no lingering python processes
+   from this session (`Get-Process` clean); user-profile directories
+   only account for ~7GB, nowhere near the ~98GB "used" -- this is a
+   small system drive genuinely filled by the OS/installed programs, not
+   something this session's work caused (all of today's own temp/cache/
+   pip work was already redirected to the E: drive earlier). Freed 1.3GB
+   via a safe, reversible action (clearing `$env:TEMP`) -- not enough.
+3. Second attempt (lower Chroma batch size 100->25, temporary,
+   reverted after): segfaulted instead, same underlying resource
+   exhaustion, not a batch-size-specific bug.
+4. Did NOT attempt the historically-documented fix for this exact class
+   of issue (relocating/resizing the Windows pagefile, requires admin
+   rights and a reboot -- see the 2026-07-31 pagefile-crisis entry
+   earlier in this file) without the user's explicit awareness/consent,
+   since that is a system-wide, hard-to-reverse change, not a code fix.
+
+**Consequence, disclosed rather than hidden**: the main IR-metrics table
+(`tab:ir-metrics`), the generation-quality tables, the ColBERT baseline
+comparisons, and the paraphrase-robustness numbers all still reflect the
+corpus state BEFORE this prerequisite-chain fix for any config that
+depends on the vector stream (full_hybrid/adaptive/vector_only) --
+re-running those now, with BM25 fixed but Chroma stale, would blend a
+corrected lexical stream with a not-yet-corrected dense stream and
+produce a genuinely confusing, inconsistent result, so this was
+deliberately NOT done. Only `test_unambiguous_match.py` was safe to
+trust immediately, because entity-heavy ranking there is dominated by
+the metadata-based exact-match mechanism (unaffected by embedding
+staleness) and its correctness check reads corpus text directly
+(bypassing the vector index entirely) -- distinct from the vector
+-dependent tables, which remain a known, clearly-scoped follow-up once
+the Chroma rebuild can complete (needs meaningfully more free disk/RAM
+on this machine than is currently available).
+
+**Real bug #3**: `scripts/compute_metrics.py`'s empty-response
+BERTScore-crash-avoidance placeholder (`"[empty response]"`) mutated the
+shared `generated_answer` column BEFORE BLEU/ROUGE-L/METEOR were computed
+from it, not after -- so a genuinely empty generation (a real, rare
+Ollama failure mode, already documented from 2026-07-27) was silently
+scored against the placeholder text instead of the true empty string for
+those three metrics, not just BERTScore as the original comment claimed.
+Verified concretely: `BLEU(ref, "")=0.0` vs.\ `BLEU(ref, "[empty
+response]")=0.038` when the reference happens to share a word with the
+placeholder -- a real, reference-dependent inflation-away-from-zero risk
+for exactly the failure case these metrics should most heavily penalize.
+No currently-published number was affected (no genuinely-empty row exists
+in any committed `*_per_query*.csv` today), but the mechanism was live
+and would trigger on the next real empty-generation event. Fixed by
+computing all three metrics from the original column before the
+placeholder substitution (now applied to a separate copy, BERTScore
+-input only).
+
+**Real bug #4 and #5 (regex hardening, same bug class as an already
+-fixed sibling pattern)**: `FULL_COURSE_ID_RE` (`patterns.py`) was
+missing the leading `\b` word-boundary guard `COURSE_CODE_RE` was
+hardened with on 2026-07-29 for exactly this false-positive class --
+confirmed live it matched mid-word ("Summer2025-2 event" extracted a
+false ID from partway through "Summer"), now fixed and reverified against
+`tests/test_patterns.py` (6/6 still pass) plus new direct checks. Note:
+this does NOT close every false-positive shape -- a short (<=4 letter)
+whole word directly followed by 3 digits and a dash still matches from a
+genuine word boundary (e.g. "Room101-2"), which would need a word-list
+check, not a regex change; left as-is since both call sites already
+require the match to equal a real corpus-derived ID before it matters.
+Separately, `faculty_room_lookup.py` had reinvented its own, subtly
+-divergent copy of the course-base-code pattern instead of reusing the
+already-imported `COURSE_CODE_RE` -- exactly the "duplicated regex
+silently drifts" bug class `patterns.py`'s own module docstring says
+centralizing was meant to make structurally impossible (it had already
+happened once, to `prerequisite_graph.py`). Fixed to reuse the shared
+pattern; re-verified against direct SQL ground truth (unchanged results).
+
+**Paper consistency, 6 more issues found and fixed by the fresh
+paper.tex-vs-data audit** (on top of everything already fixed earlier
+today): (1) the by-pipeline-stage summary table still showed the old
+"+22pp" figure for the unambiguous-match ceiling, directly contradicting
+the section it summarizes (already fixed to converged-to-zero) -- the
+exact "propagated in one place, missed in another" pattern this project
+keeps finding; (2) both new ColBERT tables displayed a stale Adaptive
+nDCG snapshot (0.924/0.942) that predated the same day's paraphrase
+-robustness fix and no longer matched the paper's own `tab:ir-metrics`
+(0.926/0.943) -- recomputed the underlying significance files directly
+(cheap: pure recombination of already-computed per-query data, no
+re-encoding needed) and updated both tables with the correct numbers;
+(3) the paraphrase-robustness section's "1,069 (Category, Answer)
+groups" overstated the base population by ~35% -- the true figure for
+"groups with a genuine paraphrase pairing" is 689, verified directly by
+SQL; (4) "only 15 natural Banglish duplicate-answer groups exist, all
+Split=train" was factually wrong for 3 of the 15 (1 pure-val, 2 train
+-mixed) -- corrected to describe the real split composition; (5) the "one
+remaining [filler] case" was misattributed to a Board-of-Trustees query
+that, on direct testing, never actually carried a filler prefix at all
+(2 such failures exist, neither filler-related) -- recomputed the real
+filler-affected-pairs breakdown from current data (133/286 pairs
+actually rewritten by the fix, 132/133 now succeed, the one true
+residual failure is a different, previously-uncited query) and rewrote
+the passage to match; (6) a McNemar breakdown stated "26/200"/"3/200"
+for counts that are actually out of the 100-query entity-heavy/open
+-ended subsets, not the full 200 -- clarified.
+
+**Process notes worth keeping**: (a) piping a background command through
+`| tail -N` masks the command's real exit code with `tail`'s -- caught
+this directly when a Chroma rebuild reported "exit code 0" in its task
+notification while its actual Python process had crashed with a
+traceback; always redirect to a file and check `$?` directly for
+anything whose success/failure matters. (b) A `python -c` one-liner
+verifying a fix (e.g. "does the corrected regex still match real
+examples") is not a substitute for checking the ACTUAL constructed
+example a described bug uses -- one fix in this round (`FULL_COURSE_ID_RE`)
+initially looked like it hadn't worked at all when re-tested against the
+audit agent's own cited example, until closer analysis showed the fix
+correctly closed the intended (mid-word) bug class while a narrower,
+already-downstream-mitigated residual case remained -- worth writing the
+comment to reflect that precisely rather than overclaim a full fix.
+
+Full regression after every fix in this entry: all pipeline modules
+import cleanly; full pytest suite (24 tests) passes; `test_unambiguous_
+match.py` now at a genuine, reproduced-twice 1.000/1.000; paper
+recompiles cleanly (35 pages, 0 undefined refs/citations).
+
 ## Output discipline (unchanged)
 - Every experiment gets its own script and its own output file (CSV/JSON)
   saved under `results/` — don't just print to console and lose it.
@@ -3028,3 +3727,338 @@ Recompiles cleanly (31 pages, 0 undefined refs).
   outside this session), verify it independently first — this round found
   real fabrications in exactly this scenario. Don't skip this because a
   document looks well-formatted or confident.
+
+## 2026-08-02: Chroma rebuild unblocked (pagefile root-caused for real), full vector-dependent re-measurement, two real bugs found and fixed
+
+Continuation of 2026-08-01's blocked Chroma vector-index rebuild
+("paging file too small", C: at 100% full). This session actually
+resolved it — twice, because the first fix was incomplete — then used
+the rebuilt index to re-measure every table this project had deliberately
+left stale pending that rebuild.
+
+**Pagefile: three attempts, the real fix, and a still-live constraint.**
+1. First attempt (previous session) wiped the existing E: pagefile entry
+   and defaulted to a system-managed C: pagefile — the opposite of the
+   goal. Corrected via a second elevated script.
+2. User manually reconfigured via the GUI to `E:\pagefile.sys 0 0`
+   (system-managed on E: only). This looked correct in the registry but
+   never actually applied — `systeminfo`/`net statistics workstation`/WMI
+   boot time all agreed the machine hadn't rebooted since the change, so
+   the *active* pagefile was still the old broken C: config. Real lesson:
+   registry state is not live state; always cross-check boot time via
+   3 independent sources (WMI's `Win32_OperatingSystem.LastBootUpTime` has
+   been unreliable all project — corroborate with `systeminfo` and
+   `net statistics workstation` before trusting a "did it reboot" check).
+3. After a real reboot, the pagefile *usage* still showed `C:\pagefile.sys`
+   active despite the registry saying E:-only — filesystem inspection
+   (`Test-Path`/`Get-Item -Force` on the raw `.sys` paths) was the only
+   fully reliable ground truth found this session; WMI's `Win32_PageFileUsage`
+   lagged or lied at multiple points. Confirmed `C:\pagefile.sys` genuinely
+   didn't exist and `E:\pagefile.sys` was live.
+4. **System-managed (`0 0`) pagefile proved insufficient anyway**: under a
+   sudden allocation spike (loading `roberta-large` for BERTScore while
+   Ollama was resident), Windows auto-created a *second*, emergency
+   ~11GB pagefile on C: as a safety valve, because E:'s system-managed
+   file had only grown to 2.8GB — nowhere near fast enough. This refilled
+   C: to 0.25GB free and crashed the in-flight job. Fixed by setting an
+   **explicit fixed range** (`E:\pagefile.sys 16384 32768`) instead of
+   system-managed — first attempt via `New-CimInstance` silently failed
+   (registry ended up with *zero* pagefile entries despite the WMI call
+   reporting success — another confirmed WMI-vs-registry mismatch this
+   project has now hit three separate times); fixed by writing the
+   `PagingFiles` registry value directly via `Set-ItemProperty`, which is
+   what the GUI/WMI path ultimately writes to anyway and was the only
+   method that worked reliably all session. Verified via `reg query`
+   (not `Get-ItemProperty`, not WMI) and required a second reboot.
+5. **Even the fixed-size config didn't fully close the hole**: after the
+   second reboot, `E:\pagefile.sys` had *still* only grown to 2.8GB
+   (Windows doesn't pre-allocate `InitialSize` on creation — it grows
+   toward it lazily) and a later `torch` CUDA-DLL import spiked C: to an
+   emergency pagefile again. This machine is genuinely memory-constrained
+   (16GB RAM total) and the pagefile fix alone does not fully prevent an
+   emergency C: fallback under a sudden allocation burst; the practical
+   mitigation used for the rest of this session was freeing RAM directly
+   before each heavy step (stop Ollama/orphaned workers) rather than
+   relying on the pagefile alone. **Disclosed limitation, not solved**:
+   flagged for the weakness audit below.
+
+**Real bug found: orphaned `llama-server` processes leak 8+GB of RAM.**
+Killing `ollama.exe`/`ollama app.exe` does not terminate the `llama-server`
+child process(es) Ollama spawns to actually serve a loaded model — after
+two Ollama restarts this session, two orphaned `llama-server` processes
+were found holding 4.9GB and 3.4GB of RAM respectively (8.3GB combined),
+directly causing a `torch` import to fail with the same "paging file too
+small" error even after the pagefile fix. Killing them by PID recovered
+the memory immediately (1.65GB free → 9.74GB free). Anyone restarting
+Ollama on this machine should check `Get-Process llama-server` separately,
+not just `Get-Process ollama*`.
+
+**Real bug found: `colbert_retrieve_context.py` had a batch-size
+regression its sibling script already fixed.** `eval_colbert_baseline.py`
+was fixed earlier (documented 2026-08-01) to use `DOC_BATCH=64` after
+hitting a CUDA OOM on this 4GB GPU with `DOC_BATCH=512`. The sibling
+script `colbert_retrieve_context.py` — used for the ColBERT-as-retriever
+generation-quality comparison, not the retrieval-metrics comparison — was
+never updated and still had `DOC_BATCH=512`, and hit the identical OOM
+this session. Fixed by applying the same, already-proven fix. Lesson:
+when two scripts duplicate the same scoring loop for different purposes,
+a fix to one doesn't propagate to the other automatically — worth
+deduplicating if a third copy ever appears.
+
+**Real bug found (caught, not yet generalized): a script's own resume
+logic silently reused stale results.** `colbert_generate_and_score.py`
+checks its output CSV for already-completed `query_id`s and skips
+regenerating them — correct behavior for resuming an interrupted run,
+but it has no way to detect that the *input* (`colbert_external_retrieved
+_context.csv`) changed underneath it. Running it after the corpus fix
+produced byte-identical output to the pre-fix run, silently reusing
+generations from the old, stale context — caught only by comparing the
+"new" summary against the pre-fix backup and finding them identical.
+Fixed for this run by deleting the stale output file first; not
+generalized into the script itself this session (e.g. hashing the input
+file's content into a resume-cache key) — flagged as a real, disclosed
+gap for a future pass, not silently worked around.
+
+**HF cache / TEMP not fully on E:, partially fixed.** `HF_HOME` was
+already correctly persisted to `E:\...\.hf_cache` (User env var) from
+earlier work, and most of a 7.1GB model cache was correctly there — but
+`TEMP`/`TMP` were still pointing at `C:\Users\<user>\AppData\Local\Temp`
+at both User and Machine scope, and a 2.2GB stale duplicate HF cache
+(predating the `HF_HOME` fix) was still sitting on C:. Fixed: set
+persistent User-scope `TEMP`/`TMP`/`PIP_CACHE_DIR` to `E:\RAG\...\.tmp`
+and `.pip_cache` (both already gitignored), removed the stale C: HF cache
+duplicate. Machine-scope `TEMP` (`C:\Windows\Temp`) deliberately left
+alone — system-wide, low risk, out of scope for this project's own
+resource usage.
+
+**Chroma vector index rebuilt and swapped in.** `scripts/stage_chroma
+_index_rebuild.py` (batch_size=100, unchanged) succeeded once the
+pagefile/memory issues above were resolved: 7,138 chunks, verified via
+an independent `chromadb.PersistentClient` count check (not just the
+script's own exit code — this project has been burned before by a
+pipe-masked exit code looking like success while the underlying job
+crashed). Swapped into `chroma_db/` via the existing safe swap script
+(old index preserved at `chroma_db_old_pre_banglish/`, not deleted).
+
+**Every Chroma-vector-dependent table re-measured, all real, all
+verified.** In order: `scripts/measure_ir_metrics.py` (main IR-metrics
+table, Table~\ref{tab:ir-metrics}), the full 200-query adaptive-pipeline
+generation run (`scripts/run_novel_pipeline.py`, roundO_noreranker), the
+full 800-generation 4-config ablation baseline (`scripts/run_ablation.py`),
+significance testing between them, the ColBERT-v2 external baseline
+(retrieval-level `eval_colbert_baseline.py` + generation-quality
+`colbert_retrieve_context.py`/`colbert_generate_and_score.py`), the
+GTE-ModernColBERT-v1 baseline (retrieval-level only, matching this
+paper's existing scope), and McNemar tests for both. Every one of these
+runs was verified for real content (non-empty generated text, correct
+row counts) before trusting its numbers — two runs this session initially
+"succeeded" (exit 0) while silently producing garbage (Ollama serving
+an empty model list after a botched restart; the stale-resume-cache bug
+above) and were caught before propagating into any result file.
+
+**Headline finding: entity-heavy retrieval jumped again, same root cause
+as the prerequisite-chain corpus fix.** Entity-heavy Recall@1 for
+adaptive/full-hybrid/BM25-only all reached a clean 1.000 (from 0.93),
+and even vector-only's entity-heavy Recall@1 rose 0.87→0.93 — the Chroma
+index had continued serving the *old*, uncorrected chunk text after
+`corpus.jsonl` itself was already fixed (2026-08-01), so this is the
+same bug's second half finally closing, not a new capability. Open-ended
+query metrics are, correctly, completely unchanged (confirmed
+identically across old/new measurements) — the prerequisite-chain fix
+only ever touched entity-heavy content, and the numbers show exactly
+that boundary, which is good evidence the mechanism is understood
+correctly rather than assumed.
+
+**Headline finding: GTE-ModernColBERT-v1 comparison qualitatively
+reversed, from "fully tied" to "significantly ahead on ranking quality."**
+The previous revision (2026-08-01) found no significant difference on any
+metric. After the corpus fix, GTE-ModernColBERT-v1 reaches a clean 1.000
+on Recall@1/3/5/MRR (ceiling, zero errors on 200 queries) while the
+deployed adaptive pipeline, though also improved, still misses 3 queries
+at Recall@1 — and nDCG@5/nDCG@10 (sensitive to rank position, not just
+presence in top-$k$) are now significantly ahead for GTE-ModernColBERT
+under the bootstrap test ($p=0.019$/$0.007$; McNemar doesn't apply to
+continuous metrics). Verified this wasn't a corpus-fix artifact
+disproportionately favoring GTE by checking directly which 3 queries the
+adaptive pipeline misses: all 3 are open-ended (not entity-heavy) —
+exactly where the deployed retriever's hand-built exact-match indices
+give it no help and it competes purely on learned ranking quality — and
+GTE-ModernColBERT gets all 3 right. Reported plainly, including that this
+overturns the paper's own previous "fully tied" claim; the deployed
+system's advantage over ColBERT-v2 (Table~\ref{tab:colbert-baseline},
+still confirmed, though also narrower now: 26/100→16/100 entity-heavy
+discordant pairs, same direction) does not generalize to every
+late-interaction retriever, and this revision's numbers say that more
+concretely than "tied" did.
+
+**Paper propagation.** Updated: Table~\ref{tab:ir-metrics} + discussion,
+Table~\ref{tab:novel-sig} + discussion (row selection changed — vector-only's
+notable case moved from a now-resolved BLEU tie to a new METEOR
+disagreement), Table~\ref{tab:colbert-baseline} + discussion,
+Table~\ref{tab:gte-colbert-baseline} + discussion (full rewrite, "tied" →
+"ahead on nDCG"), Table~\ref{tab:colbert-generation} + discussion,
+Table~\ref{tab:reranker-ablation}'s "Off" rows + discussion (reranker-on
+row explicitly still NOT re-measured against this fix — disclosed gap,
+consistent with the same disclosed gap already in place for the earlier
+paraphrase-robustness fix; not the deployed config, re-running costs
+meaningfully more), abstract, RQ1 discussion, and conclusion (all three
+cited the now-resolved BLEU-vs-vector-only figure; updated to the new
+METEOR figure). Recompiled cleanly, 0 undefined refs/citations.
+Deliberately NOT re-measured: the RAGAS-style LLM-judge/NLI faithfulness
+tables (Section on faithfulness) — a materially different, more expensive
+measurement pipeline not requested in this pass; flagged for the
+weakness audit as a known follow-up rather than silently left inconsistent
+without disclosure.
+
+**Weakness audit**: read through the paper's own Limitations section
+(10 numbered items) end to end and spot-verified rather than assumed.
+Found the section itself already honest and reasonable — every item
+either has a concrete mitigation already deployed (e.g. the open-ended
+abstention gate's poor held-out generalization, 0.532 accuracy, was
+caught, 5-fold cross-validated, and re-deployed at a more realistic
+threshold) or is explicitly scoped as future work requiring a human
+(the hallucination annotation). Found one real, previously-undisclosed
+gap: Table~faithfulness and the NLI cross-check are dated 2026-08-01,
+predating today's corpus fix and Chroma rebuild, and — unlike every
+other table in this paper — carried no disclosure that they were now
+stale relative to it, even though faithfulness scores depend on
+retrieved context via the same mechanism that moved every generation
+-quality metric. Fixed by adding an explicit disclosure sentence rather
+than re-running the (substantially more expensive) LLM-judge/NLI
+pipelines in this pass. Also verified the deployed abstention threshold
+(`results/abstention_threshold.json`) matches the paper's claimed values
+exactly and confirmed `pipeline/abstention.py` actually loads it (not a
+dangling artifact); confirmed no TODO/FIXME/stub implementations and no
+skipped/xfail tests anywhere in `pipeline/` or `tests/`.
+
+**Efficiency pass** (delegated to a background agent, independently
+re-verified afterward): measured, not assumed, before changing anything.
+Found one real, worthwhile fix — `HybridRetriever.retrieve()` was
+unconditionally re-embedding the query via a full SentenceTransformer
+forward pass on every call, including the ambiguous-entity widening path
+(`novel_pipeline.py`'s `build_context`) which calls `retrieve_adaptive`
+twice for the identical query string. This is the same double-call site
+whose BM25 rescan was already fixed 2026-08-01, but the embedding call
+was missed at the time and turned out to be the larger cost: measured
+live at ~5.7ms/call, vs. ~8-9ms for `retrieve()`'s entire body — the
+dominant cost, not incidental. Fixed with a single-slot memoization
+cache (`_cached_embed_query`), the exact same pattern already used for
+`_bm25_candidates`. Verified independently after the agent's report,
+not just trusted: re-ran the full test suite myself (26/26, matching the
+agent's own before/after report) and confirmed the new method is wired
+into `retrieve()` and that the pre-existing `hashlib`/`DEFAULT_MODEL`
+imports it sits near are unrelated pre-existing code, not orphaned
+additions. Several other candidates were measured and explicitly
+rejected as not worth the complexity (`_exact_match_ids`'s own widening
+double-call: ~0.02ms; `novel_pipeline.py`'s duplicate `_question_match
+_ratio` calls: ~0.04ms; a linear prefix-scan in `FacultyRoomLookup`: not
+hot-path) — reported plainly rather than padded with marginal changes
+to look more thorough. `scripts/` spot-checked for the specific
+heavy-object-reconstructed-in-a-loop anti-pattern; none found across all
+112 scripts.
+
+**Self-correction, found when the user asked "did you see all the changes
+as good changes" and I actually re-checked rather than just reassured**:
+the initial "fully propagated" claim above was wrong. Table~adaptive
+-isolated (Section~\ref{subsec:adaptive-isolated}) is a filtered view of
+the same entity-heavy IR-metrics data already re-measured, but I had not
+re-derived it — its headline "0.930 tied" value was stale (the fresh data
+shows 1.000). This is exactly the class of gap the paper's own precedent
+(Section~\ref{subsec:hard-negatives}'s text: "every retrieval-only
+evaluation in this paper... was re-run against the rebuilt index") says
+should not happen. Found by re-reading that precedent sentence and
+checking whether it had actually been honored this time — it hadn't, for
+this one table. Fixed: re-ran `scripts/isolate_adaptive_routing_
+deconfounded.py` (confirms 0 discordant pairs even with the ceiling
+mechanism removed, a strictly stronger version of the previous finding)
+and recomputed the entity-heavy-only paired bootstrap significance
+directly from the fresh `ir_metrics.csv` (no dedicated script existed for
+this cut, so computed inline with the same `bootstrap_ci_diff` function
+already imported elsewhere). Updated Table~adaptive-isolated and its
+three surrounding paragraphs with the third measurement point. Separately
+verified `subsec:dat-ceiling`'s lambda-sweep (open-ended queries only)
+and `subsec:rrf-k-sweep` (an intentionally frozen RRF-era record per its
+own text) do NOT need re-running: open-ended-query IR metrics were
+already confirmed byte-identical old vs.\ new during the main IR-metrics
+re-measurement, since the corpus fix only ever touched entity-heavy
+content. Lesson for next time: "I re-measured everything that changed"
+needs to be checked against the paper's own list of what it considers
+index-dependent, not against my own assumption of scope — a text search
+for the actual precedent sentence found the gap in under a minute; a
+self-satisfied summary would not have.
+
+## 2026-08-02: research-grounded weakness hunt — real ADD/DROP misrouting bug found and fixed, one safety-relevant design inconsistency found and resolved
+
+Following a research-grounded architecture-review exercise (verified 6
+real ACL/arXiv 2024-2026 papers on RAG hallucination reduction, confidence
+-based abstention, router architectures, code-switched IR, and long-term
+memory — none fabricated, each fetched and read directly), the user asked
+to find and fix major weaknesses. Delegated a fresh correctness/safety
+bug hunt to a background agent (explicitly scoped away from the
+efficiency pass and paper-disclosure audit already done today), then
+independently re-verified every claim before trusting it.
+
+**Real, live-confirmed bug found and fixed**: `FACULTY_INITIAL_RE`'s
+2026-08-01 original-casing fix (matching only already-uppercase tokens in
+the untouched query, not `query.upper()`) closed the lowercase-word
+collision class ("add a course" no longer false-matches faculty initial
+ADD) but missed a second collision class: "ADD/DROP" is BRAC's own
+standard, commonly-all-caps registrar term, and a user typing "When is
+the ADD/DROP deadline?" or "What is the ADD/DROP period for this
+semester?" still matched ADD as a faculty initial, since the match itself
+is already all-caps as typed — no casing rule can distinguish an
+all-caps *word* from an all-caps *initial*. Confirmed live before and
+after: pre-fix, both queries force-ranked Ayesha Siddika's unrelated
+FacultyList row to the exact-match ceiling (score=101.2); post-fix, both
+correctly return the corpus's actual Add/Drop-period content
+(BanglishQA-1956-chunk0). Fixed with a small, evidence-based exclusion
+set (`FACULTY_INITIAL_FALSE_POSITIVE_EXCLUSIONS = {"ADD"}`, same
+discipline as `PREPROCESS_BANGLISH_CONTENT_WORDS`/`FILLER_PREFIX_RE` —
+only excludes the one concretely-reproduced collision, not a speculative
+blocklist) and a shared `_matched_faculty_initials()` helper factoring
+out what had been 3 independently-duplicated call sites, so the
+exclusion can't drift out of sync at only one of them the way the
+original casing fix's own gap suggests duplicated logic tends to. Added
+2 regression tests (`tests/test_dynamic_alpha.py`). Verified independently
+(not just trusted the agent's report): re-ran the exact live queries
+myself, confirmed the corrected answer's content, and re-ran the full
+suite myself (28/28).
+
+**Real design inconsistency found, escalated rather than guessed, then
+fixed per the user's explicit decision**: `conformal_abstention.py`'s
+`backoff_filter()` "no context" branch labeled itself `"not filtered"`
+and returned the full unfiltered answer while simultaneously reporting
+`retained_fraction=0.0` — a caller reading that number as a trust signal
+would abstain despite the note and returned answer implying the opposite.
+Currently dead code in production (the only call site already skips this
+function when context is empty, and the feature defaults off), so this
+was a latent inconsistency, not an active bug — but a genuine either-way
+safety judgment call, not something to silently pick a side on. Presented
+both directions plainly (lean-trust: fix `retained_fraction` to 1.0 to
+match the pass-through wording; lean-distrust: fix `filtered_answer` to
+empty to match what 0.0 already signals) with a recommendation toward
+distrust, consistent with the general RAG-safety principle that an answer
+with nothing to verify it against is maximally likely unsupported. User
+chose lean-distrust. Fixed: `filtered_answer` now returns `""` (not the
+unfiltered answer) when there is no context to check claims against,
+matching `retained_fraction=0.0`; updated the one existing test that had
+locked in the old, inconsistent behavior
+(`test_open_ended_route_with_empty_context_is_not_filtered` →
+`test_open_ended_route_with_empty_context_is_treated_as_fully_unverified`).
+28/28 tests still pass.
+
+**Ruled out, not fabricated — verified directly rather than assumed**:
+SQL injection in `faculty_room_lookup.py`/`prerequisite_graph.py` (both
+confirmed 100% static SQL, no interpolation); a hypothesized
+`AttributeError` from an unguarded regex `.match()` in
+`faculty_room_lookup.py` (constructed the failing case, proved by direct
+testing it cannot actually occur given `FULL_COURSE_ID_RE`'s own
+constraints); malformed-input robustness of the full retrieval/generation
+path (live-threw empty/whitespace/3000-char/SQL-metacharacter/pure
+-Bengali/regex-metacharacter queries, plus simulated Ollama-down and
+malformed-JSON-response generation failures, at the real instantiated
+pipeline — everything degraded gracefully, nothing crashed); prompt
+injection via `build_prompt`'s `str.format()` (confirmed no re-parsing of
+substituted values, so no format-string injection — the residual risk is
+the generic, architecture-inherent LLM prompt-injection surface every RAG
+system has, not a code defect specific to this one).

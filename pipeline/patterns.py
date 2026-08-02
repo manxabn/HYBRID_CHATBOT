@@ -56,7 +56,21 @@ COURSE_CODE_RE = re.compile(r"\b[A-Za-z]{2,4}[\s-]?\d{3}(?!\d)[A-Za-z]?")
 # itself, and the section suffix) so it can be matched against
 # CourseDetails' "Course" metadata field directly, distinct from a bare
 # course-code match which only identifies the course, not the section.
-FULL_COURSE_ID_RE = re.compile(r"[A-Za-z]{2,4}\d{3}[A-Za-z]*-\d+[A-Za-z]*")
+# \b added 2026-08-01: this pattern was missing the same leading word
+# -boundary guard COURSE_CODE_RE was hardened with above (2026-07-29).
+# Confirmed this closes the MID-WORD match class COURSE_CODE_RE was fixed
+# for ("Summer2025-2 event" no longer matches, was previously extracting a
+# false code from partway through "Summer"). It does NOT close a
+# different, narrower residual case: a short (<=4 letter) whole English
+# word immediately followed by 3 digits and a dash still matches from a
+# genuine word boundary (e.g. "Room101-2" -- "Room" is itself a valid
+# 2-4-letter prefix, so \b provides no protection there; this would need
+# a word-list check, not a regex change, to close). Not pursued further
+# since both call sites (hybrid_retriever.py, faculty_room_lookup.py)
+# already require the extracted candidate to exactly equal a real
+# corpus-derived section ID before it matters, so this residual case is
+# downstream-mitigated, not a live wrong-answer risk.
+FULL_COURSE_ID_RE = re.compile(r"\b[A-Za-z]{2,4}\d{3}[A-Za-z]*-\d+[A-Za-z]*")
 
 
 def canonicalize_course_code(raw_match: str) -> str:

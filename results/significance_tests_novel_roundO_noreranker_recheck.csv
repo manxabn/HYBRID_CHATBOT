@@ -1,0 +1,17 @@
+comparison,metric,n_matched,novel_mean,baseline_mean,mean_diff,paired_t_p,wilcoxon_p,significant_at_0.05
+adaptive_novel_vs_full_hybrid,bleu,199,0.6722,0.6642,0.0081,0.6542,0.5007,False
+adaptive_novel_vs_full_hybrid,rougeL,199,0.8302,0.8331,-0.0029,0.8276,0.9286,False
+adaptive_novel_vs_full_hybrid,bertscore,199,0.9652,0.9658,-0.0007,0.7671,0.8694,False
+adaptive_novel_vs_full_hybrid,meteor,199,0.855,0.8551,-0.0001,0.9926,0.6112,False
+adaptive_novel_vs_bm25_only,bleu,199,0.6722,0.6672,0.005,0.7472,0.8093,False
+adaptive_novel_vs_bm25_only,rougeL,199,0.8302,0.8347,-0.0046,0.7145,0.9211,False
+adaptive_novel_vs_bm25_only,bertscore,199,0.9652,0.9662,-0.001,0.6169,0.8695,False
+adaptive_novel_vs_bm25_only,meteor,199,0.855,0.8617,-0.0067,0.5813,0.991,False
+adaptive_novel_vs_vector_only,bleu,199,0.6722,0.6441,0.0282,0.1082,0.0375,False
+adaptive_novel_vs_vector_only,rougeL,199,0.8302,0.8253,0.0049,0.7082,0.2647,False
+adaptive_novel_vs_vector_only,bertscore,199,0.9652,0.9652,-0.0,0.9937,0.7305,False
+adaptive_novel_vs_vector_only,meteor,199,0.855,0.8355,0.0195,0.1405,0.0077,False
+adaptive_novel_vs_no_retrieval,bleu,199,0.6722,0.0462,0.626,0.0,0.0,True
+adaptive_novel_vs_no_retrieval,rougeL,199,0.8302,0.1909,0.6392,0.0,0.0,True
+adaptive_novel_vs_no_retrieval,bertscore,199,0.9652,0.8649,0.1002,0.0,0.0,True
+adaptive_novel_vs_no_retrieval,meteor,199,0.855,0.2905,0.5645,0.0,0.0,True

@@ -36,7 +36,6 @@ import sys
 from pathlib import Path
 
 import nltk
-import numpy as np
 import torch
 from sentence_transformers import CrossEncoder
 
@@ -45,6 +44,15 @@ sys.path.insert(0, str(ROOT))
 
 NLI_MODEL = "cross-encoder/nli-MiniLM2-L6-H768"
 LABELS = ["contradiction", "entailment", "neutral"]
+
+# 2026-08-01: this module's device defaults were hardcoded to "cpu"
+# everywhere, unlike pipeline/reranker.py's own cross-encoder (same
+# CrossEncoder wrapper class, same kind of model), which already auto
+# -detects CUDA. Currently masked in practice by use_conformal_backoff
+# defaulting to False (see below), but real once that feature is
+# enabled -- fixed now rather than left as a latent inconsistency for
+# whoever eventually turns it on.
+DEFAULT_DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 PROVISIONAL_NOTE = (
     "threshold is provisional (heuristic, derived from this project's own "
@@ -105,7 +113,7 @@ OPEN_ENDED_THRESHOLD = 0.35
 _model_cache = {}
 
 
-def _get_model(device: str = "cpu") -> CrossEncoder:
+def _get_model(device: str = DEFAULT_DEVICE) -> CrossEncoder:
     # Cached at module level so repeated calls (e.g. scoring many answers in
     # one evaluation run) don't reload a ~440MB model each time -- the
     # "efficient" concern raised alongside "solve every weakness."
@@ -129,7 +137,7 @@ def decompose_claims(answer: str) -> list[str]:
     return sents if sents else [str(answer)]
 
 
-def score_claims(claims: list[str], context: str, device: str = "cpu") -> list[float]:
+def score_claims(claims: list[str], context: str, device: str = DEFAULT_DEVICE) -> list[float]:
     """Per-claim entailment confidence: max entailment probability over all
     context sentences (SummaC-ZS), one score per claim in `claims`, same
     order. This is the nonconformity/confidence signal the back-off
@@ -153,7 +161,7 @@ def score_claims(claims: list[str], context: str, device: str = "cpu") -> list[f
 
 def backoff_filter(answer: str, context: str, route: str = "open_ended",
                     exact_match_any: bool = False, threshold: float = None,
-                    device: str = "cpu") -> dict:
+                    device: str = DEFAULT_DEVICE) -> dict:
     """Applies the back-off: decompose the answer into claims, score each
     against the retrieved context, and DROP any claim whose entailment
     score falls below `threshold`. Returns a dict with the filtered answer
@@ -191,10 +199,21 @@ def backoff_filter(answer: str, context: str, route: str = "open_ended",
 
     threshold = OPEN_ENDED_THRESHOLD if threshold is None else threshold
     if not context or not str(context).strip():
+        # 2026-08-02: previously returned filtered_answer=answer (pass-
+        # through) alongside retained_fraction=0.0 -- internally
+        # inconsistent, since a caller reading retained_fraction as a
+        # trust signal would abstain while the "not filtered" wording and
+        # unfiltered filtered_answer implied the opposite. Currently dead
+        # in production (the only call site, novel_pipeline.py, already
+        # skips this function entirely when context is empty), but fixed
+        # for consistency rather than left as a landmine for the next
+        # caller: with no context to verify any claim against, there is
+        # nothing to trust, so treat it the same as a fully-unsupported
+        # answer -- filtered_answer empty, matching retained_fraction=0.0.
         return {
-            "filtered_answer": answer, "original_answer": answer,
+            "filtered_answer": "", "original_answer": answer,
             "claim_scores": [], "dropped_claims": [], "retained_fraction": 0.0,
-            "threshold": threshold, "note": "no context to check claims against; not filtered",
+            "threshold": threshold, "note": "no context to check claims against; treated as fully unverified",
         }
     claims = decompose_claims(answer)
     scores = score_claims(claims, context, device=device)
@@ -217,7 +236,7 @@ def backoff_filter(answer: str, context: str, route: str = "open_ended",
 
 
 def calibrate_threshold_from_labels(labeled_rows: list[dict], target_risk: float = 0.1,
-                                     device: str = "cpu") -> dict:
+                                     device: str = DEFAULT_DEVICE) -> dict:
     """Learn-Then-Test-style calibration (Angelopoulos et al.'s conformal
     risk control recipe, the standard mechanism Mohri & Hashimoto's method
     builds on): given a labeled calibration set, find the SMALLEST threshold

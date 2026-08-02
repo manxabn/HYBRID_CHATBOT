@@ -5,6 +5,7 @@ avoid Groq's rate limits (see plan discussion / methodology-text correction
 still pending in paper.tex).
 """
 
+import re
 import time
 
 import requests
@@ -129,6 +130,64 @@ TRANSLATE_PROMPT = (
     "Question: {query}\n"
     "English translation:"
 )
+# 2026-08-01: a live-confirmed failure was found here -- "Brac er chad
+# koyta theke koyta obdi khola thake?" (rooftop opening hours) was
+# mistranslated to "How many branches of Brac Bank are open on a
+# holiday?", a completely different question. Several prompt rewrites
+# (explicit Banglish glossary, "don't guess a different question"
+# instruction) were tried and DID fix that specific case, but each one
+# also regressed 1-2 queries in the already-measured n=13 cross-lingual
+# stress test (results/crosslingual_stress_eval_valexpanded.csv, the
+# paper's own reported 84.6% figure) -- re-verified directly, not
+# assumed: re-running scripts/eval_crosslingual_stress.py against the
+# modified prompt dropped it to 76.9-69.2% depending on the variant,
+# because a shared prompt change to fix one rare short word's
+# mistranslation shifted the model's interpretation of other, unrelated,
+# already-correctly-translating queries. Reverted rather than accept that
+# regression on an already-verified paper number -- see PREPROCESS_
+# BANGLISH_CONTENT_WORDS below for the zero-regression-risk fix actually
+# deployed instead (a deterministic pre-substitution that can only ever
+# affect a query containing one of a short, explicit word list, so it
+# cannot touch any query it wasn't specifically designed for).
+
+
+# Deterministic, whole-word Banglish content-word substitution applied
+# BEFORE translate_to_english's LLM call, not a prompt change -- see the
+# comment on TRANSLATE_PROMPT above for why a shared prompt change was
+# tried first and reverted (fixed one word but regressed unrelated
+# already-correct translations elsewhere). This substitution can only
+# ever affect a query that literally contains one of these exact tokens,
+# so it is mechanically incapable of changing behavior on any query it
+# wasn't specifically written for -- zero regression risk on the
+# already-measured stress test, confirmed by re-running it after adding
+# this (results/crosslingual_stress_eval_valexpanded.csv unchanged: same
+# 11/13, since none of those 13 queries contain "chad"/"chhad").
+#
+# Deliberately a small, defensible set added only on direct evidence
+# (same discipline as pipeline/banglish_normalize.py's docstring) -- not
+# an attempt at exhaustive Banglish-to-English content-word coverage.
+PREPROCESS_BANGLISH_CONTENT_WORDS = {
+    # "chad"/"chhad" (ছাদ, roof/rooftop) added 2026-08-01: live-confirmed
+    # to be mistranslated as unrelated words ("branches", "offices",
+    # "toilets" across different prompt attempts) by the small local LLM,
+    # derailing the whole translated query ("Brac er chad koyta theke
+    # koyta obdi khola thake?" -> a nonsense question about bank branches
+    # instead of rooftop opening hours). The corpus has real rooftop
+    # content (EnglishQA/BanglishQA rows on rooftop hours/amenities) that
+    # was unreachable as a direct result.
+    "chad": "rooftop",
+    "chhad": "rooftop",
+}
+_BANGLISH_CONTENT_WORD_RE = re.compile(
+    r"\b(" + "|".join(re.escape(w) for w in PREPROCESS_BANGLISH_CONTENT_WORDS) + r")\b",
+    re.IGNORECASE,
+)
+
+
+def preprocess_banglish_content_words(query: str) -> str:
+    return _BANGLISH_CONTENT_WORD_RE.sub(
+        lambda m: PREPROCESS_BANGLISH_CONTENT_WORDS[m.group(0).lower()], query
+    )
 
 
 NORMALIZE_ENTITIES_PROMPT = (
@@ -159,6 +218,7 @@ def translate_to_english(query: str, model: str = MODEL, timeout: int = 300) -> 
     of the corpus, in addition to the original query. Same deterministic
     decoding as generate() -- this is a retrieval-time utility call, not a
     user-facing answer, but should still be reproducible."""
+    query = preprocess_banglish_content_words(query)
     prompt = TRANSLATE_PROMPT.format(query=query)
     resp = post_with_retry(
         OLLAMA_URL,

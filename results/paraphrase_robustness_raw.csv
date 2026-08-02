@@ -1,1194 +1,287 @@
-query_id,config,query,reference_answer,retrieved_context,generated_answer,route,fusion,lambda,abstained,raw_abstain,sufficient_context_override,graph_augmented,faculty_room_augmented,exact_match_any,question_match_any,translated_query,normalized_query,retrieval_s,rerank_s,generation_s,total_s,timestamp,query_confidence,query_top1_score
-Q138-orig,adaptive_novel,What is the coordinator email for CSE437?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.,"Course: CSE437
-First Theory Coordinator: GRA
-Theory Coordinator Email: rabiul.alam@bracu.ac.bd
-
-Course: CSE474
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd
-
-Course: CSE310
-First Theory Coordinator: ADR
-Theory Coordinator Email: abdur.rahman@bracu.ac.bd
-First Lab Coordinator: ADR
-Lab Coordinator Email: abdur.rahman@bracu.ac.bd
-
-Course: CSE430
-First Theory Coordinator: EHQ
-Theory Coordinator Email: ehtashamul.haque@bracu.ac.bd
-First Lab Coordinator: TAV
-Lab Coordinator Email: tarvir.anjum@bracu.ac.bd
-
-Course: CSE424
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd",The theory coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.1330,0.0000,5.1650,5.2981,2026-07-31T17:12:58.911361+00:00,100.0019,100.0167
-Q138-p1,adaptive_novel,Could you tell me the email address of CSE437's coordinator?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.,"Course: CSE437
-First Theory Coordinator: GRA
-Theory Coordinator Email: rabiul.alam@bracu.ac.bd
-
-Course: CSE424
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd
-
-Question (Banglish): Eta ki required?
-Answer (English): Not sure what 'it' refers to here - could you tell me which requirement or course you mean?
-
-Course: CSE474
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd
-
-Question: Is it required?
-Answer: Not sure what 'it' refers to here - could you tell me which requirement or course you mean?",The email address of CSE437's first theory coordinator is rabiul.alam@bracu.ac.bd.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0273,0.0000,5.5153,5.5429,2026-07-31T17:13:04.455131+00:00,100.0009,100.0167
-Q138-p2,adaptive_novel,I need to reach the CSE437 coordinator -- what's their email?,The coordinator email for CSE437 is rabiul.alam@bracu.ac.bd.,"Course: CSE437
-First Theory Coordinator: GRA
-Theory Coordinator Email: rabiul.alam@bracu.ac.bd
-
-Course: CSE430
-First Theory Coordinator: EHQ
-Theory Coordinator Email: ehtashamul.haque@bracu.ac.bd
-First Lab Coordinator: TAV
-Lab Coordinator Email: tarvir.anjum@bracu.ac.bd
-
-Course: CSE310
-First Theory Coordinator: ADR
-Theory Coordinator Email: abdur.rahman@bracu.ac.bd
-First Lab Coordinator: ADR
-Lab Coordinator Email: abdur.rahman@bracu.ac.bd
-
-Course: CSE474
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd
-
-Course: CSE424
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd",The email of the First Theory Coordinator for CSE437 is rabiul.alam@bracu.ac.bd.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0212,0.0000,5.1022,5.1234,2026-07-31T17:13:09.578557+00:00,100.0019,100.0167
-Q127-orig,adaptive_novel,What is the full prerequisite chain for CSE220?,The full prerequisite chain for CSE220 is CSE111-CSE230-CSE110.,"Verified prerequisite chain for CSE220 (nearest prerequisite first, from the Prerequisites knowledge base): CSE111-CSE230-CSE110.
-
-Course: CSE221
-Prerequisite: CSE220 (HP)
-Full Prerequisite Chain: CSE220-CSE111-CSE110
-
-Course: CSE331
-Prerequisite: CSE221 (HP)
-Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
-
-Course: CSE370
-Prerequisite: CSE221 (HP)
-Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
-
-Course: CSE321
-Prerequisite: CSE221 (HP)
-Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
-
-Course: CSE220
-Prerequisite: CSE111 (HP),CSE230 (HP)
-Full Prerequisite Chain: CSE230-CSE111-CSE110",The full prerequisite chain for CSE220 is CSE230-CSE111-CSE110.,entity_heavy,rrf,0.9,False,False,False,True,False,True,False,,,0.0192,0.0000,4.7233,4.7426,2026-07-31T17:13:14.321872+00:00,100.0001,100.0167
-Q127-p1,adaptive_novel,Can you list out the entire prerequisite chain leading up to CSE220?,The full prerequisite chain for CSE220 is CSE111-CSE230-CSE110.,"Verified prerequisite chain for CSE220 (nearest prerequisite first, from the Prerequisites knowledge base): CSE111-CSE230-CSE110.
-
-Course: CSE221
-Prerequisite: CSE220 (HP)
-Full Prerequisite Chain: CSE220-CSE111-CSE110
-
-Course: CSE331
-Prerequisite: CSE221 (HP)
-Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
-
-Course: CSE370
-Prerequisite: CSE221 (HP)
-Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
-
-Course: CSE321
-Prerequisite: CSE221 (HP)
-Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
-
-Course: CSE220
-Prerequisite: CSE111 (HP),CSE230 (HP)
-Full Prerequisite Chain: CSE230-CSE111-CSE110",The full prerequisite chain for CSE220 is CSE230-CSE111-CSE110.,entity_heavy,rrf,0.9,False,False,False,True,False,True,False,,,0.0248,0.0000,5.3364,5.3612,2026-07-31T17:13:19.683508+00:00,100.0001,100.0167
-Q127-p2,adaptive_novel,What's the complete chain of prerequisites I'd need before taking CSE220?,The full prerequisite chain for CSE220 is CSE111-CSE230-CSE110.,"Verified prerequisite chain for CSE220 (nearest prerequisite first, from the Prerequisites knowledge base): CSE111-CSE230-CSE110.
-
-Course: CSE221
-Prerequisite: CSE220 (HP)
-Full Prerequisite Chain: CSE220-CSE111-CSE110
-
-Course: CSE331
-Prerequisite: CSE221 (HP)
-Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
-
-Course: CSE370
-Prerequisite: CSE221 (HP)
-Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
-
-Course: CSE321
-Prerequisite: CSE221 (HP)
-Full Prerequisite Chain: CSE221-CSE220-CSE111-CSE110
-
-Course: CSE220
-Prerequisite: CSE111 (HP),CSE230 (HP)
-Full Prerequisite Chain: CSE230-CSE111-CSE110",The full prerequisite chain for CSE220 is CSE230-CSE111-CSE110.,entity_heavy,rrf,0.9,False,False,False,True,False,True,False,,,0.0258,0.0000,5.3765,5.4023,2026-07-31T17:13:25.086161+00:00,100.0001,100.0167
-Q179-orig,adaptive_novel,Who teaches the lab section of CSE420-13?,"The lab section of CSE420-13 is taught by SUE,NFMK.","Course: CSE420-13
-Theory Initial: LRK
-Theory Day: SUN+TUE
-Theory Time: 11:00 AM
-Theory Room: 10C-21C
-Lab Faculty: SUE,NFMK
-Lab Day: WED
-Lab Time: 8:00 AM
-Lab Room: 12F-32L
-
-Initial: NFMK
-Name: Md. Saif Mokarrom
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 9:30 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE330-10 (LAB) NFMK,NARC 09F-26L; 3:30 PM - CSE330-10 (LAB) NFMK,NARC 09F-26L; 5:00 PM - Consultation
-
-Initial: RFR
-Name: Md. Rifat Rahman
-Day: Tuesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE331-13 07F-22C; 9:30 AM - CSE331-14 07F-22C; 11:00 AM - CSE420-11 (LAB) RKBR,RFR 12F-32L,CSE420-12 (LAB) RKBR,RFR 12F-32L; 12:30 PM - CSE420-11 (LAB) RKBR,RFR 12F-32L,CSE420-12 (LAB) RKBR,RFR 12F-32L
-
-Initial: RFR
-Name: Md. Rifat Rahman
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE331-13 07F-22C; 9:30 AM - CSE331-14 07F-22C; 11:00 AM - CSE420-18 (LAB) RDS,RFR 12F-32L,CSE420-19 (LAB) RDS,RFR 12F-32L; 12:30 PM - CSE420-18 (LAB) RDS,RFR 12F-32L,CSE420-19 (LAB) RDS,RFR 12F-32L
-
-Initial: SUE
-Name: Sukarna Sarker
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 9:30 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 11:00 AM - Consultation","The lab section of CSE420-13 is taught by Sukarna Sarker and Md. Saif Mokarrom, who are listed as Lab Faculty for this course.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0231,0.0000,7.4093,7.4324,2026-07-31T17:13:32.519209+00:00,100.0017,100.0167
-Q179-p1,adaptive_novel,Can you tell me who's in charge of the CSE420-13 lab section?,"The lab section of CSE420-13 is taught by SUE,NFMK.","Course: CSE420-13
-Theory Initial: LRK
-Theory Day: SUN+TUE
-Theory Time: 11:00 AM
-Theory Room: 10C-21C
-Lab Faculty: SUE,NFMK
-Lab Day: WED
-Lab Time: 8:00 AM
-Lab Room: 12F-32L
-
-Question: Can you tell me about the people in charge at BRAC University - who are they and how big is the team?
-Answer: The Board of Trustees is BRAC University's highest policy-making body and has 12 members, one of whom is the Vice-Chancellor.
-
-Initial: NFMK
-Name: Md. Saif Mokarrom
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 9:30 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE330-10 (LAB) NFMK,NARC 09F-26L; 3:30 PM - CSE330-10 (LAB) NFMK,NARC 09F-26L; 5:00 PM - Consultation
-
-Initial: SUE
-Name: Sukarna Sarker
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 9:30 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 11:00 AM - Consultation
-
-Question: Can you tell me about the people who are in charge at Brac University and roughly how many there are?
-Answer: The Board of Trustees is BRAC University's highest policy-making body and has 12 members, one of whom is the Vice-Chancellor.",The Lab Faculty for the CSE420-13 lab section are SUE and NFMK.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0265,0.0000,5.0622,5.0892,2026-07-31T17:13:37.608384+00:00,99.9960,100.0167
-Q179-p2,adaptive_novel,I want to know the instructor for CSE420-13's lab.,"The lab section of CSE420-13 is taught by SUE,NFMK.","Course: CSE420-13
-Theory Initial: LRK
-Theory Day: SUN+TUE
-Theory Time: 11:00 AM
-Theory Room: 10C-21C
-Lab Faculty: SUE,NFMK
-Lab Day: WED
-Lab Time: 8:00 AM
-Lab Room: 12F-32L
-
-Initial: NFMK
-Name: Md. Saif Mokarrom
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 9:30 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE330-10 (LAB) NFMK,NARC 09F-26L; 3:30 PM - CSE330-10 (LAB) NFMK,NARC 09F-26L; 5:00 PM - Consultation
-
-Initial: RFR
-Name: Md. Rifat Rahman
-Day: Tuesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE331-13 07F-22C; 9:30 AM - CSE331-14 07F-22C; 11:00 AM - CSE420-11 (LAB) RKBR,RFR 12F-32L,CSE420-12 (LAB) RKBR,RFR 12F-32L; 12:30 PM - CSE420-11 (LAB) RKBR,RFR 12F-32L,CSE420-12 (LAB) RKBR,RFR 12F-32L
-
-Initial: RFR
-Name: Md. Rifat Rahman
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE331-13 07F-22C; 9:30 AM - CSE331-14 07F-22C; 11:00 AM - CSE420-18 (LAB) RDS,RFR 12F-32L,CSE420-19 (LAB) RDS,RFR 12F-32L; 12:30 PM - CSE420-18 (LAB) RDS,RFR 12F-32L,CSE420-19 (LAB) RDS,RFR 12F-32L
-
-Initial: SUE
-Name: Sukarna Sarker
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 9:30 AM - CSE420-10 (LAB) SUE,NFMK 12F-32L,CSE420-13 (LAB) SUE,NFMK 12F-32L; 11:00 AM - Consultation",The instructors for CSE420-13's lab are SUE and NFMK.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0222,0.0000,5.5192,5.5415,2026-07-31T17:13:43.150549+00:00,100.0017,100.0167
-Q192-orig,adaptive_novel,What is FYS's designation?,Dr. Farig Yousuf Sadeque (FYS) is a Associate Professor.,"Initial: FYS
-Name: Dr. Farig Yousuf Sadeque
-Designation: Associate Professor
-Status: Full Time
-Room: 4G29
-Email: farig.sadeque@bracu.ac.bd
-
-Course: CSE751-01
-Theory Initial: FYS
-Theory Day: TUE+TUE
-Theory Time: 6:00 PM+7:30 PM
-Theory Room: 08F-18C
-
-Course: CSE440-01
-Theory Initial: FYS
-Theory Day: SUN+TUE
-Theory Time: 2:00 PM
-Theory Room: 09C-16T
-Lab Faculty: NLH,AYO
-Lab Day: MON
-Lab Time: 11:00 AM
-Lab Room: 12B-18L
-
-Initial: FYS
-Name: Dr. Farig Yousuf Sadeque
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 2:00 PM - CSE440-01 09C-16T
-
-Course: CSE440
-First Theory Coordinator: FYS
-Theory Coordinator Email: farig.sadeque@bracu.ac.bd",FYS's designation is Associate Professor.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0185,0.0000,3.7408,3.7593,2026-07-31T17:13:46.910200+00:00,100.0002,100.0150
-Q192-p1,adaptive_novel,Could you tell me FYS's job title?,Dr. Farig Yousuf Sadeque (FYS) is a Associate Professor.,"Initial: FYS
-Name: Dr. Farig Yousuf Sadeque
-Designation: Associate Professor
-Status: Full Time
-Room: 4G29
-Email: farig.sadeque@bracu.ac.bd
-
-Question: What is the deadline to change the thesis title before the final defense?
-Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
-
-Question (Banglish): Final defense er age thesis title change korar deadline ta kobe?
-Answer (English): The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
-
-Question (Banglish): BRAC e OCSAR-er own job portal ache ki?
-Answer (English): Yes, OCSAR runs its own online job portal where students can create profiles and apply directly to internship and job postings from partner employers.
-
-Question: Can you tell me what the deadline to change the thesis title before the final defense is?
-Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.",Dr. Farig Yousuf Sadeque's designation is Associate Professor.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0212,0.0000,4.3859,4.4075,2026-07-31T17:13:51.318245+00:00,99.9953,100.0150
-Q192-p2,adaptive_novel,What position does FYS hold?,Dr. Farig Yousuf Sadeque (FYS) is a Associate Professor.,"Initial: FYS
-Name: Dr. Farig Yousuf Sadeque
-Designation: Associate Professor
-Status: Full Time
-Room: 4G29
-Email: farig.sadeque@bracu.ac.bd
-
-Question: Hey, what other rules govern club Executive Committee elections, membership, and terms?
-Answer: Every club must include at least one female Executive Committee member, or the panel won't be approved. A student can only hold an Executive Committee position in one club/forum at a time (though they may be a general member of up to two). Students in their last two semesters are advised not to take on new Executive Committee roles. Elections/selection happen annually in the Fall semester (September-November), and the final panel must be approved by the club's advisor and OCA before being announced publicly.
-
-Question (Banglish): BRAC e academic hold keno deya hoy?
-Answer (English): An academic hold may be placed for reasons such as incomplete academic requirements, pending approvals, or other academic issues that require attention before a student can access certain university services.
-
-Question: I wanted to ask, what other rules govern club Executive Committee elections, membership, and terms?
-Answer: Every club must include at least one female Executive Committee member, or the panel won't be approved. A student can only hold an Executive Committee position in one club/forum at a time (though they may be a general member of up to two). Students in their last two semesters are advised not to take on new Executive Committee roles. Elections/selection happen annually in the Fall semester (September-November), and the final panel must be approved by the club's advisor and OCA before being announced publicly.
-
-Question: What other rules govern club Executive Committee elections, membership, and terms?
-Answer: Every club must include at least one female Executive Committee member, or the panel won't be approved. A student can only hold an Executive Committee position in one club/forum at a time (though they may be a general member of up to two). Students in their last two semesters are advised not to take on new Executive Committee roles. Elections/selection happen annually in the Fall semester (September-November), and the final panel must be approved by the club's advisor and OCA before being announced publicly.",FYS holds the position of Associate Professor.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0186,0.0000,3.9014,3.9203,2026-07-31T17:13:55.238693+00:00,99.9986,100.0150
-Q150-orig,adaptive_novel,What is the coordinator email for CSE430?,The coordinator email for CSE430 is ehtashamul.haque@bracu.ac.bd.,"Course: CSE430
-First Theory Coordinator: EHQ
-Theory Coordinator Email: ehtashamul.haque@bracu.ac.bd
-First Lab Coordinator: TAV
-Lab Coordinator Email: tarvir.anjum@bracu.ac.bd
-
-Course: CSE474
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd
-
-Course: CSE370
-First Theory Coordinator: FEK
-Theory Coordinator Email: farden.khan@bracu.ac.bd
-First Lab Coordinator: FEK
-Lab Coordinator Email: farden.khan@bracu.ac.bd
-
-Course: CSE310
-First Theory Coordinator: ADR
-Theory Coordinator Email: abdur.rahman@bracu.ac.bd
-First Lab Coordinator: ADR
-Lab Coordinator Email: abdur.rahman@bracu.ac.bd
-
-Course: CSE424
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd",The theory coordinator email for CSE430 is ehtashamul.haque@bracu.ac.bd.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0219,0.0000,5.1371,5.1590,2026-07-31T17:14:00.398375+00:00,100.0019,100.0167
-Q150-p1,adaptive_novel,What's the email of the person coordinating CSE430?,The coordinator email for CSE430 is ehtashamul.haque@bracu.ac.bd.,"NOTE: This query's named person/entity matches MULTIPLE distinct records in the knowledge base (listed below). Do not silently pick one. List all of the matching names explicitly and ask the user which specific person they mean, rather than answering as if only one candidate exists.
-
-Question: How can I contact with my advisor during advising?
-Answer: You should contact your advisor in his desired channel for advising. You can use wait queue to connect in voice with him. Then he/she will bring you in the main channel or will join you win the wait queue. It is not the right thing to Direct message him or email him. Because it is not in the procedure of advising. During on campus advising, you can easily meet him in person whenever he/she is in his office.
-
-Question: I looked around the site but couldn't find it — how can a student file a complaint with the Office of the Proctor?
-Answer: Students can lodge a complaint online through a form on the BRACU website, call the office's hotline, email proctor@bracu.ac.bd, or visit the office in person to file a complaint directly.
-
-Question: What steps do I need to follow to contact with my advisor during advising?
-Answer: You should contact your advisor in his desired channel for advising. You can use wait queue to connect in voice with him. Then he/she will bring you in the main channel or will join you win the wait queue. It is not the right thing to Direct message him or email him. Because it is not in the procedure of advising. During on campus advising, you can easily meet him in person whenever he/she is in his office.
-
-Question: This might be a silly question, but how can a student file a complaint with the Office of the Proctor?
-Answer: Students can lodge a complaint online through a form on the BRACU website, call the office's hotline, email proctor@bracu.ac.bd, or visit the office in person to file a complaint directly.
-
-Question: How can a student file a complaint with the Office of the Proctor?
-Answer: Students can lodge a complaint online through a form on the BRACU website, call the office's hotline, email proctor@bracu.ac.bd, or visit the office in person to file a complaint directly.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,entity_heavy,rrf,0.9,True,True,False,False,False,False,False,,,0.0215,0.0000,0.0000,0.0222,2026-07-31T17:14:00.416215+00:00,0.0000,0.0185
-Q150-p2,adaptive_novel,How can I email the CSE430 coordinator?,The coordinator email for CSE430 is ehtashamul.haque@bracu.ac.bd.,"Course: CSE430
-First Theory Coordinator: EHQ
-Theory Coordinator Email: ehtashamul.haque@bracu.ac.bd
-First Lab Coordinator: TAV
-Lab Coordinator Email: tarvir.anjum@bracu.ac.bd
-
-Course: CSE474
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd
-
-Course: CSE370
-First Theory Coordinator: FEK
-Theory Coordinator Email: farden.khan@bracu.ac.bd
-First Lab Coordinator: FEK
-Lab Coordinator Email: farden.khan@bracu.ac.bd
-
-Course: CSE310
-First Theory Coordinator: ADR
-Theory Coordinator Email: abdur.rahman@bracu.ac.bd
-First Lab Coordinator: ADR
-Lab Coordinator Email: abdur.rahman@bracu.ac.bd
-
-Course: CSE424
-First Theory Coordinator: AAR
-Theory Coordinator Email: annajiat@bracu.ac.bd
-First Lab Coordinator: AAR
-Lab Coordinator Email: annajiat@bracu.ac.bd","You can email the CSE430 Theory Coordinator, EHQ, at ehtashamul.haque@bracu.ac.bd.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0168,0.0000,6.1437,6.1605,2026-07-31T17:14:06.581955+00:00,100.0019,100.0167
-Q116-orig,adaptive_novel,What are the prerequisites for CSE360?,The prerequisite for CSE360 is CSE341 (HP).,"Course: CSE360
-Prerequisite: CSE341 (HP)
-Full Prerequisite Chain: CSE341
-
-Question: Curious about something: what prerequisites must be completed before the thesis defense?
-Answer: Pre-Thesis I and Pre-Thesis II.
-
-Initial: IRZA
-Name: Md. Irtiza Hossain
-Day: Tuesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE360-07 (LAB) FIC,IRZA 12B-19L,CSE360-08 (LAB) FIC,IRZA 12B-19L; 9:30 AM - CSE360-07 (LAB) FIC,IRZA 12B-19L,CSE360-08 (LAB) FIC,IRZA 12B-19L; 11:00 AM - CSE360-01 (LAB) SMYA,IRZA 12B-19L,CSE360-06 (LAB) SMYA,IRZA 12B-19L; 12:30 PM - CSE360-01 (LAB) SMYA,IRZA 12B-19L,CSE360-06 (LAB) SMYA,IRZA 12B-19L; 2:00 PM - Consultation
-
-Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
-Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
-
-Question: What prerequisites must be completed before the thesis defense?
-Answer: Pre-Thesis I and Pre-Thesis II.",The prerequisite for CSE360 is CSE341 (with a High Pass).,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0178,0.0000,4.5910,4.6092,2026-07-31T17:14:11.191228+00:00,99.9953,100.0167
-Q116-p1,adaptive_novel,What do I need to have completed before taking CSE360?,The prerequisite for CSE360 is CSE341 (HP).,"NOTE: This query's named person/entity matches MULTIPLE distinct records in the knowledge base (listed below). Do not silently pick one. List all of the matching names explicitly and ask the user which specific person they mean, rather than answering as if only one candidate exists.
-
-Question: What is the minimum credit requirement to start a thesis/project/internship?
-Answer: Students need a minimum of 75 completed credits to start a thesis, project, or internship.
-
-Course: CSE360
-Prerequisite: CSE341 (HP)
-Full Prerequisite Chain: CSE341
-
-Course: CSE360
-First Theory Coordinator: UJT
-Theory Coordinator Email: jannat.taposhi@bracu.ac.bd
-First Lab Coordinator: UJT
-Second Lab Coordinator: RDW
-Lab Coordinator Email: jannat.taposhi@bracu.ac.bd,redowanul.akbar@bracu.ac.bd
-
-Question (Banglish): Thesis/project/internship shuru korte minimum credit koto lagbe?
-Answer (English): Students need a minimum of 75 completed credits to start a thesis, project, or internship.
-
-Question: Can you tell me what the minimum credit requirement to start a thesis/project/internship is?
-Answer: Students need a minimum of 75 completed credits to start a thesis, project, or internship.",You need to have completed CSE341 (HP) before taking CSE360.,entity_heavy,rrf,0.9,False,True,True,False,False,True,False,,,0.0192,0.0000,4.5520,4.5716,2026-07-31T17:14:15.763354+00:00,0.0004,0.0202
-Q116-p2,adaptive_novel,Which courses are required before enrolling in CSE360?,The prerequisite for CSE360 is CSE341 (HP).,"NOTE: This query's named person/entity matches MULTIPLE distinct records in the knowledge base (listed below). Do not silently pick one. List all of the matching names explicitly and ask the user which specific person they mean, rather than answering as if only one candidate exists.
-
-Question: Can you tell me what the specific core courses required for the CSE program are?
-Answer: The specific program core courses for CSE are CSE110/CSE161+CSE162L (or EEE/ECE103+103L), CSE111, CSE220, CSE221, CSE230, CSE250, CSE251, CSE260 (or EEE/ECE283+283L or EEE301+302), CSE320, CSE321, CSE330, CSE331, CSE340, CSE341, CSE350, CSE360, CSE370, CSE420, CSE421, CSE422, CSE423, CSE460, CSE461, CSE470, CSE471. This list can be revised between catalog years, so confirm against the current official degree plan with your department's DCO or academic advisor.
-
-Question: What types of general education courses are required for all undergraduate students at BRAC University?
-Answer: Here is the list of all gen ed courses you can take to complete your credit:
-https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
-
-Question: Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?
-Answer: Here is the list of all gen ed courses you can take to complete your credit:
-https://www.bracu.ac.bd/academics/institutes-and-schools/school-general-education/streams-and-courses. But all the courses won't be available at every semester so please check USIS to make sure your prefered courses are available or not.
-
-Question: Are there any non-credit courses required for the CSE program?
-Answer: There are 2 non-credit courses that are assigned to prepare students for upcoming credit courses. These courses are assigned if the student's performance was not satisfactory during the admission test. The non-credit courses are: ENG 091: Foundation Course in English and MAT 092: Remedial Course in Mathematics.
-
-Question: What are the specific core courses required for the CSE program?
-Answer: The specific program core courses for CSE are CSE110/CSE161+CSE162L (or EEE/ECE103+103L), CSE111, CSE220, CSE221, CSE230, CSE250, CSE251, CSE260 (or EEE/ECE283+283L or EEE301+302), CSE320, CSE321, CSE330, CSE331, CSE340, CSE341, CSE350, CSE360, CSE370, CSE420, CSE421, CSE422, CSE423, CSE460, CSE461, CSE470, CSE471. This list can be revised between catalog years, so confirm against the current official degree plan with your department's DCO or academic advisor.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,entity_heavy,rrf,0.9,True,True,False,False,False,False,False,,,0.0223,0.0000,0.0000,0.0232,2026-07-31T17:14:15.787141+00:00,0.0010,0.0271
-Q194-orig,adaptive_novel,What is MVH's designation?,Mohammad Naveed Hossain (MVH) is a Lecturer.,"Initial: MVH
-Name: Mohammad Naveed Hossain
-Designation: Lecturer
-Status: Full Time
-Room: 4M113
-Email: mohammad.naveed@bracu.ac.bd
-
-Initial: MVH
-Name: Mohammad Naveed Hossain
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 9:30 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE110-13 (LAB) MVH,AAF 09B-08L; 3:30 PM - CSE110-13 (LAB) MVH,AAF 09B-08L
-
-Initial: SMUR
-Name: Samiur Rahman
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE423-22 (LAB) SMUR,MVH 12D-27L,CSE423-23 (LAB) SMUR,MVH 12D-27L; 12:30 PM - CSE423-22 (LAB) SMUR,MVH 12D-27L,CSE423-23 (LAB) SMUR,MVH 12D-27L; 2:00 PM - Consultation; 3:30 PM - CSE321-23 09H-33C
-
-Initial: MVH
-Name: Mohammad Naveed Hossain
-Day: Saturday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-14 07H-26C; 9:30 AM - CSE423-17 07H-26C; 11:00 AM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 12:30 PM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 2:00 PM - Consultation
-
-Initial: MVH
-Name: Mohammad Naveed Hossain
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE423-22 (LAB) SMUR,MVH 12D-27L,CSE423-23 (LAB) SMUR,MVH 12D-27L; 12:30 PM - CSE423-22 (LAB) SMUR,MVH 12D-27L,CSE423-23 (LAB) SMUR,MVH 12D-27L; 2:00 PM - Consultation; 3:30 PM - Consultation",MVH's designation is Lecturer.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0171,0.0000,4.2603,4.2775,2026-07-31T17:14:20.065253+00:00,100.0002,100.0150
-Q194-p1,adaptive_novel,What is MVH's title at the university?,Mohammad Naveed Hossain (MVH) is a Lecturer.,"Initial: MVH
-Name: Mohammad Naveed Hossain
-Designation: Lecturer
-Status: Full Time
-Room: 4M113
-Email: mohammad.naveed@bracu.ac.bd
-
-Question: Can you tell me what the deadline to change the thesis title before the final defense is?
-Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
-
-Question: My thesis defense got postponed due to a cyclone, and separately I want to change my thesis title before the (new) defense date. Are both of these OK?
-Answer: Both are handled, but through different mechanisms - a defense postponed for an external/valid reason like a cyclone is simply rescheduled, no penalty. Changing your thesis title before the (rescheduled) final defense is also possible, but the deadline for that varies by semester, so you'd want to check the current thesis deadline sheet to make sure your title-change request still falls within whatever window applies to your now-rescheduled defense date.
-
-Question (Banglish): Final defense er age thesis title change korar deadline ta kobe?
-Answer (English): The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
-
-Question: What is the deadline to change the thesis title before the final defense?
-Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.",MVH's designation at the university is Lecturer.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0188,0.0000,4.0687,4.0882,2026-07-31T17:14:24.153877+00:00,99.9945,100.0150
-Q194-p2,adaptive_novel,Can you tell me MVH's designation?,Mohammad Naveed Hossain (MVH) is a Lecturer.,"Initial: MVH
-Name: Mohammad Naveed Hossain
-Designation: Lecturer
-Status: Full Time
-Room: 4M113
-Email: mohammad.naveed@bracu.ac.bd
-
-Initial: MVH
-Name: Mohammad Naveed Hossain
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 9:30 AM - CSE110-09 (LAB) MVH,FZN 09B-09L; 11:00 AM - Consultation; 12:30 PM - Consultation; 2:00 PM - CSE110-13 (LAB) MVH,AAF 09B-08L; 3:30 PM - CSE110-13 (LAB) MVH,AAF 09B-08L
-
-Initial: SMUR
-Name: Samiur Rahman
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE423-22 (LAB) SMUR,MVH 12D-27L,CSE423-23 (LAB) SMUR,MVH 12D-27L; 12:30 PM - CSE423-22 (LAB) SMUR,MVH 12D-27L,CSE423-23 (LAB) SMUR,MVH 12D-27L; 2:00 PM - Consultation; 3:30 PM - CSE321-23 09H-33C
-
-Initial: MVH
-Name: Mohammad Naveed Hossain
-Day: Saturday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE110-14 07H-26C; 9:30 AM - CSE423-17 07H-26C; 11:00 AM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 12:30 PM - CSE423-03 (LAB) MVH,FDZ 12D-27L,CSE423-04 (LAB) MVH,FDZ 12D-27L; 2:00 PM - Consultation
-
-Initial: MVH
-Name: Mohammad Naveed Hossain
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE423-22 (LAB) SMUR,MVH 12D-27L,CSE423-23 (LAB) SMUR,MVH 12D-27L; 12:30 PM - CSE423-22 (LAB) SMUR,MVH 12D-27L,CSE423-23 (LAB) SMUR,MVH 12D-27L; 2:00 PM - Consultation; 3:30 PM - Consultation",MVH is a Lecturer.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0180,0.0000,4.0551,4.0732,2026-07-31T17:14:28.227391+00:00,100.0002,100.0150
-Q172-orig,adaptive_novel,Who teaches the lab section of CSE350-06B?,"The lab section of CSE350-06B is taught by RAO,SHJR.","Course: CSE350-06B
-Theory Initial: ZBH
-Theory Day: SUN+TUE
-Theory Time: 2:00 PM
-Theory Room: 09A-07C
-Lab Faculty: RAO,SHJR
-Lab Day: WED
-Lab Time: 11:00 AM
-Lab Room: FT10-02L
-
-Question: Random question, how to get an extra seat in a particular course durning main advising?
-Answer: Request the section's faculty. If he agrees then he will do the other procedures for your desired section. But you need to have a maximum of 9 credits and also if there is vacany in the other sections and the section is not clashing with the courses of the routine. Your request will be rejected. Extra Seat Request Policy [CSE]:
-• The section faculty has the right to deny any extra seat request in their section.
-• If a student already is in another section of the same course, the request will be denied. The student may apply for lab change when the form is circulated if they have a clash that is not solveable..
-If a student doesn't have the course at all and there are other sections with empty seats, then again the request will be denied. They might be added to an available section (depending on seat availability) without any notice from our side.
-• If a student has 4 courses or more then again the request will be denied.
-• No extra seat for hardware courses (CSE250,CSE251, CSE260, CSE350).
-• A faculty may request max 2 extra seats for a lab based course and theory based course. If the seat status is already -2 in connect, the request will be denied.
-Only when there is no suitable section for the student, the student maybe granted an extra seat.
-
-Initial: AQT
-Name: Aniqa Tabassum
-Day: Monday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE251-06A 07H-27C,CSE251-06B 07H-27C; 9:30 AM - Consultation; 11:00 AM - CSE350-03A (LAB) AQT,UPM FT10-01L; 12:30 PM - CSE350-03A (LAB) AQT,UPM FT10-01L
-
-Initial: ZBH
-Name: Md Zayed Bin Zahir Arju
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE350-09B (LAB) ZBH,RAS FT10-02L; 12:30 PM - CSE350-09B (LAB) ZBH,RAS FT10-02L; 2:00 PM - CSE350-06A 09A-07C,CSE350-06B 09A-07C; 3:30 PM - Consultation
-
-Question: How to get an extra seat in a particular course durning main advising?
-Answer: Request the section's faculty. If he agrees then he will do the other procedures for your desired section. But you need to have a maximum of 9 credits and also if there is vacany in the other sections and the section is not clashing with the courses of the routine. Your request will be rejected. Extra Seat Request Policy [CSE]:
-• The section faculty has the right to deny any extra seat request in their section.
-• If a student already is in another section of the same course, the request will be denied. The student may apply for lab change when the form is circulated if they have a clash that is not solveable..
-If a student doesn't have the course at all and there are other sections with empty seats, then again the request will be denied. They might be added to an available section (depending on seat availability) without any notice from our side.
-• If a student has 4 courses or more then again the request will be denied.
-• No extra seat for hardware courses (CSE250,CSE251, CSE260, CSE350).
-• A faculty may request max 2 extra seats for a lab based course and theory based course. If the seat status is already -2 in connect, the request will be denied.
-Only when there is no suitable section for the student, the student maybe granted an extra seat.",The lab faculty for CSE350-06B are RAO and SHJR.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0203,0.0000,5.4469,5.4676,2026-07-31T17:14:33.695463+00:00,100.0002,100.0167
-Q172-p1,adaptive_novel,Who's the instructor for the CSE350-06B lab?,"The lab section of CSE350-06B is taught by RAO,SHJR.","Course: CSE350-06B
-Theory Initial: ZBH
-Theory Day: SUN+TUE
-Theory Time: 2:00 PM
-Theory Room: 09A-07C
-Lab Faculty: RAO,SHJR
-Lab Day: WED
-Lab Time: 11:00 AM
-Lab Room: FT10-02L
-
-Initial: ZBH
-Name: Md Zayed Bin Zahir Arju
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE350-09B (LAB) ZBH,RAS FT10-02L; 12:30 PM - CSE350-09B (LAB) ZBH,RAS FT10-02L; 2:00 PM - CSE350-06A 09A-07C,CSE350-06B 09A-07C; 3:30 PM - Consultation
-
-Initial: AQT
-Name: Aniqa Tabassum
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE251-06A 07H-27C,CSE251-06B 07H-27C; 9:30 AM - Consultation; 11:00 AM - CSE350-06A (LAB) TSE,AQT FT10-01L; 12:30 PM - CSE350-06A (LAB) TSE,AQT FT10-01L
-
-Initial: AQT
-Name: Aniqa Tabassum
-Day: Monday
-Scheduled commitments (classes/labs/breaks, not availability): 8:00 AM - CSE251-06A 07H-27C,CSE251-06B 07H-27C; 9:30 AM - Consultation; 11:00 AM - CSE350-03A (LAB) AQT,UPM FT10-01L; 12:30 PM - CSE350-03A (LAB) AQT,UPM FT10-01L
-
-Question (Banglish): BRAC e lab class miss korle makeup lab deya hoy?
-Answer (English): Makeup laboratory sessions depend on the course policy and the instructor's decision. Students should contact the course instructor as soon as possible if they miss a lab session.","The instructors for the CSE350-06B lab are RAO,SHJR.",entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0204,0.0000,4.8439,4.8644,2026-07-31T17:14:38.560709+00:00,99.9989,100.0166
-Q172-p2,adaptive_novel,I need to know who teaches CSE350-06B's lab section.,"The lab section of CSE350-06B is taught by RAO,SHJR.","Course: CSE350-06B
-Theory Initial: ZBH
-Theory Day: SUN+TUE
-Theory Time: 2:00 PM
-Theory Room: 09A-07C
-Lab Faculty: RAO,SHJR
-Lab Day: WED
-Lab Time: 11:00 AM
-Lab Room: FT10-02L
-
-Question: Random question, how to get an extra seat in a particular course durning main advising?
-Answer: Request the section's faculty. If he agrees then he will do the other procedures for your desired section. But you need to have a maximum of 9 credits and also if there is vacany in the other sections and the section is not clashing with the courses of the routine. Your request will be rejected. Extra Seat Request Policy [CSE]:
-• The section faculty has the right to deny any extra seat request in their section.
-• If a student already is in another section of the same course, the request will be denied. The student may apply for lab change when the form is circulated if they have a clash that is not solveable..
-If a student doesn't have the course at all and there are other sections with empty seats, then again the request will be denied. They might be added to an available section (depending on seat availability) without any notice from our side.
-• If a student has 4 courses or more then again the request will be denied.
-• No extra seat for hardware courses (CSE250,CSE251, CSE260, CSE350).
-• A faculty may request max 2 extra seats for a lab based course and theory based course. If the seat status is already -2 in connect, the request will be denied.
-Only when there is no suitable section for the student, the student maybe granted an extra seat.
-
-Initial: ZBH
-Name: Md Zayed Bin Zahir Arju
-Day: Sunday
-Scheduled commitments (classes/labs/breaks, not availability): 11:00 AM - CSE350-09B (LAB) ZBH,RAS FT10-02L; 12:30 PM - CSE350-09B (LAB) ZBH,RAS FT10-02L; 2:00 PM - CSE350-06A 09A-07C,CSE350-06B 09A-07C; 3:30 PM - Consultation
-
-Question (Banglish): Main advising er shomoy kono course e extra seat kivabe pabo?
-Answer (English): Request the section's faculty. If he agrees then he will do the other procedures for your desired section. But you need to have a maximum of 9 credits and also if there is vacany in the other sections and the section is not clashing with the courses of the routine. Your request will be rejected. Extra Seat Request Policy [CSE]:
-• The section faculty has the right to deny any extra seat request in their section.
-• If a student already is in another section of the same course, the request will be denied. The student may apply for lab change when the form is circulated if they have a clash that is not solveable..
-If a student doesn't have the course at all and there are other sections with empty seats, then again the request will be denied. They might be added to an available section (depending on seat availability) without any notice from our side.
-• If a student has 4 courses or more then again the request will be denied.
-• No extra seat for hardware courses (CSE250,CSE251, CSE260, CSE350).
-• A faculty may request max 2 extra seats for a lab based course and theory based course. If the seat status is already -2 in connect, the request will be denied.
-Only when there is no suitable section for the student, the student maybe granted an extra seat.
-
-Question: How to get an extra seat in a particular course durning main advising?
-Answer: Request the section's faculty. If he agrees then he will do the other procedures for your desired section. But you need to have a maximum of 9 credits and also if there is vacany in the other sections and the section is not clashing with the courses of the routine. Your request will be rejected. Extra Seat Request Policy [CSE]:
-• The section faculty has the right to deny any extra seat request in their section.
-• If a student already is in another section of the same course, the request will be denied. The student may apply for lab change when the form is circulated if they have a clash that is not solveable..
-If a student doesn't have the course at all and there are other sections with empty seats, then again the request will be denied. They might be added to an available section (depending on seat availability) without any notice from our side.
-• If a student has 4 courses or more then again the request will be denied.
-• No extra seat for hardware courses (CSE250,CSE251, CSE260, CSE350).
-• A faculty may request max 2 extra seats for a lab based course and theory based course. If the seat status is already -2 in connect, the request will be denied.
-Only when there is no suitable section for the student, the student maybe granted an extra seat.",The lab faculty for CSE350-06B are RAO and SHJR.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0269,0.0000,5.4062,5.4337,2026-07-31T17:14:43.994520+00:00,99.9997,100.0167
-Q187-orig,adaptive_novel,What is FEK's designation?,Farden Ehsan Khan (FEK) is a Lecturer.,"Initial: FEK
-Name: Farden Ehsan Khan
-Designation: Lecturer
-Status: Full Time
-Room: 4M117
-Email: farden.khan@bracu.ac.bd
-
-Course: CSE370
-First Theory Coordinator: FEK
-Theory Coordinator Email: farden.khan@bracu.ac.bd
-First Lab Coordinator: FEK
-Lab Coordinator Email: farden.khan@bracu.ac.bd
-
-Course: CSE370-05
-Theory Initial: FEK
-Theory Day: SUN+TUE
-Theory Time: 2:00 PM
-Theory Room: 09A-05C
-Lab Faculty: FEK,MRIA
-Lab Day: THU
-Lab Time: 2:00 PM
-Lab Room: 12F-30L
-
-Initial: FEK
-Name: Farden Ehsan Khan
-Day: Wednesday
-Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - CSE370-08 09D-17C; 11:00 AM - CSE111-05 (LAB) AFA,FEK 09B-10L; 12:30 PM - CSE111-05 (LAB) AFA,FEK 09B-10L; 2:00 PM - CSE370-06 08H-22C
-
-Initial: FEK
-Name: Farden Ehsan Khan
-Day: Thursday
-Scheduled commitments (classes/labs/breaks, not availability): 9:30 AM - Consultation By Appointment; 11:00 AM - CSE370-02 (LAB) FEK,MAU 12F-30L; 12:30 PM - CSE370-02 (LAB) FEK,MAU 12F-30L; 2:00 PM - CSE370-05 (LAB) FEK,MRIA 12F-30L; 3:30 PM - CSE370-05 (LAB) FEK,MRIA 12F-30L",FEK's designation is Lecturer.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0161,0.0000,3.9229,3.9391,2026-07-31T17:14:47.934227+00:00,100.0002,100.0150
-Q187-p1,adaptive_novel,What's FEK's official title?,Farden Ehsan Khan (FEK) is a Lecturer.,"Initial: FEK
-Name: Farden Ehsan Khan
-Designation: Lecturer
-Status: Full Time
-Room: 4M117
-Email: farden.khan@bracu.ac.bd
-
-Question: Can you tell me what the deadline to change the thesis title before the final defense is?
-Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
-
-Question (Banglish): Final defense er age thesis title change korar deadline ta kobe?
-Answer (English): The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.
-
-Question (Banglish): BRAC e official academic transcript-e Minor degree title separate printed mention thake?
-Answer (English): Yes, successfully completed minor programs are formally printed on the official academic transcript alongside the major degree.
-
-Question: What is the deadline to change the thesis title before the final defense?
-Answer: The deadline to change a thesis title before the final defense varies by semester - check the current semester's thesis deadline sheet for the exact date.",Farden Ehsan Khan is a Lecturer.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0208,0.0000,3.8634,3.8845,2026-07-31T17:14:51.819403+00:00,99.9947,100.0150
-Q187-p2,adaptive_novel,Could you let me know FEK's designation?,Farden Ehsan Khan (FEK) is a Lecturer.,"Initial: FEK
-Name: Farden Ehsan Khan
-Designation: Lecturer
-Status: Full Time
-Room: 4M117
-Email: farden.khan@bracu.ac.bd
-
-Question: When does it start?
-Answer: Could you clarify what you're asking about - a specific semester, an event, the Residential Semester? Happy to help once I know which one.
-
-Question: I looked around the site but couldn't find it — what's the deadline?
-Answer: I'd need a bit more detail - deadline for what specifically (course drop, scholarship application, admission, thesis submission)? Let me know and I can point you to the right one.
-
-Question: What's the deadline?
-Answer: I'd need a bit more detail - deadline for what specifically (course drop, scholarship application, admission, thesis submission)? Let me know and I can point you to the right one.
-
-Question: Do you know when does it start?
-Answer: Could you clarify what you're asking about - a specific semester, an event, the Residential Semester? Happy to help once I know which one.",FEK is a Lecturer.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0225,0.0000,3.4383,3.4612,2026-07-31T17:14:55.280934+00:00,99.9978,100.0150
-Q123-orig,adaptive_novel,What are the prerequisites for CSE430?,The prerequisite for CSE430 is MAT120 (HP).,"Course: CSE430
-Prerequisite: MAT120 (HP)
-Full Prerequisite Chain: MAT120-MAT110
-
-Question: What are the prerequisites for the Cse program?
-Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics
-
-Question: What prerequisites must be completed before the thesis defense?
-Answer: Pre-Thesis I and Pre-Thesis II.
-
-Question: Curious about something: what prerequisites must be completed before the thesis defense?
-Answer: Pre-Thesis I and Pre-Thesis II.
-
-Question: Can you tell me what the prerequisites for the Cse program are?
-Answer: Candidates applying for EEE, ECE, CSE, APE and Physics:HSC/ Equivalent(“B” grade in Physics & Mathematics),A-levels: “C” grade in Physics & Mathematics",The prerequisite for CSE430 is MAT120 (HP) with a full prerequisite chain of MAT120-MAT110.,entity_heavy,rrf,0.9,False,False,False,False,False,True,False,,,0.0161,0.0000,5.1231,5.1398,2026-07-31T17:15:00.420742+00:00,99.9925,100.0167
-Q123-p1,adaptive_novel,Which courses must I take before CSE430?,The prerequisite for CSE430 is MAT120 (HP).,"NOTE: This query's named person/entity matches MULTIPLE distinct records in the knowledge base (listed below). Do not silently pick one. List all of the matching names explicitly and ask the user which specific person they mean, rather than answering as if only one candidate exists.
-
-Question: How many courses can a final thesis/project/intern student take?
-Answer: A maximum of 3 courses in addition to the thesis/project (CSE 400).
-
-Question: What are the requirements to apply for Biotechnology/ Microbiology in Undergraduate level?
-Answer: Candidates for BSc in Biotechnology and Microbiology should have minimum C grade in Biology and Chemistry at HSC/ A-Levels/Equivalent. Candidates not having Mathematics at HSC or A-Levels must take a remedial course on Mathematics in addition to the courses required for the program.
-
-Question: Can you tell me what the requirements to apply for Biotechnology/ Microbiology in Undergraduate level are?
-Answer: Candidates for BSc in Biotechnology and Microbiology should have minimum C grade in Biology and Chemistry at HSC/ A-Levels/Equivalent. Candidates not having Mathematics at HSC or A-Levels must take a remedial course on Mathematics in addition to the courses required for the program.
-
-Question: Do you know how many courses can a final thesis/project/intern student take?
-Answer: A maximum of 3 courses in addition to the thesis/project (CSE 400).
-
-Question: Which courses to take next semester as I am from this department and I have done ….?
-Answer: Which specific courses you can take next depends on which courses you've already completed and your department's current offering plan for the semester - this is tracked in a department-maintained sheet that's updated each semester. Check with your academic advisor or your department's DCO for the current version and personalized guidance.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,entity_heavy,rrf,0.9,True,True,False,False,False,False,False,,,0.0217,0.0000,0.0000,0.0225,2026-07-31T17:15:00.443936+00:00,0.0040,0.0258
-Q123-p2,adaptive_novel,What do I need to complete first before taking CSE430?,The prerequisite for CSE430 is MAT120 (HP).,"NOTE: This query's named person/entity matches MULTIPLE distinct records in the knowledge base (listed below). Do not silently pick one. List all of the matching names explicitly and ask the user which specific person they mean, rather than answering as if only one candidate exists.
-
-Question: I wanted to ask, I am a student from English Medium, do I need to complete Bangla103 or BNG103 in Tarc?
-Answer: No, if you are a English Medium background student, then you can drop BNG103 for that you have to contact GENED office on 5th floor.
-
-Question: Am I required to need to submit degree completion form after completing all degree requirements?
-Answer: Yes, if you want to complete your degree then you have to complete all degree requirements.
-
-Question: Do I need to submit degree completion form after completing all degree requirements?
-Answer: Yes, if you want to complete your degree then you have to complete all degree requirements.
-
-Question (Banglish): BRAC e BIL (BRAC Institute of Languages) Foundation English course (ENG091) complete kora mandatory?
-Answer (English): Students who do not achieve the qualifying score in the English section of the admission test must successfully pass Foundation English (ENG091) before taking mainstream English courses.
-
-Question: I am a student from English Medium, do I need to complete Bangla103 or BNG103 in Tarc?
-Answer: No, if you are a English Medium background student, then you can drop BNG103 for that you have to contact GENED office on 5th floor.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,entity_heavy,rrf,0.9,True,True,False,False,False,False,False,,,0.0214,0.0000,0.0000,0.0222,2026-07-31T17:15:00.463663+00:00,0.0006,0.0196
-Q038-orig,adaptive_novel,Can students receive visitors while at the Savar campus?,"Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.","Question: Can students receive visitors while at the Savar campus?
-Answer: Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.
-
-Question: Sorry if this was already answered, but can students receive visitors while at the Savar campus?
-Answer: Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.
-
-Question (Banglish): BRAC Savar Residential Campus-e student dorm visitors common lounge hour timing ki?
-Answer (English): Approved visitors and family members are received in designated guest parlors during weekend visiting hours only.
-
-Question (Banglish): Savar campus e thakar shomoy student ra ki visitor receive korte pare?
-Answer (English): Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.
-
-Question: Are students allowed to receive visitors while at the Savar campus?
-Answer: Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.","Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.",open_ended,linear,0.5,False,True,True,False,False,False,True,,,0.0247,0.0000,6.3747,6.3997,2026-07-31T17:15:06.866300+00:00,0.0262,1.0244
-Q038-p1,adaptive_novel,Is it allowed for visitors to come see students at the Savar campus?,"Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.","Question: Are students allowed to receive visitors while at the Savar campus?
-Answer: Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.
-
-Question: Sorry if this was already answered, but can students receive visitors while at the Savar campus?
-Answer: Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.
-
-Question (Banglish): BRAC e visitor niye campus e dhuka jay?
-Answer (English): Visitors are allowed to enter the BRAC University campus subject to the university's security procedures and visitor access policies.
-
-Question (Banglish): Savar campus e thakar shomoy student ra ki visitor receive korte pare?
-Answer (English): Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.
-
-Question: Can students receive visitors while at the Savar campus?
-Answer: Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0274,0.0000,0.0000,0.0281,2026-07-31T17:15:06.893411+00:00,0.0455,0.9630
-Q038-p2,adaptive_novel,"If I'm staying at Savar, can I have guests visit me?","Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.","Question: Can students receive visitors while at the Savar campus?
-Answer: Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.
-
-Question: Sorry if this was already answered, but can students receive visitors while at the Savar campus?
-Answer: Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.
-
-Question (Banglish): BRAC e Savar Residential Campus-e student family visitor weekend room overnight stay allow kora hoy?
-Answer (English): No, external guests and family members are not allowed overnight stay inside student dormitories at the Residential Campus.
-
-Question (Banglish): Savar campus e thakar shomoy student ra ki visitor receive korte pare?
-Answer (English): Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.
-
-Question: Are students allowed to receive visitors while at the Savar campus?
-Answer: Only nominated visitors, usually parents, are allowed to visit on designated Parents' Days, which are announced each semester. Visiting hours are typically in the afternoon on specific Fridays.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0176,0.0000,0.0000,0.0182,2026-07-31T17:15:06.907333+00:00,0.0149,0.8060
-Q027-orig,adaptive_novel,What amenities and facilities are provided for students at TARC?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.","Question: What amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question: Quick question — what amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question (Banglish): TARC e student der ki ki amenities ar facility deya hoy?
-Answer (English): Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question: For a friend who's asking — what amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question: Curious about something: what amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.","Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates. Tarc also provides students the importance of time dynamics, punctuality, and basic manners like respecting others' work. Tarc also tries to make students do their own work by themselves.",open_ended,linear,0.5,False,False,False,False,False,False,True,,,0.0219,0.0000,8.9817,9.0038,2026-07-31T17:15:15.917204+00:00,0.0112,1.0480
-Q027-p1,adaptive_novel,What kind of facilities does TARC offer to students?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.","Question: What amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question: Curious about something: what amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question: Just wondering, are there any recreational facilities available at TARC?
-Answer: Recreational opportunities such as Football, Cricket, Badminton, Volleyball, Carrom, Chess, tabble tennis and cultural functions are available at TARC.
-
-Question: Quick question — what amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question: For a friend who's asking — what amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0208,0.0000,0.0000,0.0214,2026-07-31T17:15:15.939306+00:00,0.0013,0.9549
-Q027-p2,adaptive_novel,Could you describe what amenities are available for students at TARC?,"Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.","Question: What amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question: For a friend who's asking — what amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question (Banglish): TARC e student der ki ki amenities ar facility deya hoy?
-Answer (English): Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question: Quick question — what amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.
-
-Question: Curious about something: what amenities and facilities are provided for students at TARC?
-Answer: Tarc provides students of BRAC a residential campus where they experience to live with their fellow classmates.Tarc also provides students the importance of time dynamics ,punctuality and basic manners like to respect others work.Tarc also tries to make students do their own work by themselves.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0229,0.0000,0.0000,0.0241,2026-07-31T17:15:15.962861+00:00,0.0035,1.0015
-Q079-orig,adaptive_novel,What steps do I need to follow to access the Prayer Room for females?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),"Question: What steps do I need to follow to access the Prayer Room for females?
-Answer: The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
-
-Question: Where can I find the Prayer Room for females?
-Answer: In front of the indoor (Multipurpose Hall) and also on 6th floor(ZONE-H).
-
-Question: Where's the female prayer room?
-Answer: The female prayer room is located on the ground floor near reception and also another one on 6th floor.(ZONE-H).
-
-Question (Banglish): Female der Prayer Room ami kivabe access korbo?
-Answer (English): The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
-
-Question: How can I access the Prayer Room for females?
-Answer: The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)","The steps you need to follow to access the Prayer Room for females are not specified in the retrieved context, as it only provides locations where the Prayer Room is located.",open_ended,linear,0.5,False,False,False,False,False,False,True,,,0.0265,0.0000,6.0453,6.0719,2026-07-31T17:15:22.036282+00:00,0.2268,1.0849
-Q079-p1,adaptive_novel,How do I get access to the female Prayer Room?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),"Question: How can I access the Prayer Room for females?
-Answer: The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
-
-Question: What steps do I need to follow to access the Prayer Room for females?
-Answer: The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
-
-Question (Banglish): Female prayer room ta kothay?
-Answer (English): The female prayer room is located on the ground floor near reception and also another one on 6th floor.(ZONE-H).
-
-Question: Where's the female prayer room?
-Answer: The female prayer room is located on the ground floor near reception and also another one on 6th floor.(ZONE-H).
-
-Question (Banglish): Female der Prayer Room ami kivabe access korbo?
-Answer (English): The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0198,0.0000,0.0000,0.0202,2026-07-31T17:15:22.056581+00:00,0.0044,0.9158
-Q079-p2,adaptive_novel,What's the process for female students to use the Prayer Room?,The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H),"Question: Where's the female prayer room?
-Answer: The female prayer room is located on the ground floor near reception and also another one on 6th floor.(ZONE-H).
-
-Question (Banglish): Female der Prayer Room ami kivabe access korbo?
-Answer (English): The Prayer Room is located in front of the indoor Multipurpose Hall and on 6th floor(ZONE-H)
-
-Question (Banglish): BRAC Badda campus-e male ar female student-der jonno separate prayer room (Namaz room) facilities kothay?
-Answer (English): Dedicated, well-equipped separate prayer rooms with ablution (Wudu) areas are designated on specific floors of the new permanent campus building.
-
-Question (Banglish): Female der Prayer Room ami kothay pabo?
-Answer (English): In front of the indoor (Multipurpose Hall) and also on 6th floor(ZONE-H).
-
-Question (Banglish): Female prayer room ta kothay?
-Answer (English): The female prayer room is located on the ground floor near reception and also another one on 6th floor.(ZONE-H).",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0260,0.0000,0.0000,0.0266,2026-07-31T17:15:22.083390+00:00,0.0230,0.8495
-Q092-orig,adaptive_novel,"I wanted to ask, is there an application fee, How much is it?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]","Question: I wanted to ask, is there an application fee, How much is it?
-Answer: Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]
-
-Question: One thing I couldn't find anywhere: how much is the admission application fee?
-Answer: Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.
-
-Question: Before I start the application, how much money do I need to set aside just for the fee itself?
-Answer: Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.
-
-Question: How much is the admission application fee?
-Answer: Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.
-
-Question: Is there an application fee? How much is it?
-Answer: Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]","There is an admission application fee of Tk. 1,500/- Non-Refundable, which can be paid through various methods including Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd., and Prime Bank Ltd.",open_ended,linear,0.5,False,False,False,False,False,False,True,,,0.0244,0.0000,9.5718,9.5963,2026-07-31T17:15:31.680227+00:00,0.1838,1.0301
-Q092-p1,adaptive_novel,"Do I have to pay an application fee, and what's the amount?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]","Question: How much is the admission application fee?
-Answer: Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.
-
-Question: Before I start the application, how much money do I need to set aside just for the fee itself?
-Answer: Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.
-
-Question: How can I pay the admission application fee?
-Answer: Applicants can pay their admission application fee through-
-Bkash
-Rocket
-Nagod
-Visa cards
-Dhaka Bank Ltd. One Bank Ltd. Southeast Bank Ltd. Brac Bank Ltd. And Prime Bank Ltd.
-
-Question (Banglish): Admission er jonno application korte gele fee hisebe koto taka lagbe?
-Answer (English): Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.
-
-Question: One thing I couldn't find anywhere: how much is the admission application fee?
-Answer: Local Applicants need to pay the non-refundable application fee Tk. 1500. For international applicants, the non-refundable application fee is US$ 20.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0213,0.0000,0.0000,0.0220,2026-07-31T17:15:31.702129+00:00,0.0132,0.9140
-Q092-p2,adaptive_novel,"Is there a fee for applying, and how much does it cost?","Admission Application Fee Tk. 1,500/- Non-Refundable [Through Bkash, Rocket, Nagod, Visa cards, Dhaka Bank Ltd., One Bank Ltd., Southeast Bank Ltd., Brac Bank Ltd. And Prime Bank Ltd]","Question: How much does it cost?
-Answer: Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.
-
-Question: No idea if this is written down anywhere — how much does it cost?
-Answer: Could you clarify what you're asking the cost of - tuition, a specific fee, the Residential Semester, accommodation? Costs vary a lot by program and category.
-
-Question: No idea if this is written down anywhere — how much does it cost to request a Medium of Instruction letter?
-Answer: Based on published fee notices, the Medium of Instruction Fee is BDT 200.
-
-Question: Kind of urgent, but how much does it cost to request a Medium of Instruction letter?
-Answer: Based on published fee notices, the Medium of Instruction Fee is BDT 200.
-
-Question: How much does it cost to request a Medium of Instruction letter?
-Answer: Based on published fee notices, the Medium of Instruction Fee is BDT 200.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0197,0.0000,0.0000,0.0205,2026-07-31T17:15:31.722951+00:00,0.0226,0.5717
-Q050-orig,adaptive_novel,Do lab-based or design-based programs pay an additional fee beyond regular tuition?,"Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.","Question: Do lab-based or design-based programs pay an additional fee beyond regular tuition?
-Answer: Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.
-
-Question (Banglish): Lab-based ba design-based program e ki regular tuition er baire additional fee lage?
-Answer (English): Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.
-
-Question: Are there any additional fees apart from tuition?
-Answer: In addition to the tuition fees for the Computer Science and Engineering (CSE) program at BRAC University, students are required to pay several additional fees. These include a one-time, non-refundable admission fee of BDT 30,800 and a semester fee of BDT 11,500, which covers essential services such as IT facilities, library access, and student activities. There is also a one-time library membership fee of BDT 2,500. Depending on the specific courses, students might incur additional lab fees, although these are generally included within the course fees for most programs?
-
-Question (Banglish): BRAC e lab course er jonno extra fee dite hoy?
-Answer (English): Yes. Some laboratory-based courses have additional laboratory fees. The applicable fees are listed in the university's official tuition and fee schedule.
-
-Question: I wanted to ask, do lab-based or design-based programs pay an additional fee beyond regular tuition?
-Answer: Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.","Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.",open_ended,linear,0.5,False,False,False,False,False,False,True,,,0.0246,0.0000,6.8397,6.8644,2026-07-31T17:15:38.588024+00:00,0.0124,1.0609
-Q050-p1,adaptive_novel,Are there extra charges for lab or design-based programs on top of tuition?,"Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.","Question: Do lab-based or design-based programs pay an additional fee beyond regular tuition?
-Answer: Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.
-
-Question (Banglish): Lab-based ba design-based program e ki regular tuition er baire additional fee lage?
-Answer (English): Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.
-
-Question: Are there any additional fees apart from tuition?
-Answer: In addition to the tuition fees for the Computer Science and Engineering (CSE) program at BRAC University, students are required to pay several additional fees. These include a one-time, non-refundable admission fee of BDT 30,800 and a semester fee of BDT 11,500, which covers essential services such as IT facilities, library access, and student activities. There is also a one-time library membership fee of BDT 2,500. Depending on the specific courses, students might incur additional lab fees, although these are generally included within the course fees for most programs?
-
-Question (Banglish): BRAC e lab course er jonno extra fee dite hoy?
-Answer (English): Yes. Some laboratory-based courses have additional laboratory fees. The applicable fees are listed in the university's official tuition and fee schedule.
-
-Question: I wanted to ask, do lab-based or design-based programs pay an additional fee beyond regular tuition?
-Answer: Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0276,0.0000,0.0000,0.0284,2026-07-31T17:15:38.612670+00:00,0.0137,0.9805
-Q050-p2,adaptive_novel,"Besides regular tuition, do lab/design programs cost more?","Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.","Question: Do lab-based or design-based programs pay an additional fee beyond regular tuition?
-Answer: Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.
-
-Question (Banglish): Lab-based ba design-based program e ki regular tuition er baire additional fee lage?
-Answer (English): Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.
-
-Question: Before I forget to ask — does every undergraduate program at BRAC University cost the same per credit?
-Answer: No. Per-credit tuition varies by program - programs like Architecture, CSE, and Pharmacy have historically carried higher per-credit and lab/studio fees than programs like BBA, Economics, or English, reflecting differences in lab, studio, and equipment costs.
-
-Question: Does every undergraduate program at BRAC University cost the same per credit?
-Answer: No. Per-credit tuition varies by program - programs like Architecture, CSE, and Pharmacy have historically carried higher per-credit and lab/studio fees than programs like BBA, Economics, or English, reflecting differences in lab, studio, and equipment costs.
-
-Question: I wanted to ask, do lab-based or design-based programs pay an additional fee beyond regular tuition?
-Answer: Yes, programs with laboratory or studio components (such as CSE, Architecture, and Pharmacy) typically carry an additional lab/studio fee per semester on top of standard tuition and semester fees.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0238,0.0000,0.0000,0.0245,2026-07-31T17:15:38.640342+00:00,0.0105,0.9200
-Q016-orig,adaptive_novel,How to contact with BRACU Finance and Accounts Department?,"BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd","Question: How to contact with BRACU Finance and Accounts Department?
-Answer: BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd
-
-Question (Banglish): BRACU Finance and Accounts Department ke kivabe contact korbo?
-Answer (English): BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd
-
-Question: For a friend who's asking — what services are offered by the Finance & Accounts Office?
-Answer: The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd
-
-Question: What services are offered by the Finance & Accounts Office?
-Answer: The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd
-
-Question: Can someone help — how to contact with BRACU Finance and Accounts Department?
-Answer: BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd","To contact the BRACU Finance and Accounts Department, you can visit BRAC University located at Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda, Dhaka 1212, Bangladesh. Alternatively, you can call them at +88 09638464646 Ext: 1220 or 1221, or email queries-accounts@bracu.ac.bd.",open_ended,linear,0.5,False,False,False,False,False,False,True,,,0.0215,0.0000,12.0247,12.0463,2026-07-31T17:15:50.688200+00:00,0.0139,1.0342
-Q016-p1,adaptive_novel,What's the best way to get in touch with the Finance and Accounts Department at BRACU?,"BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd","Question: How to contact with BRACU Finance and Accounts Department?
-Answer: BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd
-
-Question (Banglish): BRACU Finance and Accounts Department ke kivabe contact korbo?
-Answer (English): BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd
-
-Question: For a friend who's asking — what services are offered by the Finance & Accounts Office?
-Answer: The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd
-
-Question: What services are offered by the Finance & Accounts Office?
-Answer: The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd
-
-Question: Can someone help — how to contact with BRACU Finance and Accounts Department?
-Answer: BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0289,0.0000,0.0000,0.0298,2026-07-31T17:15:50.718486+00:00,0.0052,0.9174
-Q016-p2,adaptive_novel,How can I reach BRACU's Finance and Accounts office?,"BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd","Question: How to contact with BRACU Finance and Accounts Department?
-Answer: BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd
-
-Question: What services are offered by the Finance & Accounts Office?
-Answer: The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd
-
-Question: For a friend who's asking — what services are offered by the Finance & Accounts Office?
-Answer: The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd
-
-Question (Banglish): Finance & Accounts Office ki ki service offer kore?
-Answer (English): The Finance & Accounts Office manages student accounts, tuition payments, and financial aid. You can also email at queries-accounts@bracu.ac.bd
-
-Question: Can someone help — how to contact with BRACU Finance and Accounts Department?
-Answer: BRAC University
-Kha-224 Bir Uttam Rafiqul Islam Avenue, Merul Badda,
-Dhaka 1212, Bangladesh
-Phone: +88 09638464646 Ext: 1220, 1221
-
-Email: queries-accounts@bracu.ac.bd",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0203,0.0000,0.0000,0.0208,2026-07-31T17:15:50.735270+00:00,0.0066,0.7327
-Q094-orig,adaptive_novel,Does ENH offer a minor for students outside the department?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.","Question: Does ENH offer a minor for students outside the department?
-Answer: Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.
-
-Question: Can BBA students choose a minor outside the business school?
-Answer: Yes. Students may graduate without a minor by taking any three 300/400-level BRACU courses, or they may choose a minor from another school/department; credit requirements for an outside-department minor can differ and should be confirmed with that department in advance.
-
-Question: Can students minor in EEE if it's not their major department?
-Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.
-
-Question (Banglish): BBA student ra ki business school er baire minor choose korte pare?
-Answer (English): Yes. Students may graduate without a minor by taking any three 300/400-level BRACU courses, or they may choose a minor from another school/department; credit requirements for an outside-department minor can differ and should be confirmed with that department in advance.
-
-Question (Banglish): ENH ki department er baire student der jonno minor offer kore?
-Answer (English): Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.","Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.",open_ended,linear,0.5,False,False,False,False,False,False,True,,,0.0220,0.0000,6.2445,6.2667,2026-07-31T17:15:57.006453+00:00,0.2120,1.0448
-Q094-p1,adaptive_novel,Can non-department students take a minor under ENH?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.","Question: Does ENH offer a minor for students outside the department?
-Answer: Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.
-
-Question: Can BBA students choose a minor outside the business school?
-Answer: Yes. Students may graduate without a minor by taking any three 300/400-level BRACU courses, or they may choose a minor from another school/department; credit requirements for an outside-department minor can differ and should be confirmed with that department in advance.
-
-Question (Banglish): BBA student ra ki business school er baire minor choose korte pare?
-Answer (English): Yes. Students may graduate without a minor by taking any three 300/400-level BRACU courses, or they may choose a minor from another school/department; credit requirements for an outside-department minor can differ and should be confirmed with that department in advance.
-
-Question: Can students minor in EEE if it's not their major department?
-Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.
-
-Question (Banglish): ENH ki department er baire student der jonno minor offer kore?
-Answer (English): Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0273,0.0000,0.0000,0.0280,2026-07-31T17:15:57.033063+00:00,0.0794,0.9111
-Q094-p2,adaptive_novel,Is a minor with ENH available to students from other departments?,"Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.","Question: Does ENH offer a minor for students outside the department?
-Answer: Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.
-
-Question: Can students minor in EEE if it's not their major department?
-Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.
-
-Question: Can BBA students choose a minor outside the business school?
-Answer: Yes. Students may graduate without a minor by taking any three 300/400-level BRACU courses, or they may choose a minor from another school/department; credit requirements for an outside-department minor can differ and should be confirmed with that department in advance.
-
-Question (Banglish): Major department na hole o student ra ki EEE te minor korte pare?
-Answer (English): Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.
-
-Question (Banglish): ENH ki department er baire student der jonno minor offer kore?
-Answer (English): Yes, ENH offers a Minor in History, open to students from any department, letting them take history courses to help contextualize their main field of study.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0217,0.0000,0.0000,0.0223,2026-07-31T17:15:57.053965+00:00,0.0879,0.9681
-Q072-orig,adaptive_novel,How is the Joint PhD program with SOAS structured over time?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.","Question: How is the Joint PhD program with SOAS structured over time?
-Answer: Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.
-
-Question (Banglish): Ei joint PhD program e student ra ki London na thakleo Bangladesh theke korte parbe?
-Answer (English): Yes, some PhD students are based in Bangladesh; SOAS research training components are designed to be offered in a hybrid format so that Bangladesh-based students can still participate.
-
-Question: Can PhD students in this joint program be based in Bangladesh rather than London?
-Answer: Yes, some PhD students are based in Bangladesh; SOAS research training components are designed to be offered in a hybrid format so that Bangladesh-based students can still participate.
-
-Question (Banglish): BRAC e Joint PhD Admission program kon university-r sathe collaborate kore?
-Answer (English): BRAC University offers Joint PhD programs in partnership with international universities under its global academic network affiliations.
-
-Question (Banglish): SOAS er shathe Joint PhD program shomoyer shathe kivabe structured?
-Answer (English): Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.","Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.",open_ended,linear,0.5,False,False,False,False,False,False,True,,,0.0264,0.0000,10.3563,10.3829,2026-07-31T17:16:07.441073+00:00,0.1920,1.0604
-Q072-p1,adaptive_novel,What does the timeline look like for the Joint PhD program with SOAS?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.","Question: How is the Joint PhD program with SOAS structured over time?
-Answer: Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.
-
-Question (Banglish): BRAC e Joint PhD Admission program kon university-r sathe collaborate kore?
-Answer (English): BRAC University offers Joint PhD programs in partnership with international universities under its global academic network affiliations.
-
-Question (Banglish): Ei joint PhD program e student ra ki London na thakleo Bangladesh theke korte parbe?
-Answer (English): Yes, some PhD students are based in Bangladesh; SOAS research training components are designed to be offered in a hybrid format so that Bangladesh-based students can still participate.
-
-Question: Can PhD students in this joint program be based in Bangladesh rather than London?
-Answer: Yes, some PhD students are based in Bangladesh; SOAS research training components are designed to be offered in a hybrid format so that Bangladesh-based students can still participate.
-
-Question (Banglish): SOAS er shathe Joint PhD program shomoyer shathe kivabe structured?
-Answer (English): Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0218,0.0000,0.0000,0.0224,2026-07-31T17:16:07.454685+00:00,0.1022,0.9453
-Q072-p2,adaptive_novel,Can you explain how the SOAS Joint PhD program is organized across its duration?,"Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.","Question: How is the Joint PhD program with SOAS structured over time?
-Answer: Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.
-
-Question (Banglish): Ei joint PhD program e student ra ki London na thakleo Bangladesh theke korte parbe?
-Answer (English): Yes, some PhD students are based in Bangladesh; SOAS research training components are designed to be offered in a hybrid format so that Bangladesh-based students can still participate.
-
-Question: Can PhD students in this joint program be based in Bangladesh rather than London?
-Answer: Yes, some PhD students are based in Bangladesh; SOAS research training components are designed to be offered in a hybrid format so that Bangladesh-based students can still participate.
-
-Question (Banglish): BRAC e Joint PhD Admission program kon university-r sathe collaborate kore?
-Answer (English): BRAC University offers Joint PhD programs in partnership with international universities under its global academic network affiliations.
-
-Question (Banglish): SOAS er shathe Joint PhD program shomoyer shathe kivabe structured?
-Answer (English): Students typically spend their first months building a literature review and research plan, aiming to upgrade from MPhil to PhD status within 9 months of starting. Year 2 is generally dedicated to field research, and Year 3 to analysis and writing up, with the final award being a Joint PhD from SOAS University of London and BRAC University.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0242,0.0000,0.0000,0.0250,2026-07-31T17:16:07.485131+00:00,0.0996,0.9934
-Q087-orig,adaptive_novel,Before I forget to ask — what are the consequences of violating TARC rules and regulations?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled","Question: Before I forget to ask — what are the consequences of violating TARC rules and regulations?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question: What are the consequences of violating TARC rules and regulations?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question (Banglish): TARC er rules bhanle ki consequence hoy?
-Answer (English): Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question: Can you tell me what the consequences of violating TARC rules and regulations are?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question: Just wondering, what are the consequences of violating TARC rules and regulations?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled","Violating rules and regulations can get one ousted from tarc. Eventually on severe violation the authority will call their parents and send them home. On minor violation, students are given warning. Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled.",open_ended,linear,0.5,False,False,False,False,False,False,True,,,0.0225,0.0000,8.8544,8.8770,2026-07-31T17:16:16.366650+00:00,0.0981,1.0617
-Q087-p1,adaptive_novel,What happens if someone breaks the TARC rules and regulations?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled","Question: What are the consequences of violating TARC rules and regulations?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question: Can you tell me what the consequences of violating TARC rules and regulations are?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question (Banglish): TARC er rules bhanle ki consequence hoy?
-Answer (English): Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question: Before I forget to ask — what are the consequences of violating TARC rules and regulations?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question: Just wondering, what are the consequences of violating TARC rules and regulations?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0205,0.0000,0.0000,0.0211,2026-07-31T17:16:16.379219+00:00,0.0116,0.9316
-Q087-p2,adaptive_novel,What penalties are there for violating TARC's rules?,"Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled","Question: Before I forget to ask — what are the consequences of violating TARC rules and regulations?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question: What are the consequences of violating TARC rules and regulations?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question (Banglish): TARC er rules bhanle ki consequence hoy?
-Answer (English): Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question: Can you tell me what the consequences of violating TARC rules and regulations are?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled
-
-Question: Just wondering, what are the consequences of violating TARC rules and regulations?
-Answer: Violating rules and regulations can get one ousted from tarc.Eventually on severe violation the authority will call their parents and send them home.On minor violation,students are given warning.Also after 3 warnings if they cannot bring changes in themselves their tarc will also be cancelled",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0206,0.0000,0.0000,0.0212,2026-07-31T17:16:16.406127+00:00,0.0013,0.9634
-Q023-orig,adaptive_novel,I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?,"Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.","Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
-Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
-
-Question: Can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
-Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
-
-Question: Can students minor in EEE if it's not their major department?
-Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.
-
-Question (Banglish): Major na hoile o student ra ki Physics, Mathematics, Biotechnology, ba Microbiology te minor korte pare?
-Answer (English): Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
-
-Question: New student here, can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
-Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.","Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.",open_ended,linear,0.5,False,False,False,False,False,False,True,,,0.0343,0.0000,10.0298,10.0645,2026-07-31T17:16:26.474296+00:00,0.4319,1.0578
-Q023-p1,adaptive_novel,"As an EEE student doing a Physics minor, do I still have to satisfy the Physics minor's own prerequisite requirements?","Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.","Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
-Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
-
-Question: Can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
-Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
-
-Question (Banglish): Major department na hole o student ra ki EEE te minor korte pare?
-Answer (English): Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.
-
-Question (Banglish): Major na hoile o student ra ki Physics, Mathematics, Biotechnology, ba Microbiology te minor korte pare?
-Answer (English): Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
-
-Question: New student here, can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
-Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0288,0.0000,0.0000,0.0311,2026-07-31T17:16:26.505293+00:00,0.3363,0.9653
-Q023-p2,adaptive_novel,"If I'm majoring in EEE and minoring in Physics, are the Physics minor's prerequisites still required for me?","Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.","Question: I'm an EEE student minoring in Physics. Do I need to separately meet the Physics minor's prerequisites even though I'm not a Physics major?
-Answer: Yes - BRACU's Minor in Physics has its own defined set of required courses and prerequisites, separate from your EEE major requirements, open to students from other departments as long as they meet those specific prerequisites. Being an EEE major doesn't automatically satisfy the Physics minor's course requirements; you'd need to check and fulfill them independently.
-
-Question: New student here, can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
-Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
-
-Question: Can students minor in EEE if it's not their major department?
-Answer: Yes, BRAC University offers a Minor in EEE with its own defined set of required courses and prerequisites (such as Electrical Circuits I & II and Electronic Circuits I & II), open to students from other departments who meet the prerequisites.
-
-Question (Banglish): Major na hoile o student ra ki Physics, Mathematics, Biotechnology, ba Microbiology te minor korte pare?
-Answer (English): Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.
-
-Question: Can students minor in Physics, Mathematics, Biotechnology, or Microbiology even if it's not their major?
-Answer: Yes, BRAC University offers formal Minor programs in Physics, Mathematics, Biotechnology, and Microbiology, each with a specific set of required courses, open to students from other majors who meet the prerequisites.",I don't have reliable information retrieved for this question. Please check with your academic advisor or BRAC University's official resources rather than relying on a guess here.,open_ended,linear,0.5,True,True,False,False,False,False,False,,,0.0252,0.0000,0.0000,0.0265,2026-07-31T17:16:26.532427+00:00,0.3048,0.9569
+orig_id,para_id,category,split,orig_question,para_question,found_original_chunk_top5,rank_of_original_chunk,found_any_correct_answer_top5
+16,110,Admission,val,Can PhD students in this joint program be based in Bangladesh rather than London?,"Not sure if this is covered elsewhere, but can PhD students in this joint program be based in Bangladesh rather than London?",True,1.0,True
+46,105,Admission,val,Does BRAC University publish sample questions for the admission test?,"Kind of urgent, but does BRAC University publish sample questions for the admission test?",True,1.0,True
+52,55,Admission,test,For further information regarding Admission who should I contact?,"Hey, for further information regarding Admission who should I contact?",True,1.0,True
+66,138,Admission,val,How can I contact the BRAC University admissions office?,What steps do I need to follow to contact the BRAC University admissions office?,True,4.0,True
+71,142,Admission,val,How can I pay the admission application fee?,What steps do I need to follow to pay the admission application fee?,True,2.0,True
+77,59,Admission,val,How many semesters are offered yearly at BRACU and when do they start?,"Hi, how many semesters are offered yearly at BRACU and when do they start?",True,1.0,True
+77,91,Admission,val,How many semesters are offered yearly at BRACU and when do they start?,I'm trying to plan when to apply - how often during the year can I actually start at BRACU?,True,2.0,True
+78,101,Admission,test,"How many semesters does BRAC University run per year, and when do they start?","Just wondering, how many semesters does BRAC University run per year, and when do they start?",True,1.0,True
+79,102,Admission,val,"How many total credits does the BSc in Computer Science (CS) program require, compared to BSc in CSE?","Just wondering, how many total credits does the BSc in Computer Science (CS) program require, compared to BSc in CSE?",True,1.0,True
+96,89,Admission,test,Is there an application fee? How much is it?,"I wanted to ask, is there an application fee, How much is it?",True,2.0,True
+119,22,Admission,test,What are the important dates and deadlines for admission?,Can you tell me what the important dates and deadlines for admission are?,True,2.0,True
+120,23,Admission,test,What are the prerequisites for the Cse program?,Can you tell me what the prerequisites for the Cse program are?,True,2.0,True
+126,19,Admission,val,What GPA do I need to be considered for the Engineering program?,Can someone help — what GPA do I need to be considered for the Engineering program?,True,1.0,True
+128,20,Admission,test,What is 'Freshman Enrollment and Class Sign' at BRAC University?,Can you tell me what 'Freshman Enrollment and Class Sign' at BRAC University is?,True,2.0,True
+144,51,Admission,val,"What subjects are tested for BSc programs like CSE, EEE, Physics, or Mathematics?","For a friend who's asking — what subjects are tested for BSc programs like CSE, EEE, Physics, or Mathematics?",True,1.0,True
+145,57,Admission,test,"What subjects are tested for BSS in Anthropology, BA in English, and LLB admission?","Hey, what subjects are tested for BSS in Anthropology, BA in English, and LLB admission?",True,1.0,True
+149,36,Admission,test,When is the next intake for the undergraduate program?,Do you know when is the next intake for the undergraduate program?,True,2.0,True
+195,284,Advising,val,How can I contact with my advisor during advising?,What steps do I need to follow to contact with my advisor during advising?,True,2.0,True
+225,181,Advising,val,Is there a confirmation button during Pre-Registration Phase 1 or Phase 2?,Does BRAC University have a confirmation button during Pre-Registration Phase 1 or Phase 2?,True,2.0,True
+242,249,Advising,val,Official contact platform for questions or concerns regarding the new system?,Quick question — official contact platform for questions or concerns regarding the new system?,True,1.0,True
+264,229,Advising,val,What happens if a student fails to confirm the Wishlist on time?,"Just wondering, what happens if a student fails to confirm the Wishlist on time?",True,1.0,True
+272,168,Advising,test,What is the consequence of not participating in the Wishlist event?,Can you tell me what the consequence of not participating in the Wishlist event is?,True,2.0,True
+283,252,Advising,val,What should a student do if he misses a deadline of something?,"Random question, what should a student do if he misses a deadline of something?",True,2.0,True
+313,348,Campus,val,Does BRAC University have an official university anthem and logo usage guidance?,"Random question, does BRAC University have an official university anthem and logo usage guidance?",True,2.0,True
+331,392,Campus,test,How can I access the Prayer Room for females?,What steps do I need to follow to access the Prayer Room for females?,True,2.0,True
+365,308,Campus,test,What facilities are available on the 5th Floor?,Curious about something: what facilities are available on the 5th Floor?,True,2.0,True
+384,351,Campus,val,What kind of activities can I do at the Social Interaction Space?,"Sorry if this was already answered, but what kind of activities can I do at the Social Interaction Space?",True,2.0,True
+411,340,Campus,val,Where can I find lecture theaters on campus?,I looked around the site but couldn't find it — where can I find lecture theaters on campus?,True,1.0,True
+417,326,Campus,test,Where can I find the Dressing Room for the two grounds?,"Hey, where can I find the Dressing Room for the two grounds?",True,1.0,True
+444,422,Campus,test,Where is the printing locations?,Where can I find the printing locations?,False,,False
+476,458,Exams and Grading,test,Can students appeal their grades if they believe there has been a mistake?,Are students allowed to appeal their grades if they believe there has been a mistake?,True,2.0,True
+476,549,Exams and Grading,test,Can students appeal their grades if they believe there has been a mistake?,"Kind of urgent, but can students appeal their grades if they believe there has been a mistake?",True,1.0,True
+476,563,Exams and Grading,test,Can students appeal their grades if they believe there has been a mistake?,One thing I couldn't find anywhere: can students appeal their grades if they believe there has been a mistake?,True,2.0,True
+492,462,Exams and Grading,val,Do retaken or repeated courses show up on my final transcript?,Before I forget to ask — do retaken or repeated courses show up on my final transcript?,True,1.0,True
+492,485,Exams and Grading,val,Do retaken or repeated courses show up on my final transcript?,Curious about something: do retaken or repeated courses show up on my final transcript?,True,2.0,True
+492,568,Exams and Grading,val,Do retaken or repeated courses show up on my final transcript?,Quick question — do retaken or repeated courses show up on my final transcript?,True,1.0,True
+514,486,Exams and Grading,test,How early should students arrive at the exam hall?,Curious about something: how early should students arrive at the exam hall?,True,2.0,True
+514,561,Exams and Grading,test,How early should students arrive at the exam hall?,"Not sure if this is covered elsewhere, but how early should students arrive at the exam hall?",True,1.0,True
+517,555,Exams and Grading,val,How long can a student remain below the minimum CGPA before facing withdrawal?,"New student here, how long can a student remain below the minimum CGPA before facing withdrawal?",True,2.0,True
+517,569,Exams and Grading,val,How long can a student remain below the minimum CGPA before facing withdrawal?,Quick question — how long can a student remain below the minimum CGPA before facing withdrawal?,True,1.0,True
+602,481,Exams and Grading,test,What is the formula BRAC University uses to calculate GPA?,Can you tell me what the formula BRAC University uses to calculate GPA is?,True,2.0,True
+602,552,Exams and Grading,test,What is the formula BRAC University uses to calculate GPA?,"Kind of urgent, but what is the formula BRAC University uses to calculate GPA?",True,1.0,True
+604,484,Exams and Grading,val,What is the procedure to apply for a make-up exam if a student misses an exam due to illness?,Can you tell me what the procedure to apply for a make-up exam if a student misses an exam due to illness is?,True,2.0,True
+604,547,Exams and Grading,val,What is the procedure to apply for a make-up exam if a student misses an exam due to illness?,"Just wondering, what is the procedure to apply for a make-up exam if a student misses an exam due to illness?",True,1.0,True
+605,468,Exams and Grading,test,What items are prohibited in the exam hall?,Before I forget to ask — what items are prohibited in the exam hall?,True,1.0,True
+605,491,Exams and Grading,test,What items are prohibited in the exam hall?,Curious about something: what items are prohibited in the exam hall?,True,2.0,True
+608,578,Exams and Grading,test,What should a course teacher do if a student misses the final exam for a valid reason?,"Random question, what should a course teacher do if a student misses the final exam for a valid reason?",True,3.0,True
+608,587,Exams and Grading,test,What should a course teacher do if a student misses the final exam for a valid reason?,"This might be a silly question, but what should a course teacher do if a student misses the final exam for a valid reason?",True,1.0,True
+609,469,Exams and Grading,test,What should students do if they have a scheduling conflict with their exams?,Before I forget to ask — what should students do if they have a scheduling conflict with their exams?,True,1.0,True
+609,579,Exams and Grading,test,What should students do if they have a scheduling conflict with their exams?,"Random question, what should students do if they have a scheduling conflict with their exams?",True,2.0,True
+647,664,Extracurricular Activities,val,Does BRAC University hold an official orientation event for new students each semester?,"Hi, does BRAC University hold an official orientation event for new students each semester?",True,1.0,True
+647,728,Extracurricular Activities,val,Does BRAC University hold an official orientation event for new students each semester?,"This might be a silly question, but does BRAC University hold an official orientation event for new students each semester?",True,1.0,True
+654,618,Extracurricular Activities,test,Has BRAC University ever won the World Universities Debating Championship (WUDC)?,Before I forget to ask — has BRAC University ever won the World Universities Debating Championship (WUDC)?,True,1.0,True
+654,719,Extracurricular Activities,test,Has BRAC University ever won the World Universities Debating Championship (WUDC)?,"Random question, has BRAC University ever won the World Universities Debating Championship (WUDC)?",True,2.0,True
+672,697,Extracurricular Activities,test,How can I stay updated on upcoming games and events?,"Kind of urgent, but how can I stay updated on upcoming games and events?",True,1.0,True
+672,757,Extracurricular Activities,test,How can I stay updated on upcoming games and events?,What steps do I need to follow to stay updated on upcoming games and events?,True,3.0,True
+682,659,Extracurricular Activities,test,How to submit report after a club event?,"Hey, how to submit report after a club event?",True,1.0,True
+682,684,Extracurricular Activities,test,How to submit report after a club event?,I looked around the site but couldn't find it — how to submit report after a club event?,True,1.0,True
+694,700,Extracurricular Activities,val,Is joining a club or society mandatory at BRAC University?,"Kind of urgent, but is joining a club or society mandatory at BRAC University?",True,1.0,True
+694,724,Extracurricular Activities,val,Is joining a club or society mandatory at BRAC University?,"Sorry if this was already answered, but is joining a club or society mandatory at BRAC University?",True,1.0,True
+733,627,Extracurricular Activities,test,What are the basic requirements and application process to start a new club at BRAC University?,Can you tell me what the basic requirements and application process to start a new club at BRAC University are?,True,2.0,True
+733,639,Extracurricular Activities,test,What are the basic requirements and application process to start a new club at BRAC University?,Curious about something: what are the basic requirements and application process to start a new club at BRAC University?,True,2.0,True
+734,660,Extracurricular Activities,val,What CGPA and credit requirements apply to club Executive Committee members?,"Hey, what CGPA and credit requirements apply to club Executive Committee members?",True,1.0,True
+734,702,Extracurricular Activities,val,What CGPA and credit requirements apply to club Executive Committee members?,"New student here, what CGPA and credit requirements apply to club Executive Committee members?",True,3.0,True
+739,628,Extracurricular Activities,val,What is the basic structure of a club's Executive Committee and Director panel?,Can you tell me what the basic structure of a club's Executive Committee and Director panel is?,True,2.0,True
+745,633,Extracurricular Activities,val,What is the IEEE Computer Society BRACU Student Branch Chapter known for?,Can you tell me what the IEEE Computer Society BRACU Student Branch Chapter known for is?,True,2.0,True
+745,667,Extracurricular Activities,val,What is the IEEE Computer Society BRACU Student Branch Chapter known for?,"Hi, what is the IEEE Computer Society BRACU Student Branch Chapter known for?",True,1.0,True
+746,634,Extracurricular Activities,test,What is the process for arranging food or refreshments for events?,Can you tell me what the process for arranging food or refreshments for events is?,True,2.0,True
+750,688,Extracurricular Activities,test,What opportunities are there for student leadership in volunteer organizations?,I looked around the site but couldn't find it — what opportunities are there for student leadership in volunteer organizations?,True,3.0,True
+750,731,Extracurricular Activities,test,What opportunities are there for student leadership in volunteer organizations?,"This might be a silly question, but what opportunities are there for student leadership in volunteer organizations?",True,3.0,True
+753,689,Extracurricular Activities,test,What sports teams does the university have?,I looked around the site but couldn't find it — what sports teams does the university have?,True,1.0,True
+753,704,Extracurricular Activities,test,What sports teams does the university have?,"New student here, what sports teams does the university have?",True,2.0,True
+789,777,International Student,val,Do international students get help with their student visa for Bangladesh?,Curious about something: do international students get help with their student visa for Bangladesh?,True,4.0,True
+789,799,International Student,val,Do international students get help with their student visa for Bangladesh?,For a friend who's asking — do international students get help with their student visa for Bangladesh?,True,2.0,True
+789,802,International Student,val,Do international students get help with their student visa for Bangladesh?,"Hey, do international students get help with their student visa for Bangladesh?",True,2.0,True
+789,885,International Student,val,Do international students get help with their student visa for Bangladesh?,"Random question, do international students get help with their student visa for Bangladesh?",True,4.0,True
+789,896,International Student,val,Do international students get help with their student visa for Bangladesh?,"This might be a silly question, but do international students get help with their student visa for Bangladesh?",True,2.0,True
+790,778,International Student,test,Do international students need to submit any medical reports?,Curious about something: do international students need to submit any medical reports?,True,4.0,True
+790,803,International Student,test,Do international students need to submit any medical reports?,"Hey, do international students need to submit any medical reports?",True,4.0,True
+790,842,International Student,test,Do international students need to submit any medical reports?,"Just wondering, do international students need to submit any medical reports?",True,4.0,True
+790,853,International Student,test,Do international students need to submit any medical reports?,"New student here, do international students need to submit any medical reports?",True,5.0,True
+822,764,International Student,test,How many credit hours must a scholarship-holding international student take each semester?,Before I forget to ask — how many credit hours must a scholarship-holding international student take each semester?,True,1.0,True
+822,783,International Student,test,How many credit hours must a scholarship-holding international student take each semester?,Curious about something: how many credit hours must a scholarship-holding international student take each semester?,True,3.0,True
+822,791,International Student,test,How many credit hours must a scholarship-holding international student take each semester?,Do you know how many credit hours must a scholarship-holding international student take each semester?,True,3.0,True
+822,833,International Student,test,How many credit hours must a scholarship-holding international student take each semester?,"I wanted to ask, how many credit hours must a scholarship-holding international student take each semester?",True,3.0,True
+822,887,International Student,test,How many credit hours must a scholarship-holding international student take each semester?,"Random question, how many credit hours must a scholarship-holding international student take each semester?",True,3.0,True
+840,767,International Student,test,Is there any scholarship scheme for international students?,Before I forget to ask — is there any scholarship scheme for international students?,True,1.0,True
+840,795,International Student,test,Is there any scholarship scheme for international students?,Does BRAC University have any scholarship scheme for international students?,False,,False
+840,815,International Student,test,Is there any scholarship scheme for international students?,"Hi, is there any scholarship scheme for international students?",True,1.0,True
+840,848,International Student,test,Is there any scholarship scheme for international students?,"Kind of urgent, but is there any scholarship scheme for international students?",True,1.0,True
+912,836,International Student,val,Who manages accommodation for international students at BRAC University?,"I wanted to ask, who manages accommodation for international students at BRAC University?",True,5.0,True
+912,868,International Student,val,Who manages accommodation for international students at BRAC University?,"Not sure if this is covered elsewhere, but who manages accommodation for international students at BRAC University?",True,2.0,True
+912,878,International Student,val,Who manages accommodation for international students at BRAC University?,One thing I couldn't find anywhere: who manages accommodation for international students at BRAC University?,True,3.0,True
+912,889,International Student,val,Who manages accommodation for international students at BRAC University?,"Random question, who manages accommodation for international students at BRAC University?",True,5.0,True
+912,895,International Student,val,Who manages accommodation for international students at BRAC University?,"Sorry if this was already answered, but who manages accommodation for international students at BRAC University?",True,2.0,True
+915,924,Library,test,"Are journals, magazines and reference books available for borrowing?","Can someone help — are journals, magazines and reference books available for borrowing?",True,4.0,True
+915,954,Library,test,"Are journals, magazines and reference books available for borrowing?","For a friend who's asking — are journals, magazines and reference books available for borrowing?",True,4.0,True
+915,991,Library,test,"Are journals, magazines and reference books available for borrowing?","Just wondering, are journals, magazines and reference books available for borrowing?",True,4.0,True
+915,1027,Library,test,"Are journals, magazines and reference books available for borrowing?","Quick question — are journals, magazines and reference books available for borrowing?",True,4.0,True
+915,1043,Library,test,"Are journals, magazines and reference books available for borrowing?","This might be a silly question, but are journals, magazines and reference books available for borrowing?",True,4.0,True
+922,913,Library,test,Can I renew a book I have borrowed from the library?,Am I allowed to renew a book I have borrowed from the library?,True,2.0,True
+922,916,Library,test,Can I renew a book I have borrowed from the library?,Before I forget to ask — can I renew a book I have borrowed from the library?,True,1.0,True
+922,1013,Library,test,Can I renew a book I have borrowed from the library?,No idea if this is written down anywhere — can I renew a book I have borrowed from the library?,True,4.0,True
+922,1021,Library,test,Can I renew a book I have borrowed from the library?,One thing I couldn't find anywhere: can I renew a book I have borrowed from the library?,True,4.0,True
+922,1038,Library,test,Can I renew a book I have borrowed from the library?,"Sorry if this was already answered, but can I renew a book I have borrowed from the library?",True,1.0,True
+1025,927,Library,test,Provide me the contact information of library staffs.,Can someone help — provide me the contact information of library staffs?,True,4.0,True
+1025,959,Library,test,Provide me the contact information of library staffs.,For a friend who's asking — provide me the contact information of library staffs?,True,4.0,True
+1025,986,Library,test,Provide me the contact information of library staffs.,"I wanted to ask, provide me the contact information of library staffs?",True,5.0,True
+1025,1011,Library,test,Provide me the contact information of library staffs.,"New student here, provide me the contact information of library staffs?",True,5.0,True
+1025,1048,Library,test,Provide me the contact information of library staffs.,"This might be a silly question, but provide me the contact information of library staffs?",True,4.0,True
+1053,920,Library,val,What happens if I return a library book after the due date?,Before I forget to ask — what happens if I return a library book after the due date?,True,3.0,True
+1053,979,Library,val,What happens if I return a library book after the due date?,I looked around the site but couldn't find it — what happens if I return a library book after the due date?,True,3.0,True
+1053,1030,Library,val,What happens if I return a library book after the due date?,Quick question — what happens if I return a library book after the due date?,True,3.0,True
+1053,1036,Library,val,What happens if I return a library book after the due date?,"Random question, what happens if I return a library book after the due date?",True,5.0,True
+1053,1042,Library,val,What happens if I return a library book after the due date?,"Sorry if this was already answered, but what happens if I return a library book after the due date?",True,3.0,True
+1054,936,Library,val,What is the Digital Scholarship Lab at the Ayesha Abed Library?,Can you tell me what the Digital Scholarship Lab at the Ayesha Abed Library is?,True,3.0,True
+1054,971,Library,val,What is the Digital Scholarship Lab at the Ayesha Abed Library?,"Hi, what is the Digital Scholarship Lab at the Ayesha Abed Library?",True,2.0,True
+1054,1004,Library,val,What is the Digital Scholarship Lab at the Ayesha Abed Library?,"Kind of urgent, but what is the Digital Scholarship Lab at the Ayesha Abed Library?",True,2.0,True
+1054,1019,Library,val,What is the Digital Scholarship Lab at the Ayesha Abed Library?,"Not sure if this is covered elsewhere, but what is the Digital Scholarship Lab at the Ayesha Abed Library?",True,2.0,True
+1056,932,Library,test,What services do library provide?,Can someone help — what services do library provide?,True,2.0,True
+1056,945,Library,test,What services do library provide?,Curious about something: what services do library provide?,True,5.0,True
+1056,967,Library,test,What services do library provide?,"Hey, what services do library provide?",True,2.0,True
+1056,1049,Library,test,What services do library provide?,"This might be a silly question, but what services do library provide?",True,2.0,True
+1084,1066,Out of Scope / Unanswerable,test,Can you pretend to be a BRAC University official and write an approval letter for me?,Before I forget to ask — can you pretend to be a BRAC University official and write an approval letter for me?,True,1.0,True
+1085,1127,Out of Scope / Unanswerable,val,Can you recommend a good laptop for engineering students?,"Kind of urgent, but can you recommend a good laptop for engineering students?",True,1.0,True
+1089,1144,Out of Scope / Unanswerable,test,Can you write my lab report so it doesn't look copied from my labmate's?,"Not sure if this is covered elsewhere, but can you write my lab report so it doesn't look copied from my labmate's?",True,1.0,True
+1090,1148,Out of Scope / Unanswerable,val,Can you write my thesis for me?,One thing I couldn't find anywhere: can you write my thesis for me?,True,3.0,True
+1118,1071,Out of Scope / Unanswerable,test,If I retake CSE221 will I definitely get an A?,Can someone help — if I retake CSE221 will I definitely get an A?,True,1.0,True
+1120,1104,Out of Scope / Unanswerable,val,Is BRAC University's CSE program better than BUET's?,"Hey, is BRAC University's CSE program better than BUET's?",True,1.0,True
+1124,1130,Out of Scope / Unanswerable,test,Is the CSE department harder than the EEE department?,"Kind of urgent, but is the CSE department harder than the EEE department?",True,1.0,True
+1134,1105,Out of Scope / Unanswerable,val,My friend and I have the same assignment - can you make our answers look different enough to avoid suspicion?,"Hey, my friend and I have the same assignment - can you make our answers look different enough to avoid suspicion?",True,1.0,True
+1176,1099,Out of Scope / Unanswerable,val,When does it start?,Do you know when does it start?,True,2.0,True
+1177,1107,Out of Scope / Unanswerable,test,Which advisor was I assigned to?,"Hey, which advisor was I assigned to?",False,,False
+1178,1136,Out of Scope / Unanswerable,val,Which club is the most popular at BRAC University?,"New student here, which club is the most popular at BRAC University?",True,2.0,True
+1179,1147,Out of Scope / Unanswerable,test,Which dorm room is the best one to request?,"Not sure if this is covered elsewhere, but which dorm room is the best one to request?",True,1.0,True
+1184,1087,Out of Scope / Unanswerable,test,Who is the best faculty of this course?,Can you tell me who is the best faculty of this course?,True,2.0,True
+1184,1185,Out of Scope / Unanswerable,test,Who is the best faculty of this course?,Who teaches the best for this course?,True,2.0,True
+1222,1287,"Payment, Financial Aid and Scholarship",test,Could you please provide details about the tuition fee structure at BRAC University?,"New student here, could you please provide details about the tuition fee structure at BRAC University?",True,2.0,True
+1227,1268,"Payment, Financial Aid and Scholarship",test,Do lab-based or design-based programs pay an additional fee beyond regular tuition?,"I wanted to ask, do lab-based or design-based programs pay an additional fee beyond regular tuition?",True,2.0,True
+1230,1291,"Payment, Financial Aid and Scholarship",val,Does BRAC University claim there are no hidden fees for its degree programs?,One thing I couldn't find anywhere: does BRAC University claim there are no hidden fees for its degree programs?,True,2.0,True
+1251,1332,"Payment, Financial Aid and Scholarship",val,How can I apply for the scholarship?,What steps do I need to follow to apply for the scholarship?,True,4.0,True
+1261,1206,"Payment, Financial Aid and Scholarship",test,How to contact with BRACU Finance and Accounts Department?,Can someone help — how to contact with BRACU Finance and Accounts Department?,True,1.0,True
+1276,1301,"Payment, Financial Aid and Scholarship",val,Is the admission application fee the same regardless of which payment method I use?,"Random question, is the admission application fee the same regardless of which payment method I use?",True,2.0,True
+1282,1240,"Payment, Financial Aid and Scholarship",test,Is there any separate exam for awarding Scholarship/Financial Aid?,Does BRAC University have any separate exam for awarding Scholarship/Financial Aid?,True,2.0,True
+1314,1215,"Payment, Financial Aid and Scholarship",test,What are the eligibility criteria for receiving financial aid?,Can you tell me what the eligibility criteria for receiving financial aid are?,True,2.0,True
+1321,1298,"Payment, Financial Aid and Scholarship",val,What criteria are used to select scholarship recipients?,Quick question — what criteria are used to select scholarship recipients?,True,1.0,True
+1322,1294,"Payment, Financial Aid and Scholarship",val,"What do the scholarships at BRAC University cover (tuition, fees, living expenses, etc.)?","One thing I couldn't find anywhere: what do the scholarships at BRAC University cover (tuition, fees, living expenses, etc.)?",True,2.0,True
+1326,1209,"Payment, Financial Aid and Scholarship",test,What is BRAC Scholarship?,Can you tell me what BRAC Scholarship is?,False,,True
+1330,1266,"Payment, Financial Aid and Scholarship",val,What scholarship policies exist at BRAC University?,I looked around the site but couldn't find it — what scholarship policies exist at BRAC University?,True,1.0,True
+1331,1309,"Payment, Financial Aid and Scholarship",val,What scholarships are offered by BRAC University?,"This might be a silly question, but what scholarships are offered by BRAC University?",True,1.0,True
+1334,1304,"Payment, Financial Aid and Scholarship",test,What undergraduate tuition waiver is available based on SSC/HSC or A-Level results?,"Sorry if this was already answered, but what undergraduate tuition waiver is available based on SSC/HSC or A-Level results?",True,1.0,True
+1336,1296,"Payment, Financial Aid and Scholarship",test,Where can I find the official student payment manual?,One thing I couldn't find anywhere: where can I find the official student payment manual?,True,2.0,True
+1360,1347,Policies and Procedures,val,Can students use BRAC University's name on materials like letterheads without permission?,Are students allowed to use BRAC University's name on materials like letterheads without permission?,True,2.0,True
+1371,1344,Policies and Procedures,test,Do I need to pay any fee to collect my degree certificate at Convocation?,Am I required to need to pay any fee to collect my degree certificate at Convocation?,True,2.0,True
+1371,1376,Policies and Procedures,test,Do I need to pay any fee to collect my degree certificate at Convocation?,For a friend who's asking — do I need to pay any fee to collect my degree certificate at Convocation?,True,1.0,True
+1459,1388,Policies and Procedures,test,What exactly does the Office of the Proctor handle at BRAC University?,"Hi, what exactly does the Office of the Proctor handle at BRAC University?",True,1.0,True
+1459,1424,Policies and Procedures,test,What exactly does the Office of the Proctor handle at BRAC University?,"Kind of urgent, but what exactly does the Office of the Proctor handle at BRAC University?",True,1.0,True
+1461,1378,Policies and Procedures,val,"What happens if a student submits academic work that isn't original, or damages university property?","For a friend who's asking — what happens if a student submits academic work that isn't original, or damages university property?",True,1.0,True
+1464,1361,Policies and Procedures,val,What is BRAC University's general dress code expectation?,Can you tell me what BRAC University's general dress code expectation is?,True,2.0,True
+1465,1362,Policies and Procedures,test,What is BRAC University's policy on sexual harassment?,Can you tell me what BRAC University's policy on sexual harassment is?,True,2.0,True
+1470,1365,Policies and Procedures,test,What is the Office of the Registrar responsible for at BRAC University?,Can you tell me what the Office of the Registrar responsible for at BRAC University is?,True,2.0,True
+1480,1443,Policies and Procedures,val,What should I do if I lost my original payment receipt needed for gown collection or refund?,One thing I couldn't find anywhere: what should I do if I lost my original payment receipt needed for gown collection or refund?,True,3.0,True
+1480,1446,Policies and Procedures,val,What should I do if I lost my original payment receipt needed for gown collection or refund?,Quick question — what should I do if I lost my original payment receipt needed for gown collection or refund?,True,1.0,True
+1481,1449,Policies and Procedures,test,What should I do if I miss my mid/final?,"Random question, what should I do if I miss my mid/final?",True,2.0,True
+1487,1352,Policies and Procedures,test,Whats the procedure for changing my section?,Before I forget to ask — whats the procedure for changing my section?,True,1.0,True
+1487,1380,Policies and Procedures,test,Whats the procedure for changing my section?,For a friend who's asking — whats the procedure for changing my section?,True,1.0,True
+1489,1404,Policies and Procedures,test,Whats the procedure to pay my fees in installment?,I looked around the site but couldn't find it — whats the procedure to pay my fees in installment?,True,1.0,True
+1490,1432,Policies and Procedures,val,"When did BRAC University adopt Turnitin, and why?","No idea if this is written down anywhere — when did BRAC University adopt Turnitin, and why?",True,3.0,True
+1490,1447,Policies and Procedures,val,"When did BRAC University adopt Turnitin, and why?","Quick question — when did BRAC University adopt Turnitin, and why?",True,2.0,True
+1495,1409,Policies and Procedures,val,Who officially announces the date of BRAC University's convocation?,"I wanted to ask, who officially announces the date of BRAC University's convocation?",True,3.0,True
+1495,1433,Policies and Procedures,val,Who officially announces the date of BRAC University's convocation?,No idea if this is written down anywhere — who officially announces the date of BRAC University's convocation?,True,3.0,True
+1497,1560,Programs & Departments,test,Are Biotechnology and Microbiology still under the same department as Physics and Mathematics?,"Just wondering, are Biotechnology and Microbiology still under the same department as Physics and Mathematics?",True,1.0,True
+1540,1522,Programs & Departments,val,How many credit-hours of General Education (GenEd) courses must every student complete?,Do you know how many credit-hours of General Education (GenEd) courses must every student complete?,True,2.0,True
+1600,1552,Programs & Departments,test,What elective courses are recommended for students interested in Cybersecurity?,"I wanted to ask, what elective courses are recommended for students interested in Cybersecurity?",True,2.0,True
+1608,1513,Programs & Departments,val,What is the detailed course sequence for the Bachelor of Science in Computer Science and Engineering (CSE) at BRAC University?,Can you tell me what the detailed course sequence for the Bachelor of Science in Computer Science and Engineering (CSE) at BRAC University is?,True,3.0,True
+1608,1562,Programs & Departments,val,What is the detailed course sequence for the Bachelor of Science in Computer Science and Engineering (CSE) at BRAC University?,"Just wondering, what is the detailed course sequence for the Bachelor of Science in Computer Science and Engineering (CSE) at BRAC University?",True,2.0,True
+1609,1514,Programs & Departments,test,What is the difference in focus between the BSEEE and BSECE programs?,Can you tell me what the difference in focus between the BSEEE and BSECE programs is?,True,2.0,True
+1621,1589,Programs & Departments,val,What practical/experiential resources does the LL.M. program offer students?,"Sorry if this was already answered, but what practical/experiential resources does the LL.M. program offer students?",True,1.0,True
+1627,1563,Programs & Departments,test,What types of general education courses are required for all undergraduate students at BRAC University?,"Just wondering, what types of general education courses are required for all undergraduate students at BRAC University?",True,1.0,True
+1629,1502,Programs & Departments,val,What undergraduate science programs does the Department of Mathematics and Physical Sciences (MPS) offer?,Before I forget to ask — what undergraduate science programs does the Department of Mathematics and Physical Sciences (MPS) offer?,True,1.0,True
+1629,1580,Programs & Departments,val,What undergraduate science programs does the Department of Mathematics and Physical Sciences (MPS) offer?,Quick question — what undergraduate science programs does the Department of Mathematics and Physical Sciences (MPS) offer?,True,1.0,True
+1635,1577,Programs & Departments,val,"When was BRAC Institute of Educational Development (BRAC IED) founded, and what does it focus on?","One thing I couldn't find anywhere: when was BRAC Institute of Educational Development (BRAC IED) founded, and what does it focus on?",True,2.0,True
+1640,1554,Programs & Departments,test,Where do MPH faculty members at BRAC JPGSPH come from?,"I wanted to ask, where do MPH faculty members at BRAC JPGSPH come from?",True,2.0,True
+1665,1647,TARC/RS (Residential Semester),test,Can students receive visitors while at the Savar campus?,Are students allowed to receive visitors while at the Savar campus?,True,2.0,True
+1665,1765,TARC/RS (Residential Semester),test,Can students receive visitors while at the Savar campus?,"Sorry if this was already answered, but can students receive visitors while at the Savar campus?",True,1.0,True
+1692,1721,TARC/RS (Residential Semester),val,How are dormitory rooms and roommates assigned at the Savar campus?,"Just wondering, how are dormitory rooms and roommates assigned at the Savar campus?",True,4.0,True
+1692,1748,TARC/RS (Residential Semester),val,How are dormitory rooms and roommates assigned at the Savar campus?,"Not sure if this is covered elsewhere, but how are dormitory rooms and roommates assigned at the Savar campus?",True,4.0,True
+1692,1770,TARC/RS (Residential Semester),val,How are dormitory rooms and roommates assigned at the Savar campus?,"This might be a silly question, but how are dormitory rooms and roommates assigned at the Savar campus?",True,4.0,True
+1693,1651,TARC/RS (Residential Semester),test,How are meal plans managed at TARC?,Before I forget to ask — how are meal plans managed at TARC?,True,1.0,True
+1693,1766,TARC/RS (Residential Semester),test,How are meal plans managed at TARC?,"Sorry if this was already answered, but how are meal plans managed at TARC?",True,1.0,True
+1700,1688,TARC/RS (Residential Semester),val,How to apply to go to Tarc at next semester?,"Hey, how to apply to go to Tarc at next semester?",True,1.0,True
+1700,1708,TARC/RS (Residential Semester),val,How to apply to go to Tarc at next semester?,"I wanted to ask, how to apply to go to Tarc at next semester?",True,4.0,True
+1700,1749,TARC/RS (Residential Semester),val,How to apply to go to Tarc at next semester?,"Not sure if this is covered elsewhere, but how to apply to go to Tarc at next semester?",True,1.0,True
+1703,1680,TARC/RS (Residential Semester),test,I already did ENG102 in Badda campus which course I will be given in TARC?,For a friend who's asking — I already did ENG102 in Badda campus which course I will be given in TARC?,True,2.0,True
+1703,1738,TARC/RS (Residential Semester),test,I already did ENG102 in Badda campus which course I will be given in TARC?,"New student here, I already did ENG102 in Badda campus which course I will be given in TARC?",True,3.0,True
+1703,1752,TARC/RS (Residential Semester),test,I already did ENG102 in Badda campus which course I will be given in TARC?,One thing I couldn't find anywhere: I already did ENG102 in Badda campus which course I will be given in TARC?,True,3.0,True
+1780,1672,TARC/RS (Residential Semester),test,What amenities and facilities are provided for students at TARC?,Curious about something: what amenities and facilities are provided for students at TARC?,True,2.0,True
+1780,1684,TARC/RS (Residential Semester),test,What amenities and facilities are provided for students at TARC?,For a friend who's asking — what amenities and facilities are provided for students at TARC?,True,1.0,True
+1780,1758,TARC/RS (Residential Semester),test,What amenities and facilities are provided for students at TARC?,Quick question — what amenities and facilities are provided for students at TARC?,True,1.0,True
+1781,1655,TARC/RS (Residential Semester),test,What are the consequences of violating TARC rules and regulations?,Before I forget to ask — what are the consequences of violating TARC rules and regulations?,True,1.0,True
+1781,1666,TARC/RS (Residential Semester),test,What are the consequences of violating TARC rules and regulations?,Can you tell me what the consequences of violating TARC rules and regulations are?,True,2.0,True
+1781,1724,TARC/RS (Residential Semester),test,What are the consequences of violating TARC rules and regulations?,"Just wondering, what are the consequences of violating TARC rules and regulations?",True,1.0,True
+1784,1670,TARC/RS (Residential Semester),val,What are the rules and regulations students must follow while at TARC?,Can you tell me what the rules and regulations students must follow while at TARC are?,True,4.0,True
+1784,1673,TARC/RS (Residential Semester),val,What are the rules and regulations students must follow while at TARC?,Curious about something: what are the rules and regulations students must follow while at TARC?,True,4.0,True
+1784,1685,TARC/RS (Residential Semester),val,What are the rules and regulations students must follow while at TARC?,For a friend who's asking — what are the rules and regulations students must follow while at TARC?,True,3.0,True
+1790,1733,TARC/RS (Residential Semester),val,What types of accommodation are available at TARC?,"Kind of urgent, but what types of accommodation are available at TARC?",True,1.0,True
+1790,1742,TARC/RS (Residential Semester),val,What types of accommodation are available at TARC?,"New student here, what types of accommodation are available at TARC?",True,3.0,True
+1850,1832,Technical Support,val,How do I change my BRACU G Suite email password?,"Hey, how do I change my BRACU G Suite email password?",True,1.0,True
+1850,1922,Technical Support,val,How do I change my BRACU G Suite email password?,"This might be a silly question, but how do I change my BRACU G Suite email password?",True,1.0,True
+1850,1941,Technical Support,val,How do I change my BRACU G Suite email password?,What's the process to change my BRACU G Suite email password?,True,2.0,True
+1861,1864,Technical Support,val,I forgot my BRACU Wi-fi password. How can I reset it?,I looked around the site but couldn't find it — I forgot my BRACU Wi-fi password. How can I reset it?,True,1.0,True
+1861,1884,Technical Support,val,I forgot my BRACU Wi-fi password. How can I reset it?,"New student here, I forgot my BRACU Wi-fi password. How can I reset it?",True,2.0,True
+1861,1895,Technical Support,val,I forgot my BRACU Wi-fi password. How can I reset it?,No idea if this is written down anywhere — I forgot my BRACU Wi-fi password. How can I reset it?,True,2.0,True
+1873,1819,Technical Support,val,Is Connect the same system some older BRACU documents refer to as USIS?,Curious about something: is Connect the same system some older BRACU documents refer to as USIS?,True,2.0,True
+1873,1836,Technical Support,val,Is Connect the same system some older BRACU documents refer to as USIS?,"Hey, is Connect the same system some older BRACU documents refer to as USIS?",True,1.0,True
+1873,1885,Technical Support,val,Is Connect the same system some older BRACU documents refer to as USIS?,"New student here, is Connect the same system some older BRACU documents refer to as USIS?",True,3.0,True
+1929,1814,Technical Support,val,What is Moodle/Courseware used for at BRAC University?,Can you tell me what Moodle/Courseware used for at BRAC University is?,True,3.0,True
+1929,1888,Technical Support,val,What is Moodle/Courseware used for at BRAC University?,"New student here, what is Moodle/Courseware used for at BRAC University?",True,2.0,True
+1929,1912,Technical Support,val,What is Moodle/Courseware used for at BRAC University?,"Random question, what is Moodle/Courseware used for at BRAC University?",True,2.0,True
+1931,1889,Technical Support,test,"What platform is buX built on, and when was it launched?","New student here, what platform is buX built on, and when was it launched?",True,3.0,True
+1931,1913,Technical Support,test,"What platform is buX built on, and when was it launched?","Random question, what platform is buX built on, and when was it launched?",True,2.0,True
+1931,1918,Technical Support,test,"What platform is buX built on, and when was it launched?","Sorry if this was already answered, but what platform is buX built on, and when was it launched?",True,1.0,True
+1934,1881,Technical Support,test,What should I do if I can’t log in to a lab PC?,"Kind of urgent, but what should I do if I can’t log in to a lab PC?",True,1.0,True
+1934,1908,Technical Support,test,What should I do if I can’t log in to a lab PC?,Quick question — what should I do if I can’t log in to a lab PC?,True,3.0,True
+1934,1924,Technical Support,test,What should I do if I can’t log in to a lab PC?,"This might be a silly question, but what should I do if I can’t log in to a lab PC?",True,1.0,True
+1939,1812,Technical Support,test,What was BRAC University's student system called before it became 'Connect'?,Can you tell me what BRAC University's student system called before it became 'Connect' was?,True,4.0,True
+1939,1846,Technical Support,test,What was BRAC University's student system called before it became 'Connect'?,"Hi, what was BRAC University's student system called before it became 'Connect'?",True,3.0,True
+1939,1876,Technical Support,test,What was BRAC University's student system called before it became 'Connect'?,"Just wondering, what was BRAC University's student system called before it became 'Connect'?",True,3.0,True
+1953,2031,Thesis and Internship,test,Are surveys acceptable for thesis papers if data is converted to usable datasets?,"Just wondering, are surveys acceptable for thesis papers if data is converted to usable datasets?",True,1.0,True
+1957,2063,Thesis and Internship,test,Can a group split up mid-way through a thesis if members disagree on direction?,"Random question, can a group split up mid-way through a thesis if members disagree on direction?",True,2.0,True
+1987,1952,Thesis and Internship,val,Do students need to re-register for Pre-Thesis 2 or continue from Pre-Thesis 1?,Are students required to need to re-register for Pre-Thesis 2 or continue from Pre-Thesis 1?,True,2.0,True
+1987,2065,Thesis and Internship,val,Do students need to re-register for Pre-Thesis 2 or continue from Pre-Thesis 1?,"Sorry if this was already answered, but is it necessary to register again for Pre-Thesis 2 or other phases of the thesis if already registered for Pre-Thesis 1?",True,4.0,True
+1993,2000,Thesis and Internship,test,"Does every undergraduate program require a thesis, or can students choose a project/internship instead?","Hi, does every undergraduate program require a thesis, or can students choose a project/internship instead?",True,1.0,True
+2005,2054,Thesis and Internship,val,How do I contact a specific supervisor or get his Thesis Slot on topic selection?,"Not sure if this is covered elsewhere, but how do I contact a specific supervisor or get his Thesis Slot on topic selection?",True,1.0,True
+2005,2096,Thesis and Internship,val,How do I contact a specific supervisor or get his Thesis Slot on topic selection?,What's the process to contact a specific supervisor or get his Thesis Slot on topic selection?,True,2.0,True
+2013,2038,Thesis and Internship,val,How much is deducted for requesting new members after Pre-Thesis I?,"Kind of urgent, but how much is deducted for requesting new members after Pre-Thesis I?",True,2.0,True
+2028,1952,Thesis and Internship,val,Is it necessary to register again for Pre-Thesis 2 or other phases of the thesis if already registered for Pre-Thesis 1?,Are students required to need to re-register for Pre-Thesis 2 or continue from Pre-Thesis 1?,True,5.0,True
+2028,2065,Thesis and Internship,val,Is it necessary to register again for Pre-Thesis 2 or other phases of the thesis if already registered for Pre-Thesis 1?,"Sorry if this was already answered, but is it necessary to register again for Pre-Thesis 2 or other phases of the thesis if already registered for Pre-Thesis 1?",True,1.0,True
+2030,2003,Thesis and Internship,val,Is it possible to do more than one thesis before graduation?,"Hi, is it possible to do more than one thesis before graduation?",True,1.0,True
+2030,2050,Thesis and Internship,val,Is it possible to do more than one thesis before graduation?,No idea if this is written down anywhere — is it possible to do more than one thesis before graduation?,True,2.0,True
+2074,1984,Thesis and Internship,val,What happens if a thesis defense is deferred—does the student need to retake CSE400?,Curious about something: what happens if a thesis defense is deferred—does the student need to retake CSE400?,True,2.0,True
+2076,1967,Thesis and Internship,test,What is required for a student to apply for an internship?,Can you tell me what required for a student to apply for an internship is?,True,2.0,True
+2078,1964,Thesis and Internship,test,What is the CGPA requirement for eligibility to start a thesis?,Can someone help — what is the CGPA requirement for eligibility to start a thesis?,True,1.0,True
+2078,1969,Thesis and Internship,test,What is the CGPA requirement for eligibility to start a thesis?,Can you tell me what the CGPA requirement for eligibility to start a thesis is?,True,2.0,True
+2079,1971,Thesis and Internship,test,What is the deadline to change the thesis title before the final defense?,Can you tell me what the deadline to change the thesis title before the final defense is?,True,2.0,True
+2083,1975,Thesis and Internship,test,What is the minimum and maximum number of group members for a thesis/project?,Can you tell me what the minimum and maximum number of group members for a thesis/project is?,True,2.0,True
+2091,1965,Thesis and Internship,val,What is the submission deadline for P1 or P2? Is there a poster presentation for Pre-2?,"Can someone help — what is the submission deadline for P1 or P2, Is there a poster presentation for Pre-2?",True,2.0,True
+2091,2058,Thesis and Internship,val,What is the submission deadline for P1 or P2? Is there a poster presentation for Pre-2?,"One thing I couldn't find anywhere: what is the submission deadline for P1 or P2, Is there a poster presentation for Pre-2?",True,3.0,True
+2247,2302,University Facts & Governance,val,Did BRAC Onnesha win any awards?,Does anyone know if BRAC Onnesha received any recognition or accolades?,False,,True
+2247,2303,University Facts & Governance,test,Did BRAC Onnesha win any awards?,I was wondering if I'll remember to ask this before leaving - can you tell me about any notable recognitions or accolades received by BRAC Onnesha?,False,,True
+2278,2362,University Facts & Governance,val,Roughly how many students and academic staff does BRAC University have?,Can you give me an idea of how big the student body and faculty size are at BRAC University?,True,5.0,True
+2278,2363,University Facts & Governance,test,Roughly how many students and academic staff does BRAC University have?,What's the approximate headcount of students and faculty members at BRAC University?,False,,True
+2281,2314,University Facts & Governance,val,What academic accreditations and affiliations does BRAC University hold?,Are there any other organizations besides the University Grants Commission (UGC) and the Bar Council that BRAC University has formal connections with through accreditation or affiliation agreements?,False,,True
+2281,2315,University Facts & Governance,test,What academic accreditations and affiliations does BRAC University hold?,"What other organizations, aside from UGC and the Bar Council, recognize BRAC University as a legitimate educational institution?",False,,True
+2282,2240,University Facts & Governance,test,What are BRAC University's official colours?,Can you tell me what BRAC University's official colours are?,True,3.0,True
+2282,2252,University Facts & Governance,test,What are BRAC University's official colours?,I looked around the site but couldn't find it — what are BRAC University's official colours?,True,1.0,True
+2282,2257,University Facts & Governance,test,What are BRAC University's official colours?,"I wanted to ask, what are BRAC University's official colours?",True,2.0,True
+2282,2326,University Facts & Governance,val,What are BRAC University's official colours?,What are the colors that BRAC University uses as its logo and branding identity?,False,,True
+2283,2307,University Facts & Governance,test,"What is BRAC University's Board of Trustees, and how many members does it have?",Can you tell me about the people in charge at BRAC University - who are they and how big is the team?,False,,True
+2283,2306,University Facts & Governance,val,"What is BRAC University's Board of Trustees, and how many members does it have?",Can you tell me about the people who are in charge at Brac University and roughly how many there are?,False,,True
+2284,2330,University Facts & Governance,val,What is BRAC University's official motto?,What is the slogan or catchphrase that BRAC University uses to represent its values and mission?,False,,True
+2284,2331,University Facts & Governance,test,What is BRAC University's official motto?,What is the slogan or catchphrase that's officially used by Brac University?,False,,True
+2285,2310,University Facts & Governance,val,"What is BRACU Dichari, and what has the team achieved?",I was wondering if you could tell me about this project called BRACU Dichari that's been going on – can you give an update on what they've managed to accomplish so far?,False,,True
+2285,2311,University Facts & Governance,test,"What is BRACU Dichari, and what has the team achieved?",I'm trying to get a sense of this BRACU project at Dichari - can you tell me a bit about it and what kind of results the researchers have gotten so far?,False,,True
+2286,2318,University Facts & Governance,val,What is the Academic Council responsible for?,I'm looking for information on how the Academic Council fits into our university's governance structure – what are its main areas of responsibility?,True,4.0,True
+2286,2319,University Facts & Governance,test,What is the Academic Council responsible for?,What's the role of the Academic Council in university decision-making and policy-making processes?,False,,True
+2287,2243,University Facts & Governance,test,What is the Syndicate at BRAC University?,Can you tell me what the Syndicate at BRAC University is?,True,3.0,True
+2287,2258,University Facts & Governance,test,What is the Syndicate at BRAC University?,"I wanted to ask, what is the Syndicate at BRAC University?",True,3.0,True
+2287,2334,University Facts & Governance,val,What is the Syndicate at BRAC University?,Is there a specific student organization or club at BRAC University that's called The Syndicate that I should know about?,True,5.0,True
+2288,2354,University Facts & Governance,val,What notable project have BRAC University EEE alumni been involved in?,I checked out the university's website but I still can't seem to track down any information on a significant project that current or past graduates from the EEE department at BRAC University have worked on.,False,,True
+2288,2355,University Facts & Governance,test,What notable project have BRAC University EEE alumni been involved in?,I'm trying to figure out what's considered one of the most impressive projects that a former student from the EEE department at BRAC University has worked on.,False,,True
+2289,2359,University Facts & Governance,test,"What orbit did BRAC Onnesha operate in, and what was it capable of?",I'm having trouble tracking down some info on BRAC Onnesha - can you tell me its orbital path and what kind of missions it handled?,False,,True
+2289,2358,University Facts & Governance,val,"What orbit did BRAC Onnesha operate in, and what was it capable of?",I've searched the website but can't seem to track down that info – does anyone know what orbital range BRAC Onnesha worked within and what kind of tasks it could accomplish?,False,,True
+2290,2322,University Facts & Governance,val,"What was BRAC Onnesha, and why is it significant for BRAC University?",I'm trying to understand more about the Onnesha initiative at BRAC University - can you tell me a bit about its background and importance to the university's mission?,False,,True
+2290,2323,University Facts & Governance,test,"What was BRAC Onnesha, and why is it significant for BRAC University?","What's the story behind BRAC Onnesha, and how does its history relate to BRAC University's mission?",False,,True
+2291,2347,University Facts & Governance,test,When and how was BRAC Onnesha launched into space?,"Can you tell me more about the launch details of the BRAC Onnesha mission, including the date it went up and what exactly that entailed?",False,,True
+2291,2346,University Facts & Governance,val,When and how was BRAC Onnesha launched into space?,I'm trying to find out more about the launch details of BRAC Onnesha - specifically what dates it went up and how exactly that happened.,False,,True
+2292,2370,University Facts & Governance,val,When was BRAC University established and who founded it?,"I'm new to BRAC University, can you tell me what year it started up and who actually set it all in motion?",False,,True
+2292,2265,University Facts & Governance,test,When was BRAC University established and who founded it?,"New student here, when was BRAC University established and who founded it?",True,3.0,True
+2292,2274,University Facts & Governance,test,When was BRAC University established and who founded it?,Quick question — when was BRAC University established and who founded it?,True,2.0,True
+2295,2339,University Facts & Governance,test,Who is the current Chancellor of BRAC University?,What is the name of the current head of administration at BRAC University?,False,,True
+2295,2338,University Facts & Governance,val,Who is the current Chancellor of BRAC University?,What is the name of the person serving as the chancellor for BRAC University right now?,False,,True
+2296,2343,University Facts & Governance,test,Who is the current Vice-Chancellor of BRAC University?,"I'm trying to find out who the head of administration is at BRAC University right now, can you give me that person's name?",False,,True
+2296,2342,University Facts & Governance,val,Who is the current Vice-Chancellor of BRAC University?,What is the name of the person currently holding the position of Vice Chancellor at BRAC University?,False,,True
+2297,2366,University Facts & Governance,val,Who was BRAC University's first Vice-Chancellor?,Can you tell me the name of the person who held the position of Vice-Chancellor at BRAC University when it first started?,False,,True
+2297,2367,University Facts & Governance,test,Who was BRAC University's first Vice-Chancellor?,Can you tell me who held the position of Vice-Chancellor at BRAC University right from its inception?,False,,True

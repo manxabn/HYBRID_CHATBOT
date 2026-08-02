@@ -1,0 +1,5 @@
+comparison,metric,n_matched,adaptive_mean,colbert_external_mean,mean_diff,paired_t_p,wilcoxon_p,significant_both_tests
+adaptive_vs_colbert_external_generation,bleu,199,0.6805,0.6288,0.0517,0.0056,0.0014,True
+adaptive_vs_colbert_external_generation,rougeL,199,0.8355,0.8172,0.0183,0.1541,0.0425,False
+adaptive_vs_colbert_external_generation,bertscore,199,0.9667,0.9653,0.0014,0.5153,0.2508,False
+adaptive_vs_colbert_external_generation,meteor,199,0.8608,0.8318,0.029,0.0229,0.0015,True

@@ -56,28 +56,39 @@ FACULTY_ROOM_QUERY_RE = re.compile(
 
 class FacultyRoomLookup:
     def __init__(self, db_path=None):
-        self.db_path = db_path or DB_PATH
+        # 2026-08-01: loads both small tables into memory once here instead
+        # of opening a fresh sqlite3 connection on every context_block()
+        # call -- the same load-once-at-init pattern PrerequisiteGraph
+        # already uses (pipeline/prerequisite_graph.py), not just an
+        # arbitrary optimization; both tables are small (CourseDetails
+        # ~586 rows, FacultyList ~223) and never change at runtime.
+        db_path = db_path or DB_PATH
+        conn = sqlite3.connect(db_path)
+        cur = conn.cursor()
+        cur.execute("SELECT Course, TheoryInitial FROM CourseDetails")
+        self._course_rows_by_code = {}  # canonical/full code -> [(Course, TheoryInitial), ...]
+        for course, theory_initial in cur.fetchall():
+            self._course_rows_by_code.setdefault(course, []).append((course, theory_initial))
+        cur.execute("SELECT Initial, Name, Room, Designation, Email FROM FacultyList")
+        self._faculty_by_initial = {
+            initial: (name, room, designation, email)
+            for initial, name, room, designation, email in cur.fetchall()
+        }
+        conn.close()
 
     def is_faculty_room_query(self, query: str) -> bool:
         return bool(FACULTY_ROOM_QUERY_RE.search(query)) and bool(COURSE_CODE_RE.search(query))
 
-    def _resolve_course_rows(self, code: str, conn: sqlite3.Connection) -> list[tuple]:
+    def _resolve_course_rows(self, code: str) -> list[tuple]:
         """Returns matching CourseDetails rows for `code`. Exact match first
         (code already includes a section, e.g. CSE101-01); otherwise every
         section under that base code (e.g. CSE101-01, CSE101-02, ...)."""
-        cur = conn.cursor()
-        cur.execute(
-            "SELECT Course, TheoryInitial FROM CourseDetails WHERE Course = ?",
-            (code,),
-        )
-        rows = cur.fetchall()
+        rows = self._course_rows_by_code.get(code)
         if rows:
             return rows
-        cur.execute(
-            "SELECT Course, TheoryInitial FROM CourseDetails WHERE Course LIKE ?",
-            (f"{code}-%",),
-        )
-        return cur.fetchall()
+        prefix = f"{code}-"
+        return [row for full_code, section_rows in self._course_rows_by_code.items()
+                if full_code.startswith(prefix) for row in section_rows]
 
     def context_block(self, query: str) -> str | None:
         """Verified 'course -> instructor -> office room' text block, or
@@ -92,7 +103,17 @@ class FacultyRoomLookup:
         # section. Only fall back to bare base codes (e.g. "CSE101") for
         # course mentions a full ID didn't already account for.
         full_ids = {m.group(0).replace(" ", "").upper() for m in FULL_COURSE_ID_RE.finditer(query)}
-        covered_bases = {re.match(r"[A-Za-z]{2,4}\d{3}[A-Za-z]*", fid).group(0) for fid in full_ids}
+        # 2026-08-01: was a locally-reinvented base-code pattern
+        # (`[A-Za-z]{2,4}\d{3}[A-Za-z]*`) instead of the shared COURSE_CODE_RE
+        # this file already imports -- exactly the "duplicated regex silently
+        # drifts" bug class patterns.py's own module docstring says
+        # centralizing was meant to make structurally impossible (it had
+        # already happened once, to prerequisite_graph.py's own copy).
+        # COURSE_CODE_RE requires at most one trailing letter (`?`) rather
+        # than the local pattern's unlimited `*`, which is actually the more
+        # correct constraint -- this corpus's own letter-suffixed course
+        # codes (e.g. CSE490B) never carry more than one suffix letter.
+        covered_bases = {COURSE_CODE_RE.match(fid).group(0) for fid in full_ids}
         base_codes = {
             canonicalize_course_code(m.group(0)) for m in COURSE_CODE_RE.finditer(query)
         } - covered_bases
@@ -100,37 +121,28 @@ class FacultyRoomLookup:
         if not codes:
             return None
 
-        conn = sqlite3.connect(self.db_path)
         blocks = []
-        try:
-            for code in codes:
-                rows = self._resolve_course_rows(code, conn)
-                if not rows:
-                    continue
-                initials = {r[1] for r in rows if r[1]}
-                if len(initials) != 1:
-                    # Either no instructor on file, or genuinely ambiguous
-                    # (different sections, different instructors) -- don't
-                    # guess which one the user meant.
-                    continue
-                initial = initials.pop()
-                course_label = rows[0][0] if len(rows) == 1 else code
+        for code in codes:
+            rows = self._resolve_course_rows(code)
+            if not rows:
+                continue
+            initials = {r[1] for r in rows if r[1]}
+            if len(initials) != 1:
+                # Either no instructor on file, or genuinely ambiguous
+                # (different sections, different instructors) -- don't
+                # guess which one the user meant.
+                continue
+            initial = initials.pop()
+            course_label = rows[0][0] if len(rows) == 1 else code
 
-                cur = conn.cursor()
-                cur.execute(
-                    "SELECT Name, Room, Designation, Email FROM FacultyList WHERE Initial = ?",
-                    (initial,),
-                )
-                faculty_row = cur.fetchone()
-                if not faculty_row:
-                    continue
-                name, room, designation, email = faculty_row
-                blocks.append(
-                    f"Verified instructor information for {course_label} (from the "
-                    f"CourseDetails and FacultyList knowledge base): theory section "
-                    f"taught by {name} ({designation}), office room {room}, email {email}."
-                )
-        finally:
-            conn.close()
+            faculty_row = self._faculty_by_initial.get(initial)
+            if not faculty_row:
+                continue
+            name, room, designation, email = faculty_row
+            blocks.append(
+                f"Verified instructor information for {course_label} (from the "
+                f"CourseDetails and FacultyList knowledge base): theory section "
+                f"taught by {name} ({designation}), office room {room}, email {email}."
+            )
 
         return "\n".join(blocks) if blocks else None

@@ -169,11 +169,13 @@ if __name__ == "__main__":
                               "(OFF by default as of 2026-07-31 -- new component, not yet default "
                               "pending its own isolated ablation, same practice as --use-reranker).")
     parser.add_argument("--entity-normalization", action="store_true",
-                         help="Enable LLM-based entity-normalization retrieval fallback for "
-                              "queries where exact-match found nothing but a loose entity-shaped "
-                              "hint is present (OFF by default, not yet validated by its own "
-                              "ablation -- see pipeline/novel_pipeline.py's "
-                              "looks_like_unrecognized_entity docstring).")
+                         help="Enable the entity-normalization retrieval fallback (fuzzy/LLM "
+                              "correction of malformed course codes and misspelled names). NOTE: "
+                              "NovelPipeline itself defaults this ON (validated 2026-07-28, 8/8 "
+                              "on the malformed-query ablation -- see pipeline/novel_pipeline.py), "
+                              "but THIS script passes False unless this flag is given; the script "
+                              "default is kept OFF so re-runs stay comparable with earlier CSVs "
+                              "launched the same way, not because the feature is unvalidated.")
     args = parser.parse_args()
 
     out_path = args.out

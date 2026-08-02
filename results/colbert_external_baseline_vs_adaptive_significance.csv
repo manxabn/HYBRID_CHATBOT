@@ -1,0 +1,7 @@
+comparison,metric,adaptive_mean,colbert_external_mean,mean_diff,ci95_lo,ci95_hi,p_approx,significant
+adaptive_vs_colbert_external,recall@1,0.985,0.92,0.0652,0.025,0.105,0.0,True
+adaptive_vs_colbert_external,recall@3,0.995,0.99,0.0049,-0.01,0.0201,0.352,False
+adaptive_vs_colbert_external,recall@5,0.995,1.0,-0.0051,-0.015,0.0,0.0,False
+adaptive_vs_colbert_external,mrr,0.99,0.9556,0.0345,0.0096,0.0598,0.006,True
+adaptive_vs_colbert_external,ndcg@5,0.9589,0.9258,0.0331,0.0044,0.0614,0.016,True
+adaptive_vs_colbert_external,ndcg@10,0.9773,0.9515,0.0257,0.0051,0.045,0.011,True

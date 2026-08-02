@@ -1,0 +1,2 @@
+config,bleu,rougeL,bertscore,meteor,n
+colbert_external,0.6284,0.8172,0.9652,0.8314,200
