@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  3 AUG 2026 19:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  3 AUG 2026 20:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,12 +698,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 95.
 
 [6]
-<fig_dataset_dist.png, id=335, 578.16pt x 361.35pt>
+<fig_dataset_dist.png, id=339, 578.16pt x 361.35pt>
 File: fig_dataset_dist.png Graphic file (type png)
 <use fig_dataset_dist.png>
 Package pdftex.def Info: fig_dataset_dist.png  used on input line 105.
 (pdftex.def)             Requested size: 204.85974pt x 128.03477pt.
-<fig_db_population.png, id=338, 126.4725pt x 268.1217pt>
+<fig_db_population.png, id=342, 126.4725pt x 268.1217pt>
 File: fig_db_population.png Graphic file (type png)
 <use fig_db_population.png>
 Package pdftex.def Info: fig_db_population.png  used on input line 117.
@@ -712,7 +712,7 @@ Package pdftex.def Info: fig_db_population.png  used on input line 117.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig_hybrid_retriever.png, id=342, 232.7094pt x 555.7563pt>
+<fig_hybrid_retriever.png, id=346, 232.7094pt x 555.7563pt>
 File: fig_hybrid_retriever.png Graphic file (type png)
 <use fig_hybrid_retriever.png>
 Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 129.
@@ -736,7 +736,7 @@ isite[]graph.py
  []
 
 [14]
-<fig_response_gen.png, id=458, 3334.4575pt x 3519.1475pt>
+<fig_response_gen.png, id=462, 3334.4575pt x 3519.1475pt>
 File: fig_response_gen.png Graphic file (type png)
 <use fig_response_gen.png>
 Package pdftex.def Info: fig_response_gen.png  used on input line 290.
@@ -815,7 +815,7 @@ h.full[]chain()\OT1/ptm/m/n/10 's
  []
 
 [23]
-<fig_lambda_sweep.png, id=620, 794.97pt x 578.16pt>
+<fig_lambda_sweep.png, id=624, 794.97pt x 578.16pt>
 File: fig_lambda_sweep.png Graphic file (type png)
 <use fig_lambda_sweep.png>
 Package pdftex.def Info: fig_lambda_sweep.png  used on input line 525.
@@ -847,7 +847,7 @@ Overfull \hbox (460.20596pt too wide) in paragraph at lines 725--743
  [][] 
  []
 
-<fig_ingestion_time.png, id=759, 504.80595pt x 342.19846pt>
+<fig_ingestion_time.png, id=763, 504.80595pt x 342.19846pt>
 File: fig_ingestion_time.png Graphic file (type png)
 <use fig_ingestion_time.png>
 Package pdftex.def Info: fig_ingestion_time.png  used on input line 754.
@@ -875,19 +875,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 881--882
  AI. []$\OT1/pcr/m/n/9 https : / / huggingface . co / lightonai /
  []
 
-[41] [42] (paper.aux)
+[41]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 895.
+
+
+Overfull \hbox (4.04872pt too wide) in paragraph at lines 900--901
+\OT1/ptm/m/n/10 pre-req-ui-site chains, fac-ulty di-rec-tory and avail-abil-ity
+, FAQ-style ques-tion/answer pairs) plus the En-glishQA/BanglishQA
+ []
+
+
+Overfull \hbox (1.07991pt too wide) in paragraph at lines 902--903
+\OT1/ptm/m/n/10 Banglish-expanded train-ing data, base ar-chi-tec-ture \OT1/pcr
+/m/n/10 all-MiniLM-L6-v2 \OT1/ptm/m/n/10 (384-dimensional em-bed-dings), stored
+ in Chro-
+ []
+
+
+Overfull \hbox (14.77025pt too wide) in paragraph at lines 914--915
+\OT1/ptm/m/n/10 learn 1.9.0, Ol-lama (lo-cal in-fer-ence server) run-ning Llama
+-3.1-8B. Full pack-age ver-sions are pinned in \OT1/pcr/m/n/10 requirements.txt
+
+ []
+
+
+Overfull \hbox (89.43059pt too wide) in paragraph at lines 916--917
+\OT1/ptm/m/n/10 grounded re-sponses when given no con-text to draw from. Full p
+er-centile ta-ble in \OT1/pcr/m/n/10 results[]final/efficiency/latency[]percent
+iles.csv\OT1/ptm/m/n/10 . 
+ []
+
+[42] [43] (paper.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: B5D83B6EA82EC468F452BDD97F4E9082;13003.
+(rerunfilecheck)             Checksum: 406C5713CB979F7791B135C9DF8901D7;13355.
  ) 
 Here is how much of TeX's memory you used:
- 14219 strings out of 467871
- 226745 string characters out of 5418376
- 694011 words of memory out of 5000000
- 42732 multiletter control sequences out of 15000+600000
+ 14223 strings out of 467871
+ 226794 string characters out of 5418376
+ 694098 words of memory out of 5000000
+ 42734 multiletter control sequences out of 15000+600000
  670377 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,26538b,690s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -901,9 +933,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (42 pages, 950665 bytes).
+Output written on paper.pdf (43 pages, 960115 bytes).
 PDF statistics:
- 954 PDF objects out of 1000 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
- 439 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 973 PDF objects out of 1000 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
+ 447 words of extra memory for PDF output out of 10000 (max. 10000000)
 

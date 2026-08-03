@@ -1,0 +1,10 @@
+{
+  "n_queries": 20,
+  "n_repeats": 3,
+  "n_retrieval_consistent": 20,
+  "fraction_retrieval_consistent": 1.0,
+  "n_exact_match_all_repeats": 17,
+  "fraction_exact_match": 0.85,
+  "mean_min_pairwise_similarity": 0.9695,
+  "min_min_pairwise_similarity": 0.5344
+}
