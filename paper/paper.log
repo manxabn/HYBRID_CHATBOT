@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  3 AUG 2026 19:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  3 AUG 2026 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -808,62 +808,58 @@ U/METEOR
  []
 
 [21] [22]
-Overfull \hbox (98.71918pt too wide) in paragraph at lines 496--497
+Overfull \hbox (98.71918pt too wide) in paragraph at lines 498--499
 \OT1/ptm/m/n/10 database, in-de-pen-dently con-firmed by cross-referencing the 
 same courses' ref-er-ence an-swers (built from \OT1/pcr/m/n/10 PrerequisiteGrap
 h.full[]chain()\OT1/ptm/m/n/10 's
  []
 
 [23]
-<fig_lambda_sweep.png, id=618, 794.97pt x 578.16pt>
+<fig_lambda_sweep.png, id=620, 794.97pt x 578.16pt>
 File: fig_lambda_sweep.png Graphic file (type png)
 <use fig_lambda_sweep.png>
-Package pdftex.def Info: fig_lambda_sweep.png  used on input line 523.
+Package pdftex.def Info: fig_lambda_sweep.png  used on input line 525.
 (pdftex.def)             Requested size: 227.62204pt x 165.54482pt.
- [24 <./fig_lambda_sweep.png>] [25]
-Overfull \hbox (4.62889pt too wide) in paragraph at lines 546--547
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[24]
+Underfull \vbox (badness 3396) has occurred while \output is active []
+
+ [25 <./fig_lambda_sweep.png>]
+Overfull \hbox (4.62889pt too wide) in paragraph at lines 548--549
 []\OT1/ptm/m/n/10 This ta-ble has been re-measured three times since the ver-si
 on re-ported in an ear-lier re-vi-sion. The first re-measurement
  []
 
-[26]
+[26] [27]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 573.
+(hyperref)                removing `math shift' on input line 575.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 573.
+(hyperref)                removing `math shift' on input line 575.
 
-[27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-[29]
-Underfull \vbox (badness 5460) has occurred while \output is active []
-
- [30]
-[31] [32]
-Overfull \hbox (460.20596pt too wide) in paragraph at lines 723--741
+[28] [29] [30] [31] [32]
+Overfull \hbox (460.20596pt too wide) in paragraph at lines 725--743
  [][] 
  []
 
-<fig_ingestion_time.png, id=758, 504.80595pt x 342.19846pt>
+<fig_ingestion_time.png, id=759, 504.80595pt x 342.19846pt>
 File: fig_ingestion_time.png Graphic file (type png)
 <use fig_ingestion_time.png>
-Package pdftex.def Info: fig_ingestion_time.png  used on input line 752.
+Package pdftex.def Info: fig_ingestion_time.png  used on input line 754.
 (pdftex.def)             Requested size: 204.85974pt x 138.87157pt.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 757.
+(hyperref)                removing `\uppercase' on input line 759.
 
-[33 <./fig_ingestion_time.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34]
-Underfull \vbox (badness 5217) has occurred while \output is active []
-
- [35]
+[33] [34 <./fig_ingestion_time.png>] [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
@@ -872,14 +868,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [37]
 [38] [39] [40]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 879.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 881.
 
-Underfull \hbox (badness 10000) in paragraph at lines 879--880
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
 []\OT1/ptm/m/n/9 Chaffin, A. (2025). GTE-ModernColBERT. Model re-lease, LightOn
  AI. []$\OT1/pcr/m/n/9 https : / / huggingface . co / lightonai /
  []
 
-[41] (paper.aux)
+[41] [42] (paper.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -888,13 +884,13 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: B5D83B6EA82EC468F452BDD97F4E9082;13003.
  ) 
 Here is how much of TeX's memory you used:
- 14218 strings out of 467871
- 226738 string characters out of 5418376
- 706835 words of memory out of 5000000
+ 14219 strings out of 467871
+ 226745 string characters out of 5418376
+ 694011 words of memory out of 5000000
  42732 multiletter control sequences out of 15000+600000
  670377 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,26538b,656s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,26538b,690s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -905,9 +901,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (41 pages, 948349 bytes).
+Output written on paper.pdf (42 pages, 950665 bytes).
 PDF statistics:
- 948 PDF objects out of 1000 (max. 8388607)
- 171 named destinations out of 1000 (max. 500000)
+ 954 PDF objects out of 1000 (max. 8388607)
+ 172 named destinations out of 1000 (max. 500000)
  439 words of extra memory for PDF output out of 10000 (max. 10000000)
 

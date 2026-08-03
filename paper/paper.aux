@@ -133,34 +133,34 @@
 \citation{magomere2025}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.1}Route-Conditional Reranking: A Third Mitigation, and a Methodological Correction Found Along the Way}{22}{subsubsection.4.6.1}\protected@file@percent }
 \newlabel{subsec:reranker-route-conditional}{{4.6.1}{22}{Route-Conditional Reranking: A Third Mitigation, and a Methodological Correction Found Along the Way}{subsubsection.4.6.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Unambiguous-match score-ceiling ablation, entity-heavy queries only ($n=100$), re-measured 2026-08-01 under the current retriever (postdating the compound-query exact-match fix, the BM25 $k_1$/$b$ retuning, the entity-heavy routing fix of Section~\ref {subsec:routing}, and a corpus ground-truth fix described below); supersedes the three earlier measurements of this table. See discussion below.}}{23}{table.caption.16}\protected@file@percent }
-\newlabel{tab:unambiguous}{{12}{23}{Unambiguous-match score-ceiling ablation, entity-heavy queries only ($n=100$), re-measured 2026-08-01 under the current retriever (postdating the compound-query exact-match fix, the BM25 $k_1$/$b$ retuning, the entity-heavy routing fix of Section~\ref {subsec:routing}, and a corpus ground-truth fix described below); supersedes the three earlier measurements of this table. See discussion below}{table.caption.16}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Unambiguous-Match Score Guarantee, Isolated}{23}{subsection.4.7}\protected@file@percent }
 \newlabel{subsec:unambiguous}{{4.7}{23}{Unambiguous-Match Score Guarantee, Isolated}{subsection.4.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Unambiguous-match score-ceiling ablation, entity-heavy queries only ($n=100$), re-measured 2026-08-01 under the current retriever (postdating the compound-query exact-match fix, the BM25 $k_1$/$b$ retuning, the entity-heavy routing fix of Section~\ref {subsec:routing}, and a corpus ground-truth fix described below); supersedes the three earlier measurements of this table. See discussion below.}}{24}{table.caption.16}\protected@file@percent }
+\newlabel{tab:unambiguous}{{12}{24}{Unambiguous-match score-ceiling ablation, entity-heavy queries only ($n=100$), re-measured 2026-08-01 under the current retriever (postdating the compound-query exact-match fix, the BM25 $k_1$/$b$ retuning, the entity-heavy routing fix of Section~\ref {subsec:routing}, and a corpus ground-truth fix described below); supersedes the three earlier measurements of this table. See discussion below}{table.caption.16}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces FacultyAvailability test set, before and after the schedule-day routing fix ($n=50$: 30 room, 20 day-schedule).}}{24}{table.caption.17}\protected@file@percent }
 \newlabel{tab:faculty-coverage}{{13}{24}{FacultyAvailability test set, before and after the schedule-day routing fix ($n=50$: 30 room, 20 day-schedule)}{table.caption.17}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Faculty Lookup Coverage}{24}{subsection.4.8}\protected@file@percent }
 \newlabel{subsec:faculty-coverage}{{4.8}{24}{Faculty Lookup Coverage}{subsection.4.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.9}English Lambda Sensitivity}{24}{subsection.4.9}\protected@file@percent }
 \newlabel{subsec:lambda-sweep-en}{{4.9}{24}{English Lambda Sensitivity}{subsection.4.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Automated metrics vs.\ $\lambda $ under the base (non-adaptive) linear fusion mode, on a fixed 60-query subset. No $\lambda $ value significantly exceeds $\lambda =1$ (BM25-only) on any metric (paired $t$-test).}}{24}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:lambda-sweep}{{5}{24}{Automated metrics vs.\ $\lambda $ under the base (non-adaptive) linear fusion mode, on a fixed 60-query subset. No $\lambda $ value significantly exceeds $\lambda =1$ (BM25-only) on any metric (paired $t$-test)}{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Automated metrics vs.\ $\lambda $ under the base (non-adaptive) linear fusion mode, on a fixed 60-query subset. No $\lambda $ value significantly exceeds $\lambda =1$ (BM25-only) on any metric (paired $t$-test).}}{25}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:lambda-sweep}{{5}{25}{Automated metrics vs.\ $\lambda $ under the base (non-adaptive) linear fusion mode, on a fixed 60-query subset. No $\lambda $ value significantly exceeds $\lambda =1$ (BM25-only) on any metric (paired $t$-test)}{figure.caption.18}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.1}Is There Room for a Learned, Continuous Fusion Weight?}{25}{subsubsection.4.9.1}\protected@file@percent }
 \newlabel{subsec:dat-ceiling}{{4.9.1}{25}{Is There Room for a Learned, Continuous Fusion Weight?}{subsubsection.4.9.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.2}Isolating the Router's Own Contribution}{25}{subsubsection.4.9.2}\protected@file@percent }
-\newlabel{subsec:adaptive-isolated}{{4.9.2}{25}{Isolating the Router's Own Contribution}{subsubsection.4.9.2}{}}
-\citation{cormack2009}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.2}Isolating the Router's Own Contribution}{26}{subsubsection.4.9.2}\protected@file@percent }
+\newlabel{subsec:adaptive-isolated}{{4.9.2}{26}{Isolating the Router's Own Contribution}{subsubsection.4.9.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Adaptive routing, isolated to the 100 entity-heavy test queries where it actually diverges from a fixed-$\lambda $ baseline (paired bootstrap, 2000 resamples). Re-measured a fourth time (2026-08-02) after the same-entity secondary bonus (Section~\ref {subsec:ir-metrics}) closed the residual nDCG gap the third measurement had left open; the RRF-era and pre-corpus-fix numbers are reported in text, not repeated here.}}{27}{table.caption.19}\protected@file@percent }
 \newlabel{tab:adaptive-isolated}{{14}{27}{Adaptive routing, isolated to the 100 entity-heavy test queries where it actually diverges from a fixed-$\lambda $ baseline (paired bootstrap, 2000 resamples). Re-measured a fourth time (2026-08-02) after the same-entity secondary bonus (Section~\ref {subsec:ir-metrics}) closed the residual nDCG gap the third measurement had left open; the RRF-era and pre-corpus-fix numbers are reported in text, not repeated here}{table.caption.19}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.3}RRF $k$ Sweep: Confirming, Not Assuming, the Same Explanation}{27}{subsubsection.4.9.3}\protected@file@percent }
-\newlabel{subsec:rrf-k-sweep}{{4.9.3}{27}{RRF $k$ Sweep: Confirming, Not Assuming, the Same Explanation}{subsubsection.4.9.3}{}}
+\citation{cormack2009}
 \citation{es2023ragas}
-\citation{halt2025}
-\citation{summac2022}
 \@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Automated faithfulness score (LLM-judge, 0--1), English sample, re-measured 2026-08-02 after the prerequisite-chain corpus fix and Chroma rebuild; supersedes the 2026-08-01 measurement.}}{28}{table.caption.20}\protected@file@percent }
 \newlabel{tab:faithfulness}{{15}{28}{Automated faithfulness score (LLM-judge, 0--1), English sample, re-measured 2026-08-02 after the prerequisite-chain corpus fix and Chroma rebuild; supersedes the 2026-08-01 measurement}{table.caption.20}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.3}RRF $k$ Sweep: Confirming, Not Assuming, the Same Explanation}{28}{subsubsection.4.9.3}\protected@file@percent }
+\newlabel{subsec:rrf-k-sweep}{{4.9.3}{28}{RRF $k$ Sweep: Confirming, Not Assuming, the Same Explanation}{subsubsection.4.9.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Faithfulness (Automated LLM-Judge)}{28}{subsection.4.10}\protected@file@percent }
 \newlabel{subsec:faithfulness}{{4.10}{28}{Faithfulness (Automated LLM-Judge)}{subsection.4.10}{}}
+\citation{halt2025}
+\citation{summac2022}
 \citation{mohri2024conformal}
 \@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score, re-measured 2026-08-02 on the same regenerated sample as Table~\ref {tab:faithfulness}; supersedes the 2026-08-01 measurement.}}{29}{table.caption.21}\protected@file@percent }
 \newlabel{tab:nli-faithfulness}{{16}{29}{Independent NLI-based faithfulness cross-check (sentence-level, SummaC-ZS-style), vs.\ the LLM-judge score, re-measured 2026-08-02 on the same regenerated sample as Table~\ref {tab:faithfulness}; supersedes the 2026-08-01 measurement}{table.caption.21}{}}
@@ -181,28 +181,28 @@
 \newlabel{subsec:crosslingual-stress}{{4.11.4}{31}{Cross-Lingual Stress Test: Query Translation, Validated}{subsubsection.4.11.4}{}}
 \citation{joren2024}
 \citation{dogruoz2023representativeness}
-\citation{huang2026survey}
 \@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces Cross-lingual sufficient-context outcomes ($n=9$, same stress-test queries as Table~\ref {tab:crosslingual-stress}).}}{32}{table.caption.24}\protected@file@percent }
 \newlabel{tab:sufficient-context-bilingual}{{19}{32}{Cross-lingual sufficient-context outcomes ($n=9$, same stress-test queries as Table~\ref {tab:crosslingual-stress})}{table.caption.24}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.11.5}Cross-Lingual Sufficient-Context Gating: A Mechanistic Diagnostic}{32}{subsubsection.4.11.5}\protected@file@percent }
 \newlabel{subsec:crosslingual-sufficient-context}{{4.11.5}{32}{Cross-Lingual Sufficient-Context Gating: A Mechanistic Diagnostic}{subsubsection.4.11.5}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.11.6}Expanding the Stress Test: A More Cautious Picture at Larger \emph  {n}}{32}{subsubsection.4.11.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.12}Results Organized by Pipeline Stage}{32}{subsection.4.12}\protected@file@percent }
-\newlabel{subsec:by-stage}{{4.12}{32}{Results Organized by Pipeline Stage}{subsection.4.12}{}}
+\citation{huang2026survey}
 \citation{huang2026survey}
 \citation{huang2026survey}
 \@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces This paper's ablations regrouped by RAG pipeline stage \citep  {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies).}}{33}{table.caption.25}\protected@file@percent }
 \newlabel{tab:by-stage}{{20}{33}{This paper's ablations regrouped by RAG pipeline stage \citep {huang2026survey}. $\Delta $ is relative to the strongest single-method baseline (BM25-only or full hybrid, whichever applies)}{table.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.12}Results Organized by Pipeline Stage}{33}{subsection.4.12}\protected@file@percent }
+\newlabel{subsec:by-stage}{{4.12}{33}{Results Organized by Pipeline Stage}{subsection.4.12}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.13}Pipeline Efficiency}{33}{subsection.4.13}\protected@file@percent }
 \newlabel{subsec:efficiency}{{4.13}{33}{Pipeline Efficiency}{subsection.4.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Comparison of data ingestion time across cold-start, incremental-update, and no-change scenarios.}}{33}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:ingestion-time}{{6}{33}{Comparison of data ingestion time across cold-start, incremental-update, and no-change scenarios}{figure.caption.26}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}\uppercase {Discussion}}{33}{section.5}\protected@file@percent }
 \newlabel{sec:discussion}{{5}{33}{\uppercase {Discussion}}{section.5}{}}
 \citation{cormack2009}
 \citation{henderson2017mnr}
 \citation{joren2024}
 \citation{liu2024lost,jin2024longcontext}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Comparison of data ingestion time across cold-start, incremental-update, and no-change scenarios.}}{34}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:ingestion-time}{{6}{34}{Comparison of data ingestion time across cold-start, incremental-update, and no-change scenarios}{figure.caption.26}{}}
 \citation{hendrycks2017baseline}
 \citation{kamath2020selective}
 \citation{dror2018hitchhiker}
@@ -260,4 +260,4 @@
 \bibcite{kamath2020selective}{{47}{2020}{{Kamath et~al.}}{{}}}
 \bibcite{thorne2018fever}{{48}{2018}{{Thorne et~al.}}{{}}}
 \bibcite{tang2024minicheck}{{49}{2024}{{Tang et~al.}}{{}}}
-\gdef \@abspage@last{41}
+\gdef \@abspage@last{42}
