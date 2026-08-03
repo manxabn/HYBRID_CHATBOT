@@ -78,14 +78,23 @@ OUT_PER_QUERY = ROOT / "results" / "nli_faithfulness_per_query.csv"
 OUT_SUMMARY = ROOT / "results" / "nli_faithfulness_summary.csv"
 OUT_AGREEMENT = ROOT / "results" / "nli_vs_llmjudge_agreement.csv"
 
+# Default CPU: the original small model (~66M params, ~440MB) finishes
+# CPU inference on ~210 rows in well under a minute, and CPU was chosen
+# specifically to avoid GPU contention with a concurrently-running
+# Ollama-bound job in earlier sessions. Module-level (not a hardcoded
+# local) so an importer can override it before calling main() -- same
+# pattern already used for NLI_MODEL/LABELS/INPUT_FILES/OUT_* below.
+# Needed 2026-08-03: a much larger (~435M param) model swap ran on CPU
+# for 9+ hours and completed only 8/38 batches with wildly abnormal
+# per-batch timings (the first batch alone took 3h08m) before being
+# killed -- a genuine performance anomaly for that specific model class
+# on this hardware, not just "bigger model, proportionally slower."
+DEVICE = "cpu"
+BATCH_SIZE = 64  # module-level for the same reason as DEVICE -- a GPU run with limited VRAM (e.g. a 4GB laptop GPU) may need this lower
+
 
 def main():
-    # Deliberately CPU: a background Ollama-bound job may be using the GPU
-    # concurrently, and the instruction for this session was not to do
-    # anything that could interfere with it. This model is small enough
-    # (~440MB) that CPU inference on ~210 rows finishes in well under a
-    # minute -- not worth the risk of GPU contention for the time saved.
-    device = "cpu"
+    device = DEVICE
     print(f"Loading {NLI_MODEL} on {device}...")
     model = CrossEncoder(NLI_MODEL, device=device)
 
@@ -127,7 +136,7 @@ def main():
 
     print(f"Scoring {len(all_pairs)} (context-sentence, answer-sentence) pairs...")
     with torch.no_grad():
-        logits = model.predict(all_pairs, convert_to_numpy=True, show_progress_bar=True, batch_size=64)
+        logits = model.predict(all_pairs, convert_to_numpy=True, show_progress_bar=True, batch_size=BATCH_SIZE)
     probs = torch.softmax(torch.tensor(logits), dim=1).numpy()
     p_entailment = probs[:, LABELS.index("entailment")]
 
