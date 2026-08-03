@@ -1,0 +1,26 @@
+{
+  "n": 371,
+  "features": [
+    "query_confidence",
+    "query_top1_score",
+    "question_match_any",
+    "bm25_vector_agreement"
+  ],
+  "model": "GradientBoostingClassifier",
+  "max_depth": 3,
+  "n_estimators": 50,
+  "random_state": 0,
+  "in_sample_accuracy": 0.8733,
+  "cv_mean_accuracy_5seed_5fold": 0.7374,
+  "cv_std_accuracy": 0.0445,
+  "vs_deployed_4signal_logreg_paired_ttest_p": 0.0,
+  "vs_deployed_4signal_logreg_paired_wilcoxon_p": 0.0,
+  "stability_across_classifier_random_states": [
+    0.7379,
+    0.7374,
+    0.739,
+    0.7374,
+    0.7374
+  ],
+  "source_script": "scripts/calibrate_abstention_v2_signals.py + scripts/calibrate_abstention_gbt_final.py"
+}
