@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  4 AUG 2026 00:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  4 AUG 2026 00:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -818,12 +818,12 @@ Underfull \vbox (badness 1430) has occurred while \output is active []
  [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 243.
+(hyperref)                removing `\uppercase' on input line 245.
 
 <fig_conditioning_v2.png, id=180, 520.344pt x 303.534pt>
 File: fig_conditioning_v2.png Graphic file (type png)
 <use fig_conditioning_v2.png>
-Package pdftex.def Info: fig_conditioning_v2.png  used on input line 269.
+Package pdftex.def Info: fig_conditioning_v2.png  used on input line 271.
 (pdftex.def)             Requested size: 227.62204pt x 132.78189pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -834,13 +834,17 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <fig_deconfounding.png, id=184, 448.074pt x 303.534pt>
 File: fig_deconfounding.png Graphic file (type png)
 <use fig_deconfounding.png>
-Package pdftex.def Info: fig_deconfounding.png  used on input line 293.
+Package pdftex.def Info: fig_deconfounding.png  used on input line 295.
 (pdftex.def)             Requested size: 199.16928pt x 134.92168pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7]
-Overfull \hbox (3.53966pt too wide) in paragraph at lines 332--333
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (3.53966pt too wide) in paragraph at lines 334--335
 []\OT1/ptm/b/n/10 External base-line com-par-i-son. \OT1/ptm/m/n/10 Against Col
 -BERTv2 ([]San-thanam et al.[], []2022[]), a 2022-era pub-lished late-interacti
 on
@@ -849,10 +853,10 @@ on
 [8] [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 425.
+(hyperref)                removing `\uppercase' on input line 427.
 
 
-Overfull \hbox (17.58968pt too wide) in paragraph at lines 434--435
+Overfull \hbox (17.58968pt too wide) in paragraph at lines 436--437
 []\OT1/ptm/b/n/10 Entity-heavy ab-sten-tion cal-i-bra-tion is capped at a gen-u
 ine data ceil-ing. \OT1/ptm/m/n/10 Only 18 of 380 real out-of-scope/answerable
  []
@@ -860,12 +864,12 @@ ine data ceil-ing. \OT1/ptm/m/n/10 Only 18 of 380 real out-of-scope/answerable
 [11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 450.
+(hyperref)                removing `\uppercase' on input line 446.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 466.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 462.
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 []\OT1/ptm/m/n/9 Chaffin, A. (2025). GTE-ModernColBERT. Model re-lease, LightOn
  AI. []$\OT1/pcr/m/n/9 https : / / huggingface . co / lightonai /
  []
@@ -898,7 +902,7 @@ onts/type1/urw/symbol/usyr.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on dataset_process_results.pdf (14 pages, 400723 bytes).
+Output written on dataset_process_results.pdf (14 pages, 400241 bytes).
 PDF statistics:
  318 PDF objects out of 1000 (max. 8388607)
  64 named destinations out of 1000 (max. 500000)

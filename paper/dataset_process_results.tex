@@ -240,6 +240,8 @@ Two entries in Table~\ref{tab:fix-arc} illustrate the project's general discipli
 
 Generation: Llama-3.1-8B served locally via Ollama. Dense retrieval: a contrastively fine-tuned sentence-transformer (base \texttt{all-MiniLM-L6-v2}). Sparse retrieval: \texttt{rank\_bm25}. Reranking (disabled by default): an MS-MARCO-tuned MiniLM cross-encoder ($\sim$33M parameters), also tested after fine-tuning on this corpus's own hard negatives. Faithfulness cross-check: four independent NLI/grounding-verification models (Section~\ref{subsec:results-faithfulness}). Classifiers: scikit-learn (logistic regression, gradient-boosted trees). Hardware: an NVIDIA RTX 3050 Ti Laptop GPU (4GB VRAM), CUDA 12.1; software: PyTorch 2.5.1, scikit-learn 1.9.0.
 
+Two further mechanisms, both enabled by default: an LLM-based entity-normalization fallback (fuzzy correction of malformed course codes and misspelled faculty names when exact-match finds nothing but an entity-shaped pattern is present), validated on a hand-constructed malformed-query set ($8/8$ resolved correctly with normalization enabled vs.\ $1/8$ without); and a standing table-coverage audit verifying every source table has at least one exercising query in the test set, introduced after a real, since-closed coverage gap was found in \texttt{FacultyAvailability}.
+
 \section{\uppercase{Results}}
 \label{sec:results}
 
@@ -438,12 +440,6 @@ Honestly stated, in order of how directly each can be resolved by further engine
 \textbf{The reranker has never shown a measurable benefit}, in five separately-tested configurations (Section~\ref{subsec:results-reranker}); the best achievable state is a tie, not a win, and this is not expected to change without a fundamentally different reranker architecture.
 
 \textbf{BM25-level Banglish spelling-variant normalization shows a null effect} on the main Banglish test set, a genuine tested-and-negative result, not an unexamined gap.
-
-\textbf{The sufficient-context override is deliberately one-directional} -- it can only make the system less likely to abstain, never more, so it cannot itself compensate for a missed abstain-worthy query. This is a considered safety design, not a defect: forcing abstention on ambiguous evidence would risk declining to answer genuinely answerable questions.
-
-\textbf{Table-coverage auditing has an inherent ceiling.} A standing audit verifies every source table has at least one exercising query in the test set (motivated by a real, since-closed coverage gap in FacultyAvailability); it can only ever prove a table has \emph{some} exercising query, never that its routing logic is correct in every case.
-
-\textbf{An LLM-based entity-normalization fallback} (fuzzy/LLM correction of malformed course codes and misspelled names when exact-match finds nothing) is enabled by default and validated on a small ($n=8$) hand-constructed malformed-query set (8/8 with normalization vs.\ 1/8 without) -- a clean, reproduced signal, but a small one, disclosed as such rather than presented as broadly representative.
 
 \textbf{LLM-judge scoring is not safe to trust on nuanced, definition-sensitive criteria without a decomposed judge or cross-check} -- demonstrated directly in Section~\ref{subsec:results-novelty}'s judge-reliability correction (43.3\% of responses re-scored differently once a validated, decomposed judge replaced the original holistic one). This is a caution about the evaluation methodology generally, not specific to that one result.
 
