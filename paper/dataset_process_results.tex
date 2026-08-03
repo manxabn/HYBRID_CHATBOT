@@ -297,6 +297,17 @@ Recall@5 & 0.88 & 0.93 & 5/5 discordant, $p=0.063$ \\
 
 The fix (replacing RRF with linear fusion at the same weighting) was then verified with the same diagnostic re-run: zero discordant pairs remained on Recall@1/3/5 against the fixed baseline -- not merely a restored tie, but genuine equivalence even without the masking guarantee's help.
 
+\subsection{Confirmed Positive Component Results}
+\label{subsec:results-positive-components}
+
+Beyond the two novelty findings above, direct component ablation identifies exactly two components with a fully confirmed positive effect -- reported here with their real numbers rather than left as a qualitative claim, since a component-by-component ablation table does not make this pattern obvious on its own.
+
+\textbf{Embedding fine-tuning.} Domain-adapting the retriever's sentence embeddings via contrastive training on this corpus's own (question, answer) pairs, evaluated on held-out validation data before deployment (never trained on): mining real hard negatives (actual retriever near-misses, not random text) beat in-batch-only contrastive training on both MRR ($0.536$ vs.\ $0.502$, paired bootstrap, $p=0.018$) and Top-1 accuracy ($0.290$ vs.\ $0.246$, $p=0.030$). A second retrain, following a data-ingestion pass that nearly tripled BanglishQA, was tested rather than assumed to help (more training data of a harder, noisier kind is not automatically an improvement): it produced a further significant MRR gain on the Banglish-only held-out set specifically ($+0.026$, $p=0.023$), with no significant regression on the pooled or structured-table held-out sets. Both gains were validated before, not after, full-pipeline deployment.
+
+\textbf{Prerequisite-graph augmentation.} Multi-hop prerequisite-chain questions are answered by traversing a directed graph built from the \texttt{Prerequisites} table's own edge data, a query shape no single retrieved chunk can answer directly (Section~\ref{subsec:structured-tables}). Isolated ablation on an expanded $n=31$ sample of the corpus's own real, database-verified prerequisite chains (12 exercised by the main test set plus 19 additional real chains not previously tested) confirms a positive effect on all four generation-quality metrics: BLEU ($+0.211$, $p<0.0001$ both tests), ROUGE-L ($+0.116$, $p=0.0009$/$p<0.0001$), BERTScore ($+0.029$, $p=0.0004$/$p<0.0001$), and METEOR ($+0.108$, $p<0.0001$ both tests). This measurement itself has a disclosed history: an earlier, smaller ($n=12$) test initially showed no effect, traced to a chunk-formatting bug (arrow vs.\ hyphen notation in stored chains) rather than genuine ineffectiveness; both the bug and the fix are reported, not only the more favorable final number.
+
+\textbf{Practical consequence: abstention rate.} The confidence-gated abstention mechanism (Section~\ref{subsec:results-abstention}), combined with the exact-match coverage fixes described in Section~\ref{subsec:process-arc}, reduces the system's rate of declining to answer to $0.5\%$ of English and $2.0\%$ of Banglish test queries, down from $10.5\%$ before the coverage fix -- a real, measured reduction in unnecessary refusals, not merely a design intention.
+
 \subsection{Retrieval Quality}
 \label{subsec:results-retrieval}
 
