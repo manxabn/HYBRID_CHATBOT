@@ -329,6 +329,8 @@ Vector-only & 0.965 & 0.660 & 0.501 & 0.315 & 0.897 \\
 \end{tabular}
 \end{table}
 
+\textbf{External baseline comparison.} Against ColBERTv2 \citep{santhanam2022colbertv2}, a 2022-era published late-interaction retriever, the deployed system holds a decisive advantage driven by its exact-match mechanism. Checking whether this advantage is an artifact of comparing against an aging checkpoint rather than a real property of the system, the identical methodology was repeated against \texttt{GTE-ModernColBERT-v1} \citep{chaffin2025gtemoderncolbert}, a 2025 late-interaction model reported by its authors as the first to beat ColBERT-small on the BEIR benchmark. Recall/MRR show no significant difference (both near ceiling, McNemar $p\geq0.25$ throughout), but nDCG@5/@10 -- sensitive to \emph{where} in the ranking the correct answer sits, not merely whether it appears -- are now significantly ahead for GTE-ModernColBERT under the bootstrap test. This is reported plainly as a real, current result: a specific, more recent late-interaction model can out-rank the deployed system's fine-tuned embeddings on open-ended queries (the exact-match mechanism gives the deployed system no help there), even though the deployed system retains a decisive, significant advantage over both external baselines on the entity-heavy queries that dominate this system's actual query distribution. The advantage over a 2022 checkpoint does not straightforwardly carry over to a stronger 2025 checkpoint from the same model family -- an external fact about the state of retrieval research, not a bug in this system to fix.
+
 \subsection{Generation Faithfulness}
 \label{subsec:results-faithfulness}
 
@@ -351,6 +353,8 @@ MiniCheck & -- & -- & blocked, CVE-2025-32434 \\
 \end{table}
 
 Root cause of the remaining (near-zero, still negative) correlation was quantified rather than left unexplained: of 169 rows, 153 have both instruments agreeing the answer is faithful, and \emph{zero} have both agreeing it is unfaithful; 14 rows show the judge scoring high while NLI scores low (a structural blind spot on hedge/decline answers and on facts copied verbatim from structured multi-field records), and 2 show the reverse (at least one a confirmed LLM-judge scoring error, found by direct inspection). This asymmetry, not general disagreement, is what drives the negative sign. Two targeted fix attempts followed this diagnosis: excluding the single hedge-answer row moved $r$ from $-0.018$ to $-0.004$ (small, proportionate to the one affected row); re-splitting context by line as well as sentence (targeting the structured-record blind spot directly) made agreement \emph{worse} ($r=-0.245$), an honest negative result, not adopted.
+
+\textbf{A third faithfulness mechanism, calibrated and found unusable.} Conformal claim-level backoff \citep{mohri2024conformal} was implemented in earlier work but never calibrated. Calibrating it for the first time against a real, structurally-labeled 442-claim set (137 positive, 305 negative, both classes determined by construction rather than judgment) with a proper 70/30 held-out split finds it degenerates to a threshold of $1.0000$ -- the mathematical maximum an NLI entailment score can take -- retaining \textbf{0 of 133} held-out claims. This is not a data-quantity problem fixable by recalibration: the root cause is that $88\%$ of the calibration set's negative-labeled (incorrect) claims are near-verbatim reproductions of their own irrelevant retrieved context, so NLI entailment scores them as faithful despite the underlying answer being wrong -- the signal measures faithfulness-to-given-context, not correctness-to-the-true-query, and these diverge exactly in the unanswerable-query regime this mechanism most needs to catch. Reported as a diagnosed negative result rather than left in undecided limbo; the mechanism is not deployed.
 
 \subsection{Abstention Gate}
 \label{subsec:results-abstention}
@@ -437,6 +441,10 @@ Honestly stated, in order of how directly each can be resolved by further engine
 
 \textbf{The sufficient-context override is deliberately one-directional} -- it can only make the system less likely to abstain, never more, so it cannot itself compensate for a missed abstain-worthy query. This is a considered safety design, not a defect: forcing abstention on ambiguous evidence would risk declining to answer genuinely answerable questions.
 
+\textbf{Table-coverage auditing has an inherent ceiling.} A standing audit verifies every source table has at least one exercising query in the test set (motivated by a real, since-closed coverage gap in FacultyAvailability); it can only ever prove a table has \emph{some} exercising query, never that its routing logic is correct in every case.
+
+\textbf{An LLM-based entity-normalization fallback} (fuzzy/LLM correction of malformed course codes and misspelled names when exact-match finds nothing) is enabled by default and validated on a small ($n=8$) hand-constructed malformed-query set (8/8 with normalization vs.\ 1/8 without) -- a clean, reproduced signal, but a small one, disclosed as such rather than presented as broadly representative.
+
 \textbf{LLM-judge scoring is not safe to trust on nuanced, definition-sensitive criteria without a decomposed judge or cross-check} -- demonstrated directly in Section~\ref{subsec:results-novelty}'s judge-reliability correction (43.3\% of responses re-scored differently once a validated, decomposed judge replaced the original holistic one). This is a caution about the evaluation methodology generally, not specific to that one result.
 
 \section{\uppercase{Conclusion}}
@@ -450,6 +458,12 @@ The dataset underlying this system is a real, provenance-labeled, bilingual corp
 \bibitem[Dror et~al.(2018)]{dror2018hitchhiker} Dror, R., Baumer, G., Shlomov, S., and Reichart, R. (2018). The hitchhiker's guide to testing statistical significance in natural language processing. In \textit{Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics}, pages 1383--1392.
 
 \bibitem[Kruk et~al.(2025)]{kruk2025banglassist} Kruk, F., Herath, S., and Choudhury, P. (2025). BanglAssist: A Bengali-English generative AI chatbot for code-switching and dialect-handling in customer service. In \textit{Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA '25)}. arXiv:2503.22283.
+
+\bibitem[Mohri and Hashimoto(2024)]{mohri2024conformal} Mohri, C. and Hashimoto, T. (2024). Language models with conformal factuality guarantees. In \textit{Proceedings of the 41st International Conference on Machine Learning (ICML 2024)}.
+
+\bibitem[Santhanam et~al.(2022)]{santhanam2022colbertv2} Santhanam, K., Khattab, O., Saad-Falcon, J., Potts, C., and Zaharia, M. (2022). ColBERTv2: Effective and efficient retrieval via lightweight late interaction. In \textit{Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT 2022)}, pages 3715--3734. arXiv:2112.01488.
+
+\bibitem[Chaffin(2025)]{chaffin2025gtemoderncolbert} Chaffin, A. (2025). GTE-ModernColBERT. Model release, LightOn AI. \url{https://huggingface.co/lightonai/GTE-ModernColBERT-v1}.
 
 \end{thebibliography}
 
