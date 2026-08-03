@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  4 AUG 2026 00:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  4 AUG 2026 00:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -731,7 +731,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 173.
 
-<fig_hybrid_retriever.png, id=145, 232.7094pt x 555.7563pt>
+<fig_hybrid_retriever.png, id=153, 232.7094pt x 555.7563pt>
 File: fig_hybrid_retriever.png Graphic file (type png)
 <use fig_hybrid_retriever.png>
 Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 183.
@@ -820,7 +820,7 @@ Underfull \vbox (badness 1430) has occurred while \output is active []
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 243.
 
-<fig_conditioning_v2.png, id=172, 520.344pt x 303.534pt>
+<fig_conditioning_v2.png, id=180, 520.344pt x 303.534pt>
 File: fig_conditioning_v2.png Graphic file (type png)
 <use fig_conditioning_v2.png>
 Package pdftex.def Info: fig_conditioning_v2.png  used on input line 269.
@@ -831,7 +831,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig_deconfounding.png, id=176, 448.074pt x 303.534pt>
+<fig_deconfounding.png, id=184, 448.074pt x 303.534pt>
 File: fig_deconfounding.png Graphic file (type png)
 <use fig_deconfounding.png>
 Package pdftex.def Info: fig_deconfounding.png  used on input line 293.
@@ -843,40 +843,39 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9]
+[9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 411.
+(hyperref)                removing `\uppercase' on input line 421.
 
 
-Overfull \hbox (17.58968pt too wide) in paragraph at lines 420--421
+Overfull \hbox (17.58968pt too wide) in paragraph at lines 430--431
 []\OT1/ptm/b/n/10 Entity-heavy ab-sten-tion cal-i-bra-tion is capped at a gen-u
 ine data ceil-ing. \OT1/ptm/m/n/10 Only 18 of 380 real out-of-scope/answerable
  []
 
-[10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 432.
+(hyperref)                removing `\uppercase' on input line 442.
 
-[11] [12 <./fig_hybrid_retriever.png>] [13 <./fig_conditioning_v2.png> <./fig_d
-econfounding.png>] (dataset_process_results.aux)
+[11] [12] [13 <./fig_hybrid_retriever.png>] [14 <./fig_conditioning_v2.png> <./
+fig_deconfounding.png>] (dataset_process_results.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `dataset_process_results.out' has not changed
 .
-(rerunfilecheck)             Checksum: 865ACB1F7B47E69BD67EDDB986011B99;4420.
+(rerunfilecheck)             Checksum: 22B1E182738F4E9F56725C9F93EA0DC7;4929.
  ) 
 Here is how much of TeX's memory you used:
- 13875 strings out of 467871
- 220424 string characters out of 5418376
- 652436 words of memory out of 5000000
- 42506 multiletter control sequences out of 15000+600000
+ 13882 strings out of 467871
+ 220558 string characters out of 5418376
+ 652576 words of memory out of 5000000
+ 42510 multiletter control sequences out of 15000+600000
  664304 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,1826b,458s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1826b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -887,9 +886,9 @@ onts/type1/urw/symbol/usyr.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on dataset_process_results.pdf (13 pages, 388333 bytes).
+Output written on dataset_process_results.pdf (14 pages, 392621 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 58 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 248 words of extra memory for PDF output out of 10000 (max. 10000000)
 

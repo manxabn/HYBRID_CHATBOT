@@ -398,6 +398,16 @@ Generation & 5.24s & 10.26s & 17.11s \\
 \end{tabular}
 \end{table}
 
+\subsection{Cross-Lingual and Bilingual Performance}
+\label{subsec:results-crosslingual}
+
+The retrieval ablation (Section~\ref{subsec:results-retrieval}) shows comparable results across English and Banglish using the identical architecture, but the two components built specifically for the code-mixed setting -- cross-lingual query translation and BM25-level Banglish spelling-variant normalization -- both show null effects on the main Banglish test set. BM25 normalization's null result is a genuine tested-and-negative finding (Section~\ref{sec:limitations}), not an unexamined gap. Query translation's null result was traced to a structural blind spot in the main test set itself: most Banglish test queries ask about content that also exists in Banglish source material, so translating to English before retrieval has little left to add. A dedicated stress test targeting the scenario translation is actually meant for -- Banglish queries about content that exists only in EnglishQA, with no Banglish counterpart -- shows translation genuinely helping: top-5 retrieval accuracy improves from $61.5\%$ to $84.6\%$ ($n=13$ real, database-verified facts), confirming the null result on the main test set reflected that test set's own coverage, not evidence the technique is unhelpful. This revision's other retriever improvements (embedding fine-tuning, BM25 retuning) narrowed the margin considerably on their own -- the plain-retrieval baseline on this same stress test rose from $33.3\%$ to $61.5\%$ -- and an expanded, LLM-generated 27-query version of the same stress test no longer reaches statistical significance on the current retriever ($59.3\%$ vs.\ $63.0\%$, not significant on discordant pairs), so this finding is held more cautiously than a single positive measurement would suggest, not treated as fully settled.
+
+\subsection{Two Further Honest Negative Results}
+\label{subsec:results-further-negatives}
+
+Two additional attempts on the open-ended abstention gate (Section~\ref{subsec:results-abstention}), tried alongside the successful gradient-boosted-tree improvement and reported regardless of outcome: replacing the binary lexical near-match signal with its continuous (non-thresholded) form produced no real effect ($0.642$ vs.\ the deployed classifier's $0.644$, not significantly different); and a fifth signal, normalized entropy of the retrieval score distribution, was tested twice -- a first, plain version showed no effect, diagnosed to a genuine cause (this corpus's fused scores cluster too tightly for raw softmax entropy to discriminate), and a parameter-free fix targeting that cause (z-scoring before the softmax) moved closer to significance but did not clear this report's own both-tests-agree bar. Neither addition was deployed; both are reported as real, diagnosed attempts rather than omitted for not working out.
+
 \subsection{Robustness}
 \label{subsec:results-robustness}
 
