@@ -192,15 +192,15 @@ Condition & BLEU & ROUGE-L & BERTSc. & METEOR \\
 Graph on (arrow notation, pre-fix, $n{=}12$) & 0.599 & 0.928 & 0.967 & 0.869 \\
 Graph on (hyphen notation, $n{=}12$) & 0.917 & 0.961 & 0.992 & 0.960 \\
 Graph off (plain retrieval, $n{=}12$) & 0.755 & 0.869 & 0.968 & 0.877 \\
-\textbf{Graph on (current, $n{=}31$)} & \textbf{0.941} & \textbf{0.974} & \textbf{0.994} & \textbf{0.977} \\
-\textbf{Graph off (current, $n{=}31$)} & \textbf{0.730} & \textbf{0.859} & \textbf{0.965} & \textbf{0.869} \\
+\textbf{Graph on ($n{=}31$, current retriever)} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{0.999} \\
+\textbf{Graph off ($n{=}31$, current retriever)} & \textbf{0.888} & \textbf{0.906} & \textbf{0.980} & \textbf{0.928} \\
 \hline
 \end{tabular}
 \end{table}
 
 After the notation fix, graph augmentation's point estimate was higher than plain retrieval on all four metrics at $n=12$, reversing the pre-fix BLEU regression entirely, but re-measurement under the current retriever (exact-match fix, BM25 retuning) left the significance picture mixed at that sample size: BLEU significant under a paired $t$-test ($p=0.042$) but not Wilcoxon ($p=0.063$); BERTScore the reverse ($p=0.031$ Wilcoxon, $p=0.078$ paired-$t$); ROUGE-L and METEOR non-significant under both. At $n=12$ this did not clear this paper's own both-tests-agree bar.
 
-The expanded $n=31$ measurement clears it cleanly, on every metric: BLEU ($+0.211$, $p<0.0001$ both tests), ROUGE-L ($+0.116$, $p=0.0009$/$p<0.0001$), BERTScore ($+0.029$, $p=0.0004$/$p<0.0001$), and METEOR ($+0.108$, $p<0.0001$ both tests). This is a genuine, confirmed win, not a re-measurement of the same 12 queries under friendlier conditions -- 19 of the 31 queries are facts the main test set never exercised before, and the effect replicates cleanly across the enlarged set. We report both the bug and the fix, and both the underpowered and the expanded measurement, rather than only the most favorable number: the pre-fix result would otherwise have been read as genuine evidence against graph augmentation, when it was in fact a formatting artifact, and the $n=12$ result on its own would have understated a real effect that a larger, still entirely real, sample confirms.
+The expanded $n=31$ measurement, as first reported in an earlier revision, cleared this cleanly on every metric ($p<0.001$ throughout). That measurement predated the Chroma-index rebuild (Section~\ref{subsec:ir-metrics}), which fixed a real bug (the live vector index still serving pre-correction chunk text) and was not itself re-checked against this table at the time -- an oversight we caught only by directly asking whether every table that depended on the rebuilt index had actually been re-measured, not by assuming a "re-measured everything" claim covered it. Re-running the identical $n=31$ comparison under the rebuilt index finds both conditions improved substantially (graph off: BLEU $0.730\to0.888$, ROUGE-L $0.859\to0.906$, BERTScore $0.965\to0.980$, METEOR $0.869\to0.928$; graph on: BLEU/ROUGE-L/BERTScore all reaching $1.000$, METEOR $0.999$) -- the other retrieval fix narrowed the gap graph augmentation was originally measured against, the same pattern already disclosed elsewhere in this paper for the cross-lingual stress test (Section~\ref{subsec:crosslingual-stress}). The effect remains genuinely significant on every metric, both tests agreeing (BLEU $+0.112$, $p=0.031$/$p=0.039$; ROUGE-L $+0.094$, $p=0.026$/$p=0.042$; BERTScore $+0.020$, $p=0.025$/$p=0.043$; METEOR $+0.071$, $p=0.034$/$p=0.039$), but now a materially more marginal finding than the $p<0.0001$ previously reported, not a reversal. We correct this here rather than let a stale significance level stand next to a table that has itself been updated.
 
 \subsection{Confidence-Gated Abstention with Sufficient-Context Override}
 \label{subsec:abstention}
@@ -735,7 +735,7 @@ Retrieval & Learned/continuous fusion weight (DAT-style) & Not implemented: orac
 Retrieval & Unambiguous-match ceiling & Positive historically ($+34$pp at introduction); marginal contribution fully converged to zero on the current retriever, re-measured 2026-08-01 (Table~\ref{tab:unambiguous}) \\
 Post-retrieval & Cross-encoder reranking & Negative but weaker on re-measurement; only METEOR vs.\ BM25-only still significant (Sec.~\ref{subsec:reranker-ablation}) \\
 Post-retrieval & Context ordering (zig-zag) & Implemented; not independently significance-tested \\
-Architecture & Prerequisite-graph augmentation & Isolated, expanded to $n=31$ real DB-verified chains (Sec.~\ref{subsec:graph}): all 4 metrics confirmed significant, both tests, $p<0.001$ \\
+Architecture & Prerequisite-graph augmentation & Isolated, expanded to $n=31$ real DB-verified chains (Sec.~\ref{subsec:graph}): all 4 metrics confirmed significant, both tests, $p<0.05$ (narrowed after a later retrieval fix; see Sec.~\ref{subsec:graph}) \\
 Architecture & Confidence-gated abstention & Abstention rate 10.5\%$\to$0.5\% after retriever/calibration fixes; open-ended threshold's held-out generalization confirmed weak (Sec.~\ref{sec:discussion}) \\
 Generation & Faithfulness (LLM-judge) & Adaptive highest descriptively; matched-subset test significantly higher than no-retrieval only, tied with all three real retrieval baselines (Sec.~\ref{subsec:faithfulness}) \\
 \hline

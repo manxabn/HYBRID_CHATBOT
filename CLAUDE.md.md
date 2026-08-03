@@ -4347,3 +4347,21 @@ Ran the one reranker combination flagged much earlier this session as "not yet s
 **Paper propagation**: extended Section reranker-route-conditional with both findings (the null pool5+route-conditional combination, and the new external-baseline significance comparison). Recompiles cleanly, 42 pages, 0 undefined refs.
 
 Files: `results/novel_pipeline_raw_outputs_reranker_pool5_rerankopenended.csv`, `results/novel_pipeline_metrics_per_query_roundQ_reranker_pool5_rerankopenended.csv`, `results/novel_pipeline_metrics_summary_roundQ_reranker_pool5_rerankopenended.csv`, `results/significance_tests_novel_roundQ_reranker_pool5_rerankopenended.csv`, `results/significance_tests_novel_reranker_rerankopenended_v2.csv` (newly computed for the existing route-conditional-only variant), `results/roundQ_reranker_pool5_rerankopenended_log.txt`. No pipeline code touched -- pure evaluation.
+
+## 2026-08-04: user asked "are these the latest results?" -- found a genuinely stale claim, re-verified, corrected in both papers
+
+Direct, well-founded question about three results just added to the new standalone report (abstention rate, embedding fine-tuning gains, graph ablation). Checked each rather than assuming all three were current.
+
+**Abstention rate (10.5% -> 0.5%/2.0%)**: re-ran live against the deployed GBT classifier (not the gate that existed when this number was first measured). Confirmed unchanged: 1/200 English (0.5%), 2/100 Banglish (2.0%) -- genuinely re-verified, not stale.
+
+**Embedding fine-tuning gains**: checked whether `scripts/eval_embeddings_held_out.py` goes through ChromaDB at all -- it doesn't, it's a direct embedding-space cosine-similarity check, so the later Chroma-index-rebuild bug fix (below) could never have affected it. Confirmed safe by construction, no re-run needed.
+
+**Prerequisite-graph ablation (n=31): found genuinely stale, re-verified, corrected.** The Aug 2 commit "Rebuild Chroma index, re-measure every vector-dependent table" explicitly listed what it re-measured (IR metrics, the 800-generation baseline, ColBERT/GTE-ModernColBERT baselines, the deconfounding diagnostic) -- the graph ablation is conspicuously absent from that list. The only graph-ablation-script change in that commit was a safety fix (`--out` flag) to the older, already-superseded n=12 script, not a re-run of the n=31 expansion the paper actually cites. Re-ran the identical n=31 comparison for real (`scripts/reverify_graph_ablation_roundR.py`, wraps the existing script with an isolated output path so the original result stays on disk for direct comparison).
+
+**Real, honest result**: both conditions improved since the Chroma rebuild (graph-off: BLEU 0.730->0.888; graph-on: BLEU/ROUGE-L/BERTScore now all 1.000, essentially ceiling). The gap narrowed substantially -- significance moved from p<0.0001 on every metric to p=0.025-0.043 (still significant, both tests still agree on all four metrics, but a materially more marginal finding than previously reported, the same "other fixes narrowed this gap" pattern already disclosed elsewhere in the paper for the cross-lingual stress test).
+
+**A real infra hiccup along the way, root-caused not worked around**: the re-scoring step (BERTScore) segfaulted on first attempt. Checked `nvidia-smi` before assuming anything -- an orphaned `llama-server.exe` from the just-finished generation run was still holding ~2.3GB of the 4GB GPU, the same recurring leak class documented earlier this project. Killed it, retried, worked cleanly.
+
+**Corrected both papers**, not just the new one -- the main 43-page paper cited the same stale p<0.0001 claim (Table~graph-ablation, the RQ2 discussion's summary table row, and the main narrative paragraph). Updated both with the current numbers and an honest explanation of why they moved. Both recompile cleanly (main: 43 pages, standalone: 13 pages), 0 undefined refs, test suite green (39/39).
+
+Files: `scripts/reverify_graph_ablation_roundR.py`, `results/graph_ablation_expanded_raw_roundR.csv`, `results/graph_ablation_expanded_per_query_roundR.csv`, `results/graph_ablation_expanded_summary_roundR.csv`, `results/graph_ablation_roundR_log.txt`. No pipeline code touched -- pure re-verification and correction.
