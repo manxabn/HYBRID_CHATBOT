@@ -4279,3 +4279,19 @@ Test suite re-run (37/37 green) after the `measure_nli_faithfulness.py` edit, si
 **Paper propagation**: extended Limitations item "Seventh" with the full three-model trend and the CPU/GPU performance finding (itself a disclosed, honest result -- not every anomaly needs to be hidden to keep a paper looking clean). New verified citation (Thorne et al. 2018, FEVER). Recompiles cleanly, 41 pages, 0 undefined refs.
 
 Files: `scripts/measure_nli_faithfulness_fever_roundP.py` (updated), `results/nli_faithfulness_per_query_roundP_fever.csv`, `results/nli_faithfulness_summary_roundP_fever.csv`, `results/nli_vs_llmjudge_agreement_roundP_fever.csv`. Shared script change: `scripts/measure_nli_faithfulness.py` (DEVICE/BATCH_SIZE made overridable, defaults unchanged).
+
+## 2026-08-03: a fourth faithfulness cross-check model (MiniCheck) -- blocked by a real security constraint, declined to bypass it
+
+Fourth attempt on the NLI cross-check, and a genuinely different kind of model this time: MiniCheck (Tang, Laban & Durrett, EMNLP 2024, independently WebSearch-verified before citing), trained directly for "does this document support this claim" rather than repurposed generic NLI -- all three prior attempts (MiniLM, DeBERTa-base, DeBERTa-large-FEVER) were NLI models applied to this task via the SummaC-ZS sentence-decomposition trick, not models trained for it directly.
+
+Installed the official `minicheck` pip package (from the paper's own maintainers' GitHub repo, standard pip install, not `trust_remote_code` -- deliberately the safer of the two options considered earlier this session, since I can inspect an installed package rather than trust dynamically-executed remote code). Verified GPU was free before running (no `llama-server.exe`, confirmed free VRAM), given the FEVER model's CPU disaster earlier tonight.
+
+**Blocked before producing any result -- a real environment/security constraint, not a bug worked around**: `lytang/MiniCheck-DeBERTa-v3-Large`'s only published checkpoint is a legacy pickle-format `pytorch_model.bin` (checked the HF repo file listing directly -- no safetensors variant exists). Current `transformers` refuses to `torch.load` non-safetensors checkpoints unless torch>=2.6 (a deliberate block against CVE-2025-32434, a real pickle-deserialization vulnerability); this project's torch is 2.5.1.
+
+**Declined to force it through, on purpose**: two ways existed to make this work tonight -- upgrade torch, or bypass the security check. Did neither. Upgrading torch mid-session risks the reproducibility of every other already-verified component (embeddings, reranker, generation all depend on the current, working torch install); bypassing a security check specifically protecting against untrusted pickle files, just to finish one more experiment at this hour, is exactly the kind of decision that should NOT be made under time pressure. This is the same judgment call already made once earlier this session (declining Vectara HHEM's `trust_remote_code` requirement) -- consistent, not one-off.
+
+**Cleaned up rather than left half-installed**: uninstalled `minicheck` and its pulled-in dependencies (`openai`, `distro`, `jiter`, `sniffio` -- none otherwise needed by this project) once confirmed unusable. The script itself stays, documented as a real, honest attempt with the exact blocking reason, runnable by anyone with torch>=2.6 later.
+
+**Paper propagation**: added one more sentence to Limitations item "Seventh" disclosing this attempt and why it was declined, with a verified citation (Tang et al. 2024, MiniCheck). Recompiles cleanly, 41 pages, 0 undefined refs. Test suite unaffected (37/37), no pipeline code touched.
+
+Files: `scripts/measure_minicheck_faithfulness_roundP.py` (documented, not runnable in this environment as configured). No results/ output produced (the run never got past model loading).
