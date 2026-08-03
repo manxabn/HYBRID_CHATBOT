@@ -1,0 +1,18 @@
+{
+  "n": 371,
+  "n_folds": 5,
+  "seeds": [
+    42,
+    1,
+    7,
+    123,
+    2026
+  ],
+  "deployed_4signal_mean_accuracy": 0.6436,
+  "attemptA_continuous_ratio_mean_accuracy": 0.642,
+  "attemptA_paired_ttest_p": 0.3769,
+  "attemptA_paired_wilcoxon_p": 0.4349,
+  "attemptB_gbt_mean_accuracy": 0.7374,
+  "attemptB_paired_ttest_p": 0.0,
+  "attemptB_paired_wilcoxon_p": 0.0
+}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  3 AUG 2026 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  3 AUG 2026 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -890,11 +890,11 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  14218 strings out of 467871
  226738 string characters out of 5418376
- 703163 words of memory out of 5000000
+ 706835 words of memory out of 5000000
  42732 multiletter control sequences out of 15000+600000
  670377 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,24650b,666s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,26538b,656s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -905,9 +905,9 @@ s/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmbi8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (41 pages, 946578 bytes).
+Output written on paper.pdf (41 pages, 948349 bytes).
 PDF statistics:
- 947 PDF objects out of 1000 (max. 8388607)
+ 948 PDF objects out of 1000 (max. 8388607)
  171 named destinations out of 1000 (max. 500000)
  439 words of extra memory for PDF output out of 10000 (max. 10000000)
 
