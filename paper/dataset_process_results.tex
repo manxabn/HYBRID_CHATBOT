@@ -176,7 +176,14 @@ The main evaluation set is 200 English and 100 Banglish queries with reference a
 \subsection{System Architecture, Briefly}
 \label{subsec:architecture-brief}
 
-The deployed pipeline routes every query as entity-heavy or open-ended before retrieval, then fuses a BM25 stream (\texttt{rank\_bm25}, retuned $k_1=1.5$, $b=0.4$) and a dense stream (a domain-fine-tuned sentence-transformer, base architecture \texttt{all-MiniLM-L6-v2}, 384-dim, contrastively trained via \texttt{MultipleNegativesRankingLoss} on this corpus's own hard negatives) via linear combination, $\mathrm{Score} = \lambda \cdot S_{\mathrm{bm25}} + (1-\lambda) \cdot S_{\mathrm{vec}}$, with adaptive per-route weighting ($\lambda_{\mathrm{entity}}=0.9$, $\lambda_{\mathrm{open}}=0.5$). An optional cross-encoder reranking stage is disabled by default (Section~\ref{subsec:results-reranker}). Context is assembled in confidence-ordered ``zig-zag'' fashion before generation by a locally-served Llama-3.1-8B model (temperature $0.0$, fixed seed $42$). A confidence-gated abstention mechanism, calibrated separately per route, can decline to answer when retrieval confidence is low, subject to a one-directional sufficient-context override that can only ever reduce abstention when direct structural evidence (an exact match, a graph traversal result) is already available.
+The deployed pipeline routes every query as entity-heavy or open-ended before retrieval, then fuses a BM25 stream (\texttt{rank\_bm25}, retuned $k_1=1.5$, $b=0.4$) and a dense stream (a domain-fine-tuned sentence-transformer, base architecture \texttt{all-MiniLM-L6-v2}, 384-dim, contrastively trained via \texttt{MultipleNegativesRankingLoss} on this corpus's own hard negatives) via linear combination, $\mathrm{Score} = \lambda \cdot S_{\mathrm{bm25}} + (1-\lambda) \cdot S_{\mathrm{vec}}$, with adaptive per-route weighting ($\lambda_{\mathrm{entity}}=0.9$, $\lambda_{\mathrm{open}}=0.5$). An optional cross-encoder reranking stage is disabled by default (Section~\ref{subsec:results-reranker}).
+
+\begin{figure}[h]
+\centering
+{\includegraphics[width=8cm]{fig_hybrid_retriever.png}}
+\caption{Base retriever workflow: parallel BM25 and vector retrieval streams merged by weighted score fusion; adaptive routing selects between two fusion configurations of this same mechanism per query type.}
+\label{fig:retriever-report}
+\end{figure} Context is assembled in confidence-ordered ``zig-zag'' fashion before generation by a locally-served Llama-3.1-8B model (temperature $0.0$, fixed seed $42$). A confidence-gated abstention mechanism, calibrated separately per route, can decline to answer when retrieval confidence is low, subject to a one-directional sufficient-context override that can only ever reduce abstention when direct structural evidence (an exact match, a graph traversal result) is already available.
 
 \subsection{Evaluation Methodology and Statistical Discipline}
 \label{subsec:eval-methodology}
@@ -257,6 +264,13 @@ Conditioning (v1) & 0.818 & 0.573 & 0.332 \\
 \end{tabular}
 \end{table}
 
+\begin{figure}[h]
+\centering
+{\includegraphics[width=8cm]{fig_conditioning_v2.png}}
+\caption{Ambiguous-entity notice quality across all four tested conditions (same data as Table~\ref{tab:conditioning-v2-report}).}
+\label{fig:conditioning-v2-report}
+\end{figure}
+
 A methodological note behind this result: an earlier significance pass using the original, holistic judge produced a striking but suspicious reversal (\texttt{conditioning\_v2} scoring worse on ``avoids false confidence''); manual inspection found textbook-correct clarifying questions being scored as failures, backwards relative to the criterion's own definition. Re-scoring with a validated, decomposed judge changed the verdict on 43.3\% of responses, reversing the apparent regression entirely -- reported here as a caution about automated LLM-judge reliability on nuanced criteria generally, not specific to this one result.
 
 \textbf{Deconfounding-diagnostic methodology.} Adaptive routing's fusion-method choice for entity-heavy queries (Reciprocal Rank Fusion) tied a fixed linear-fusion baseline on the undisturbed test set -- an ambiguous result, since a separate exact-match ranking guarantee could have been masking a real deficit rather than confirming genuine parity. Temporarily removing that guarantee for one standalone diagnostic run resolved the ambiguity decisively (Table~\ref{tab:deconfound-report}): every single discordant query at Recall@1 and Recall@3 favored the fixed baseline, none favored the original RRF choice.
@@ -273,6 +287,13 @@ Recall@5 & 0.88 & 0.93 & 5/5 discordant, $p=0.063$ \\
 \hline
 \end{tabular}
 \end{table}
+
+\begin{figure}[h]
+\centering
+{\includegraphics[width=7cm]{fig_deconfounding.png}}
+\caption{Entity-heavy Recall@1/3/5 with the masking ranking guarantee removed (same data as Table~\ref{tab:deconfound-report}). Every discordant query at Recall@1 and Recall@3 favored the fixed baseline.}
+\label{fig:deconfounding-report}
+\end{figure}
 
 The fix (replacing RRF with linear fusion at the same weighting) was then verified with the same diagnostic re-run: zero discordant pairs remained on Recall@1/3/5 against the fixed baseline -- not merely a restored tie, but genuine equivalence even without the masking guarantee's help.
 

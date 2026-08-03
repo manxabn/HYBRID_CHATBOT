@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  3 AUG 2026 21:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.28)  4 AUG 2026 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -731,59 +731,67 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 173.
 
+<fig_hybrid_retriever.png, id=141, 232.7094pt x 555.7563pt>
+File: fig_hybrid_retriever.png Graphic file (type png)
+<use fig_hybrid_retriever.png>
+Package pdftex.def Info: fig_hybrid_retriever.png  used on input line 183.
+(pdftex.def)             Requested size: 227.62204pt x 543.61984pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-87.
+94.
 (C:\Users\manxa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\OT1/ptm/m/n/10 Exact-match cov-er-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--206
+Underfull \hbox (badness 10000) in paragraph at lines 213--213
 []\OT1/ptm/m/n/10 Embedding fine-
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 207--208
+Underfull \hbox (badness 2662) in paragraph at lines 214--215
 \OT1/ptm/m/n/10 choice for entity-heavy queries was sig-nif-i-cantly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--208
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
 []\OT1/ptm/m/n/10 Same-entity rank-ing
  []
 
 
-Underfull \hbox (badness 8056) in paragraph at lines 209--209
+Underfull \hbox (badness 8056) in paragraph at lines 216--216
 []\OT1/ptm/m/n/10 Cross-process de-ter-
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 209--210
+Underfull \hbox (badness 2435) in paragraph at lines 216--217
 \OT1/ptm/m/n/10 can-di-dates non-reproducible across sep-a-rate runs;
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 210--211
+Underfull \hbox (badness 1117) in paragraph at lines 217--218
 []\OT1/ptm/m/n/10 0.612 (sin-gle thresh-old) $\OMS/pzccm/m/n/10 !$ \OT1/ptm/m/n
 /10 0.644 (4-signal lo-gis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 \OT1/ptm/m/n/10 conditional $\OMS/pzccm/m/n/10 !$ \OT1/ptm/m/n/10 route-conditi
 onal+pool-restricted.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
 []\OT1/ptm/m/n/10 Faithfulness cross-
  []
 
 
-Underfull \hbox (badness 6157) in paragraph at lines 212--213
+Underfull \hbox (badness 6157) in paragraph at lines 219--220
 []\OT1/ptm/m/n/10 MiniLM $\OMS/pzccm/m/n/10 !$ \OT1/ptm/m/n/10 DeBERTa-base $\O
 MS/pzccm/m/n/10 !$ \OT1/ptm/m/n/10 DeBERTa-large-
  []
@@ -792,13 +800,13 @@ MS/pzccm/m/n/10 !$ \OT1/ptm/m/n/10 DeBERTa-large-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (2.3991pt too wide) in paragraph at lines 220--221
+Overfull \hbox (2.3991pt too wide) in paragraph at lines 227--228
 \OT1/ptm/m/n/10 sys-tem to this project's set-ting, so nov-elty can-not be as-s
 umed by do-main (bilin-gual, code-switched, retrieval-augmented)
  []
 
 [5]
-Overfull \hbox (3.67952pt too wide) in paragraph at lines 227--228
+Overfull \hbox (3.67952pt too wide) in paragraph at lines 234--235
 \OT1/ptm/m/n/10 nal rank-ing step sort-ing can-di-dates by score alone: when mu
 l-ti-ple can-di-dates tie ex-actly (sev-eral \OT1/pcr/m/n/10 FacultyAvailabilit
 y
@@ -810,31 +818,48 @@ Underfull \vbox (badness 1430) has occurred while \output is active []
  [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 236.
+(hyperref)                removing `\uppercase' on input line 243.
 
+<fig_conditioning_v2.png, id=168, 520.344pt x 303.534pt>
+File: fig_conditioning_v2.png Graphic file (type png)
+<use fig_conditioning_v2.png>
+Package pdftex.def Info: fig_conditioning_v2.png  used on input line 269.
+(pdftex.def)             Requested size: 227.62204pt x 132.78189pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fig_deconfounding.png, id=172, 448.074pt x 303.534pt>
+File: fig_deconfounding.png Graphic file (type png)
+<use fig_deconfounding.png>
+Package pdftex.def Info: fig_deconfounding.png  used on input line 293.
+(pdftex.def)             Requested size: 199.16928pt x 134.92168pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7] [8] [9]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 379.
+(hyperref)                removing `\uppercase' on input line 400.
 
 
-Overfull \hbox (17.58968pt too wide) in paragraph at lines 388--389
+Overfull \hbox (17.58968pt too wide) in paragraph at lines 409--410
 []\OT1/ptm/b/n/10 Entity-heavy ab-sten-tion cal-i-bra-tion is capped at a gen-u
 ine data ceil-ing. \OT1/ptm/m/n/10 Only 18 of 380 real out-of-scope/answerable
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 400.
+(hyperref)                removing `\uppercase' on input line 421.
 
 
 Underfull \vbox (badness 1648) has occurred while \output is active []
 
  [10]
-[11] (dataset_process_results.aux)
+[11] [12 <./fig_hybrid_retriever.png>] [13 <./fig_conditioning_v2.png> <./fig_d
+econfounding.png>] (dataset_process_results.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -844,10 +869,10 @@ Package rerunfilecheck Info: File `dataset_process_results.out' has not changed
 (rerunfilecheck)             Checksum: CFA22D8AB9B08B44D4C9D29445839843;4173.
  ) 
 Here is how much of TeX's memory you used:
- 13839 strings out of 467871
- 219504 string characters out of 5418376
- 651767 words of memory out of 5000000
- 42476 multiletter control sequences out of 15000+600000
+ 13872 strings out of 467871
+ 220358 string characters out of 5418376
+ 653366 words of memory out of 5000000
+ 42504 multiletter control sequences out of 15000+600000
  664304 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,1826b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -861,9 +886,9 @@ onts/type1/urw/symbol/usyr.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmb8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/manxa/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on dataset_process_results.pdf (11 pages, 171858 bytes).
+Output written on dataset_process_results.pdf (13 pages, 384205 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
+ 224 words of extra memory for PDF output out of 10000 (max. 10000000)
 
