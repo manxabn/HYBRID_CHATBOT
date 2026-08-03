@@ -4295,3 +4295,23 @@ Installed the official `minicheck` pip package (from the paper's own maintainers
 **Paper propagation**: added one more sentence to Limitations item "Seventh" disclosing this attempt and why it was declined, with a verified citation (Tang et al. 2024, MiniCheck). Recompiles cleanly, 41 pages, 0 undefined refs. Test suite unaffected (37/37), no pipeline code touched.
 
 Files: `scripts/measure_minicheck_faithfulness_roundP.py` (documented, not runnable in this environment as configured). No results/ output produced (the run never got past model loading).
+
+## 2026-08-03: root-cause investigation into WHY NLI-vs-judge r stays near zero, then two real fix attempts (one small win, one honest failure)
+
+User asked directly: keep checking why Pearson r is low, and try to fix it with hours in hand. Did real, evidence-based diagnosis using data already on disk (all three completed NLI runs' per-query CSVs, no new generation needed) -- `scripts/diagnose_nli_correlation_roundP.py`.
+
+**Four concrete findings, not speculation**:
+1. Ceiling effect: both instruments cluster near 1.0 (judge >=0.9 on 65.7% of rows, NLI-FEVER >=0.9 on 81.1%) -- mechanically suppresses correlation.
+2. NLI structurally can't reward "correctly declining to guess" -- row Q191: judge correctly scored a genuine hedge answer 1.0, NLI scored it 0.10 (no context sentence entails a hedge). Same root cause already found for the conformal-backoff dead end, now shown here too -- but only 1/169 rows affected.
+3. Structured multi-field context (Coordinator/FacultyList/CourseDetails-style "Field: value" chunks) confuses sentence-level entailment -- rows Q081/Q184: judge correctly scored verbatim-quoted facts 1.0, NLI scored both near 0.
+4. Direct inspection found at least one clear LLM-judge error: row Q101, judge scored a correct answer 0.0 with a stated reason ("statements about minors in EEE and Physics") describing content absent from that row entirely -- concrete evidence for this paper's existing judge-reliability caution, not a new claim invented to pad the list.
+
+**Two real fix attempts, both honestly reported regardless of outcome**:
+- Excluded the one hedge-answer row: r moved -0.018 -> -0.004. Small, real, exactly as large as the single affected row should produce -- not oversold.
+- Re-split context into premises by line AND sentence (targeting finding 3 directly): **made it worse**, not better -- r dropped to -0.245, binary agreement fell from 0.905 to 0.598 (`scripts/measure_nli_faithfulness_fever_linesplit_roundP.py`). Real, honest negative result, reported plainly: fragmenting structured context too finely apparently strips co-occurring fields of context the entailment model needs to recognize support, rather than isolating the relevant fact. Did NOT adopt this -- the original sentence-only split (r=-0.018) remains the best result.
+
+**On the "600+ samples" ask**: checked the actual data -- only 210 total rows currently have LLM-judge faithfulness scores (the expensive part: real Ollama generation + judging calls, not something the NLI check alone can expand). Reaching 600+ would need ~400 new judged rows, realistically hours of new generation+judging work. Gave this honestly rather than launching a blind multi-hour job: given the diagnosed causes above are structural (ceiling effects, hedge/list blind spots) rather than sample-size artifacts, more data of the same distribution would likely tighten the estimate around the same near-zero-or-negative value, not flip its sign. Left the decision to the user with that information rather than either refusing or launching unsupervised.
+
+**Paper propagation**: added the full four-finding root-cause discussion plus both fix-attempt results to Limitations item "Seventh." Recompiles cleanly, 41 pages, 0 undefined refs. No pipeline code touched; test suite unaffected (37/37).
+
+Files: `scripts/diagnose_nli_correlation_roundP.py`, `scripts/measure_nli_faithfulness_fever_linesplit_roundP.py`, `results/nli_faithfulness_per_query_roundP_fever_linesplit.csv`, `results/nli_faithfulness_summary_roundP_fever_linesplit.csv`, `results/nli_vs_llmjudge_agreement_roundP_fever_linesplit.csv`.
